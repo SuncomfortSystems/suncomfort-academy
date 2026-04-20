@@ -218,6 +218,7 @@
           <tr><td class="file-name">Flint — Review — Customer Settings Help Centre Check</td><td><span class="file-type" style="background:#fff3ee;color:#fa6932">Review</span></td><td>Must-fix items and suggestions before settings files go to production</td><td><span class="view-script-btn" onclick="openInboxFile('flint-customer-settings')">View file</span></td></tr>
           <tr><td class="file-name">Reed — Phase 2 — Academy Full Course List</td><td><span class="file-type" style="background:#e8f5e9;color:#2e7d32">Planning</span></td><td>Full course structure across Compass, Shared Library, and all three role paths — awaiting approval</td><td><span class="view-script-btn" onclick="openInboxFile('reed-phase2')">View file</span></td></tr>
           <tr><td class="file-name">Forest — Research — Phase 2 Help Centre Coverage Check</td><td><span class="file-type type-research">Research</span></td><td>Gap analysis of Reed's Phase 2 course list against the full Help Centre — 5 significant gaps found</td><td><span class="view-script-btn" onclick="openInboxFile('forest-phase2-coverage')">View file</span></td></tr>
+          <tr><td class="file-name">Reed — Phase 2 Revised — Complete Academy Course Structure</td><td><span class="file-type" style="background:#e8f5e9;color:#2e7d32">Planning</span></td><td>Full structure across all layers: Layer 0, Layer 1 (expanded), Layer 2 Setup, Layer 3 Feature Series — 157 courses total — awaiting approval</td><td><span class="view-script-btn" onclick="openInboxFile('reed-phase2-revised')">View file</span></td></tr>
           <tr><td class="file-name">Flint — Review — Assets Settings Files</td><td><span class="file-type" style="background:#fff3ee;color:#fa6932">Review</span></td><td>3 must-fixes and 3 suggestions across 5 SunComfort Assets settings files</td><td><span class="view-script-btn" onclick="openInboxFile('flint-assets-review')">View file</span></td></tr>
           
           
@@ -1410,6 +1411,55 @@ The following could not be fully determined from the Help Centre alone and may r
 6. **Assets and appliances** — The Help Centre has a small collection (2 articles) on assets and appliances settings. Assets are referenced in the job record and mobile app contexts (linking assets to jobs, completing form tasks on assets). The depth of the asset management workflow and whether it warrants a standalone course could not be determined from settings articles alone.
 `;
 
+INBOX_FILES["reed-phase2-revised"] = `# Reed — Phase 2 Revised: Complete Academy Course Structure
+
+**Date:** 2026-04-20
+**Status:** Awaiting approval before Phase 3
+**Replaces:** Reed - Phase 2 - Academy Full Course List
+
+Expanded to cover the full Help Centre. Adds: expanded Shared Concept Library (7 to 13 courses), expanded Layer 1 paths incorporating Forest's gap analysis, new Layer 2 (Setup and Configuration), and fully scoped Layer 3 (Feature Series).
+
+## Layer 0 — Universal
+
+### The Commusoft Compass
+Rise mini-course — 5 lessons, ~15 minutes. July build.
+
+### Shared Concept Library — 13 micro-courses
+1. The customer and site hierarchy (3 min)
+2. Appointment statuses explained (3 min)
+3. What are job description templates (3 min)
+4. Tagging in Commusoft (3 min)
+5. What are service windows (3 min)
+6. Nominal codes in plain English (4 min)
+7. What is a job pipeline (4 min)
+8. Job statuses, appointment statuses, and job stages — what's the difference (4 min)
+9. Invoice types in Commusoft (4 min)
+10. Forms versus certificates (3 min)
+11. Licence types explained (3 min)
+12. The customer portal — what your customers can do online (4 min)
+13. User roles and permissions (4 min)
+
+## Layer 1 — Role Paths
+
+### Office Staff — 9 Series
+Series 1: Your first day (Rise, July) | Series 2: Job record (10 approved) | Series 3: Customers | Series 4: Booking + hold + recalls | Series 5: Getting paid + credit notes + statements | Series 6: Communications | Series 7: Estimates | Series 8: Service reminders | Series 9: Suppliers and purchasing
+
+### Field Team — 3 Series
+Series 1: Getting started (Rise, July) | Series 2: On site — expanded with assets, no access/abort/reject | Series 3: Advanced mobile — on-site tasks, stockroom, timecard, Tap to Pay
+
+### Decision Maker — 5 Series
+Series 1: Business at a glance (Rise, July) | Series 2: Managing your team + timesheets + offboarding | Series 3: Revenue + service reminder reporting | Series 4: Fleet | Series 5: Automation and Sequences
+
+## Layer 2 — Setup and Configuration (new layer)
+6 series covering: account setup, jobs and scheduling, assets and service reminders, invoicing and finance, proposals and sales, notifications and automation — 22 courses + 6 challenges
+
+## Layer 3 — Feature Series
+7 series: Sales+ Opportunities and Proposals | Contracts and PPM | Fleet Management | Integrations — Accounting | Advanced Stock Control | Custom Forms Building | Advanced Reporting — 32 courses + 7 challenges
+
+## Total: ~157 courses and lessons
+10 already approved. 4 Rise mini-courses deferred to July.
+`;
+
 INBOX_FILES["flint-assets-review"] = `# Flint — Review: SunComfort Assets Settings Files (with Help Centre check)
 
 **Review date:** 2026-04-20
@@ -2366,6 +2416,7 @@ function openInboxFile(key) {
     'forest-customer-settings': { num: 'Forest — Research Brief', title: 'Customer Settings Help Centre Review' },
     'flint-customer-settings': { num: 'Flint — Review', title: 'Customer Settings Help Centre Check' },
     'reed-phase2': { num: 'Reed — Planning', title: 'Academy Full Course List — Phase 2' },
+    'reed-phase2-revised': { num: 'Reed — Planning', title: 'Phase 2 Revised — Complete Academy Course Structure' },
     'forest-phase2-coverage': { num: 'Forest — Research', title: 'Phase 2 Help Centre Coverage Check' },
     'flint-assets-review': { num: 'Flint — Review', title: 'Assets Settings Files' },
     'forest-asset-dropdowns': { num: 'Forest — Research', title: 'Asset Dropdown Options' },

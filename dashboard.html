@@ -210,13 +210,15 @@
           <tr><td>10</td><td class="file-name">Tracking opportunities on jobs</td><td><span class="file-type type-script">Job View</span></td><td>4 min</td><td>Decision makers</td><td><span class="badge badge-approved">Approved</span></td><td><span class="view-script-btn" onclick="openPanel(10)">View script</span></td></tr>
         </tbody>
       </table>
-      <div class="section-heading">Other Files <span class="count">6</span></div>
+      <div class="section-heading">Other Files <span class="count">8</span></div>
       <table class="inbox-table">
         <thead><tr><th>File</th><th>Type</th><th>Description</th><th></th></tr></thead>
         <tbody>
           <tr><td class="file-name">Forest — Research — Customer Settings Help Centre Review</td><td><span class="file-type type-research">Research</span></td><td>10 Customer settings verified against help.commusoft.com</td><td><span class="view-script-btn" onclick="openInboxFile('forest-customer-settings')">View file</span></td></tr>
           <tr><td class="file-name">Flint — Review — Customer Settings Help Centre Check</td><td><span class="file-type" style="background:#fff3ee;color:#fa6932">Review</span></td><td>Must-fix items and suggestions before settings files go to production</td><td><span class="view-script-btn" onclick="openInboxFile('flint-customer-settings')">View file</span></td></tr>
           <tr><td class="file-name">Reed — Phase 2 — Academy Full Course List</td><td><span class="file-type" style="background:#e8f5e9;color:#2e7d32">Planning</span></td><td>Full course structure across Compass, Shared Library, and all three role paths — awaiting approval</td><td><span class="view-script-btn" onclick="openInboxFile('reed-phase2')">View file</span></td></tr>
+          <tr><td class="file-name">Forest — Research — Phase 2 Help Centre Coverage Check</td><td><span class="file-type type-research">Research</span></td><td>Gap analysis of Reed's Phase 2 course list against the full Help Centre — 5 significant gaps found</td><td><span class="view-script-btn" onclick="openInboxFile('forest-phase2-coverage')">View file</span></td></tr>
+          <tr><td class="file-name">Flint — Review — Assets Settings Files</td><td><span class="file-type" style="background:#fff3ee;color:#fa6932">Review</span></td><td>3 must-fixes and 3 suggestions across 5 SunComfort Assets settings files</td><td><span class="view-script-btn" onclick="openInboxFile('flint-assets-review')">View file</span></td></tr>
           <tr><td class="file-name">Forest — Research — SunComfort scenarios</td><td><span class="file-type type-research">Research</span></td><td>Validated real-world industry scenarios for Academy scripts</td><td></td></tr>
           <tr><td class="file-name">Academy / Job View / index.md</td><td><span class="file-type type-index">Index</span></td><td>Series index for the Job View course collection</td><td></td></tr>
           <tr><td class="file-name">Academy / index.md</td><td><span class="file-type type-index">Index</span></td><td>Top-level Academy content catalogue and filing conventions</td><td></td></tr>
@@ -1185,13 +1187,366 @@ Layer 3 feature series is parked — scoped separately when Layer 1 is complete.
 **Awaiting approval to proceed to Phase 3.**
 `;
 
+INBOX_FILES["forest-phase2-coverage"] = `# Forest — Research Brief
+**Topic:** Help Centre Coverage Check — Phase 2 Academy Course List
+**Date:** 2026-04-17
+**Requested by:** Fern (for Reed's Phase 2 approval)
+
+---
+
+## Research Method
+
+Systematic review of the Commusoft Help Centre (https://help.commusoft.com/en/). All nine top-level collections were visited and catalogued. Key sub-collections were explored individually, and selected articles were read in full to assess depth and identify features not surfaced in the Phase 2 course list. The review focused on identifying what is present in the Help Centre that is absent or underrepresented in the planned course structure — not on validating what is already there.
+
+Total articles reviewed across the Help Centre: 348 articles across 9 collections and approximately 41 sub-collections.
+
+---
+
+## Key Findings
+
+1. **Service Reminders is a substantial, standalone workflow with no coverage in Phase 2.** The Help Centre contains six dedicated articles on service reminders (overview, adding to customers, scheduling service jobs, managing active reminders, the service reminder widget, and the service reminder portal for self-booking). This is a core recurring-revenue workflow for field service businesses and touches Office Staff, Decision Makers, and customer-facing self-service — yet it does not appear anywhere in the Phase 2 course list.
+
+2. **Contracts, PPM, and SLA are entirely absent from the course list.** The Help Centre contains 17 articles across Contracts settings and Managing Contracts, covering contract setup, planned preventative maintenance (PPM), SLA templates, SLA reporting, and PPM performance reporting. For many Commusoft customers, contracts are a primary billing and scheduling mechanism. This is a significant omission.
+
+3. **The Estimates workflow is uncovered for Office Staff.** Creating and managing estimates — including the full proposal-to-accepted workflow and dynamic tagging — has no dedicated course in the Office Staff path. Estimates are a distinct pre-job workflow with their own pipeline, templates, approval process, and reporting.
+
+4. **The Field Team path is missing several documented mobile workflows.** Tap to Pay (in-field contactless payments), Timecards/Timesheets (logging shifts via the mobile widget), On-Site Tasks (mandatory pre-departure checklists), and the Stockroom/Van Stock workflow (requesting, collecting, and installing parts) all have dedicated Help Centre articles but no course coverage. The current Field Team path covers only the core job lifecycle; the mobile app has significantly more capability than the course list reflects.
+
+5. **Automation — Workflow Marketplace and Sequences — is a documented feature set with no course coverage.** The Help Centre details seven pre-built automation workflows (debt chasing, estimate chase, after-sales response, etc.) and a full Sequences feature for multi-step follow-up campaigns. These are decision-maker and senior office staff tools, and they are entirely absent from the course list.
+
+---
+
+## Gap Analysis by Path
+
+### Office Staff
+
+**Missing or underrepresented topics based on Help Centre content:**
+
+- **Estimates workflow** — Creating and managing estimates, dynamic tagging, the estimate-to-job conversion path, and estimate reporting are a distinct feature set with three dedicated articles and eleven settings articles. No course exists for this workflow.
+- **Service Reminders (operational management)** — Adding service reminders to customers, managing the service reminder widget, and scheduling service jobs from reminders are day-to-day office tasks with no coverage.
+- **Credit Notes** — The Managing Invoices article documents credit notes (customer-level and invoice-level, with full and partial refunds) as a distinct workflow. These are not mentioned in the "Getting paid" series.
+- **Consolidated Invoicing** — Combining multiple jobs into a single invoice is documented but not addressed in any course.
+- **Interim, Draft, Deposit, and Retention Invoice types** — The Help Centre identifies 11 distinct invoice types. The Phase 2 series covers raising and sending an invoice generically, but the variety of invoice types (particularly those tied to estimates and contracts) is not addressed.
+- **Purchase Orders** — The Help Centre has a dedicated purchase orders section (settings + managing supplier sub-collections covering supplier invoices, drag-and-drop AI invoice processing, PO email templates). No course covers raising or managing purchase orders.
+- **Contracts and customer contract setup** — Eleven articles cover contract management, yet no Office Staff course addresses this.
+- **Merge customers / Merge work addresses** — Two dedicated articles exist on data hygiene via merging. The "keep customer records clean" course in Series 3 may partially cover this, but it is not confirmed — and merging is a specific, non-obvious workflow worth explicit coverage.
+- **Statements** — Sending a statement to a customer is a documented workflow (with its own email template and portal) not addressed in the "Getting paid" series.
+- **Debt Chasing (operational)** — While Series 6 of the Decision Maker path covers tracking debt, the office staff side of actually chasing debt (using workflow automations and the debt chasing workflow) is not addressed for Office Staff.
+- **Job on hold, Uncomplete a job, Job status widget** — These are reactive job management workflows documented in the Help Centre. The job record series covers the job record structure, but not these status-management actions.
+- **Recalls** — The Help Centre has a dedicated settings article for enabling recalls, and recalls are referenced in the job record article. No course covers how or when to raise a recall job.
+- **After Sales Care** — The workflow for sending after-sales follow-ups is documented in settings but has no corresponding course.
+- **Custom fields** — The Global Settings collection covers custom field templates and assigning them to objects. These configuration-level features are not addressed in any course.
+
+---
+
+### Field Team
+
+**The Help Centre reveals the following documented mobile app workflows that the current 2-series Field Team path does not cover:**
+
+- **Tap to Pay** — Full article on taking contactless payments at the job site via Stripe integration. This is a significant field-facing feature absent from the path.
+- **Timecards / Timesheets** — The Timecard widget article explains how engineers log shifts, breaks, and clock-out times from the home screen. The Phase 2 field path does not include a course on this.
+- **On-Site Tasks** — A dedicated article explains that on-site tasks (general, photo, and form tasks) are mandatory pre-departure checklists configured per job type. Engineers encounter these directly on the mobile app, but no course covers them.
+- **Van Stock / Parts from the field** — "Stock control for engineers" covers requesting parts, managing van stock, marking parts as installed, QR code scanning at stockroom, and tracking direct-to-site deliveries. Phase 2 includes "request a part from field" as a single bullet within a course — but the full van stock and collection workflow is broader than this implies and may warrant its own course.
+- **Attaching files and photos (full workflow)** — The Help Centre article on attaching files in the app describes a more complete workflow than "take/attach photos" implies: it covers video capture, document scanning, audio recording, file imports from device gallery/iCloud, batch selection, and platform differences between iOS and Android. This could be its own course or a significantly expanded module.
+- **Job status workflow edge cases** — The Help Centre documents No Access, Abort, and Reject statuses as distinct paths from the main Accept → Travel → Arrive → Leave flow. These have specific business consequences (job reopened, rebooked, or escalated) and are not covered as distinct scenarios in the Field Team path.
+- **Asset management on mobile** — The Managing Jobs on the Mobile App article lists asset management as an on-site capability alongside forms, invoicing, and parts. No Field Team course covers working with or recording asset information in the field.
+- **Invoicing from the field** — The same article mentions invoicing as an on-site capability for engineers with appropriate roles. No course covers this for field team users.
+- **Offline mode / data sync** — Multiple articles (Usage Tips, Mobile App FAQs) document offline functionality, sync behaviour, and the risk of data loss if the app is uninstalled during offline use. This is operationally important but absent from the getting-started course.
+
+---
+
+### Decision Maker
+
+**Missing or underrepresented topics based on Help Centre content:**
+
+- **Fleet Management** — The Help Centre has an entire collection of 19 articles covering the fleet management dashboard, vehicle checks, vehicle reminders, safe driver leaderboard, geo-fences, trip analytics, maintenance tracking, and out-of-hours alerts. The Decision Maker path has no fleet course at all. For businesses using Commusoft's vehicle tracking, this is a substantial omission.
+- **Automation / Workflow Marketplace** — Seven pre-built automation workflows (debt chasing, estimate chase, after-sales response, negative diary event task, customer invoice payment receipt, etc.) are fully documented. No Decision Maker course covers setting up or understanding automation.
+- **Sequences** — This multi-step automated follow-up tool for proposals and opportunities is a Sales+ feature with significant operational value for managers. No course covers it.
+- **Service Reminder management and reporting** — The Decision Maker path has no coverage of service reminders, which are a key recurring-revenue mechanism. The Help Centre documents a service reminder report and a service reminder widget for dashboards.
+- **Contracts and PPM reporting** — Four dedicated reporting articles exist: Contracts report, PPM performance report, SLA due to breach report, and SLA jobs report. These are manager-level oversight tools with no course coverage.
+- **Accounting Dashboard** — The Commusoft terminology article references an "Accounting Dashboard" as a distinct named feature ("Financial snapshot showing invoices, payments, credit notes, and accounting software sync status"). The integrations collection covers setup, but no Decision Maker course covers reading the accounting dashboard day-to-day.
+- **Business Units** — A dedicated article covers business units as a reporting segmentation tool. This is a configuration and analysis feature relevant to multi-division businesses — no course covers it.
+- **Timesheets and Timesheet approval** — The Help Centre has three articles on timesheets (timesheet approval, daily timecard detail, summary timesheet detail). Managing engineer time and approving timesheets is a manager responsibility not addressed in the Decision Maker path.
+- **User Groups** — A dedicated settings article covers user groups, which affect diary filtering, permissions, and reporting visibility. No course covers how managers use or configure user groups.
+- **Notification Settings** — A settings article covers configuring notifications for users. No Decision Maker course covers this configuration task.
+- **Employee offboarding** — "Managing Employee Offboarding & Access Control in Commusoft" is a dedicated article. No course covers what to do when a staff member leaves.
+- **Integrations overview** — The Integrations collection (31 articles) covers accounting packages, CRM, payment gateways, calendar sync, and supplier integrations. No Decision Maker course addresses understanding or choosing integrations. The "sync to accounting package" in the Office Staff path covers the day-to-day sync, but the strategic decision and initial setup sits outside all courses.
+- **Data export / Excel handling** — An article documents how Commusoft handles data exports to Excel based on file size. Managers who rely on reporting will encounter this but have no course guidance.
+
+---
+
+### Shared Concept Library
+
+**Potentially missing foundational concepts based on Help Centre content:**
+
+- **Job statuses vs. appointment statuses vs. job stages** — These three distinct concepts (system-generated job statuses, engineer-driven appointment statuses in the mobile app, and admin-configured job stages on the dashboard) are documented across multiple articles but are easily confused. The Shared Concept Library has "appointment statuses" as a micro-course but does not appear to address job statuses or job stages as separate concepts. A micro-course distinguishing all three would address a frequent point of confusion.
+- **Invoice types** — With 11 documented invoice types, a micro-course on the invoice type taxonomy (when each type is generated, by what action, and what it means for payment) would serve both Office Staff and Decision Makers. Currently absent from the Shared Concept Library.
+- **Forms vs. Certificates** — The Help Centre has a dedicated FAQ article on this distinction (legacy certificates vs. current custom forms). This conceptual distinction affects how field engineers and office staff handle compliance documentation. Not currently in the Shared Concept Library.
+- **Licence types** — With three licence types (contracted, monthly rolling, daily) and their different cost and storage implications, this is a foundational concept for Decision Makers. Not in the Shared Concept Library.
+- **Customer Portal / Self-service** — The Help Centre documents eleven self-service portal settings (invoice portal, statement portal, job booking portal, rebook portal, service reminder portal, etc.). The concept of what the customer portal is and what customers can do through it is not in the Shared Concept Library, though it underpins several Office Staff and Decision Maker workflows.
+- **User roles and permissions** — A detailed article covers seven Jobs roles and five Sales+ roles with their hierarchical permissions. This is foundational knowledge for anyone managing users or understanding what they can and cannot do. Currently absent from the Shared Concept Library.
+
+---
+
+## Connecting Workflow Gaps
+
+These are multi-step processes that cross series or path boundaries and are not addressed as end-to-end journeys:
+
+1. **Service Reminder → Service Job → Invoice cycle** — Adding a reminder to a customer, scheduling the service job when the reminder triggers, completing the job, and raising the invoice is a core recurring workflow that spans Managing Customers (Series 3), Booking and Scheduling (Series 4), and Getting Paid (Series 5). No bridging content stitches this together.
+
+2. **Estimate → Accepted → Job created → Deposit invoice raised → Final invoice** — The estimate-to-job-to-invoice pipeline crosses a workflow boundary that the current course list does not address. Estimates live in a gap between "adding a customer" and "booking a job," and the deposit/retention/final invoice sequence that follows an accepted estimate is not covered.
+
+3. **Parts request (field) → Purchase order (office) → Delivery → Installation (field)** — The field engineer requests a part, the office raises a purchase order with a supplier, the part is delivered (to office or direct to site), and the engineer marks it installed. This workflow spans the Field Team path (Series 2), the Office Staff Parts/Stock course in the Job Record series, and the Suppliers/Purchase Orders feature set. No bridging course connects these steps.
+
+4. **New engineer onboarding (Decision Maker → Office Staff → Field Team)** — Adding a user (Decision Maker path), assigning the right licence and role (Decision Maker), setting up skills and shift patterns (Decision Maker), and the engineer logging in and getting set up on the mobile app (Field Team path Series 1) is a real-world multi-step process that crosses all three paths. No bridging content exists.
+
+5. **Debt chasing workflow** — The Decision Maker path includes "track debt/debt chasing" as a course topic, and the Office Staff path includes syncing to an accounting package. But the actual debt chasing workflow — identifying overdue invoices, triggering the debt chasing automation, escalating, and recording payment — crosses the reporting, invoicing, and automation features without a clear course joining them.
+
+6. **Customer complaint / recall workflow** — A job is completed, the customer reports an issue, a recall job is created, it is rebooked, and after-sales care is triggered. This spans Job Record management, Recalls (a settings feature), After Sales Care communications, and the Booking workflow. No single course or bridging content covers this.
+
+---
+
+## Low-Priority / Layer 3 Candidates
+
+Topics present in the Help Centre that are real feature sets but too advanced, configuration-heavy, or niche for Layer 1. Recommend noting for the Feature Series (Layer 3):
+
+- **Contracts and PPM** — Full contract lifecycle including PPM auto-job creation, SLA configuration, and SLA reporting. Complex enough to warrant its own mini-series at Layer 3.
+- **Sales+ / Opportunities / Proposals** — The Sales collection (26 articles) covers a full opportunity pipeline, proposal builder, media portal, and finance submissions. This is a distinct product feature set appropriate for a Layer 3 Sales series.
+- **Fleet Management** — 19 articles covering vehicle tracking, driver analytics, geo-fences, vehicle checks, and the fleet dashboard. Layer 3 series candidate, though a decision-maker overview could sit at Layer 1.
+- **Integrations (Accounting)** — The 31-article integrations collection, particularly the accounting integration setup (field mapping, linking customers, dashboard), is a Layer 3 setup series for owners/managers.
+- **Workflow Marketplace and Sequences** — Automation tools appropriate for a Layer 3 "efficiency and automation" series.
+- **Stock Control (advanced)** — Picking lists, warehouse app, stock locations management, parts reorder lists, and bulk part management are Layer 3 material for businesses running an internal stockroom.
+- **Import Customers** — Bulk importing customer data is a one-time onboarding task, Layer 3 or onboarding-specific content.
+- **Custom Forms (building)** — Creating and designing forms using the form builder is an admin/owner task beyond Layer 1. The Layer 1 "forms on jobs" course should cover using forms; building them is Layer 3.
+- **Reporting (custom reports)** — Building custom saved views and exporting data is touched in the Decision Maker path, but the full custom report builder is Layer 3 material.
+- **CIS Percentage** — UK construction industry-specific invoicing (CIS deductions). Niche enough for Layer 3 or a UK-specific track.
+- **Route Optimisation** — Documented in Schedule and Dispatch settings. Relevant to larger operations with complex scheduling needs. Layer 3.
+- **Tap to Pay (Stripe integration)** — Payment processing at the field level involves Stripe configuration that is Layer 3 for setup, though the engineer-facing workflow is Layer 1.
+
+---
+
+## Sources — Help Centre Sections Visited
+
+- https://help.commusoft.com/en/ (homepage — all 9 top-level collections)
+- https://help.commusoft.com/en/collections/1323984-your-commusoft-account (8 articles)
+- https://help.commusoft.com/en/collections/573579-getting-started (19 articles)
+- https://help.commusoft.com/en/collections/573605-jobs (223 articles across 41 sub-collections — full index reviewed)
+- https://help.commusoft.com/en/collections/573567-managing-customers
+- https://help.commusoft.com/en/collections/573583-managing-jobs
+- https://help.commusoft.com/en/collections/573568-schedule-management
+- https://help.commusoft.com/en/collections/573582-managing-invoice
+- https://help.commusoft.com/en/collections/573590-managing-parts-and-stock
+- https://help.commusoft.com/en/collections/573564-managing-contracts
+- https://help.commusoft.com/en/collections/573576-managing-estimate
+- https://help.commusoft.com/en/collections/573591-managing-supplier
+- https://help.commusoft.com/en/collections/573622-self-service-settings
+- https://help.commusoft.com/en/collections/573613-jobs-settings
+- https://help.commusoft.com/en/collections/573618-invoicing-settings
+- https://help.commusoft.com/en/collections/573619-finance-settings
+- https://help.commusoft.com/en/collections/573621-purchase-orders-settings
+- https://help.commusoft.com/en/collections/573624-reporting-settings
+- https://help.commusoft.com/en/collections/573626-automation-settings
+- https://help.commusoft.com/en/collections/573616-schedule-and-dispatch-settings
+- https://help.commusoft.com/en/collections/573665-users-settings
+- https://help.commusoft.com/en/collections/573595-managing-users
+- https://help.commusoft.com/en/collections/573625-global-settings
+- https://help.commusoft.com/en/collections/580796-sales (26 articles)
+- https://help.commusoft.com/en/collections/580797-fleet (19 articles)
+- https://help.commusoft.com/en/collections/573596-mobile (13 articles — full article index reviewed)
+- https://help.commusoft.com/en/collections/580795-reporting (3 articles)
+- https://help.commusoft.com/en/collections/573581-integrations (31 articles)
+- https://help.commusoft.com/en/collections/1412181-communications (6 articles)
+
+**Individual articles read in full (selected):**
+- Understanding the Job Record (article 324265)
+- Understanding the Job Dashboard (article 243775)
+- How to add a new job (article 216750)
+- Diary and Appointments (article 267464)
+- Managing invoices (article 216679)
+- Get Started with the Commusoft Mobile App (article 288401)
+- Managing Jobs on the Mobile App (article 284397)
+- Appointment Statuses (article 216882)
+- Stock control for engineers (article 216879)
+- Timecard widget (article 216885)
+- Custom Forms in the Mobile App (article 258920)
+- Attaching Files in the App (article 216877)
+- Tap to Pay (article 216887)
+- Usage Tips for the Mobile Apps (article 285319)
+- Service reminders overview (article 216807)
+- Sequences (article 217243)
+- How to use the Workflow Marketplace (article 217228)
+- Job Stages (article 284442)
+- Configuring on-site tasks (article 561197)
+- User roles and permissions (article 543435)
+- Understanding license types (article 543376)
+- Managing your Commusoft licenses (article 217313)
+- Forms vs Certificates: What's the Difference? (article 344304)
+- Commusoft terminology (article 236422)
+- Reporting dashboard (article 216779)
+- Creating custom reports (article 216781)
+- Fleet management dashboard (article 247235)
+
+---
+
+## Gaps / Caveats
+
+The following could not be fully determined from the Help Centre alone and may require Sara or Reed to clarify:
+
+1. **Plan-gating of features** — Several features are only available on specific Commusoft plans (e.g., Kanban view on Customer Journey+, Sales+ for opportunities and proposals, legacy certificates only on pre-October 2023 accounts). The course list does not indicate which plan tier the Phase 2 content targets. If the Academy is plan-agnostic, features like Contracts, Fleet, Sales+, and Workflow Marketplace may need plan-specific framing or conditionalisation.
+
+2. **What "tracking opportunities" in the Job Record series covers** — The Phase 2 course list includes "tracking opportunities" in the job record series. The Help Centre documents opportunities as a full Sales+ module with its own dashboard, pipeline, proposal builder, and reporting. It is unclear whether the planned course refers to the Additional Works / Opportunities tab on a job record (a lightweight feature) or the full Sales+ Opportunities module. These are significantly different in scope.
+
+3. **Scope of "invoice portal" in Series 6** — The course is listed as "set up and use invoice portal." The Help Centre documents eleven separate self-service portals (invoice, statement, job booking, rebook, service reminder, after sales care, on our way, customer portal, proposal portal, etc.). It is unclear whether the course intends to cover all self-service portal concepts or only the invoice portal specifically.
+
+4. **Depth of "diary at a glance" for Decision Makers** — The Help Centre's single Diary and Appointments article covers a rich set of features (map view, drag-and-drop scheduling, filtering by skills and user groups, multi-view modes, exporting). The Decision Maker "diary at a glance" course may overlap significantly with the Office Staff "schedule an engineer" course in Series 4. The boundary between these is unclear from the course list alone.
+
+5. **The Accounting Dashboard** — Referenced in the Commusoft terminology article as a named dashboard feature ("Financial snapshot showing invoices, payments, credit notes, and accounting software sync status"), but no standalone article exists for it in the Help Centre. Its content depth and whether it warrants its own course could not be fully assessed.
+
+6. **Assets and appliances** — The Help Centre has a small collection (2 articles) on assets and appliances settings. Assets are referenced in the job record and mobile app contexts (linking assets to jobs, completing form tasks on assets). The depth of the asset management workflow and whether it warrants a standalone course could not be determined from settings articles alone.
+`;
+
+INBOX_FILES["flint-assets-review"] = `# Flint — Review: SunComfort Assets Settings Files (with Help Centre check)
+
+**Review date:** 2026-04-20
+**Reviewer:** Flint
+**Method:** Internal consistency review + Commusoft Help Centre (https://help.commusoft.com/en/)
+**Scope:** 5 SunComfort Assets settings files
+
+---
+
+## Status: Needs revision
+
+The five files form a coherent asset hierarchy and the SunComfort data is well-constructed. Help Centre verification confirms most of what is documented, but surfaces two terminology/path discrepancies that need correcting. The two existing must-fix issues remain live. Three suggestions stand.
+
+---
+
+## Help Centre Verification Summary
+
+The Commusoft Help Centre has one substantive article covering all asset settings: [Assets — article 216928](https://help.commusoft.com/en/articles/216928-assets). This is the only article directly relevant to these files. The following checks were completed against it.
+
+### What was verified
+
+**Feature existence confirmed:** Asset Groups, Asset Types, Standard Asset Fields, and Asset Dynamic Fields all exist as distinct settings in Commusoft. The Help Centre documents all four.
+
+**Settings paths — partial mismatch found (see Must Fix #3 below):** The Help Centre paths begin with \`Profile icon >\` and end with \`> View\`. The files under review abbreviate to \`Settings > Assets > [Feature]\`. The abbreviated form is acceptable for training purposes, but one path has a capitalisation error.
+
+**Asset Groups and Asset Types relationship confirmed:** The Help Centre describes asset groups as "higher-level categories" and asset types as "specific items under the group" — consistent with what Asset Groups.md and Asset Types.md document. The hierarchy is accurate.
+
+**Standard Asset Fields — partially confirmed:** The Help Centre confirms Standard Asset Fields exist and "configure the fields shown when creating new asset groups or types" applying to all subsequently added assets. However, the Help Centre does not name any specific standard fields. The nine fields listed in Standard Asset Fields.md (Serial Number, Installation Date, Warranty Expiry Date, etc.) cannot be independently verified or contradicted from the Help Centre alone. They are plausible and internally consistent — but are unverified.
+
+**Asset Dynamic Fields — scope question not resolved by the Help Centre:** The Help Centre describes dynamic fields as "customizable lists that appear when adding assets" and gives examples of "location, make, fuel type." It does not explicitly state whether dynamic fields are universal across all asset groups/types or can be scoped per type. One passage refers to "a specific type of asset which has dynamic fields such as location, make, fuel type" — the phrase "which has dynamic fields" implies that not all asset types necessarily carry all dynamic fields, supporting the view that scope can vary. This does not resolve the internal contradiction in Asset Dynamic Fields.md, but it does slightly favour the per-type-scoping interpretation. See Must Fix #2.
+
+**"Asset Dynamic Fields" — correct term confirmed:** The Help Centre uses "Asset dynamic fields" (singular "Asset", lowercase "dynamic fields"). The file Asset Dynamic Fields.md uses "Asset Dynamic Fields" (all title case). This is a capitalisation difference only; the singular "Asset" form is correct.
+
+### What could not be verified
+
+- The nine specific field names in Standard Asset Fields.md are not listed in the Help Centre.
+- Whether the Standard Asset Fields feature requires a specific plan tier is mentioned ("Customer Journey plan or higher") but this is not reflected in the files — minor, no action needed for Academy use.
+- No Help Centre content covers how third-party (non-installer) assets should be recorded.
+- No Help Centre content covers MCS Certificate Number or Commissioned By as standard fields.
+
+---
+
+## Must Fix
+
+### 1. Assets.md does not follow the standard settings file format
+
+Every other settings file in this section opens with a standard header block (Setting / Section / Path) and a "What it does" section. Assets.md has none of these. It reads as a raw data dump rather than a structured settings document.
+
+This matters for Academy use: a learner moving from Asset Groups → Asset Types → Assets encounters an abrupt format change with no navigation context, no settings path, and no explanation of what they are looking at.
+
+**Action:** Reformat Assets.md to match the standard file structure — add the settings path, a "What it does" section explaining what an asset record is and how it relates to customer records, and retain the current customer-level data as the SunComfort Data section.
+
+---
+
+### 2. Asset Dynamic Fields — "Fuel Type" label contradicts the file's own definition
+
+The file states that asset dynamic fields are *"shared dropdown lists that can be applied across all asset groups and types."* But the Fuel Type section is labelled **"Fuel Type (Power Generation assets)"** — implying it is group-specific, not universal.
+
+These cannot both be true. The Help Centre does not resolve this definitively, but the phrase "a specific type of asset which has dynamic fields" leans toward per-type scoping rather than universal application.
+
+**Action:** Clarify how Fuel Type is scoped in Commusoft's actual configuration. If dynamic fields can be scoped per group or type, update the "What it does" definition — replace "shared dropdown lists that can be applied across all asset groups and types" with wording that reflects they can be applied per asset type where relevant. If Fuel Type is in fact universal, remove the "(Power Generation assets)" qualifier.
+
+---
+
+### 3. Settings paths — capitalisation error in Asset Dynamic Fields.md and Standard Asset Fields.md
+
+The Help Centre shows the feature names as:
+- \`Standard asset fields\` (lowercase a, lowercase f)
+- \`Asset dynamic fields\` (uppercase A, lowercase d and f)
+
+**Asset Dynamic Fields.md** gives its path as \`Settings > Assets > Asset Dynamic Fields\` — "Dynamic Fields" is title-cased where the Help Centre uses lowercase. Minor but incorrect.
+
+**Standard Asset Fields.md** gives its path as \`Settings > Assets > Standard Asset Fields\` — "Asset Fields" is title-cased where the Help Centre uses \`Standard asset fields\`.
+
+**Action:** Update the Path line in both files to match Help Centre capitalisation:
+- Asset Dynamic Fields.md: \`Settings > Assets > Asset dynamic fields\`
+- Standard Asset Fields.md: \`Settings > Assets > Standard asset fields\`
+
+Note: Asset Groups.md and Asset Types.md use \`Settings > Assets > Asset Groups\` and \`Settings > Assets > Asset Types\` respectively. The Help Centre confirms these as \`Asset Groups\` and \`Asset Types\` (both title case) — these are correct as written.
+
+---
+
+## Suggestions
+
+### 4. Asset Types — no entries for the "General" asset group
+
+Asset Groups.md includes a "General" group defined as "miscellaneous assets that don't fit a primary service category." Asset Types.md has no corresponding section for General. A reader cross-referencing the two files will notice the gap.
+
+**Suggestion:** Add a short note under Asset Types either listing any General types SunComfort uses, or confirming that General has no fixed types by design and assets in this group are recorded without a type.
+
+---
+
+### 5. Assets.md — Bernard Robinson's third-party asset has no handling note
+
+Bernard Robinson's solar PV is flagged as "not installed by SunComfort." There is no guidance anywhere in the five files on how third-party assets are handled: are they recorded differently, is the Installer Name field left blank, is a status flag used? The Help Centre has nothing on this either. Academy scripts referencing this customer will need to address it without any reference point.
+
+**Suggestion:** Add a brief note in Assets.md (or in Standard Asset Fields.md under Installer Name) explaining how SunComfort records assets it did not install — specifically whether the Installer Name field or a System Status flag distinguishes third-party from own-installation assets.
+
+---
+
+### 6. Standard Asset Fields — MCS-specific fields not contextualised
+
+MCS Certificate Number and Commissioned By are UK-specific compliance fields for solar and heat pump installations. They are correctly included. The only flag: if Academy content is delivered to customers without solar or heat pump assets, these fields will raise questions about when they apply.
+
+**Suggestion:** Add a brief line confirming that MCS Certificate Number and Commissioned By apply specifically to MCS-certified solar PV and heat pump installations and may be left blank for other asset types.
+
+---
+
+## Notes
+
+- The Group → Type → Fields hierarchy is clear and logically sequenced across all five files. No structural problems.
+- The SunComfort customer examples in Asset Types.md are well-chosen and specific — Margaret Thompson, Brian Clayton, Gary Sharma, and The Rose & Crown all ground the data in recognisable scenarios. Good for Academy use.
+- The nine standard fields listed in Standard Asset Fields.md are plausible and well-described but cannot be verified against the Help Centre, which names none of them. If factual accuracy of these specific fields is important before Academy production, the owner should test against a live Commusoft account.
+- The Help Centre article notes that Standard Asset Fields requires "Customer Journey plan or higher." This is not mentioned in the files. It is not relevant for Academy content about SunComfort specifically (SunComfort would be on an appropriate plan), but worth noting for any future reuse.
+- Asset Groups.md note on electrical components ("recorded within the relevant primary group rather than as a standalone group") is a reasonable editorial call and not contradicted by the Help Centre. It cannot be verified against the Help Centre either — flag as assumed-correct.
+
+---
+
+## Summary of required actions
+
+| # | File | Action | Priority |
+|---|------|---------|----------|
+| 1 | Assets.md | Add standard file format — settings path, "What it does" section, correct header | Must fix |
+| 2 | Asset Dynamic Fields.md | Clarify whether Fuel Type and dynamic fields generally are universal or scoped per type; update definition accordingly | Must fix |
+| 3 | Asset Dynamic Fields.md | Correct path capitalisation: \`Asset dynamic fields\` | Must fix |
+| 3 | Standard Asset Fields.md | Correct path capitalisation: \`Standard asset fields\` | Must fix |
+| 4 | Asset Types.md | Add note or entries for the "General" asset group | Suggestion |
+| 5 | Assets.md | Add note on how third-party (non-SunComfort) assets are recorded | Suggestion |
+| 6 | Standard Asset Fields.md | Add scope note for MCS Certificate Number and Commissioned By | Suggestion |
+
+**No edits should be made to settings files until the owner has approved this review.**
+`;
+
 function openInboxFile(key) {
   var content = INBOX_FILES[key];
   if (!content) { content = 'Content not found.'; }
   var labels = {
     'forest-customer-settings': { num: 'Forest — Research Brief', title: 'Customer Settings Help Centre Review' },
     'flint-customer-settings': { num: 'Flint — Review', title: 'Customer Settings Help Centre Check' },
-    'reed-phase2': { num: 'Reed — Planning', title: 'Academy Full Course List — Phase 2' }
+    'reed-phase2': { num: 'Reed — Planning', title: 'Academy Full Course List — Phase 2' },
+    'forest-phase2-coverage': { num: 'Forest — Research', title: 'Phase 2 Help Centre Coverage Check' },
+    'flint-assets-review': { num: 'Flint — Review', title: 'Assets Settings Files' }
   };
   var lbl = labels[key] || { num: 'Owners Inbox', title: key };
   document.getElementById('panelNum').textContent = lbl.num;

@@ -136,6 +136,18 @@
   .sc-checklist-label { font-weight: 700; color: var(--grey); margin-bottom: 8px; font-size: 13px; }
   .sc-checklist p { line-height: 1.7; color: var(--text-muted); }
 
+  /* Folder filing system */
+  .folder-group { border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-bottom: 8px; }
+  .folder-header { padding: 10px 16px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; user-select: none; background: #f0f2f5; transition: background 0.15s; }
+  .folder-header:hover { background: #e8eaed; }
+  .folder-label { font-size: 13px; font-weight: 600; color: var(--grey); display: flex; align-items: center; gap: 8px; }
+  .folder-file-count { font-size: 11px; color: var(--text-muted); font-weight: 500; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 1px 7px; }
+  .folder-chevron { font-size: 10px; color: var(--text-muted); transition: transform 0.2s; display: inline-block; line-height: 1; }
+  .folder-chevron.open { transform: rotate(90deg); }
+  .folder-body { display: none; border-top: 1px solid var(--border); }
+  .folder-body.open { display: block; }
+  .folder-body .inbox-table { border: none; border-radius: 0; margin-bottom: 0; }
+
   .settings-search-bar { margin-bottom: 16px; }
   .settings-search-bar input { width: 100%; max-width: 400px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px; outline: none; }
   .settings-search-bar input:focus { border-color: var(--blue1); box-shadow: 0 0 0 2px rgba(45,145,197,0.15); }
@@ -210,26 +222,79 @@
           <tr><td>10</td><td class="file-name">Tracking opportunities on jobs</td><td><span class="file-type type-script">Job View</span></td><td>4 min</td><td>Decision makers</td><td><span class="badge badge-approved">Approved</span></td><td><span class="view-script-btn" onclick="openPanel(10)">View script</span></td></tr>
         </tbody>
       </table>
-      <div class="section-heading">Other Files <span class="count">11</span></div>
-      <table class="inbox-table">
-        <thead><tr><th>File</th><th>Type</th><th>Description</th><th></th></tr></thead>
-        <tbody>
-          <tr><td class="file-name">Forest — Research — Customer Settings Help Centre Review</td><td><span class="file-type type-research">Research</span></td><td>10 Customer settings verified against help.commusoft.com</td><td><span class="view-script-btn" onclick="openInboxFile('forest-customer-settings')">View file</span></td></tr>
-          <tr><td class="file-name">Flint — Review — Customer Settings Help Centre Check</td><td><span class="file-type" style="background:#fff3ee;color:#fa6932">Review</span></td><td>Must-fix items and suggestions before settings files go to production</td><td><span class="view-script-btn" onclick="openInboxFile('flint-customer-settings')">View file</span></td></tr>
-          <tr><td class="file-name">Reed — Phase 2 — Academy Full Course List</td><td><span class="file-type" style="background:#e8f5e9;color:#2e7d32">Planning</span></td><td>Full course structure across Compass, Shared Library, and all three role paths — awaiting approval</td><td><span class="view-script-btn" onclick="openInboxFile('reed-phase2')">View file</span></td></tr>
-          <tr><td class="file-name">Forest — Research — Phase 2 Help Centre Coverage Check</td><td><span class="file-type type-research">Research</span></td><td>Gap analysis of Reed's Phase 2 course list against the full Help Centre — 5 significant gaps found</td><td><span class="view-script-btn" onclick="openInboxFile('forest-phase2-coverage')">View file</span></td></tr>
-          <tr><td class="file-name">Reed — Phase 2 Revised — Complete Academy Course Structure</td><td><span class="file-type" style="background:#e8f5e9;color:#2e7d32">Planning</span></td><td>Version 2 — ~160 courses across all layers. Estimates removed, Quick-Start Proposals added, CIS, Route Optimisation, Business Units, Merge, Connect Emails, Invoicing from field all included — awaiting approval</td><td><span class="view-script-btn" onclick="openInboxFile('reed-phase2-revised')">View file</span></td></tr>
-          <tr><td class="file-name">Flint — Review — Assets Settings Files</td><td><span class="file-type" style="background:#fff3ee;color:#fa6932">Review</span></td><td>3 must-fixes and 3 suggestions across 5 SunComfort Assets settings files</td><td><span class="view-script-btn" onclick="openInboxFile('flint-assets-review')">View file</span></td></tr>
-          
-          
-          <tr><td class="file-name">Flint — Review — Assets Settings Files (Final Check)</td><td><span class="file-type" style="background:#fff3ee;color:#fa6932">Review</span></td><td>Approved — all must-fixes resolved, two minor notes on Hot Water Cylinder naming and table formats</td><td><span class="view-script-btn" onclick="openInboxFile('flint-assets-final')">View file</span></td></tr>
-          <tr><td class="file-name">Forest — Research — Asset Types by Group</td><td><span class="file-type type-research">Research</span></td><td>Discrete vs sub-component analysis — confirmed asset types for Groups and Types configuration</td><td><span class="view-script-btn" onclick="openInboxFile('forest-asset-types')">View file</span></td></tr>
-          <tr><td class="file-name">Forest — Research — Asset Dropdown Options</td><td><span class="file-type type-research">Research</span></td><td>Make, Model and Location dropdown options for SunComfort asset configuration — ordered by UK market prevalence</td><td><span class="view-script-btn" onclick="openInboxFile('forest-asset-dropdowns')">View file</span></td></tr>
-          <tr><td class="file-name">Forest — Research — SunComfort scenarios</td><td><span class="file-type type-research">Research</span></td><td>Validated real-world industry scenarios for Academy scripts</td><td></td></tr>
-          <tr><td class="file-name">Academy / Job View / index.md</td><td><span class="file-type type-index">Index</span></td><td>Series index for the Job View course collection</td><td></td></tr>
-          <tr><td class="file-name">Academy / index.md</td><td><span class="file-type type-index">Index</span></td><td>Top-level Academy content catalogue and filing conventions</td><td></td></tr>
-        </tbody>
-      </table>
+      <div class="section-heading">Other Files <span class="count">12</span></div>
+
+      <!-- Folder: Planning -->
+      <div class="folder-group">
+        <div class="folder-header" onclick="toggleFolder(this)">
+          <div class="folder-label">Planning <span class="folder-file-count">2 files</span></div>
+          <span class="folder-chevron">&#9654;</span>
+        </div>
+        <div class="folder-body">
+          <table class="inbox-table">
+            <thead><tr><th>File</th><th>Type</th><th>Description</th><th></th></tr></thead>
+            <tbody>
+              <tr><td class="file-name">Reed — Phase 2 Revised — Complete Academy Course Structure</td><td><span class="file-type" style="background:#e8f5e9;color:#2e7d32">Planning</span></td><td>Version 2 — ~160 courses across all layers. Estimates removed, Quick-Start Proposals added, CIS, Route Optimisation, Business Units, Merge, Connect Emails, Invoicing from field all included — awaiting approval</td><td><span class="view-script-btn" onclick="openInboxFile('reed-phase2-revised')">View file</span></td></tr>
+              <tr><td class="file-name">Reed — Phase 2 — Academy Full Course List</td><td><span class="file-type" style="background:#e8f5e9;color:#2e7d32">Planning</span></td><td>Full course structure across Compass, Shared Library, and all three role paths — superseded by Phase 2 Revised</td><td><span class="view-script-btn" onclick="openInboxFile('reed-phase2')">View file</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Folder: Research -->
+      <div class="folder-group">
+        <div class="folder-header" onclick="toggleFolder(this)">
+          <div class="folder-label">Research <span class="folder-file-count">5 files</span></div>
+          <span class="folder-chevron">&#9654;</span>
+        </div>
+        <div class="folder-body">
+          <table class="inbox-table">
+            <thead><tr><th>File</th><th>Type</th><th>Description</th><th></th></tr></thead>
+            <tbody>
+              <tr><td class="file-name">Forest — Research — Asset Dropdown Options</td><td><span class="file-type type-research">Research</span></td><td>Make, Model and Location dropdown options for SunComfort asset configuration — ordered by UK market prevalence</td><td><span class="view-script-btn" onclick="openInboxFile('forest-asset-dropdowns')">View file</span></td></tr>
+              <tr><td class="file-name">Forest — Research — Asset Types by Group</td><td><span class="file-type type-research">Research</span></td><td>Discrete vs sub-component analysis — confirmed asset types for Groups and Types configuration</td><td><span class="view-script-btn" onclick="openInboxFile('forest-asset-types')">View file</span></td></tr>
+              <tr><td class="file-name">Forest — Research — Phase 2 Help Centre Coverage Check</td><td><span class="file-type type-research">Research</span></td><td>Gap analysis of Reed's Phase 2 course list against the full Help Centre — gaps resolved in Phase 2 Revised</td><td><span class="view-script-btn" onclick="openInboxFile('forest-phase2-coverage')">View file</span></td></tr>
+              <tr><td class="file-name">Forest — Research — SunComfort scenarios</td><td><span class="file-type type-research">Research</span></td><td>Validated real-world industry scenarios for Academy scripts</td><td></td></tr>
+              <tr><td class="file-name">Forest — Research — Customer Settings Help Centre Review</td><td><span class="file-type type-research">Research</span></td><td>10 Customer settings verified against help.commusoft.com</td><td><span class="view-script-btn" onclick="openInboxFile('forest-customer-settings')">View file</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Folder: Reviews -->
+      <div class="folder-group">
+        <div class="folder-header" onclick="toggleFolder(this)">
+          <div class="folder-label">Reviews <span class="folder-file-count">3 files</span></div>
+          <span class="folder-chevron">&#9654;</span>
+        </div>
+        <div class="folder-body">
+          <table class="inbox-table">
+            <thead><tr><th>File</th><th>Type</th><th>Description</th><th></th></tr></thead>
+            <tbody>
+              <tr><td class="file-name">Flint — Review — Assets Settings Files (Final Check)</td><td><span class="file-type" style="background:#fff3ee;color:#fa6932">Review</span></td><td>Approved — all must-fixes resolved, two minor notes on Hot Water Cylinder naming and table formats</td><td><span class="view-script-btn" onclick="openInboxFile('flint-assets-final')">View file</span></td></tr>
+              <tr><td class="file-name">Flint — Review — Assets Settings Files</td><td><span class="file-type" style="background:#fff3ee;color:#fa6932">Review</span></td><td>3 must-fixes and 3 suggestions across 5 SunComfort Assets settings files</td><td><span class="view-script-btn" onclick="openInboxFile('flint-assets-review')">View file</span></td></tr>
+              <tr><td class="file-name">Flint — Review — Customer Settings Help Centre Check</td><td><span class="file-type" style="background:#fff3ee;color:#fa6932">Review</span></td><td>Must-fix items and suggestions before settings files go to production</td><td><span class="view-script-btn" onclick="openInboxFile('flint-customer-settings')">View file</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Folder: Indexes -->
+      <div class="folder-group">
+        <div class="folder-header" onclick="toggleFolder(this)">
+          <div class="folder-label">Indexes <span class="folder-file-count">2 files</span></div>
+          <span class="folder-chevron">&#9654;</span>
+        </div>
+        <div class="folder-body">
+          <table class="inbox-table">
+            <thead><tr><th>File</th><th>Type</th><th>Description</th><th></th></tr></thead>
+            <tbody>
+              <tr><td class="file-name">Academy / Job View / index.md</td><td><span class="file-type type-index">Index</span></td><td>Series index for the Job View course collection</td><td></td></tr>
+              <tr><td class="file-name">Academy / index.md</td><td><span class="file-type type-index">Index</span></td><td>Top-level Academy content catalogue and filing conventions</td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
 
     <!-- ACADEMY -->
@@ -2608,6 +2673,13 @@ function openSettingsPanel(name) {
   document.getElementById('scriptPanel').classList.add('open');
   document.getElementById('overlay').classList.add('open');
   document.body.style.overflow = 'hidden';
+}
+
+function toggleFolder(header) {
+  var body = header.nextElementSibling;
+  var chevron = header.querySelector('.folder-chevron');
+  body.classList.toggle('open');
+  chevron.classList.toggle('open');
 }
 
 document.addEventListener('DOMContentLoaded', buildSettingsUI);

@@ -210,7 +210,7 @@
           <tr><td>10</td><td class="file-name">Tracking opportunities on jobs</td><td><span class="file-type type-script">Job View</span></td><td>4 min</td><td>Decision makers</td><td><span class="badge badge-approved">Approved</span></td><td><span class="view-script-btn" onclick="openPanel(10)">View script</span></td></tr>
         </tbody>
       </table>
-      <div class="section-heading">Other Files <span class="count">10</span></div>
+      <div class="section-heading">Other Files <span class="count">11</span></div>
       <table class="inbox-table">
         <thead><tr><th>File</th><th>Type</th><th>Description</th><th></th></tr></thead>
         <tbody>
@@ -220,6 +220,8 @@
           <tr><td class="file-name">Forest — Research — Phase 2 Help Centre Coverage Check</td><td><span class="file-type type-research">Research</span></td><td>Gap analysis of Reed's Phase 2 course list against the full Help Centre — 5 significant gaps found</td><td><span class="view-script-btn" onclick="openInboxFile('forest-phase2-coverage')">View file</span></td></tr>
           <tr><td class="file-name">Flint — Review — Assets Settings Files</td><td><span class="file-type" style="background:#fff3ee;color:#fa6932">Review</span></td><td>3 must-fixes and 3 suggestions across 5 SunComfort Assets settings files</td><td><span class="view-script-btn" onclick="openInboxFile('flint-assets-review')">View file</span></td></tr>
           
+          
+          <tr><td class="file-name">Flint — Review — Assets Settings Files (Final Check)</td><td><span class="file-type" style="background:#fff3ee;color:#fa6932">Review</span></td><td>Approved — all must-fixes resolved, two minor notes on Hot Water Cylinder naming and table formats</td><td><span class="view-script-btn" onclick="openInboxFile('flint-assets-final')">View file</span></td></tr>
           <tr><td class="file-name">Forest — Research — Asset Types by Group</td><td><span class="file-type type-research">Research</span></td><td>Discrete vs sub-component analysis — confirmed asset types for Groups and Types configuration</td><td><span class="view-script-btn" onclick="openInboxFile('forest-asset-types')">View file</span></td></tr>
           <tr><td class="file-name">Forest — Research — Asset Dropdown Options</td><td><span class="file-type type-research">Research</span></td><td>Make, Model and Location dropdown options for SunComfort asset configuration — ordered by UK market prevalence</td><td><span class="view-script-btn" onclick="openInboxFile('forest-asset-dropdowns')">View file</span></td></tr>
           <tr><td class="file-name">Forest — Research — SunComfort scenarios</td><td><span class="file-type type-research">Research</span></td><td>Validated real-world industry scenarios for Academy scripts</td><td></td></tr>
@@ -2275,6 +2277,88 @@ The following points require Sara's input before this list is finalised for conf
 - [Commusoft Renewable Energy Asset Management — commusoft.com](https://www.commusoft.com/en-gb/blog/renewable-energy-asset-management/)
 `;
 
+INBOX_FILES["flint-assets-final"] = `# Flint — Review: SunComfort Assets Settings Files (Final Check)
+
+**Review date:** 2026-04-20
+**Reviewer:** Flint
+**Scope:** Re-review of 5 SunComfort Assets settings files following must-fix revisions
+
+---
+
+## Overall Status
+
+**Status: Approved with minor notes**
+
+All three must-fix items are resolved. The files are ready for Academy use. Minor observations are noted below — none are blockers.
+
+---
+
+## Must-Fix Resolution
+
+**Must-fix 1 — Assets.md: missing standard file format (no settings path, no header, no "What it does")**
+RESOLVED. The file now includes a correctly formatted settings block (\`Setting\`, \`Section\`, \`Path\`), a \`What it does\` section, and follows the standard structure. No issues here.
+
+**Must-fix 2 — Asset Dynamic Fields: contradictory "Fuel Type (Power Generation assets)" label; file to be simplified to Make, Model, Location only; path capitalisation to read \`Settings > Assets > Asset dynamic fields\`**
+RESOLVED. The file no longer contains a Fuel Type field or any group-specific content. It covers exactly Make, Model, and Location. Path now reads \`Settings > Assets > Asset dynamic fields\` (lowercase \`d\` and \`f\`). Capitalisation is correct.
+
+**Must-fix 3 — Standard Asset Fields: path capitalisation to read \`Settings > Assets > Standard asset fields\`; content to match actual Commusoft screenshot fields**
+RESOLVED. Path now reads \`Settings > Assets > Standard asset fields\` (lowercase \`a\` and \`f\`). The field list is structured in two columns matching a real asset record layout. Field names and types are specific and credible.
+
+---
+
+## Suggestions Resolution
+
+**Suggestion 4 — Asset Types: no entries for the "General" group**
+NOT ADDRESSED. The file still has no "General" group. This is acceptable if SunComfort has confirmed they do not use a General group in their configuration. If a General group exists in their Commusoft account, types should be added. This remains a standing note, not a blocker — the file covers the groups that have been defined, and there is no evidence from the file itself that a General group is required.
+
+**Suggestion 5 — Assets.md: no guidance on third-party assets**
+ADDRESSED. A clearly written note on third-party assets has been added to the \`What it does\` section. It covers the scenario accurately, references the relevant checkboxes and the Installer Name field, and uses a real example (Bernard Robinson) that appears in the SunComfort Data section. Well handled.
+
+**Suggestion 6 — Standard Asset Fields: MCS fields not contextualised**
+ADDRESSED by implication. MCS certificate fields are now correctly placed in Asset Groups (group-level fields for Heat Pumps and Solar PV), which is the appropriate location. Standard Asset Fields is now solely focused on the fields common to every asset record, which is correct. The concern from the original review no longer applies to this file.
+
+---
+
+## New Issues
+
+**Asset Groups.md — table header row missing in group-level field tables**
+Each group-level fields table has a header row that reads \`| Field | Type | Notes |\` but the markdown table syntax is incomplete — there is no separator row (i.e., \`| --- | --- | --- |\`) between the header and the data rows. This will cause the tables to render as plain text in most markdown renderers rather than as formatted tables. The same issue applies to Asset Types.md across all type-level field tables, and to Standard Asset Fields.md in both the left and right column tables.
+
+Action required: Add separator rows to all tables that are missing them. This is a formatting issue, not a content issue, but it will affect how the files render in the Academy interface and in any markdown preview.
+
+Example of the required fix for Asset Groups.md, Heat Pumps table:
+\`\`\`
+| Field | Type | Notes |
+| --- | --- | --- |
+| MCS certificate number | Single line text | Applies to the whole installation |
+\`\`\`
+
+**Asset Types.md — Hot Water Cylinder appears in two groups**
+Hot Water Cylinder appears as an asset type under both \`Heat Pumps\` and \`Heating Distribution\`, with identical fields in both. This may be intentional if SunComfort installs cylinders as part of heat pump systems and also as standalone units. However, having two identically named types in different groups can cause confusion for engineers selecting an asset type. If this is deliberate, a brief note distinguishing the two use cases (e.g., "Hot Water Cylinder — heat pump-coupled" vs. "Hot Water Cylinder — standalone") would remove ambiguity. Not a blocker, but worth flagging before Academy delivery.
+
+**Assets.md — SunComfort Data tables have incomplete markdown table syntax**
+The data tables under \`## SunComfort Data\` are missing the separator row. For example:
+
+\`\`\`
+| Asset | Details |
+| Air Source Heat Pump | Installed March 2021 · £8,500 · On maintenance contract |
+\`\`\`
+
+The header row has no \`| --- | --- |\` separator. Same fix as noted for the other files.
+
+Additionally, the \`## Margaret Thompson\` and \`## Greenleaf Dental Practice\` tables and the \`## Gary & Priya Sharma\` table use a two-column format (\`Asset | Details\`), while \`## David Okafor Portfolio\` uses three columns (\`Property | Asset | Details\`). This inconsistency is not a problem for content purposes but may look uneven in the rendered Academy interface. Not a blocker.
+
+---
+
+## Notes
+
+The overall quality of these files has improved significantly from the first round. The must-fixes have all been handled cleanly and without introducing new content errors. The Asset Dynamic Fields file in particular is now tight and correct — the original contradiction has been removed entirely rather than patched around.
+
+The table formatting issue (missing separator rows) is present across multiple files and needs a systematic fix before final delivery. It is the only thing standing between these files and clean Academy use.
+
+Asset Groups.md and Asset Types.md are well-structured and the field choices are credible for a renewables installer of SunComfort's profile. No content concerns on either file.
+`;
+
 function openInboxFile(key) {
   var content = INBOX_FILES[key];
   if (!content) { content = 'Content not found.'; }
@@ -2285,7 +2369,8 @@ function openInboxFile(key) {
     'forest-phase2-coverage': { num: 'Forest — Research', title: 'Phase 2 Help Centre Coverage Check' },
     'flint-assets-review': { num: 'Flint — Review', title: 'Assets Settings Files' },
     'forest-asset-dropdowns': { num: 'Forest — Research', title: 'Asset Dropdown Options' },
-    'forest-asset-types': { num: 'Forest — Research', title: 'Asset Types by Group' }
+    'forest-asset-types': { num: 'Forest — Research', title: 'Asset Types by Group' },
+    'flint-assets-final': { num: 'Flint — Review', title: 'Assets Settings Files (Final Check)' }
   };
   var lbl = labels[key] || { num: 'Owners Inbox', title: key };
   document.getElementById('panelNum').textContent = lbl.num;

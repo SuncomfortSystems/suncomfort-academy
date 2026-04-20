@@ -210,7 +210,7 @@
           <tr><td>10</td><td class="file-name">Tracking opportunities on jobs</td><td><span class="file-type type-script">Job View</span></td><td>4 min</td><td>Decision makers</td><td><span class="badge badge-approved">Approved</span></td><td><span class="view-script-btn" onclick="openPanel(10)">View script</span></td></tr>
         </tbody>
       </table>
-      <div class="section-heading">Other Files <span class="count">9</span></div>
+      <div class="section-heading">Other Files <span class="count">10</span></div>
       <table class="inbox-table">
         <thead><tr><th>File</th><th>Type</th><th>Description</th><th></th></tr></thead>
         <tbody>
@@ -219,6 +219,8 @@
           <tr><td class="file-name">Reed — Phase 2 — Academy Full Course List</td><td><span class="file-type" style="background:#e8f5e9;color:#2e7d32">Planning</span></td><td>Full course structure across Compass, Shared Library, and all three role paths — awaiting approval</td><td><span class="view-script-btn" onclick="openInboxFile('reed-phase2')">View file</span></td></tr>
           <tr><td class="file-name">Forest — Research — Phase 2 Help Centre Coverage Check</td><td><span class="file-type type-research">Research</span></td><td>Gap analysis of Reed's Phase 2 course list against the full Help Centre — 5 significant gaps found</td><td><span class="view-script-btn" onclick="openInboxFile('forest-phase2-coverage')">View file</span></td></tr>
           <tr><td class="file-name">Flint — Review — Assets Settings Files</td><td><span class="file-type" style="background:#fff3ee;color:#fa6932">Review</span></td><td>3 must-fixes and 3 suggestions across 5 SunComfort Assets settings files</td><td><span class="view-script-btn" onclick="openInboxFile('flint-assets-review')">View file</span></td></tr>
+          
+          <tr><td class="file-name">Forest — Research — Asset Types by Group</td><td><span class="file-type type-research">Research</span></td><td>Discrete vs sub-component analysis — confirmed asset types for Groups and Types configuration</td><td><span class="view-script-btn" onclick="openInboxFile('forest-asset-types')">View file</span></td></tr>
           <tr><td class="file-name">Forest — Research — Asset Dropdown Options</td><td><span class="file-type type-research">Research</span></td><td>Make, Model and Location dropdown options for SunComfort asset configuration — ordered by UK market prevalence</td><td><span class="view-script-btn" onclick="openInboxFile('forest-asset-dropdowns')">View file</span></td></tr>
           <tr><td class="file-name">Forest — Research — SunComfort scenarios</td><td><span class="file-type type-research">Research</span></td><td>Validated real-world industry scenarios for Academy scripts</td><td></td></tr>
           <tr><td class="file-name">Academy / Job View / index.md</td><td><span class="file-type type-index">Index</span></td><td>Series index for the Job View course collection</td><td></td></tr>
@@ -1914,6 +1916,365 @@ INBOX_FILES["forest-asset-dropdowns"] = `# Forest — Research Brief
 7. **This research reflects the market as of April 2026.** The UK renewables market is moving quickly — particularly in battery storage and EV chargers. Brand rankings may shift within 12 months.
 `;
 
+INBOX_FILES["forest-asset-types"] = `# Forest — Research Brief
+**Topic:** Asset Types by Group — Discrete vs Sub-component
+**Date:** 2026-04-20
+**Requested by:** Fern (for Asset Groups and Asset Types settings files)
+
+---
+
+## Research Method
+
+Research drew on:
+- UK commissioning standards (MCS MIS 3005-I Heat Pump, MIS 3002 Solar PV, MIS 3012 Battery Storage)
+- Heat Pump Association (HPA) commissioning and service checklists (HPADOC0001 v2.0, HPADOC0003 v1.1)
+- Benchmark/HHIC commissioning and warranty validation documentation
+- Manufacturer warranty registration requirements (Mitsubishi Electric Ecodan, Vaillant aroTHERM, myenergi, Fox ESS, Tesla Powerwall)
+- UK field service maintenance practices for each technology type
+- NICEIC and OZEV guidance on EV charge point installation documentation
+
+The core test applied throughout: **does the item have its own serial number, would an engineer put a barcode sticker on it, and would it appear as its own line item on a service checklist or warranty registration form?**
+
+---
+
+## Group 1: Heat Pumps
+
+### Background
+
+The UK heat pump commissioning framework is well-defined. The Heating and Hotwater Industry Council (HHIC) Benchmark commissioning checklist and the HPA HPADOC0001 (v2.0, 2025) both structure commissioning records around distinct equipment sections. Each section captures make, model, serial number, and capacity separately. This is the clearest evidence of what the industry treats as a discrete, trackable asset.
+
+The MCS MID (Installations Database) requires that if multiple heat pump products are installed, they must all be listed on the certificate individually. If different heat pump products are used, they must be added as separate line items. This confirms the industry norm: each major unit = a separate tracked asset.
+
+### Confirmed Asset Types
+
+| Asset Type | Rationale |
+|---|---|
+| **Air Source Heat Pump (Outdoor Unit)** | The primary generation unit. Has its own serial number. Recorded separately on Benchmark checklist, MCS certificate, and manufacturer warranty registration (e.g. Vaillant requires a 28-digit serial number for the heat pump itself). The compressor, refrigerant circuit, and fan assembly are housed here. Serviced as a discrete unit — airflow, refrigerant levels, heat exchanger, fan, and casing checks are all performed on this unit specifically. |
+| **Indoor Unit / Wiring Centre / Hydro Box** | Recorded as a separate line item on the HHIC commissioning checklist under "Heat Pump Controller / Indoor Module" with its own manufacturer, model, and serial number fields. On split systems this is a distinct physical unit (e.g. Mitsubishi FTC controller). On monobloc systems it may be a wiring centre or controller box — still a separately identified unit. Mitsubishi Ecodan warranty registration requires serial numbers for both indoor and outdoor units. |
+| **Hot Water Cylinder (Unvented or Vented)** | Recorded in its own section on the Benchmark/HHIC commissioning checklist: manufacturer, model, serial number, cylinder type (unvented/vented/thermal store), and storage volume in litres. Has its own annual service requirement under the Unvented Cylinder Regulations — a G3-qualified engineer must service it separately from the heat pump itself. Homeserve and other service plan providers sell separate "Heat Pump and Unvented Cylinder" service plans, treating the cylinder as a co-equal asset. Has its own Benchmark commissioning record. |
+| **Buffer Vessel / Buffer Tank** | Recorded separately on commissioning checklists under "Buffer tank or system water volume." Not every installation has one, but when present it is a named, sized asset (volume in litres) with its own condition. Service checklists call for inspecting it for corrosion, checking pressure, and verifying volume. On larger commercial systems, buffer vessels have their own serial numbers and pressure vessel registration. |
+| **Ground Source Heat Pump (Outdoor/Ground Unit)** | Where applicable: the ground source unit is the primary asset. The ground loop or borehole array is infrastructure — it is not labelled or serviced independently. The pump unit itself is the discrete trackable asset. |
+
+### Sub-components to Exclude
+
+- Refrigerant pipework and fittings
+- Isolation valves and service valves
+- Pipework insulation (Armaflex)
+- Pressure gauges (permanently mounted)
+- Circulating pumps (part of the hydro box or integral to the system)
+- Ground loops and borehole arrays (infrastructure, not serviceable units)
+- Expansion vessels (component of cylinder or system — checked during cylinder or system service, not a standalone tracked asset at this level)
+- TRVs and radiator valves (heating distribution, not heat pump assets)
+- Wiring and cable runs
+
+### Borderline Cases
+
+- **Domestic hot water immersion heater:** Some cylinders include an integral immersion element that is replaced or tested separately. In practice, it is treated as a component of the cylinder rather than a standalone asset. Exclude unless SunComfort specifically tracks immersion heaters.
+- **Thermal store (combined cylinder/buffer):** Where a single vessel serves both DHW and buffer functions (e.g. Vaillant allSTOR), it should be tracked as one asset — "Thermal Store" — rather than two.
+- **Ground loop manifold (GSHP):** Has its own physical location and may need flushing or pressure-testing, but is typically treated as infrastructure. Flag for Sara's review if SunComfort installs GSHP.
+
+### Recommended Asset Types — Heat Pumps
+
+1. Air Source Heat Pump — Outdoor Unit
+2. Air Source Heat Pump — Indoor Unit / Wiring Centre
+3. Ground Source Heat Pump — Unit *(if applicable)*
+4. Hot Water Cylinder
+5. Buffer Vessel / Thermal Store
+
+---
+
+## Group 2: Solar PV
+
+### Background
+
+MCS MIS 3002 governs solar PV installation in the UK. The MCS certificate records "panel type, inverter details and capacity" as system-level specifications. However, the field service norm for solar PV is that the **inverter** is the discrete trackable asset — it has a serial number, is individually registered with the manufacturer and DNO, and is the unit most likely to fail independently and require engineer attention. Solar panels are recorded by brand and model as a string or array, not individually.
+
+The exception is microinverter systems (Enphase): each microinverter has its own serial number and is tracked at panel level. In practice, most UK residential solar uses string inverters, and individual panel tracking is not standard.
+
+Power optimisers (SolarEdge, GivEnergy) are individually wired to panels and have serial numbers — but the industry norm is to track the **optimiser string** via the inverter's monitoring portal, not to label each optimiser as a separate field service asset. A return visit would focus on the inverter and its monitoring data, not individual optimisers.
+
+### Confirmed Asset Types
+
+| Asset Type | Rationale |
+|---|---|
+| **Solar PV Inverter (String)** | The primary discrete asset in a solar PV installation. Has its own serial number, registered with DNO. Annual service visits check fault logs, AC voltage, ventilation, firmware version. The inverter is the unit most likely to fail independently. Manufacturer warranty is registered to the inverter's serial number. |
+| **Solar Panel Array** | Tracked as a group asset (e.g. "16 × LONGi Hi-MO6 420W panels on south-facing roof"). Individual panels are not labelled or tracked as separate assets in standard string installations. However, the array as a unit appears on the MCS certificate and service records. Create one asset record per array/string, not one per panel. |
+| **Microinverter (per panel)** | In Enphase systems, each microinverter has a serial number that is scanned and mapped during installation. Each is a genuinely discrete asset. Applicable only where microinverters are installed. |
+| **Solar PV Battery** | See Group 3 — Battery Storage. In hybrid systems, the battery is tracked as a separate asset from the inverter. |
+
+### Sub-components to Exclude
+
+- Individual solar panels (in string inverter systems — these are components of the array)
+- DC cabling and conduit
+- AC isolators
+- String fuses and combiner boxes
+- Roof mounting rails, brackets, and clamps
+- Cable clips and trunking
+- Generation meters (typically utility property or DNO-registered, not field service assets)
+- Power optimisers (in most contexts — monitored via inverter portal; not individually labelled as field service assets)
+
+### Borderline Cases
+
+- **Power Optimiser (SolarEdge/GivEnergy):** Each optimiser has a serial number and is mapped to a specific panel location via the monitoring portal. However, in UK residential field service, optimisers are rarely barcode-labelled or tracked in a separate FSM asset record — faults are identified via the monitoring software and the specific optimiser is replaced by reference to its portal ID. Recommend exclusion as a standalone asset type in Commusoft, but flag as a potential future addition if SunComfort expands to commercial/utility scale.
+- **Enphase IQ Gateway / Envoy:** The gateway is a discrete unit with its own serial number that communicates with all microinverters. In Enphase systems, this is a distinct trackable asset. Include as "Solar Monitoring Gateway" if SunComfort installs Enphase.
+
+### Recommended Asset Types — Solar PV
+
+1. Solar Inverter
+2. Solar Panel Array
+3. Microinverter *(Enphase systems only)*
+4. Solar Monitoring Gateway *(Enphase systems — optional)*
+
+---
+
+## Group 3: Battery Storage
+
+### Background
+
+Battery storage is a well-defined discrete asset. Every major manufacturer (GivEnergy, Fox ESS, Tesla, SolarEdge, Solis, Solax, Growatt, Sonnen) uses serial numbers for warranty registration and remote diagnostics. Fox ESS registers inverters and batteries separately. Tesla requires the Powerwall serial number for warranty claims and requires internet connectivity for full warranty. GivEnergy (noting administration proceedings in April 2026) ran a cloud-based remote health check system tied to individual unit serial numbers.
+
+NICEIC launched a dedicated Electrical Energy Storage Systems qualification for UK installers, recognising battery storage as a specialist category. MCS launched MIS 3012 Battery Installation Standard, registering battery installations separately in the MID.
+
+The key distinction: a hybrid inverter-battery unit (GivEnergy All-in-One, Fox ESS AIO, Growatt AIO) is a single physical unit — tracked as one asset. A separately installed inverter + separately installed battery stack — as in most Fox ESS, SolarEdge, or modular GivEnergy Gen 3 installations — are two or more discrete assets.
+
+### Confirmed Asset Types
+
+| Asset Type | Rationale |
+|---|---|
+| **Battery Storage Unit** | The battery module(s) — whether a single unit (Tesla Powerwall 2/3, Sonnen) or a modular stack (GivEnergy GivBat, Fox ESS EP series). Each unit or stack has its own serial number and warranty registration. Annual service checks battery state of health, charge/discharge efficiency, and firmware. Physical inspection for damage, ventilation, and cable integrity. |
+| **Battery Inverter / Hybrid Inverter** | Where the inverter is a separate physical unit from the battery (e.g. Fox ESS H1/AC1 inverter + separate EP battery, GivEnergy Gen 3 hybrid inverter + GivBat). Fox ESS registers inverters and batteries under separate warranty registrations — confirming they are discrete tracked assets. |
+| **Battery Gateway / Backup Gateway** | Tesla Powerwall systems require a separate Gateway unit (Gateway 2 or Gateway 3) that controls grid/battery switching. The Gateway has its own serial number and is diagnosed separately from the Powerwall units during field service — determining whether a fault is in the Powerwall itself or the Gateway is a key troubleshooting step. Should be tracked as a discrete asset on Tesla Powerwall installations. |
+| **Hybrid Inverter-Battery System (AIO)** | Where the inverter and battery are integrated into a single unit (GivEnergy All-in-One, Fox ESS EVO AIO). Track as a single asset with one record. The type name should reflect the combined nature: e.g. "Battery Storage System — All-in-One." |
+
+### Sub-components to Exclude
+
+- Battery Management System (BMS) — internal electronics, not a field-trackable unit
+- DC isolators and fuses
+- AC wiring between battery and consumer unit
+- Wall brackets and mounting hardware
+- Communication cables between battery modules in a stack
+
+### Borderline Cases
+
+- **Modular battery expansion units:** In GivEnergy Gen 3 and Fox ESS stackable systems, each additional battery module has its own serial number. In a 3-module stack, that is technically 3 separate serial-numbered units. In practice, field service treats the stack as a single asset ("Battery Stack — 3 × GivBat 5.2kWh") and replaces individual modules by reference to their serial number only when a specific module fails. Recommend tracking as one asset per stack/installation, with notes field for individual module serials. Sara to confirm preferred approach.
+- **SolarEdge Home Battery:** The SolarEdge Home Battery integrates with the Home Hub inverter and is registered as a distinct product in SolarEdge's monitoring portal, but may be installed as part of the inverter + battery bundle. Track as a separate battery asset.
+
+### Recommended Asset Types — Battery Storage
+
+1. Battery Storage Unit
+2. Battery Inverter *(where separate from battery — see note)*
+3. Battery Gateway *(Tesla Powerwall systems)*
+4. Battery Storage System — All-in-One *(where inverter and battery are integrated)*
+
+**Note:** The distinction between "Battery Storage Unit" and "Battery Inverter" only applies where the inverter and battery are separate physical boxes. Where they are integrated (AIO), use the single asset type. Sara may wish to collapse these into a single "Battery Storage System" type with a sub-type field, rather than maintaining two separate types.
+
+---
+
+## Group 4: EV Charging
+
+### Background
+
+An EV charge point is a clear discrete asset. It has its own serial number, is registered on the myenergi/Ohme/Hypervolt/Easee app or portal, and requires a separate installation certificate (EV Charging Point Installation Certificate under BS 7671:2018+A2:2022). NICEIC registers the installation under building regulations. The charge point unit itself is the asset — cabling and mounting hardware are not.
+
+Where a myenergi hub (iHub or Hub) and harvi energy harvester are installed alongside a Zappi, myenergi's own warranty system treats Hub and Harvi as separate registered products with their own serial numbers. However, in the field service context for a residential renewables installer, the Hub is primarily a smart home energy management device rather than a separately serviced piece of equipment. The Zappi charge point itself is what gets inspected, tested, and replaced.
+
+For commercial multi-charger installations (Easee, Alfen), multiple charge point units will each have their own serial number and should each be tracked individually.
+
+### Confirmed Asset Types
+
+| Asset Type | Rationale |
+|---|---|
+| **EV Charge Point** | The charge point unit itself (Zappi, Hypervolt Home 3 Pro, Ohme Home Pro, Easee One, etc.). Has its own serial number visible on the unit label. Registered with manufacturer and (where applicable) with the OZEV installer scheme. Annual or periodic service includes physical inspection (casing, cables, connectors), electrical testing (RCD trip test, earthing, voltage), firmware update, and connectivity check. Each unit = one asset record. |
+
+### Sub-components to Exclude
+
+- Charging cable and connector (part of the unit; replaced as a component)
+- RCD and supply cable in consumer unit
+- Earthing conductor and earth rod
+- Wall bracket/pedestal mounting
+- Conduit and cable trunking
+- CT clamp (used for solar export tracking — component of the installation)
+
+### Borderline Cases
+
+- **myenergi Hub (iHub):** Registered separately in the myenergi warranty system and has its own serial number. In a solar-integrated Zappi installation, the Hub coordinates energy flows between Zappi, Eddi, and solar inverter. Field service teams may need to diagnose Hub faults independently. Borderline case — recommend inclusion as a separate asset type if SunComfort commonly installs myenergi ecosystems with Hub units.
+- **myenergi Harvi:** A wireless energy harvesting sensor used where a CT clamp cannot be wired directly to the Zappi. Has a serial number and is registered separately. However, it is a small sensor (no larger than a CT clamp) and is not typically a field service item in its own right. Recommend exclusion — replace as a component rather than tracking individually.
+- **Load balancing / EVSE management system:** In commercial installations with multiple chargers (e.g. Easee or Alfen multi-unit sites), a backend management controller may be installed. This would be a discrete asset if present.
+
+### Recommended Asset Types — EV Charging
+
+1. EV Charge Point
+2. EV Energy Hub / Smart Controller *(myenergi Hub — optional, for ecosystem installs)*
+
+---
+
+## Group 5: Power Generation (Generators)
+
+### Background
+
+Standby generators are one of the most mature asset-tracking categories in field service. Generator maintenance is universally performed as a scheduled service against individual units identified by serial number and engine hour meter reading. UK service providers (Hampshire Generators, Shenton Group, Power Security Generators) all record make, model, serial number, commissioning date, engine hours, and last service date per unit. Generator Record Sheets are standard — they travel with the unit.
+
+Critically, an Automatic Transfer Switch (ATS) panel — the switchgear that detects mains failure and automatically transfers load to the generator — is treated as a separate service asset by UK maintenance providers. Several UK providers note that ATS maintenance plans are sold separately from generator service plans, and that many inspectors require separate maintenance documentation for the ATS due to its critical role. The ATS has its own make, model, and serial number.
+
+### Confirmed Asset Types
+
+| Asset Type | Rationale |
+|---|---|
+| **Standby Generator** | The primary generation unit. Has its own engine serial number (and often a generator/alternator serial number distinct from the engine). Annual service covers battery condition, oil/filter change, coolant level, exhaust system, fuel system, alternator connections, and a load test. Engine hours are logged per unit. Each generator = one asset record. |
+| **Automatic Transfer Switch (ATS) Panel** | A separate physical switchgear unit that controls mains/generator changeover. Has its own serial number. UK providers confirm that ATS maintenance is commonly sold as a separate service plan alongside the generator plan, with its own annual inspection. Contacts, transfer mechanism, and control logic are checked independently of the generator. |
+
+### Sub-components to Exclude
+
+- Fuel tank (where integral to the base/skid) — checked during service but not a separate asset
+- Exhaust silencer and flue system
+- Generator cable and distribution board wiring
+- Engine battery (checked/replaced during service as a consumable)
+- Fuel day tank (where separate — borderline case, see below)
+- Control panel on the generator itself (integral to the unit)
+
+### Borderline Cases
+
+- **Separate fuel day tank:** In commercial/light industrial installations, a separate day tank feeds the generator engine and is refilled from a bulk storage tank. The day tank may have its own make, model, and capacity. In a serious field service operation tracking commercial generator sites, this would be tracked separately. For SunComfort's likely residential/light commercial renewables context, this is probably out of scope — but Sara should confirm.
+- **Remote monitoring panel:** Where a separate building management or remote monitoring unit is installed for the generator system, this may warrant its own asset record. Recommend inclusion if applicable.
+
+### Recommended Asset Types — Power Generation
+
+1. Standby Generator
+2. Automatic Transfer Switch (ATS)
+
+---
+
+## Group 6: Heating Distribution
+
+### Background
+
+Heating distribution presents the most nuanced asset classification challenge. The key question is whether radiators, UFH systems, and ancillary items are individually tracked assets or components of an installed heating system.
+
+**Cylinders** are clearly discrete assets (covered under Heat Pumps above, where they form part of the heat pump system). Where a cylinder is installed independently — e.g. as a hot water upgrade separate from heat pump work — it remains a discrete trackable asset with its own serial number and G3 annual service requirement.
+
+**Radiators** are generally not tracked individually. Panel radiators do not have serial numbers that are registered for warranty or service purposes. The heating system as a whole is serviced — not each radiator separately. However, a UK heating engineer making a return service visit would check radiator balancing, TRV operation, and bleed status at a system level. No barcode sticker on individual radiators.
+
+**Underfloor Heating** is an important distinction. The UFH *manifold* is a discrete physical unit — installed in a specific location, with multiple circuits connected to it, and requiring its own annual service (pressure and flow checks, actuator testing, zone valve testing). A manifold has a make and model (Warmup, Heatmiser, Polypipe, Uponor). The UFH thermostat in each room is also a discrete electronic device with its own serial number, programmable settings, and potential for independent failure. The pipework loops embedded in the floor are infrastructure.
+
+### Confirmed Asset Types
+
+| Asset Type | Rationale |
+|---|---|
+| **Hot Water Cylinder** | As described under Heat Pumps — a discrete asset with serial number, G3 annual service requirement, and its own commissioning record. Included here for completeness where cylinders are installed independently. |
+| **UFH Manifold** | A discrete plumbing unit installed at a central point in the property, connecting all UFH loops for a given zone or floor. Has a make and model. Annual service involves checking each port actuator, testing zone isolation, verifying flow rates, bleeding air, and checking pressure. Has a defined location (e.g. "Utility room"). A property may have multiple manifolds (one per floor). Each manifold = one asset record. |
+| **UFH Thermostat / Controller** | A programmable electronic device with its own serial number and firmware. Individually tested during service (calling for heat, zone activation, programming check). May fail independently and require replacement. Where Heatmiser neoHub or Warmup 4iE/6iE thermostats are installed, each is a network-connected device with its own ID. Each thermostat = one asset record. |
+
+### Sub-components to Exclude
+
+- Individual panel radiators (not tracked with serial numbers; not serviced individually)
+- Radiator valves and TRVs (components of the heating system, not standalone assets)
+- UFH pipework loops (infrastructure)
+- UFH fixing clips and edge insulation
+- Manifold actuators (components of the manifold, replaced during manifold service)
+- Balancing valves on manifold ports (integral to manifold)
+- Towel rails (same as radiators — not individually tracked)
+- Zone valves in boiler/cylinder systems (components, not standalone assets)
+- Pressure relief valve on cylinder (component — tested during cylinder service)
+- Expansion vessel on cylinder (component — tested during cylinder service)
+
+### Borderline Cases
+
+- **Heatmiser neoHub or similar smart heating hub:** A central wireless controller that coordinates multiple thermostats and zones. Has its own serial number and is a separately registered device. Recommend inclusion as a discrete asset where installed — "Smart Heating Hub / Controller."
+- **Underfloor heating system (electric mat/film):** Electric UFH does not have a manifold. The key assets are the thermostat (confirmed above) and potentially the heating mat or film — though these are embedded in the floor and have no realistic serviceability. Only the thermostat should be tracked.
+
+### Recommended Asset Types — Heating Distribution
+
+1. Hot Water Cylinder *(where standalone, not part of heat pump system)*
+2. UFH Manifold
+3. UFH Thermostat / Smart Thermostat
+4. Smart Heating Hub / Controller *(e.g. Heatmiser neoHub — optional)*
+
+---
+
+## Consolidated Final List
+
+### Asset Types by Group (Recommended)
+
+| Group | Asset Type |
+|---|---|
+| **Heat Pumps** | Air Source Heat Pump — Outdoor Unit |
+| | Air Source Heat Pump — Indoor Unit / Wiring Centre |
+| | Ground Source Heat Pump — Unit |
+| | Hot Water Cylinder |
+| | Buffer Vessel / Thermal Store |
+| **Solar PV** | Solar Inverter |
+| | Solar Panel Array |
+| | Microinverter *(Enphase systems)* |
+| **Battery Storage** | Battery Storage Unit |
+| | Battery Inverter *(where separate from battery)* |
+| | Battery Gateway *(Tesla Powerwall systems)* |
+| | Battery Storage System — All-in-One *(integrated inverter + battery)* |
+| **EV Charging** | EV Charge Point |
+| | EV Energy Hub / Smart Controller *(myenergi Hub — optional)* |
+| **Power Generation** | Standby Generator |
+| | Automatic Transfer Switch (ATS) |
+| **Heating Distribution** | Hot Water Cylinder *(standalone)* |
+| | UFH Manifold |
+| | UFH Thermostat / Smart Thermostat |
+| | Smart Heating Hub / Controller *(optional)* |
+
+---
+
+## Key Decisions for Sara
+
+The following points require Sara's input before this list is finalised for configuration:
+
+1. **Hot Water Cylinder appears in two groups** (Heat Pumps and Heating Distribution). In Commusoft, it should probably live in one group only. If SunComfort's heat pump installations always include a cylinder, it makes sense to keep it in the Heat Pumps group. If SunComfort also installs standalone cylinders (e.g. cylinder upgrades on existing boiler systems), a separate entry in Heating Distribution may be needed — or the same asset type can span multiple groups.
+
+2. **Battery Inverter vs Battery Storage Unit:** Where GivEnergy Gen 3 or Fox ESS installs a separate inverter box and separate battery module(s), should these be two asset types ("Battery Inverter" and "Battery Storage Unit") or a single asset type ("Battery Storage System") with a note about what's installed? Sara to confirm preferred granularity.
+
+3. **Microinverter:** Only relevant if SunComfort installs Enphase. If not, this asset type can be omitted.
+
+4. **EV Energy Hub:** Only relevant if SunComfort commonly installs myenergi ecosystems (Zappi + Hub + Harvi). If SunComfort's EV work is primarily standalone charger installation, omit.
+
+5. **Smart Heating Hub / Controller:** Only relevant if SunComfort installs Heatmiser neoHub, Warmup smart systems, or similar. Confirm.
+
+6. **Ground Source Heat Pump:** Only relevant if SunComfort installs GSHP. If ASHP-only, omit.
+
+7. **ATS Panel:** Only relevant if SunComfort installs standby generators with transfer switching (not all generator installs will include a separate ATS). Sara to confirm scope of generator work.
+
+---
+
+## Sources
+
+- [MCS MIS 3005-I Heat Pump Installation Standard 2025 — mcscertified.com](https://mcscertified.com/wp-content/uploads/2025/02/MIS-3005-I-Heat-Pump-Installation-Issue-1.0.pdf)
+- [MCS MIS 3002 Solar PV Installation Standard 2025 — mcscertified.com](https://mcscertified.com/wp-content/uploads/2025/01/MIS-3002-2025-V1.0.pdf)
+- [MCS Battery Installation Standard (MIS 3012) Launch — mcscertified.com](https://mcscertified.com/mcs-launches-industry-first-battery-installation-standard/)
+- [HPA Air to Water Heat Pump Commissioning Checklist v2.0 (2025) — hpauk.org.uk](https://hpauk.org.uk/wp-content/uploads/2025/09/HPADOC0001-v2.0-Air-Source-Heat-Pump-Commissioning-Checklist-FINAL.pdf)
+- [HPA Air to Water Heat Pump Annual Service Checklist v1.1 (2025) — heatpumps.org.uk](https://www.heatpumps.org.uk/wp-content/uploads/2025/02/HPADOC0003-Air-To-Water-Heat-Pump-Annual-Service-Checklist-v1.1.pdf)
+- [Benchmark Commissioning and Warranty Validation — HHIC — hhic.org.uk](https://www.hhic.org.uk/uploads/5F55F73A02FF6.pdf)
+- [HHIC Air to Water Heat Pump Commissioning Checklist — hhic.org.uk](https://www.hhic.org.uk/uploads/598AD4DF90F29.pdf)
+- [MCS Guide to Creating Heat Pump Certificates (MID) 2025 — mcscertified.com](https://mcscertified.com/wp-content/uploads/2025/07/MCS-v1-MID-New-Certificate-Heat-Pump-Technologies-2025.pdf)
+- [Vaillant aroTHERM Heat Pump Guarantee Terms — vaillant.co.uk](https://www.vaillant.co.uk/service/your-guarantee/heat-pump-guarantee/)
+- [Mitsubishi Electric Ecodan Residential Warranty — mitsubishielectric.co.uk](https://les.mitsubishielectric.co.uk/installers/ecodan-residential-warranty)
+- [Fox ESS Warranty Registration — fox-ess.com](https://warranty.foxesscloud.com/)
+- [GivEnergy 12-Year Warranty FAQ — givenergy.co.uk](https://givenergy.co.uk/faq-the-givenergy-12-year-warranty/)
+- [Tesla Powerwall Warranty (European Region) — energylibrary.tesla.com](https://energylibrary.tesla.com/docs/Public/EnergyStorage/Powerwall/General/Warranty/en-emea/Powerwall-Warranty-EN.pdf)
+- [Tesla Powerwall Field Service — Solar Tech Support UK — solar-tech-support.co.uk](https://solar-tech-support.co.uk/brands/tesla-powerwall/)
+- [myenergi Product Warranty v2.0 — myenergi.com](https://www.myenergi.com/wp-content/uploads/2023/11/myenergi-LTD-Product-Warranty-v2.0-English.pdf)
+- [myenergi Device Registration — support.myenergi.com](https://support.myenergi.com/hc/en-gb/articles/22363197165841-Registering-myenergi-Devices)
+- [NICEIC Electrical Energy Storage Systems Qualification — niceic.com](https://niceic.com/news/niceic-launches-new-electrical-energy-storage-systems-qualification/)
+- [NICEIC EV Charging Installation — niceic.com](https://niceic.com/householders/electrical-services/electric-vehicle-(ev)-charger-installation-and-maintenance/)
+- [UK EV Charger Servicing Guide — zpnenergy.com](https://www.zpnenergy.com/uk-ev-charger-servicing-a-complete-guide)
+- [EV Charge Point Service and Maintenance — TSG Solutions — tsg-solutions.com](https://www.tsg-solutions.com/uk/ev-charge-point-service-maintenance/)
+- [ATS Panel Maintenance — Power Continuity UK — powercontinuity.co.uk](https://www.powercontinuity.co.uk/knowledge-base/what-is-an-ats-panel-automatic-transfer-switch-for-generators-power-continuity/)
+- [ATS Maintenance as Separate Service — Weld Power — weldpower.com](https://weldpower.com/generator-service/ats-maintenance/)
+- [Diesel Generator Maintenance Checklist — Solent Power UK — solentpower.co.uk](https://www.solentpower.co.uk/generator-maintenance-checklist/)
+- [Hampshire Generators Service Contracts — hampshiregenerators.co.uk](https://www.hampshiregenerators.co.uk/diesel-generator-service-contract-maintenance/)
+- [Underfloor Heating Servicing — Ambiente UFH — ambienteufh.co.uk](https://ambienteufh.co.uk/underfloor-heating-servicing/)
+- [Solar PV O&M Annual Visit — Green Shield Group — greenshieldgroup.co.uk](https://greenshieldgroup.co.uk/resources/solar-pv-operation-maintenance-visit-what-can-i-expect-on-my-annual-visit/)
+- [Enphase Microinverter Serial Number Scanning — enphase.com](https://enphase.com/installers/training-certifications/videos/scanning-microinverter-serial-numbers)
+- [SolarEdge Power Optimizers UK — solaredge.com](https://www.solaredge.com/uk/solaredge-blog/power-optimizers)
+- [HomeServe Heat Pump and Unvented Cylinder Service Plan — homeserve.co.uk](https://www.homeserve.co.uk/insurance/heat-pump-and-unvented-cylinder-service-plan)
+- [Megaflo Annual Service — megaflo-unvented.co.uk](https://megaflo-unvented.co.uk/megaflo-service/)
+- [Commusoft Renewable Energy Asset Management — commusoft.com](https://www.commusoft.com/en-gb/blog/renewable-energy-asset-management/)
+`;
+
 function openInboxFile(key) {
   var content = INBOX_FILES[key];
   if (!content) { content = 'Content not found.'; }
@@ -1923,7 +2284,8 @@ function openInboxFile(key) {
     'reed-phase2': { num: 'Reed — Planning', title: 'Academy Full Course List — Phase 2' },
     'forest-phase2-coverage': { num: 'Forest — Research', title: 'Phase 2 Help Centre Coverage Check' },
     'flint-assets-review': { num: 'Flint — Review', title: 'Assets Settings Files' },
-    'forest-asset-dropdowns': { num: 'Forest — Research', title: 'Asset Dropdown Options' }
+    'forest-asset-dropdowns': { num: 'Forest — Research', title: 'Asset Dropdown Options' },
+    'forest-asset-types': { num: 'Forest — Research', title: 'Asset Types by Group' }
   };
   var lbl = labels[key] || { num: 'Owners Inbox', title: key };
   document.getElementById('panelNum').textContent = lbl.num;

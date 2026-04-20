@@ -210,7 +210,7 @@
           <tr><td>10</td><td class="file-name">Tracking opportunities on jobs</td><td><span class="file-type type-script">Job View</span></td><td>4 min</td><td>Decision makers</td><td><span class="badge badge-approved">Approved</span></td><td><span class="view-script-btn" onclick="openPanel(10)">View script</span></td></tr>
         </tbody>
       </table>
-      <div class="section-heading">Other Files <span class="count">8</span></div>
+      <div class="section-heading">Other Files <span class="count">9</span></div>
       <table class="inbox-table">
         <thead><tr><th>File</th><th>Type</th><th>Description</th><th></th></tr></thead>
         <tbody>
@@ -219,6 +219,7 @@
           <tr><td class="file-name">Reed — Phase 2 — Academy Full Course List</td><td><span class="file-type" style="background:#e8f5e9;color:#2e7d32">Planning</span></td><td>Full course structure across Compass, Shared Library, and all three role paths — awaiting approval</td><td><span class="view-script-btn" onclick="openInboxFile('reed-phase2')">View file</span></td></tr>
           <tr><td class="file-name">Forest — Research — Phase 2 Help Centre Coverage Check</td><td><span class="file-type type-research">Research</span></td><td>Gap analysis of Reed's Phase 2 course list against the full Help Centre — 5 significant gaps found</td><td><span class="view-script-btn" onclick="openInboxFile('forest-phase2-coverage')">View file</span></td></tr>
           <tr><td class="file-name">Flint — Review — Assets Settings Files</td><td><span class="file-type" style="background:#fff3ee;color:#fa6932">Review</span></td><td>3 must-fixes and 3 suggestions across 5 SunComfort Assets settings files</td><td><span class="view-script-btn" onclick="openInboxFile('flint-assets-review')">View file</span></td></tr>
+          <tr><td class="file-name">Forest — Research — Asset Dropdown Options</td><td><span class="file-type type-research">Research</span></td><td>Make, Model and Location dropdown options for SunComfort asset configuration — ordered by UK market prevalence</td><td><span class="view-script-btn" onclick="openInboxFile('forest-asset-dropdowns')">View file</span></td></tr>
           <tr><td class="file-name">Forest — Research — SunComfort scenarios</td><td><span class="file-type type-research">Research</span></td><td>Validated real-world industry scenarios for Academy scripts</td><td></td></tr>
           <tr><td class="file-name">Academy / Job View / index.md</td><td><span class="file-type type-index">Index</span></td><td>Series index for the Job View course collection</td><td></td></tr>
           <tr><td class="file-name">Academy / index.md</td><td><span class="file-type type-index">Index</span></td><td>Top-level Academy content catalogue and filing conventions</td><td></td></tr>
@@ -1538,6 +1539,381 @@ MCS Certificate Number and Commissioned By are UK-specific compliance fields for
 **No edits should be made to settings files until the owner has approved this review.**
 `;
 
+INBOX_FILES["forest-asset-dropdowns"] = `# Forest — Research Brief
+**Topic:** SunComfort Asset Dropdown Options — Make, Model, Location
+**Date:** 2026-04-17
+**Requested by:** Fern (for Asset Dynamic Fields settings file)
+
+---
+
+## Key Findings
+
+1. **Heat pumps are dominated by four brands in the UK installer market:** Mitsubishi Electric (Ecodan), Daikin (Altherma), Vaillant (aroTHERM plus), and Worcester Bosch (Compress). Samsung is a significant manufacturer but less prevalent in the specialist installer channel. These four should sit at the top of any heat pump make list.
+
+2. **Solar inverters split into two tiers:** A premium tier (SolarEdge, Fronius, SMA) specified on quality and reliability grounds, and a value tier (Solis, Solax, GivEnergy, Growatt, Fox ESS) that dominates volume installs in UK homes. GivEnergy and Fox ESS blur the inverter/battery boundary — both supply hybrid inverter-battery systems that are very widely installed.
+
+3. **Battery storage is rapidly consolidating around a handful of brands:** GivEnergy and Fox ESS lead the UK residential market by volume in 2025. Tesla Powerwall remains the premium/high-profile option. SolarEdge Home Hub and Solis/Solax/Growatt hybrids are also common. LG Chem RESU is declining in relevance following LG's battery restructuring.
+
+4. **EV chargers for installer channels focus on four brands:** myenergi Zappi (dominant for solar-integrated installs), Hypervolt (highest satisfaction ratings), Ohme (tariff-integrated smart charging), and Easee (strong in commercial/multi-unit). These four cover the vast majority of UK trade installs.
+
+5. **Generators, cylinders, and radiators are mature, fragmented markets.** Pramac and FG Wilson lead UK light commercial generator supply. Heatrae Sadia (Megaflo) is the dominant cylinder brand by a wide margin. Stelrad leads panel radiators. Warmup leads underfloor heating. Polypipe/Wavin dominate hydronic UFH manifolds.
+
+---
+
+## Make Dropdown (ordered, full list)
+
+*Ordering logic: most commonly specified across SunComfort's overall asset mix first, then by category prevalence within the renewables/heat pump installer market.*
+
+### Heat Pumps (Air Source)
+1. Mitsubishi Electric
+2. Daikin
+3. Vaillant
+4. Worcester Bosch
+5. Samsung
+6. Panasonic
+7. Viessmann
+8. Baxi
+9. LG
+10. Nibe
+
+### Solar Inverters
+1. SolarEdge
+2. Fronius
+3. GivEnergy
+4. Fox ESS
+5. SMA
+6. Solis
+7. Solax
+8. Growatt
+9. Huawei
+10. Enphase
+
+### Solar Panels
+1. LONGi
+2. REC
+3. Maxeon (formerly SunPower)
+4. AIKO
+5. DMEGC
+6. JA Solar
+7. Trina Solar
+8. Jinko Solar
+9. Canadian Solar
+10. Q Cells
+
+### Battery Storage
+1. GivEnergy
+2. Fox ESS
+3. Tesla
+4. SolarEdge
+5. Growatt
+6. Solax
+7. Solis
+8. Sonnen
+9. LG Chem
+10. SigEnergy
+
+### EV Charge Points
+1. myenergi (Zappi)
+2. Hypervolt
+3. Ohme
+4. Easee
+5. Wallbox
+6. Rolec
+7. Pod Point
+8. Andersen
+9. EO Charging
+10. Alfen
+
+### Standby Generators
+1. Pramac
+2. FG Wilson
+3. Kohler
+4. Cummins
+5. Generac
+6. Himoinsa
+7. Honda
+8. Briggs & Stratton
+
+### Heating Distribution — Cylinders
+1. Heatrae Sadia (Megaflo)
+2. Vaillant
+3. Gledhill
+4. Albion
+5. Range Cylinders
+6. OSO
+7. Telford
+
+### Heating Distribution — Radiators
+1. Stelrad
+2. Purmo (incl. Quinn / Barlo)
+3. Myson
+4. Rads 2 Riches
+5. Zehnder
+6. Kudox
+
+### Heating Distribution — Underfloor Heating
+1. Warmup
+2. Heatmiser
+3. Polypipe
+4. Wavin
+5. Uponor
+6. ProWarm
+7. Nuheat
+
+---
+
+## Model Dropdown by Make (top makes only)
+
+*These are the core models SunComfort is most likely to encounter. Engineers can add new models on the fly — this list covers the 80% case.*
+
+---
+
+### Mitsubishi Electric — Heat Pumps
+- Ecodan R32 Compact 5.0kW (PUZ-WM50VAA)
+- Ecodan R32 Ultra Quiet 6.0kW (PUZ-WM60VAA)
+- Ecodan R32 Ultra Quiet 8.5kW (PUZ-WM85VAA)
+- Ecodan R32 Ultra Quiet 11.2kW (PUZ-WM112VAA)
+- Ecodan R290 8.5kW
+- Ecodan R290 10kW
+- Ecodan R290 12kW
+
+### Daikin — Heat Pumps
+- Altherma 3 M R32 Monobloc 4kW
+- Altherma 3 M R32 Monobloc 6kW
+- Altherma 3 M R32 Monobloc 8kW
+- Altherma 3 High Capacity R32 Monobloc 11kW
+- Altherma 3 High Capacity R32 Monobloc 14kW
+- Altherma 3 High Capacity R32 Monobloc 16kW
+
+### Vaillant — Heat Pumps
+- aroTHERM plus 3.5kW (VWL 35/6)
+- aroTHERM plus 5kW (VWL 55/6)
+- aroTHERM plus 7kW (VWL 75/6)
+- aroTHERM plus 10kW (VWL 105/6)
+- aroTHERM plus 12kW (VWL 125/6)
+
+### Worcester Bosch — Heat Pumps
+- Compress 7001i AW 5kW
+- Compress 7001i AW 9kW
+- Compress Hybrid 7000i AW 5kW
+- Compress Hybrid 7000i AW 9kW
+
+---
+
+### SolarEdge — Inverters
+- Home Hub SE3000H
+- Home Hub SE4000H
+- Home Hub SE5000H
+- Home Hub SE6000H
+- Home Hub SE7600H
+
+### Fronius — Inverters
+- Primo 3.0-1 (3kW single-phase)
+- Primo 4.0-1 (4kW single-phase)
+- Primo 5.0-1 (5kW single-phase)
+- Primo GEN24 Plus 3.0
+- Primo GEN24 Plus 5.0
+- Symo GEN24 Plus 6.0
+- Symo GEN24 Plus 10.0
+
+### Solis — Inverters
+- S5-GR1P3K (3kW string)
+- S5-GR1P3.6K (3.6kW string)
+- S5-GR1P4K (4kW string)
+- S5-GR1P5K (5kW string)
+- S6-EH1P5K-L (5kW hybrid)
+- S6-EH1P6K-L (6kW hybrid)
+
+### GivEnergy — Inverters / Hybrids
+- Hybrid Inverter Gen 3 3.6kW
+- Hybrid Inverter Gen 3 5.0kW
+- Hybrid Inverter Gen 3 8.0kW
+- Hybrid All-in-One 2.6kWh
+- Hybrid All-in-One 5.2kWh
+- Hybrid All-in-One 13.5kWh
+
+---
+
+### GivEnergy — Battery Storage
+- GivBat 2.6kWh
+- GivBat 5.2kWh
+- GivBat 8.2kWh
+- GivBat 9.5kWh (Gen 3)
+- All-in-One 13.5kWh
+
+### Fox ESS — Battery Storage
+- EQ2900 (2.88kWh)
+- EQ4300 (4.32kWh)
+- EP6 (5.76kWh)
+- EP12 (11.52kWh)
+- EVO All-in-One 10.24kWh
+
+### Tesla — Battery Storage
+- Powerwall 2 (13.5kWh)
+- Powerwall 3 (13.5kWh with integrated inverter)
+
+---
+
+### myenergi — EV Charge Points
+- Zappi V2.1 7kW (single-phase, tethered)
+- Zappi V2.1 7kW (single-phase, untethered)
+- Zappi V2.1 22kW (three-phase, tethered)
+- Zappi V2.1 22kW (three-phase, untethered)
+
+### Hypervolt — EV Charge Points
+- Home 3 Pro 7.4kW (tethered, 5m cable)
+- Home 3 Pro 7.4kW (tethered, 7.5m cable)
+- Home 3 Pro 7.4kW (tethered, 10m cable)
+
+### Ohme — EV Charge Points
+- Home Pro 7.4kW
+- ePod 7.4kW
+
+### Easee — EV Charge Points
+- One 7.4kW
+
+---
+
+### Pramac — Generators
+- S12000 (12kVA standby diesel)
+- S15000 (15kVA standby diesel)
+- GSW10P (10kVA standby)
+- GSW15P (15kVA standby)
+- GSW22P (22kVA standby)
+- P6000 (5.3kW portable diesel)
+
+### FG Wilson — Generators
+- P22-6 (22kVA standby)
+- P33-6 (33kVA standby)
+- P50-6 (50kVA standby)
+
+---
+
+### Heatrae Sadia (Megaflo) — Cylinders
+- Megaflo Eco 125i (indirect, 125L)
+- Megaflo Eco 170i (indirect, 170L)
+- Megaflo Eco 210i (indirect, 210L)
+- Megaflo Eco 250i (indirect, 250L)
+- Megaflo Eco 300i (indirect, 300L)
+- Megaflo Eco 210DD (direct, 210L)
+- Megaflo Eco 250DD (direct, 250L)
+- Megaflo Eco Plus 170i
+- Megaflo Eco Plus 210i
+- Megaflo Eco Plus 250i
+
+### Vaillant — Cylinders
+- uniSTOR 120L
+- uniSTOR 150L
+- uniSTOR 200L
+- allSTOR 200L (buffer/combination)
+- allSTOR 300L
+
+---
+
+### Warmup — Underfloor Heating
+- 4iE Smart WiFi Thermostat
+- 6iE Smart WiFi Thermostat
+- Loose Wire System (DWS)
+- Foil Heater System
+- Hydronic Manifold Kit
+
+### Heatmiser — Underfloor Heating
+- neoStat V2 Thermostat
+- neoHub Mini
+- UFH Wiring Centre
+- Stainless Steel Manifold 2-port
+- Stainless Steel Manifold 4-port
+- Stainless Steel Manifold 8-port
+
+---
+
+## Location Dropdown (ordered, full list)
+
+*Ordered by frequency across all SunComfort asset types. One location list covers all asset types — engineers select whichever is relevant to the asset being recorded.*
+
+1. Roof — south-facing pitched
+2. Roof — east/west-facing pitched
+3. Roof — flat
+4. External wall — rear
+5. External wall — side
+6. External wall — front
+7. Garden — rear
+8. Garden — side
+9. Garage — internal wall
+10. Garage — external wall
+11. Utility room
+12. Plant room
+13. Boiler room
+14. Loft
+15. Airing cupboard
+16. Under-stairs cupboard
+17. Basement / cellar
+18. Driveway / forecourt (ground-mounted)
+19. Ground-mounted — rear garden
+20. Outbuilding / workshop
+21. Commercial roof
+22. Car park / canopy
+
+---
+
+## Sources
+
+- [Top Air Source Heat Pump Brands UK 2025 — eco4homeimprovements.co.uk](https://eco4homeimprovements.co.uk/heating/top-air-source-heat-pump-brands-in-the-uk-2025-review/)
+- [Best Air Source Heat Pumps UK 2026 — Glow Green](https://www.glowgreenltd.com/help-and-advice/best-air-source-heat-pumps)
+- [UK Heat Pumps Market — Mordor Intelligence](https://www.mordorintelligence.com/industry-reports/united-kingdom-heat-pumps-market)
+- [Mitsubishi Ecodan R32 Range — Easy Heat Pumps](https://www.easyheatpumps.com/product/5-0kw-to-11-2kw-r32-ecodan-ultra-quiet-puz-range/)
+- [Mitsubishi Residential Heating — Mitsubishi Electric UK](https://les.mitsubishielectric.co.uk/products/residential-heating/outdoor)
+- [Daikin Altherma 3 M R32 Monobloc — The Heat Pump Warehouse](https://www.theheatpumpwarehouse.co.uk/shop/heat-pumps/daikin-altherma-3m-r32-low-temperature-monobloc-heat-pump/)
+- [Vaillant aroTHERM plus — Vaillant UK](https://www.vaillant.co.uk/product-systems/heat-pumps/arotherm-plus/)
+- [Worcester Bosch Compress 7001i AW](https://my.worcester-bosch.co.uk/professional/products/heat-pumps/compress-7001i-aw/)
+- [Best Solar Inverters UK 2025 — solar4good.co.uk](https://solar4good.co.uk/blogs/best-solar-inverters-uk-2026/)
+- [Best Solar Inverter Brands UK — SolarInstallerList](https://solarinstallerlist.com/inverter-brands)
+- [Fronius GEN24 Plus — Fronius UK](https://www.fronius.com/en-gb/uk/solar-energy/installers-partners/products-solutions/residential-energy-solutions/gen24plus-inverter-with-flexible-backup-power)
+- [SolarEdge Home Hub Inverter Datasheet — SolarEdge](https://knowledge-center.solaredge.com/sites/kc/files/se-home-hub-single-phase-inverter-datasheet-row.pdf)
+- [Best Solar Panel Manufacturers UK 2026 — GreenMatch](https://www.greenmatch.co.uk/solar-energy/solar-panels/manufacturers)
+- [Best Solar Panels UK 2025 — Spirit Energy](https://www.spiritenergy.co.uk/kb-best-solar-panels-2025)
+- [Maxeon Solar Panels UK — Maxeon Solar Technologies](https://www.maxeon.com/)
+- [Top Battery Storage Brands UK 2025 — TYCORUN](https://www.tycorun.com/blogs/news/top-9-household-energy-storage-battery-brands-in-the-uk)
+- [Best Battery Storage UK — Renewables Excellence](https://renewablesexcellence.co.uk/best-battery-storage-uk/)
+- [GivEnergy Hybrid Inverter Range — GivEnergy](https://givenergy.co.uk/products/hybrid-inverter/)
+- [GivEnergy Gen 3 launch — pv-magazine](https://www.pv-magazine.com/2025/02/19/givenergy-launches-gen-3-hybrid-inverters-for-pairing-with-stackable-storage/)
+- [Fox ESS EP Battery Range — fox-ess.com](https://www.fox-ess.com/products/battery)
+- [Tesla Powerwall 3 UK Guide 2025 — apexdoma.com](https://apexdoma.com/solar-advice/tesla-powerwall-3-uk-guide-2025-price-specs-installation-explained/)
+- [Best Home EV Chargers UK — CertifiedInstaller](https://certifiedinstaller.co.uk/guides/best-home-ev-charger-uk)
+- [myenergi Zappi product page](https://www.myenergi.com/product/zappi-ev-charger/)
+- [Hypervolt Home 3 Pro Review — heatable.co.uk](https://heatable.co.uk/ev-chargers/advice/hypervolt-home-3-pro-review)
+- [Ohme Home Pro / ePod — heatable.co.uk](https://heatable.co.uk/ev-chargers/advice/best-ev-chargers)
+- [Pramac Generators UK — Hampshire Generators](https://www.hampshiregenerators.co.uk/pramac-generators/)
+- [FG Wilson — bellwoodrewinds.co.uk](https://www.bellwoodrewinds.co.uk/top-used-generator-brands-for-reliability/)
+- [Best Unvented Cylinders UK — BoilerGuide](https://www.boilerguide.co.uk/best-unvented-cylinders)
+- [Megaflo Eco — Heatrae Sadia](https://www.heatraesadia.com/products/cylinders-and-hot-water/unvented-cylinders/megaflo-eco)
+- [Best Underfloor Heating Brands UK 2026 — underfloorheating.info](https://underfloorheating.info/underfloor-heating-brands/)
+- [Top 5 Electric Underfloor Heating Brands UK 2025 — Levson Green Heating](https://www.levsongreenheating.com/top-5-electric-underfloor-heating-brands-in-the-uk/)
+- [Top Radiator Brands UK — Stelrad](https://www.stelrad.com/)
+- [Best Location for Air Source Heat Pump — heat-pumps.org.uk](https://heat-pumps.org.uk/where-to-install-your-heat-pump-best-locations-and-positions/)
+- [Best Location for Solar Battery — fitsolar.energy](https://www.fitsolar.energy/garage-vs-outside-where-is-the-best-place-for-your-solar-battery-in-the-uk/)
+- [Battery Storage Installation Locations — greenenergysolar.co.uk](https://www.greenenergysolar.co.uk/where-to-install-residential-battery-energy-storage/)
+- [PAS 63100:2024 fire safety guidance reference — electricians-basingstoke.co.uk](https://electricians-basingstoke.co.uk/is-it-safe-to-have-a-battery-installed-inside-my-home-or-garage/)
+
+---
+
+## Gaps / Caveats
+
+1. **Generator models for UK light commercial are lightly researched.** Most available comparison data is US-centric (Generac vs Kohler vs Cummins). In the UK installer channel, Pramac and FG Wilson are the dominant trade brands — but specific residential/light commercial model numbers are harder to verify from open sources. The models listed are indicative. Sara may want to verify with a generator specialist or supplier catalogue.
+
+2. **Solar panel brand ordering is uncertain.** The UK solar panel market is fragmented and rapidly changing. LONGi leads globally by volume, but actual installer preference in the UK is harder to pin down precisely. REC and Maxeon (SunPower) appear in most UK "best panel" lists but may be premium/niche rather than true volume leaders. JA Solar, Trina, and Canadian Solar ship very large volumes but are less visible in the UK residential premium market. The list reflects a best estimate.
+
+3. **SunPower vs Maxeon branding.** SunPower spun off Maxeon Technologies in 2020. In the UK, panels are now sold under the Maxeon brand (not SunPower). Some installers still refer to them as SunPower. The dropdown uses "Maxeon (formerly SunPower)" — Sara may want to check which name her engineers recognise.
+
+4. **LG Chem RESU.** LG exited the residential battery market in 2023. Existing installs still exist and will need servicing, so the brand is worth retaining in the dropdown for legacy asset records. It should not be prominent in new-install dropdowns.
+
+5. **Loft locations for battery storage.** Under PAS 63100:2024 (UK fire safety standard for battery storage, 2024), loft installation is no longer recommended. However, many pre-2024 installs exist in lofts. "Loft" has been retained in the location list for legacy asset records — Reed/Hazel should note this caveat if it surfaces in any customer-facing content.
+
+6. **Heating distribution is a broad category.** The brief covers radiators, UFH, and cylinders. If Commusoft tracks these as separate asset types, it may be worth splitting the Make dropdown by sub-type rather than combining them in one list. The research is structured by sub-type for this reason.
+
+7. **This research reflects the market as of April 2026.** The UK renewables market is moving quickly — particularly in battery storage and EV chargers. Brand rankings may shift within 12 months.
+`;
+
 function openInboxFile(key) {
   var content = INBOX_FILES[key];
   if (!content) { content = 'Content not found.'; }
@@ -1546,7 +1922,8 @@ function openInboxFile(key) {
     'flint-customer-settings': { num: 'Flint — Review', title: 'Customer Settings Help Centre Check' },
     'reed-phase2': { num: 'Reed — Planning', title: 'Academy Full Course List — Phase 2' },
     'forest-phase2-coverage': { num: 'Forest — Research', title: 'Phase 2 Help Centre Coverage Check' },
-    'flint-assets-review': { num: 'Flint — Review', title: 'Assets Settings Files' }
+    'flint-assets-review': { num: 'Flint — Review', title: 'Assets Settings Files' },
+    'forest-asset-dropdowns': { num: 'Forest — Research', title: 'Asset Dropdown Options' }
   };
   var lbl = labels[key] || { num: 'Owners Inbox', title: key };
   document.getElementById('panelNum').textContent = lbl.num;

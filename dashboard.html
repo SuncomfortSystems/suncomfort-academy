@@ -350,8 +350,8 @@
       <div class="page-heading"><h1>Academy</h1><p>Course scripts organised by series</p></div>
       <div class="stats-row">
         <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">2</div><div class="stat-label">Series</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">11</div><div class="stat-label">Courses</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">44</div><div class="stat-label">Total Minutes</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">12</div><div class="stat-label">Courses</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">47</div><div class="stat-label">Total Minutes</div></div>
         <div class="stat-card"><div class="stat-value" style="color:var(--blue2)">9</div><div class="stat-label">Characters</div></div>
       </div>
       <div id="job-view" class="series-block">
@@ -375,10 +375,11 @@
       <div id="shared-concept-library" class="series-block">
         <div class="series-header">
           <div><h2>Shared Concept Library</h2><div class="series-meta">Layer 0 — core concepts every Commusoft user needs before role-specific training</div></div>
-          <div class="series-count">1 course</div>
+          <div class="series-count">2 courses</div>
         </div>
         <div class="course-grid">
           <div class="course-card" onclick="openInboxFile('reed-script-l0-01')"><div class="course-num">Course 1</div><div class="course-title">The customer and site hierarchy</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">All staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l0-02')"><div class="course-num">Course 2</div><div class="course-title">Appointment statuses explained</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">All staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
     </div>
@@ -3070,6 +3071,79 @@ D) Against the customer's primary contact
 The customer is who you bill. The work address is where you work. Everything operational sits under the work address: jobs, assets, and service reminders. Keep those two levels clear and you will always know where to look, where to log, and why the data is arranged the way it is.
 `;
 
+INBOX_FILES["reed-script-l0-02"] = `# Reed — Script: Appointment statuses explained
+
+**Layer:** 0 — Shared Concept Library
+**Course number:** 2 of 12
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-22
+
+---
+
+**Learning objectives**
+1. Name the eight appointment statuses in Commusoft and explain what each one means
+2. Identify which statuses are set by the office and which are updated by the engineer on the mobile app
+3. Describe what an exception status means and what the office should do when one appears
+
+**Target persona:** All staff (office teams, field teams, decision makers)
+
+**SunComfort characters:** Sophie Bennett (scheduler), Jake Harris (Senior Heat Pump Technician)
+
+**Scenario:** Sophie has booked a heat pump service at a customer's rental property. Jake takes the appointment through its statuses from departure to completion on the mobile app, with a no-access situation mid-way through.
+
+**Estimated length:** 3 min
+
+---
+
+## Introduction
+
+Every appointment in Commusoft carries a status. That status is the live signal that tells every member of your team exactly where a job stands — whether it is waiting to be confirmed, whether the engineer is travelling, or whether the work is done and ready to invoice. When your team reads and updates statuses consistently, no one needs to call anyone to find out what is happening.
+
+Commusoft uses eight appointment statuses. Some sit with the office and are managed at the point of booking. Others are updated by the engineer through the mobile app as the job moves forward. Understanding where each one comes from is what keeps both sides of the business in step.
+
+---
+
+## Pending and Confirmed
+
+Two statuses live with the office. Pending is applied automatically the moment an appointment is created — it means the booking exists but the customer has not yet been informed. When Sophie at SunComfort confirms an appointment time with a customer, she moves the status to Confirmed. In Commusoft, a status change to Confirmed can also trigger an automated notification to the customer if your communication templates are configured to do so.
+
+---
+
+## En route, On site, and Completed
+
+The next three statuses are updated by the engineer from the mobile app as the job progresses. When Jake leaves the depot, he marks his appointment En route. When he arrives at the property, he marks it On site. When the work is finished, he marks it Completed. Each of these updates is visible in the office diary the moment it is saved, giving Sophie and the team a real-time view of where every engineer is without picking up the phone.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: does your business currently have a reliable way of knowing when an engineer has arrived on site without calling them?**
+
+*Yes feedback:* Good. The On site status is the systematic version of that — consistent across every engineer, every job, and visible to the whole office in real time.
+*No feedback:* That is exactly what En route and On site are for. Once engineers update their status on the app, the office knows where everyone is without a single call.
+
+---
+
+## Exception statuses
+
+Three statuses cover the situations where an appointment does not go to plan. No access means the engineer arrived but could not get in — the customer was not home or access was refused. Aborted means the appointment started but had to stop before the work was finished. Rejected means the engineer cannot carry out the work at all, usually because the scope has changed, parts are missing, or site conditions are unsafe. All three leave the job record open and visible so the office can follow up immediately rather than losing the situation.
+
+*[Knowledge check — 4 options]*
+**Sophie checks the diary and sees Jake's appointment at a rental property has been marked No access. What should she do next?**
+
+A) Wait for Jake to call her with the details
+B) Mark the appointment as Completed and raise a new job from scratch
+C) Contact the customer, find out what happened, and book a follow-up appointment
+D) Delete the appointment and re-enter it
+
+*Correct (C):* Right. No access holds the job record intact and flags the situation clearly. Sophie contacts the customer, establishes what happened, and books a follow-up — all linked to the same job and property history.
+*Incorrect:* No access is not the end of the job. It is a signal for the office to act. The appointment stays linked to the job record so the follow-up is traceable. Deleting or marking it complete would break that history.
+
+---
+
+## Summary
+
+Pending and Confirmed sit with the office. En route, On site, and Completed are updated by the engineer on the app. No access, Aborted, and Rejected cover the situations where a job does not complete as planned. Keep these statuses accurate, and your diary becomes a live feed of your whole field operation — not a static list of bookings.
+`;
+
 INBOX_FILES["ivy-induction"] = `# Enablement Specialist — Induction Plan
 
 Training is essential for your role at Commusoft. To ensure you have the best possible start, we have created this induction schedule.
@@ -3383,6 +3457,7 @@ function openInboxFile(key) {
     'forest-asset-types': { num: 'Forest — Research', title: 'Asset Types by Group' },
     'flint-assets-final': { num: 'Flint — Review', title: 'Assets Settings Files (Final Check)' },
     'reed-script-l0-01': { num: 'Reed — Script', title: 'L0 Shared Concept Library — 01 The customer and site hierarchy' },
+    'reed-script-l0-02': { num: 'Reed — Script', title: 'L0 Shared Concept Library — 02 Appointment statuses explained' },
     'ivy-induction': { num: 'Ivy — People', title: 'Enablement Specialist Induction Plan v3' },
     'ivy-jd-academy': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Description' },
     'ivy-jd-advert': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Advert' }

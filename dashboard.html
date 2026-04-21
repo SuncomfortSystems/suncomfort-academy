@@ -148,6 +148,15 @@
   .folder-body.open { display: block; }
   .folder-body .inbox-table { border: none; border-radius: 0; margin-bottom: 0; }
 
+  /* File card grid (Inbox) */
+  .file-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1px; background: var(--border); }
+  .file-card { background: var(--surface); padding: 16px 18px; display: flex; flex-direction: column; transition: background 0.15s; }
+  .file-card.clickable { cursor: pointer; }
+  .file-card.clickable:hover { background: #fff8f5; }
+  .file-card-title { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 6px; line-height: 1.35; }
+  .file-card-desc { font-size: 12px; color: var(--text-muted); line-height: 1.5; flex: 1; margin-bottom: 10px; }
+  .file-card-footer { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+
   .settings-search-bar { margin-bottom: 16px; }
   .settings-search-bar input { width: 100%; max-width: 400px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px; font-size: 14px; outline: none; }
   .settings-search-bar input:focus { border-color: var(--blue1); box-shadow: 0 0 0 2px rgba(45,145,197,0.15); }
@@ -194,6 +203,7 @@
     <div class="nav-item" onclick="showView('suncomfort', this)"><div class="nav-dot" style="background:#465564"></div>SunComfort Data</div>
     <div class="nav-section" style="margin-top:16px">Series</div>
     <div class="nav-item" onclick="showView('academy', this); scrollToSeries('job-view')"><div class="nav-dot" style="background:#1e9dc0"></div>Job View</div>
+    <div class="nav-item" onclick="showView('academy', this); scrollToSeries('shared-concept-library')"><div class="nav-dot" style="background:#fa6932"></div>Shared Concept Library</div>
   </nav>
 
   <main class="main">
@@ -202,117 +212,135 @@
     <div id="view-inbox" class="view active">
       <div class="page-heading"><h1>Owners Inbox</h1><p>Finished content ready for review</p></div>
       <div class="stats-row">
-        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">11</div><div class="stat-label">Course Scripts</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">2</div><div class="stat-label">Research Briefs</div></div><div class="stat-card"><div class="stat-value" style="color:#fa6932">1</div><div class="stat-label">Review</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:var(--blue2)">1</div><div class="stat-label">Series Indexed</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">44</div><div class="stat-label">Total Minutes</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--grey)">15</div><div class="stat-label">Total Files</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">2</div><div class="stat-label">Planning</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">5</div><div class="stat-label">Research</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">3</div><div class="stat-label">Reviews</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:#7b1fa2">3</div><div class="stat-label">People</div></div>
       </div>
-      <div class="section-heading">Academy Course Scripts <span class="count">11</span></div>
-      <table class="inbox-table">
-        <thead><tr><th>#</th><th>Title</th><th>Series</th><th>Duration</th><th>Persona</th><th>Status</th><th></th></tr></thead>
-        <tbody>
-          <tr><td>1</td><td class="file-name">The job record — overview and sidebar</td><td><span class="file-type type-script">Job View</span></td><td>4 min</td><td>Office teams</td><td><span class="badge badge-approved">Approved</span></td><td><span class="view-script-btn" onclick="openPanel(1)">View script</span></td></tr>
-          <tr><td>2</td><td class="file-name">The timeline — reading history and taking action</td><td><span class="file-type type-script">Job View</span></td><td>5 min</td><td>Office teams</td><td><span class="badge badge-approved">Approved</span></td><td><span class="view-script-btn" onclick="openPanel(2)">View script</span></td></tr>
-          <tr><td>3</td><td class="file-name">The appointments tab</td><td><span class="file-type type-script">Job View</span></td><td>4 min</td><td>Office teams</td><td><span class="badge badge-approved">Approved</span></td><td><span class="view-script-btn" onclick="openPanel(3)">View script</span></td></tr>
-          <tr><td>4</td><td class="file-name">Understanding job costs</td><td><span class="file-type type-script">Job View</span></td><td>5 min</td><td>Office / finance</td><td><span class="badge badge-approved">Approved</span></td><td><span class="view-script-btn" onclick="openPanel(4)">View script</span></td></tr>
-          <tr><td>5</td><td class="file-name">Invoices and WIP</td><td><span class="file-type type-script">Job View</span></td><td>5 min</td><td>Office / finance</td><td><span class="badge badge-approved">Approved</span></td><td><span class="view-script-btn" onclick="openPanel(5)">View script</span></td></tr>
-          <tr><td>6</td><td class="file-name">Managing job files</td><td><span class="file-type type-script">Job View</span></td><td>3 min</td><td>Office teams</td><td><span class="badge badge-approved">Approved</span></td><td><span class="view-script-btn" onclick="openPanel(6)">View script</span></td></tr>
-          <tr><td>7</td><td class="file-name">Managing forms on jobs</td><td><span class="file-type type-script">Job View</span></td><td>3 min</td><td>Office teams</td><td><span class="badge badge-approved">Approved</span></td><td><span class="view-script-btn" onclick="openPanel(7)">View script</span></td></tr>
-          <tr><td>8</td><td class="file-name">Sourcing and fulfilling job parts</td><td><span class="file-type type-script">Job View</span></td><td>4 min</td><td>Office teams</td><td><span class="badge badge-approved">Approved</span></td><td><span class="view-script-btn" onclick="openPanel(8)">View script</span></td></tr>
-          <tr><td>9</td><td class="file-name">Sourcing and fulfilling job parts — stock control</td><td><span class="file-type type-script">Job View</span></td><td>4 min</td><td>Office teams</td><td><span class="badge badge-approved">Approved</span></td><td><span class="view-script-btn" onclick="openPanel(9)">View script</span></td></tr>
-          <tr><td>10</td><td class="file-name">Tracking opportunities on jobs</td><td><span class="file-type type-script">Job View</span></td><td>4 min</td><td>Decision makers</td><td><span class="badge badge-approved">Approved</span></td><td><span class="view-script-btn" onclick="openPanel(10)">View script</span></td></tr>
-          <tr><td>11</td><td class="file-name">The customer and site hierarchy</td><td><span class="file-type type-script">Shared Concept Library</span></td><td>3 min</td><td>All staff</td><td><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></td><td><span class="view-script-btn" onclick="openInboxFile('reed-script-l0-01')">View script</span></td></tr>
-        </tbody>
-      </table>
-      <div class="section-heading">Other Files <span class="count">13</span></div>
 
-      <!-- Folder: Planning -->
-      <div class="folder-group">
-        <div class="folder-header" onclick="toggleFolder(this)">
-          <div class="folder-label">Planning <span class="folder-file-count">2 files</span></div>
-          <span class="folder-chevron">&#9654;</span>
+      <!-- Planning -->
+      <div class="series-block">
+        <div class="series-header" style="background:var(--grey)">
+          <div><h2>Planning</h2><div class="series-meta">Course structure and planning documents</div></div>
+          <div class="series-count">2 files</div>
         </div>
-        <div class="folder-body">
-          <table class="inbox-table">
-            <thead><tr><th>File</th><th>Type</th><th>Description</th><th></th></tr></thead>
-            <tbody>
-              <tr><td class="file-name">Reed — Phase 2 Revised — Complete Academy Course Structure</td><td><span class="file-type" style="background:#e8f5e9;color:#2e7d32">Planning</span></td><td>Version 3 — ~170 courses across all layers. Adds Scheduled Activities (L1), Variations (L3), Defects & Recommendations (L3), Analytics & Analytics+ replacing Advanced Reporting — awaiting approval</td><td><span class="view-script-btn" onclick="openInboxFile('reed-phase2-revised')">View file</span></td></tr>
-              <tr><td class="file-name">Reed — Phase 2 — Academy Full Course List</td><td><span class="file-type" style="background:#e8f5e9;color:#2e7d32">Planning</span></td><td>Full course structure across Compass, Shared Library, and all three role paths — superseded by Phase 2 Revised</td><td><span class="view-script-btn" onclick="openInboxFile('reed-phase2')">View file</span></td></tr>
-            </tbody>
-          </table>
+        <div class="file-grid">
+          <div class="file-card clickable" onclick="openInboxFile('reed-phase2-revised')">
+            <div class="file-card-title">Reed — Phase 2 Revised — Complete Academy Course Structure</div>
+            <div class="file-card-desc">Version 3 — ~170 courses across all layers. Adds Scheduled Activities (L1), Variations (L3), Defects &amp; Recommendations (L3), Analytics &amp; Analytics+ replacing Advanced Reporting.</div>
+            <div class="file-card-footer"><span class="file-type" style="background:#e8f5e9;color:#2e7d32">Planning</span><span class="badge" style="background:#fff3ee;color:#fa6932">Awaiting approval</span></div>
+          </div>
+          <div class="file-card clickable" onclick="openInboxFile('reed-phase2')">
+            <div class="file-card-title">Reed — Phase 2 — Academy Full Course List</div>
+            <div class="file-card-desc">Full course structure across Compass, Shared Library, and all three role paths. Superseded by Phase 2 Revised v3.</div>
+            <div class="file-card-footer"><span class="file-type" style="background:#e8f5e9;color:#2e7d32">Planning</span><span class="badge" style="background:#e8f5e9;color:#2e7d32">Superseded</span></div>
+          </div>
         </div>
       </div>
 
-      <!-- Folder: Research -->
-      <div class="folder-group">
-        <div class="folder-header" onclick="toggleFolder(this)">
-          <div class="folder-label">Research <span class="folder-file-count">5 files</span></div>
-          <span class="folder-chevron">&#9654;</span>
+      <!-- Research -->
+      <div class="series-block">
+        <div class="series-header" style="background:var(--blue1)">
+          <div><h2>Research</h2><div class="series-meta">Forest research briefs and help centre coverage checks</div></div>
+          <div class="series-count">5 files</div>
         </div>
-        <div class="folder-body">
-          <table class="inbox-table">
-            <thead><tr><th>File</th><th>Type</th><th>Description</th><th></th></tr></thead>
-            <tbody>
-              <tr><td class="file-name">Forest — Research — Asset Dropdown Options</td><td><span class="file-type type-research">Research</span></td><td>Make, Model and Location dropdown options for SunComfort asset configuration — ordered by UK market prevalence</td><td><span class="view-script-btn" onclick="openInboxFile('forest-asset-dropdowns')">View file</span></td></tr>
-              <tr><td class="file-name">Forest — Research — Asset Types by Group</td><td><span class="file-type type-research">Research</span></td><td>Discrete vs sub-component analysis — confirmed asset types for Groups and Types configuration</td><td><span class="view-script-btn" onclick="openInboxFile('forest-asset-types')">View file</span></td></tr>
-              <tr><td class="file-name">Forest — Research — Phase 2 Help Centre Coverage Check</td><td><span class="file-type type-research">Research</span></td><td>Gap analysis of Reed's Phase 2 course list against the full Help Centre — gaps resolved in Phase 2 Revised</td><td><span class="view-script-btn" onclick="openInboxFile('forest-phase2-coverage')">View file</span></td></tr>
-              <tr><td class="file-name">Forest — Research — SunComfort scenarios</td><td><span class="file-type type-research">Research</span></td><td>Validated real-world industry scenarios for Academy scripts</td><td></td></tr>
-              <tr><td class="file-name">Forest — Research — Customer Settings Help Centre Review</td><td><span class="file-type type-research">Research</span></td><td>10 Customer settings verified against help.commusoft.com</td><td><span class="view-script-btn" onclick="openInboxFile('forest-customer-settings')">View file</span></td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- Folder: Reviews -->
-      <div class="folder-group">
-        <div class="folder-header" onclick="toggleFolder(this)">
-          <div class="folder-label">Reviews <span class="folder-file-count">3 files</span></div>
-          <span class="folder-chevron">&#9654;</span>
-        </div>
-        <div class="folder-body">
-          <table class="inbox-table">
-            <thead><tr><th>File</th><th>Type</th><th>Description</th><th></th></tr></thead>
-            <tbody>
-              <tr><td class="file-name">Flint — Review — Assets Settings Files (Final Check)</td><td><span class="file-type" style="background:#fff3ee;color:#fa6932">Review</span></td><td>Approved — all must-fixes resolved, two minor notes on Hot Water Cylinder naming and table formats</td><td><span class="view-script-btn" onclick="openInboxFile('flint-assets-final')">View file</span></td></tr>
-              <tr><td class="file-name">Flint — Review — Assets Settings Files</td><td><span class="file-type" style="background:#fff3ee;color:#fa6932">Review</span></td><td>3 must-fixes and 3 suggestions across 5 SunComfort Assets settings files</td><td><span class="view-script-btn" onclick="openInboxFile('flint-assets-review')">View file</span></td></tr>
-              <tr><td class="file-name">Flint — Review — Customer Settings Help Centre Check</td><td><span class="file-type" style="background:#fff3ee;color:#fa6932">Review</span></td><td>Must-fix items and suggestions before settings files go to production</td><td><span class="view-script-btn" onclick="openInboxFile('flint-customer-settings')">View file</span></td></tr>
-            </tbody>
-          </table>
+        <div class="file-grid">
+          <div class="file-card clickable" onclick="openInboxFile('forest-asset-dropdowns')">
+            <div class="file-card-title">Forest — Research — Asset Dropdown Options</div>
+            <div class="file-card-desc">Make, Model and Location dropdown options for SunComfort asset configuration — ordered by UK market prevalence.</div>
+            <div class="file-card-footer"><span class="file-type type-research">Research</span></div>
+          </div>
+          <div class="file-card clickable" onclick="openInboxFile('forest-asset-types')">
+            <div class="file-card-title">Forest — Research — Asset Types by Group</div>
+            <div class="file-card-desc">Discrete vs sub-component analysis — confirmed asset types for Groups and Types configuration.</div>
+            <div class="file-card-footer"><span class="file-type type-research">Research</span></div>
+          </div>
+          <div class="file-card clickable" onclick="openInboxFile('forest-phase2-coverage')">
+            <div class="file-card-title">Forest — Research — Phase 2 Help Centre Coverage Check</div>
+            <div class="file-card-desc">Gap analysis of Reed's Phase 2 course list against the full Help Centre — gaps resolved in Phase 2 Revised.</div>
+            <div class="file-card-footer"><span class="file-type type-research">Research</span></div>
+          </div>
+          <div class="file-card">
+            <div class="file-card-title">Forest — Research — SunComfort Scenarios</div>
+            <div class="file-card-desc">Validated real-world industry scenarios for Academy scripts.</div>
+            <div class="file-card-footer"><span class="file-type type-research">Research</span></div>
+          </div>
+          <div class="file-card clickable" onclick="openInboxFile('forest-customer-settings')">
+            <div class="file-card-title">Forest — Research — Customer Settings Help Centre Review</div>
+            <div class="file-card-desc">10 Customer settings verified against help.commusoft.com.</div>
+            <div class="file-card-footer"><span class="file-type type-research">Research</span></div>
+          </div>
         </div>
       </div>
 
-      <!-- Folder: Indexes -->
-      <div class="folder-group">
-        <div class="folder-header" onclick="toggleFolder(this)">
-          <div class="folder-label">Indexes <span class="folder-file-count">2 files</span></div>
-          <span class="folder-chevron">&#9654;</span>
+      <!-- Reviews -->
+      <div class="series-block">
+        <div class="series-header" style="background:#b45a00">
+          <div><h2>Reviews</h2><div class="series-meta">Flint quality reviews and approval records</div></div>
+          <div class="series-count">3 files</div>
         </div>
-        <div class="folder-body">
-          <table class="inbox-table">
-            <thead><tr><th>File</th><th>Type</th><th>Description</th><th></th></tr></thead>
-            <tbody>
-              <tr><td class="file-name">Academy / Job View / index.md</td><td><span class="file-type type-index">Index</span></td><td>Series index for the Job View course collection</td><td></td></tr>
-              <tr><td class="file-name">Academy / index.md</td><td><span class="file-type type-index">Index</span></td><td>Top-level Academy content catalogue and filing conventions</td><td></td></tr>
-            </tbody>
-          </table>
+        <div class="file-grid">
+          <div class="file-card clickable" onclick="openInboxFile('flint-assets-final')">
+            <div class="file-card-title">Flint — Review — Assets Settings Files (Final Check)</div>
+            <div class="file-card-desc">Approved — all must-fixes resolved, two minor notes on Hot Water Cylinder naming and table formats.</div>
+            <div class="file-card-footer"><span class="file-type" style="background:#fff3ee;color:#fa6932">Review</span><span class="badge badge-approved">Approved</span></div>
+          </div>
+          <div class="file-card clickable" onclick="openInboxFile('flint-assets-review')">
+            <div class="file-card-title">Flint — Review — Assets Settings Files</div>
+            <div class="file-card-desc">3 must-fixes and 3 suggestions across 5 SunComfort Assets settings files.</div>
+            <div class="file-card-footer"><span class="file-type" style="background:#fff3ee;color:#fa6932">Review</span></div>
+          </div>
+          <div class="file-card clickable" onclick="openInboxFile('flint-customer-settings')">
+            <div class="file-card-title">Flint — Review — Customer Settings Help Centre Check</div>
+            <div class="file-card-desc">Must-fix items and suggestions before settings files go to production.</div>
+            <div class="file-card-footer"><span class="file-type" style="background:#fff3ee;color:#fa6932">Review</span></div>
+          </div>
         </div>
       </div>
 
-      <!-- Folder: People -->
-      <div class="folder-group">
-        <div class="folder-header" onclick="toggleFolder(this)">
-          <div class="folder-label">People <span class="folder-file-count">3 files</span></div>
-          <span class="folder-chevron">&#9654;</span>
+      <!-- Indexes -->
+      <div class="series-block">
+        <div class="series-header" style="background:var(--blue2)">
+          <div><h2>Indexes</h2><div class="series-meta">Content catalogues and filing conventions</div></div>
+          <div class="series-count">2 files</div>
         </div>
-        <div class="folder-body">
-          <table class="inbox-table">
-            <thead><tr><th>File</th><th>Type</th><th>Description</th><th></th></tr></thead>
-            <tbody>
-              <tr><td class="file-name">Ivy — Enablement Specialist Induction Plan v3</td><td><span class="file-type" style="background:#f3e5f5;color:#7b1fa2">People</span></td><td>Four-week induction plan for India-based hire — AM self-directed, PM with Sara. Academy script writing and Synthesia production as the core throughline</td><td><span class="view-script-btn" onclick="openInboxFile('ivy-induction')">View file</span></td></tr>
-              <tr><td class="file-name">Ivy — Customer Education Specialist JD</td><td><span class="file-type" style="background:#f3e5f5;color:#7b1fa2">People</span></td><td>New Academy-primary role — Customer Education Specialist. Script writing, storytelling, feature comprehension, and UI/UX observation as the core profile. HC and Fin as secondary capacity.</td><td><span class="view-script-btn" onclick="openInboxFile('ivy-jd-academy')">View file</span></td></tr>
-              <tr><td class="file-name">Ivy — Customer Education Specialist Job Advert</td><td><span class="file-type" style="background:#f3e5f5;color:#7b1fa2">People</span></td><td>External job advert for the Customer Education Specialist role — storytelling and selling language for candidate-facing posting. Ready for location, salary, and application details to be added.</td><td><span class="view-script-btn" onclick="openInboxFile('ivy-jd-advert')">View file</span></td></tr>
-            </tbody>
-          </table>
+        <div class="file-grid">
+          <div class="file-card">
+            <div class="file-card-title">Academy / Job View / index.md</div>
+            <div class="file-card-desc">Series index for the Job View course collection.</div>
+            <div class="file-card-footer"><span class="file-type type-index">Index</span></div>
+          </div>
+          <div class="file-card">
+            <div class="file-card-title">Academy / index.md</div>
+            <div class="file-card-desc">Top-level Academy content catalogue and filing conventions.</div>
+            <div class="file-card-footer"><span class="file-type type-index">Index</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- People -->
+      <div class="series-block">
+        <div class="series-header" style="background:#6a1b9a">
+          <div><h2>People</h2><div class="series-meta">Hiring, induction, and team planning documents</div></div>
+          <div class="series-count">3 files</div>
+        </div>
+        <div class="file-grid">
+          <div class="file-card clickable" onclick="openInboxFile('ivy-induction')">
+            <div class="file-card-title">Ivy — Enablement Specialist Induction Plan v3</div>
+            <div class="file-card-desc">Four-week induction plan for India-based hire — AM self-directed, PM with Sara. Academy script writing and Synthesia production as the core throughline.</div>
+            <div class="file-card-footer"><span class="file-type" style="background:#f3e5f5;color:#7b1fa2">People</span><span class="badge" style="background:#fff3ee;color:#fa6932">Awaiting Sara review</span></div>
+          </div>
+          <div class="file-card clickable" onclick="openInboxFile('ivy-jd-academy')">
+            <div class="file-card-title">Ivy — Customer Education Specialist JD</div>
+            <div class="file-card-desc">New Academy-primary role — Customer Education Specialist. Script writing, storytelling, feature comprehension, and UI/UX observation as the core profile.</div>
+            <div class="file-card-footer"><span class="file-type" style="background:#f3e5f5;color:#7b1fa2">People</span></div>
+          </div>
+          <div class="file-card clickable" onclick="openInboxFile('ivy-jd-advert')">
+            <div class="file-card-title">Ivy — Customer Education Specialist Job Advert</div>
+            <div class="file-card-desc">External job advert — storytelling and selling language for candidate-facing posting. Ready for location, salary, and application details to be added.</div>
+            <div class="file-card-footer"><span class="file-type" style="background:#f3e5f5;color:#7b1fa2">People</span></div>
+          </div>
         </div>
       </div>
     </div>
@@ -321,9 +349,9 @@
     <div id="view-academy" class="view">
       <div class="page-heading"><h1>Academy</h1><p>Course scripts organised by series</p></div>
       <div class="stats-row">
-        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">1</div><div class="stat-label">Series</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">10</div><div class="stat-label">Courses</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">41</div><div class="stat-label">Total Minutes</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">2</div><div class="stat-label">Series</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">11</div><div class="stat-label">Courses</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">44</div><div class="stat-label">Total Minutes</div></div>
         <div class="stat-card"><div class="stat-value" style="color:var(--blue2)">9</div><div class="stat-label">Characters</div></div>
       </div>
       <div id="job-view" class="series-block">
@@ -342,6 +370,15 @@
           <div class="course-card" onclick="openPanel(8)"><div class="course-num">Course 8</div><div class="course-title">Sourcing and fulfilling job parts</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">10 scenes</span><span class="meta-pill">Office teams</span><span class="badge badge-approved">Approved</span></div></div>
           <div class="course-card" onclick="openPanel(9)"><div class="course-num">Course 9</div><div class="course-title">Sourcing and fulfilling job parts — stock control</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">9 scenes</span><span class="meta-pill">Office teams</span><span class="badge badge-approved">Approved</span></div></div>
           <div class="course-card" onclick="openPanel(10)"><div class="course-num">Course 10</div><div class="course-title">Tracking opportunities on jobs</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">9 scenes</span><span class="meta-pill">Decision makers</span><span class="badge badge-approved">Approved</span></div></div>
+        </div>
+      </div>
+      <div id="shared-concept-library" class="series-block">
+        <div class="series-header">
+          <div><h2>Shared Concept Library</h2><div class="series-meta">Layer 0 — core concepts every Commusoft user needs before role-specific training</div></div>
+          <div class="series-count">1 course</div>
+        </div>
+        <div class="course-grid">
+          <div class="course-card" onclick="openInboxFile('reed-script-l0-01')"><div class="course-num">Course 1</div><div class="course-title">The customer and site hierarchy</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">All staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
     </div>

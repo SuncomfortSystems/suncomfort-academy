@@ -234,7 +234,7 @@
           <table class="inbox-table">
             <thead><tr><th>File</th><th>Type</th><th>Description</th><th></th></tr></thead>
             <tbody>
-              <tr><td class="file-name">Reed — Phase 2 Revised — Complete Academy Course Structure</td><td><span class="file-type" style="background:#e8f5e9;color:#2e7d32">Planning</span></td><td>Version 2 — ~160 courses across all layers. Estimates removed, Quick-Start Proposals added, CIS, Route Optimisation, Business Units, Merge, Connect Emails, Invoicing from field all included — awaiting approval</td><td><span class="view-script-btn" onclick="openInboxFile('reed-phase2-revised')">View file</span></td></tr>
+              <tr><td class="file-name">Reed — Phase 2 Revised — Complete Academy Course Structure</td><td><span class="file-type" style="background:#e8f5e9;color:#2e7d32">Planning</span></td><td>Version 3 — ~170 courses across all layers. Adds Scheduled Activities (L1), Variations (L3), Defects & Recommendations (L3), Analytics & Analytics+ replacing Advanced Reporting — awaiting approval</td><td><span class="view-script-btn" onclick="openInboxFile('reed-phase2-revised')">View file</span></td></tr>
               <tr><td class="file-name">Reed — Phase 2 — Academy Full Course List</td><td><span class="file-type" style="background:#e8f5e9;color:#2e7d32">Planning</span></td><td>Full course structure across Compass, Shared Library, and all three role paths — superseded by Phase 2 Revised</td><td><span class="view-script-btn" onclick="openInboxFile('reed-phase2')">View file</span></td></tr>
             </tbody>
           </table>
@@ -1478,28 +1478,20 @@ The following could not be fully determined from the Help Centre alone and may r
 
 INBOX_FILES["reed-phase2-revised"] = `# Reed — Phase 2 Revised: Complete Academy Course Structure
 
-**Date:** 2026-04-20
-**Version:** 2 (replaces v1 dated 2026-04-20)
+**Date:** 2026-04-21
+**Version:** 3 (replaces v2 dated 2026-04-20)
 **Status:** Awaiting approval before Phase 3
 **Presenter:** Clint (all customer-facing content). Sarah as dialogue partner in series challenges only.
 
 ---
 
-## Changes from Version 1
+## Changes from Version 2
 
-- Estimates series removed (legacy feature — not carried forward)
-- Forms vs Certificates removed from Shared Concept Library (legacy)
-- Quick-Start Proposals series added to Layer 1 Office Staff (Series 7) — using the existing bridging course as Course 1, enabling basic proposal sending before learners reach the full Sales+ Layer 3 series
-- Connect Emails added to Office Staff Series 6
-- Merge customers / merge work addresses added to Office Staff Series 3
-- Invoicing from the field added to Field Team Series 3
-- Business Units added to Decision Maker Series 3
-- CIS added to Layer 2 Series 4 (Invoicing and finance setup)
-- Route Optimisation added to Layer 3 as a standalone series (flagged as complex — pre-requisites required)
-- Your Commusoft Account collection: out of scope (licence management already covered in Decision Maker Series 2; account billing is vendor admin, not Academy content)
-- Integrations: out of scope for now
-- Offline mode: out of scope for now
-- Mobile HC noted as incomplete — further courses likely needed in a future wave
+- Scheduled Activities added to Layer 1 Office Staff Series 4 (Booking and scheduling) — positioned early so it becomes a daily habit
+- Variations added to Layer 3 as a standalone series (3 courses + challenge)
+- Defects & Recommendations added to Layer 3 as a standalone series (3 courses + challenge)
+- Advanced Reporting replaced by Analytics & Analytics+ (expanded from 2 to 5 courses — Analytics is a rename of Reporting, not a new feature; Analytics+ is the advanced add-on tier)
+- Decision Maker Series 3 Course 3 renamed from "Build a custom report and save a view" to "Build an Analytics dashboard and save a view" to reflect the rename
 
 ---
 
@@ -1600,7 +1592,8 @@ Existing Job View series — 10 approved courses. No rebuild required.
 | 4 | Manage appointment statuses | Links to shared library | 3 min |
 | 5 | Put a job on hold and take it off hold | Micro | 3 min |
 | 6 | Raise a recall job | Micro | 3 min |
-| — | Series challenge: Job booked and engineer on the way | Clint + Sarah dialogue | 3 min |
+| 7 | Set up and use scheduled activities | Micro | 4 min |
+| — | Series challenge: Job booked, engineer on the way, activities in place | Clint + Sarah dialogue | 3 min |
 
 ---
 
@@ -1737,7 +1730,7 @@ Rise mini-course — four lessons. ~13 minutes. July build.
 |---|--------|--------|--------|
 | 1 | Track debt and set up debt chasing | Micro | 5 min |
 | 2 | Read your opportunities pipeline | Micro | 4 min |
-| 3 | Build a custom report and save a view | Micro | 5 min |
+| 3 | Build an Analytics dashboard and save a view | Micro | 5 min |
 | 4 | Understand service reminder performance | Micro | 4 min |
 | 5 | Segment your business with business units | Micro | 4 min |
 | — | Series challenge: Revenue visible and chasing active | Clint + Sarah dialogue | 3 min |
@@ -1846,7 +1839,7 @@ For accounts using Sales+.
 
 ## Layer 3 — Feature Series
 
-Advanced and specialist topics. Built after Layers 0-2 are complete. Each series stands alone.
+Advanced and specialist topics. Built after Layers 0–2 are complete. Each series stands alone.
 
 ---
 
@@ -1894,7 +1887,7 @@ Assumes learners have completed Office Staff Series 7 (Quick-Start Proposals) an
 
 **Route Optimisation**
 
-Pre-requisites: Layer 2 Series 2 (jobs and scheduling setup) complete. Diary settings, service windows, and job pipelines must be configured. Route Optimisation logic is non-obvious — this series is deliberately standalone and not linked from earlier paths until pre-requisites are met.
+Pre-requisites: Layer 2 Series 2 (jobs and scheduling setup) complete. Diary settings, service windows, and job pipelines must be configured.
 
 | # | Course | Format | Length |
 |---|--------|--------|--------|
@@ -1902,6 +1895,32 @@ Pre-requisites: Layer 2 Series 2 (jobs and scheduling setup) complete. Diary set
 | 2 | Configure route optimisation settings | Micro | 5 min |
 | 3 | Use route optimisation in the diary | Micro | 4 min |
 | — | Series challenge: Route optimised, diary running efficiently | Clint + Sarah dialogue | 3 min |
+
+---
+
+**Variations**
+
+Pre-requisites: Layer 2 Series 2 (jobs and scheduling setup) complete.
+
+| # | Course | Format | Length |
+|---|--------|--------|--------|
+| 1 | Set up variation templates and option templates | Micro | 5 min |
+| 2 | Raise a variation in the field | Micro | 4 min |
+| 3 | Manage variations from the office | Micro | 4 min |
+| — | Series challenge: Variation raised, approved, and invoiced | Clint + Sarah dialogue | 3 min |
+
+---
+
+**Defects & Recommendations**
+
+Pre-requisites: Layer 2 Series 2 (jobs and scheduling setup) complete. Sales+ series recommended before Course 3.
+
+| # | Course | Format | Length |
+|---|--------|--------|--------|
+| 1 | Configure defect types, recommendation types, and pipelines | Micro | 5 min |
+| 2 | Log a defect or recommendation in the field | Micro | 4 min |
+| 3 | Convert a defect into a proposal from the office | Micro | 5 min |
+| — | Series challenge: Defect spotted, proposal sent, work won | Clint + Sarah dialogue | 3 min |
 
 ---
 
@@ -1927,13 +1946,18 @@ Pre-requisites: Layer 2 Series 2 (jobs and scheduling setup) complete. Diary set
 
 ---
 
-**Advanced Reporting**
+**Analytics & Analytics+**
+
+Analytics is available to all plans from Go Paperless up. Analytics+ (Course 5) requires the Analytics+ add-on — available on Customer Journey and Automation plans only.
 
 | # | Course | Format | Length |
 |---|--------|--------|--------|
-| 1 | Build and save a custom report | Micro | 5 min |
-| 2 | Export data and handle large reports | Micro | 3 min |
-| — | Series challenge: Report built and exported | Clint + Sarah dialogue | 3 min |
+| 1 | Understanding the Analytics dashboard and data sources | Micro | 4 min |
+| 2 | Use the Analytics Marketplace and pre-built widgets | Micro | 4 min |
+| 3 | Build a custom dashboard and personal widgets | Micro | 5 min |
+| 4 | Build and manage tabular reports | Micro | 5 min |
+| 5 | Analytics+: shared dashboards, advanced charts, and email scheduling | Micro | 5 min |
+| — | Series challenge: Dashboard live, report exported | Clint + Sarah dialogue | 3 min |
 
 ---
 
@@ -1945,18 +1969,24 @@ Pre-requisites: Layer 2 Series 2 (jobs and scheduling setup) complete. Diary set
 | Layer 0 | Shared Concept Library | 12 micro-courses |
 | Layer 1 | Office Staff — Series 1 | 4 lessons (1 Rise mini-course, July) |
 | Layer 1 | Office Staff — Series 2 (Job View) | 10 micro-courses (approved) |
-| Layer 1 | Office Staff — Series 3-9 | 23 courses + 7 challenges |
+| Layer 1 | Office Staff — Series 3–9 | 24 courses + 7 challenges |
 | Layer 1 | Field Team — Series 1 | 4 lessons (1 Rise mini-course, July) |
-| Layer 1 | Field Team — Series 2-3 | 12 courses + 2 challenges |
+| Layer 1 | Field Team — Series 2–3 | 12 courses + 2 challenges |
 | Layer 1 | Decision Maker — Series 1 | 4 lessons (1 Rise mini-course, July) |
-| Layer 1 | Decision Maker — Series 2-5 | 16 courses + 5 challenges |
-| Layer 2 | Setup — Series 1-6 | 23 courses + 6 challenges |
-| Layer 3 | Feature Series (7 series) | 33 courses + 7 challenges |
-| Total | | ~160 courses and lessons |
+| Layer 1 | Decision Maker — Series 2–5 | 16 courses + 5 challenges |
+| Layer 2 | Setup — Series 1–6 | 23 courses + 6 challenges |
+| Layer 3 | Feature Series (9 series) | 42 courses + 9 challenges |
+| **Total** | | **~170 courses and lessons** |
 
 10 already approved. 4 Rise mini-courses deferred to July. 1 existing course carried forward into Layer 1 Office Staff Series 7.
 
-Note on Mobile HC: The Help Centre mobile collection is acknowledged as incomplete. Further Field Team courses will likely be needed in a future wave once HC coverage improves.
+---
+
+**Note on Mobile HC:** The Help Centre mobile collection is acknowledged as incomplete. Further Field Team courses will likely be needed in a future wave once HC coverage improves.
+
+---
+
+**Awaiting approval before Phase 3.**
 `;
 
 INBOX_FILES["flint-assets-review"] = `# Flint — Review: SunComfort Assets Settings Files (with Help Centre check)

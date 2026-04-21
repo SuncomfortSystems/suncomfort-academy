@@ -202,12 +202,12 @@
     <div id="view-inbox" class="view active">
       <div class="page-heading"><h1>Owners Inbox</h1><p>Finished content ready for review</p></div>
       <div class="stats-row">
-        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">10</div><div class="stat-label">Course Scripts</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">11</div><div class="stat-label">Course Scripts</div></div>
         <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">2</div><div class="stat-label">Research Briefs</div></div><div class="stat-card"><div class="stat-value" style="color:#fa6932">1</div><div class="stat-label">Review</div></div>
         <div class="stat-card"><div class="stat-value" style="color:var(--blue2)">1</div><div class="stat-label">Series Indexed</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">41</div><div class="stat-label">Total Minutes</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">44</div><div class="stat-label">Total Minutes</div></div>
       </div>
-      <div class="section-heading">Academy Course Scripts <span class="count">10</span></div>
+      <div class="section-heading">Academy Course Scripts <span class="count">11</span></div>
       <table class="inbox-table">
         <thead><tr><th>#</th><th>Title</th><th>Series</th><th>Duration</th><th>Persona</th><th>Status</th><th></th></tr></thead>
         <tbody>
@@ -221,6 +221,7 @@
           <tr><td>8</td><td class="file-name">Sourcing and fulfilling job parts</td><td><span class="file-type type-script">Job View</span></td><td>4 min</td><td>Office teams</td><td><span class="badge badge-approved">Approved</span></td><td><span class="view-script-btn" onclick="openPanel(8)">View script</span></td></tr>
           <tr><td>9</td><td class="file-name">Sourcing and fulfilling job parts — stock control</td><td><span class="file-type type-script">Job View</span></td><td>4 min</td><td>Office teams</td><td><span class="badge badge-approved">Approved</span></td><td><span class="view-script-btn" onclick="openPanel(9)">View script</span></td></tr>
           <tr><td>10</td><td class="file-name">Tracking opportunities on jobs</td><td><span class="file-type type-script">Job View</span></td><td>4 min</td><td>Decision makers</td><td><span class="badge badge-approved">Approved</span></td><td><span class="view-script-btn" onclick="openPanel(10)">View script</span></td></tr>
+          <tr><td>11</td><td class="file-name">The customer and site hierarchy</td><td><span class="file-type type-script">Shared Concept Library</span></td><td>3 min</td><td>All staff</td><td><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></td><td><span class="view-script-btn" onclick="openInboxFile('reed-script-l0-01')">View script</span></td></tr>
         </tbody>
       </table>
       <div class="section-heading">Other Files <span class="count">13</span></div>
@@ -2957,6 +2958,81 @@ The table formatting issue (missing separator rows) is present across multiple f
 Asset Groups.md and Asset Types.md are well-structured and the field choices are credible for a renewables installer of SunComfort's profile. No content concerns on either file.
 `;
 
+INBOX_FILES["reed-script-l0-01"] = `# Reed — Script: The customer and site hierarchy
+
+**Layer:** 0 — Shared Concept Library
+**Course number:** 1 of 12
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-22
+
+---
+
+**Learning objectives**
+1. Explain the difference between a customer record and a work address in Commusoft
+2. Identify when a work address is needed and how it relates to the customer
+3. State where jobs, assets, and service reminders sit within the hierarchy
+
+**Target persona:** All staff (office teams, field teams, decision makers)
+
+**SunComfort characters:** David Okafor (landlord customer — referenced as scenario context)
+
+**Scenario:** A new member of the SunComfort office team is learning how the system organises customer data before booking their first job.
+
+**Estimated length:** 3 min
+
+**Target audience:** Staff at field service businesses using Commusoft. They may be schedulers, engineers, office administrators, or managers. They are learning how the system is structured so they can work confidently from day one. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** The Commusoft Compass (Layer 0) complete.
+
+**Main objective beyond learning objectives:** Know immediately where to look and where to log. A learner who understands the hierarchy will not create duplicate records, book jobs against the wrong address, or wonder why a customer's invoice history does not match a property's job history. That clarity saves time on every single job.
+
+---
+
+## Introduction
+
+When you open a customer record in Commusoft, you will notice it can have multiple addresses beneath it. That structure is not an accident. Commusoft separates customers from the places where work is carried out, and understanding that separation will make everything from booking a job to raising an invoice feel logical rather than confusing.
+
+The hierarchy has three levels: the customer at the top, work addresses beneath them, and then jobs, assets, and service reminders sitting under each work address. Each level has a distinct purpose, and knowing which level you are working at tells you exactly where to look and where to log.
+
+---
+
+## The customer record
+
+The customer record represents the commercial relationship. It holds the person or company you trade with: their contact details, billing address, communication preferences, and financial history. When you raise an invoice in Commusoft, it is addressed to the customer, even when the work took place at a completely different property.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: does your business ever carry out work at a different address from where the customer receives their post?**
+
+*Yes feedback:* Exactly. That is the scenario a work address is designed for, and it is more common than you might think.
+*No feedback:* For some residential businesses that is true, and a single address covers everything. But as soon as one customer has more than one property, work addresses become essential.
+
+---
+
+## The work address
+
+A work address is any property where work is carried out that differs from, or adds to, the customer's main address. You link work addresses directly to the customer, and every job you book, every asset you track, and every service reminder you set up sits under the relevant work address rather than the customer record itself.
+
+Think about David Okafor at SunComfort. David is a landlord with eight rental properties across Surrey and south London. He has one customer record in Commusoft and eight work addresses beneath it, one for each property. When a heat pump at his Kingston flat needs its annual service, Sophie books the job against that work address. The invoice goes to David at his Canary Wharf address, but the property history, the asset record, and the job report all belong to Kingston.
+
+*[Knowledge check — 4 options]*
+**A customer contacts SunComfort about a fault at one of their properties. Where in Commusoft should you raise the job?**
+
+A) Against the customer record
+B) Against the relevant work address
+C) Against the customer's billing address
+D) Against the customer's primary contact
+
+*Correct (B):* Right. Jobs always sit under the work address where the work takes place. That keeps every property's history clean and separate.
+*Incorrect:* Jobs belong to the work address — the location where the work happens. The customer record is for the commercial relationship; the work address is for the operational one.
+
+---
+
+## Summary
+
+The customer is who you bill. The work address is where you work. Everything operational sits under the work address: jobs, assets, and service reminders. Keep those two levels clear and you will always know where to look, where to log, and why the data is arranged the way it is.
+`;
+
 INBOX_FILES["ivy-induction"] = `# Enablement Specialist — Induction Plan
 
 Training is essential for your role at Commusoft. To ensure you have the best possible start, we have created this induction schedule.
@@ -3269,6 +3345,7 @@ function openInboxFile(key) {
     'forest-asset-dropdowns': { num: 'Forest — Research', title: 'Asset Dropdown Options' },
     'forest-asset-types': { num: 'Forest — Research', title: 'Asset Types by Group' },
     'flint-assets-final': { num: 'Flint — Review', title: 'Assets Settings Files (Final Check)' },
+    'reed-script-l0-01': { num: 'Reed — Script', title: 'L0 Shared Concept Library — 01 The customer and site hierarchy' },
     'ivy-induction': { num: 'Ivy — People', title: 'Enablement Specialist Induction Plan v3' },
     'ivy-jd-academy': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Description' },
     'ivy-jd-advert': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Advert' }

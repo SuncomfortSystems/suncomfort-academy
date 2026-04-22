@@ -212,11 +212,12 @@
     <div id="view-inbox" class="view active">
       <div class="page-heading"><h1>Owners Inbox</h1><p>Finished content ready for review</p></div>
       <div class="stats-row">
-        <div class="stat-card"><div class="stat-value" style="color:var(--grey)">15</div><div class="stat-label">Total Files</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--grey)">19</div><div class="stat-label">Total Files</div></div>
         <div class="stat-card"><div class="stat-value" style="color:#2e7d32">2</div><div class="stat-label">Planning</div></div>
         <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">5</div><div class="stat-label">Research</div></div>
         <div class="stat-card"><div class="stat-value" style="color:var(--orange)">3</div><div class="stat-label">Reviews</div></div>
         <div class="stat-card"><div class="stat-value" style="color:#7b1fa2">3</div><div class="stat-label">People</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:#1b5e20">4</div><div class="stat-label">Business Cases</div></div>
       </div>
 
       <!-- Planning -->
@@ -315,6 +316,36 @@
             <div class="file-card-title">Academy / index.md</div>
             <div class="file-card-desc">Top-level Academy content catalogue and filing conventions.</div>
             <div class="file-card-footer"><span class="file-type type-index">Index</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Business Cases -->
+      <div class="series-block">
+        <div class="series-header" style="background:#1b5e20">
+          <div><h2>Business Cases</h2><div class="series-meta">Resource and tooling proposals — draft versions for review</div></div>
+          <div class="series-count">4 files</div>
+        </div>
+        <div class="file-grid">
+          <div class="file-card clickable" onclick="openInboxFile('biz-case-draft')">
+            <div class="file-card-title">Enablement Team — Resource &amp; Tooling Proposal (Draft)</div>
+            <div class="file-card-desc">Current proposal — hiring pause, Articulate switch, 2x Claude Max, full-time UK hire end of July. Omniplex 2-licence pricing TBC.</div>
+            <div class="file-card-footer"><span class="file-type" style="background:#e8f5e9;color:#1b5e20">Business Case</span><span class="badge" style="background:#fff3ee;color:#fa6932">Pricing TBC</span></div>
+          </div>
+          <div class="file-card clickable" onclick="openInboxFile('biz-case-va-ftuk-q3')">
+            <div class="file-card-title">Alternative A — Full-time UK hire from Q3 (July)</div>
+            <div class="file-card-desc">3-month pause then full-time UK Enablement Specialist from 1 July. Clean Q3 start, full quarter of UK contribution before the 3-month review.</div>
+            <div class="file-card-footer"><span class="file-type" style="background:#e8f5e9;color:#1b5e20">Business Case</span><span class="badge" style="background:#e3f2fd;color:#1565c0">Draft</span></div>
+          </div>
+          <div class="file-card clickable" onclick="openInboxFile('biz-case-vb-ftuk-q4')">
+            <div class="file-card-title">Alternative B — Full-time UK hire from Q4 (October)</div>
+            <div class="file-card-desc">Extended 6-month pause then full-time UK hire from 1 October. Maximum short-term saving, largest course library before hire joins.</div>
+            <div class="file-card-footer"><span class="file-type" style="background:#e8f5e9;color:#1b5e20">Business Case</span><span class="badge" style="background:#e3f2fd;color:#1565c0">Draft</span></div>
+          </div>
+          <div class="file-card clickable" onclick="openInboxFile('biz-case-vc-india')">
+            <div class="file-card-title">Alternative C — Continue India hire</div>
+            <div class="file-card-desc">Resume India recruitment with improved tooling — Articulate switch plus Claude Max. Lowest headcount cost; known profile risks documented.</div>
+            <div class="file-card-footer"><span class="file-type" style="background:#e8f5e9;color:#1b5e20">Business Case</span><span class="badge" style="background:#e3f2fd;color:#1565c0">Draft</span></div>
           </div>
         </div>
       </div>
@@ -3439,6 +3470,177 @@ The profile we're hiring for:
 - Familiarity with tools like Synthesia, Intercom, Loom, Jira, or Confluence is a plus — but not a requirement. We'll teach you what you need.
 `;
 
+INBOX_FILES["biz-case-draft"] = `# Enablement Team — Resource & Tooling Proposal (Draft)
+
+**Prepared by:** Cedar — Business Case Writer
+**Date:** 2026-04-22
+**Status:** Draft — pricing TBC (awaiting 2-licence Omniplex quote)
+
+---
+
+## Summary
+
+This proposal covers the cost of the Enablement function from May to December 2025, accounting for the current India-based VA arrangement, a planned 3-month pause, and a UK-based hire in Q3 or Q4. It also includes tooling costs across the full period.
+
+---
+
+## Current Arrangement (May–July)
+
+| Item | Monthly | Period | Total |
+|------|---------|--------|-------|
+| Vahan (India VA) | £790 | May–Jul (3 months) | £2,370 |
+| Claude Max | £100 | May–Jul (3 months) | £300 |
+| Articulate 360 | TBC | May–Jul (3 months) | TBC |
+| Omniplex (licences) | TBC | May–Jul (3 months) | TBC |
+
+---
+
+## Pause Period
+
+A 3-month pause is planned. No VA or production costs during this period.
+
+---
+
+## UK Hire (August–December estimate)
+
+| Item | Monthly | Period | Total |
+|------|---------|--------|-------|
+| UK hire (mid-level) | ~£3,000 | Aug–Dec (5 months) | ~£15,000 |
+| Claude Max | £100 | Aug–Dec (5 months) | £500 |
+| Articulate 360 | TBC | Aug–Dec (5 months) | TBC |
+| Omniplex (licences) | TBC | Aug–Dec (5 months) | TBC |
+
+---
+
+## Notes
+
+- Omniplex pricing: awaiting 2-licence quote. 3-licence discounted offer at £4,392 exc VAT (licences only) is a marginal saving of £171 versus list price. 2-licence option under review.
+- Articulate 360 pricing to be confirmed.
+- UK hire salary estimate subject to market and final offer.
+`;
+
+INBOX_FILES["biz-case-va-ftuk-q3"] = `# Alternative A — Full-time UK Hire from Q3
+
+**Prepared by:** Cedar — Business Case Writer
+**Date:** 2026-04-22
+**Scenario:** Pause the India VA arrangement, hire a full-time UK-based Customer Education Specialist from 1 July (start of Q3).
+
+---
+
+## Summary
+
+This option ends the India arrangement at the close of June and brings a UK hire on board from Q3. It maximises the time a UK employee is in post before year-end and closes the skills and timezone gap sooner.
+
+---
+
+## Cost Breakdown
+
+| Item | Monthly | Period | Total |
+|------|---------|--------|-------|
+| Vahan (India VA) | £790 | May–Jun (2 months) | £1,580 |
+| Claude Max | £100 | May–Jun (2 months) | £200 |
+| Articulate 360 | TBC | May–Jun (2 months) | TBC |
+| Omniplex (licences) | TBC | Full year | TBC |
+| UK hire (full-time) | ~£3,000 | Jul–Dec (6 months) | ~£18,000 |
+| Claude Max | £100 | Jul–Dec (6 months) | £600 |
+| Articulate 360 | TBC | Jul–Dec (6 months) | TBC |
+
+**Estimated full-year total (excl. TBC lines): ~£23,338**
+
+---
+
+## Considerations
+
+- Earliest possible date for a UK hire in post — maximises enablement output in H2.
+- Recruitment lead time from now to 1 July is approximately 10 weeks — tight but achievable.
+- Overlap period (May–June) still uses India VA, maintaining continuity during hiring.
+- Higher H2 cost than Q4 or India continuation options.
+`;
+
+INBOX_FILES["biz-case-vb-ftuk-q4"] = `# Alternative B — Full-time UK Hire from Q4
+
+**Prepared by:** Cedar — Business Case Writer
+**Date:** 2026-04-22
+**Scenario:** End the India VA arrangement at close of June, pause for Q3, bring a full-time UK hire on board from 1 October (start of Q4).
+
+---
+
+## Summary
+
+This option introduces a 3-month pause between the India arrangement and the UK hire. It reduces total year cost and allows more time for a thorough UK recruitment process, at the cost of an inactive Q3.
+
+---
+
+## Cost Breakdown
+
+| Item | Monthly | Period | Total |
+|------|---------|--------|-------|
+| Vahan (India VA) | £790 | May–Jun (2 months) | £1,580 |
+| Claude Max | £100 | May–Jun (2 months) | £200 |
+| Articulate 360 | TBC | May–Jun (2 months) | TBC |
+| Omniplex (licences) | TBC | Full year | TBC |
+| Pause | — | Jul–Sep (3 months) | £0 |
+| UK hire (full-time) | ~£3,000 | Oct–Dec (3 months) | ~£9,000 |
+| Claude Max | £100 | Oct–Dec (3 months) | £300 |
+| Articulate 360 | TBC | Oct–Dec (3 months) | TBC |
+
+**Estimated full-year total (excl. TBC lines): ~£15,888**
+
+---
+
+## Considerations
+
+- Closest to India continuation cost (Alternative C: ~£18,438) when Articulate and Omniplex are added.
+- 3-month gap means no active Academy production in Q3.
+- Longer recruitment runway — easier to find the right person without urgency.
+- UK hire arrives in Q4 with only 3 months to contribute before year-end.
+`;
+
+INBOX_FILES["biz-case-vc-india"] = `# Alternative C — Continue India Hire
+
+**Prepared by:** Cedar — Business Case Writer
+**Date:** 2026-04-22
+**Scenario:** Resume the India VA arrangement after the planned pause. No UK hire in 2025.
+
+---
+
+## Summary
+
+This option resumes Vahan's contract after a 3-month pause and continues the India-based model through year-end. It is the lowest headline cost option but carries documented profile risk.
+
+---
+
+## Cost Breakdown
+
+| Item | Monthly | Period | Total |
+|------|---------|--------|-------|
+| Vahan (India VA) | £790 | May–Jun (2 months) | £1,580 |
+| Claude Max | £100 | May–Jun (2 months) | £200 |
+| Articulate 360 | TBC | May–Jun (2 months) | TBC |
+| Omniplex (licences) | TBC | Full year | TBC |
+| Pause | — | Jul–Sep (3 months) | £0 |
+| Vahan (India VA) | £790 | Oct–Dec (3 months) | £2,370 |
+| Claude Max | £100 | Oct–Dec (3 months) | £300 |
+| Articulate 360 | TBC | Oct–Dec (3 months) | TBC |
+
+**Estimated full-year total (excl. TBC lines): ~£18,438**
+
+---
+
+## Net Saving vs. UK Hire (Alt A)
+
+Approximately £162 saving versus Alternative A (£23,338) when Articulate and Omniplex costs are equal across both options.
+
+---
+
+## Considerations
+
+- Lowest cost option on the surface — but a £162 saving versus a UK hire is negligible when weighed against profile risk.
+- India continuation carries documented risk: timezone overlap is limited, and the VA profile was not originally scoped for Academy production at full scale.
+- Does not address the medium-term need for a UK-based Enablement team member.
+- Recommended only if UK recruitment timeline is not achievable before Q4.
+`;
+
 function openInboxFile(key) {
   var content = INBOX_FILES[key];
   if (!content) { content = 'Content not found.'; }
@@ -3456,7 +3658,11 @@ function openInboxFile(key) {
     'reed-script-l0-02': { num: 'Reed — Script', title: 'L0 Shared Concept Library — 02 Appointment statuses explained' },
     'ivy-induction': { num: 'Ivy — People', title: 'Enablement Specialist Induction Plan v3' },
     'ivy-jd-academy': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Description' },
-    'ivy-jd-advert': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Advert' }
+    'ivy-jd-advert': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Advert' },
+    'biz-case-draft': { num: 'Cedar — Business Case', title: 'Enablement Team — Resource & Tooling Proposal (Draft)' },
+    'biz-case-va-ftuk-q3': { num: 'Cedar — Business Case', title: 'Alternative A — Full-time UK hire from Q3' },
+    'biz-case-vb-ftuk-q4': { num: 'Cedar — Business Case', title: 'Alternative B — Full-time UK hire from Q4' },
+    'biz-case-vc-india': { num: 'Cedar — Business Case', title: 'Alternative C — Continue India hire' }
   };
   var lbl = labels[key] || { num: 'Owners Inbox', title: key };
   document.getElementById('panelNum').textContent = lbl.num;

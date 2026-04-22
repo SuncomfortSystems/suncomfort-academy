@@ -3083,14 +3083,14 @@ INBOX_FILES["reed-script-l0-02"] = `# Reed — Script: Appointment statuses expl
 
 **Learning objectives**
 1. Name the eight appointment statuses in Commusoft and explain what each one means
-2. Identify which statuses are set by the office and which are updated by the engineer on the mobile app
-3. Describe what an exception status means and what the office should do when one appears
+2. Identify which statuses are updated by the engineer on the mobile app and which is the office-only action
+3. Describe what each exception status means and what the office should do when one appears
 
 **Target persona:** All staff (office teams, field teams, decision makers)
 
 **SunComfort characters:** Sophie Bennett (scheduler), Jake Harris (Senior Heat Pump Technician)
 
-**Scenario:** Sophie has booked a heat pump service at a customer's rental property. Jake takes the appointment through its statuses from departure to completion on the mobile app, with a no-access situation mid-way through.
+**Scenario:** Sophie has booked a heat pump annual service at a customer's property. Jake takes the appointment through its statuses from acceptance to completion on the mobile app, with a no-access situation on a follow-up visit.
 
 **Estimated length:** 3 min
 
@@ -3098,50 +3098,46 @@ INBOX_FILES["reed-script-l0-02"] = `# Reed — Script: Appointment statuses expl
 
 ## Introduction
 
-Every appointment in Commusoft carries a status. That status is the live signal that tells every member of your team exactly where a job stands — whether it is waiting to be confirmed, whether the engineer is travelling, or whether the work is done and ready to invoice. When your team reads and updates statuses consistently, no one needs to call anyone to find out what is happening.
+Every appointment in Commusoft carries a status. That status is the live signal that tells every member of your team exactly where a job stands — whether an engineer has accepted a visit, whether they are on the road, or whether they arrived and could not get in. When your team reads and updates statuses consistently, no one needs to call anyone to find out what is happening.
 
-Commusoft uses eight appointment statuses. Some sit with the office and are managed at the point of booking. Others are updated by the engineer through the mobile app as the job moves forward. Understanding where each one comes from is what keeps both sides of the business in step.
-
----
-
-## Pending and Confirmed
-
-Two statuses live with the office. Pending is applied automatically the moment an appointment is created — it means the booking exists but the customer has not yet been informed. When Sophie at SunComfort confirms an appointment time with a customer, she moves the status to Confirmed. In Commusoft, a status change to Confirmed can also trigger an automated notification to the customer if your communication templates are configured to do so.
+There are eight appointment statuses in Commusoft. Seven are updated by the engineer directly from the mobile app as the job progresses. One is an office-only action. Together they create a live picture of every appointment in your diary.
 
 ---
 
-## En route, On site, and Completed
+## The progression statuses
 
-The next three statuses are updated by the engineer from the mobile app as the job progresses. When Jake leaves the depot, he marks his appointment En route. When he arrives at the property, he marks it On site. When the work is finished, he marks it Completed. Each of these updates is visible in the office diary the moment it is saved, giving Sophie and the team a real-time view of where every engineer is without picking up the phone.
+When Sophie at SunComfort books a heat pump service and assigns it to Jake, the appointment waits for Jake to respond on his app. When Jake agrees to attend, he marks the appointment Accepted. When he leaves the depot, he marks it Travel. When he arrives at the property and has access, he marks it Arrived.
+
+Once an appointment reaches Arrived it is locked and cannot be edited — the visit is live on site. When Jake finishes the work and leaves, he marks it Left. Each of these four updates appears in Sophie's diary the moment it is saved.
 
 *[Reflection prompt — Yes/No]*
 **Before we continue: does your business currently have a reliable way of knowing when an engineer has arrived on site without calling them?**
 
-*Yes feedback:* Good. The On site status is the systematic version of that — consistent across every engineer, every job, and visible to the whole office in real time.
-*No feedback:* That is exactly what En route and On site are for. Once engineers update their status on the app, the office knows where everyone is without a single call.
+*Yes feedback:* Good. The Arrived status is the systematic version of that — consistent across every engineer, every job, and visible to the whole office the moment it is updated.
+*No feedback:* That is exactly what the Travel and Arrived statuses are for. Once engineers update their status on the app, the whole office knows where everyone is without a single call.
 
 ---
 
 ## Exception statuses
 
-Three statuses cover the situations where an appointment does not go to plan. No access means the engineer arrived but could not get in — the customer was not home or access was refused. Aborted means the appointment started but had to stop before the work was finished. Rejected means the engineer cannot carry out the work at all, usually because the scope has changed, parts are missing, or site conditions are unsafe. All three leave the job record open and visible so the office can follow up immediately rather than losing the situation.
+Four statuses cover the situations where an appointment does not follow the normal path. Rejected means Jake cannot agree to attend the property at all — the appointment needs to be reassigned or rescheduled. No Access means Jake arrived at the property but could not get in. Aborted means Jake started the visit but could not complete the work. All three of these are updated by the engineer on the app, and all three leave the job record open so the office can follow up. The fourth exception is Cancelled — the only status set from the office, used when an appointment is no longer required before the engineer has set out.
 
 *[Knowledge check — 4 options]*
-**Sophie checks the diary and sees Jake's appointment at a rental property has been marked No access. What should she do next?**
+**Sophie checks the diary and sees Jake's appointment at a customer's property is marked No Access. What should she do next?**
 
 A) Wait for Jake to call her with the details
-B) Mark the appointment as Completed and raise a new job from scratch
-C) Contact the customer, find out what happened, and book a follow-up appointment
-D) Delete the appointment and re-enter it
+B) Mark the appointment as Left and raise a new job
+C) Contact the customer to find out what happened and book a follow-up appointment
+D) Cancel the appointment and start again
 
-*Correct (C):* Right. No access holds the job record intact and flags the situation clearly. Sophie contacts the customer, establishes what happened, and books a follow-up — all linked to the same job and property history.
-*Incorrect:* No access is not the end of the job. It is a signal for the office to act. The appointment stays linked to the job record so the follow-up is traceable. Deleting or marking it complete would break that history.
+*Correct (C):* Right. No Access holds the job record open and flags the situation clearly. Sophie contacts the customer, finds out what happened, and books a follow-up — all linked to the same job and property history.
+*Incorrect:* No Access is not the end of the job. It is a signal for the office to act. Marking it Left would record the visit as complete when it was not, and cancelling it would lose the job history. The correct action is to follow up and rebook.
 
 ---
 
 ## Summary
 
-Pending and Confirmed sit with the office. En route, On site, and Completed are updated by the engineer on the app. No access, Aborted, and Rejected cover the situations where a job does not complete as planned. Keep these statuses accurate, and your diary becomes a live feed of your whole field operation — not a static list of bookings.
+Four progression statuses — Accepted, Travel, Arrived, Left — track every appointment from assignment to completion. Four exception statuses — Rejected, No Access, Aborted, and the office-only Cancelled — cover every situation where a job does not follow the normal path. Keep these statuses accurate and your diary becomes a live feed of your entire field operation.
 `;
 
 INBOX_FILES["ivy-induction"] = `# Enablement Specialist — Induction Plan

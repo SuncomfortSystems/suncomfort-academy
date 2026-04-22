@@ -212,12 +212,12 @@
     <div id="view-inbox" class="view active">
       <div class="page-heading"><h1>Owners Inbox</h1><p>Finished content ready for review</p></div>
       <div class="stats-row">
-        <div class="stat-card"><div class="stat-value" style="color:var(--grey)">20</div><div class="stat-label">Total Files</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--grey)">22</div><div class="stat-label">Total Files</div></div>
         <div class="stat-card"><div class="stat-value" style="color:#2e7d32">2</div><div class="stat-label">Planning</div></div>
         <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">5</div><div class="stat-label">Research</div></div>
         <div class="stat-card"><div class="stat-value" style="color:var(--orange)">3</div><div class="stat-label">Reviews</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:#7b1fa2">3</div><div class="stat-label">People</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:#1b5e20">5</div><div class="stat-label">Business Cases</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:#7b1fa2">4</div><div class="stat-label">People</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:#1b5e20">6</div><div class="stat-label">Business Cases</div></div>
       </div>
 
       <!-- Planning -->
@@ -348,9 +348,19 @@
             <div class="file-card-footer"><span class="file-type" style="background:#e8f5e9;color:#1b5e20">Business Case</span><span class="badge" style="background:#e3f2fd;color:#1565c0">Draft</span></div>
           </div>
           <div class="file-card clickable" onclick="openInboxFile('ivy-biz-case-advisory')">
-            <div class="file-card-title">Ivy — People Advisory</div>
-            <div class="file-card-desc">Hiring and people-process considerations across all four options: India rate, UK salary range, Q3 timeline risk, and 30/60/90 recommendation.</div>
+            <div class="file-card-title">Ivy — People Advisory (hiring considerations)</div>
+            <div class="file-card-desc">Hiring and people-process considerations across all options: India rate, UK salary range, Q3 timeline risk, and 30/60/90 recommendation.</div>
             <div class="file-card-footer"><span class="file-type" style="background:#fce4ec;color:#880e4f">People</span><span class="badge" style="background:#e8f5e9;color:#1b5e20">Approved</span></div>
+          </div>
+          <div class="file-card clickable" onclick="openInboxFile('ivy-parttime-advisory')">
+            <div class="file-card-title">Ivy — People Advisory (part-time viability)</div>
+            <div class="file-card-desc">Market research + Ivy assessment on hiring a 3-day part-time UK specialist at £26k–£30k FTE. Profile: CS-to-content transitioning candidate. Recommends Alt D.</div>
+            <div class="file-card-footer"><span class="file-type" style="background:#fce4ec;color:#880e4f">People</span><span class="badge" style="background:#e8f5e9;color:#1b5e20">Approved</span></div>
+          </div>
+          <div class="file-card clickable" onclick="openInboxFile('biz-case-vd-ptuk-q3')">
+            <div class="file-card-title">Alternative D — Part-time UK hire from Q3</div>
+            <div class="file-card-desc">3-day week, 0.6 FTE, £28k FTE pro-rata. ~£16,800/year. Bridges India and full-time UK cost; opens transitioning candidate pool.</div>
+            <div class="file-card-footer"><span class="file-type" style="background:#e8f5e9;color:#1b5e20">Business Case</span><span class="badge" style="background:#e3f2fd;color:#1565c0">Draft</span></div>
           </div>
         </div>
       </div>
@@ -3729,6 +3739,150 @@ At the Gemini-advised rate, the saving versus Alternative A (full-time UK from Q
 - Viable only if the right candidate can be recruited and managed effectively at the correct rate, and if a UK hire is not achievable within the 2025 window.
 `;
 
+INBOX_FILES["ivy-parttime-advisory"] = `# Ivy — People Advisory: Part-Time UK Hire Viability
+
+**Prepared by:** Ivy — Head of People
+**Supporting research:** Forest — Researcher
+**Date:** 2026-04-22
+**Reviewed by:** Flint — Approved
+**Purpose:** Assessment of a part-time (3-day week, 0.6 FTE) UK hire at £26,000–£30,000 FTE pro-rata
+
+---
+
+> **Role title matters.** "Customer Education Specialist" may not resonate with the candidates this salary band will attract. Consider: **Content & Education Specialist**, **Customer Learning Specialist**, or **Customer Education Writer**. These read as natural next steps from customer success or support — the exact profile most likely to apply and succeed.
+
+---
+
+## The Numbers
+
+| Full-Time Salary | Annual Cost (3 days / 0.6 FTE) |
+|-----------------|-------------------------------|
+| £26,000 | £15,600 |
+| £28,000 | £16,800 |
+| £30,000 | £18,000 |
+
+The midpoint — £28,000 FTE / £16,800 pro-rata — is a realistic and respectable offer for the profile described below.
+
+---
+
+## Is This Hireable?
+
+**Yes — at this salary band, you are hiring a transitioning candidate, not an established course producer.**
+
+Forest's research confirms that dedicated Learning Specialist and L&D Specialist roles in the UK command £33,758–£35,931/year FTE on average (Indeed, Jan–Feb 2026). Candidates already operating at that level will not apply at £26k–£30k.
+
+What £26k–£30k FTE does attract is someone currently in **customer success or customer support** (1–2 years experience) who:
+
+- Has written Help Centre articles, onboarding guides, or internal how-to content as part of their day-to-day work
+- Can explain software features clearly to non-technical users
+- Is actively looking to move into a content, training, or education-focused role
+- Will not arrive knowing Synthesia or Articulate — but will learn quickly
+
+This is actually a stronger starting point for this role than a traditional L&D hire. A CS-background candidate brings platform literacy and customer-facing communication instincts. The production tools can be taught; the customer empathy is harder to find.
+
+---
+
+## JD Shape
+
+Lead with content and communication, not production tooling:
+
+- Writing clear, accessible content that helps software users understand and adopt new features
+- Background in customer success, support, technical writing, or similar
+- Comfort picking up new tools quickly (Synthesia, Articulate training provided)
+- Part-time, 3 days per week, remote/hybrid
+
+Avoid leading with "LMS management" or "course production" — this language filters out the right candidates.
+
+---
+
+## On the Part-Time Model
+
+Three days per week is genuinely attractive to returning professionals, parents, or career-changers who want to transition without going all-in. It broadens the candidate pool and reduces risk on both sides.
+
+The throughput risk is real: three days is tight when the role involves research, scripting, production review, and Help Centre maintenance simultaneously. A clear 30/60/90 scope will prevent the hire from being spread too thin too early.
+
+---
+
+## Recommendation
+
+**Alternative D: Part-time UK hire from Q3, £28,000 FTE pro-rata, 3 days per week, ~£16,800/year.**
+
+This sits between full-time UK floor (Alt A: ~£19,780) and India continuation at correct rate (Alt C: ~£9,542), and opens the most realistic candidate pool for what the role actually needs at this stage. If the hire performs well, the path to full-time is straightforward.
+
+---
+
+## Market Data Sources
+
+- Indeed UK — Learning Specialist salary (137 salaries, updated January 2026)
+- Indeed UK — L&D Specialist salary (413 salaries, updated February 2026)
+- Glassdoor UK — Junior Customer Success Manager salary, London (updated March 2026)
+`;
+
+INBOX_FILES["biz-case-vd-ptuk-q3"] = `# Alternative D — Part-Time UK Hire from Q3
+
+**Prepared by:** Cedar — Business Case Writer
+**Date:** 2026-04-22
+**Scenario:** Pause the India arrangement, hire a part-time (3-day week, 0.6 FTE) UK-based Customer Education Specialist from Q3 at £28,000 FTE pro-rata.
+
+---
+
+## Summary
+
+This option introduces a part-time UK hire from Q3, drawing on the £26k–£30k FTE salary band that attracts transitioning customer success and support professionals. It is a cost-effective bridge between India continuation (Alt C) and full-time UK hire (Alt A/B), with a built-in path to full-time if the hire performs well.
+
+---
+
+## Cost Breakdown
+
+| Item | Monthly | Period | Total |
+|------|---------|--------|-------|
+| India hire | £790 | May–Jun (2 months) | £1,580 |
+| Claude Max | £100 | May–Jun (2 months) | £200 |
+| Articulate 360 | TBC | May–Jun (2 months) | TBC |
+| Omniplex (1 licence, interim) | TBC | May–Jun | TBC |
+| UK hire (part-time, 3 days) | ~£1,400 | Jul–Dec (6 months) | ~£8,400 |
+| Articulate 360 | TBC | Jul–Dec (6 months) | TBC |
+| Omniplex (2 licences, post-hire) | TBC | Jul–Dec | TBC |
+
+*£1,400/month = £28,000 FTE × 0.6 ÷ 12.*
+*Claude Max dropped from July — hire is in post.*
+
+**Estimated full-year total (excl. TBC lines): ~£10,180**
+
+---
+
+## Salary Range Breakdown
+
+| FTE Salary | Monthly (3 days) | Annual (3 days) | Full-year total (excl. TBC) |
+|-----------|-----------------|-----------------|----------------------------|
+| £26,000 | ~£1,300 | ~£7,800 | ~£9,580 |
+| £28,000 | ~£1,400 | ~£8,400 | ~£10,180 |
+| £30,000 | ~£1,500 | ~£9,000 | ~£10,780 |
+
+---
+
+## Comparison Across Options
+
+| Option | Annual cost (excl. TBC) | Notes |
+|--------|------------------------|-------|
+| Alt C — India (correct rate) | ~£6,905 | Remote, timezone risk, no UK team |
+| Alt D — Part-time UK Q3 | ~£10,180 | UK-based, transitioning profile, path to FT |
+| Alt A — Full-time UK Q3 (floor) | ~£19,780 | Experienced producer, full throughput |
+| Alt B — Full-time UK Q3 (Ivy range) | ~£22,030 | Broader candidate pool |
+
+---
+
+## Considerations
+
+- Candidate profile: CS or support professional (1–2 years) transitioning into content/education. Strong customer empathy, learns tools on the job.
+- Part-time is attractive to returners, career-changers, and parents — broadens the candidate pool.
+- Throughput will be lower than full-time; scope the first 6 months accordingly.
+- Path to full-time is straightforward if the hire performs well.
+- Same Q3 recruitment timeline as Alt A/B — role should be posted this week for a July start.
+- Claude Max dropped once hire is active.
+- 1 Omniplex licence during interim; 2 licences once hire is in post.
+`;
+
 function openInboxFile(key) {
   var content = INBOX_FILES[key];
   if (!content) { content = 'Content not found.'; }
@@ -3751,7 +3905,9 @@ function openInboxFile(key) {
     'biz-case-va-ftuk-q3': { num: 'Cedar — Business Case', title: 'Alternative A — Full-time UK hire from Q3' },
     'biz-case-vb-ftuk-q3': { num: 'Cedar — Business Case', title: 'Alternative B — Full-time UK hire from Q3 (higher salary)' },
     'biz-case-vc-india': { num: 'Cedar — Business Case', title: 'Alternative C — Continue India hire' },
-    'ivy-biz-case-advisory': { num: 'Ivy — People', title: 'People Advisory — Enablement Resource Business Case' }
+    'ivy-biz-case-advisory': { num: 'Ivy — People', title: 'People Advisory — Enablement Resource Business Case' },
+    'ivy-parttime-advisory': { num: 'Ivy — People', title: 'People Advisory — Part-Time UK Hire Viability' },
+    'biz-case-vd-ptuk-q3': { num: 'Cedar — Business Case', title: 'Alternative D — Part-time UK hire from Q3' }
   };
   var lbl = labels[key] || { num: 'Owners Inbox', title: key };
   document.getElementById('panelNum').textContent = lbl.num;

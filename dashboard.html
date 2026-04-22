@@ -212,12 +212,12 @@
     <div id="view-inbox" class="view active">
       <div class="page-heading"><h1>Owners Inbox</h1><p>Finished content ready for review</p></div>
       <div class="stats-row">
-        <div class="stat-card"><div class="stat-value" style="color:var(--grey)">19</div><div class="stat-label">Total Files</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--grey)">20</div><div class="stat-label">Total Files</div></div>
         <div class="stat-card"><div class="stat-value" style="color:#2e7d32">2</div><div class="stat-label">Planning</div></div>
         <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">5</div><div class="stat-label">Research</div></div>
         <div class="stat-card"><div class="stat-value" style="color:var(--orange)">3</div><div class="stat-label">Reviews</div></div>
         <div class="stat-card"><div class="stat-value" style="color:#7b1fa2">3</div><div class="stat-label">People</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:#1b5e20">4</div><div class="stat-label">Business Cases</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:#1b5e20">5</div><div class="stat-label">Business Cases</div></div>
       </div>
 
       <!-- Planning -->
@@ -346,6 +346,11 @@
             <div class="file-card-title">Alternative C — Continue India hire</div>
             <div class="file-card-desc">Resume India recruitment with improved tooling — Articulate switch plus Claude Max. Lowest headcount cost; known profile risks documented.</div>
             <div class="file-card-footer"><span class="file-type" style="background:#e8f5e9;color:#1b5e20">Business Case</span><span class="badge" style="background:#e3f2fd;color:#1565c0">Draft</span></div>
+          </div>
+          <div class="file-card clickable" onclick="openInboxFile('ivy-biz-case-advisory')">
+            <div class="file-card-title">Ivy — People Advisory</div>
+            <div class="file-card-desc">Hiring and people-process considerations across all four options: India rate, UK salary range, Q3 timeline risk, and 30/60/90 recommendation.</div>
+            <div class="file-card-footer"><span class="file-type" style="background:#fce4ec;color:#880e4f">People</span><span class="badge" style="background:#e8f5e9;color:#1b5e20">Approved</span></div>
           </div>
         </div>
       </div>
@@ -3470,6 +3475,54 @@ The profile we're hiring for:
 - Familiarity with tools like Synthesia, Intercom, Loom, Jira, or Confluence is a plus — but not a requirement. We'll teach you what you need.
 `;
 
+INBOX_FILES["ivy-biz-case-advisory"] = `# Ivy — People Advisory: Enablement Resource Business Case
+
+**Prepared by:** Ivy — Head of People
+**Date:** 2026-04-22
+**Reviewed by:** Flint — Approved
+**Purpose:** Hiring and people-process considerations to sit alongside Cedar's four business case options
+
+---
+
+> **Action required — Q3 timeline:** A Q3 start (Alternative A) requires the role to be posted this week. From 22 April, a realistic UK hiring timeline puts first day closer to mid-July than 1 July. If this option is being considered seriously, recruitment needs to begin now.
+
+---
+
+## On the India option (Alternative C)
+
+The current arrangement at £790/month was never calibrated for this role. A Standard Tech Writer produces manuals and Help Centre content to a brief. What is being described here — someone who builds courses independently, uses the Help Centre as a research reference, scripts against feature documentation, and owns the production cycle end to end — is a different hire. The Gemini-advised band (₹19L–₹24L; £18,000–£23,000/year) is the right target.
+
+Candidates at this level in India will be comparing Commusoft against product companies and SaaS businesses with structured L&D teams. The offer needs to be competitive on more than salary: clear scope, genuine ownership of the work, and a line into a real team matter at this level.
+
+---
+
+## On the UK hire (Alternatives A and B)
+
+The ~£3,000/month figure used in both alternatives translates to £36,000/year. For a mid-level Enablement or Customer Education Specialist in the UK with LMS and video scripting experience, this sits at the lower end of the market. It is achievable for a candidate who is earlier in their career or transitioning from adjacent work (content writing, training coordination) — but it may not attract someone with independent course production experience already in place.
+
+**Recommendation:** Treat £3,000/month as the minimum and be prepared to go to £3,250–£3,500 for the right person. Both Alt A and Alt B should reflect a salary range rather than a fixed figure.
+
+---
+
+## On the Q3 timeline (Alternative A)
+
+From 22 April to 1 July is approximately 10 weeks. A typical UK hiring timeline for a specialist role runs 6–8 weeks from job live to offer accepted, plus notice period. Standard UK notice for a mid-level hire is 4 weeks — which puts a realistic start date at mid-July at best.
+
+**Recommendation:** Adjust Alt A language to "from July" rather than "from 1 July" and update the cost model accordingly.
+
+---
+
+## On the Q4 timeline (Alternative B)
+
+More comfortable from a recruitment perspective. A job posted in late May or June allows a thorough process with no urgency pressure. A 1 October start is very achievable with a standard timeline.
+
+---
+
+## On role definition across all options
+
+The business case documents the cost of the hire but does not yet define what good looks like in the first three months. Whichever option is chosen, I recommend building a brief 30/60/90 framework alongside the hiring decision — both to use in the interview process and to set the new hire up correctly from day one. I can prepare this once the direction is confirmed.
+`;
+
 INBOX_FILES["biz-case-draft"] = `# Enablement Team — Resource & Tooling Proposal (Draft)
 
 **Prepared by:** Cedar — Business Case Writer
@@ -3517,7 +3570,7 @@ A 3-month pause is planned. No VA or production costs during this period.
 - Omniplex pricing: awaiting 2-licence quote. 3-licence discounted offer at £4,392 exc VAT (licences only) is a marginal saving of £171 versus list price. 2-licence option under review.
 - Articulate 360 pricing to be confirmed.
 - UK hire salary estimate subject to market and final offer.
-- **India market rate update:** A recruiter has confirmed this is a cross-functional role (LMS, scripting, video) that commands a premium. The correct India band is ₹15L–₹21L (£14,300–£20,000/year; £1,192–£1,667/month). The current arrangement at £790/month is below the floor of the required profile. Alternative C has been revised to reflect this. See Alternative C for full comparison.
+- **India market rate update:** Recruiter confirmed cross-functional premium role. Gemini market analysis sets the correct band at ₹19L–₹24L (£18,000–£23,000/year; £1,500–£1,917/month) for an Enablement Specialist who can independently build courses. Current arrangement at £790/month is well below this floor. See Alternative C for revised cost breakdown and comparison.
 `;
 
 INBOX_FILES["biz-case-va-ftuk-q3"] = `# Alternative A — Full-time UK Hire from Q3
@@ -3613,38 +3666,39 @@ This option continues with an India-based hire through year-end. However, a recr
 
 ## India Market Rate Context
 
-A recruiter has advised that this is a cross-functional role commanding a premium. The relevant India salary bands are:
+Two sources have been used to establish the correct salary band for this role. A recruiter confirmed it is a cross-functional profile commanding a premium. A Gemini market analysis refined the Enablement-specific band.
 
-| Profile | Annual (INR) | Annual (GBP) | Monthly (GBP) |
-|---------|-------------|--------------|----------------|
-| Academy Specialist (LMS, Scripting, Video) | ₹15L–₹21L | £14,300–£20,000 | £1,192–£1,667 |
-| Standard Tech Writer (Manuals/Help Centre only) | ₹10L–₹14L | £9,500–£13,300 | £792–£1,108 |
+| Profile | Annual (INR) | Annual (GBP) | Monthly (GBP) | Source |
+|---------|-------------|--------------|----------------|--------|
+| Enablement Specialist (high-quality, independent) | ₹19L–₹24L | £18,000–£23,000 | £1,500–£1,917 | Gemini market analysis |
+| Academy Specialist (LMS, Scripting, Video) | ₹15L–₹21L | £14,300–£20,000 | £1,192–£1,667 | Recruiter advice |
+| Standard Tech Writer (Manuals/Help Centre only) | ₹10L–₹14L | £9,500–£13,300 | £792–£1,108 | Recruiter advice |
 
-The current arrangement (£790/month) sits at the floor of the Standard Tech Writer band — not the Academy Specialist band required. To attract and retain the right candidate in India, the rate would need to increase to approximately **£1,192–£1,667/month**.
+The current arrangement (£790/month) sits at the floor of the Standard Tech Writer band. To attract a high-quality candidate who can independently build courses using the Help Centre as a reference point, the correct band is **₹19L–₹24L (£18,000–£23,000/year; £1,500–£1,917/month)**.
 
 ---
 
-## Cost Breakdown (at correct market rate — mid-point ~£1,430/month)
+## Cost Breakdown (at Gemini-advised rate — mid-point ~£1,708/month)
 
 | Item | Monthly | Period | Total |
 |------|---------|--------|-------|
-| India hire (correct profile) | ~£1,430 | May–Jun (2 months) | ~£2,860 |
+| India hire (Enablement Specialist) | ~£1,708 | May–Jun (2 months) | ~£3,417 |
 | Claude Max | £100 | May–Jun (2 months) | £200 |
 | Articulate 360 | TBC | May–Jun (2 months) | TBC |
 | Omniplex (licences) | TBC | Full year | TBC |
 | Pause | — | Jul–Sep (3 months) | £0 |
-| India hire (correct profile) | ~£1,430 | Oct–Dec (3 months) | ~£4,290 |
+| India hire (Enablement Specialist) | ~£1,708 | Oct–Dec (3 months) | ~£5,125 |
 | Claude Max | £100 | Oct–Dec (3 months) | £300 |
 | Articulate 360 | TBC | Oct–Dec (3 months) | TBC |
 
-**Estimated full-year total at correct rate (excl. TBC lines): ~£12,488**
-**Range: ~£10,308 (low) – ~£14,668 (high)**
+**Estimated full-year total at Gemini-advised rate (excl. TBC lines): ~£9,542**
+**Range: ~£8,500 (low, ₹19L) – ~£10,583 (high, ₹24L)**
 
 ---
 
 ## Revised Comparison vs. UK Hire (Alt B — Q4 start)
 
-At correct India market rate, the saving versus Alternative B (full-time UK from Q4, ~£15,888 excl. TBC) is approximately **£3,400**. This is a meaningful but not decisive gap — and it does not account for the additional management overhead, timezone constraints, or the profile risk of a remote cross-functional hire.
+At the Gemini-advised rate, the saving versus Alternative B (full-time UK from Q4, ~£15,888 excl. TBC) is approximately **£6,346**. This is a substantive gap — but it does not account for additional management overhead, limited timezone overlap, or the inherent risk of a remote cross-functional hire with no UK-based team context.
 
 ---
 
@@ -3678,7 +3732,8 @@ function openInboxFile(key) {
     'biz-case-draft': { num: 'Cedar — Business Case', title: 'Enablement Team — Resource & Tooling Proposal (Draft)' },
     'biz-case-va-ftuk-q3': { num: 'Cedar — Business Case', title: 'Alternative A — Full-time UK hire from Q3' },
     'biz-case-vb-ftuk-q4': { num: 'Cedar — Business Case', title: 'Alternative B — Full-time UK hire from Q4' },
-    'biz-case-vc-india': { num: 'Cedar — Business Case', title: 'Alternative C — Continue India hire' }
+    'biz-case-vc-india': { num: 'Cedar — Business Case', title: 'Alternative C — Continue India hire' },
+    'ivy-biz-case-advisory': { num: 'Ivy — People', title: 'People Advisory — Enablement Resource Business Case' }
   };
   var lbl = labels[key] || { num: 'Owners Inbox', title: key };
   document.getElementById('panelNum').textContent = lbl.num;

@@ -802,6 +802,17 @@ function renderPanel(num) {
   // Scenario
   html += `<div class="sc-meta-block"><strong>Scenario</strong><br><span style="font-size:13px">${esc(c.scenario)}</span></div>`;
 
+  // Production Setup
+  if (c.productionSetup) {
+    html += '<div class="sc-meta-block"><strong>Production setup</strong>';
+    html += '<table style="font-size:13px;margin-top:6px;width:100%;border-collapse:collapse">';
+    html += `<tr><td style="padding:3px 12px 3px 0;font-weight:600;white-space:nowrap;vertical-align:top">Logged-in user</td><td style="line-height:1.5">${esc(c.productionSetup.loggedInUser)}</td></tr>`;
+    html += `<tr><td style="padding:3px 12px 3px 0;font-weight:600;white-space:nowrap;vertical-align:top">Customer record</td><td style="line-height:1.5">${esc(c.productionSetup.customerRecord)}</td></tr>`;
+    html += `<tr><td style="padding:3px 12px 3px 0;font-weight:600;white-space:nowrap;vertical-align:top">Existing data</td><td style="line-height:1.5">${esc(c.productionSetup.existingData)}</td></tr>`;
+    html += `<tr><td style="padding:3px 12px 3px 0;font-weight:600;white-space:nowrap;vertical-align:top">Assets required</td><td style="line-height:1.5">${esc(c.productionSetup.assetsRequired)}</td></tr>`;
+    html += '</table></div>';
+  }
+
   html += '<hr class="sc-hr">';
 
   // Scenes
@@ -833,6 +844,12 @@ function renderPanel(num) {
       html += `</div>`;
     }
   });
+
+  // Open items
+  if (c.openItems) {
+    const isClean = c.openItems.toLowerCase().startsWith('none');
+    html += `<div class="sc-meta-block" style="border-left:3px solid ${isClean ? '#22c55e' : '#f59e0b'};padding-left:12px"><strong>Open items</strong><br><span style="font-size:13px">${esc(c.openItems)}</span></div>`;
+  }
 
   return html;
 }

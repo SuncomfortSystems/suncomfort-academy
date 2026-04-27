@@ -28,7 +28,11 @@
 
   .layout { display: flex; min-height: calc(100vh - 56px); }
 
-  .sidebar { width: 220px; background: var(--surface); border-right: 1px solid var(--border); padding: 20px 0; flex-shrink: 0; position: sticky; top: 56px; height: calc(100vh - 56px); overflow-y: auto; }
+  .sidebar { width: 220px; background: var(--surface); border-right: 1px solid var(--border); padding: 20px 0; flex-shrink: 0; position: sticky; top: 56px; height: calc(100vh - 56px); overflow-y: auto; overflow-x: hidden; transition: width 0.25s ease; }
+  .sidebar.collapsed { width: 36px; }
+  .sidebar-toggle { display: flex; justify-content: center; padding: 6px 0 10px; border-bottom: 1px solid var(--border); margin-bottom: 8px; }
+  .sidebar-toggle-btn { background: none; border: 1px solid var(--border); border-radius: 4px; width: 22px; height: 22px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 10px; color: var(--text-muted); flex-shrink: 0; line-height: 1; }
+  .sidebar-toggle-btn:hover { background: var(--bg); color: var(--text); }
   .nav-section { padding: 0 16px 8px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text-muted); margin-top: 8px; }
   .nav-item { display: flex; align-items: center; gap: 10px; padding: 9px 16px; font-size: 14px; cursor: pointer; color: var(--text); transition: background 0.15s; border-left: 3px solid transparent; }
   .nav-item:hover { background: var(--bg); }
@@ -197,6 +201,9 @@
 
 <div class="layout">
   <nav class="sidebar">
+    <div class="sidebar-toggle">
+      <button class="sidebar-toggle-btn" id="sidebarToggle" onclick="toggleSidebar()" title="Collapse sidebar">◀</button>
+    </div>
     <div class="nav-section">Views</div>
     <div class="nav-item" id="nav-inbox" onclick="showView('inbox', this)" style="display:none"><div class="nav-dot" style="background:#fa6932"></div>Owners Inbox</div>
     <div class="nav-item active" onclick="showView('academy', this)"><div class="nav-dot" style="background:#2d91c5"></div>Academy</div>
@@ -5035,6 +5042,15 @@ function toggleFolder(header) {
 }
 
 document.addEventListener('DOMContentLoaded', buildSettingsUI);
+
+function toggleSidebar() {
+  var sidebar = document.querySelector('.sidebar');
+  var btn = document.getElementById('sidebarToggle');
+  sidebar.classList.toggle('collapsed');
+  var collapsed = sidebar.classList.contains('collapsed');
+  btn.textContent = collapsed ? '▶' : '◀';
+  btn.title = collapsed ? 'Expand sidebar' : 'Collapse sidebar';
+}
 
 // Inbox only shown when ?admin=true is present in the URL
 (function() {

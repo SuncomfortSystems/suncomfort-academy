@@ -20,7 +20,8 @@
 
   /* Nav */
   .site-nav { background: var(--primary); padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 64px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
-  .site-logo { color: var(--white); font-size: 18px; font-weight: 700; letter-spacing: -0.3px; text-decoration: none; }
+  .site-logo { display: flex; align-items: center; text-decoration: none; }
+  .site-logo img { height: 42px; width: auto; }
   .site-logo span { color: var(--orange); }
   .nav-links { display: flex; gap: 4px; align-items: center; }
   .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; padding: 8px 14px; border-radius: 6px; font-size: 14px; font-weight: 500; transition: color 0.15s, background 0.15s; }
@@ -125,7 +126,7 @@
 <body>
 
 <nav class="site-nav">
-  <a href="#" class="site-logo">Sun<span>Comfort</span> Systems</a>
+  <a href="#" class="site-logo"><img src="suncomfort-logo.png" alt="SunComfort Systems"></a>
   <div class="nav-links">
     <a href="#services">Services</a>
     <a href="#about">About</a>

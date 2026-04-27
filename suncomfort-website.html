@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SunComfort Systems — Renewable Energy Specialists</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #2c3e50; line-height: 1.6; }
+  :root {
+    --primary: #465564;
+    --orange: #fa6932;
+    --blue: #2d91c5;
+    --text: #2c3e50;
+    --text-muted: #6b7a8d;
+    --bg: #f4f6f8;
+    --white: #ffffff;
+    --border: #dde2e7;
+  }
+
+  /* Nav */
+  .site-nav { background: var(--primary); padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 64px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+  .site-logo { color: var(--white); font-size: 18px; font-weight: 700; letter-spacing: -0.3px; text-decoration: none; }
+  .site-logo span { color: var(--orange); }
+  .nav-links { display: flex; gap: 4px; align-items: center; }
+  .nav-links a { color: rgba(255,255,255,0.8); text-decoration: none; padding: 8px 14px; border-radius: 6px; font-size: 14px; font-weight: 500; transition: color 0.15s, background 0.15s; }
+  .nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.1); }
+  .nav-cta { background: var(--orange) !important; color: var(--white) !important; }
+  .nav-cta:hover { background: #e05a28 !important; }
+
+  /* Hero */
+  .hero { background: linear-gradient(135deg, #465564 0%, #2c3748 55%, #1a2530 100%); color: var(--white); padding: 80px 40px; text-align: center; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 70% 30%, rgba(250,105,50,0.12) 0%, transparent 50%); pointer-events: none; }
+  .hero-badge { display: inline-block; background: rgba(250,105,50,0.2); color: var(--orange); border: 1px solid rgba(250,105,50,0.4); border-radius: 20px; padding: 4px 16px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.9px; margin-bottom: 22px; }
+  .hero h1 { font-size: 44px; font-weight: 800; line-height: 1.15; margin-bottom: 18px; position: relative; }
+  .hero h1 em { color: var(--orange); font-style: normal; }
+  .hero p { font-size: 18px; color: rgba(255,255,255,0.72); max-width: 540px; margin: 0 auto 34px; position: relative; line-height: 1.65; }
+  .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; position: relative; }
+  .btn-primary { background: var(--orange); color: var(--white); padding: 13px 28px; border-radius: 8px; font-size: 15px; font-weight: 600; text-decoration: none; display: inline-block; transition: background 0.15s; }
+  .btn-primary:hover { background: #e05a28; }
+  .btn-secondary { background: rgba(255,255,255,0.1); color: var(--white); padding: 13px 28px; border-radius: 8px; font-size: 15px; font-weight: 600; text-decoration: none; display: inline-block; border: 1px solid rgba(255,255,255,0.25); transition: background 0.15s; }
+  .btn-secondary:hover { background: rgba(255,255,255,0.18); }
+
+  /* Stats bar */
+  .stats-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 22px 40px; display: flex; justify-content: center; gap: 56px; flex-wrap: wrap; }
+  .stat-item { text-align: center; }
+  .stat-num { font-size: 26px; font-weight: 800; color: var(--primary); line-height: 1.1; }
+  .stat-lbl { font-size: 11px; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
+
+  /* Sections */
+  .section { padding: 68px 40px; max-width: 1100px; margin: 0 auto; }
+  .section-bg { background: var(--bg); }
+  .section-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--orange); margin-bottom: 8px; }
+  .section-title { font-size: 30px; font-weight: 800; color: var(--primary); margin-bottom: 12px; line-height: 1.2; }
+  .section-sub { font-size: 16px; color: var(--text-muted); max-width: 520px; line-height: 1.65; margin-bottom: 40px; }
+
+  /* Services grid */
+  .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 20px; }
+  .service-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 28px 24px; transition: box-shadow 0.2s, transform 0.2s; }
+  .service-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.08); transform: translateY(-2px); }
+  .service-icon { width: 48px; height: 48px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 24px; }
+  .service-card h3 { font-size: 17px; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
+  .service-card p { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
+  .service-link { display: inline-block; margin-top: 14px; font-size: 13px; font-weight: 600; color: var(--orange); text-decoration: none; }
+  .service-link:hover { text-decoration: underline; }
+
+  /* About */
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .about-text h2 { font-size: 30px; font-weight: 800; color: var(--primary); margin-bottom: 16px; line-height: 1.2; }
+  .about-text p { font-size: 15px; color: var(--text-muted); line-height: 1.75; margin-bottom: 14px; }
+  .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 28px; }
+  .about-stat { background: var(--bg); border-radius: 10px; padding: 20px; text-align: center; }
+  .about-stat .num { font-size: 28px; font-weight: 800; color: var(--orange); line-height: 1.1; }
+  .about-stat .lbl { font-size: 11px; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; margin-top: 4px; }
+  .accred-panel { background: linear-gradient(135deg, #465564, #2d91c5); border-radius: 16px; padding: 36px 32px; color: var(--white); }
+  .accred-panel h3 { font-size: 19px; font-weight: 700; margin-bottom: 20px; }
+  .accred-list { list-style: none; }
+  .accred-list li { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.14); font-size: 14px; color: rgba(255,255,255,0.9); }
+  .accred-list li:last-child { border-bottom: none; }
+  .accred-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--orange); flex-shrink: 0; }
+
+  /* Why us */
+  .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
+  .why-card { text-align: center; padding: 28px 18px; }
+  .why-icon { font-size: 38px; margin-bottom: 14px; }
+  .why-card h3 { font-size: 16px; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
+  .why-card p { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
+
+  /* Contact */
+  .contact-wrap { background: var(--primary); }
+  .contact-inner { padding: 68px 40px; max-width: 1100px; margin: 0 auto; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+  .contact-info h2 { font-size: 30px; font-weight: 800; color: var(--white); margin-bottom: 12px; line-height: 1.2; }
+  .contact-info > p { font-size: 15px; color: rgba(255,255,255,0.68); margin-bottom: 30px; line-height: 1.65; }
+  .contact-detail { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 20px; }
+  .c-icon { width: 42px; height: 42px; background: rgba(250,105,50,0.2); border-radius: 9px; display: flex; align-items: center; justify-content: center; font-size: 18px; flex-shrink: 0; }
+  .c-text strong { display: block; font-size: 13px; font-weight: 600; color: var(--white); margin-bottom: 2px; }
+  .c-text span { font-size: 14px; color: rgba(255,255,255,0.62); }
+  .contact-form { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 32px; }
+  .form-row { margin-bottom: 16px; }
+  .form-label { display: block; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; color: rgba(255,255,255,0.7); margin-bottom: 6px; }
+  .form-input { width: 100%; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 7px; padding: 10px 14px; font-size: 14px; color: var(--white); outline: none; font-family: inherit; transition: border-color 0.15s, background 0.15s; }
+  .form-input:focus { border-color: var(--orange); background: rgba(255,255,255,0.12); }
+  .form-input::placeholder { color: rgba(255,255,255,0.32); }
+  textarea.form-input { height: 96px; resize: vertical; }
+  select.form-input option { background: #2c3748; color: var(--white); }
+
+  /* Footer */
+  .footer { background: #1a2530; color: rgba(255,255,255,0.45); text-align: center; padding: 24px 40px; font-size: 13px; line-height: 1.7; }
+  .footer strong { color: rgba(255,255,255,0.75); }
+  .footer a { color: rgba(255,255,255,0.45); text-decoration: none; }
+  .footer a:hover { color: rgba(255,255,255,0.7); }
+
+  @media (max-width: 720px) {
+    .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+    .hero h1 { font-size: 30px; }
+    .hero { padding: 56px 24px; }
+    .stats-bar { gap: 28px; padding: 20px 24px; }
+    .section { padding: 48px 24px; }
+    .contact-inner { padding: 48px 24px; }
+    .site-nav { padding: 0 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="#" class="site-logo">Sun<span>Comfort</span> Systems</a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#contact" class="nav-cta">Get a Quote</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-badge">London's Renewable Energy Specialists</div>
+  <h1>Clean energy for your<br><em>home and business</em></h1>
+  <p>Heat pumps, solar, battery storage, and EV charging — installed and maintained by a team you can trust.</p>
+  <div class="hero-actions">
+    <a href="#contact" class="btn-primary">Get a free survey</a>
+    <a href="#services" class="btn-secondary">Our services</a>
+  </div>
+</section>
+
+<div class="stats-bar">
+  <div class="stat-item"><div class="stat-num">18+</div><div class="stat-lbl">Years serving London</div></div>
+  <div class="stat-item"><div class="stat-num">1,200+</div><div class="stat-lbl">Installations completed</div></div>
+  <div class="stat-item"><div class="stat-num">35</div><div class="stat-lbl">Team members</div></div>
+  <div class="stat-item"><div class="stat-num">18</div><div class="stat-lbl">Service vehicles</div></div>
+  <div class="stat-item"><div class="stat-num">50mi</div><div class="stat-lbl">Service radius</div></div>
+</div>
+
+<div class="section-bg">
+  <div class="section" id="services">
+    <div class="section-label">What we do</div>
+    <div class="section-title">Our services</div>
+    <div class="section-sub">From first installation to ongoing maintenance, we cover every aspect of your renewable energy system.</div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon" style="background:#fff3ee">🌡️</div>
+        <h3>Heat Pumps</h3>
+        <p>Air source and ground source heat pump installation, servicing, and repair. MCS accredited. We handle everything from system design to commissioning and handover.</p>
+        <a href="#contact" class="service-link">Request a survey →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" style="background:#e3f2fd">☀️</div>
+        <h3>Solar PV</h3>
+        <p>Residential and light commercial solar panel installation, including battery-ready inverters, system monitoring, and panel condition assessments.</p>
+        <a href="#contact" class="service-link">Get a quote →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" style="background:#e8f5e9">🔋</div>
+        <h3>Battery Storage</h3>
+        <p>GivEnergy and compatible battery storage systems — maximise what you generate, reduce grid dependency, and protect against outages.</p>
+        <a href="#contact" class="service-link">Learn more →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" style="background:#f3e5f5">⚡</div>
+        <h3>EV Charging</h3>
+        <p>Home and business EV charger supply and installation, including smart chargers, load balancing, and multi-vehicle setups.</p>
+        <a href="#contact" class="service-link">Get a quote →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" style="background:#fce4ec">🔌</div>
+        <h3>Generators</h3>
+        <p>Standby generator installation, commissioning, load testing, and emergency callout for commercial and critical-use applications.</p>
+        <a href="#contact" class="service-link">Enquire now →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-icon" style="background:#e0f7fa">🔧</div>
+        <h3>Maintenance Contracts</h3>
+        <p>Planned preventative maintenance, annual services, and priority emergency response — keeping your systems running at peak efficiency year-round.</p>
+        <a href="#contact" class="service-link">View plans →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="about">
+  <div class="about-grid">
+    <div class="about-text">
+      <div class="section-label">About us</div>
+      <h2>South London's trusted renewable energy team</h2>
+      <p>SunComfort Systems was founded to make renewable energy accessible, reliable, and straightforward for homeowners and businesses across London and the South East.</p>
+      <p>Based in Elephant and Castle, our team of 35 includes heat pump specialists, solar engineers, electrical technicians, and a dedicated maintenance division — all operating from one base with 18 fully-equipped service vehicles.</p>
+      <div class="about-stats">
+        <div class="about-stat"><div class="num">35</div><div class="lbl">Team members</div></div>
+        <div class="about-stat"><div class="num">18</div><div class="lbl">Field vans</div></div>
+        <div class="about-stat"><div class="num">50mi</div><div class="lbl">Service radius</div></div>
+        <div class="about-stat"><div class="num">3</div><div class="lbl">Service divisions</div></div>
+      </div>
+    </div>
+    <div class="accred-panel">
+      <h3>Accreditations &amp; memberships</h3>
+      <ul class="accred-list">
+        <li><span class="accred-dot"></span>MCS Certified — Heat Pumps &amp; Solar PV</li>
+        <li><span class="accred-dot"></span>NICEIC Approved Contractor</li>
+        <li><span class="accred-dot"></span>HIES Consumer Code Member</li>
+        <li><span class="accred-dot"></span>Which? Trusted Trader</li>
+        <li><span class="accred-dot"></span>Mitsubishi Diamond Dealer</li>
+        <li><span class="accred-dot"></span>Vaillant Advanced Installer</li>
+        <li><span class="accred-dot"></span>GivEnergy Certified Installer</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="section-bg">
+  <div class="section">
+    <div style="text-align:center">
+      <div class="section-label">Why SunComfort</div>
+      <div class="section-title">Built on reliability</div>
+      <div class="section-sub" style="margin:0 auto 40px">Everything we do is designed to make renewable energy simpler, more reliable, and better value over time.</div>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">📋</div>
+        <h3>Full project management</h3>
+        <p>We handle surveys, design, installation, commissioning, and warranty — one team from start to finish, no hand-offs to subcontractors.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🕐</div>
+        <h3>Responsive service</h3>
+        <p>Priority response for maintenance contract customers. Emergency callout available for commercial clients with critical systems.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📱</div>
+        <h3>Customer portal</h3>
+        <p>Track your jobs, view invoices, request bookings, and manage your service history — online, 24 hours a day.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🌿</div>
+        <h3>Whole-system thinking</h3>
+        <p>Heat pump, solar, battery, and EV — we design systems that work together so you get the most from your investment.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="contact-wrap" id="contact">
+  <div class="contact-inner">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--orange);margin-bottom:10px">Get in touch</div>
+        <h2>Request a free survey</h2>
+        <p>Tell us about your property and what you're looking to achieve. We'll be in touch within one working day to arrange a no-obligation survey.</p>
+        <div class="contact-detail">
+          <div class="c-icon">📍</div>
+          <div class="c-text"><strong>Head Office</strong><span>Elephant and Castle, London, SE1</span></div>
+        </div>
+        <div class="contact-detail">
+          <div class="c-icon">📞</div>
+          <div class="c-text"><strong>Call us</strong><span>020 7946 0100</span></div>
+        </div>
+        <div class="contact-detail">
+          <div class="c-icon">✉️</div>
+          <div class="c-text"><strong>Email</strong><span>hello@suncomfortsystems.co.uk</span></div>
+        </div>
+        <div class="contact-detail">
+          <div class="c-icon">🕐</div>
+          <div class="c-text"><strong>Office hours</strong><span>Monday–Friday, 8:00am – 5:30pm</span></div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div class="form-row">
+          <label class="form-label">Your name</label>
+          <input type="text" class="form-input" placeholder="Margaret Thompson">
+        </div>
+        <div class="form-row">
+          <label class="form-label">Email address</label>
+          <input type="email" class="form-input" placeholder="your@email.co.uk">
+        </div>
+        <div class="form-row">
+          <label class="form-label">Phone number</label>
+          <input type="tel" class="form-input" placeholder="07700 000 000">
+        </div>
+        <div class="form-row">
+          <label class="form-label">I'm interested in</label>
+          <select class="form-input">
+            <option value="">Select a service...</option>
+            <option>Heat pump installation</option>
+            <option>Solar PV installation</option>
+            <option>Battery storage</option>
+            <option>EV charger installation</option>
+            <option>Generator installation</option>
+            <option>Maintenance contract</option>
+            <option>Repair / emergency callout</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label class="form-label">Tell us more</label>
+          <textarea class="form-input" placeholder="Property type, current setup, what you're hoping to achieve..."></textarea>
+        </div>
+        <button type="button" class="btn-primary" style="width:100%;font-size:15px;padding:13px 20px;border:none;cursor:pointer">Send enquiry</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <p><strong>SunComfort Systems Ltd</strong> &nbsp;·&nbsp; Elephant and Castle, London, SE1 &nbsp;·&nbsp; Registered in England &amp; Wales &nbsp;·&nbsp; MCS Certified &nbsp;·&nbsp; NICEIC Approved</p>
+  <p style="margin-top:6px">© 2025 SunComfort Systems Ltd. All rights reserved. &nbsp;·&nbsp; <a href="#">Privacy Policy</a> &nbsp;·&nbsp; <a href="#">Terms of Service</a></p>
+</footer>
+
+</body>
+</html>

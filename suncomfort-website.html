@@ -80,17 +80,17 @@
   .accred-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--orange); flex-shrink: 0; }
 
 
+
   /* Meet the team */
-  .team-group { margin-bottom: 40px; }
-  .team-group-title { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--text-muted); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
-  .team-grid-leadership { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin-bottom: 0; }
-  .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(185px, 1fr)); gap: 12px; }
-  .team-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 16px; display: flex; align-items: center; gap: 12px; }
-  .team-card.leadership { flex-direction: column; text-align: center; padding: 28px 20px; gap: 8px; }
-  .team-avatar { width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; color: white; flex-shrink: 0; letter-spacing: -0.5px; }
-  .team-card.leadership .team-avatar { width: 64px; height: 64px; font-size: 20px; }
-  .team-name { font-size: 14px; font-weight: 600; color: var(--text); line-height: 1.3; }
-  .team-role { font-size: 12px; color: var(--text-muted); margin-top: 2px; line-height: 1.4; }
+  .team-grid-main { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 48px; }
+  .team-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 28px 24px; text-align: center; }
+  .team-avatar { width: 72px; height: 72px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 700; color: white; margin: 0 auto 16px; }
+  .team-name { font-size: 17px; font-weight: 700; color: var(--primary); margin-bottom: 4px; }
+  .team-role { font-size: 13px; color: var(--orange); font-weight: 600; margin-bottom: 12px; }
+  .team-bio { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
+  .team-footnote { background: var(--bg); border-radius: 10px; padding: 24px 28px; text-align: center; }
+  .team-footnote p { font-size: 15px; color: var(--text-muted); line-height: 1.65; }
+  .team-footnote strong { color: var(--primary); }
 
   /* Why us */
   .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; }
@@ -277,59 +277,49 @@
   <div class="section" id="team">
     <div class="section-label">Our people</div>
     <div class="section-title">Meet the team</div>
-    <div class="section-sub">35 specialists across heat pumps, solar, power generation, and maintenance — all based in Elephant and Castle.</div>
+    <div class="section-sub">The people who lead the work and keep our customers' systems running.</div>
 
-    <div class="team-group">
-      <div class="team-group-title">Leadership</div>
-      <div class="team-grid-leadership">
-        <div class="team-card leadership"><div class="team-avatar" style="background:var(--orange)">SM</div><div><div class="team-name">Sarah Mitchell</div><div class="team-role">Managing Director</div></div></div>
-        <div class="team-card leadership"><div class="team-avatar" style="background:var(--orange)">LC</div><div><div class="team-name">Logan Chance</div><div class="team-role">Operations Manager</div></div></div>
-        <div class="team-card leadership"><div class="team-avatar" style="background:var(--orange)">MR</div><div><div class="team-name">Maria Rodriguez</div><div class="team-role">Solar Division Lead</div></div></div>
+    <div class="team-grid-main">
+      <div class="team-card">
+        <div class="team-avatar" style="background:var(--orange)">SM</div>
+        <div class="team-name">Sarah Mitchell</div>
+        <div class="team-role">Managing Director</div>
+        <div class="team-bio">Sarah founded SunComfort with a focus on doing renewable energy properly — high quality installs, honest advice, and a team people actually want to deal with.</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar" style="background:var(--orange)">LC</div>
+        <div class="team-name">Logan Chance</div>
+        <div class="team-role">Operations Manager</div>
+        <div class="team-bio">Logan keeps everything moving — from scheduling and logistics to making sure every job lands on time and every engineer has what they need.</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar" style="background:var(--orange)">MR</div>
+        <div class="team-name">Maria Rodriguez</div>
+        <div class="team-role">Solar Division Lead</div>
+        <div class="team-bio">Maria leads our solar and electrical team, overseeing installations from survey to commissioning and driving the technical standards across the division.</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar" style="background:var(--blue)">SC</div>
+        <div class="team-name">Stephen Carter</div>
+        <div class="team-role">Sales Director</div>
+        <div class="team-bio">Stephen works with homeowners and businesses to find the right system for their needs — no pressure, no upsell, just straightforward advice and accurate quotes.</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar" style="background:var(--primary)">JH</div>
+        <div class="team-name">Jake Harris</div>
+        <div class="team-role">Senior Heat Pump Technician</div>
+        <div class="team-bio">Jake is our most experienced heat pump engineer, leading complex installations and mentoring the heat pump team across air source and ground source systems.</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar" style="background:var(--primary)">LP</div>
+        <div class="team-name">Luke Patterson</div>
+        <div class="team-role">Senior Solar Technician</div>
+        <div class="team-bio">Luke has been installing and servicing solar PV systems for over a decade. He leads site quality checks and handles the more complex commercial and battery projects.</div>
       </div>
     </div>
 
-    <div class="team-group">
-      <div class="team-group-title">Office &amp; Support</div>
-      <div class="team-grid">
-        <div class="team-card"><div class="team-avatar" style="background:var(--blue)">EC</div><div><div class="team-name">Emma Clarke</div><div class="team-role">Office Administrator</div></div></div>
-        <div class="team-card"><div class="team-avatar" style="background:var(--blue)">SB</div><div><div class="team-name">Sophie Bennett</div><div class="team-role">Scheduler / Customer Service</div></div></div>
-        <div class="team-card"><div class="team-avatar" style="background:var(--blue)">RP</div><div><div class="team-name">Ryan Potter</div><div class="team-role">Scheduler / Customer Service</div></div></div>
-        <div class="team-card"><div class="team-avatar" style="background:var(--blue)">SC</div><div><div class="team-name">Stephen Carter</div><div class="team-role">Sales Director</div></div></div>
-        <div class="team-card"><div class="team-avatar" style="background:var(--blue)">CH</div><div><div class="team-name">Claire Hudson</div><div class="team-role">Administrator</div></div></div>
-        <div class="team-card"><div class="team-avatar" style="background:var(--blue)">TM</div><div><div class="team-name">Tom Mercer</div><div class="team-role">Administrator</div></div></div>
-        <div class="team-card"><div class="team-avatar" style="background:var(--blue)">DW</div><div><div class="team-name">Danny Walsh</div><div class="team-role">Parts &amp; Stores Manager</div></div></div>
-        <div class="team-card"><div class="team-avatar" style="background:var(--blue)">PS</div><div><div class="team-name">Poppy Simms</div><div class="team-role">Marketing Coordinator</div></div></div>
-        <div class="team-card"><div class="team-avatar" style="background:var(--blue)">NF</div><div><div class="team-name">Natalie Fox</div><div class="team-role">Sales Manager</div></div></div>
-        <div class="team-card"><div class="team-avatar" style="background:var(--blue)">GS</div><div><div class="team-name">Gary Stone</div><div class="team-role">Sales Surveyor</div></div></div>
-      </div>
-    </div>
-
-    <div class="team-group">
-      <div class="team-group-title">Field Team</div>
-      <div class="team-grid">
-        <div class="team-card"><div class="team-avatar" style="background:var(--primary)">JH</div><div><div class="team-name">Jake Harris</div><div class="team-role">Senior Heat Pump Tech</div></div></div>
-        <div class="team-card"><div class="team-avatar" style="background:var(--primary)">MW</div><div><div class="team-name">Marcus Webb</div><div class="team-role">Heat Pump Technician</div></div></div>
-        <div class="team-card"><div class="team-avatar" style="background:var(--primary)">DF</div><div><div class="team-name">Dean Fletcher</div><div class="team-role">Heat Pump Technician</div></div></div>
-        <div class="team-card"><div class="team-avatar" style="background:var(--primary)">CB</div><div><div class="team-name">Chris Barlow</div><div class="team-role">Heat Pump Technician</div></div></div>
-        <div class="team-card"><div class="team-avatar" style="background:var(--primary)">LD</div><div><div class="team-name">Liam Doyle</div><div class="team-role">Heat Pump Technician</div></div></div>
-        <div class="team-card"><div class="team-avatar" style="background:var(--primary)">KS</div><div><div class="team-name">Karl Simmons</div><div class="team-role">Heat Pump Technician</div></div></div>
-        <div class="team-card"><div class="team-avatar" style="background:var(--primary)">JZ</div><div><div class="team-name">Jez Harding</div><div class="team-role">Heat Pump Technician</div></div></div>
-        <div class="team-card"><div class="team-avatar" style="background:var(--primary)">NC</div><div><div class="team-name">Nathan Cole</div><div class="team-role">Power/Generator Tech</div></div></div>
-        <div class="team-card"><div class="team-avatar" style="background:var(--primary)">ST</div><div><div class="team-name">Scott Turner</div><div class="team-role">Power/Generator Tech</div></div></div>
-        <div class="team-card"><div class="team-avatar" style="background:var(--primary)">AM</div><div><div class="team-name">Amy Marsh</div><div class="team-role">Power/Generator Tech</div></div></div>
-        <div class="team-card"><div class="team-avatar" style="background:var(--primary)">RH</div><div><div class="team-name">Reece Holloway</div><div class="team-role">Power/Generator Tech</div></div></div>
-        <div class="team-card"><div class="team-avatar" style="background:var(--primary)">TB</div><div><div class="team-name">Tony Bridges</div><div class="team-role">Power/Generator Tech</div></div></div>
-        <div class="team-card"><div class="team-avatar" style="background:var(--primary)">LP</div><div><div class="team-name">Luke Patterson</div><div class="team-role">Senior Solar Technician</div></div></div>
-        <div class="team-card"><div class="team-avatar" style="background:var(--primary)">SO</div><div><div class="team-name">Sam Ossie</div><div class="team-role">Solar Technician</div></div></div>
-        <div class="team-card"><div class="team-avatar" style="background:var(--primary)">BA</div><div><div class="team-name">Ben Ashworth</div><div class="team-role">Solar Technician</div></div></div>
-        <div class="team-card"><div class="team-avatar" style="background:var(--primary)">FM</div><div><div class="team-name">Frank McCarthy</div><div class="team-role">Solar Technician</div></div></div>
-        <div class="team-card"><div class="team-avatar" style="background:var(--primary)">RB</div><div><div class="team-name">Roman Blake</div><div class="team-role">Solar/Electrical Tech</div></div></div>
-        <div class="team-card"><div class="team-avatar" style="background:var(--primary)">OG</div><div><div class="team-name">Owen Griffiths</div><div class="team-role">Solar/Electrical Tech</div></div></div>
-        <div class="team-card"><div class="team-avatar" style="background:var(--primary)">CD</div><div><div class="team-name">Callum Drake</div><div class="team-role">Solar/Electrical Tech</div></div></div>
-        <div class="team-card"><div class="team-avatar" style="background:var(--primary)">TW</div><div><div class="team-name">Terry Walsh</div><div class="team-role">Maintenance Technician</div></div></div>
-        <div class="team-card"><div class="team-avatar" style="background:var(--primary)">PN</div><div><div class="team-name">Pete Nolan</div><div class="team-role">Maintenance Technician</div></div></div>
-        <div class="team-card"><div class="team-avatar" style="background:var(--primary)">GV</div><div><div class="team-name">Gavin Stubbs</div><div class="team-role">Maintenance Technician</div></div></div>
-      </div>
+    <div class="team-footnote">
+      <p>Behind them is a team of <strong>29 engineers and technicians</strong> covering heat pumps, solar, power generation, and maintenance across London and the South East — all working from our base in Elephant and Castle with 18 fully-equipped service vehicles.</p>
     </div>
   </div>
 </div>

@@ -411,9 +411,9 @@
     <div id="view-academy" class="view active">
       <div class="page-heading"><h1>Academy</h1><p>Course scripts organised by series</p></div>
       <div class="stats-row">
-        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">3</div><div class="stat-label">Series</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">13</div><div class="stat-label">Courses</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">59</div><div class="stat-label">Total Minutes</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">4</div><div class="stat-label">Series</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">18</div><div class="stat-label">Courses</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">73</div><div class="stat-label">Total Minutes</div></div>
         <div class="stat-card"><div class="stat-value" style="color:var(--blue2)">9</div><div class="stat-label">Characters</div></div>
       </div>
       <div id="job-view" class="series-block">
@@ -471,6 +471,20 @@
           <div class="course-card" onclick="openInboxFile('reed-script-l1-series1')"><div class="course-num">Mini-course</div><div class="course-title">Your first day in Commusoft</div><div class="course-meta"><span class="meta-pill">12 min</span><span class="meta-pill">Rise mini-course</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
+        <div class="course-card" style="display:none"></div>
+      </div>
+      <div id="l1-office-series3" class="series-block">
+        <div class="series-header" style="background:var(--blue2)">
+          <div><h2>Layer 1 — Office Staff Series 3</h2><div class="series-meta">Adding and managing customers — creating, maintaining, and cleaning customer records</div></div>
+          <div class="series-count">4 courses + challenge</div>
+        </div>
+        <div class="course-grid">
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-s3-c1')"><div class="course-num">Course 1</div><div class="course-title">Add a customer</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-s3-c2')"><div class="course-num">Course 2</div><div class="course-title">Add a site and work address</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-s3-c3')"><div class="course-num">Course 3</div><div class="course-title">Keep your customer records clean</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-s3-c4')"><div class="course-num">Course 4</div><div class="course-title">Merge duplicate customers and work addresses</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-s3-challenge')"><div class="course-num">Challenge</div><div class="course-title">Customer base ready</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+        </div>
       </div>
     </div>
 
@@ -4879,6 +4893,516 @@ D) Check the appointments view for the date the job was completed
 - **Needs human input** — No dedicated Help Centre article found for dashboard navigation or global search. Confirm whether HC articles exist for these topics and provide URLs to add to the Sources field before production.
 `;
 
+INBOX_FILES["reed-script-l1-s3-c1"] = `# Reed — Script: Add a customer
+
+**Layer:** 1 — Office Staff Path
+**Series:** 3 of 9 — Adding and managing customers
+**Course:** 1 of 4
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Select the correct customer type before creating a record
+2. Complete the customer creation form with the required fields
+3. Explain why Address Line 1 and postcode are mandatory
+
+**Target persona:** Office staff
+
+**SunComfort characters:** Emma Clarke (Office Administrator)
+
+**Scenario:** A homeowner in Streatham calls SunComfort about a heat pump survey. Emma creates their customer record before anything else can happen — the record needs to exist before a job can be raised, a reminder can be set, or an invoice can be issued.
+
+**Estimated length:** 4 minutes
+
+**Target audience:** Office staff at field service businesses using Commusoft — administrators and coordinators responsible for creating customer records. Assumes Commusoft Compass (Layer 0) and Office Staff Series 1 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Commusoft Compass (Layer 0) and Office Staff Series 1 (Your first day in Commusoft) complete. Shared Concept Library Course 1 (The customer and site hierarchy) recommended.
+
+**Main objective beyond learning objectives:** Every job in Commusoft starts with a customer record. A record created carelessly — wrong type, missing postcode, no contact method — carries that error into every downstream action: invoices with the wrong structure, a customer duplicated in search results, a job that cannot be located on a map. Creating a customer record correctly at the point of first contact is the simplest quality control step in the system. It takes two minutes when done right and can take much longer to unpick when done wrong.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Introduction
+
+Every job in Commusoft begins with a customer record. Before you can raise a job, set a service reminder, or issue an invoice, the customer needs to be in the system. Adding a customer correctly at the point of first contact means every subsequent action connects to the right information automatically. Getting it right takes two minutes. Getting it wrong can take much longer to resolve.
+
+---
+
+## What you need before you start
+
+Before you open the creation form, have three things ready: the customer's name, at least one contact method, and their customer type. In Commusoft, the two default types are Private customers for individuals and Company for businesses — your account may also have custom types configured. The type shapes the structure of the record: a private customer has first name and surname fields, a company has a company name and a primary contact person. Set the type correctly before filling in any other field, because it cannot be changed after the record is saved.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: does your business serve both individual homeowners and companies?**
+
+*Yes:* Good. Commusoft's customer type setting handles this distinction at the record level. Private customer and Company records are structured differently, and selecting the right type means the right fields and the right behaviour from the start.
+*No:* Your team will almost always select the same type. It is still worth knowing the distinction — a company entered as a private customer will have the wrong record structure and cannot be corrected without recreating the record.
+
+---
+
+## Creating the record
+
+To add a new customer, navigate to the Customers section and select the option to add a new customer. Set the customer type first — this determines the fields available on the rest of the form. For a private customer, enter the first name and surname. For a company, enter the company name and a primary contact person. Next, add at least one contact method: a phone number or email address. Then add the customer's address. Address Line 1 and postcode are required — without them, the scheduling engine cannot locate the customer on the map or calculate travel to their properties. Add an advertising source if you track how customers find your business, and set communication preferences if the customer has expressed any. When the form is complete, save the record. The customer appears immediately in the customer dashboard and is searchable from anywhere in the system.
+
+*[Knowledge check — 4 options]*
+**Emma is adding Apex Solar Solutions, a commercial solar installation business with multiple sites. Which customer type should she select?**
+
+A) Private customers — the main contact at Apex is an individual, so Private customers is the correct type
+B) Company — Apex is a business, and Company structures the record with a company name and a primary contact person
+C) Either type works — the type can always be updated after the record is saved
+D) She should leave the type as the system default and update it once the account is active
+
+*Correct (B):* Right. Apex Solar Solutions is a business, so Company is the correct type. This structures the record with a company name and a contact person rather than a first and last name, and supports multiple sites as work addresses under the one account.
+*Incorrect:* Company is the correct type here. Apex is a business, not an individual. The Company type structures the record accordingly, and customer type cannot be changed after the record is created — so selecting the right one at this stage matters.
+
+---
+
+## Summary
+
+Adding a customer in Commusoft requires a name, at least one contact method, a full address including postcode, and the correct customer type — Private customers for individuals, Company for businesses. The type shapes the record and cannot be changed after saving. Address Line 1 and postcode are required for the scheduling engine. Save the record and the customer is immediately live in the system. The next step is adding a work address — the specific property where work will take place.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 4 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Emma Clarke (Office Administrator)
+**Sources used:** Commusoft — Customer record (https://help.commusoft.com/en/articles/216394-customer-record); Customer types (https://help.commusoft.com/en/articles/216908-customer-types)
+**Pre-submission checklist:** complete
+**Flint revisions:** "What you need before you start" tightened from 5 to 4 sentences to stay within scene limit.
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
+
+INBOX_FILES["reed-script-l1-s3-c2"] = `# Reed — Script: Add a site and work address
+
+**Layer:** 1 — Office Staff Path
+**Series:** 3 of 9 — Adding and managing customers
+**Course:** 2 of 4
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Add a work address to an existing customer record using the correct route
+2. Identify which fields are required for the scheduling engine to function
+3. Explain the consequence of adding a landlord detail and why it cannot be undone
+
+**Target persona:** Office staff
+
+**SunComfort characters:** Emma Clarke (Office Administrator); David Okafor (customer)
+
+**Scenario:** David Okafor has acquired a new rental property in Balham and calls SunComfort to register it. Emma adds the work address to his existing customer record so a job can be raised against the new property immediately.
+
+**Estimated length:** 3 minutes
+
+**Target audience:** Office staff at field service businesses using Commusoft — administrators and coordinators responsible for adding and maintaining work addresses. Assumes Commusoft Compass (Layer 0), Office Staff Series 1, and Series 3 Course 1 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Commusoft Compass (Layer 0), Office Staff Series 1, and Series 3 Course 1 (Add a customer) complete.
+
+**Main objective beyond learning objectives:** A work address cannot be created without Address Line 1 and postcode, but Commusoft will save an address record that is missing them — and that incomplete address will fail silently when the scheduling engine tries to locate the property. Office staff who understand which fields are required and why will create complete, usable addresses from the first entry rather than discovering the gap when a booking fails.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Introduction
+
+In Commusoft, the customer record is who you bill. The work address is where the work happens. These are always separate, and that separation is what makes the system work for customers with multiple properties. David Okafor has eight rental properties on his SunComfort account — each one its own work address, each with its own job history and service reminders, all linked to the same customer record. Before any job can be raised at David's new property in Balham, Emma needs to add it as a work address. A job cannot exist without one.
+
+---
+
+## Adding the work address
+
+To add a work address, navigate to the customer record and open the Work Address tab, then select Add new work address. The same option is available through Quick Links. The form opens with the address fields first. Address Line 1 and postcode are required — without them, the scheduling engine cannot place the property on the map or calculate travel to the site. A work address can be saved without these fields, but it will not be usable for scheduling until they are added. Complete them now rather than returning to fix them later.
+
+If the property has a landlord who is separate from the billing customer — a common scenario in property management — you can add them here. Once a landlord is added to a work address, they cannot be removed. Confirm the landlord details are correct before saving. Set communication preferences for the work address if the on-site contact has different preferences to the main account holder. Save the record, and the work address appears under the customer's profile immediately, ready for jobs to be raised against it.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: does your business work at properties where the owner and the on-site contact are different people?**
+
+*Yes:* The work address handles this directly. The customer record belongs to the billing contact. The work address carries its own contacts — the person physically at the property — so communication reaches the right person without affecting the billing record.
+*No:* The separation still applies. Even when the same person owns and occupies the property, the work address holds all the job history, assets, and service reminders specific to that location. The structure is the same whether a customer has one property or fifty.
+
+---
+
+*[Knowledge check — 4 options]*
+**Emma saves a work address for David's new property but realises she has left the postcode blank. What is the impact?**
+
+A) The record cannot be saved without a postcode — the system prevents saving until the field is completed
+B) The record saves and works normally — postcode is optional and has no effect on scheduling
+C) The record saves, but the scheduling engine cannot locate the property on the map or calculate travel
+D) The record saves, but no jobs can be raised against it until the postcode is added
+
+*Correct (C):* Right. Commusoft saves the work address without a postcode, but the scheduling engine requires Address Line 1 and postcode to place the property on the map. Without them, travel calculation and route planning will not work for any job raised at that address.
+*Incorrect:* The scheduling engine requires Address Line 1 and postcode to locate a property. A work address without a postcode will save successfully, but cannot be used for route planning or travel calculation — which means jobs booked against it will be missing location data.
+
+---
+
+## Summary
+
+A work address is added from the customer's Work Address tab or Quick Links. Address Line 1 and postcode are required for the scheduling engine — a work address without them saves but cannot be used for route planning. Landlord details cannot be removed once added, so confirm them before saving. Once the work address is saved, it is ready for jobs, assets, and service reminders to be attached to it. The customer record and the work address together are the foundation of every piece of work in Commusoft.
+
+---
+
+**Section count:** 3 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 3 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Emma Clarke (Office Administrator); David Okafor (customer)
+**Sources used:** Commusoft — Work address record (https://help.commusoft.com/en/articles/216441-work-address-record)
+**Pre-submission checklist:** complete
+**Flint revisions:** Knowledge check moved before Summary (was positioned after).
+
+## Open items
+
+None — all content verified against Help Centre article.
+`;
+
+INBOX_FILES["reed-script-l1-s3-c3"] = `# Reed — Script: Keep your customer records clean
+
+**Layer:** 1 — Office Staff Path
+**Series:** 3 of 9 — Adding and managing customers
+**Course:** 3 of 4
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Apply a search-first habit to prevent duplicate customer and work address records
+2. Distinguish between setting a customer to Dormant and deleting them, and identify when each is appropriate
+3. Explain what happens to linked work addresses when a customer is set to Dormant
+
+**Target persona:** Office staff
+
+**SunComfort characters:** Emma Clarke (Office Administrator)
+
+**Scenario:** Emma does a quarterly review of SunComfort's customer database. She finds a customer who has not made contact in two years, a near-duplicate she almost created last month, and a reminder of why her team always searches before adding. This course turns those moments into habits.
+
+**Estimated length:** 4 minutes
+
+**Target audience:** Office staff at field service businesses using Commusoft — administrators and coordinators responsible for maintaining customer data quality. Assumes Commusoft Compass (Layer 0), Office Staff Series 1, and Series 3 Courses 1 and 2 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Commusoft Compass (Layer 0), Office Staff Series 1, and Series 3 Courses 1 and 2 complete.
+
+**Main objective beyond learning objectives:** A messy customer database is not a data problem — it is an operational problem. Duplicate records mean jobs raised against the wrong account, service reminders going to outdated addresses, and invoices issued to the wrong name. The habits in this course cost almost no time to maintain and prevent problems that can be difficult and time-consuming to resolve. Clean records are built one correct decision at a time, starting at the point of first contact.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Introduction
+
+A clean customer database is one of the most undervalued operational assets in a field service business. When records are duplicated, incomplete, or never maintained, the effects appear across the whole system: the wrong name on an invoice, a service reminder going to a customer who moved out two years ago, a job raised against a duplicate record that the account manager cannot find. Keeping the database clean is not a project that happens once — it is a set of habits that starts at the point of first contact and continues every time someone touches a record.
+
+---
+
+## Search before you create
+
+The most common source of duplicate records is creating a new customer without checking whether they already exist. Before adding any new customer or work address, use the global search bar to check. Search by name, by phone number, and by postcode — duplicates often appear because the same customer was entered with slightly different details on a previous call. A few seconds of searching prevents a duplicate that could take far longer to resolve. This applies to work addresses too. Before adding a new property to an existing customer, open their Work Address tab and confirm the property is not already listed. If a match appears in search, open the record and confirm it is correct before creating anything new.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: does your team currently have a consistent habit of searching before creating a new customer or work address?**
+
+*Yes:* Good. Search-first is the single most effective control against duplicates. A team that checks before creating keeps the database clean from the point of first contact, which means far less cleanup work over time.
+*No:* It is worth making this a team standard. The global search bar returns results across names, addresses, and phone numbers — the check takes under thirty seconds. Building it into the new-customer call process, as a step before opening the creation form, is the simplest way to make it consistent.
+
+---
+
+## Active, dormant, and when to delete
+
+When a customer has not engaged with the business for a long period, the instinct can be to delete their record. In most cases, setting the customer to Dormant is the right choice. Dormant disables all automated communications — service reminders, after-sales care messages, and other scheduled outreach stop going out — while the full record, job history, and contact details remain intact and searchable. When a customer is set to Dormant, all of their linked work addresses become dormant at the same time. If the customer returns, reactivating the record restores everything immediately. Deletion is permanent and cannot be undone. If you are certain a customer will never return and their history is no longer needed, export the data before deleting. If there is any doubt, use Dormant. It covers almost every case where a customer is no longer active.
+
+*[Knowledge check — 4 options]*
+**Emma identifies a residential customer who moved away three years ago. Service reminders are still being sent to their old email address. What is the correct action?**
+
+A) Delete the customer record — they have been inactive for three years and the record is no longer needed
+B) Remove the email address from the record so reminders cannot be sent
+C) Set the customer to Dormant — this disables automated communications while preserving the full record and history
+D) Move the customer to an archived folder and update the status manually each month
+
+*Correct (C):* Right. Setting the customer to Dormant stops all automated communications, including service reminders, while keeping the full record and job history intact. If the customer ever makes contact again, the history is still there. Deletion would remove it permanently.
+*Incorrect:* Dormant is the correct status here. It stops automated communications — including service reminders — while preserving the customer's full record. Deleting the record would be permanent and irreversible; Dormant keeps the data available if the customer ever returns.
+
+---
+
+## Summary
+
+Clean records start with searching before every new entry. Check for an existing customer or work address before creating anything new. For customers who are no longer active, Dormant stops automated communications without losing history — use it in preference to deletion in almost every case. When a customer is set to Dormant, their linked work addresses become dormant too. Delete only when you are certain the record is no longer needed, and always export the data first. Clean data is built one correct decision at a time.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 4 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Emma Clarke (Office Administrator)
+**Sources used:** Commusoft — Customer record (https://help.commusoft.com/en/articles/216394-customer-record); Merge customers (https://help.commusoft.com/en/articles/216395-merge-customers); Merge/transfer work addresses (https://help.commusoft.com/en/articles/273334-merge-transfer-work-addresses)
+**Pre-submission checklist:** complete
+**Flint revisions:** none
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
+
+INBOX_FILES["reed-script-l1-s3-c4"] = `# Reed — Script: Merge duplicate customers and work addresses
+
+**Layer:** 1 — Office Staff Path
+**Series:** 3 of 9 — Adding and managing customers
+**Course:** 4 of 4
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Follow the steps to merge two duplicate customer records and identify what transfers
+2. Distinguish between merging and transferring a work address, and identify when each is appropriate
+3. Identify the constraints that prevent a merge or transfer from proceeding
+
+**Target persona:** Office staff
+
+**SunComfort characters:** Emma Clarke (Office Administrator)
+
+**Scenario:** Emma finds two customer records for the same homeowner in SunComfort's database — created on separate calls by different team members. She uses the merge tool to consolidate them into one clean record, then handles a work address that was added to the wrong customer account.
+
+**Estimated length:** 3 minutes
+
+**Target audience:** Office staff at field service businesses using Commusoft — administrators and coordinators responsible for resolving duplicate records. Assumes Commusoft Compass (Layer 0), Office Staff Series 1, and Series 3 Courses 1 to 3 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Commusoft Compass (Layer 0), Office Staff Series 1, and Series 3 Courses 1 to 3 complete.
+
+**Main objective beyond learning objectives:** Duplicate records are almost inevitable over time — the longer a database runs and the more people use it, the more likely a record will be entered twice. Commusoft's merge tools resolve duplicates cleanly without losing history, but both operations are permanent. Understanding what transfers, what stays, and what prevents a merge from proceeding means the resolution can be done once and done correctly.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Merging duplicate customers
+
+When two customer records represent the same person or company, navigate to the record you want to remove and select Edit, then Advanced options, then Merge customer. In the search field, type the name of the customer you want to keep and select them from the results. Review which record is on the left and which is on the right before confirming: the record on the left is retained and the record on the right is permanently deleted. All contacts, jobs, estimates, invoices, credit notes, and payments from the deleted record transfer to the retained one. Account credits from both records combine. The merge is recorded automatically in the Communications tab, noting who performed it and when. The merge is irreversible and cannot be undone. One constraint applies: the two customer records must be the same customer type. If one is set as Private customers and the other as Company, the merge cannot proceed until the type discrepancy is resolved.
+
+---
+
+## Merging and transferring work addresses
+
+When two work address records represent the same property, navigate to the work address you want to remove and select Edit, then Advanced options, then Merge work address. All jobs, estimates, opportunities, assets, files, service reminders, and communications transfer to the retained address. One constraint applies: if the work address being removed has contract history, the merge cannot proceed. Transfer work address is a different operation, used when a work address has been added to the wrong customer account altogether. Navigate to the work address, select Edit, then Advanced options, then Transfer work address, and select the correct customer. Historical records — jobs, estimates, invoices — remain with the original customer. Future transactions follow the address to the new one. A transfer cannot proceed if the work address has open jobs, open estimates, or active contracts.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: has your business ever had a situation where the same customer or property appeared twice in the system?**
+
+*Yes:* Merge is the clean resolution. The key is to review which record will be retained and which will be deleted before confirming — and to check that both records are the same customer type before starting.
+*No:* The search-first habit from Course 3 is your main protection against duplicates appearing. If they do appear despite that, merge resolves them cleanly and the merged history is automatically documented in the Communications tab.
+
+---
+
+*[Knowledge check — 4 options]*
+**Emma finds two customer records for the same company: one set as Company and one set as Private customers. She wants to merge them. What must she do first?**
+
+A) Proceed with the merge — Commusoft merges records regardless of type and corrects the structure automatically
+B) Merge the work addresses first, then merge the customer records
+C) Resolve the customer type discrepancy — the two records must be the same type before a merge can proceed
+D) Delete the Private customers record and manually move the jobs to the Company record
+
+*Correct (C):* Right. Commusoft requires both customers to be the same type before a merge can proceed. Emma needs to resolve the type mismatch first — then the merge option becomes available.
+*Incorrect:* Customer type must match for a merge to proceed. The two records are currently different types and the merge will not be available until that is resolved. Correct the type on the wrong record first, then merge.
+
+---
+
+## Summary
+
+Merging customer records requires both records to be the same customer type. The record on the left is retained and the record on the right is permanently deleted, with all data transferring across. Merging work addresses transfers all history except where the source has contract history. Transferring a work address moves it to a new customer, but historical records stay with the original account and the address must have no open jobs, estimates, or contracts before the transfer can proceed. Both operations are permanent — review before confirming.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 3 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Emma Clarke (Office Administrator)
+**Sources used:** Commusoft — Merge customers (https://help.commusoft.com/en/articles/216395-merge-customers); Merge/transfer work addresses (https://help.commusoft.com/en/articles/273334-merge-transfer-work-addresses)
+**Pre-submission checklist:** complete
+**Flint revisions:** Two em dashes removed: "irreversible — there is no undo" and "for a different situation — use it when".
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
+
+INBOX_FILES["reed-script-l1-s3-challenge"] = `# Reed — Script: Series challenge — Customer base ready
+
+**Layer:** 1 — Office Staff Path
+**Series:** 3 of 9 — Adding and managing customers
+**Course:** Series challenge
+**Format:** Synthesia micro-course — Clint and Sarah dialogue
+**Presenter:** Clint (instructional); Sarah (dialogue partner)
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Apply the customer creation process to a commercial client with multiple sites
+2. Decide when to search, when to merge, and when to use Dormant across realistic office scenarios
+3. Identify the constraint that would prevent a customer merge from proceeding
+
+**Target persona:** Office staff
+
+**SunComfort characters:** Emma Clarke (Office Administrator — referenced in scenario)
+
+**Scenario:** SunComfort is onboarding a new commercial client — Greenfield Property Services, a property management company with multiple sites across south London. Sarah surfaces the tricky decisions Emma will face: a potential duplicate in the system, a site that belongs to a different billing company, and a contact who asks to have an old account closed. Clint works through each one.
+
+**Estimated length:** 3 minutes
+
+**Target audience:** Office staff at field service businesses using Commusoft who have completed Series 3 (Adding and managing customers). This challenge tests all four courses in the series against a single realistic scenario. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Series 3 Courses 1 to 4 complete.
+
+**Main objective beyond learning objectives:** The four courses in this series cover creating, maintaining, and cleaning customer records individually. This challenge puts those decisions together in the sequence they would actually occur in an office — a new commercial client, a search check, a type mismatch, and a records question arriving in the same onboarding call. A learner who can handle these in sequence has the foundation to manage the customer database correctly from day one.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Challenge opening
+
+*[Clint — 30 seconds]*
+
+Greenfield Property Services has just called SunComfort. They manage residential and commercial properties across south London and want to set up an account. It sounds straightforward. But Emma is about to hit a few decisions that will test everything you have covered in this series — and Sarah has spotted all of them.
+
+---
+
+## Dialogue: The decisions
+
+*[Sarah — 15 seconds]*
+
+Before Emma creates the Greenfield account — what is the first thing she should do?
+
+*[Clint — 20 seconds]*
+
+Search. Before any new customer is created, Emma runs a global search on the company name, the main contact's phone number, and the postcode. Greenfield may have called before. A duplicate created now is a duplicate that needs cleaning up later.
+
+*[Sarah — 15 seconds]*
+
+The search comes back with a record — Greenfield Properties, no Limited. Same postcode, different phone number. Could be the same company. What now?
+
+*[Clint — 20 seconds]*
+
+Open the record and confirm it with the caller before doing anything else. If it is the same company, the existing record is the one to use. If it is a different entity entirely, create a new record. Emma does not guess. She asks.
+
+*[Sarah — 15 seconds]*
+
+It is the same company — different name, old phone number. Emma wants to tidy up by merging the old record into the new one. But the old record is set as Private customers and the new one is Company. Can she merge?
+
+*[Clint — 20 seconds]*
+
+Not yet. A merge requires both records to be the same customer type. Emma needs to resolve the type mismatch first. Once both records are set as Company, the merge becomes available.
+
+*[Sarah — 15 seconds]*
+
+One of Greenfield's sites was added to the wrong customer account last month. The jobs are still open. Can Emma transfer the work address now?
+
+*[Clint — 20 seconds]*
+
+No. A work address with open jobs cannot be transferred. The open jobs need to be completed or closed before the transfer can proceed. Once they are clear, Emma can use Transfer work address under Advanced options to move the property to the correct Greenfield account.
+
+---
+
+## Knowledge check
+
+*[Knowledge check — 4 options]*
+**Emma is ready to merge the two Greenfield records. She has corrected the customer type on both. Which record is retained after the merge?**
+
+A) The most recently created record — Commusoft always retains the newer record
+B) The record with the most jobs attached — Commusoft retains the record with the longest history
+C) The record on the left in the merge screen — Clint confirmed this in the series
+D) The record Emma selects as the primary when prompted during the merge
+
+*Correct (C):* Right. The record on the left is retained and the record on the right is permanently deleted. All data from the deleted record transfers to the retained one. Reviewing which record is on which side before confirming is always worth a moment.
+*Incorrect:* In the Commusoft merge screen, the record on the left is the one that will be retained. The record on the right is permanently deleted, with all its data transferring across. Emma should confirm which record she wants to keep before she confirms the merge.
+
+---
+
+## Series close
+
+*[Clint — 30 seconds]*
+
+Four decisions — search first, resolve the type, wait for open jobs to close, confirm left from right before merging. Every one of them comes from having a clear process. Your customer base is the foundation of every job, invoice, and reminder in Commusoft. The habits you build in how you create, maintain, and clean records are what keep that foundation solid. Series 3 is complete.
+
+---
+
+**Section count:** Challenge opening, 6 dialogue exchanges, 1 knowledge check, series close
+**Estimated length:** 3 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address
+**First person (I/my):** not used
+**Characters from approved roster:** Clint (presenter); Sarah (dialogue partner); Emma Clarke (referenced in scenario)
+**Sources used:** Commusoft — Customer record (https://help.commusoft.com/en/articles/216394-customer-record); Customer types (https://help.commusoft.com/en/articles/216908-customer-types); Merge customers (https://help.commusoft.com/en/articles/216395-merge-customers); Merge/transfer work addresses (https://help.commusoft.com/en/articles/273334-merge-transfer-work-addresses)
+**Pre-submission checklist:** complete
+**Flint revisions:** Three em dashes removed from dialogue lines: "does not guess — she asks", "mismatch first — once", "resolved first — completed or closed —".
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
+
 INBOX_FILES["ivy-induction"] = `# Enablement Specialist — Induction Plan
 
 Training is essential for your role at Commusoft. To ensure you have the best possible start, we have created this induction schedule.
@@ -5741,6 +6265,11 @@ function openInboxFile(key) {
     'reed-script-l0-11': { num: 'Reed — Script', title: 'L0 Shared Concept Library — 11 The customer portal — what your customers can do online' },
     'reed-script-l0-12': { num: 'Reed — Script', title: 'L0 Shared Concept Library — 12 User roles and permissions' },
     'reed-script-l1-series1': { num: 'Reed — Script', title: 'L1 Office Staff Series 1 — Your first day in Commusoft' },
+    'reed-script-l1-s3-c1': { num: 'Reed — Script', title: 'L1 Office Staff Series 3 — Course 1: Add a customer' },
+    'reed-script-l1-s3-c2': { num: 'Reed — Script', title: 'L1 Office Staff Series 3 — Course 2: Add a site and work address' },
+    'reed-script-l1-s3-c3': { num: 'Reed — Script', title: 'L1 Office Staff Series 3 — Course 3: Keep your customer records clean' },
+    'reed-script-l1-s3-c4': { num: 'Reed — Script', title: 'L1 Office Staff Series 3 — Course 4: Merge duplicate customers and work addresses' },
+    'reed-script-l1-s3-challenge': { num: 'Reed — Script', title: 'L1 Office Staff Series 3 — Challenge: Customer base ready' },
     'ivy-induction': { num: 'Ivy — People', title: 'Enablement Specialist Induction Plan v3' },
     'ivy-jd-academy': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Description' },
     'ivy-jd-advert': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Advert' },

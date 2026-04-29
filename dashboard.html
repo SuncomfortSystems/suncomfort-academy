@@ -411,9 +411,9 @@
     <div id="view-academy" class="view active">
       <div class="page-heading"><h1>Academy</h1><p>Course scripts organised by series</p></div>
       <div class="stats-row">
-        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">2</div><div class="stat-label">Series</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">12</div><div class="stat-label">Courses</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">47</div><div class="stat-label">Total Minutes</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">3</div><div class="stat-label">Series</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">13</div><div class="stat-label">Courses</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">59</div><div class="stat-label">Total Minutes</div></div>
         <div class="stat-card"><div class="stat-value" style="color:var(--blue2)">9</div><div class="stat-label">Characters</div></div>
       </div>
       <div id="job-view" class="series-block">
@@ -462,6 +462,15 @@
           <div class="course-card" onclick="openInboxFile('reed-script-l0-11')"><div class="course-num">Course 11</div><div class="course-title">The customer portal — what your customers can do online</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">All staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l0-12')"><div class="course-num">Course 12</div><div class="course-title">User roles and permissions</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">All staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
+      <div id="l1-office-series1" class="series-block">
+        <div class="series-header" style="background:var(--blue1)">
+          <div><h2>Layer 1 — Office Staff Series 1</h2><div class="series-meta">Your first day in Commusoft — dashboard navigation, customer search, and job record orientation</div></div>
+          <div class="series-count">1 mini-course</div>
+        </div>
+        <div class="course-grid">
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-series1')"><div class="course-num">Mini-course</div><div class="course-title">Your first day in Commusoft</div><div class="course-meta"><span class="meta-pill">12 min</span><span class="meta-pill">Rise mini-course</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+        </div>
+      </div>
       </div>
     </div>
 
@@ -4670,6 +4679,206 @@ For questions that need a direct conversation, your Commusoft account manager is
 
 `;
 
+INBOX_FILES["reed-script-l1-series1"] = `# Reed — Script: Your first day in Commusoft
+
+**Layer:** 1 — Office Staff Path
+**Series:** 1 of 6
+**Format:** Rise mini-course with embedded Synthesia segments and screen recordings
+**Presenter:** Clint
+**Date:** 2026-04-29
+
+---
+
+**Learning objectives**
+1. Navigate the main sections of the Commusoft web app using the navigation bar
+2. Use global search and the customer dashboard to find a customer record
+3. Identify the key sections of a customer record and what each one contains
+4. Locate and open a job from a customer record and from the jobs dashboard
+
+**Target persona:** Office staff
+
+**SunComfort characters:** Emma Clarke (Office Administrator — logged-in user for all screen recordings); David Okafor (customer — used in Lessons 2, 3, and 4 screen recordings)
+
+**Scenario:** Emma Clarke has just started at SunComfort and is logging in to Commusoft for the first time. Before she can manage customers and jobs effectively, she needs to know where everything lives. This course gives her the orientation every new office staff member needs before any role-specific training begins.
+
+**Estimated length:** 12 minutes
+
+**Target audience:** Office staff at field service businesses using Commusoft — administrators, schedulers, and coordinators who are beginning their Commusoft Academy journey. This course assumes the learner has completed the Commusoft Compass (Layer 0). SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** The Commusoft Compass (Layer 0) complete. No other prior course required.
+
+**Main objective beyond learning objectives:** A new office staff member who cannot find their way around Commusoft on day one will lose confidence quickly and fall back on asking colleagues for help with every basic task. This course removes that dependency. After completing it, the learner knows where the key areas of the system live, how to get to any customer or job they need, and what they are looking at when they open a record. Every subsequent Office Staff course builds on this foundation — the learner can focus on the work, not on finding the buttons.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** Emma Clarke — Office Administrator — Office staff role. Required for all four screen recordings.
+2. **Customer record:** David Okafor — existing active customer with multiple work addresses visible and at least one open job against one of them.
+3. **Existing data:** A realistic set of data should be visible throughout: several customer records in the customer dashboard, a mix of open and completed jobs in the jobs dashboard with different statuses, and at least one job with an open status visible in the job record used in Lesson 4.
+4. **Assets required:** None.
+
+---
+
+## Opening
+
+*[Synthesia segment — Clint — 60 seconds]*
+
+When you first log in to Commusoft, you are looking at the starting point for everything your office team does: booking jobs, managing customers, tracking what is happening in the field, and keeping the invoicing moving. The system is organised around a set of dashboards, each one giving you a focused view of a different area of the business, and a global search that gets you to any record without navigating through sections at all. In this course, you will get your bearings across four areas: the dashboard layout, how to find a customer, how to read a customer record, and how to locate any job you need. Everything else in your Office Staff training builds on these four things.
+
+---
+
+## Lesson 1: Navigate the dashboard
+
+*[Synthesia segment — Clint — 45 seconds]*
+
+The Commusoft web app opens on a dashboard, and from here you can reach every area of the system. The navigation bar at the top of the screen gives you quick access to the main sections: Customers, Jobs, Suppliers, Fleet, and Reporting, each one opening its own filtered view of that area of the business. Your job in this lesson is to know where each section lives so you can get to what you need without hesitation.
+
+*[Screen recording — Emma Clarke logged into Commusoft web app — approximately 2 minutes]*
+
+**Navigation bar overview (20 seconds)**
+Show the full navigation bar at the top of the screen. Move across each section label from left to right without clicking. Narrate each section name as you pass it.
+
+*Narration cue: "The navigation bar gives you access to every major area of Commusoft. You can see the main sections here: Customers, Jobs, Suppliers, Fleet, and Reporting. Each one opens its own view of that part of the business."*
+
+**Jobs dashboard (40 seconds)**
+Click into the Jobs section. Show the jobs dashboard with the list of jobs visible, statuses and assigned technicians in view. Show how to apply a filter or change the view.
+
+*Narration cue: "The Jobs dashboard is where you will spend much of your time. Every active and completed job is listed here, and you can filter by status, priority, or the person the job is assigned to. If you need to see all jobs waiting to be invoiced or all jobs booked for today, a filter gets you there in a few clicks."*
+
+**Customer dashboard (30 seconds)**
+Navigate to the Customers section. Show the customer list with names and reference numbers visible.
+
+*Narration cue: "The Customers section shows every customer record in the system. You can scroll through the list or filter within it. In the next lesson, you will see the fastest way to reach a specific customer directly."*
+
+**Profile icon (25 seconds)**
+Show the profile icon in the top-right corner. Click it briefly to show the dropdown items (account settings, support resources, logout).
+
+*Narration cue: "The profile icon in the top right gives you access to your account settings and support resources. Settings access across the system depends on your user role. If you cannot see certain areas of Commusoft, that is expected."*
+
+*[Rise — Yes/No reflection prompt]*
+**Before you continue: when you log in to Commusoft for the first time, will the system already be configured for your business?**
+
+*Yes:* Good. Your focus throughout this training is on using the system effectively in your day-to-day work, not on initial setup. The courses in your Office Staff path are built around the workflows you will use every day: managing customers, booking jobs, and keeping things moving.
+
+*No:* Decision Maker training covers the setup decisions — workflows, pricing, and system configuration. Office Staff training focuses on using the system once those foundations are in place. You may want to complete both paths.
+
+---
+
+## Lesson 2: Search for a customer
+
+*[Synthesia segment — Clint — 45 seconds]*
+
+Getting to the right customer quickly is one of the most frequent things you will do in Commusoft. There are two ways to do it: the customer dashboard, where you can browse and filter the full customer list, and global search, which takes you directly to any customer, job, invoice, or asset in the system without navigating through sections at all. Global search is the faster option when you know what you are looking for, and for most day-to-day office work, that is most of the time.
+
+*[Screen recording — Emma Clarke — approximately 2 minutes]*
+
+**Global search by customer name (50 seconds)**
+Click the global search bar at the top of the screen. Type the name David Okafor. Show the search results appearing as you type. Click the customer result to open the record.
+
+*Narration cue: "The global search bar is always visible at the top of the screen. Type any part of a customer's name and the system returns matching records as you type. You do not have to be in the Customers section to use it. It works from anywhere in the system."*
+
+**Global search by job number or other reference (30 seconds)**
+Return to the search bar. Show a search by job number or address. Show that different record types appear in the results.
+
+*Narration cue: "You can also search by job number, invoice reference, or address. If you know any part of the record you need, global search will find it. This is the fastest route to anything in the system."*
+
+**Customer dashboard — browsing and filtering (35 seconds)**
+Navigate to the Customers section. Show how to filter or sort the customer list. Open a customer from the list.
+
+*Narration cue: "If you are browsing rather than looking for something specific, the customer dashboard gives you a filterable view of everyone in the system. Use global search when you know what you need. Use the customer dashboard when you are looking across the full list."*
+
+---
+
+## Lesson 3: Read a customer record
+
+*[Synthesia segment — Clint — 45 seconds]*
+
+A customer record in Commusoft is the central point for everything connected to that customer: their contact details, their work addresses, every job ever raised against each property, their invoices, and a full log of every communication your office has had with them. Knowing the layout of a customer record means you can find what you need quickly, whether that is a job history, an outstanding invoice, or a note from a previous visit.
+
+*[Screen recording — Emma Clarke, David Okafor's customer record — approximately 2 minutes]*
+
+**Customer record top section (20 seconds)**
+Open David Okafor's customer record. Show the top of the record: name, contact details, billing address.
+
+*Narration cue: "The top of the customer record holds the core details: who the customer is, how to contact them, and where their invoices are sent. Everything here relates to the customer as a trading entity, not to the individual properties where work takes place."*
+
+**Work addresses section (40 seconds)**
+Scroll down to show the work addresses listed beneath the customer details. Show that David has multiple work addresses. Click into one to show its detail.
+
+*Narration cue: "Below the customer details, you will see their work addresses. David has several properties on his account, each listed separately. Any job raised at a property is attached to that work address, not to the customer record directly. This keeps each property's history clean and separate from the others."*
+
+**Job history at a work address (35 seconds)**
+From within the work address, show the list of jobs against it with statuses and dates visible.
+
+*Narration cue: "Every job ever raised at this property is listed here. You can see the status of each one, when it was raised, and whether it is still open or completed. If a customer calls about work done at a particular address, this is where you go."*
+
+**Communication log (20 seconds)**
+Navigate to the communication or timeline section of the customer record. Show any logged emails, SMS, or notes.
+
+*Narration cue: "Commusoft logs communications against the customer record automatically. Emails, SMS messages, and notes are all stored here, so you always have a record of what has been sent or said without searching through email threads."*
+
+---
+
+## Lesson 4: Find and open a job
+
+*[Synthesia segment — Clint — 45 seconds]*
+
+Jobs are the core unit of work in Commusoft, and there are two main routes to any job: through the customer record, when you know which customer the job belongs to, and through the jobs dashboard, when you are working across all active work at once. Both routes take you to the same job record. Knowing both means you can always find what you need, regardless of where you are starting from.
+
+*[Screen recording — Emma Clarke — approximately 2 minutes]*
+
+**Route 1: Opening a job from the customer record (50 seconds)**
+Navigate to David Okafor's customer record. Open one of his work addresses. Click on an open job to open the job record.
+
+*Narration cue: "The first route is through the customer record. Navigate to the customer, open the relevant work address, and the jobs listed there are ready to open. Use this route when you already know which customer the job belongs to. It is the most direct path to any job connected to a specific customer or property."*
+
+**Inside the job record (40 seconds)**
+Show the open job record. Show the main details at the top (status, description, work address), then briefly show the tabs below (Appointments, Timeline, and any others visible in this role).
+
+*Narration cue: "Inside the job record, you will find everything connected to that piece of work: the appointment history, a timeline of every action taken on the job, notes and forms submitted by the technician, and the financial details. You will work through each of these areas in detail in the Job Record series."*
+
+**Route 2: Opening a job from the jobs dashboard (30 seconds)**
+Navigate to the Jobs dashboard. Show the job list with statuses visible. Find and click a job to open it.
+
+*Narration cue: "The second route is through the Jobs dashboard. Use this when you are not starting from a specific customer, when you are checking through all jobs with a particular status or looking for work that needs attention across the business."*
+
+*[Rise — Knowledge check — 4 options]*
+**A customer calls Emma to ask about a job completed last month. Emma knows the customer's name. What is the fastest route to the job?**
+
+A) Navigate to the Jobs dashboard and scroll through completed jobs to find it
+B) Use global search to find the customer record, then open the relevant work address to find the job
+C) Navigate to the Customers section, scroll to the customer in the list, and open their record
+D) Check the appointments view for the date the job was completed
+
+*Correct (B):* Right. Global search gets Emma to the customer record directly without navigating through the customer dashboard. From there, the completed job is visible under the relevant work address with its full history attached. Two steps to the record, regardless of when the job took place.
+*Incorrect:* Global search is the fastest route. Typing the customer name takes Emma directly to the record, and from there the completed job is visible under the relevant work address. Scrolling through the Jobs dashboard or the customer list adds unnecessary steps when the customer name is already known.
+
+---
+
+**Lesson count:** 4 lessons plus 1 opening Synthesia segment
+**Synthesia segments:** 5 (opening, Lessons 1 to 4) — each 45 to 60 seconds
+**Rise content:** 4 screen recordings with narration cues; 1 Yes/No reflection prompt (Lesson 1); 1 knowledge check (Lesson 4)
+**Estimated length:** 12 minutes
+**Em dashes:** none
+**Line breaks within Synthesia scenes:** none
+**Second person present tense:** used throughout for learner address
+**First person (I/my):** not used
+**Characters from approved roster:** Emma Clarke (Office Administrator — logged-in user for all screen recordings); David Okafor (customer — screen recording demonstrations)
+**Sources used:** Commusoft Terminology (https://help.commusoft.com/en/articles/236422-commusoft-terminology); Commusoft Job Dashboard overview (https://www.commusoft.com/en-gb/blog/job-dashboard-overview-guide/)
+**Pre-submission checklist:** complete
+**Flint revisions:** Production Setup customer record field corrected from "at least two work addresses" to "multiple work addresses" to align with Lesson 3 narration ("several properties"); David Okafor established in the Compass as a landlord with eight properties.
+
+## Open items
+
+- **Needs human input** — Confirm the exact section labels in the navigation bar against the current Commusoft UI before screen recording begins. The terminology article lists: Customer Dashboard, Opportunity Dashboard, Jobs Dashboard, Suppliers Dashboard, Fleet Dashboard, Reporting Dashboard. Confirm these are the exact labels as displayed in the navbar, and confirm whether Opportunity and Fleet are visible on an Office staff role.
+- **Needs human input** — Confirm the exact location and UI label of the global search bar. The terminology article describes it as positioned next to the navbar — confirm its exact placement and whether it carries a visible search icon or placeholder text.
+- **Needs human input** — Confirm whether the Settings section is visible to an Office staff role. If not, remove the Settings reference from the Lesson 1 profile icon narration cue.
+- **Needs human input** — Confirm the tabs visible on a job record for an Office staff user. The Lesson 4 screen recording narration refers to Appointments and Timeline tabs — confirm the exact tab labels as they appear in the current UI.
+- **Needs human input** — Confirm David Okafor's customer record is set up in the demo environment with multiple work addresses and at least one open job. If he is not suitable for screen recording, confirm which customer to use instead.
+- **Needs human input** — No dedicated Help Centre article found for dashboard navigation or global search. Confirm whether HC articles exist for these topics and provide URLs to add to the Sources field before production.
+`;
+
 INBOX_FILES["ivy-induction"] = `# Enablement Specialist — Induction Plan
 
 Training is essential for your role at Commusoft. To ensure you have the best possible start, we have created this induction schedule.
@@ -5531,6 +5740,7 @@ function openInboxFile(key) {
     'reed-script-l0-10': { num: 'Reed — Script', title: 'L0 Shared Concept Library — 10 Licence types explained' },
     'reed-script-l0-11': { num: 'Reed — Script', title: 'L0 Shared Concept Library — 11 The customer portal — what your customers can do online' },
     'reed-script-l0-12': { num: 'Reed — Script', title: 'L0 Shared Concept Library — 12 User roles and permissions' },
+    'reed-script-l1-series1': { num: 'Reed — Script', title: 'L1 Office Staff Series 1 — Your first day in Commusoft' },
     'ivy-induction': { num: 'Ivy — People', title: 'Enablement Specialist Induction Plan v3' },
     'ivy-jd-academy': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Description' },
     'ivy-jd-advert': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Advert' },

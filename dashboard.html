@@ -411,9 +411,9 @@
     <div id="view-academy" class="view active">
       <div class="page-heading"><h1>Academy</h1><p>Course scripts organised by series</p></div>
       <div class="stats-row">
-        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">5</div><div class="stat-label">Series</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">26</div><div class="stat-label">Courses</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">100</div><div class="stat-label">Total Minutes</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">6</div><div class="stat-label">Series</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">33</div><div class="stat-label">Courses</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">126</div><div class="stat-label">Total Minutes</div></div>
         <div class="stat-card"><div class="stat-value" style="color:var(--blue2)">9</div><div class="stat-label">Characters</div></div>
       </div>
       <div id="job-view" class="series-block">
@@ -500,6 +500,21 @@
           <div class="course-card" onclick="openInboxFile('reed-script-l1-s4-c6')"><div class="course-num">Course 6</div><div class="course-title">Raise a recall job</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l1-s4-c7')"><div class="course-num">Course 7</div><div class="course-title">Set up and use scheduled activities</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l1-s4-challenge')"><div class="course-num">Challenge</div><div class="course-title">Job booked, engineer on the way, activities in place</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+        </div>
+      </div>
+      <div id="l1-office-series5" class="series-block">
+        <div class="series-header" style="background:var(--blue2)">
+          <div><h2>Layer 1 — Office Staff Series 5</h2><div class="series-meta">Getting paid — invoicing, payments, credit notes, statements, accounting sync, and consolidated invoicing</div></div>
+          <div class="series-count">6 courses + challenge</div>
+        </div>
+        <div class="course-grid">
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-s5-c1')"><div class="course-num">Course 1</div><div class="course-title">Raise and send an invoice</div><div class="course-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-s5-c2')"><div class="course-num">Course 2</div><div class="course-title">Mark an invoice as paid</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-s5-c3')"><div class="course-num">Course 3</div><div class="course-title">Raise a credit note</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-s5-c4')"><div class="course-num">Course 4</div><div class="course-title">Send a customer statement</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-s5-c5')"><div class="course-num">Course 5</div><div class="course-title">Sync an invoice to your accounting package</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-s5-c6')"><div class="course-num">Course 6</div><div class="course-title">Raise a consolidated invoice</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-s5-challenge')"><div class="course-num">Challenge</div><div class="course-title">Invoice raised, paid, and synced</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
     </div>
@@ -6145,6 +6160,710 @@ A recall raised from the right record, an engineer matched by skill and location
 None — all content verified against Help Centre articles.
 `;
 
+INBOX_FILES["reed-script-l1-s5-c1"] = `# Reed — Script: Raise and send an invoice
+
+**Layer:** 1 — Office Staff Path
+**Series:** 5 of 9 — Getting paid
+**Course:** 1 of 6
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Navigate to the correct starting point to raise an invoice from a job
+2. Select the right invoice type and breakdown style for the work completed
+3. Save and send the invoice to the customer
+
+**Target persona:** Office staff
+
+**SunComfort characters:** Claire Hudson (Administrator — Financial office staff)
+
+**Scenario:** A heat pump installation job at SunComfort is complete and ready to invoice. Claire raises a final invoice from the job record, selects the correct breakdown, and sends it to the customer.
+
+**Estimated length:** 5 minutes
+
+**Target audience:** Office staff at field service businesses using Commusoft — administrators and finance staff responsible for raising and sending invoices. Assumes Commusoft Compass (Layer 0), Office Staff Series 1, Series 3, and Series 4 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Commusoft Compass (Layer 0), Office Staff Series 1, Series 3, and Series 4 (Booking and scheduling) complete.
+
+**Main objective beyond learning objectives:** An invoice raised with the right type, breakdown, and line items is one that pays cleanly: it matches the customer's expectation, the finance team's records, and the accounting package. Getting this right at the point of invoicing avoids credit note reversals, payment queries, and reconciliation delays later. The steps are simple — the discipline is in doing them in the right order every time.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Introduction
+
+The invoice is the financial record of every job. Once the work is complete, the invoice is what turns a completed visit into a payment owed. Raising it correctly — with the right type, the right breakdown, and the right line items — means the customer has everything they need to pay and the finance team has everything they need to reconcile.
+
+---
+
+## Choosing the right invoice type
+
+To raise an invoice, search for the job, open it, and navigate to the Invoices tab. Select Add new invoice. The first decision is the invoice type. Commusoft supports multiple types including Deposit, Interim, Final, Draft, and Consolidated. For most completed jobs, Final is the type to select. Deposit is used to collect payment before work begins. Interim invoices are raised mid-project when billing in stages. Draft saves the invoice without marking it as issued, useful when the invoice needs review before it goes to the customer. Selecting the right type from the start ensures the invoice is treated correctly in the financial records.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: does your business invoice in stages — for example, a deposit at the start and a final invoice at completion?**
+
+*Yes:* The Deposit and Interim types are built for this. Each invoice at each stage is a separate record on the job, and the Final invoice closes the billing when the work is done. The sequence is visible on the Invoices tab throughout the job.
+*No:* A Final invoice at completion is the standard path. It is the most common invoice type and the one most jobs will use. The other types are available when you need them.
+
+---
+
+## Building the invoice
+
+With the invoice type selected, complete the invoice details: description, date, and any additional information relevant to this job. Next, choose the breakdown style. No breakdown produces a single line item total. Breakdown by category separates labour and parts. Full breakdown lists every individual item. Full breakdown by category groups items by type. The right choice depends on what the customer expects to see and what your business standard is. Add the line items in the breakdown section — this must be done on the web app, not the mobile app. Review the totals before saving.
+
+---
+
+## Saving and sending
+
+When the invoice is complete, click Save invoice. If the invoice needs one more review before it goes out, use the Draft option in Advanced options — a draft is saved but not issued and can be edited before being finalised. Once saved, the invoice can be printed or emailed directly to the customer from the invoice record. For businesses on compatible plans, a checkbox at the point of saving allows the invoice to be emailed to the customer immediately without a separate step.
+
+*[Knowledge check — 4 options]*
+**Claire is raising an invoice for a job that is not yet finished. The customer has agreed to pay a percentage of the total now, with the remainder due on completion. Which invoice type should she select?**
+
+A) Final — all invoices for active jobs should be raised as Final
+B) Draft — save it now and convert it to a final invoice when the job is complete
+C) Deposit — to collect payment before or during the work, ahead of the final invoice
+D) Consolidated — to group this job with others on the same account
+
+*Correct (C):* Right. A Deposit invoice is used to collect payment before or during work, ahead of the final invoice. Claire raises the Deposit now and raises the Final invoice when the job is complete.
+*Incorrect:* The Deposit type is the right choice here. It is used to collect payment before or during work, with the Final invoice following at completion. Draft saves the invoice without issuing it, and Consolidated groups multiple jobs into one invoice — neither fits this scenario.
+
+---
+
+## Summary
+
+To raise an invoice, navigate to the job, open the Invoices tab, and select Add new invoice. Choose the invoice type — Final for completed work, Deposit for upfront payment, Interim for staged billing, Draft for review before issue. Select the breakdown style, add line items on the web app, and save. Send the invoice to the customer by email or print it from the invoice record. The invoice type you select shapes how the record is treated in the financial system, so selecting it correctly at the start matters.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 5 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Claire Hudson (Administrator — Financial office staff)
+**Sources used:** Commusoft — Managing invoices (https://help.commusoft.com/en/articles/216679-managing-invoices)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+[OPEN — The exact steps to send/email a standard invoice from the invoice record (as opposed to consolidated invoices, which have a checkbox at save time) are not explicitly detailed in the HC article. The sending section is written around the general pattern; confirm the exact route (email button location on invoice record) before production.]
+`;
+
+INBOX_FILES["reed-script-l1-s5-c2"] = `# Reed — Script: Mark an invoice as paid
+
+**Layer:** 1 — Office Staff Path
+**Series:** 5 of 9 — Getting paid
+**Course:** 2 of 6
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Record a payment against an invoice using the correct route
+2. Select the appropriate payment method and confirm the amount
+3. Identify when to use Cash Allocations instead of a standard payment
+
+**Target persona:** Office staff
+
+**SunComfort characters:** Claire Hudson (Administrator — Financial office staff)
+
+**Scenario:** A customer has paid their final invoice. Claire records the payment in Commusoft so the invoice is marked as paid and the account balance is updated immediately.
+
+**Estimated length:** 3 minutes
+
+**Target audience:** Office staff at field service businesses using Commusoft — finance staff and administrators responsible for recording payments. Assumes Commusoft Compass (Layer 0), Office Staff Series 1, Series 3, Series 4, and Series 5 Course 1 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Commusoft Compass (Layer 0), Office Staff Series 1, Series 3, Series 4, and Series 5 Course 1 complete.
+
+**Main objective beyond learning objectives:** An invoice that has been paid but not recorded in Commusoft shows as outstanding — which means debt reports are wrong, statements show unpaid balances, and the accounting sync sends incorrect data. Recording payments promptly and accurately keeps every financial record downstream correct without any additional work.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Recording a payment
+
+To record a payment, search for the job or invoice, open the Invoices tab, and click View next to the invoice. Scroll to Payment and allocation history and select Add new payment. Commusoft auto-fills the invoice total — confirm this is correct or adjust the amount if the customer has paid a partial amount. Select the payment method: cash, cheque, bank transfer, card, or others configured in your account settings. Card payments require card details to be entered. If nominal accounts are configured for your business, set the nominal account for this payment. Click Add payment to confirm. The invoice status updates immediately and the payment is recorded against the job.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: does your business sometimes receive a single payment that covers more than one invoice for the same customer?**
+
+*Yes:* Cash Allocations handles this directly. Instead of recording the payment against a single invoice, Cash Allocations lets you assign one payment across multiple invoices simultaneously. Access it from the customer record rather than from an individual invoice.
+*No:* The standard Add new payment route on the invoice is the path for most payments. Cash Allocations is available when the need arises — a customer settling a batch of invoices in one payment, for example.
+
+---
+
+*[Knowledge check — 4 options]*
+**Claire records a payment of £800 against an invoice for £1,200. The customer has paid a deposit and will pay the remainder later. What should she enter in the amount field?**
+
+A) £1,200 — the full invoice total, regardless of what was received
+B) £0 — partial payments cannot be recorded in Commusoft
+C) £800 — the amount actually received, with the remainder outstanding
+D) £400 — the difference between the invoice total and the deposit
+
+*Correct (C):* Right. Claire enters the amount actually received, £800. The invoice remains partially outstanding until the remaining £400 is recorded as a second payment.
+*Incorrect:* The amount field should reflect what was actually received. Claire enters £800, and the invoice shows the outstanding balance until the remainder is paid and recorded.
+
+---
+
+## Summary
+
+To mark an invoice as paid, open it from the Invoices tab, scroll to Payment and allocation history, and select Add new payment. Confirm the amount, select the payment method, set the nominal account if required, and click Add payment. For partial payments, enter only the amount received. For a single payment covering multiple invoices, use Cash Allocations from the customer record. The invoice status and account balance update immediately once the payment is recorded.
+
+---
+
+**Section count:** 2 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 3 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Claire Hudson (Administrator — Financial office staff)
+**Sources used:** Commusoft — Managing invoices (https://help.commusoft.com/en/articles/216679-managing-invoices)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+None — all content verified against Help Centre article.
+`;
+
+INBOX_FILES["reed-script-l1-s5-c3"] = `# Reed — Script: Raise a credit note
+
+**Layer:** 1 — Office Staff Path
+**Series:** 5 of 9 — Getting paid
+**Course:** 3 of 6
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Distinguish the two routes to a credit note and select the appropriate one
+2. Raise a credit note against a specific invoice using Quick Links
+3. Process a refund against a credit note when a cash return is required
+
+**Target persona:** Office staff
+
+**SunComfort characters:** Claire Hudson (Administrator — Financial office staff)
+
+**Scenario:** A customer was overcharged on their last invoice for a heat pump service. Claire raises a credit note to correct the balance, and the customer requests a refund of the credited amount rather than applying it to a future invoice.
+
+**Estimated length:** 4 minutes
+
+**Target audience:** Office staff at field service businesses using Commusoft — finance staff and administrators responsible for managing invoice corrections. Assumes Commusoft Compass (Layer 0), Office Staff Series 1, Series 3, Series 4, and Series 5 Courses 1 and 2 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Commusoft Compass (Layer 0), Office Staff Series 1, Series 3, Series 4, and Series 5 Courses 1 and 2 complete.
+
+**Main objective beyond learning objectives:** Credit notes are the correct financial instrument for correcting an invoice — not deleting the original or adjusting a paid invoice. Raising a credit note creates a clean audit trail: the original invoice stays on the record, the credit note records the correction, and the account balance reflects the net position. Processing a refund from the credit note, when needed, closes the loop for the customer.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Two routes to a credit note
+
+There are two ways to raise a credit note in Commusoft, and which to use depends on whether the credit relates to a specific invoice or not. The first route is from the customer profile: navigate to Quick Links, select Invoices, and choose Add new credit note. This is the route for a general account credit not tied to a particular invoice. The second route is from the invoice itself: open the invoice or job, select Quick Links in the top right, and choose Raise credit note under the Financial section. This route pre-fills the credit note with the items from the original invoice, which saves time when you are crediting all or part of a specific charge. The pre-filled items can be adjusted before saving.
+
+---
+
+## Raising the credit note
+
+Whichever route you take, the credit note form asks for a description and date, and gives you the same breakdown style options as a standard invoice. If you are using the invoice route, the line items are pre-filled and you adjust any that should be different for this credit. If you are using the customer profile route, add the line items manually. Review the total before saving. The credit note appears in the customer's History and reduces the outstanding balance on their account.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: does your business use credit notes to correct invoices, or do you sometimes adjust or delete the original invoice instead?**
+
+*Yes:* Credit notes are the correct tool. They preserve the original invoice as an accurate record of what was charged, while the credit note documents the correction. Both records are visible in the customer history.
+*No:* Adjusting or deleting a paid invoice removes the audit trail. A credit note keeps both records — the original charge and the correction — visible and traceable. For any invoice that has been issued to a customer, a credit note is always the right instrument.
+
+---
+
+## Processing a refund
+
+If the customer wants the credit returned to them as a cash payment rather than applied to a future invoice, navigate to the customer record, locate the credit note in the History section, and click View. Open Quick Links and select Refund remaining credit. Enter a description, the date, and the refund amount — this can be the full credit or a partial amount. Select the payment method for the refund and click Receive credit to confirm. The credit note is updated to show the refunded amount and the remaining credit, if any, stays on the account.
+
+*[Knowledge check — 4 options]*
+**Claire is raising a credit note for an overcharge on a specific invoice. She wants the credit note to be pre-filled with the invoice line items to save time. Which route should she use?**
+
+A) Customer profile: Quick Links > Invoices > Add new credit note
+B) Invoice: Quick Links > Raise credit note
+C) Either route — both pre-fill the line items automatically
+D) Customer profile: Quick Links > Add new credit note, then manually copy the invoice items
+
+*Correct (B):* Right. The invoice route pre-fills the credit note with the line items from the original invoice. Claire can then adjust any items that are being partially credited.
+*Incorrect:* The invoice route — Quick Links on the invoice, then Raise credit note — is the one that pre-fills the line items. The customer profile route starts with a blank credit note and requires items to be added manually.
+
+---
+
+## Summary
+
+Credit notes in Commusoft have two routes. Use the invoice route (Quick Links > Raise credit note) when the credit relates to a specific invoice — it pre-fills the items. Use the customer profile route (Quick Links > Invoices > Add new credit note) for a general account credit. The credit reduces the outstanding balance on the account. If the customer wants a cash refund, locate the credit note in History, open Quick Links, and select Refund remaining credit to process the return.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 4 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Claire Hudson (Administrator — Financial office staff)
+**Sources used:** Commusoft — Managing invoices (https://help.commusoft.com/en/articles/216679-managing-invoices)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+None — all content verified against Help Centre article.
+`;
+
+INBOX_FILES["reed-script-l1-s5-c4"] = `# Reed — Script: Send a customer statement
+
+**Layer:** 1 — Office Staff Path
+**Series:** 5 of 9 — Getting paid
+**Course:** 4 of 6
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Generate and send a customer statement using the correct route
+2. Choose the appropriate delivery method for the customer's contact preferences
+3. Understand what a statement includes and its constraint around date filtering
+
+**Target persona:** Office staff
+
+**SunComfort characters:** Claire Hudson (Administrator — Financial office staff)
+
+**Scenario:** A commercial customer at SunComfort has several unpaid invoices and has requested a statement showing their outstanding balance. Claire generates and sends the statement so the customer can review and pay.
+
+**Estimated length:** 3 minutes
+
+**Target audience:** Office staff at field service businesses using Commusoft — finance staff and administrators responsible for managing customer account communications. Assumes Commusoft Compass (Layer 0), Office Staff Series 1, Series 3, Series 4, and Series 5 Courses 1 to 3 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Commusoft Compass (Layer 0), Office Staff Series 1, Series 3, Series 4, and Series 5 Courses 1 to 3 complete.
+
+**Main objective beyond learning objectives:** Statements give customers a single view of their outstanding account — unpaid invoices, unallocated credit notes, and the net balance owed — without requiring the office to list each item manually. A statement sent at the right time prompts payment and reduces the back-and-forth of customers asking what they owe. Understanding what a statement contains and its current constraints means it is used appropriately and the customer's expectations are set correctly.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## What a statement contains
+
+A customer statement in Commusoft is a snapshot of the customer's financial position at the point it is generated. It lists all unpaid invoices and any unallocated credit notes, showing the total outstanding balance. Statements do not currently support date filtering — the statement always reflects the full outstanding balance rather than a specific date range. This is important to know when a customer asks for a statement covering a particular period — the system will show everything currently outstanding, not a filtered view.
+
+---
+
+## Sending the statement
+
+To send a statement, navigate to the customer dashboard and open Quick Links, then select Send Statement. Before sending, choose whether to group the statement by customer contact — useful for accounts where different contacts handle different invoices. Review the generated PDF to confirm the details are correct before it goes out. Three delivery options are available: Print opens the PDF in a new browser tab for printing or saving. Email lets you select the recipient, customise the message using the statement email template, and optionally attach the individual invoices (up to 16MB total). Download saves the PDF directly to your device.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: does your business regularly send statements to customers with outstanding balances, or is it done only on request?**
+
+*Yes:* Regular statement runs are a useful prompt for payment — a customer who can see their outstanding balance in one view is more likely to act on it than one who has to track individual invoices. Building this into the end-of-month routine keeps accounts receivable visible.
+*No:* Sending on request is a valid approach for smaller customer lists. The statement is generated in the same way regardless of frequency — the key is knowing where to find it and what to expect when the customer asks.
+
+---
+
+*[Knowledge check — 4 options]*
+**A customer asks Claire for a statement showing only the invoices raised in the last three months. What should Claire tell them?**
+
+A) She can filter the statement by date range in the advanced options before sending
+B) She can generate a statement and delete the older entries before emailing it
+C) Statements cannot be filtered by date — they always show the full outstanding balance
+D) She needs to export the invoice data to a spreadsheet and filter it manually before sending
+
+*Correct (C):* Right. Statements in Commusoft do not currently support date filtering. The statement will show all unpaid invoices, regardless of when they were raised. Claire should let the customer know and send the full statement.
+*Incorrect:* Date filtering is not currently available on statements. The statement will always reflect the full outstanding balance. Claire can let the customer know that the statement shows all unpaid invoices and offer to follow up with individual invoice details if a specific period is needed.
+
+---
+
+## Summary
+
+A customer statement lists all unpaid invoices and unallocated credit notes at the point it is generated. Date filtering is not currently available. To send one, navigate to the customer dashboard, open Quick Links, and select Send Statement. Review the PDF, then choose to print, email, or download. For email, attach the invoices if the customer needs them alongside the summary. The statement is a prompt for payment — used consistently, it keeps outstanding balances visible and reduces payment delays.
+
+---
+
+**Section count:** 3 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 3 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Claire Hudson (Administrator — Financial office staff)
+**Sources used:** Commusoft — Send statement (https://help.commusoft.com/en/articles/216465-send-statement)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+None — all content verified against Help Centre article.
+`;
+
+INBOX_FILES["reed-script-l1-s5-c5"] = `# Reed — Script: Sync an invoice to your accounting package
+
+**Layer:** 1 — Office Staff Path
+**Series:** 5 of 9 — Getting paid
+**Course:** 5 of 6
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Identify which accounting packages Commusoft integrates with
+2. Distinguish between automatic and manual sync and select the appropriate mode
+3. Use the Accounting Integration Dashboard to monitor and push data
+
+**Target persona:** Office staff
+
+**SunComfort characters:** Claire Hudson (Administrator — Financial office staff)
+
+**Scenario:** SunComfort uses Xero as its accounting package. Claire uses the Accounting Integration Dashboard to check what is queued for sync and pushes the latest invoices and payments across at the end of the working day.
+
+**Estimated length:** 4 minutes
+
+**Target audience:** Office staff at field service businesses using Commusoft — finance staff and administrators responsible for keeping Commusoft and an external accounting package in sync. Assumes Commusoft Compass (Layer 0), Office Staff Series 1, Series 3, Series 4, and Series 5 Courses 1 to 4 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Commusoft Compass (Layer 0), Office Staff Series 1, Series 3, Series 4, and Series 5 Courses 1 to 4 complete.
+
+**Main objective beyond learning objectives:** An accounting integration that runs without oversight produces accurate data in Xero or Sage only when everything in Commusoft is correct. Office staff who understand what syncs, when it syncs, and where to check the queue can catch problems before they create reconciliation issues in the accounting package. The integration amplifies what is already in Commusoft — good data in, good data out.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Supported packages
+
+Commusoft integrates with a range of accounting packages: Xero, QuickBooks Online, FreeAgent, Sage 200, Sage Business Cloud, Sage 50 (UK only), Kashflow, and QuickBooks Desktop Enterprise (US only). The integration is set up once in account settings and, once live, allows invoices, credit notes, and payments created in Commusoft to flow through to the accounting package without being re-entered manually. The integration is configured by an account administrator — as an office user, your role is monitoring the sync queue and pushing data when required.
+
+---
+
+## Automatic vs. manual sync
+
+The integration offers two sync modes. Automatic sync runs every two hours, pushing new data to the accounting package without any action required. Manual sync requires you to initiate the push by clicking Send Data Now on the Accounting Integration Dashboard. During the initial setup phase, manual sync is recommended to prevent incorrect or incomplete data from being pushed before the integration is fully configured. Once the account administrator is satisfied that everything is mapping correctly, automatic sync can be enabled. In either mode, the Accounting Integration Dashboard shows what is queued and what has been sent.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: does your business currently use an accounting package alongside Commusoft — such as Xero, QuickBooks, or Sage?**
+
+*Yes:* The integration removes the need for double-entry. What is invoiced and paid in Commusoft moves to the accounting package through the sync, keeping both systems accurate without manual transfers. Understanding the dashboard means you can confirm the transfer has happened and investigate if anything does not appear as expected.
+*No:* The integration is an optional feature — Commusoft's financial records stand on their own without it. If your business adopts an accounting package in the future, this integration is the bridge that keeps the two systems aligned.
+
+---
+
+## Using the dashboard
+
+The Accounting Integration Dashboard shows the data waiting to be sent, the data already sent, and any items that have not synced successfully. Review the Waiting to Be Sent section before pushing to check that the records listed are expected. Select Send Data Now to initiate the transfer. After the push, confirm that the records have moved to the sent section. If any records show an error, investigate the cause — common issues include missing nominal code mappings or customers that have not been linked between Commusoft and the accounting package. Commusoft is not responsible for the quality of data that is imported or exported, so the accuracy of the data in the system before the sync is the responsibility of the business.
+
+*[Knowledge check — 4 options]*
+**Claire notices that an invoice she raised this morning has not appeared in Xero, even though automatic sync is enabled. What should she check first?**
+
+A) Re-raise the invoice in Commusoft — invoices must be recreated to trigger a sync
+B) The Accounting Integration Dashboard — check whether the invoice is in the Waiting to Be Sent queue or shows an error
+C) The invoice settings in Xero — the issue is always on the accounting package side
+D) Contact Commusoft support immediately — sync failures cannot be resolved by office users
+
+*Correct (B):* Right. The Accounting Integration Dashboard shows the sync queue and any errors. Claire should check whether the invoice is waiting, already sent, or flagged with an error — and investigate the cause from there.
+*Incorrect:* The Accounting Integration Dashboard is the first place to check. It shows what is queued, what has been sent, and what has not synced successfully. If the invoice is in the error list, the cause — such as a missing nominal code or an unlinked customer — will be visible there.
+
+---
+
+## Summary
+
+Commusoft integrates with Xero, QuickBooks Online, FreeAgent, Sage, Kashflow, and others. The integration syncs invoices, credit notes, and payments from Commusoft to the accounting package in either automatic mode (every two hours) or manual mode (Send Data Now). Use the Accounting Integration Dashboard to monitor the queue, push data manually when needed, and investigate any sync errors before they affect the accounting package. Data accuracy in Commusoft before the sync determines data accuracy in the accounting package after it.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 4 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Claire Hudson (Administrator — Financial office staff)
+**Sources used:** Commusoft — Accounting Integration Overview (https://help.commusoft.com/en/articles/262303-accounting-integration-overview); How to set up your accounting integration (https://help.commusoft.com/en/articles/217412-how-to-set-up-your-accounting-integration)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
+
+INBOX_FILES["reed-script-l1-s5-c6"] = `# Reed — Script: Raise a consolidated invoice
+
+**Layer:** 1 — Office Staff Path
+**Series:** 5 of 9 — Getting paid
+**Course:** 6 of 6
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Identify when a consolidated invoice is appropriate and which plan tier enables it
+2. Build a consolidated invoice by selecting the correct jobs and verifying totals
+3. Identify the constraint that applies when using the Final invoice type within a consolidated invoice
+
+**Target persona:** Office staff
+
+**SunComfort characters:** Claire Hudson (Administrator — Financial office staff)
+
+**Scenario:** SunComfort has completed six maintenance visits for a commercial property management client over the past month. Rather than sending six separate invoices, Claire raises a single consolidated invoice covering all the work, which is the billing format the client prefers.
+
+**Estimated length:** 4 minutes
+
+**Target audience:** Office staff at field service businesses using Commusoft — finance staff and administrators responsible for invoicing commercial clients. Assumes Commusoft Compass (Layer 0), Office Staff Series 1, Series 3, Series 4, and Series 5 Courses 1 to 5 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Commusoft Compass (Layer 0), Office Staff Series 1, Series 3, Series 4, and Series 5 Courses 1 to 5 complete.
+
+**Main objective beyond learning objectives:** Commercial clients and property managers frequently request consolidated invoicing — a single document covering all jobs in a period rather than individual invoices per visit. Office staff who can raise a consolidated invoice correctly reduce the administrative overhead for both the business and the client, and ensure that the jobs included are the right ones with the correct totals before the invoice goes out.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Introduction
+
+A consolidated invoice combines multiple job invoices into a single document for a customer. Instead of sending one invoice per visit, the office sends one invoice covering all the work completed in a given period. This is particularly common in commercial accounts where the client's finance team expects a single monthly or quarterly bill. Consolidated invoicing is available on the Go Paperless plan and above — confirm your account tier before using this feature.
+
+---
+
+## Building the consolidated invoice
+
+To raise a consolidated invoice, navigate to the customer record and open Quick Links, then select Invoices and choose Add new consolidated invoice. Enter a description for the consolidated invoice — the invoice number is generated automatically. Verify the invoice date and payment due date, and add a business unit, user group, or invoice notes if applicable to this account. Use the filters to select the jobs you want to include. Any jobs where the total price has not been set will appear with a blank field in the Total price column — fill these in before proceeding. Check that the correct invoice type is set for each job included. Review the calculated grand total before saving.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: do any of your commercial clients request a single monthly invoice covering multiple jobs rather than individual invoices per visit?**
+
+*Yes:* Consolidated invoicing is the built-in solution for this. The client receives one document, the business maintains individual job records, and the consolidated invoice links back to all the jobs it covers so the detail is always available.
+*No:* Individual invoices remain the standard path. Consolidated invoicing is available when commercial clients with batch billing preferences join the account — having seen the workflow means you are ready when that requirement comes.
+
+---
+
+## The Final invoice type warning
+
+When selecting the invoice type for jobs included in the consolidated invoice, choosing Final triggers a confirmation warning: finalising a job's invoice will cancel any future diary events for that job. This is important for jobs where further visits are planned but have not yet been raised as separate jobs — the Future diary events for those jobs will be removed. Review each job's status before selecting Final to confirm that the job is genuinely complete and no further visits are expected.
+
+*[Knowledge check — 4 options]*
+**Claire is building a consolidated invoice and notices that one of the jobs included has a scheduled diary appointment next week for a follow-up visit. She selects Final as the invoice type for that job. What happens?**
+
+A) Nothing — diary events are not affected by invoice type selection
+B) The appointment moves to the next available slot automatically
+C) Commusoft displays a warning that future diary events will be cancelled if she proceeds
+D) The invoice is blocked from saving until the diary appointment is removed manually
+
+*Correct (C):* Right. Commusoft displays a warning before confirming. Claire should review whether the upcoming appointment is correct before proceeding — if the visit is genuinely planned, she should not select Final for that job.
+*Incorrect:* Selecting Final as the invoice type for a job within a consolidated invoice triggers a confirmation warning: future diary events for that job will be cancelled. Claire should review whether the planned appointment should be removed before finalising.
+
+---
+
+## Summary
+
+A consolidated invoice is raised from the customer record via Quick Links. Enter the description, verify dates, select the jobs using filters, fill in any missing totals, and check invoice types before saving. The invoice number is auto-generated. Selecting Final as the invoice type for any included job triggers a warning about future diary events being cancelled — review each job's status before confirming. Once saved, the consolidated invoice appears in the customer's History with a single invoice number that links to all the included jobs.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 4 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Claire Hudson (Administrator — Financial office staff)
+**Sources used:** Commusoft — Managing invoices (https://help.commusoft.com/en/articles/216679-managing-invoices)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+None — all content verified against Help Centre article.
+`;
+
+INBOX_FILES["reed-script-l1-s5-challenge"] = `# Reed — Script: Series challenge — Invoice raised, paid, and synced
+
+**Layer:** 1 — Office Staff Path
+**Series:** 5 of 9 — Getting paid
+**Course:** Series challenge
+**Format:** Synthesia micro-course — Clint and Sarah dialogue
+**Presenter:** Clint (instructional); Sarah (dialogue partner)
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Select the correct invoice type for a given billing scenario
+2. Identify the right tool when a payment covers multiple invoices
+3. Apply the credit note and refund process when an invoice correction is needed
+
+**Target persona:** Office staff
+
+**SunComfort characters:** Claire Hudson (Administrator — Financial office staff — referenced in scenario)
+
+**Scenario:** SunComfort is closing out the month. Claire has three financial decisions to work through: a multi-stage job invoice, a payment that covers several accounts, and a customer who has spotted a billing error. Sarah surfaces each decision and Clint works through the correct approach.
+
+**Estimated length:** 3 minutes
+
+**Target audience:** Office staff at field service businesses using Commusoft who have completed Series 5 (Getting paid). This challenge tests the invoicing and payment decisions from all six courses against a single realistic scenario. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Series 5 Courses 1 to 6 complete.
+
+**Main objective beyond learning objectives:** Each course in this series covers one financial workflow in isolation. This challenge puts the decisions together in sequence — choosing invoice types, handling a payment across multiple invoices, correcting a charge, and confirming the sync has run — because that is how end-of-month invoicing actually works. A learner who can navigate these decisions in sequence has the foundation to manage the billing cycle correctly from first invoice to reconciled payment.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Challenge opening
+
+*[Clint — 30 seconds]*
+
+It is end of month at SunComfort. Claire is working through the invoicing queue and three decisions have landed. A commercial client invoiced in stages, a payment that covers four accounts, and a customer who has called about an overcharge. Each one has a right answer. Sarah has spotted all of them.
+
+---
+
+## Dialogue: The decisions
+
+*[Sarah — 15 seconds]*
+
+A large commercial client is billed in two parts — thirty percent upfront, the rest at completion. Claire is about to raise the first invoice. Which type should she select?
+
+*[Clint — 20 seconds]*
+
+Deposit. The Deposit type is used to collect payment before or during work, with the Final invoice following at completion. Raising a Final invoice now would close the billing on a job that is not finished. The type sets the structure for the whole billing sequence, so it matters at the first step.
+
+*[Sarah — 15 seconds]*
+
+A property management company has sent a single bank transfer covering four separate invoices across different jobs. Claire needs to allocate it. Should she record a payment on each invoice individually?
+
+*[Clint — 20 seconds]*
+
+No. That is a Cash Allocation. Navigate to the customer record and use Cash Allocations to assign the single payment across all four invoices at once. Recording it four times individually would create four separate payment entries against one bank transaction, which makes reconciliation harder, not easier.
+
+*[Sarah — 15 seconds]*
+
+A customer has reviewed their final invoice and says they were charged for a part that was not used. The invoice has already been issued. Should Claire edit the invoice directly?
+
+*[Clint — 20 seconds]*
+
+No. Raise a credit note. Open the invoice, use Quick Links to select Raise credit note, and adjust the pre-filled items to reflect only the line being corrected. The original invoice stays on the record. The credit note documents the correction. Both are visible in the customer history and both will sync to the accounting package correctly.
+
+*[Sarah — 15 seconds]*
+
+The correction is done. Claire checks the Accounting Integration Dashboard and the credit note is showing in the Waiting to Be Sent queue. Automatic sync is enabled. Does she need to do anything?
+
+*[Clint — 20 seconds]*
+
+Not urgently, no. With automatic sync enabled, the data will push within the next two hours. If she needs it in Xero now, she can select Send Data Now from the dashboard to push immediately. Either way, checking the dashboard confirms the record is queued rather than sitting in an error state.
+
+---
+
+## Knowledge check
+
+*[Knowledge check — 4 options]*
+**Claire is raising a consolidated invoice for a client and selects Final as the invoice type for one of the included jobs. A warning appears. What is Commusoft telling her?**
+
+A) The consolidated invoice cannot be saved until all jobs use the same invoice type
+B) The customer has reached their credit limit and the invoice cannot be issued
+C) Future diary events for that job will be cancelled if she proceeds with Final
+D) The job has an outstanding credit note that must be resolved before invoicing
+
+*Correct (C):* Right. Selecting Final within a consolidated invoice triggers a warning that future diary events for that job will be cancelled. Claire should confirm the job is genuinely complete before proceeding.
+*Incorrect:* The warning appears because Final as an invoice type signals that the job is done — and any future diary events for that job will be cancelled as a result. Claire should check whether any planned visits are still outstanding before confirming.
+
+---
+
+## Series close
+
+*[Clint — 30 seconds]*
+
+A Deposit to open the billing, a Cash Allocation to match a single payment to four invoices, a credit note to correct the charge without touching the original invoice, and a dashboard check to confirm the sync is queued. Four decisions, four clean outcomes. The billing cycle in Commusoft is a sequence — get each step right and the financial record looks after itself. Series 5 is complete.
+
+---
+
+**Section count:** Challenge opening, 6 dialogue exchanges, 1 knowledge check, series close
+**Estimated length:** 3 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address
+**First person (I/my):** not used
+**Characters from approved roster:** Clint (presenter); Sarah (dialogue partner); Claire Hudson (Administrator — Financial office staff, referenced in scenario)
+**Sources used:** Commusoft — Managing invoices (https://help.commusoft.com/en/articles/216679-managing-invoices); Send statement (https://help.commusoft.com/en/articles/216465-send-statement); Accounting Integration Overview (https://help.commusoft.com/en/articles/262303-accounting-integration-overview); How to set up your accounting integration (https://help.commusoft.com/en/articles/217412-how-to-set-up-your-accounting-integration)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
+
 INBOX_FILES["ivy-induction"] = `# Enablement Specialist — Induction Plan
 
 Training is essential for your role at Commusoft. To ensure you have the best possible start, we have created this induction schedule.
@@ -7019,6 +7738,13 @@ function openInboxFile(key) {
     'reed-script-l1-s4-c6': { num: 'Reed — Script', title: 'L1 Office Staff Series 4 — Course 6: Raise a recall job' },
     'reed-script-l1-s4-c7': { num: 'Reed — Script', title: 'L1 Office Staff Series 4 — Course 7: Set up and use scheduled activities' },
     'reed-script-l1-s4-challenge': { num: 'Reed — Script', title: 'L1 Office Staff Series 4 — Challenge: Job booked, engineer on the way, activities in place' },
+    'reed-script-l1-s5-c1': { num: 'Reed — Script', title: 'L1 Office Staff Series 5 — Course 1: Raise and send an invoice' },
+    'reed-script-l1-s5-c2': { num: 'Reed — Script', title: 'L1 Office Staff Series 5 — Course 2: Mark an invoice as paid' },
+    'reed-script-l1-s5-c3': { num: 'Reed — Script', title: 'L1 Office Staff Series 5 — Course 3: Raise a credit note' },
+    'reed-script-l1-s5-c4': { num: 'Reed — Script', title: 'L1 Office Staff Series 5 — Course 4: Send a customer statement' },
+    'reed-script-l1-s5-c5': { num: 'Reed — Script', title: 'L1 Office Staff Series 5 — Course 5: Sync an invoice to your accounting package' },
+    'reed-script-l1-s5-c6': { num: 'Reed — Script', title: 'L1 Office Staff Series 5 — Course 6: Raise a consolidated invoice' },
+    'reed-script-l1-s5-challenge': { num: 'Reed — Script', title: 'L1 Office Staff Series 5 — Challenge: Invoice raised, paid, and synced' },
     'ivy-induction': { num: 'Ivy — People', title: 'Enablement Specialist Induction Plan v3' },
     'ivy-jd-academy': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Description' },
     'ivy-jd-advert': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Advert' },

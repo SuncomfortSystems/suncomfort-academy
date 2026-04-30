@@ -411,9 +411,9 @@
     <div id="view-academy" class="view active">
       <div class="page-heading"><h1>Academy</h1><p>Course scripts organised by series</p></div>
       <div class="stats-row">
-        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">8</div><div class="stat-label">Series</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">39</div><div class="stat-label">Courses</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">149</div><div class="stat-label">Total Minutes</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">9</div><div class="stat-label">Series</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">42</div><div class="stat-label">Courses</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">160</div><div class="stat-label">Total Minutes</div></div>
         <div class="stat-card"><div class="stat-value" style="color:var(--blue2)">9</div><div class="stat-label">Characters</div></div>
       </div>
       <div id="job-view" class="series-block">
@@ -538,6 +538,17 @@
           <div class="course-card" onclick="openInboxFile('reed-script-l1-s7-c1')"><div class="course-num">Course 1</div><div class="course-title">From the old way to proposals — getting started</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l1-s7-c2')"><div class="course-num">Course 2</div><div class="course-title">Build and send your first proposal</div><div class="course-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l1-s7-challenge')"><div class="course-num">Challenge</div><div class="course-title">First proposal sent and accepted</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+        </div>
+      </div>
+      <div id="l1-office-series8" class="series-block">
+        <div class="series-header" style="background:var(--blue2)">
+          <div><h2>Layer 1 — Office Staff Series 8</h2><div class="series-meta">Service reminders — adding reminders, scheduling jobs, and keeping the recurring service cycle running</div></div>
+          <div class="series-count">2 courses + challenge</div>
+        </div>
+        <div class="course-grid">
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-s8-c1')"><div class="course-num">Course 1</div><div class="course-title">Add a service reminder to a customer</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-s8-c2')"><div class="course-num">Course 2</div><div class="course-title">Schedule a job from a service reminder</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-s8-challenge')"><div class="course-num">Challenge</div><div class="course-title">Reminder triggered, job booked</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
     </div>
@@ -7541,6 +7552,327 @@ A missing template caught before the form was completed. A printed proposal for 
 
 None — all content verified against Help Centre articles.
 `;
+INBOX_FILES["reed-script-l1-s8-c1"] = `# Reed — Script: Add a service reminder to a customer
+
+**Layer:** 1 — Office Staff Path
+**Series:** 8 of 9 — Service reminders
+**Course:** 1 of 2
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Explain what a service reminder is and what it enables in Commusoft
+2. Add a service reminder to a customer record with the required fields completed
+3. Identify the constraints that apply when setting up service reminders
+
+**Target persona:** Office staff
+
+**SunComfort characters:** Emma Clarke (Office Administrator)
+
+**Scenario:** SunComfort is moving from paper-based renewal tracking to service reminders in Commusoft. Emma is setting up the first reminders and needs to understand what they are, how to add them, and what must be in place before they can send.
+
+**Estimated length:** 4 minutes
+
+**Target audience:** Office staff at field service businesses using Commusoft — administrators responsible for customer retention and recurring job management. Assumes Commusoft Compass (Layer 0), Office Staff Series 1, Series 3, and Series 4 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Commusoft Compass (Layer 0), Office Staff Series 1, Series 3, and Series 4 (Booking and scheduling) complete.
+
+**Main objective beyond learning objectives:** A service reminder that is set up incorrectly — wrong contact, wrong date, or no communication preference enabled — sends nothing and leaves the renewal gap open. Office staff who understand what the reminder record holds and what conditions must be in place will set reminders up correctly from the start, rather than discovering the gap when a customer misses their annual service.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## What a service reminder is
+
+A service reminder in Commusoft is a record attached to a customer or work address that tracks when a recurring service is next due. When the due date arrives, Commusoft can prompt the customer by email, SMS, phone, or letter, depending on the communication preferences configured for that customer. The reminder does not raise a job automatically — it triggers the outreach that prompts the customer to authorise one. For businesses that rely on annual services, gas safety checks, or maintenance contracts, service reminders are the mechanism that keeps recurring work visible and actioned rather than falling through the gaps.
+
+---
+
+## Adding a service reminder
+
+To add a service reminder, open the customer or work address record and locate the Service reminders section. If no reminders exist yet, select the prompt to add one. If reminders already exist, go to Quick links, then View, then Add new service reminder. Three fields are required: the service type, which identifies what the reminder is for; the due date, which sets when the service is next required; and the Send to field, which selects the contact who will receive the reminder communications. Once saved, the reminder appears in the Service reminders section of the record and becomes active on the due date.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: does your business currently have a consistent method for tracking when each customer's annual service or maintenance visit is due?**
+
+*Yes:* The service reminder record in Commusoft formalises that process. The due date, contact, and service type are stored on the customer record and the reminder sends automatically — without relying on a separate spreadsheet or calendar.
+*No:* Service reminders are the answer to that gap. Every customer with a recurring service can have a reminder on their record, so due dates are visible in the system rather than tracked outside it.
+
+---
+
+## Constraints to know before you start
+
+Two constraints apply when setting up service reminders. First, a single job can have up to three service reminders attached to it — useful when a visit covers multiple service types. Second, service reminders send to the main customer's contact address only. If the work is carried out at a work address that has a separate contact, the reminder still goes to the main customer account — not to the work address contact. Check that the contact in the Send to field is the right person to receive the reminder for that property.
+
+Before any reminder can send, communication preferences must be enabled for the customer. This is an account-level setting that also needs to be active at the individual customer level. If a reminder is set up but communications are not enabled, it will not send. Confirm this is in place when adding reminders for the first time.
+
+*[Knowledge check — 4 options]*
+**Emma sets up a service reminder for a customer and saves it. Two weeks later, the due date arrives but the customer receives no email or SMS. What is the most likely cause?**
+
+A) The reminder was set up on the work address record rather than the customer record
+B) Communication preferences are not enabled for that customer
+C) The service type selected does not support email or SMS notifications
+D) The reminder was saved without a due date and defaulted to inactive
+
+*Correct (B):* Right. Service reminders require communication preferences to be enabled both at the account level and for the individual customer. If they are not enabled, the reminder will not send regardless of the due date or contact selected.
+*Incorrect:* If a service reminder does not send on its due date, the most likely cause is that communication preferences are not enabled for that customer. The setting must be active at both the account level and the individual customer level before any reminder communications can go out.
+
+---
+
+## Summary
+
+A service reminder in Commusoft tracks when a recurring service is next due and prompts the customer when that date arrives. To add one, open the customer or work address record, go to the Service reminders section, and complete the three required fields: service type, due date, and Send to contact. Up to three reminders can be attached to a single job. Reminders send to the main customer contact only — not to a separate work address contact. Communication preferences must be enabled for the customer before any reminder will send. Get these in place when setting up the first reminder and the system does the follow-up from there.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 4 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Emma Clarke (Office Administrator)
+**Sources used:** Commusoft — Service reminders (https://help.commusoft.com/en/articles/216807-service-reminders); Add a service reminder to a customer (https://help.commusoft.com/en/articles/216806-add-service-reminder)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
+INBOX_FILES["reed-script-l1-s8-c2"] = `# Reed — Script: Schedule a job from a service reminder
+
+**Layer:** 1 — Office Staff Path
+**Series:** 8 of 9 — Service reminders
+**Course:** 2 of 2
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Locate service reminders that are due and ready to act on
+2. Apply the correct response when a customer authorises or does not authorise a service
+3. Explain what happens to a service reminder after the linked job is closed
+
+**Target persona:** Office staff
+
+**SunComfort characters:** Emma Clarke (Office Administrator)
+
+**Scenario:** SunComfort's service reminders have gone out and customers are responding. Emma needs to work through the due reminders: some customers are ready to book, others are not. She needs to know how to create the job from the reminder, what to do when a customer declines or delays, and how the reminder resets when the job is done.
+
+**Estimated length:** 4 minutes
+
+**Target audience:** Office staff at field service businesses using Commusoft — administrators who manage recurring job scheduling from service reminders. Assumes Commusoft Compass (Layer 0), Office Staff Series 1, Series 3, Series 4, and Series 8 Course 1 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Series 8 Course 1 complete. At least one service reminder is set up and due.
+
+**Main objective beyond learning objectives:** A service reminder that sends but is never acted on provides no value. The scheduling step is where the reminder becomes a booked job — or where it is correctly deferred or closed. Office staff who know how to move through the due reminders list efficiently, make the right call when a customer is not ready, and understand how the reminder resets after the job closes will keep the recurring work pipeline moving without duplicating effort or losing track of outstanding services.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Finding due service reminders
+
+Due service reminders are accessed from the customer record. Navigate to Quick links, then Service reminders, then Work address reminders due. This shows all the service reminders for that customer's work addresses that are currently due and waiting to be actioned. For a single property, select the plus button and choose Configure to open the scheduling options. If the customer has multiple properties with reminders due at the same time, select the checkboxes for each one and choose Customer decision batch process to handle them together in a single step.
+
+---
+
+## Responding to the customer's decision
+
+When you open the scheduling options for a reminder, you choose between two paths based on what the customer has decided. If the customer has authorised the service, select Authorised and add new job. This creates a service job linked to the reminder. When creating the job, confirm that the Service job box is checked and select the correct service type. You will also need to select an access method for the work address. Once saved, the job is live and can be scheduled in the usual way.
+
+If the customer has not authorised the service — they have declined, asked to delay, or not yet responded — select Not authorised. This gives you three options: cancel the reminder for this instance only, cancel it permanently, or postpone it to a future date. Use postpone when the customer wants to rebook at a later date. Use cancel for this instance when the customer does not want a service this time but should still receive future reminders. Use permanent cancel only when the customer has ended the service relationship entirely and the reminder should not recur.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: does your business currently have a way to track customers who said they want to rebook a service at a later date?**
+
+*Yes:* The postpone option in Commusoft formalises that record. The reminder is rescheduled to the new date and remains visible in the due list when that date arrives — no separate tracking needed.
+*No:* This is where the postpone option is most useful. Instead of noting a callback date outside the system, the reminder is moved forward in Commusoft and surfaces automatically when the customer is ready to be contacted again.
+
+---
+
+## What happens after the job closes
+
+The service reminder does not reset when the job is booked or completed — it resets when the job is closed. A job closes when a final invoice is raised or the job is marked as free of charge. At that point, Commusoft prompts you to confirm the next service date. The system calculates a suggested date based on the service frequency configured for that reminder type — for example, one year from today for an annual service. You can accept the suggested date or set a different one. Once confirmed, the reminder is created for the next cycle and the current cycle is marked as done. If the next service date is not set at job close, the reminder cycle does not continue automatically.
+
+*[Knowledge check — 4 options]*
+**Emma closes a job that was booked from a service reminder. Commusoft prompts her to confirm the next service date. She closes the prompt without entering a date. What happens to the reminder?**
+
+A) The reminder resets automatically to the same date next year based on the service frequency
+B) The reminder remains active with its current due date until a date is entered manually
+C) The reminder cycle does not continue — no new reminder is created until a date is set
+D) The reminder is marked as complete and permanently closed
+
+*Correct (C):* Right. The next service reminder is only created when the next service date is confirmed at job close. If the prompt is dismissed without entering a date, the reminder cycle does not continue and the customer will not receive a reminder for the next service period.
+*Incorrect:* The reminder cycle depends on the next service date being confirmed at job close. If that step is skipped, no new reminder is created. The customer will not receive a reminder for the next service unless the date is set manually on the record.
+
+---
+
+## Summary
+
+Due service reminders are found under Quick links, Service reminders, Work address reminders due on the customer record. For a single property, select the plus button and choose Configure. For multiple properties, use the batch process option. If the customer authorises the service, create the linked service job and schedule it as normal. If they do not, postpone, cancel for this instance, or permanently cancel based on the situation. The reminder resets at job close — confirm the next service date when prompted or the cycle will not continue. Work through the due list consistently and the recurring service schedule runs through the system rather than around it.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 4 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Emma Clarke (Office Administrator)
+**Sources used:** Commusoft — Service reminders (https://help.commusoft.com/en/articles/216807-service-reminders); Schedule a job from a service reminder (https://help.commusoft.com/en/articles/216804-schedule-a-job-from-a-service-reminder)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
+INBOX_FILES["reed-script-l1-s8-challenge"] = `# Reed — Script: Series challenge — Reminder triggered, job booked
+
+**Layer:** 1 — Office Staff Path
+**Series:** 8 of 9 — Service reminders
+**Course:** Series challenge
+**Format:** Synthesia micro-course — Clint and Sarah dialogue
+**Presenter:** Clint (instructional); Sarah (dialogue partner)
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Apply the correct response when a service reminder fails to send
+2. Distinguish between the three responses available when a customer does not authorise a service
+3. Confirm what step must be completed at job close to keep the reminder cycle running
+
+**Target persona:** Office staff
+
+**SunComfort characters:** Emma Clarke (Office Administrator)
+
+**Scenario:** SunComfort's first round of service reminders has gone out. Some have triggered correctly, some have not. Customers have called in with varying responses. Emma works through three situations that land in the same morning. Sarah raises each decision; Clint works through the right call.
+
+**Estimated length:** 3 minutes
+
+**Target audience:** Office staff at field service businesses using Commusoft who have completed Series 8 Courses 1 and 2. This challenge tests the service reminder workflow decisions against realistic scenarios. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Series 8 Courses 1 and 2 complete.
+
+**Main objective beyond learning objectives:** Service reminders only work when the full cycle runs: set up correctly, communications enabled, due dates actioned, and the reminder reset at job close. This challenge tests whether learners can identify what breaks the cycle and make the right decision at each step — including the steps that are easy to skip.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Challenge opening
+
+*[Clint — 30 seconds]*
+
+SunComfort sent its first batch of service reminders this morning. Most triggered correctly. But three situations have landed in Emma's inbox that need the right response. One reminder did not send. One customer is not ready to book. And one job is about to close without the next service date being confirmed. Sarah has the first one.
+
+---
+
+## Dialogue: The decisions
+
+*[Sarah — 15 seconds]*
+
+A customer calls to say they never received their annual service reminder. Emma checks the record — the reminder was set up and the due date has passed. What should she check first?
+
+*[Clint — 20 seconds]*
+
+Communication preferences. A reminder that is set up correctly but does not send almost always means communication preferences are not enabled for that customer. Emma needs to check both the account-level setting and the individual customer record. If preferences are off at either level, the reminder will not send regardless of the due date or the contact selected. Once enabled, Emma should confirm the reminder is still active and check whether it needs to be sent manually for this cycle.
+
+*[Sarah — 15 seconds]*
+
+The next customer calls in response to their reminder. They want the service done but they are going on holiday for six weeks and cannot book until they are back. What should Emma do?
+
+*[Clint — 20 seconds]*
+
+Postpone the reminder to a date after the customer returns. This keeps the reminder active and moves it forward in the due list — Emma does not need to track the callback separately. When the postponed date arrives, the reminder surfaces again and Emma can contact the customer and book the job. Postpone is the right call whenever a customer wants the service but cannot commit to a date right now.
+
+*[Sarah — 15 seconds]*
+
+The third customer says they have sold the property and will not be needing any more services. What is the right response?
+
+*[Clint — 20 seconds]*
+
+Permanently cancel the reminder. This is different from cancelling for one instance, which keeps the reminder active for future cycles. If the customer has ended the service relationship entirely, the reminder should not recur. Permanent cancel closes it out. If Emma is not certain — for example, the customer might be in a lease situation and a new tenant could be taking over — cancel for this instance is a safer choice until the situation is confirmed.
+
+*[Sarah — 15 seconds]*
+
+Emma books the job for the customer who postponed and the job is now complete. The technician has raised a free-of-charge job mark. Emma closes the job. What must she do before moving on?
+
+*[Clint — 20 seconds]*
+
+Confirm the next service date. When a job linked to a service reminder closes, Commusoft prompts for the next service date. If Emma dismisses that prompt without entering a date, the reminder cycle stops. The system suggests a date based on the service frequency — Emma should review it and confirm or adjust it. That confirmation is what creates the reminder for the next cycle. Skipping it means the customer will not receive a reminder for their next annual service.
+
+---
+
+## Knowledge check
+
+*[Knowledge check — 4 options]*
+**A customer tells Emma they do not want a service this year but would like to be contacted again next year. Which response should Emma select?**
+
+A) Permanently cancel — the customer has declined, so the reminder should be removed
+B) Cancel for this instance — the reminder stays active and will recur for the next service period
+C) Postpone — the reminder is moved forward by one year
+D) Leave the reminder as due and follow up manually next year
+
+*Correct (B):* Right. Cancel for this instance closes the current reminder cycle without removing the reminder permanently. The customer will still receive a reminder when the next service period comes around, which is exactly what they have asked for.
+*Incorrect:* When a customer wants to skip this service but be contacted again in future, the correct response is to cancel for this instance. This closes the current cycle but keeps the reminder active — the customer will receive a reminder for their next service period without needing any manual follow-up.
+
+---
+
+## Series close
+
+*[Clint — 30 seconds]*
+
+Communication preferences checked, a postponed reminder rescheduled, a permanent cancel applied for a customer who has moved on, and the next service date confirmed at job close. All four situations required a specific response — and getting them right is what keeps the recurring service cycle running without gaps or manual workarounds. Series 8 is complete.
+
+---
+
+**Section count:** Challenge opening, 8 dialogue exchanges, 1 knowledge check, series close
+**Estimated length:** 3 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address
+**First person (I/my):** not used
+**Characters from approved roster:** Clint (presenter); Sarah (dialogue partner); Emma Clarke (Office Administrator, referenced in scenario)
+**Sources used:** Commusoft — Service reminders (https://help.commusoft.com/en/articles/216807-service-reminders); Add a service reminder to a customer (https://help.commusoft.com/en/articles/216806-add-service-reminder); Schedule a job from a service reminder (https://help.commusoft.com/en/articles/216804-schedule-a-job-from-a-service-reminder)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
 INBOX_FILES["ivy-induction"] = `# Enablement Specialist — Induction Plan
 
 Training is essential for your role at Commusoft. To ensure you have the best possible start, we have created this induction schedule.
@@ -8428,6 +8760,9 @@ function openInboxFile(key) {
     'reed-script-l1-s7-c1': { num: 'Reed — Script', title: 'L1 Office Staff Series 7 — Course 1: From the old way to proposals — getting started' },
     'reed-script-l1-s7-c2': { num: 'Reed — Script', title: 'L1 Office Staff Series 7 — Course 2: Build and send your first proposal' },
     'reed-script-l1-s7-challenge': { num: 'Reed — Script', title: 'L1 Office Staff Series 7 — Challenge: First proposal sent and accepted' },
+    'reed-script-l1-s8-c1': { num: 'Reed — Script', title: 'L1 Office Staff Series 8 — Course 1: Add a service reminder to a customer' },
+    'reed-script-l1-s8-c2': { num: 'Reed — Script', title: 'L1 Office Staff Series 8 — Course 2: Schedule a job from a service reminder' },
+    'reed-script-l1-s8-challenge': { num: 'Reed — Script', title: 'L1 Office Staff Series 8 — Challenge: Reminder triggered, job booked' },
     'ivy-induction': { num: 'Ivy — People', title: 'Enablement Specialist Induction Plan v3' },
     'ivy-jd-academy': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Description' },
     'ivy-jd-advert': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Advert' },

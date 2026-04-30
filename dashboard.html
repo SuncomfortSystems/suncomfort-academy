@@ -411,9 +411,9 @@
     <div id="view-academy" class="view active">
       <div class="page-heading"><h1>Academy</h1><p>Course scripts organised by series</p></div>
       <div class="stats-row">
-        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">6</div><div class="stat-label">Series</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">33</div><div class="stat-label">Courses</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">126</div><div class="stat-label">Total Minutes</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">7</div><div class="stat-label">Series</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">36</div><div class="stat-label">Courses</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">137</div><div class="stat-label">Total Minutes</div></div>
         <div class="stat-card"><div class="stat-value" style="color:var(--blue2)">9</div><div class="stat-label">Characters</div></div>
       </div>
       <div id="job-view" class="series-block">
@@ -515,6 +515,18 @@
           <div class="course-card" onclick="openInboxFile('reed-script-l1-s5-c5')"><div class="course-num">Course 5</div><div class="course-title">Sync an invoice to your accounting package</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l1-s5-c6')"><div class="course-num">Course 6</div><div class="course-title">Raise a consolidated invoice</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l1-s5-challenge')"><div class="course-num">Challenge</div><div class="course-title">Invoice raised, paid, and synced</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+        </div>
+      </div>
+      <div id="l1-office-series6" class="series-block">
+        <div class="series-header" style="background:var(--blue2)">
+          <div><h2>Layer 1 — Office Staff Series 6</h2><div class="series-meta">Customer communications — sending from templates, the invoice portal, and managing incoming emails</div></div>
+          <div class="series-count">3 courses + challenge</div>
+        </div>
+        <div class="course-grid">
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-s6-c1')"><div class="course-num">Course 1</div><div class="course-title">Send a communication from a template</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-s6-c2')"><div class="course-num">Course 2</div><div class="course-title">Use the invoice portal</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" style="opacity:0.5;cursor:default"><div class="course-num">Course 3</div><div class="course-title">Manage incoming emails with Connect</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#f5f5f5;color:#999">Gap</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-s6-challenge')"><div class="course-num">Challenge</div><div class="course-title">Message sent and portal live</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
     </div>
@@ -6864,6 +6876,326 @@ A Deposit to open the billing, a Cash Allocation to match a single payment to fo
 None — all content verified against Help Centre articles.
 `;
 
+INBOX_FILES["reed-script-l1-s6-c1"] = `# Reed — Script: Send a communication from a template
+
+**Layer:** 1 — Office Staff Path
+**Series:** 6 of 9 — Customer communications
+**Course:** 1 of 3
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Navigate to the correct starting point to send a communication from a customer or work address record
+2. Apply an email template when composing a communication
+3. Identify the channel options available from the Communications tab
+
+**Target persona:** Office staff
+
+**SunComfort characters:** Emma Clarke (Office Administrator)
+
+**Scenario:** A customer calls to ask about their upcoming heat pump service appointment. Emma follows up the call with a written confirmation email, using SunComfort's standard service reminder template so the message is consistent and saves time.
+
+**Estimated length:** 4 minutes
+
+**Target audience:** Office staff at field service businesses using Commusoft — administrators and coordinators responsible for customer communications. Assumes Commusoft Compass (Layer 0), Office Staff Series 1, Series 3, and Series 4 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Commusoft Compass (Layer 0), Office Staff Series 1, Series 3, and Series 4 (Booking and scheduling) complete.
+
+**Main objective beyond learning objectives:** Every communication sent from a customer record creates a log entry in the communications timeline — visible to the whole team, filtered by date and type, and permanently attached to the customer and property. Office staff who send communications through Commusoft, using templates where they exist, keep the customer record complete and save the time of composing messages from scratch. The alternative — sending from a personal email account — leaves no trace in the system and no context for the next person who opens that record.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## The Communications tab
+
+Every customer record in Commusoft has a Communications tab. This is the complete history of every interaction with that customer and their work addresses: emails sent, SMS messages, calls logged, notes added, and activities scheduled. It is the single source of truth for what has been said and when. Navigate to the customer or work address record and open the Communications tab to view the timeline, then select Add record to initiate a new communication.
+
+---
+
+## Sending an email with a template
+
+Select Email from the Add record options. The email composer opens with fields for the sender address, recipients, subject, and message body. To apply a template, select it from the template picker — templates are pre-composed messages configured in your account settings, and they can include personalisation tags that auto-populate with details from the record, such as the customer's name, the property address, or the scheduled appointment date. Review the populated content before sending to confirm the tags have resolved correctly and the message is accurate for this customer. Add any additional notes specific to this communication, then send.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: does your team currently send customer emails from within Commusoft, or do team members send from their own email accounts?**
+
+*Yes:* Every email sent through Commusoft appears in the Communications tab automatically, so the record is complete without any additional logging step. Templates ensure the message is consistent regardless of who sends it.
+*No:* Emails sent from personal or shared email accounts do not appear in the Communications tab. Other team members opening the customer record will not see that the email was sent, which can lead to duplicate messages or missed follow-ups. Sending through Commusoft keeps the record complete for the whole team.
+
+---
+
+## Other channel options
+
+The Communications tab supports more than email. SMS is available with the SMS+ add-on, using pre-configured SMS templates for concise, consistent messages. Call allows you to log an inbound or outbound call with a note — useful when the conversation is complete and you want to record that it happened and what was discussed. Notes lets you add a titled note to the timeline, with options to mark it as important or flag the customer record. All entries appear in the same timeline, filterable by date, type, user, and record, so the full picture of a customer relationship is visible in one place.
+
+*[Knowledge check — 4 options]*
+**Emma sends a follow-up email to a customer from their record in Commusoft. A colleague opens the same record an hour later. Will they be able to see the email Emma sent?**
+
+A) No — emails sent from a customer record are only visible to the user who sent them
+B) Yes — the email appears in the Communications tab and is visible to the whole team
+C) Yes — but only if Emma marked the email as important before sending
+D) No — emails are archived separately and require an admin to retrieve them
+
+*Correct (B):* Right. Emails sent through Commusoft appear immediately in the Communications tab and are visible to all team members who have access to the record. The whole team can see what was sent and when.
+*Incorrect:* Emails sent through Commusoft appear in the Communications tab and are visible to the whole team. Emma's colleague can open the record and see the email, along with any other communications, in the full timeline.
+
+---
+
+## Summary
+
+To send a communication, navigate to the customer or work address record, open the Communications tab, and select Add record. Choose Email to open the composer, apply a template if one exists for this type of message, review the personalised content, and send. Call and Note options let you log interactions that happen outside of Commusoft. Every entry is visible in the Communications tab to the whole team and forms the permanent communication history for that customer.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 4 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Emma Clarke (Office Administrator)
+**Sources used:** Commusoft — Customer communications timeline (https://help.commusoft.com/en/articles/216422-customer-communications-timeline); Email templates (https://help.commusoft.com/en/articles/217259-email-templates)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
+
+INBOX_FILES["reed-script-l1-s6-c2"] = `# Reed — Script: Use the invoice portal
+
+**Layer:** 1 — Office Staff Path
+**Series:** 6 of 9 — Customer communications
+**Course:** 2 of 3
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Explain what the invoice portal enables customers to do
+2. Identify the setup requirements before the portal can be used
+3. Apply the portal's payment limit setting to manage transaction fees
+
+**Target persona:** Office staff
+
+**SunComfort characters:** Claire Hudson (Administrator — Financial office staff)
+
+**Scenario:** SunComfort has set up the invoice portal so customers can view and pay their invoices online. Claire understands how the portal works so she can explain it to customers who ask, and configure the settings correctly for SunComfort's payment preferences.
+
+**Estimated length:** 4 minutes
+
+**Target audience:** Office staff at field service businesses using Commusoft — finance staff and administrators responsible for invoice delivery and payment collection. Assumes Commusoft Compass (Layer 0), Office Staff Series 1, Series 3, Series 4, and Series 5 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Commusoft Compass (Layer 0), Office Staff Series 1, Series 3, Series 4, and Series 5 (Getting paid) complete.
+
+**Main objective beyond learning objectives:** The invoice portal shifts the payment step to the customer — they receive the invoice by email, click the link, and pay without calling the office. For businesses where invoice chasing is a regular part of the admin workload, this removes a step from the process entirely. Understanding what the portal does, what is required to enable it, and how the payment options are configured means office staff can explain it accurately to customers and keep the settings appropriate for the business.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## What the portal does
+
+The invoice portal gives customers a secure link to view and pay their invoices online, on any device. When an invoice email is sent and the email template includes the portal tag, the customer receives a link that opens their invoice in the portal. They can view the invoice, download it as a PDF, and make a payment using a credit or debit card through Stripe or a bank transfer through GoCardless Instant Bank Pay. No login is required for the customer — the link in the email takes them directly to their invoice.
+
+---
+
+## Setup requirements
+
+The portal requires two things to be in place before it can be used. First, a payment integration must be configured — either Stripe for card payments, GoCardless for bank transfers, or both. Second, the invoice email template must include the portal link tag so the link is included in every invoice email that goes out. Both are configured in account settings. Once set up, the portal works automatically for every invoice sent with the portal tag in the template — no additional steps are needed for each invoice.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: does your business currently have a way for customers to pay invoices online without calling the office?**
+
+*Yes:* The portal formalises that option within Commusoft. The payment is linked to the invoice record directly, so the payment status updates automatically when the customer pays through the portal, without any manual recording needed.
+*No:* The portal adds a self-service payment option for customers who prefer not to call. For businesses where card-over-phone payments are the norm, the portal reduces the time spent on payment calls and gives customers the flexibility to pay when it suits them.
+
+---
+
+## Configuring payment limits
+
+The portal settings include an option to set a payment limit for card transactions. This allows you to disable card payments above a specified amount, which is useful for managing transaction fees on high-value invoices where a bank transfer is more cost-effective. Navigate to Profile icon, then Settings, then Self-service, then Invoice portal settings to configure this and other portal options including support contact details and automated payment receipts. When a customer processes a payment through the portal, they should be advised not to reload the page — reloading during payment processing can result in a duplicate transaction.
+
+*[Knowledge check — 4 options]*
+**A customer tells Claire they never received the link to pay their invoice online. Claire checks the invoice email that was sent. What is the most likely cause?**
+
+A) The portal is not available for that customer's account type
+B) The invoice email template used does not include the portal link tag
+C) The customer's invoice is above the card payment limit and the portal is disabled for it
+D) The portal is only available for customers who have registered an online account
+
+*Correct (B):* Right. If the portal link tag is not included in the email template, the link will not appear in the invoice email. Claire should check the template and add the tag so future invoices include the portal link automatically.
+*Incorrect:* The portal link appears in the invoice email only when the email template includes the portal tag. If the tag is missing from the template, the link does not appear in the email — the customer never receives a link to click. Claire should update the template to include it.
+
+---
+
+## Summary
+
+The invoice portal lets customers view, download, and pay invoices online through a link in the invoice email. Stripe and GoCardless integrations power the payment options. The portal requires the invoice email template to include the portal link tag — without it, customers will not receive the link. Configure payment limits for card transactions in Invoice portal settings to manage transaction fees on high-value invoices. Once set up, the portal runs automatically for every invoice sent with the portal link included.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 4 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Claire Hudson (Administrator — Financial office staff)
+**Sources used:** Commusoft — Invoice portal settings (https://help.commusoft.com/en/articles/217195-invoice-portal-settings)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+None — all content verified against Help Centre article.
+`;
+
+INBOX_FILES["reed-script-l1-s6-challenge"] = `# Reed — Script: Series challenge — Message sent and portal live
+
+**Layer:** 1 — Office Staff Path
+**Series:** 6 of 9 — Customer communications
+**Course:** Series challenge
+**Format:** Synthesia micro-course — Clint and Sarah dialogue
+**Presenter:** Clint (instructional); Sarah (dialogue partner)
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Apply the Communications tab correctly to send a templated message from a customer record
+2. Identify the cause when a customer cannot access the invoice portal
+3. Distinguish between sending from Commusoft and sending from a personal email account
+
+**Target persona:** Office staff
+
+**SunComfort characters:** Emma Clarke (Office Administrator — referenced in scenario)
+
+**Scenario:** SunComfort has two communication situations land in the same afternoon: a customer who needs a follow-up email after a service, and another customer who says they have not received their portal link to pay their invoice. Emma works through both. Sarah raises the decisions and Clint works through the right approach.
+
+**Estimated length:** 3 minutes
+
+**Target audience:** Office staff at field service businesses using Commusoft who have completed Series 6 Courses 1 and 2. This challenge tests the customer communications decisions against realistic scenarios. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Series 6 Courses 1 and 2 complete.
+
+**Main objective beyond learning objectives:** The communications and portal tools in Commusoft are only effective when used consistently. A follow-up email sent from a personal account leaves no trace in the customer record. A portal link that never arrives means an invoice that goes unpaid. This challenge tests whether learners know where to go and what to check when either situation arises.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Challenge opening
+
+*[Clint — 30 seconds]*
+
+Two situations, same afternoon. A customer is waiting for a follow-up about their heat pump service — and Emma is about to send the message from her personal email. And another customer says they never received the link to pay their invoice online. Both need the right response. Sarah has spotted what is at stake.
+
+---
+
+## Dialogue: The decisions
+
+*[Sarah — 15 seconds]*
+
+Emma is about to send the follow-up from her personal email to save time. Should she?
+
+*[Clint — 20 seconds]*
+
+No. A message sent from a personal email does not appear in the Communications tab. When a colleague opens that customer record tomorrow, there is no record that Emma followed up, which can lead to a duplicate message or a missed escalation. The correct route is the Communications tab on the customer record, which takes the same amount of time and keeps the record complete.
+
+*[Sarah — 15 seconds]*
+
+Emma goes to the Communications tab and selects Add record, then Email. She has a standard service follow-up template. Should she apply it or compose from scratch?
+
+*[Clint — 20 seconds]*
+
+Apply the template. Templates exist to save time and keep messages consistent — composing from scratch risks both inconsistency and errors. Emma selects the template, reviews the personalisation tags to confirm they have resolved correctly for this customer, and sends. The record is complete in seconds.
+
+*[Sarah — 15 seconds]*
+
+The second customer says the link to pay online was not in their invoice email. Emma checks the email that was sent. The portal link is missing. What is the most likely cause?
+
+*[Clint — 20 seconds]*
+
+The invoice email template does not include the portal link tag. The portal does not add itself to emails automatically — the tag must be present in the template. Emma needs to update the template to include the portal tag, so every invoice email going forward includes the link. She can resend the invoice to this customer once the template is corrected.
+
+*[Sarah — 15 seconds]*
+
+One more thing — the customer says they want to pay by bank transfer, but they can only see a card payment option in the portal. What should Emma check?
+
+*[Clint — 20 seconds]*
+
+The Invoice portal settings. GoCardless must be configured for bank transfer payments to appear as an option. If GoCardless is not set up, only card payment through Stripe is available. Emma needs to check whether the GoCardless integration is active — if it is not, the customer will need to pay by card or arrange a bank transfer outside the portal.
+
+---
+
+## Knowledge check
+
+*[Knowledge check — 4 options]*
+**Emma sends a follow-up email to a customer through the Communications tab. Her colleague Ryan opens the same customer record the next morning. What will he see?**
+
+A) Nothing — emails are private to the user who sent them unless shared manually
+B) The email in the Communications tab, with the date, sender, and content visible
+C) A notification that an email was sent, but not the content
+D) The email only if Emma marked it as visible to the team before sending
+
+*Correct (B):* Right. Emails sent through Commusoft appear in the Communications tab immediately and are visible to all team members with access to the record, including the date, sender, and content.
+*Incorrect:* Emails sent through Commusoft are logged in the Communications tab and visible to the whole team. Ryan can open the record and see exactly what Emma sent, when she sent it, and to whom.
+
+---
+
+## Series close
+
+*[Clint — 30 seconds]*
+
+A follow-up sent through the record, a template applied, a portal tag added to the template, and a payment setting checked. All four came from knowing where to look and what to check. Customer communications in Commusoft work when they run through the system — not around it. Series 6 is complete.
+
+---
+
+**Section count:** Challenge opening, 6 dialogue exchanges, 1 knowledge check, series close
+**Estimated length:** 3 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address
+**First person (I/my):** not used
+**Characters from approved roster:** Clint (presenter); Sarah (dialogue partner); Emma Clarke (Office Administrator, referenced in scenario)
+**Sources used:** Commusoft — Customer communications timeline (https://help.commusoft.com/en/articles/216422-customer-communications-timeline); Email templates (https://help.commusoft.com/en/articles/217259-email-templates); Invoice portal settings (https://help.commusoft.com/en/articles/217195-invoice-portal-settings)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+[OPEN — Series 6 Course 3 (Manage incoming emails with Connect) HC article not found. Gap report filed at Owners Inbox/Research/Forest - Research Gap - Series 6 Course 3 Connect.md. This challenge covers Courses 1 and 2 only. Once the Connect HC article is provided, Course 3 should be written and this challenge updated to include a Connect-related dialogue exchange.]
+`;
+
 INBOX_FILES["ivy-induction"] = `# Enablement Specialist — Induction Plan
 
 Training is essential for your role at Commusoft. To ensure you have the best possible start, we have created this induction schedule.
@@ -7745,6 +8077,9 @@ function openInboxFile(key) {
     'reed-script-l1-s5-c5': { num: 'Reed — Script', title: 'L1 Office Staff Series 5 — Course 5: Sync an invoice to your accounting package' },
     'reed-script-l1-s5-c6': { num: 'Reed — Script', title: 'L1 Office Staff Series 5 — Course 6: Raise a consolidated invoice' },
     'reed-script-l1-s5-challenge': { num: 'Reed — Script', title: 'L1 Office Staff Series 5 — Challenge: Invoice raised, paid, and synced' },
+    'reed-script-l1-s6-c1': { num: 'Reed — Script', title: 'L1 Office Staff Series 6 — Course 1: Send a communication from a template' },
+    'reed-script-l1-s6-c2': { num: 'Reed — Script', title: 'L1 Office Staff Series 6 — Course 2: Use the invoice portal' },
+    'reed-script-l1-s6-challenge': { num: 'Reed — Script', title: 'L1 Office Staff Series 6 — Challenge: Message sent and portal live' },
     'ivy-induction': { num: 'Ivy — People', title: 'Enablement Specialist Induction Plan v3' },
     'ivy-jd-academy': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Description' },
     'ivy-jd-advert': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Advert' },

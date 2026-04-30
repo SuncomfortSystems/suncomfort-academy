@@ -411,9 +411,9 @@
     <div id="view-academy" class="view active">
       <div class="page-heading"><h1>Academy</h1><p>Course scripts organised by series</p></div>
       <div class="stats-row">
-        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">4</div><div class="stat-label">Series</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">18</div><div class="stat-label">Courses</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">73</div><div class="stat-label">Total Minutes</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">5</div><div class="stat-label">Series</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">26</div><div class="stat-label">Courses</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">100</div><div class="stat-label">Total Minutes</div></div>
         <div class="stat-card"><div class="stat-value" style="color:var(--blue2)">9</div><div class="stat-label">Characters</div></div>
       </div>
       <div id="job-view" class="series-block">
@@ -484,6 +484,22 @@
           <div class="course-card" onclick="openInboxFile('reed-script-l1-s3-c3')"><div class="course-num">Course 3</div><div class="course-title">Keep your customer records clean</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l1-s3-c4')"><div class="course-num">Course 4</div><div class="course-title">Merge duplicate customers and work addresses</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l1-s3-challenge')"><div class="course-num">Challenge</div><div class="course-title">Customer base ready</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+        </div>
+      </div>
+      <div id="l1-office-series4" class="series-block">
+        <div class="series-header" style="background:var(--blue2)">
+          <div><h2>Layer 1 — Office Staff Series 4</h2><div class="series-meta">Booking and scheduling — raising jobs, scheduling engineers, sending confirmations, and managing follow-ups</div></div>
+          <div class="series-count">7 courses + challenge</div>
+        </div>
+        <div class="course-grid">
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-s4-c1')"><div class="course-num">Course 1</div><div class="course-title">Book a job for a customer</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-s4-c2')"><div class="course-num">Course 2</div><div class="course-title">Schedule an engineer</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-s4-c3')"><div class="course-num">Course 3</div><div class="course-title">Send a job confirmation</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l0-02')"><div class="course-num">Course 4</div><div class="course-title">Manage appointment statuses</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#e8f5e9;color:#2e7d32">SCL</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-s4-c5')"><div class="course-num">Course 5</div><div class="course-title">Put a job on hold and take it off hold</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-s4-c6')"><div class="course-num">Course 6</div><div class="course-title">Raise a recall job</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-s4-c7')"><div class="course-num">Course 7</div><div class="course-title">Set up and use scheduled activities</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-s4-challenge')"><div class="course-num">Challenge</div><div class="course-title">Job booked, engineer on the way, activities in place</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
     </div>
@@ -5403,6 +5419,732 @@ Four decisions — search first, resolve the type, wait for open jobs to close, 
 None — all content verified against Help Centre articles.
 `;
 
+INBOX_FILES["reed-script-l1-s4-c1"] = `# Reed — Script: Book a job for a customer
+
+**Layer:** 1 — Office Staff Path
+**Series:** 4 of 9 — Booking and scheduling
+**Course:** 1 of 7
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Navigate to the correct starting point to raise a new job
+2. Complete the job creation form with the required fields and settings
+3. Choose between saving a job and scheduling it into the diary in the same workflow
+
+**Target persona:** Office staff
+
+**SunComfort characters:** Emma Clarke (Office Administrator)
+
+**Scenario:** A customer calls SunComfort to request a heat pump service. Emma raises a new job against their record before anything else can happen — the job is the record that every technician visit, invoice, and communication connects to.
+
+**Estimated length:** 4 minutes
+
+**Target audience:** Office staff at field service businesses using Commusoft — administrators and coordinators responsible for raising jobs. Assumes Commusoft Compass (Layer 0), Office Staff Series 1, and Series 3 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Commusoft Compass (Layer 0), Office Staff Series 1 (Your first day in Commusoft), and Office Staff Series 3 (Adding and managing customers) complete.
+
+**Main objective beyond learning objectives:** Every service visit, invoice, and appointment in Commusoft is anchored to a job record. A job created with the right description, contact, and completion date gives the scheduler, the technician, and the finance team everything they need before the call ends. Creating a job correctly at the point of the call is the first step in a clean job lifecycle.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Introduction
+
+Every job in Commusoft starts with a job record. Before an engineer can be scheduled, before an invoice can be raised, before a service reminder can be linked, the job needs to exist. Raising that record at the point of the customer call means everyone in the chain, from the scheduler to the technician to the accounts team, has what they need from the moment the work begins.
+
+---
+
+## Finding the right starting point
+
+To raise a new job, search for the customer and open their record, then navigate to the All works tab and select Add new job. From here, the first thing to do is select the job description. In Commusoft, descriptions are pre-configured types such as Boiler Service, Heat Pump Survey, and Fault Diagnosis, and selecting one early auto-populates related fields such as skills required and invoice category, which saves time and reduces the chance of a mismatch later.
+
+---
+
+## Completing the form
+
+With the description selected, work through the remaining fields. Add any notes specific to this visit, detail that the technician will need when they open the job on site. If the job relates to a specific asset, such as a heat pump installed at the property, link it here. Set the customer contact for this job, the person who should be reached about this specific visit, which may differ from the main account holder. Add the expected completion date, which helps the scheduler and gives the customer a realistic timeframe. Fields marked with a red asterisk must be completed before the record can be saved.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: does your business use standard job descriptions for common work types?**
+
+*Yes:* Selecting the description first is always the efficient path. It pre-loads the fields most likely to be correct and leaves you to adjust the exceptions rather than filling in every field from scratch.
+*No:* Free-text descriptions work too, but they require every field to be completed manually. If the same types of jobs appear regularly, setting up standard descriptions in your account settings is worth the time it takes, and it speeds up every job raised from that point on.
+
+---
+
+## Saving or scheduling
+
+When the form is complete, you have two options. You can save the job without scheduling, useful if engineer availability needs to be checked separately or if the customer needs to confirm a date. Or you can check the box labelled Book into diary after adding job, which takes you directly to the diary view after saving so the appointment can be set immediately. Either route creates the same job record. The only difference is whether the scheduling happens now or later. If the customer is on the phone and ready to confirm a time, scheduling in the same step keeps the workflow clean.
+
+*[Knowledge check — 4 options]*
+**Emma is raising a job for a customer and selects the job description first. What does this do?**
+
+A) It locks all other fields so they cannot be edited before saving
+B) It assigns the job to the first available engineer automatically
+C) It auto-populates related fields such as skills required and invoice category
+D) It sends a confirmation to the customer immediately
+
+*Correct (C):* Right. Selecting the description first auto-populates related fields including skills required and invoice category. It is the most efficient starting point on the form.
+*Incorrect:* Selecting the description first auto-populates related fields such as skills required and invoice category. It does not lock the form or assign an engineer. Starting with the description saves time and reduces the risk of a mismatch between job type and settings.
+
+---
+
+## Summary
+
+To raise a new job, navigate to the customer record, open the All works tab, and select Add new job. Choose the job description first to auto-populate related fields. Complete the required fields including notes, asset, contact, and expected completion date, then save. If the customer is ready to book an appointment, check the scheduling option before saving and the diary opens immediately after. The job record is the foundation of everything that follows.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 4 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Emma Clarke (Office Administrator)
+**Sources used:** Commusoft — How to add a new job (https://help.commusoft.com/en/articles/216750-how-to-add-a-new-job)
+**Pre-submission checklist:** complete
+**Flint revisions:** Three em dashes removed: "linked, the job needs to exist" (was "linked — the job needs to exist"); "everyone in the chain, from the scheduler" (was "chain — from the scheduler...team —"); "types such as Boiler Service, Heat Pump Survey, and Fault Diagnosis, and" (was "types — Boiler Service, Heat Pump Survey, Fault Diagnosis — and").
+
+## Open items
+
+None — all content verified against Help Centre article.
+`;
+
+INBOX_FILES["reed-script-l1-s4-c2"] = `# Reed — Script: Schedule an engineer
+
+**Layer:** 1 — Office Staff Path
+**Series:** 4 of 9 — Booking and scheduling
+**Course:** 2 of 7
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Navigate the diary view and use filters to find the right engineer
+2. Create a job appointment by assigning an engineer from the diary
+3. Use suggested appointments to identify the best match based on skills, location, and schedule
+
+**Target persona:** Office staff
+
+**SunComfort characters:** Sophie Bennett (Scheduler / Customer Service Advisor)
+
+**Scenario:** A new heat pump service job has been raised and is ready to schedule. Sophie opens the diary, checks availability, and books the right engineer into the correct time slot.
+
+**Estimated length:** 4 minutes
+
+**Target audience:** Office staff at field service businesses using Commusoft — schedulers and administrators responsible for booking engineer appointments. Assumes Commusoft Compass (Layer 0), Office Staff Series 1, Series 3, and Series 4 Course 1 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Commusoft Compass (Layer 0), Office Staff Series 1, Series 3, and Series 4 Course 1 (Book a job for a customer) complete.
+
+**Main objective beyond learning objectives:** Scheduling is where a job record becomes a live commitment. The diary shows every engineer's capacity, location, and skill availability in one view, and getting the right engineer into the right slot on the first booking avoids rescheduling, missed appointments, and the communication overhead that follows. Using suggested appointments adds precision to that decision by surfacing the best-fit engineer automatically.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Introduction
+
+Once a job has been raised, the next step is getting an engineer in the right place at the right time. The diary is where that happens. It shows every engineer's schedule across the team, lets you filter by skill and availability, and gives you the tools to book appointments, move them, and confirm them, all in one view.
+
+---
+
+## Navigating the diary
+
+Open the diary from the main navigation. The default view shows the current day, but you can switch between Daily, Weekly, Two-Weekly, and Monthly views depending on how far ahead you need to plan. The Map view shows engineer locations alongside the diary, which is useful when travel time matters. Filter the diary by individual user, user group, or skill to narrow down to the engineers who can carry out the specific work. For a heat pump service, filtering by the Heat Pump Technician skill surfaces only the engineers qualified for that job type.
+
+---
+
+## Booking the appointment
+
+To book a job appointment, find an available slot in the diary and click on it. Select the job from the job record or search for the customer. Set the start time and duration, and confirm the engineer. The appointment appears immediately in the diary and is visible to the engineer on their mobile app. If you need to move the appointment, drag it to a new slot or open it and edit the time and date. Cancelling an appointment removes it from the diary but keeps the job record intact — the job remains open and can be rescheduled.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: does your team currently schedule based on skills, matching the right engineer to the right job type?**
+
+*Yes:* The skills filter in the diary makes that matching visible at a glance. Filter to show only engineers with the required skill and book directly from that view, which removes the manual step of checking individual profiles.
+*No:* Setting up skills on engineer profiles and job descriptions is the prerequisite. Once that is in place, the diary can filter automatically and the suggested appointments tool can surface the best match. It is a configuration step that pays back every time a job is scheduled.
+
+---
+
+## Suggested appointments
+
+For a faster and more precise match, use the Suggested appointment tab when booking. This opens a panel that analyses each engineer's home or start location, shift pattern, and assigned skills against the job's requirements and location, then surfaces the best-fit options in a ranked list. You retain full control — you can accept a suggestion, adjust it, or book manually instead. For a team of any size, suggested appointments removes the need to check each engineer's diary individually and reduces the risk of booking someone without the right qualification for the work.
+
+*[Knowledge check — 4 options]*
+**Sophie books a heat pump service job but the customer calls back to cancel for today. She cancels the appointment in the diary. What happens to the job?**
+
+A) The job is cancelled and removed from the system along with the appointment
+B) The job record remains open and can be rescheduled
+C) The job is automatically placed on hold until a new appointment is booked
+D) The job is reassigned to the next available engineer automatically
+
+*Correct (B):* Right. Cancelling an appointment removes it from the diary but keeps the job record open. Sophie can rebook the appointment when the customer is ready without needing to raise a new job.
+*Incorrect:* Cancelling an appointment only removes it from the diary. The job record stays open and Sophie can rebook from the existing record when the customer confirms a new date.
+
+---
+
+## Summary
+
+The diary is the scheduling centre for every job in Commusoft. Navigate using the view and filter options to find the right engineer for the right slot. Book a job appointment by selecting a time, assigning the engineer, and confirming. Use the Suggested appointment tab to surface the best-fit match based on skills, location, and availability. Cancelling an appointment keeps the job open — it can always be rebooked from the same record.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 4 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Sophie Bennett (Scheduler / Customer Service Advisor)
+**Sources used:** Commusoft — Diary and Appointments (https://help.commusoft.com/en/articles/267464-diary-and-appointments); Suggested appointments (https://help.commusoft.com/en/articles/216744-suggested-appointments)
+**Pre-submission checklist:** complete
+**Flint revisions:** One em dash removed: "confirm them, all in one view" (was "confirm them — all in one view").
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
+
+INBOX_FILES["reed-script-l1-s4-c3"] = `# Reed — Script: Send a job confirmation
+
+**Layer:** 1 — Office Staff Path
+**Series:** 4 of 9 — Booking and scheduling
+**Course:** 3 of 7
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Identify the difference between the customer and work address confirmation templates
+2. Send a job confirmation from a diary appointment
+3. Apply the SMS character constraint when setting up confirmation content
+
+**Target persona:** Office staff
+
+**SunComfort characters:** Sophie Bennett (Scheduler / Customer Service Advisor)
+
+**Scenario:** Sophie has booked a heat pump service appointment. Before the engineer is dispatched, she sends the customer a confirmation so they know when to expect the visit, reducing the chance of a missed appointment or a wasted journey.
+
+**Estimated length:** 3 minutes
+
+**Target audience:** Office staff at field service businesses using Commusoft — schedulers and administrators responsible for customer communications around appointments. Assumes Commusoft Compass (Layer 0), Office Staff Series 1, Series 3, and Series 4 Courses 1 and 2 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Commusoft Compass (Layer 0), Office Staff Series 1, Series 3, and Series 4 Courses 1 and 2 complete.
+
+**Main objective beyond learning objectives:** A confirmation sent at the point of booking sets the customer's expectation before the visit. It reduces no-shows, reduces inbound calls asking for confirmation, and gives the customer a point of reference if anything changes. The difference between a customer confirmation and a work address confirmation matters for any business that works at properties where the billing contact and the on-site contact are different people.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Two confirmation templates
+
+Commusoft has two separate job confirmation templates. The customer template goes to the person who holds the account, the billing contact. The work address template goes to the contact at the property where the work will take place. If the billing customer and the on-site contact are the same person, only the customer template is needed. If they are different, as is common in property management or commercial work, both templates can be configured so the right message reaches the right person automatically. The work address template can also be assigned to specific customers or job descriptions for more precise control.
+
+---
+
+## Channels and the SMS limit
+
+Both templates can be sent by email, SMS, or letter. Email is the default for most contacts, but enabling all three ensures customers who cannot receive email or SMS still receive confirmation by post. Personalisation tags let you include job-specific details automatically, such as the customer's name, the scheduled date and time, and the property address, without editing each message individually. For SMS, there is one important constraint: SMS messages are limited to 160 characters. Going over that limit uses additional credits, so keep SMS content concise and test the character count before finalising the template.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: does your business serve properties where the billing customer and the on-site contact are different people?**
+
+*Yes:* The work address confirmation template handles this directly. Configure it to reach the on-site contact at the property while the customer template handles the billing account holder. Each person receives the information relevant to them.
+*No:* The customer template is all you need in most cases. It is still worth knowing the work address template exists — commercial clients and property managers often bring this requirement later, and having the template configured before you need it means one less step when those jobs come in.
+
+---
+
+## Sending from the diary
+
+Once an appointment is booked in the diary, open the appointment and select Send customer confirmation. This triggers the template immediately using the contact details on the customer record. If a work address confirmation is also required, that can be sent from the same appointment. Confirmations can be sent at the point of booking or any time before the appointment, which gives flexibility if the customer needs to be reached on a specific day.
+
+*[Knowledge check — 4 options]*
+**Sophie drafts an SMS confirmation template and the message comes to 195 characters. What should she do?**
+
+A) Send it — Commusoft will automatically shorten the message to fit the 160-character limit
+B) Split it into two SMS messages manually before sending
+C) Switch to email only — SMS is not suitable for job confirmations
+D) Shorten the message to 160 characters or fewer to avoid using additional SMS credits
+
+*Correct (D):* Right. SMS messages above 160 characters use additional credits. Sophie should shorten the message before saving the template to keep costs predictable.
+*Incorrect:* The 160-character limit applies to each SMS message. Going over that limit uses additional credits rather than splitting the message automatically. Sophie needs to reduce the content to 160 characters or fewer before finalising the template.
+
+---
+
+## Summary
+
+Commusoft has two confirmation templates: one for the billing customer and one for the work address contact. Both can be sent by email, SMS, or letter. SMS messages are capped at 160 characters and going over that limit uses additional credits. Configure templates with personalisation tags so the right details appear automatically. Send the confirmation from the diary appointment after booking and the customer receives it immediately.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 3 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Sophie Bennett (Scheduler / Customer Service Advisor)
+**Sources used:** Commusoft — Customer job confirmation template (https://help.commusoft.com/en/articles/217108-customer-job-confirmation-template); Work address job confirmation template (https://help.commusoft.com/en/articles/217110-work-address-job-confirmation-template); Diary and Appointments (https://help.commusoft.com/en/articles/267464-diary-and-appointments)
+**Pre-submission checklist:** complete
+**Flint revisions:** One em dash removed: "details automatically, such as the customer's name" (was "details automatically — the customer's name...the property address —").
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
+
+INBOX_FILES["reed-script-l1-s4-c5"] = `# Reed — Script: Put a job on hold and take it off hold
+
+**Layer:** 1 — Office Staff Path
+**Series:** 4 of 9 — Booking and scheduling
+**Course:** 5 of 7
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Place a job on hold using the correct route and select an appropriate reason
+2. Set a reminder when holding a job so the follow-up is not missed
+3. Remove on-hold status and return a job to active progress
+
+**Target persona:** Office staff
+
+**SunComfort characters:** Emma Clarke (Office Administrator)
+
+**Scenario:** A heat pump part is delayed and SunComfort cannot complete the job on the current timeline. Emma places the job on hold with a reason and a follow-up reminder so the job is picked up again as soon as the part arrives.
+
+**Estimated length:** 3 minutes
+
+**Target audience:** Office staff at field service businesses using Commusoft — administrators and coordinators who manage active jobs and their status. Assumes Commusoft Compass (Layer 0), Office Staff Series 1, Series 3, and Series 4 Courses 1 and 2 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Commusoft Compass (Layer 0), Office Staff Series 1, Series 3, and Series 4 Courses 1 and 2 complete.
+
+**Main objective beyond learning objectives:** A job that cannot proceed for a known reason does not need to be cancelled or left without a status. On hold is the correct tool for managed delay — it keeps the job visible, records the reason, and creates the reminder that prevents it from being forgotten. Office staff who use on hold correctly maintain a clean active job list and eliminate the gap where jobs sit open with no one tracking them.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Placing a job on hold
+
+When a job cannot proceed for a known reason, such as a delayed part, an unavailable customer, or blocked site access, on hold is the right status. Navigate to the job record and open Quick links, then select Place job on hold. A dropdown presents the available on-hold reasons, which are pre-configured in your account settings. Selecting the correct reason gives every team member who opens that job an immediate explanation for why it is not moving.
+
+---
+
+## Setting a reminder
+
+After selecting the reason, you have the option to set a reminder. Check the reminder box, set the date the job should be reviewed, and assign it to the team member who needs to act. That reminder appears in the Reminders tab at the assigned date, so the job does not rely on anyone remembering to check it manually. For a parts delay, setting the reminder to the expected delivery date means the job is back in view the moment it can move forward again.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: does your business currently have a process for tracking jobs that are waiting on parts, access, or customer confirmation?**
+
+*Yes:* On hold with a reminder formalises that process inside the system. Every held job has a reason and a date attached — no sticky notes, no separate spreadsheet, no handover conversation needed.
+*No:* The combination of an on-hold reason and a reminder handles this directly. The job stays visible in the system with the reason recorded, and the team member responsible is prompted at the right time. Apply this to any job that cannot move in the next few days.
+
+---
+
+## Diary events and removing the hold
+
+While a job is on hold, diary events can still be scheduled against it. This is useful when a tentative date has been agreed and the slot needs to be reserved, even if the job is not yet confirmed to proceed. To remove the on-hold status when the job is ready to move again, open Quick links and select Remove on hold status. Type the word Remove in the confirmation field and click Remove to confirm. The job returns to its previous active status immediately.
+
+*[Knowledge check — 4 options]*
+**Emma places a job on hold while waiting for a part. Can she still book a diary appointment for it?**
+
+A) No — a job on hold cannot have any diary events until the hold is removed
+B) Yes — diary events can still be scheduled against a job that is on hold
+C) Yes — but only if the hold reason is set to Parts awaited
+D) No — the diary filters out jobs with on-hold status automatically
+
+*Correct (B):* Right. Diary events can be scheduled against a held job. Emma can reserve the slot in advance and confirm the appointment once the part arrives, without needing to remove the hold first.
+*Incorrect:* Jobs on hold can still have diary events scheduled against them. Emma does not need to remove the hold before reserving a slot — she can book the tentative appointment and confirm it when the part is ready.
+
+---
+
+## Summary
+
+To place a job on hold, navigate to Quick links and select Place job on hold. Choose the reason from the pre-configured dropdown and set a reminder with a date and assignee so the follow-up is tracked. Diary events can still be booked against held jobs. To release the hold, go back to Quick links, select Remove on hold status, type Remove to confirm, and the job returns to active status immediately.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 3 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Emma Clarke (Office Administrator)
+**Sources used:** Commusoft — Place a job on hold (https://help.commusoft.com/en/articles/216760-place-a-job-on-hold); Understanding the Job Record (https://help.commusoft.com/en/articles/324265-understanding-the-job-record)
+**Pre-submission checklist:** complete
+**Flint revisions:** One em dash removed: "a known reason, such as a delayed part" (was "a known reason — a part is delayed, the customer is unavailable, access to the property is blocked —").
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
+
+INBOX_FILES["reed-script-l1-s4-c6"] = `# Reed — Script: Raise a recall job
+
+**Layer:** 1 — Office Staff Path
+**Series:** 4 of 9 — Booking and scheduling
+**Course:** 6 of 7
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Distinguish a recall job from a new job and identify when to raise one
+2. Raise a recall from the original job record using the correct route
+3. Complete the blame responsibility field accurately before confirming
+
+**Target persona:** Office staff
+
+**SunComfort characters:** Emma Clarke (Office Administrator)
+
+**Scenario:** A SunComfort technician completed a heat pump repair last week and the same fault has returned. Emma raises a recall from the original job so the link is preserved and the follow-up is tracked correctly.
+
+**Estimated length:** 3 minutes
+
+**Target audience:** Office staff at field service businesses using Commusoft — administrators and coordinators responsible for managing job follow-ups. Assumes Commusoft Compass (Layer 0), Office Staff Series 1, Series 3, and Series 4 Courses 1 and 2 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Commusoft Compass (Layer 0), Office Staff Series 1, Series 3, and Series 4 Courses 1 and 2 complete.
+
+**Main objective beyond learning objectives:** Recalls are not the same as new jobs — they are linked follow-ups that preserve the audit trail between the original work and the return visit. Raising a recall from the correct job record means the history is visible, the accountability is recorded, and the business can track patterns: which job types lead to recalls and which engineers are associated with return visits. That data is only reliable if recalls are raised correctly at the point of the return call.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## What is a recall job?
+
+A recall job is a return visit to a property to address an issue from a previous job. It is not a new job — it is a linked follow-up. The connection between the recall and the original job is what makes it useful: it preserves the audit trail, shows which visit led to the return, and gives the business visibility into patterns over time. Raising a recall correctly means that link is in the system from the moment the customer calls back.
+
+---
+
+## Raising the recall
+
+To raise a recall, navigate to the original job record and open Quick links. Select Create recall. The form asks for the customer contact for this visit, a description of the work, the skills required, and the Who's to blame field. This last field records whether responsibility for the return visit sits with the original engineer, another member of the team, or an external factor. It defaults to the original engineer and can be adjusted before confirming. Complete the form, and if the engineer is ready to be scheduled, check the option to book into the diary immediately. Select Add recall to create the linked job.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: does your business currently track return visits separately from new jobs?**
+
+*Yes:* Recall jobs in Commusoft formalise that separation. The link to the original job is automatic and the accountability field is built in, so the record is cleaner than a manually flagged job or a note on the original record.
+*No:* Without a distinction between recalls and new jobs, the data on return visits is invisible. The recall tool makes that distinction automatic — the link, the reason, and the responsible party are all on the record from the moment the recall is created.
+
+---
+
+*[Knowledge check — 4 options]*
+**Emma is raising a recall and reaches the Who's to blame field. The original engineer is pre-filled. The fault has returned but it was caused by a faulty part from a supplier, not the engineer. What should she do?**
+
+A) Leave the field as is — it cannot be changed once the original engineer is assigned
+B) Delete the recall and raise a new job instead, since blame does not apply here
+C) Adjust the field to reflect the correct responsible party before confirming
+D) Leave it blank — the field is optional and has no effect on the job record
+
+*Correct (C):* Right. The Who's to blame field defaults to the original engineer but can be changed before confirming. Emma should update it to reflect the actual cause before she selects Add recall.
+*Incorrect:* The Who's to blame field defaults to the original engineer but is editable before the recall is saved. Emma should update it to reflect the correct responsible party before selecting Add recall.
+
+---
+
+## Summary
+
+A recall job is raised from the original job record, not as a new job from the customer record. Navigate to the original job, open Quick links, and select Create recall. Complete the contact, description, and skills, and review the Who's to blame field before confirming. The recall links to the original job automatically, preserving the audit trail. If you need to convert an existing job into a recall, use Link job as a recall to another job from the same Quick links menu.
+
+---
+
+**Section count:** 3 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 3 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Emma Clarke (Office Administrator)
+**Sources used:** Commusoft — Understanding the Job Record (https://help.commusoft.com/en/articles/324265-understanding-the-job-record); Enable recalls (https://help.commusoft.com/en/articles/217019-enable-recalls)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
+
+INBOX_FILES["reed-script-l1-s4-c7"] = `# Reed — Script: Set up and use scheduled activities
+
+**Layer:** 1 — Office Staff Path
+**Series:** 4 of 9 — Booking and scheduling
+**Course:** 7 of 7
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Create a scheduled activity and assign it to the correct user and due date
+2. Identify the four activity types and select the appropriate one for a given task
+3. Complete an activity and use the completion workflow to take the next step
+
+**Target persona:** Office staff
+
+**SunComfort characters:** Emma Clarke (Office Administrator)
+
+**Scenario:** After a customer call, Emma needs to follow up with a quote in three days. She creates a scheduled activity so the task is assigned, visible, and prompts the right action at the right time.
+
+**Estimated length:** 4 minutes
+
+**Target audience:** Office staff at field service businesses using Commusoft — administrators and coordinators who manage customer follow-ups, call-backs, and internal tasks. Assumes Commusoft Compass (Layer 0), Office Staff Series 1, Series 3, and Series 4 Course 1 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Commusoft Compass (Layer 0), Office Staff Series 1, Series 3, and Series 4 Course 1 complete.
+
+**Main objective beyond learning objectives:** Promised callbacks, follow-up quotes, and customer check-ins are the actions that fall through the gaps between systems. Scheduled activities bring those commitments into Commusoft and attach them to the relevant customer and property record, so the follow-up is visible, assigned, and prompted at the right time without relying on a separate task list or a memory. Office staff who use scheduled activities consistently turn customer commitments into completed actions.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Introduction
+
+Every customer interaction generates a next step: a callback, a follow-up quote, or a check on a pending decision. Scheduled activities give those next steps a place in Commusoft. They sit on the customer and property record, they surface at the right time, and they prompt the correct action when they are due. The result is a follow-up that happens because the system prompts it, not because someone remembered to check a separate list.
+
+---
+
+## Creating an activity
+
+To create a scheduled activity, navigate to the customer record and open the property page, then go to the Communications tab and select Add record, then Schedule activity. The form asks for a description of the task, supporting notes, the activity type, a due date and time, and an assignee. There are four activity types: Call, Email, Meeting, and Task. Select the type that matches what needs to happen — a promised callback is a Call, a follow-up quote is a Task, a site visit to review a proposal is a Meeting. If the action involves multiple team members, assign it to all of them. If it does not need a specific owner yet, leave it unassigned and return to assign it when the timing is clear.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: does your team currently have a consistent process for tracking customer follow-ups and callbacks?**
+
+*Yes:* Scheduled activities bring that process into the customer record directly. Every follow-up sits on the property it relates to, so the context is always there when the activity comes due, with no switching between systems to find the original conversation.
+*No:* The most common version of a lost follow-up is a note on a pad or a task in a separate app that has no connection to the customer record. A scheduled activity in Commusoft closes that gap — the task, the customer, and the property are all linked from the moment the activity is created.
+
+---
+
+## How activities surface
+
+Once created, the activity is pinned to the top of the property dashboard until it is marked complete. All activities are ordered by due date, so the most urgent ones appear first. You can view all activities across the account using the icon in the top right of the screen, with filters for date, activity type, assignee, and record type. For a team with several active follow-ups running in parallel, this view makes it easy to see what is due today, what is overdue, and who owns each item.
+
+---
+
+## Completing an activity and following up
+
+When the due date arrives, open the activity and mark it complete. Commusoft's completion workflow then opens the right action automatically: completing a Call activity opens a form to log the call details; completing an Email activity opens a compose window. You can also schedule a new activity immediately after completing one, which is useful when a callback leads to another follow-up rather than a resolved outcome. Activities that are no longer relevant can be deleted, rescheduled, or skipped without affecting the customer record.
+
+*[Knowledge check — 4 options]*
+**Emma creates an activity to follow up on a quote. When she marks it complete, Commusoft opens a form automatically. Which activity type did she select?**
+
+A) Task — completing a Task opens a follow-up form by default
+B) Email — completing an Email activity opens a compose window
+C) Meeting — completing a Meeting opens a log form for the outcome
+D) Call — completing a Call activity opens a log new call form
+
+*Correct (D):* Right. The Call activity type opens the Log new call form when marked complete. Each activity type has a specific completion workflow matched to the action it represents.
+*Incorrect:* Each activity type has a different completion workflow. Call opens the Log new call form, while Email opens a compose window. If Emma's activity was set to Call, that is the form that appears when she marks it complete.
+
+---
+
+## Summary
+
+Scheduled activities are created from the Communications tab on a customer property record. Choose the activity type — Call, Email, Meeting, or Task — and set the description, due date, and assignee. Activities are pinned to the property dashboard until completed and ordered by due date. Mark an activity complete and Commusoft opens the right follow-up action automatically. Use the activity view to track all open follow-ups across the team, filtered by type, date, or assignee.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 4 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Emma Clarke (Office Administrator)
+**Sources used:** Commusoft — Scheduled activities (https://help.commusoft.com/en/articles/217261-scheduled-activities)
+**Pre-submission checklist:** complete
+**Flint revisions:** One em dash removed: "a next step: a callback, a follow-up quote" (was "a next step — a callback, a follow-up quote").
+
+## Open items
+
+None — all content verified against Help Centre article.
+`;
+
+INBOX_FILES["reed-script-l1-s4-challenge"] = `# Reed — Script: Series challenge — Job booked, engineer on the way, activities in place
+
+**Layer:** 1 — Office Staff Path
+**Series:** 4 of 9 — Booking and scheduling
+**Course:** Series challenge
+**Format:** Synthesia micro-course — Clint and Sarah dialogue
+**Presenter:** Clint (instructional); Sarah (dialogue partner)
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Apply the recall process to a return visit rather than raising a new job
+2. Use suggested appointments to find the best-fit engineer for a job
+3. Identify the correct response when a job cannot proceed and a follow-up is needed
+
+**Target persona:** Office staff
+
+**SunComfort characters:** Sophie Bennett (Scheduler / Customer Service Advisor — referenced in scenario)
+
+**Scenario:** SunComfort is managing a busy Friday afternoon. Sophie faces three decisions in quick succession: a customer calling about a recurring fault, a scheduling choice that needs to be made efficiently, and a job that cannot proceed as planned. Sarah raises each decision and Clint works through the right approach.
+
+**Estimated length:** 3 minutes
+
+**Target audience:** Office staff at field service businesses using Commusoft who have completed Series 4 (Booking and scheduling). This challenge tests the booking and scheduling decisions from all seven courses against a single realistic scenario. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Series 4 Courses 1 to 7 complete.
+
+**Main objective beyond learning objectives:** Each course in this series covers one part of the booking and scheduling workflow in isolation. This challenge puts the decisions together in sequence — a return fault, a scheduling call, an unexpected hold, and a follow-up task — because that is how a real working day unfolds. A learner who can navigate these decisions in sequence has the foundation to handle the booking workflow correctly and keep jobs moving.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Challenge opening
+
+*[Clint — 30 seconds]*
+
+It is Friday afternoon at SunComfort. Sophie has three things landing at once: a customer calling back about a fault that was repaired six weeks ago, a job that needs an engineer booked today, and a situation where the booking cannot proceed as planned. Each one requires a decision. Sarah has spotted all of them.
+
+---
+
+## Dialogue: The decisions
+
+*[Sarah — 15 seconds]*
+
+The customer calling about the fault from six weeks ago — Sophie is about to raise a new job. Should she?
+
+*[Clint — 20 seconds]*
+
+No. A return visit linked to a previous job is a recall, not a new job. Sophie should navigate to the original job record and use Create recall from Quick links. That preserves the link, records the responsibility, and keeps the history in one place. Raising it as a new job loses that connection entirely.
+
+*[Sarah — 15 seconds]*
+
+The recall is raised. Sophie needs to schedule an engineer for the heat pump fault. She is not sure which engineers are available and which have the right skills. What is the fastest way to find the best match?
+
+*[Clint — 20 seconds]*
+
+The Suggested appointment tab in the diary. It analyses each engineer's location, shift pattern, and skills against the job requirements and surfaces the best options in a ranked list. Sophie does not need to check individual diaries. She can accept the top result or adjust it if something does not fit.
+
+*[Sarah — 15 seconds]*
+
+The appointment is booked and the customer confirmation is sent. Then the customer calls back — access to the property is blocked and the visit cannot go ahead today. Should Sophie cancel the job?
+
+*[Clint — 20 seconds]*
+
+No. Cancel the appointment in the diary. That removes it from the schedule. Then place the job on hold using Quick links, select the correct reason, and set a reminder for when the access issue is likely to be resolved. The job stays in the system with the reason recorded. Cancelling the job would mean raising it again from scratch.
+
+*[Sarah — 15 seconds]*
+
+The customer says she will call back to rebook once the access is sorted, but she is not sure when. How does Sophie make sure that callback does not get missed?
+
+*[Clint — 20 seconds]*
+
+She creates a scheduled activity. Navigate to the customer's property record, open the Communications tab, and add a Call activity with the due date set to the day Sophie expects the customer to call back. Assign it to herself or to the team member who will take that call. The activity sits on the property record and surfaces when it is due.
+
+---
+
+## Knowledge check
+
+*[Knowledge check — 4 options]*
+**Sophie has booked a recall appointment and is ready to send the job confirmation. The customer's main contact is the billing account holder, but the work is at a separate rental property with a different on-site contact. Which templates should Sophie use?**
+
+A) The customer template only — it automatically notifies both the billing account and the property contact
+B) The customer template for the billing contact and the work address template for the on-site contact
+C) The work address template only — it replaces the customer template for commercial properties
+D) No confirmation is needed — recalls generate an automatic notification to all contacts
+
+*Correct (B):* Right. The customer template reaches the billing account holder and the work address template reaches the on-site contact. When they are different people, both are needed to make sure the right information reaches the right person.
+*Incorrect:* Commusoft has two separate confirmation templates. The customer template goes to the billing contact. The work address template goes to the contact at the property. When those are different people, both should be sent — one template cannot reach both contacts.
+
+---
+
+## Series close
+
+*[Clint — 30 seconds]*
+
+A recall raised from the right record, an engineer matched by skill and location, a job held rather than cancelled, and a follow-up that is in the system rather than in someone's memory. Four decisions, each one the right one. The booking and scheduling workflow is where a customer call becomes a confirmed visit, and the habits you build here are what keep that process reliable. Series 4 is complete.
+
+---
+
+**Section count:** Challenge opening, 6 dialogue exchanges, 1 knowledge check, series close
+**Estimated length:** 3 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address
+**First person (I/my):** not used
+**Characters from approved roster:** Clint (presenter); Sarah (dialogue partner); Sophie Bennett (Scheduler / Customer Service Advisor, referenced in scenario)
+**Sources used:** Commusoft — How to add a new job (https://help.commusoft.com/en/articles/216750-how-to-add-a-new-job); Diary and Appointments (https://help.commusoft.com/en/articles/267464-diary-and-appointments); Suggested appointments (https://help.commusoft.com/en/articles/216744-suggested-appointments); Customer job confirmation template (https://help.commusoft.com/en/articles/217108-customer-job-confirmation-template); Work address job confirmation template (https://help.commusoft.com/en/articles/217110-work-address-job-confirmation-template); Place a job on hold (https://help.commusoft.com/en/articles/216760-place-a-job-on-hold); Understanding the Job Record (https://help.commusoft.com/en/articles/324265-understanding-the-job-record); Scheduled activities (https://help.commusoft.com/en/articles/217261-scheduled-activities)
+**Pre-submission checklist:** complete
+**Flint revisions:** One em dash removed from dialogue: "Cancel the appointment in the diary. That removes it from the schedule." (was "diary — that removes it").
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
+
 INBOX_FILES["ivy-induction"] = `# Enablement Specialist — Induction Plan
 
 Training is essential for your role at Commusoft. To ensure you have the best possible start, we have created this induction schedule.
@@ -6270,6 +7012,13 @@ function openInboxFile(key) {
     'reed-script-l1-s3-c3': { num: 'Reed — Script', title: 'L1 Office Staff Series 3 — Course 3: Keep your customer records clean' },
     'reed-script-l1-s3-c4': { num: 'Reed — Script', title: 'L1 Office Staff Series 3 — Course 4: Merge duplicate customers and work addresses' },
     'reed-script-l1-s3-challenge': { num: 'Reed — Script', title: 'L1 Office Staff Series 3 — Challenge: Customer base ready' },
+    'reed-script-l1-s4-c1': { num: 'Reed — Script', title: 'L1 Office Staff Series 4 — Course 1: Book a job for a customer' },
+    'reed-script-l1-s4-c2': { num: 'Reed — Script', title: 'L1 Office Staff Series 4 — Course 2: Schedule an engineer' },
+    'reed-script-l1-s4-c3': { num: 'Reed — Script', title: 'L1 Office Staff Series 4 — Course 3: Send a job confirmation' },
+    'reed-script-l1-s4-c5': { num: 'Reed — Script', title: 'L1 Office Staff Series 4 — Course 5: Put a job on hold and take it off hold' },
+    'reed-script-l1-s4-c6': { num: 'Reed — Script', title: 'L1 Office Staff Series 4 — Course 6: Raise a recall job' },
+    'reed-script-l1-s4-c7': { num: 'Reed — Script', title: 'L1 Office Staff Series 4 — Course 7: Set up and use scheduled activities' },
+    'reed-script-l1-s4-challenge': { num: 'Reed — Script', title: 'L1 Office Staff Series 4 — Challenge: Job booked, engineer on the way, activities in place' },
     'ivy-induction': { num: 'Ivy — People', title: 'Enablement Specialist Induction Plan v3' },
     'ivy-jd-academy': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Description' },
     'ivy-jd-advert': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Advert' },

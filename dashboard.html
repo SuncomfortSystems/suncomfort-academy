@@ -411,9 +411,9 @@
     <div id="view-academy" class="view active">
       <div class="page-heading"><h1>Academy</h1><p>Course scripts organised by series</p></div>
       <div class="stats-row">
-        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">11</div><div class="stat-label">Series</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">49</div><div class="stat-label">Courses</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">184</div><div class="stat-label">Total Minutes</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">12</div><div class="stat-label">Series</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">56</div><div class="stat-label">Courses</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">207</div><div class="stat-label">Total Minutes</div></div>
         <div class="stat-card"><div class="stat-value" style="color:var(--blue2)">9</div><div class="stat-label">Characters</div></div>
       </div>
       <div id="job-view" class="series-block">
@@ -576,6 +576,21 @@
           <div class="course-card" onclick="openInboxFile('reed-script-l1-ft-s2-c5')"><div class="course-num">Course 5</div><div class="course-title">Complete the job report</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Field team</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l1-ft-s2-c6')"><div class="course-num">Course 6</div><div class="course-title">When you can't get in — no access, abort, and reject</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Field team</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l1-ft-s2-challenge')"><div class="course-num">Challenge</div><div class="course-title">Job complete, report sent</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Field team</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+        </div>
+      </div>
+      <div id="l1-ft-series3" class="series-block">
+        <div class="series-header" style="background:var(--blue1)">
+          <div><h2>Layer 1 — Field Team Series 3</h2><div class="series-meta">Advanced mobile — task checklists, parts, timecard, invoicing, and payments</div></div>
+          <div class="series-count">6 courses + challenge</div>
+        </div>
+        <div class="course-grid">
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-ft-s3-c1')"><div class="course-num">Course 1</div><div class="course-title">Complete an on-site task checklist</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Field team</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-ft-s3-c2')"><div class="course-num">Course 2</div><div class="course-title">Request a part from the field</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Field team</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-ft-s3-c3')"><div class="course-num">Course 3</div><div class="course-title">Collect a part from the stockroom</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Field team</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-ft-s3-c4')"><div class="course-num">Course 4</div><div class="course-title">Log your hours with the timecard</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Field team</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-ft-s3-c5')"><div class="course-num">Course 5</div><div class="course-title">Invoice a job from the field</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Field team</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-ft-s3-c6')"><div class="course-num">Course 6</div><div class="course-title">Take a payment on site</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Field team</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-ft-s3-challenge')"><div class="course-num">Challenge</div><div class="course-title">On site — every tool used</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Field team</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
     </div>
@@ -8627,6 +8642,711 @@ A photo task completed through the task interface, not the gallery. A Yes at the
 
 None — all content verified against Help Centre articles.
 `;
+INBOX_FILES["reed-script-l1-ft-s3-c1"] = `# Reed — Script: Complete an on-site task checklist
+
+**Layer:** 1 — Field Team Path
+**Series:** 3 of 3 — Advanced mobile
+**Course:** 1 of 6
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Identify the three types of on-site task that can appear on a job
+2. Complete each task type correctly from the job screen in the mobile app
+3. Explain the consequence of completing a task action outside the task interface
+
+**Target persona:** Field Team (Technicians)
+
+**SunComfort characters:** Luke Simmons (Technician)
+
+**Scenario:** Luke opens his appointment for a solar panel service and finds a task list waiting for him on the job screen. The list includes a general task, a photo task, and a form task. He needs to complete all three before he can leave the appointment.
+
+**Estimated length:** 3 minutes
+
+**Target audience:** Field team staff at field service businesses using Commusoft — technicians who encounter on-site task lists as part of their workflow. Assumes Commusoft Compass (Layer 0) and Field Team Series 2 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Field Team Series 2 complete. Appointment in Arrived status.
+
+**Main objective beyond learning objectives:** An on-site task list is only as useful as the technician's understanding of how to complete it. Taking a photo through the phone camera and saving it to the gallery does not complete a photo task. Completing a form through the menu rather than through the task does not register as task completion. Technicians who complete tasks through the correct interface complete the job record accurately and do not hold up the appointment close.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## What on-site tasks are
+
+On-site tasks appear on the job screen in the mobile app as Luke scrolls down through the appointment. Each task has a description that tells Luke what he needs to do before leaving the appointment. Mandatory tasks must be completed before he can set Leave status — they act as a pre-departure checklist that the office has configured for this job type. Optional tasks appear on the list but can be skipped. Both types are visible on the job screen throughout the appointment.
+
+---
+
+## The three task types
+
+General tasks are simple to-do items — a confirmation, a condition check, or a step to carry out on site. Luke taps the task and marks it complete. Nothing else is required.
+
+Photo tasks require Luke to capture a specific image. He opens the task, and the camera or gallery opens from within the task interface. The photo must be taken or selected through the task itself. A photo taken using the device camera and saved to the gallery does not register as photo task completion — the task remains open. Luke takes the photo through the task, and it is automatically tagged and linked to the job.
+
+Form tasks require a specific form to be completed. Luke opens the task and the form opens directly. He completes the pages and saves it as complete. The form is linked to the task and to the job record. If he opens the same form type through Menu, Certificates/Forms separately, that does not count as completing the form task — the task remains open.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: does your business currently use a standard pre-departure checklist that technicians complete before leaving every job?**
+
+*Yes:* On-site tasks in Commusoft are the digital version of that checklist. They are built into the job screen, mandatory tasks prevent the appointment from closing until they are done, and the completion is recorded on the job.
+*No:* On-site tasks can be configured by the office for specific job types — ensuring photos are taken, forms are completed, or conditions are checked before every appointment closes. Ask your office team whether task lists are configured for your job types.
+
+---
+
+*[Knowledge check — 4 options]*
+**A photo task is showing as incomplete on Luke's job screen. He took the required photo using his device camera and saved it to his gallery. What must he do?**
+
+A) Nothing — photos saved to the gallery are automatically linked to the task when the app syncs
+B) Go to Menu, Attached files, and upload the gallery photo to the job
+C) Open the photo task on the job screen and capture or select the photo through the task interface
+D) Mark the task as complete manually and attach the gallery photo separately
+
+*Correct (C):* Right. The photo task only registers as complete when the photo is taken or selected through the task interface on the job screen. Luke needs to open the task and capture or import the photo from within it.
+*Incorrect:* Photos saved to the device gallery do not count as photo task completion, even when uploaded to the job through Attached files. The task must be completed through its own interface on the job screen — Luke opens the task and captures or selects the photo from there.
+
+---
+
+## Summary
+
+On-site tasks appear on the job screen and must be completed through their own interface to register as done. General tasks are completed by tapping and confirming. Photo tasks require the photo to be captured or selected through the task — not taken outside it and uploaded separately. Form tasks require the form to be completed through the task, not through Menu, Certificates/Forms. Mandatory tasks must all be complete before Leave status can be set. Work through the list in order and complete each task through its correct interface — the job record is complete when the list is clear.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 3 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Luke Simmons (Technician)
+**Sources used:** Commusoft — Configuring on-site tasks (https://help.commusoft.com/en/articles/561197-configuring-on-site-tasks); Managing jobs on the mobile app (https://help.commusoft.com/en/articles/284397-managing-jobs-on-the-mobile-app)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
+INBOX_FILES["reed-script-l1-ft-s3-c2"] = `# Reed — Script: Request a part from the field
+
+**Layer:** 1 — Field Team Path
+**Series:** 3 of 3 — Advanced mobile
+**Course:** 2 of 6
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Access the Parts section of a job from the mobile app and request a needed part
+2. Distinguish between requesting from van stock and requesting from the office
+3. Explain what happens in the system after a part request is submitted
+
+**Target persona:** Field Team (Technicians)
+
+**SunComfort characters:** Nathan Cole (Technician)
+
+**Scenario:** Nathan is on site at a heat pump installation and realises he needs an additional capacitor that he does not have in his van. He needs to request it from the office through the app without interrupting his work.
+
+**Estimated length:** 3 minutes
+
+**Target audience:** Field team staff at field service businesses using Commusoft — technicians who need to request parts during a job. Assumes Commusoft Compass (Layer 0) and Field Team Series 2 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Field Team Series 2 complete. Appointment in Arrived status.
+
+**Main objective beyond learning objectives:** A part request made through the app creates a record on the job immediately. A call or text to the office creates an obligation that has to be entered manually on the other end. Technicians who use the in-app parts request keep the job record accurate, give the stockroom team what they need to act on the request, and track the part's status without a follow-up call.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Accessing the Parts section
+
+To request a part, Nathan opens the job appointment in the app, taps More, and selects Parts. This opens the parts management area for that job, where he can see any parts already requested or allocated, and add new requests. Parts can also be requested before the appointment begins — useful when Nathan knows from the job description that he will need a specific component.
+
+---
+
+## Requesting van stock versus requesting from the office
+
+Within the Parts section, Nathan can toggle between van stock and office stock to see what is available from each source. If the capacitor he needs is in his van stock, he selects it from the van stock list and it is marked as available to pick up from the van immediately — no request to the office is needed. If the part is not in van stock, he selects it from the office stock or catalogue and submits the request to the office team.
+
+Once the request reaches the office, the stockroom team either allocates the part from existing inventory or raises a purchase order to source it if it is not in stock. The part's status in the app updates as the request is processed — Nathan can check whether the part is available to pick up, on order from a supplier, or already in his van stock.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: when you need a part on a job today, do you request it through a system that creates a record on the job, or does the request happen verbally or by message?**
+
+*Yes:* The in-app parts request is the formal version of that process in Commusoft. The request is linked to the job from the moment it is submitted.
+*No:* The in-app request creates a traceable record on the job immediately. The office team can see what was requested, on which job, and when — without needing a separate message or call from Nathan.
+
+---
+
+*[Knowledge check — 4 options]*
+**Nathan requests a capacitor from the office through the Parts section. What happens next in the system?**
+
+A) The request is sent to Nathan's email for follow-up and the office must be called separately
+B) The part status updates to In van stock immediately and Nathan can collect it from his vehicle
+C) The office team receives the request and either allocates the part from stock or raises a purchase order
+D) The request is logged on the job but requires manager approval before the office can act on it
+
+*Correct (C):* Right. The part request goes to the office team who check stock availability. If the part is in inventory, they allocate it. If not, they raise a purchase order to source it. Nathan's app shows the part status as it updates.
+*Incorrect:* When Nathan submits a parts request, the office team receives it and takes action based on availability. If the part is in stock, they allocate it. If not, they raise a purchase order with the supplier. Nathan does not need to call — the status updates in the app.
+
+---
+
+## Summary
+
+Access parts for a job through More, Parts within the job appointment. Request can also be made before the appointment starts. Toggle between van stock and office stock to check availability from each source. Van stock parts are available immediately. Parts requested from the office are picked up or ordered by the stockroom team. The part's status updates in the app — Nathan can see whether it is available to pick up, on order from a supplier, or already in his van. The request is on the job record from the moment it is submitted.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 3 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Nathan Cole (Technician)
+**Sources used:** Commusoft — Stock control for engineers (https://help.commusoft.com/en/articles/216879-stock-control-for-engineers); Managing jobs on the mobile app (https://help.commusoft.com/en/articles/284397-managing-jobs-on-the-mobile-app)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
+INBOX_FILES["reed-script-l1-ft-s3-c3"] = `# Reed — Script: Collect a part from the stockroom
+
+**Layer:** 1 — Field Team Path
+**Series:** 3 of 3 — Advanced mobile
+**Course:** 3 of 6
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Use the QR code at the collection point to retrieve a picking list for parts
+2. Mark parts as installed on the job from within the mobile app
+3. Read the part status options that appear throughout the fulfilment cycle
+
+**Target persona:** Field Team (Technicians)
+
+**SunComfort characters:** Nathan Cole (Technician)
+
+**Scenario:** The office has confirmed that Nathan's capacitor request is ready for collection at the stockroom. Nathan needs to collect it, confirm receipt on the app, and mark it as installed once the job is done.
+
+**Estimated length:** 4 minutes
+
+**Target audience:** Field team staff at field service businesses using Commusoft — technicians who collect parts from a stockroom and need to mark them as installed through the mobile app. Assumes Commusoft Compass (Layer 0), Field Team Series 2, and Series 3 Course 2 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Series 3 Course 2 complete. Part has been requested and is showing as ready for collection.
+
+**Main objective beyond learning objectives:** Collecting a part without confirming it in the app leaves the part status unchanged on the job record. Marking it as installed without recording the correct quantity creates a mismatch between what the stockroom shows and what the job shows. Technicians who complete the collection and installation steps in the app keep the inventory and job records accurate without any manual correction needed later.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Collecting from the stockroom
+
+When Nathan arrives at the stockroom to collect his part, a QR code is displayed at the collection point. Nathan scans it using the Commusoft mobile app. This retrieves his picking list — the list of parts that have been prepared and are ready for him to collect. The stockroom manager uses the picking list to confirm what Nathan is taking. Nathan takes the parts and leaves.
+
+The QR code step is what connects the physical collection to the job record in Commusoft. Without scanning the code, the parts are not confirmed as collected in the system, even if Nathan has physically taken them.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: when your business collects parts from the stockroom today, is there a digital confirmation that the part has left the stockroom and is in the technician's possession?**
+
+*Yes:* The QR code scan in Commusoft is that confirmation. Scanning it creates the link between the physical handover and the job record.
+*No:* The QR code scan is the step that creates that record. When Nathan scans the code, the system registers that the part has been collected — giving the stockroom team visibility and creating a traceable chain from request to installation.
+
+---
+
+## Marking parts as installed
+
+Once Nathan is back on site and has fitted the part, he opens the Parts section of the job in the app. He selects the part from the list and marks it as installed, entering the correct quantity. The system allows partial installation — if Nathan has three units of the same part but only installs two, he marks two as installed and the remaining quantity can be updated later. The installed quantity is recorded on the job and feeds into the job costs.
+
+If Nathan has taken parts from his van stock rather than the stockroom — parts he already had with him — they are marked as installed in the same way through the Parts section. Van stock parts that are taken from the van automatically move to the van stock tracking without Nathan needing to scan a QR code.
+
+---
+
+## Part statuses
+
+Throughout the fulfilment cycle, the part status in the app reflects where the part is in the process. Available to pick up means the part has been allocated by the stockroom and Nathan can collect it. Ordered from supplier means the office has raised a purchase order and the part is on its way from the supplier. In van stock means the part is already in Nathan's vehicle and available to use. Installed means Nathan has marked the part as fitted on the job. Checking the status in the app means Nathan knows exactly where each part is without calling the office.
+
+*[Knowledge check — 4 options]*
+**Nathan collects his part from the stockroom but does not scan the QR code at the collection point. What is the consequence?**
+
+A) The part is automatically marked as collected when Nathan marks it as installed on the job
+B) The part status remains unchanged in the system and the collection is not recorded
+C) The stockroom team receives an alert and can update the status manually
+D) The part is flagged for review and Nathan receives a notification to complete the scan
+
+*Correct (B):* Right. Without scanning the QR code, the collection is not recorded in the system. The part status does not update and the stockroom record does not reflect that the part has been taken.
+*Incorrect:* The QR code scan is the confirmation step that updates the part's status in the system. Without it, the system does not register that the part has been collected. Nathan should return to the collection point and scan the code, or ask the stockroom team to update the record.
+
+---
+
+## Summary
+
+When collecting parts from the stockroom, scan the QR code at the collection point to retrieve the picking list and confirm the collection in the system. This links the physical handover to the job record. Once the part is installed, open the Parts section of the job in the app and mark the part as installed with the correct quantity. Partial installation is supported — uninstalled quantities can be updated later. Part statuses throughout the cycle are: Available to pick up, Ordered from supplier, In van stock, and Installed. Checking the status in the app gives Nathan a complete picture of where each part is at any point in the job.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 4 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Nathan Cole (Technician)
+**Sources used:** Commusoft — Stock control for engineers (https://help.commusoft.com/en/articles/216879-stock-control-for-engineers); Managing jobs on the mobile app (https://help.commusoft.com/en/articles/284397-managing-jobs-on-the-mobile-app)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
+INBOX_FILES["reed-script-l1-ft-s3-c4"] = `# Reed — Script: Log your hours with the timecard
+
+**Layer:** 1 — Field Team Path
+**Series:** 3 of 3 — Advanced mobile
+**Course:** 4 of 6
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Locate and use the timecard widget on the mobile app home screen
+2. Log a shift start, break, and shift end correctly
+3. Identify the constraints that apply to the timecard and what to do when they prevent normal use
+
+**Target persona:** Field Team (Technicians)
+
+**SunComfort characters:** Luke Simmons (Technician)
+
+**Scenario:** SunComfort is rolling out the mobile timecard so technicians can log their own hours. Luke needs to understand how the widget works before his first day using it.
+
+**Estimated length:** 3 minutes
+
+**Target audience:** Field team staff at field service businesses using Commusoft — technicians who log their working hours through the mobile app. Assumes Commusoft Compass (Layer 0) and Field Team Series 2 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Field Team Series 2 complete. Mobile timecards enabled in account settings.
+
+**Main objective beyond learning objectives:** A timecard that is not clocked out at the end of the day does not close automatically — Luke must manually amend it before clocking in the next morning. A timecard that is logged without a connection does not update until the connection is restored. Technicians who understand these constraints will manage their own records accurately and avoid situations where the office has to correct timesheets before they can be approved.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## The timecard widget
+
+The timecard widget appears on the home screen of the mobile app. If Luke cannot see it, mobile timecards have not been enabled in his account settings — this is an administrator setting, not something Luke can turn on himself. When the widget is visible, it shows the current status: clocked in, on a break, or clocked out.
+
+To start a shift, Luke taps the widget and selects Clock in. The time is recorded at the moment he taps. To log a break, he selects Start break. When he returns from the break, he selects End break. At the end of the day, he selects Clock out. Each of these steps creates a record that feeds into the timesheet the office reviews for payroll.
+
+---
+
+## Constraints to know
+
+Two constraints apply to the timecard. First, the widget requires an internet connection to record an action. If Luke is in an area with no signal, the action does not update until he has connectivity. If he needs to log time without a connection, he should note the times manually and amend the entry when he is back online.
+
+Second, the widget does not close automatically at the end of the day. If Luke forgets to clock out, the shift remains open. Before he can clock in the following morning, he needs to amend the previous day's timecard to add the correct end time. The office can also amend timecards from the web app if Luke is unable to do it himself.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: does your business currently have a consistent way for technicians to record their own start and end times each day?**
+
+*Yes:* The timecard widget in Commusoft gives Luke a single place to log that information, linked to his user record and visible to the office through the Timesheet approval report.
+*No:* The timecard widget is how this can be done in Commusoft. Luke logs his hours from the app home screen each day, and the office can review and approve the records without needing to chase him for hours worked.
+
+---
+
+*[Knowledge check — 4 options]*
+**Luke forgets to clock out at the end of his shift. He opens the app the next morning to clock in for the new day. What must he do first?**
+
+A) Clock in for the new day — the system automatically closes the previous shift at midnight
+B) Delete the previous day's timecard and start fresh with today's clock-in
+C) Amend the previous day's timecard to add the correct clock-out time before clocking in for the new day
+D) Contact the office to unlock the widget before he can clock in
+
+*Correct (C):* Right. If the previous shift was not clocked out, Luke needs to amend it to add the correct end time before clocking in for the new day. The system does not close shifts automatically.
+*Incorrect:* The timecard widget does not close shifts automatically at midnight. Luke needs to amend the previous day's entry to add the clock-out time before he can start a new shift. The office can also make this amendment from the web app if needed.
+
+---
+
+## Summary
+
+The timecard widget appears on the app home screen and is enabled by the office in account settings. To log a shift: Clock in at the start, Start break and End break for any breaks taken, and Clock out at the end of the day. The widget requires an internet connection — without one, actions do not update until connectivity is restored. Shifts do not close automatically: if Luke forgets to clock out, he must amend the previous day's timecard before clocking in the next morning. The office reviews and approves timesheets through the Timesheet approval report.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 3 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Luke Simmons (Technician)
+**Sources used:** Commusoft — Timecard widget (https://help.commusoft.com/en/articles/216885-timecard-widget)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
+INBOX_FILES["reed-script-l1-ft-s3-c5"] = `# Reed — Script: Invoice a job from the field
+
+**Layer:** 1 — Field Team Path
+**Series:** 3 of 3 — Advanced mobile
+**Course:** 5 of 6
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Access the Invoices section of a job from the mobile app
+2. Raise a final invoice for a job from the field and review its contents before sending
+3. Explain when raising an invoice from the field is appropriate and when it is not
+
+**Target persona:** Field Team (Technicians)
+
+**SunComfort characters:** Luke Simmons (Technician)
+
+**Scenario:** Luke has completed a straightforward solar panel service call. The customer wants to pay immediately and Luke has been authorised to raise the invoice on site. He needs to raise it from the app, confirm the contents, and send it before leaving.
+
+**Estimated length:** 4 minutes
+
+**Target audience:** Field team staff at field service businesses using Commusoft — technicians who are authorised to raise invoices for completed jobs in the field. Assumes Commusoft Compass (Layer 0) and Field Team Series 2 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Field Team Series 2 complete. Job is complete and authorisation to invoice has been confirmed.
+
+**Main objective beyond learning objectives:** Raising an invoice from the field only works when the job is genuinely ready to bill — all parts recorded, all labour correct, and the customer's details accurate. An invoice raised too early or with missing line items creates a correction process that takes longer than waiting. Technicians who raise field invoices on the right jobs, with the right contents, close the billing cycle at the point of service rather than creating a follow-up task for the office.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## When to raise an invoice from the field
+
+Not every job should be invoiced from the field. Raising an invoice on site is appropriate for straightforward, single-visit jobs where the scope is clear, all costs are confirmed, and the customer is ready to pay. It is not appropriate for multi-visit jobs where more work is still to be done, or for jobs where the final scope is still being agreed with the customer or the office. When in doubt, Luke should confirm with the office before raising an invoice on site.
+
+For SunComfort, a routine solar panel service that is complete, documented, and ready to close is the right type of job to invoice from the field. A multi-day installation with outstanding variation costs is not.
+
+---
+
+## Accessing Invoices and raising the invoice
+
+From within the job appointment in the app, Luke opens the Invoices section. If billable items are attached to the job — parts, labour, or service charges recorded during the visit — they appear in the invoice view. Luke selects the option to raise a final invoice. The system builds the invoice from the recorded job costs. Luke reviews the line items before confirming: the parts used, any labour or service charge, and the total.
+
+If the line items are correct, Luke confirms and the invoice is raised. He can then send the invoice to the customer directly from the app — either by email or through the invoice portal, depending on what the customer has requested.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: does your business currently give field technicians the ability to invoice customers at the point of service?**
+
+*Yes:* The in-app invoicing capability in Commusoft is the formal workflow for that process. The invoice is raised from the recorded job costs and linked to the job record automatically.
+*No:* Field invoicing is an option that can be enabled for authorised technicians. It speeds up cash flow by completing the billing cycle on site rather than at the office — but it requires that the job scope and costs are confirmed before Luke leaves.
+
+---
+
+## Reviewing before confirming
+
+Before confirming the invoice, Luke checks three things: that the parts used are all listed with the correct quantities, that any service charges or labour items are included, and that the customer's billing address is correct. An invoice raised and sent cannot easily be recalled once the customer has received it. Taking thirty seconds to review the contents before confirming protects against an error that requires a credit note and a re-invoice.
+
+*[Knowledge check — 4 options]*
+**Luke is on a two-visit solar installation. The first visit is complete but a second visit is booked to install the battery storage unit. Should he raise a final invoice after the first visit?**
+
+A) Yes — each visit should be invoiced separately so the customer is billed as work progresses
+B) Yes — raising a final invoice closes the first appointment without affecting the second visit
+C) No — a final invoice closes the job entirely, preventing any further appointments or billing
+D) No — the invoice portal is not available from the mobile app for multi-visit jobs
+
+*Correct (C):* Right. A final invoice closes the job. If a second visit is still planned, the job must remain open. Luke should wait until all the work is complete before raising the final invoice, or speak to the office about raising an interim invoice if staged billing has been agreed.
+*Incorrect:* Raising a final invoice closes the job. Because a second visit is still needed, Luke should not raise the final invoice after the first visit. He should leave invoicing to the office or wait until all the agreed work is complete.
+
+---
+
+## Summary
+
+Access the Invoices section from within the job appointment in the app. Raising a field invoice is appropriate for straightforward, complete, single-visit jobs — not for multi-visit jobs or jobs with outstanding scope. The invoice is built from recorded job costs: parts, labour, and service charges. Review line items and the customer's billing details before confirming. Once confirmed, send by email or through the invoice portal. A final invoice closes the job — raise it only when all the work is done and the customer is ready to be billed.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 4 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Luke Simmons (Technician)
+**Sources used:** Commusoft — Managing jobs on the mobile app (https://help.commusoft.com/en/articles/284397-managing-jobs-on-the-mobile-app)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+[OPEN — No dedicated HC article found for raising invoices from the field on the mobile app. Content derived from the brief mention in Managing Jobs on the Mobile App (284397: "Invoices: Raise invoices and record payments") and general system behaviour. Confirm whether a dedicated article exists and verify that the Invoices section navigation and invoice-raises-from-job-costs behaviour are accurate.]
+`;
+INBOX_FILES["reed-script-l1-ft-s3-c6"] = `# Reed — Script: Take a payment on site
+
+**Layer:** 1 — Field Team Path
+**Series:** 3 of 3 — Advanced mobile
+**Course:** 6 of 6
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Access the payment section of a job from the mobile app
+2. Process a card payment on site using the SumUp integration
+3. Identify the requirements and constraints that apply to on-site card payments
+
+**Target persona:** Field Team (Technicians)
+
+**SunComfort characters:** Luke Simmons (Technician)
+
+**Scenario:** Luke has completed a solar panel service and raised the invoice on site. The customer wants to pay by card before he leaves. Luke needs to process the payment through the SumUp integration without interrupting the confirmation flow.
+
+**Estimated length:** 3 minutes
+
+**Target audience:** Field team staff at field service businesses using Commusoft — technicians who are authorised to take card payments on site using the SumUp integration. Assumes Commusoft Compass (Layer 0) and Field Team Series 2 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Field Team Series 2 complete. Job is complete. Invoice has been raised or is ready to be settled.
+
+**Main objective beyond learning objectives:** The SumUp integration transfers the payment confirmation back to Commusoft automatically — but only if the SumUp app is not closed before the redirect completes. A technician who closes the SumUp app too early may leave the payment unconfirmed on the job record, even though the card transaction was successful. Technicians who wait for the auto-redirect close the payment loop at the point of service without any manual correction needed from the office.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Accessing the payment section
+
+From within the job appointment in the app, Luke opens the payment section and selects the option to add a payment. This opens the payment entry screen, where he selects the payment method from a dropdown. The payment is linked to the job record from the moment it is initiated.
+
+---
+
+## Taking a card payment with SumUp
+
+Luke selects SumUp from the payment method dropdown. The app redirects him to the SumUp app on his device, where the card reader is ready to process the transaction. The customer taps or inserts their card and the transaction is processed through SumUp.
+
+Once the transaction is complete, the SumUp app automatically redirects Luke back to Commusoft. This redirect is what confirms the payment on the job record. Luke must not close the SumUp app manually while waiting — if he closes it before the redirect completes, the payment confirmation may not transfer to Commusoft, even if the card transaction was successful in SumUp. Luke waits for the redirect, and the payment appears on the job.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: does your business currently take card payments on site from customers at the point of service?**
+
+*Yes:* The SumUp integration in Commusoft is the formal workflow for that process. Payments taken on site are recorded directly on the job record without any manual entry needed at the office.
+*No:* The SumUp integration makes this possible. It requires a SumUp account, a SumUp card reader, and the SumUp app installed on the device. Speak to the office if on-site card payments are something you want to use — setup happens at the account level, not on the device.
+
+---
+
+## Requirements and constraints
+
+Taking card payments on site using SumUp requires four things to be in place: an active SumUp account linked to the Commusoft account, the SumUp app installed on Luke's device, a SumUp card reader connected and ready, and a Commusoft plan that supports the integration. In the UK, the SumUp integration is available on the Go Paperless, Customer Journey, and Automation plans. It is not available on other plans or in other regions.
+
+If the SumUp option does not appear in the payment method dropdown, one of these requirements is not met. Luke should contact the office rather than attempting to record the payment another way.
+
+*[Knowledge check — 4 options]*
+**Luke processes a card payment in the SumUp app. The transaction looks successful. He closes the SumUp app and returns to Commusoft manually. What is the likely result?**
+
+A) The payment is automatically recorded in Commusoft because the transaction was completed in SumUp
+B) Commusoft prompts Luke to confirm the payment amount before recording it on the job
+C) The payment confirmation may not have transferred — the SumUp app should redirect back to Commusoft automatically without being closed manually
+D) SumUp sends a receipt to the customer and Commusoft updates the job record within ten minutes
+
+*Correct (C):* Right. The SumUp app redirects back to Commusoft automatically once the transaction is complete — this is what records the payment on the job. Closing the app before the redirect completes can interrupt that confirmation, even if the card transaction itself was successful. Luke should always wait for the auto-redirect.
+*Incorrect:* Closing the SumUp app before the auto-redirect can interrupt the payment confirmation. Even if the card transaction was successful, the payment may not appear on the job record in Commusoft. Luke should wait for the SumUp app to redirect him back automatically rather than closing it manually.
+
+---
+
+## Summary
+
+From within the job appointment, open the payment section and select Add a payment. Select SumUp from the payment method dropdown. The app redirects to the SumUp app, where the customer completes the card transaction using the card reader. Wait for the SumUp app to redirect back to Commusoft automatically — do not close it manually before the redirect completes. The payment is confirmed on the job record once the redirect is complete. SumUp requires an active SumUp account, the SumUp app installed on the device, a SumUp card reader, and a compatible Commusoft plan — in the UK, Go Paperless, Customer Journey, and Automation plans.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 3 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Luke Simmons (Technician)
+**Sources used:** Commusoft — SumUp integration (https://help.commusoft.com/en/articles/216658); Managing jobs on the mobile app (https://help.commusoft.com/en/articles/284397-managing-jobs-on-the-mobile-app)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
+INBOX_FILES["reed-script-l1-ft-s3-challenge"] = `# Reed — Script: On site — every tool used
+
+**Layer:** 1 — Field Team Path
+**Series:** 3 of 3 — Advanced mobile
+**Course:** Challenge
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Apply the correct procedure for each advanced mobile tool covered in Series 3
+2. Identify the consequence of skipping a confirmation step in any part of the workflow
+3. Recognise when to pause and involve the office rather than proceeding independently
+
+**Target persona:** Field Team (Technicians)
+
+**SunComfort characters:** Sarah Chen (Technician)
+
+**Scenario:** Sarah is mid-way through a busy day. She has used the task checklist, collected a part from the stockroom, logged her hours, raised an invoice, and taken a payment — all from the app. Clint walks her through a set of real situations to check she has used each tool correctly.
+
+**Estimated length:** 3 minutes
+
+**Target audience:** Field team staff at field service businesses using Commusoft who have completed Field Team Series 3 Courses 1 through 6. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Field Team Series 3 Courses 1–6 complete.
+
+**Main objective beyond learning objectives:** The advanced mobile tools in Series 3 work as a chain — each step creates a record that the next step depends on. A skipped confirmation (missed QR scan, unclosed timecard, SumUp app closed too early) creates a gap in that chain that the office has to investigate and correct. The challenge reinforces that using the tools consistently is not about process for its own sake — it is about keeping the job record accurate enough that Sarah never creates a problem she cannot see from her own screen.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Opening
+
+Clint: Sarah has had a full day. She has worked through a task checklist, collected a part, logged her hours, raised an invoice, and taken a card payment — all without leaving the app. Before she signs off, let's check how she handled a few moments where it would have been easy to take a shortcut.
+
+---
+
+## Exchange 1 — Photo task
+
+Sarah: My job had a photo task on it. I had already taken the photo on my camera app and saved it to my gallery, so I uploaded it through Attached Files and moved on. The task is still showing as incomplete. What did I do wrong?
+
+Clint: The photo task only registers as complete when the photo is taken or selected through the task interface on the job screen. Uploading a gallery photo through Attached Files links it to the job, but it does not count as task completion. Open the task, capture or select the photo from inside it, and the task will mark as done.
+
+---
+
+## Exchange 2 — Stockroom collection
+
+Sarah: I was running late so I grabbed my part from the stockroom without scanning the QR code at the collection point. I have marked it as installed on the job. Is that enough to close the loop?
+
+Clint: Not quite. Without scanning the QR code, the system does not have a record that the part left the stockroom. The installation is recorded on the job, but the collection step is missing — so the stockroom record and the job record do not match. Go back and scan the code if you can, or ask the stockroom team to update the entry. The collection and the installation are two separate steps, and both need to be in the system.
+
+---
+
+## Exchange 3 — Timecard
+
+Sarah: I forgot to clock out last night. I opened the app this morning and clocked straight in for today. Have I created a problem?
+
+Clint: Yes. The timecard does not close automatically at midnight, so the system currently has you clocked in from yesterday morning through to now as a single unbroken shift. You need to amend yesterday's entry to add the correct clock-out time. The office can do that from the web app if you cannot do it yourself. Sort that out before the timesheet is reviewed — otherwise payroll will not have the right hours.
+
+---
+
+## Exchange 4 — Invoicing a multi-visit job
+
+Sarah: I have finished the first visit of a two-visit solar installation. The customer asked for an invoice for today's work. I raised a final invoice and sent it. Was that the right call?
+
+Clint: That one will create a problem. A final invoice closes the job entirely, so the second visit can no longer be completed through this job record. If staged billing had been agreed with the customer, the office would need to raise an interim invoice rather than a final one. Before invoicing on a multi-visit job, check with the office. Once a final invoice has been sent, the correction process takes longer than a quick call would have.
+
+---
+
+*[Knowledge check — 4 options]*
+**Sarah processes a card payment on site using SumUp. The transaction completes successfully in the SumUp app. Before the redirect back to Commusoft appears, she closes the SumUp app and navigates back to Commusoft manually. What should she do next?**
+
+A) Nothing — the payment was confirmed in SumUp and will sync to Commusoft automatically
+B) Re-open SumUp and process the transaction again to generate a second confirmation
+C) Contact the office to check whether the payment was recorded on the job in Commusoft
+D) Select SumUp from the payment dropdown again and begin a new payment
+
+*Correct (C):* Right. Closing the SumUp app before the auto-redirect interrupted the confirmation process. The card transaction may have been successful, but the payment may not have been recorded on the job in Commusoft. Sarah should contact the office to check before doing anything else — if the payment did not come through, the office can record it manually. Attempting a second payment without checking risks charging the customer twice.
+*Incorrect:* Closing the SumUp app before the redirect means the payment confirmation may not have reached Commusoft, even if the card transaction succeeded. Sarah should contact the office to check whether the payment appears on the job record. Acting without checking — whether by retrying the payment or assuming it went through — risks either a double charge or an unrecorded payment.
+
+---
+
+## Series close
+
+Clint: That is Series 3 done. You have been through the full advanced mobile toolkit — task checklists, parts requests and collection, the timecard, invoicing, and card payments. Each of these tools closes a loop that would otherwise stay open: a task unrecorded, a part untracked, an hour missing from the timesheet, a job that never gets billed. Use them consistently and the job record looks after itself. That is the whole point.
+
+---
+
+**Section count:** 1 opening + 4 exchanges + 1 knowledge check + 1 series close
+**Estimated length:** 3 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Sarah Chen (Technician)
+**Sources used:** Commusoft — Configuring on-site tasks (https://help.commusoft.com/en/articles/561197-configuring-on-site-tasks); Stock control for engineers (https://help.commusoft.com/en/articles/216879-stock-control-for-engineers); Timecard widget (https://help.commusoft.com/en/articles/216885-timecard-widget); Managing jobs on the mobile app (https://help.commusoft.com/en/articles/284397-managing-jobs-on-the-mobile-app); SumUp integration (https://help.commusoft.com/en/articles/216658)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
 INBOX_FILES["ivy-induction"] = `# Enablement Specialist — Induction Plan
 
 Training is essential for your role at Commusoft. To ensure you have the best possible start, we have created this induction schedule.
@@ -9524,6 +10244,13 @@ function openInboxFile(key) {
     'reed-script-l1-ft-s2-c5': { num: 'Reed — Script', title: 'L1 Field Team Series 2 — Course 5: Complete the job report' },
     'reed-script-l1-ft-s2-c6': { num: 'Reed — Script', title: 'L1 Field Team Series 2 — Course 6: When you can\'t get in — no access, abort, and reject' },
     'reed-script-l1-ft-s2-challenge': { num: 'Reed — Script', title: 'L1 Field Team Series 2 — Challenge: Job complete, report sent' },
+    'reed-script-l1-ft-s3-c1': { num: 'Reed — Script', title: 'L1 Field Team Series 3 — Course 1: Complete an on-site task checklist' },
+    'reed-script-l1-ft-s3-c2': { num: 'Reed — Script', title: 'L1 Field Team Series 3 — Course 2: Request a part from the field' },
+    'reed-script-l1-ft-s3-c3': { num: 'Reed — Script', title: 'L1 Field Team Series 3 — Course 3: Collect a part from the stockroom' },
+    'reed-script-l1-ft-s3-c4': { num: 'Reed — Script', title: 'L1 Field Team Series 3 — Course 4: Log your hours with the timecard' },
+    'reed-script-l1-ft-s3-c5': { num: 'Reed — Script', title: 'L1 Field Team Series 3 — Course 5: Invoice a job from the field' },
+    'reed-script-l1-ft-s3-c6': { num: 'Reed — Script', title: 'L1 Field Team Series 3 — Course 6: Take a payment on site' },
+    'reed-script-l1-ft-s3-challenge': { num: 'Reed — Script', title: 'L1 Field Team Series 3 — Challenge: On site — every tool used' },
     'ivy-induction': { num: 'Ivy — People', title: 'Enablement Specialist Induction Plan v3' },
     'ivy-jd-academy': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Description' },
     'ivy-jd-advert': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Advert' },

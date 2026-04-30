@@ -411,9 +411,9 @@
     <div id="view-academy" class="view active">
       <div class="page-heading"><h1>Academy</h1><p>Course scripts organised by series</p></div>
       <div class="stats-row">
-        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">10</div><div class="stat-label">Series</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">42</div><div class="stat-label">Courses</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">160</div><div class="stat-label">Total Minutes</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">11</div><div class="stat-label">Series</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">49</div><div class="stat-label">Courses</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">184</div><div class="stat-label">Total Minutes</div></div>
         <div class="stat-card"><div class="stat-value" style="color:var(--blue2)">9</div><div class="stat-label">Characters</div></div>
       </div>
       <div id="job-view" class="series-block">
@@ -560,6 +560,22 @@
           <div class="course-card" style="opacity:0.5;cursor:default"><div class="course-num">Course 1</div><div class="course-title">Raise a purchase order with a supplier</div><div class="course-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#f5f5f5;color:#999">Gap</span></div></div>
           <div class="course-card" style="opacity:0.5;cursor:default"><div class="course-num">Course 2</div><div class="course-title">Receive a delivery and match it to a job</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#f5f5f5;color:#999">Gap</span></div></div>
           <div class="course-card" style="opacity:0.5;cursor:default"><div class="course-num">Challenge</div><div class="course-title">Part ordered, delivered, installed</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#f5f5f5;color:#999">Gap</span></div></div>
+        </div>
+      </div>
+      <div class="section-heading" style="margin-top:24px">Layer 1 — Field Team Path</div>
+      <div id="l1-ft-series2" class="series-block">
+        <div class="series-header" style="background:var(--blue1)">
+          <div><h2>Layer 1 — Field Team Series 2</h2><div class="series-meta">On site: arrival to job complete — travel, forms, files, assets, job report, and access outcomes</div></div>
+          <div class="series-count">6 courses + challenge</div>
+        </div>
+        <div class="course-grid">
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-ft-s2-c1')"><div class="course-num">Course 1</div><div class="course-title">Travel to a job and mark your arrival</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Field team</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-ft-s2-c2')"><div class="course-num">Course 2</div><div class="course-title">Complete your on-site form</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Field team</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-ft-s2-c3')"><div class="course-num">Course 3</div><div class="course-title">Attach photos, video, and documents on site</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Field team</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-ft-s2-c4')"><div class="course-num">Course 4</div><div class="course-title">Record and update asset information</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Field team</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-ft-s2-c5')"><div class="course-num">Course 5</div><div class="course-title">Complete the job report</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Field team</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-ft-s2-c6')"><div class="course-num">Course 6</div><div class="course-title">When you can't get in — no access, abort, and reject</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Field team</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-ft-s2-challenge')"><div class="course-num">Challenge</div><div class="course-title">Job complete, report sent</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Field team</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
     </div>
@@ -7884,6 +7900,733 @@ Communication preferences checked, a postponed reminder rescheduled, a permanent
 
 None — all content verified against Help Centre articles.
 `;
+INBOX_FILES["reed-script-l1-ft-s2-c1"] = `# Reed — Script: Travel to a job and mark your arrival
+
+**Layer:** 1 — Field Team Path
+**Series:** 2 of 3 — On site: arrival to job complete
+**Course:** 1 of 6
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Locate assigned jobs on the home screen and diary in the mobile app
+2. Set travel status at the correct point in the day and explain what it triggers
+3. Mark arrival correctly and identify the constraint that follows
+
+**Target persona:** Field Team (Technicians)
+
+**SunComfort characters:** Luke Simmons (Technician)
+
+**Scenario:** Luke has his appointments for the day loaded in the Commusoft mobile app. He needs to set the right status at the right moment so the office knows where he is and the customer knows when to expect him.
+
+**Estimated length:** 3 minutes
+
+**Target audience:** Field team staff at field service businesses using Commusoft — technicians who use the mobile app to manage and action their daily appointments. Assumes Commusoft Compass (Layer 0) complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Commusoft Compass (Layer 0) complete. App installed and logged in.
+
+**Main objective beyond learning objectives:** The status sequence on the mobile app is not just for the office's visibility — it structures the technician's own day. Skipping or mistiming a status update leaves the appointment open, prevents movement to the next job, and can delay the customer notification that triggers them to be home or ready. Technicians who set statuses at the right moment run cleaner days for themselves and the office.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Your jobs on the home screen
+
+When Luke opens the app, the home screen shows his current and upcoming appointments. Appointments marked as Travelling or Arrived appear at the top, with the next scheduled job below. Each entry shows the customer address and contact details, and a map of the location. The diary tab gives a different view of the same information — Daily, Monthly, or List format — useful when Luke wants to see the full day at once rather than the immediate next job.
+
+One thing to note before travelling: the address of an upcoming job is blurred in the app until Luke sets the appointment to Travel status. This is by design. The address unlocks when Luke is ready to depart.
+
+---
+
+## Setting travel status
+
+When Luke is in his van and ready to leave for the job, he opens the appointment and sets it to Travel. This is the signal that he is on his way. If SunComfort has configured an On Our Way SMS, the message goes to the customer automatically at this point — no manual step needed. Luke does not need to set Travel the night before or at the start of the day. The right time is when he is actually in the vehicle and about to drive.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: does your business currently have a way to let customers know automatically when a technician is on the way?**
+
+*Yes:* The Travel status in the app is the trigger for that notification in Commusoft. If the On Our Way SMS template is configured, it sends the moment the status changes. No separate message from Luke is needed.
+*No:* Setting up an On Our Way SMS template means customers are notified the moment the technician sets Travel status — without Luke having to send a message manually. That is a setup option your office can configure in account settings.
+
+---
+
+## Marking arrival
+
+When Luke arrives at the property and has access, he sets the appointment to Arrived. At this point, Commusoft may prompt him to complete arrival questions before he can proceed — these are pre-configured by the office and might include confirming site access or noting any initial observations. Once completed, Luke is on site and the office can see his status has changed.
+
+One important constraint: once an appointment is marked as Arrived, it cannot be edited or moved. The start time is locked. If Luke mistakenly marks arrival before he is actually on site, the office will need to intervene to correct it. Set Arrived when you are at the property — not before.
+
+*[Knowledge check — 4 options]*
+**Luke sets his appointment to Arrived before he reaches the property. What is the constraint this creates?**
+
+A) The appointment status resets to Travel automatically if no on-site activity is recorded within five minutes
+B) The appointment cannot be edited or moved once marked as Arrived
+C) The customer receives an Arrived notification and calls the office to find out where Luke is
+D) Commusoft flags the appointment for review and asks Luke to confirm his location
+
+*Correct (B):* Right. Once an appointment is marked as Arrived, it cannot be edited or moved. The start time is locked. Set Arrived only when you are physically at the property.
+*Incorrect:* Marking an appointment as Arrived locks it — the appointment cannot be edited or moved after that point. The start time is recorded as the moment the status was set. Set Arrived only when you are at the property, not before.
+
+---
+
+## Summary
+
+Your assigned appointments appear on the home screen and in the diary tab of the app. The address of each upcoming job is blurred until you set Travel status. Set Travel when you are in your vehicle and ready to leave — this triggers the On Our Way SMS to the customer if your office has it configured. Set Arrived when you are physically at the property and have access. Complete any arrival questions that appear. Once Arrived is set, the appointment is locked — it cannot be edited or moved. Set each status at the right moment and the office always knows where you are.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 3 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Luke Simmons (Technician)
+**Sources used:** Commusoft — Managing jobs on the mobile app (https://help.commusoft.com/en/articles/284397-managing-jobs-on-the-mobile-app); Appointment statuses (https://help.commusoft.com/en/articles/216882-appointment-statuses)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
+INBOX_FILES["reed-script-l1-ft-s2-c2"] = `# Reed — Script: Complete your on-site form
+
+**Layer:** 1 — Field Team Path
+**Series:** 2 of 3 — On site: arrival to job complete
+**Course:** 2 of 6
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Access and complete an on-site form in the Commusoft mobile app
+2. Save a form as a draft when it cannot be finished in one session
+3. Identify the four form statuses and explain what each means for the record
+
+**Target persona:** Field Team (Technicians)
+
+**SunComfort characters:** Luke Simmons (Technician)
+
+**Scenario:** Luke is on site at a solar installation and needs to complete a compliance certificate. He has all the details but the form is long and the customer needs a copy emailed immediately on completion.
+
+**Estimated length:** 4 minutes
+
+**Target audience:** Field team staff at field service businesses using Commusoft — technicians who complete compliance certificates, risk assessments, or inspection records on the mobile app. Assumes Commusoft Compass (Layer 0) and Field Team Series 2 Course 1 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Field Team Series 2 Course 1 complete. Appointment marked as Arrived.
+
+**Main objective beyond learning objectives:** A form saved as draft is not on the office record — it exists only on the device. A form saved as complete is locked and synced. Technicians who understand the difference between the two, and what each status means for the paperwork trail, will complete forms correctly the first time and avoid situations where a customer asks for their certificate and the office cannot find it.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Accessing and starting a form
+
+To access forms from within a job appointment, go to Menu and select Certificates/Forms. This shows all forms linked to the appointment along with their current status. To start a new form, tap the plus button and select the form type. Before the form opens, Commusoft shows the customer and work address details for Luke to review. Once confirmed, the form opens page by page. Luke works through each page, completing the required fields before moving to the next.
+
+If the job workflow includes a form task — a task that requires a specific form to be completed before Luke can leave the appointment — the form is accessible directly from the task on the job screen. Luke should complete it through the task, not separately through the menu, so that the task registers as complete.
+
+---
+
+## Saving as draft or completing
+
+If Luke needs to pause part way through — the customer is unavailable to sign, or he needs to check a measurement — he can save the form as a draft. To do this, he taps back through the pages until the option to Save draft and close appears. The draft is saved on the device and he can return to it later. While a form is in draft, it is not on the office record and it is not visible to the office team.
+
+When all pages and fields are complete, Luke selects Save. This submits the form as complete. A completed form is locked immediately — it cannot be edited after this point. If a form needs to be changed after submission, Luke or the office can clone it, which creates an editable copy as a new draft, and complete the corrected version.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: have you ever needed to complete a compliance certificate on paper and then enter the information again in a separate system?**
+
+*Yes:* The on-site form in Commusoft replaces both steps. Luke completes it once on the device, and it is available to the office immediately when it syncs — no re-entry needed.
+*No:* The on-site form is your single step. Complete it on site, save it as complete, and it syncs to the office record automatically. No follow-up paperwork is needed.
+
+---
+
+## Form statuses
+
+After Luke saves a form as complete, it moves through four statuses. Draft means the form was saved part way through and has not yet been submitted — it is only on Luke's device. Waiting to sync means the form was submitted but is queued for upload, which happens when the device connects to a network. Completed means the form has synced successfully to the server and is available on the office record. Failed to sync means the upload did not complete and Luke needs to retry when he has a better connection.
+
+Once a form reaches Completed status, it can be printed as a PDF or emailed directly to the customer from within the app. Luke can email the certificate to the customer before he leaves the site if that is what was agreed.
+
+*[Knowledge check — 4 options]*
+**Luke completes a form and selects Save. He then realises he entered the wrong reading on page two. What should he do?**
+
+A) Reopen the form and edit the incorrect field — completed forms remain editable for 24 hours after submission
+B) Ask the office to delete the form so he can start again from scratch
+C) Clone the form to create an editable draft copy and complete the corrected version
+D) The error cannot be corrected — the form is locked and a new form must be raised separately
+
+*Correct (C):* Right. A completed form is locked and cannot be edited directly. Cloning it creates an editable draft copy that Luke or the office can correct and submit as the accurate version.
+*Incorrect:* Once a form is saved as complete, it is locked and cannot be edited. To correct an error, the form should be cloned — this creates an editable draft copy. The corrected version is then completed and submitted.
+
+---
+
+## Summary
+
+Access forms for a job through Menu, Certificates/Forms, and tap the plus button to start a new one. If a form task is in the workflow, complete it through the task on the job screen — not separately. Work through the pages and save as draft if you need to pause. A draft is only on your device and is not visible to the office. Select Save when the form is complete — it is locked immediately and queued to sync. The four statuses are: Draft (on device only), Waiting to sync (submitted but queued), Completed (synced and on the office record), and Failed to sync (retry needed). Once completed, email or print the form directly from the app before leaving site.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 4 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Luke Simmons (Technician)
+**Sources used:** Commusoft — Custom forms in the mobile app (https://help.commusoft.com/en/articles/258920-custom-forms-in-the-mobile-app); Managing jobs on the mobile app (https://help.commusoft.com/en/articles/284397-managing-jobs-on-the-mobile-app); Configuring on-site tasks (https://help.commusoft.com/en/articles/561197-configuring-on-site-tasks)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
+INBOX_FILES["reed-script-l1-ft-s2-c3"] = `# Reed — Script: Attach photos, video, and documents on site
+
+**Layer:** 1 — Field Team Path
+**Series:** 2 of 3 — On site: arrival to job complete
+**Course:** 3 of 6
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Access the file attachment area from a job appointment in the mobile app
+2. Select the correct capture method for photos, video, and documents
+3. Use file management tools to organise and share attachments
+
+**Target persona:** Field Team (Technicians)
+
+**SunComfort characters:** Luke Simmons (Technician)
+
+**Scenario:** Luke has completed the solar installation and needs to photograph the finished work, scan the signed customer paperwork, and make sure the files are accessible to the office when he leaves site.
+
+**Estimated length:** 4 minutes
+
+**Target audience:** Field team staff at field service businesses using Commusoft — technicians who capture and submit site evidence as part of their daily workflow. Assumes Commusoft Compass (Layer 0) and Field Team Series 2 Courses 1 and 2 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Field Team Series 2 Courses 1 and 2 complete. Appointment in Arrived status.
+
+**Main objective beyond learning objectives:** A photo taken through the phone's camera and saved to the device gallery does not appear in the job record. Only files attached through the Commusoft app are linked to the job and visible to the office. Technicians who know how to attach files correctly — and what capture method to use in each situation — give the office the evidence it needs without additional back-and-forth after they leave site.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Accessing attachments
+
+To access the file attachment area on a job, open the appointment in the app and go to Menu, then Attached files. This is the central location for all files linked to that job — photos, videos, scanned documents, and audio recordings. Files can also be accessed from the customer record, estimate, invoice, or survey if the attachment relates to one of those rather than the job itself, but for most on-site evidence, the job appointment is the right place.
+
+If a photo task is included in the job workflow, Luke captures that photo through the task itself on the job screen — not through the file attachment area. Photos taken through a task are tagged automatically and count towards task completion. Photos taken through Attached files do not register as task completion.
+
+---
+
+## Capture methods
+
+Within the Attached files area, Luke taps the plus button to add a new file. This gives him four capture options. Take photo opens the device camera for one or multiple images. Luke can rename each photo before saving, which makes them easier to find later. Record video works the same way — one or multiple recordings, renamed before saving. Scan document uses the camera to detect and capture a document, such as a signed customer form, and saves it as a PDF. Record audio creates an audio file, which is useful for noting observations hands-free while on site.
+
+For files that already exist on the device, Luke can use Choose from gallery. On Android, this supports images, videos, audio files, PDFs, Word documents, and Excel files. On iOS, it is limited to photos and videos only. Files stored in iCloud Drive can also be imported on iOS devices.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: when you take photos on a job today, do they automatically appear in the job record when you get back to the office?**
+
+*Yes:* Photos taken and attached through the Commusoft app appear in the job record immediately when they sync. If you are already using Attached files, that workflow is already in place.
+*No:* Photos saved to the device gallery do not appear in the job record automatically. They need to be attached through the app using Attached files or through a photo task. Once attached through the app, they sync to the office record without any extra step.
+
+---
+
+## Managing and sharing files
+
+Once files are attached, Luke can use the filter and search tools to find specific files quickly. Filter by type — Photos, Videos, PDFs, or Audio — narrows the list. Searching by filename finds a specific file when the list is long. To share or delete multiple files at once, Luke selects them and uses the batch action. This is useful when he needs to share a set of installation photos with the office in one step rather than one by one.
+
+Files attached through the Commusoft app are shared between Luke in the field and the office team. The office can see them in the Files tab of the job record as soon as they sync.
+
+*[Knowledge check — 4 options]*
+**Luke finishes a job and the office asks for a PDF copy of the signed customer paperwork. Luke took a photo of the signed form using his phone's camera and saved it to his gallery. What must he do to make the document available in the job record?**
+
+A) The photo is already in the job record — files saved to the device gallery sync automatically
+B) He needs to forward the photo from his gallery to the office by email
+C) He needs to attach the photo to the job through the Attached files area in the app, or scan the document using the Scan document option
+D) He needs to ask the office to upload it manually from the customer record
+
+*Correct (C):* Right. Files saved to the device gallery do not appear in the job record automatically. Luke needs to either attach the existing photo through the app using Choose from gallery, or use the Scan document option to capture a clean PDF version.
+*Incorrect:* Photos saved to the device gallery are not linked to the job. Luke needs to attach them through the Attached files area in the app, using Choose from gallery to import the existing photo, or use Scan document to capture a PDF version directly.
+
+---
+
+## Summary
+
+Access file attachments from a job appointment through Menu, then Attached files. Use Take photo for images, Record video for footage, Scan document for a PDF of a signed paper, and Record audio for voice notes. If a photo task is in the workflow, capture that photo through the task — not through Attached files — so the task registers as complete. On Android, Choose from gallery supports most file types. On iOS, it is limited to photos and videos. Use filter and search to find files, and the batch action to share or delete multiple files at once. Only files attached through the app appear in the job record — photos saved to the device gallery do not link automatically.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 4 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Luke Simmons (Technician)
+**Sources used:** Commusoft — Attaching files in the app (https://help.commusoft.com/en/articles/216877-attaching-files-in-the-app); Managing jobs on the mobile app (https://help.commusoft.com/en/articles/284397-managing-jobs-on-the-mobile-app); Configuring on-site tasks (https://help.commusoft.com/en/articles/561197-configuring-on-site-tasks)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
+INBOX_FILES["reed-script-l1-ft-s2-c4"] = `# Reed — Script: Record and update asset information
+
+**Layer:** 1 — Field Team Path
+**Series:** 2 of 3 — On site: arrival to job complete
+**Course:** 4 of 6
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Access the assets linked to a job from within the mobile app
+2. Add a new asset to a customer record from the field when new equipment is installed
+3. Update the information on an existing asset to reflect what was found or serviced on site
+
+**Target persona:** Field Team (Technicians)
+
+**SunComfort characters:** Nathan Cole (Technician)
+
+**Scenario:** Nathan is servicing two heat pumps at a commercial site and installing a new battery storage unit. He needs to update the service records for the existing units and add the new asset before he leaves site.
+
+**Estimated length:** 3 minutes
+
+**Target audience:** Field team staff at field service businesses using Commusoft — technicians who inspect, service, or install equipment and need to update asset records from the field. Assumes Commusoft Compass (Layer 0) and Field Team Series 2 Courses 1 to 3 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Field Team Series 2 Courses 1 to 3 complete. Appointment in Arrived status.
+
+**Main objective beyond learning objectives:** An asset record that is updated on site is accurate from the moment the technician leaves. An asset record that is left for the office to update later depends on a handover step that may not happen. Technicians who update asset information directly on the mobile app give the customer and the office an accurate equipment record without any additional admin.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Accessing assets on a job
+
+From within the job appointment in the app, Nathan opens the Assets section. This shows all the assets currently linked to this job and the customer's property. Each asset entry shows the asset type, identifier, and the fields that have been set up for that asset type by the office. For SunComfort, a heat pump asset record might include the model, serial number, installation date, and fields for service readings.
+
+---
+
+## Adding a new asset
+
+When Nathan installs the new battery storage unit, he adds it as an asset from within the job. He selects the option to add a new asset, chooses the asset type from the list configured by the office, and completes the required fields — including the serial number and installation date. Once saved, the asset is linked to the customer's property record and visible to the office immediately when it syncs.
+
+Adding the asset on site means the customer record is accurate from the moment the installation is complete. Nathan does not need to call the office or leave a note for someone to enter it later.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: when your business installs new equipment for a customer, is the asset record typically created on the day of installation?**
+
+*Yes:* Adding the asset directly from the mobile app on the day of installation keeps that record accurate without any follow-up admin step.
+*No:* Adding the asset through the mobile app on the day of installation means the record is in the system from the moment the work is done — no follow-up data entry needed and no risk of the detail being lost between site and office.
+
+---
+
+## Updating an existing asset
+
+For the two heat pumps Nathan is servicing, the asset records already exist. He opens each one and updates the relevant fields — service readings, condition notes, or any dynamic fields the office has configured for that asset type, such as the date of the last service or the outcome of a safety check. These updates sync to the office record when the device connects, giving the customer a complete service history without Nathan needing to fill in a separate paper record.
+
+If the asset has a form task associated with it — such as a service certificate linked to that specific asset — Nathan completes the form through the task on the job screen. The completed form is then associated with that asset's record as well as the job.
+
+*[Knowledge check — 4 options]*
+**Nathan installs a new heat pump and wants to add it to the customer record. He is on site with the mobile app. What is the correct action?**
+
+A) Note the serial number on a paper form and ask the office to add the asset when he returns
+B) Add the asset directly from the Assets section within the job appointment in the app
+C) Email the serial number to the office so they can create the asset record from the web app
+D) The asset is added automatically when the job is marked as complete
+
+*Correct (B):* Right. Nathan can add the new asset directly from the Assets section within the job appointment. The record is created immediately and syncs to the office once the device connects — no separate step needed.
+*Incorrect:* New assets can be added directly from the mobile app within the job appointment. Nathan selects Add new asset, completes the required fields, and saves. The record syncs to the customer's property record automatically.
+
+---
+
+## Summary
+
+Access the assets linked to a job from the Assets section within the job appointment in the app. To add a new asset — such as equipment that was installed on this visit — select Add new asset, choose the type, and complete the required fields including serial number and installation date. The record syncs to the customer's property immediately. To update an existing asset, open the asset record and update the relevant fields, including any service readings or condition notes. If the asset has a form task, complete it through the task on the job screen to link the form to the asset record. Updating asset information on site means the record is accurate from the moment you leave — no follow-up admin needed.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 3 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Nathan Cole (Technician)
+**Sources used:** Commusoft — Managing jobs on the mobile app (https://help.commusoft.com/en/articles/284397-managing-jobs-on-the-mobile-app); Assets (https://help.commusoft.com/en/articles/216928-assets); Configuring on-site tasks (https://help.commusoft.com/en/articles/561197-configuring-on-site-tasks)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+[OPEN — The Assets HC article (216928) covers web-based configuration only and does not detail the mobile asset management workflow. The content for this course is derived from the brief mention in 284397 ("Assets: View, add, or manage equipment associated with the job") and general system behaviour. Confirm whether a dedicated HC article exists for managing assets on the mobile app and verify that Add new asset from within the job appointment is the correct navigation path.]
+`;
+INBOX_FILES["reed-script-l1-ft-s2-c5"] = `# Reed — Script: Complete the job report
+
+**Layer:** 1 — Field Team Path
+**Series:** 2 of 3 — On site: arrival to job complete
+**Course:** 5 of 6
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Complete the required on-site tasks before leaving an appointment
+2. Collect a digital customer signature and add completion notes
+3. Apply the correct response at the "Is the job complete?" prompt when setting Leave status
+
+**Target persona:** Field Team (Technicians)
+
+**SunComfort characters:** Luke Simmons (Technician)
+
+**Scenario:** Luke has finished the solar installation work on site. All tasks are done and he needs to close out the appointment correctly — completing the job report, getting the customer to sign, and making the right call when the app asks whether the job is complete.
+
+**Estimated length:** 4 minutes
+
+**Target audience:** Field team staff at field service businesses using Commusoft — technicians at the stage of leaving a job site and closing out their appointment. Assumes Commusoft Compass (Layer 0) and Field Team Series 2 Courses 1 to 4 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Field Team Series 2 Courses 1 to 4 complete. On-site work finished.
+
+**Main objective beyond learning objectives:** Selecting Yes at the "Is the job complete?" prompt closes the entire job — not just the appointment. A technician who selects Yes when a return visit is still needed has closed a job that should have stayed open, which affects scheduling, billing, and the customer record. Getting this decision right is the most consequential step at the end of every appointment.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Completing on-site tasks
+
+Before Luke can set his appointment to Leave, any mandatory on-site tasks must be completed. On-site tasks appear on the job screen as he scrolls down. They can be general tasks — such as confirming a site condition — photo tasks that require a specific image to be captured, or form tasks that require a certificate or checklist to be completed. Mandatory tasks prevent Luke from leaving the appointment until they are done. Optional tasks can be skipped, but their presence is a prompt that something may still be needed. Luke works through the task list before he considers setting Leave status.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: at the end of a job, does your business currently have a standard checklist that technicians complete before leaving site?**
+
+*Yes:* On-site tasks in Commusoft are the digital version of that checklist. They appear on the job screen, and mandatory ones must be completed before the appointment can be closed.
+*No:* On-site tasks can be configured by the office to ensure specific steps happen before every appointment closes — photos taken, forms completed, conditions checked. They run automatically based on the job type.
+
+---
+
+## Customer signature and completion notes
+
+Once the tasks are done, Luke collects a digital signature from the customer. This confirms that the work has been carried out to their satisfaction. The customer signs directly on Luke's device screen. Luke then adds notes for the back-office record — a brief summary of what was done, anything the office needs to know, or any follow-up items that came up during the visit.
+
+Both the signature and the notes are part of the job report that the office and the customer receive. If SunComfort has configured automatic job report sending, the report goes to the customer when the appointment is closed — Luke does not need to send it manually.
+
+---
+
+## The "Is the job complete?" decision
+
+When Luke sets his appointment to Leave, the app asks: Is the job complete? This is the most important decision at the end of an appointment. Selecting Yes closes the entire job — not just this appointment. The job status changes and no further appointments can be raised against it. Selecting No means the job remains open and a return visit can be scheduled.
+
+Luke should select Yes only when all the agreed work has been finished and no further visits are needed. If there is a follow-up visit booked or expected, or if a part is still outstanding, the answer is No. If Luke is not certain, No is the safer answer — the office can close the job from the web app when everything is confirmed. Selecting Yes cannot be undone from the app.
+
+*[Knowledge check — 4 options]*
+**Luke finishes the first part of a two-visit solar installation. He sets his appointment to Leave. The app asks "Is the job complete?" What should Luke select?**
+
+A) Yes — the appointment is complete so the job should be marked as done
+B) Yes — the office can reopen the job for the second visit later
+C) No — the job should remain open because a return visit is still needed
+D) No — the second appointment needs to be created before Luke can mark any appointment as complete
+
+*Correct (C):* Right. The job is not complete — a second visit is needed. Selecting No keeps the job open so the return appointment can be raised against it. Selecting Yes would close the entire job.
+*Incorrect:* "Is the job complete?" refers to the job as a whole, not just the appointment. Because a second visit is still needed, the correct answer is No. The job stays open for the return appointment. Selecting Yes would close the job entirely and prevent further appointments from being raised against it.
+
+---
+
+## Summary
+
+Before setting Leave status, complete all mandatory on-site tasks — general tasks, photo tasks, and form tasks. Mandatory tasks prevent leaving the appointment until they are done. Once tasks are complete, collect the customer's digital signature and add notes for the back-office record. If automatic job report sending is configured, the report goes to the customer when the appointment closes. At the Leave prompt, answer "Is the job complete?" carefully. Yes closes the entire job and no further appointments can be raised against it. No keeps the job open for a return visit. When in doubt, select No — the office can close the job from the web app once all work is confirmed.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 4 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Luke Simmons (Technician)
+**Sources used:** Commusoft — Managing jobs on the mobile app (https://help.commusoft.com/en/articles/284397-managing-jobs-on-the-mobile-app); Appointment statuses (https://help.commusoft.com/en/articles/216882-appointment-statuses); Configuring on-site tasks (https://help.commusoft.com/en/articles/561197-configuring-on-site-tasks)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
+INBOX_FILES["reed-script-l1-ft-s2-c6"] = `# Reed — Script: When you can't get in — no access, abort, and reject
+
+**Layer:** 1 — Field Team Path
+**Series:** 2 of 3 — On site: arrival to job complete
+**Course:** 6 of 6
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Distinguish between no access, abort, and reject as appointment outcomes
+2. Record a no access situation correctly, including required documentation
+3. Apply the correct terminal status to close an appointment when the work cannot proceed
+
+**Target persona:** Field Team (Technicians)
+
+**SunComfort characters:** Nathan Cole (Technician)
+
+**Scenario:** Nathan has two situations in one day: a customer property he cannot get into when he arrives, and an appointment that needs to be cancelled while he is already on the way. He needs to know which status applies to each and what steps are required to record the outcome correctly.
+
+**Estimated length:** 3 minutes
+
+**Target audience:** Field team staff at field service businesses using Commusoft — technicians who encounter access issues, cancellations, or refusals and need to record the outcome correctly in the app. Assumes Commusoft Compass (Layer 0) and Field Team Series 2 Courses 1 to 5 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Field Team Series 2 Courses 1 to 5 complete.
+
+**Main objective beyond learning objectives:** An appointment that reaches no terminal status — Left, Aborted, Rejected, or No Access — blocks Nathan from moving to his next job. Beyond that, an unrecorded access failure or abort leaves the office without the information they need to reschedule or charge the customer. Using the right status and completing the required documentation protects the business and keeps Nathan's day moving.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## No access
+
+No access is the status for when Nathan arrives at the property but cannot gain entry. The customer may not be home, the gate code may have changed, or access has been refused. Nathan selects No Access from within the appointment. The app then requires him to complete the no access questions and, depending on the job configuration, to take a photo documenting his presence at the property — such as a photograph of the front door or gate.
+
+Once recorded, the appointment is closed as a no access outcome. The job itself remains open and can be rescheduled by the office. If SunComfort has a no access email template configured, the customer receives a notification automatically. Nathan does not need to call the office to report it — the record is updated in the system and the office can see the outcome and the documentation.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: when a technician cannot access a property today, does your business have a documented record of the attempt and the reason?**
+
+*Yes:* The No Access status in Commusoft formalises that record. The questions and photos are attached to the appointment and the outcome is visible to the office without a phone call from the technician.
+*No:* The No Access status creates that record on the spot. Nathan completes the questions, attaches a photo, and the outcome is logged against the job immediately — no separate report or call needed.
+
+---
+
+## Abort and reject
+
+Abort is the status for when an appointment needs to be cancelled after Nathan has already accepted it. He may be travelling to the job when he receives a call from the customer asking to cancel, or a situation may arise on site that means the work cannot proceed. Abort is available at multiple stages — after setting Travel, after setting Arrived, or even partway through the appointment. Selecting Abort always requires Nathan to enter a reason from the list configured by the office. Once aborted, the appointment is closed, but the job remains open so the office can reschedule.
+
+Reject is different. It applies only at the Accept stage — before Nathan has confirmed his attendance. If an appointment appears in Nathan's diary and he is unable to attend, he selects Reject and enters a reason. This is not for use once he has accepted and started travelling.
+
+*[Knowledge check — 4 options]*
+**Nathan has accepted an appointment and set it to Travel when the customer calls and asks to postpone by two weeks. What is the correct status to record?**
+
+A) No Access — the customer is unavailable so Nathan cannot gain entry
+B) Reject — Nathan is no longer able to attend
+C) Abort — the appointment needs to be cancelled after it was accepted and Travel was set
+D) Leave — Nathan should mark Leave and the office will handle the rescheduling
+
+*Correct (C):* Right. Nathan has already accepted and set Travel. Abort is the correct status for cancelling an appointment at this stage. It requires a reason, closes the appointment, and leaves the job open for rescheduling.
+*Incorrect:* Reject applies at the Accept stage before an appointment is confirmed. Abort applies when an appointment needs to be cancelled after it was accepted — including when Travel has already been set. Nathan should select Abort and enter the reason.
+
+---
+
+## Summary
+
+No Access is for when Nathan arrives at a property but cannot get in. He completes the required questions and takes a photo if prompted — the record is created on the appointment and the job stays open for rescheduling. Abort is for cancelling an appointment that has already been accepted, at any point up to and including being on site. It always requires a reason and leaves the job open. Reject is for declining an appointment at the Accept stage, before Nathan has confirmed attendance. All three are terminal statuses — once recorded, the appointment is closed and Nathan can move to his next job. An appointment must reach a terminal status before the next one can be actioned.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 3 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Nathan Cole (Technician)
+**Sources used:** Commusoft — Appointment statuses (https://help.commusoft.com/en/articles/216882-appointment-statuses); Managing jobs on the mobile app (https://help.commusoft.com/en/articles/284397-managing-jobs-on-the-mobile-app)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
+INBOX_FILES["reed-script-l1-ft-s2-challenge"] = `# Reed — Script: Series challenge — Job complete, report sent
+
+**Layer:** 1 — Field Team Path
+**Series:** 2 of 3 — On site: arrival to job complete
+**Course:** Series challenge
+**Format:** Synthesia micro-course — Clint and Sarah dialogue
+**Presenter:** Clint (instructional); Sarah (dialogue partner)
+**Date:** 2026-04-30
+
+---
+
+**Learning objectives**
+1. Apply the correct status at each stage of the field appointment workflow
+2. Identify the correct action when an on-site situation requires documentation or an access outcome
+3. Confirm the right response to the "Is the job complete?" decision point
+
+**Target persona:** Field Team (Technicians)
+
+**SunComfort characters:** Luke Simmons (Technician); Nathan Cole (Technician)
+
+**Scenario:** SunComfort has two technicians with different situations landing in the same afternoon. Luke is finishing a two-day solar installation and Nathan encounters an access problem at his final job. Sarah raises each decision; Clint works through the right call.
+
+**Estimated length:** 3 minutes
+
+**Target audience:** Field team staff at field service businesses using Commusoft who have completed Series 2 Courses 1 to 6. This challenge tests the on-site workflow decisions against realistic scenarios. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Series 2 Courses 1 to 6 complete.
+
+**Main objective beyond learning objectives:** The on-site workflow has several points where the wrong decision creates downstream problems — a job closed prematurely, an access failure not documented, a photo saved to the gallery instead of the job record. This challenge tests whether learners can make the right call at each of those moments, and whether they understand what happens in the system when they do.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Challenge opening
+
+*[Clint — 30 seconds]*
+
+Two technicians, two situations. Luke is closing out day two of a solar installation — everything is done but the customer wants a job report emailed before Luke leaves the driveway. Nathan arrives at his final job of the day and the property is locked up. Both need the right response. Sarah has the first decision.
+
+---
+
+## Dialogue: The decisions
+
+*[Sarah — 15 seconds]*
+
+Luke finishes the last task on his list and opens the job screen. A photo task is still showing as incomplete. He took a photo of the installation using his phone's camera and saved it to his gallery. Why is the task still showing as incomplete?
+
+*[Clint — 20 seconds]*
+
+Because the photo was taken outside the task interface. Photos saved to the device gallery are not linked to the job and do not register as task completion. Luke needs to open the photo task on the job screen and capture or import the photo through the task itself. Once he does that, the task registers as complete and the gallery image can be discarded or kept separately.
+
+*[Sarah — 15 seconds]*
+
+Luke collects the customer's digital signature and adds his completion notes. He sets Leave status and the app asks: Is the job complete? This is day two — the work is finished. What should Luke select?
+
+*[Clint — 20 seconds]*
+
+Yes. The work is done and no further visit is needed. Selecting Yes closes the entire job — the status changes, the job report goes to the customer if automatic sending is configured, and no further appointments can be raised against it. Luke should select Yes only when he is certain all the agreed work is complete. In this case, it is — so Yes is correct.
+
+*[Sarah — 15 seconds]*
+
+Nathan arrives at his final job. The property is locked and no one answers. He has set his appointment to Arrived. What status should he apply?
+
+*[Clint — 20 seconds]*
+
+No Access. Nathan arrives at the property but cannot gain entry — that is exactly what No Access is for. He selects No Access, completes the required questions, and takes a photo of the locked property if the job requires it. The appointment closes as a no access outcome, the job stays open for rescheduling, and the office can see the record and the documentation without Nathan having to call in.
+
+*[Sarah — 15 seconds]*
+
+Nathan is travelling to his next appointment the following day when the customer calls and asks to cancel. Nathan has already accepted the appointment. What should he do?
+
+*[Clint — 20 seconds]*
+
+Abort. Nathan has accepted and is travelling — so Reject, which only applies at the Accept stage, is no longer the right option. Abort is for cancelling an appointment that has already been accepted, at any point from Travel onwards. Nathan selects Abort, enters the reason, and the appointment closes. The job stays open for rescheduling and Nathan can move on.
+
+---
+
+## Knowledge check
+
+*[Knowledge check — 4 options]*
+**At the end of an appointment, the app asks Nathan "Is the job complete?" A return visit is already booked for next week. What should he select?**
+
+A) Yes — the current appointment is done even though a follow-up is booked
+B) Yes — the office can reopen the job before the return visit
+C) No — the job must remain open because a return appointment is needed
+D) No — selecting Yes would automatically cancel the return appointment
+
+*Correct (C):* Right. Selecting Yes closes the entire job. Because a return visit is booked, the job must stay open. Nathan selects No, which closes the current appointment without closing the job, and the return appointment can proceed as planned.
+*Incorrect:* "Is the job complete?" refers to the job as a whole. Because a return visit is booked, the job is not complete. Selecting Yes would close the job and prevent the return appointment from being raised against it. Nathan should select No.
+
+---
+
+## Series close
+
+*[Clint — 30 seconds]*
+
+A photo task completed through the task interface, not the gallery. A Yes at the job complete prompt when all the work was done. A No Access recorded with questions and a photo. An Abort applied when a customer cancelled mid-travel. All four came from knowing which status to apply at the right moment. Series 2 is complete.
+
+---
+
+**Section count:** Challenge opening, 8 dialogue exchanges, 1 knowledge check, series close
+**Estimated length:** 3 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address
+**First person (I/my):** not used
+**Characters from approved roster:** Clint (presenter); Sarah (dialogue partner); Luke Simmons (Technician, referenced in scenario); Nathan Cole (Technician, referenced in scenario)
+**Sources used:** Commusoft — Managing jobs on the mobile app (https://help.commusoft.com/en/articles/284397-managing-jobs-on-the-mobile-app); Appointment statuses (https://help.commusoft.com/en/articles/216882-appointment-statuses); Configuring on-site tasks (https://help.commusoft.com/en/articles/561197-configuring-on-site-tasks); Attaching files in the app (https://help.commusoft.com/en/articles/216877-attaching-files-in-the-app)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
 INBOX_FILES["ivy-induction"] = `# Enablement Specialist — Induction Plan
 
 Training is essential for your role at Commusoft. To ensure you have the best possible start, we have created this induction schedule.
@@ -8774,6 +9517,13 @@ function openInboxFile(key) {
     'reed-script-l1-s8-c1': { num: 'Reed — Script', title: 'L1 Office Staff Series 8 — Course 1: Add a service reminder to a customer' },
     'reed-script-l1-s8-c2': { num: 'Reed — Script', title: 'L1 Office Staff Series 8 — Course 2: Schedule a job from a service reminder' },
     'reed-script-l1-s8-challenge': { num: 'Reed — Script', title: 'L1 Office Staff Series 8 — Challenge: Reminder triggered, job booked' },
+    'reed-script-l1-ft-s2-c1': { num: 'Reed — Script', title: 'L1 Field Team Series 2 — Course 1: Travel to a job and mark your arrival' },
+    'reed-script-l1-ft-s2-c2': { num: 'Reed — Script', title: 'L1 Field Team Series 2 — Course 2: Complete your on-site form' },
+    'reed-script-l1-ft-s2-c3': { num: 'Reed — Script', title: 'L1 Field Team Series 2 — Course 3: Attach photos, video, and documents on site' },
+    'reed-script-l1-ft-s2-c4': { num: 'Reed — Script', title: 'L1 Field Team Series 2 — Course 4: Record and update asset information' },
+    'reed-script-l1-ft-s2-c5': { num: 'Reed — Script', title: 'L1 Field Team Series 2 — Course 5: Complete the job report' },
+    'reed-script-l1-ft-s2-c6': { num: 'Reed — Script', title: 'L1 Field Team Series 2 — Course 6: When you can\'t get in — no access, abort, and reject' },
+    'reed-script-l1-ft-s2-challenge': { num: 'Reed — Script', title: 'L1 Field Team Series 2 — Challenge: Job complete, report sent' },
     'ivy-induction': { num: 'Ivy — People', title: 'Enablement Specialist Induction Plan v3' },
     'ivy-jd-academy': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Description' },
     'ivy-jd-advert': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Advert' },

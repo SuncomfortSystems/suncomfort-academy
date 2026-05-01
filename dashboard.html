@@ -378,6 +378,12 @@
         <div class="nav-course-link">C2 &middot; Vehicle checks and reminders</div>
         <div class="nav-course-link">Ch &middot; Fleet visibility confirmed</div>
       </div>
+      <div class="nav-series-row" data-series="nav-cl-dm5" onclick="navSeries('l1-dm-series5','nav-cl-dm5')"><div class="nav-dot" style="background:var(--grey)"></div><span>Series 5</span><span class="nav-series-arrow" id="arr-nav-cl-dm5">&#9656;</span></div>
+      <div class="nav-course-list" id="nav-cl-dm5">
+        <div class="nav-course-link">C1 &middot; Workflow Marketplace</div>
+        <div class="nav-course-link">C2 &middot; Sequences</div>
+        <div class="nav-course-link">Ch &middot; Automation decisions made right</div>
+      </div>
     </div>
   </nav>
 
@@ -575,9 +581,9 @@
     <div id="view-academy" class="view active">
       <div class="page-heading"><h1>Academy</h1><p>Course scripts organised by series</p></div>
       <div class="stats-row">
-        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">15</div><div class="stat-label">Series</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">71</div><div class="stat-label">Courses</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">266</div><div class="stat-label">Total Minutes</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">16</div><div class="stat-label">Series</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">74</div><div class="stat-label">Courses</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">278</div><div class="stat-label">Total Minutes</div></div>
         <div class="stat-card"><div class="stat-value" style="color:var(--blue2)">9</div><div class="stat-label">Characters</div></div>
       </div>
       <div id="job-view" class="series-block">
@@ -795,6 +801,17 @@
           <div class="course-card" onclick="openInboxFile('reed-script-l1-dm-s4-c1')"><div class="course-num">Course 1</div><div class="course-title">Read the fleet dashboard</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l1-dm-s4-c2')"><div class="course-num">Course 2</div><div class="course-title">Set up vehicle checks and reminders</div><div class="course-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l1-dm-s4-challenge')"><div class="course-num">Challenge</div><div class="course-title">Fleet visibility confirmed</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+        </div>
+      </div>
+      <div id="l1-dm-series5" class="series-block">
+        <div class="series-header" style="background:var(--grey)">
+          <div><h2>Layer 1 — Decision Maker Series 5</h2><div class="series-meta">Automation and efficiency — workflow marketplace, sequences, and prospect follow-up</div></div>
+          <div class="series-count">2 courses + challenge</div>
+        </div>
+        <div class="course-grid">
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-dm-s5-c1')"><div class="course-num">Course 1</div><div class="course-title">Automate with the Workflow Marketplace</div><div class="course-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-dm-s5-c2')"><div class="course-num">Course 2</div><div class="course-title">Set up sequences for prospect follow-up</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-dm-s5-challenge')"><div class="course-num">Challenge</div><div class="course-title">Automation decisions made right</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
     </div>
@@ -11159,6 +11176,325 @@ Clint: That is Series 4 complete. You can now read the fleet dashboard — track
 
 None — all content verified against Help Centre articles.
 `;
+INBOX_FILES["reed-script-l1-dm-s5-c1"] = `# Reed — Script: Automate with the Workflow Marketplace
+
+**Layer:** 1 — Decision Maker Path
+**Series:** 5 of 5 — Automation and efficiency
+**Course:** 1 of 2
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-05-01
+
+---
+
+**Learning objectives**
+1. Access the Workflow Marketplace and identify the available workflows and what each one does
+2. Enable, disable, and edit a workflow
+3. Read workflow history and interpret the status of individual stages
+
+**Target persona:** Decision Makers (Owners, Directors, Operations Managers)
+
+**SunComfort characters:** Logan Chance (Operations Manager)
+
+**Scenario:** SunComfort is spending time each week manually chasing unpaid invoices and following up on estimates that have not received a response. Logan wants to automate these processes so the right actions happen without requiring someone to track and trigger them manually.
+
+**Estimated length:** 5 minutes
+
+**Target audience:** Business owners, directors, and operations managers at field service businesses using Commusoft who want to automate repetitive customer communication and task creation. Assumes Commusoft Compass (Layer 0) complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Commusoft Compass (Layer 0) complete. Decision Maker Series 4 complete. Account on the Customer Journey or Automation plan — the Workflow Marketplace is not available on Go Paperless or legacy plans.
+
+**Main objective beyond learning objectives:** Repetitive tasks like chasing invoices, following up on estimates, and collecting after-sales feedback take consistent effort if done manually, and are often done inconsistently or skipped under pressure. The Workflow Marketplace removes that dependency by running these processes in the background on a defined schedule. The decision maker's role is not to build the automations from scratch but to understand what is available, enable the ones that match how SunComfort operates, and know how to read the history when a stage does not behave as expected.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## The Workflow Marketplace
+
+The Workflow Marketplace is Commusoft's library of pre-built automated workflows. Logan accesses it at Profile Icon, Settings, Automation, Workflow marketplace, then selects View. The marketplace contains seven workflows, each covering a specific repetitive process. Five of the seven can be enabled on any account on the qualifying plan; two — Proposal Chase and Estimate Chase — apply only to accounts using the Sales CRM features. Each workflow runs in the background once enabled, triggering automatically based on the conditions built into it, without any manual action required each time.
+
+Before enabling workflows, two things should be in place: email templates for any communication the workflow sends, and communication rules that define whether a customer or work address is set up to receive emails. Default email templates are provided and can be customised; communication rules are set at Profile Icon, Settings, Customers, Communication Rules.
+
+---
+
+## Available workflows
+
+The seven workflows in the marketplace cover the following processes. Debt Chasing chases outstanding invoices from private customers with configurable reminder intervals. Debt Chasing for Companies does the same for company accounts. Estimate Chase pursues estimates that have not received a response, creating a task in the office if there is no reply. Proposal Chase tracks proposals from the Sales CRM through follow-up and no-response alerts. Customer Invoice Payment Receipt sends an email receipt to customers once a payment is recorded. Negative Diary Event Task creates an office task when an engineer rejects, is denied access to, or aborts a job — so nothing falls through after a failed visit. After Sales Response sends a thank-you communication after job completion and routes feedback to the office if the response is negative.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: does your business currently have a consistent process for chasing unpaid invoices — one that runs on a set schedule regardless of how busy the week is?**
+
+*Yes:* The Debt Chasing workflows can replace that manual process. Once enabled, chasing happens on the configured schedule without anyone needing to trigger it.
+*No:* This is the gap the Debt Chasing workflows are designed to fill. Once enabled, the system sends the first chase after a configurable delay, then follows up at defined intervals, creating an office task if there is still no response.
+
+---
+
+## Enabling and editing workflows
+
+To enable a workflow, Logan toggles the switch next to it. When a workflow is disabled, it completes any stages already in progress before stopping — so disabling the debt chasing workflow does not stop emails mid-sequence for customers already in the process; it prevents new records from entering it. To edit a workflow, Logan selects Edit. The workflow must be disabled before any edits are possible. Within a workflow, some blocks are greyed out because their settings are hard-coded; only the configurable blocks can be changed. All changes made to a workflow are recorded in the Workflow Audit, which shows who made each change and when.
+
+---
+
+## Reading workflow history
+
+Logan can review what a workflow has done for any record by selecting View on the workflow, then opening Workflow history. He can filter the history by status and date range. Each stage in the history carries a status. Complete means the stage finished successfully. Running means the stage is currently due to execute next. Pending means the stage is waiting for the preceding stage to finish. Skipped means the stage was unable to complete — for example, a customer had no communication rule set up for email. Failed means the stage encountered a problem, such as a customer with no contact details at all. When a stage fails, the entire workflow halts for that record and no further stages run.
+
+Understanding these statuses tells Logan whether the automation is working as expected and, when it is not, where to look: a pattern of Skipped stages points to customers without email communication rules configured, and a Failed stage prompts a check on the customer record itself.
+
+*[Knowledge check — 4 options]*
+**A stage in the debt chasing workflow shows as "Failed" in the workflow history. What does this mean for the remaining stages of that workflow for the affected customer?**
+
+A) The failed stage is retried automatically after 24 hours before the remaining stages continue
+B) The remaining stages continue on schedule; only the failed stage is skipped
+C) The entire workflow halts for that record and no further stages run
+D) The system creates an office task to manually chase the customer before the next stage runs
+
+*Correct (C):* Right. When a stage fails, the entire workflow halts for that record — no further stages run and no automatic retry occurs. The most common cause is a customer with no valid contact details. Resolving the issue on the customer record and re-enabling or manually restarting the process is the route forward.
+*Incorrect:* When a stage fails, the workflow stops completely for that record. There is no automatic retry or fallback to a manual task. The history will show the Failed status and the remaining stages will not run. Checking and correcting the customer's contact details or communication rules is the fix.
+
+---
+
+## Summary
+
+The Workflow Marketplace is at Profile Icon, Settings, Automation, Workflow marketplace. It requires the Customer Journey or Automation plan. Seven pre-built workflows are available; five apply to all accounts, two (Proposal Chase, Estimate Chase) require Sales CRM. Prerequisites: email templates configured and communication rules set for customers. Enable by toggling the switch; disable before editing. Greyed-out blocks are hard-coded. All edits are logged in the Workflow Audit. Workflow history records the status of each stage: Complete, Running, Pending, Skipped (cannot complete — check communication rules), or Failed (no contact details — workflow halts entirely for that record).
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 5 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Logan Chance (Operations Manager)
+**Sources used:** Commusoft — How to use the Workflow Marketplace (https://help.commusoft.com/en/articles/217228-how-to-use-the-workflow-marketplace); Communication rules (https://help.commusoft.com/en/articles/216910-communication-rules)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
+INBOX_FILES["reed-script-l1-dm-s5-c2"] = `# Reed — Script: Set up sequences for prospect follow-up
+
+**Layer:** 1 — Decision Maker Path
+**Series:** 5 of 5 — Automation and efficiency
+**Course:** 2 of 2
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-05-01
+
+---
+
+**Learning objectives**
+1. Explain what sequences are and how they differ from the Workflow Marketplace workflows
+2. Create a sequence using delay, communication, and action blocks
+3. Activate, send, and stop a sequence
+
+**Target persona:** Decision Makers (Owners, Directors, Operations Managers)
+
+**SunComfort characters:** Logan Chance (Operations Manager)
+
+**Scenario:** SunComfort raises proposals for larger solar and heat pump installations. Once a proposal is sent, follow-up is inconsistent — some prospects hear back once, others not at all, depending on how busy the team is. Logan wants a structured follow-up process that runs automatically without relying on individual team members to remember who to contact.
+
+**Estimated length:** 4 minutes
+
+**Target audience:** Business owners, directors, and operations managers at field service businesses using Commusoft who want to automate prospect follow-up after raising proposals or opportunities. Assumes Commusoft Compass (Layer 0) complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Commusoft Compass (Layer 0) complete. Decision Maker Series 5 Course 1 complete.
+
+**Main objective beyond learning objectives:** The Workflow Marketplace runs automated processes triggered by system events — an invoice becoming overdue, a proposal being created. Sequences are different: they are manually assigned to a specific prospect or opportunity by a team member, and then they run automatically from that point. This distinction matters because sequences give the team a repeatable follow-up structure that still starts with a deliberate decision — this prospect should receive this sequence — rather than applying universally to all records of a type. For SunComfort, that means a structured three-touch proposal follow-up can be applied consistently to every lead that reaches the proposal stage, without relying on memory or improvisation.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## What sequences are
+
+Sequences automate follow-up communications with prospects — typically before and after a proposal is raised. A sequence is a series of timed steps: a delay, then an email or SMS, then another delay, then a follow-up action. Once assigned to a prospect record, the sequence runs automatically through each step without any further input from the team. The difference between sequences and the Workflow Marketplace is that sequences are manually triggered on a specific record by a team member; they do not fire automatically across all records of a type. This makes them suited to prospect follow-up, where the decision to engage is deliberate, but the cadence of that engagement should be consistent. Sequences are configured at Profile Icon, Settings, Automation, Sequences.
+
+---
+
+## Creating a sequence
+
+Logan creates a new sequence from the Sequences settings page, entering a name and any relevant details in the side panel, then saving to open the sequence builder. He builds the sequence from three types of blocks. Delay blocks set the gap between steps — for example, three days after the previous action. Communication blocks send an email or SMS using a pre-built template; Logan selects the template for each touchpoint in the sequence. Action blocks can create a scheduled activity (a call reminder or task assigned to a team member) or trigger an in-system notification. Logan arranges these blocks into the follow-up flow he wants: send the proposal, wait three days, send a follow-up email, wait five more days, create a call task if there is no response. Once he is satisfied with the sequence structure, he saves it.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: does your business currently have a defined number of times a team member should follow up with a prospect after a proposal is sent — and a consistent interval between each contact?**
+
+*Yes:* A sequence formalises that process. The number of steps and the timing between them is built into the sequence template, so the cadence runs automatically once the sequence is assigned to a prospect.
+*No:* Building a sequence now defines what that follow-up process should look like. Once the sequence is active and assigned to a prospect, the system follows the defined cadence without relying on a team member to decide when to reach out next.
+
+---
+
+## Activating and using sequences
+
+Before a sequence can be used, it must be activated. Logan toggles the switch next to the sequence in the list, types CONFIRM, and confirms. The sequence is now available to assign to prospects. To send a sequence, a team member opens the customer record or the Opportunities dashboard, selects Add Record, then Send Sequence, chooses the relevant sequence template, confirms the recipients, and sends. From that point the sequence runs automatically.
+
+Sequences can stop in two ways. Automatic exit criteria can be set when the sequence is created: for example, stopping the sequence when the proposal is accepted or when any incoming communication is received from the prospect. This prevents a follow-up email from sending after the prospect has already replied. Manual stopping is also possible: a team member selects Stop Sequence from the opportunities timeline for that record.
+
+*[Knowledge check — 4 options]*
+**Logan sends a proposal follow-up sequence to a prospect. Three days later, the prospect replies and accepts the proposal. The sequence has no exit criteria configured. What happens next?**
+
+A) The system detects the incoming communication and pauses the sequence pending review
+B) The sequence stops automatically because an accepted proposal triggers a built-in exit condition
+C) The sequence continues and sends the next scheduled follow-up regardless of the proposal status
+D) The sequence sends one final notification email to the team before stopping
+
+*Correct (C):* Right. Without exit criteria configured, the sequence runs to completion regardless of what happens with the prospect in the meantime. In this case, the follow-up email would still send even though the proposal has been accepted. Configuring an exit criterion — such as stopping when the proposal is accepted or when any incoming communication is received — prevents that from happening.
+*Incorrect:* Without exit criteria, the sequence does not detect or respond to changes in the prospect's status. It runs through every step as scheduled. To prevent follow-up emails from sending after a prospect has responded or accepted, exit criteria must be configured when the sequence is set up.
+
+---
+
+## Summary
+
+Sequences automate follow-up communications with prospects; they are manually assigned to a specific record and then run automatically. Configure sequences at Profile Icon, Settings, Automation, Sequences. Build a sequence using three block types: Delay (timing between steps), Communication (email or SMS using a template), and Action (scheduled activity or notification). Save, then activate by toggling the switch and typing CONFIRM. To send: open the customer or Opportunities record, Add Record, Send Sequence, select the template, confirm recipients. Sequences stop automatically when exit criteria are met (such as proposal accepted or any incoming communication) or can be stopped manually from the opportunities timeline. Without exit criteria, the sequence runs to completion regardless of changes to the prospect's status.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 4 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Logan Chance (Operations Manager)
+**Sources used:** Commusoft — Sequences (https://help.commusoft.com/en/articles/217243-sequences)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+None — all content verified against Help Centre article.
+`;
+INBOX_FILES["reed-script-l1-dm-s5-challenge"] = `# Reed — Script: Automation decisions made right
+
+**Layer:** 1 — Decision Maker Path
+**Series:** 5 of 5 — Automation and efficiency
+**Course:** Challenge
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-05-01
+
+---
+
+**Learning objectives**
+1. Apply the correct interpretation of workflow history statuses from Course 1
+2. Identify the correct configuration or action for each automation scenario from Courses 1 and 2
+3. Recognise plan restrictions and prerequisite gaps that prevent automation from working correctly
+
+**Target persona:** Decision Makers (Owners, Directors, Operations Managers)
+
+**SunComfort characters:** Sarah Mitchell (Managing Director)
+
+**Scenario:** Sarah has been reviewing SunComfort's automation setup this week: enabling the debt chasing workflow, reviewing the workflow history, and setting up a proposal follow-up sequence. A few things produced unexpected results.
+
+**Estimated length:** 3 minutes
+
+**Target audience:** Decision makers at field service businesses using Commusoft who have completed Decision Maker Series 5 Courses 1 and 2. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Decision Maker Series 5 Courses 1 and 2 complete.
+
+**Main objective beyond learning objectives:** Automation in Commusoft reduces the manual effort behind consistent processes, but it introduces a different kind of management responsibility: understanding when and why the automation did not run as expected. The challenge reinforces that workflows halt entirely on failure, that disabling a workflow does not stop in-progress runs, and that sequences without exit criteria continue regardless of what the prospect does. These are the moments where a decision maker who understands the system can act quickly, versus one who assumes the automation handled it and discovers it did not.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Opening
+
+Clint: Sarah has been setting up automation at SunComfort this week: enabling the debt chasing workflow, reviewing which customers it has reached, and configuring a proposal follow-up sequence for the sales team. Several things did not behave as she expected. Let's work through them.
+
+---
+
+## Exchange 1: Customers still receiving chase emails after workflow disabled
+
+Sarah: I disabled the debt chasing workflow after Logan flagged that it was sending emails to a customer we are in a payment dispute with. But that customer has since received two more chasing emails. I thought disabling the workflow stopped it immediately.
+
+Clint: Disabling a workflow stops new records from entering it, but any records already in progress continue through their remaining stages. The customer Logan flagged was already in the workflow cycle when it was disabled, so the scheduled emails for that record still sent. To stop a specific record mid-process, the workflow needs to be managed at the individual record level rather than just disabling the whole workflow. Going forward, checking the workflow history before enabling a workflow on accounts with active disputes is worth building into the process.
+
+---
+
+## Exchange 2: Workflow stages showing as Skipped for several customers
+
+Sarah: When I looked at the debt chasing workflow history, several stages are showing as Skipped for a group of customers. The emails are not going out. What does Skipped mean and what do I need to fix?
+
+Clint: Skipped means the stage could not complete — the most common reason is that the customer does not have a communication rule set up for email. A customer without an email communication rule enabled will not receive automated emails regardless of whether the workflow is running correctly. The fix is to go to Profile Icon, Settings, Customers, Communication Rules, and check the default settings for new customers, then update any existing records that are missing the email preference. Once the communication rule is in place, the customer will be eligible for future workflow stages.
+
+---
+
+## Exchange 3: Sequence still sending to a prospect who accepted the proposal
+
+Sarah: Logan sent a proposal follow-up sequence to a prospect last week. The prospect called and accepted the proposal two days ago. Yesterday, they received another follow-up email from the sequence. Is that a system error?
+
+Clint: It is not an error — it is expected behaviour when no exit criteria are configured. Without an exit criterion like stopping when the proposal is accepted or when any incoming communication is received, the sequence runs to completion regardless of what the prospect does in the meantime. To prevent this happening on future sequences, Logan should add exit criteria at the sequence setup stage. For the prospect who has already accepted, stopping the sequence manually from the opportunities timeline will prevent any remaining steps from sending.
+
+---
+
+## Exchange 4: Workflow Marketplace not visible in Settings
+
+Sarah: One of the team members tried to enable the Proposal Chase workflow but could not find the Workflow Marketplace in Settings at all. She is on an admin level access. Is there a permission issue?
+
+Clint: Access level is unlikely to be the cause if she has admin permissions. The more likely explanation is the account plan. The Workflow Marketplace requires the Customer Journey or Automation plan; it is not available on the Go Paperless plan or legacy plans. If SunComfort's account is on a plan that does not include it, the feature will not appear in Settings regardless of the user's role. Checking the current plan with the Commusoft account manager is the first step.
+
+---
+
+*[Knowledge check — 4 options]*
+**Logan reviews the workflow history for the debt chasing workflow and finds a stage showing as "Failed" for one customer. What does this tell him, and what should he do next?**
+
+A) The stage failed but retried automatically; Logan should wait 24 hours to see if the next attempt succeeds
+B) The stage failed and the entire workflow has halted for that customer; Logan should check the customer's contact details and communication rules
+C) The stage failed because the workflow was edited while it was running; Logan should re-enable the workflow to restart it
+D) The stage failed because the customer's invoice was paid before the stage ran; no action is needed
+
+*Correct (B):* Right. A Failed status means the stage encountered a problem — usually a customer with no valid contact details — and the entire workflow halted for that record. There is no automatic retry. Logan should open the customer record, confirm a valid email address is present, and check that an email communication rule is enabled. Once fixed, the workflow can be restarted for that customer.
+*Incorrect:* A Failed stage halts the entire workflow for that record permanently — there is no automatic retry. The most common cause is missing contact details on the customer record, not a payment or an edit conflict. Logan should check the customer's email address and communication rules, correct any issues, and then restart the workflow for that record.
+
+---
+
+## Series close
+
+Clint: That is Series 5 complete, and the full Decision Maker path done. You can now access the Workflow Marketplace, enable and configure pre-built workflows for debt chasing, estimate and proposal follow-up, payment receipts, and after-sales feedback, and read the workflow history to understand exactly what happened and why. You can build prospect follow-up sequences from delay, communication, and action blocks, activate them, assign them to specific records, and configure exit criteria so the sequence stops when the prospect responds or the proposal is accepted. You can diagnose the most common automation failures: communication rules not configured, contact details missing, a workflow disabled too late for records already in progress, and sequences running past the point they should have stopped. The manual work behind consistent customer communication has a structure now. The question is what you do with the time it gives back.
+
+---
+
+**Section count:** 1 opening + 4 exchanges + 1 knowledge check + 1 series close
+**Estimated length:** 3 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Sarah Mitchell (Managing Director)
+**Sources used:** Commusoft — How to use the Workflow Marketplace (https://help.commusoft.com/en/articles/217228-how-to-use-the-workflow-marketplace); Sequences (https://help.commusoft.com/en/articles/217243-sequences); Communication rules (https://help.commusoft.com/en/articles/216910-communication-rules)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
 INBOX_FILES["ivy-induction"] = `# Enablement Specialist — Induction Plan
 
 Training is essential for your role at Commusoft. To ensure you have the best possible start, we have created this induction schedule.
@@ -12078,6 +12414,9 @@ function openInboxFile(key) {
     'reed-script-l1-dm-s4-c1': { num: 'Reed — Script', title: 'L1 Decision Maker Series 4 — Course 1: Read the fleet dashboard' },
     'reed-script-l1-dm-s4-c2': { num: 'Reed — Script', title: 'L1 Decision Maker Series 4 — Course 2: Set up vehicle checks and reminders' },
     'reed-script-l1-dm-s4-challenge': { num: 'Reed — Script', title: 'L1 Decision Maker Series 4 — Challenge: Fleet visibility confirmed' },
+    'reed-script-l1-dm-s5-c1': { num: 'Reed — Script', title: 'L1 Decision Maker Series 5 — Course 1: Automate with the Workflow Marketplace' },
+    'reed-script-l1-dm-s5-c2': { num: 'Reed — Script', title: 'L1 Decision Maker Series 5 — Course 2: Set up sequences for prospect follow-up' },
+    'reed-script-l1-dm-s5-challenge': { num: 'Reed — Script', title: 'L1 Decision Maker Series 5 — Challenge: Automation decisions made right' },
     'ivy-induction': { num: 'Ivy — People', title: 'Enablement Specialist Induction Plan v3' },
     'ivy-jd-academy': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Description' },
     'ivy-jd-advert': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Advert' },

@@ -372,6 +372,12 @@
         <div class="nav-course-link">C5 &middot; Business units</div>
         <div class="nav-course-link">Ch &middot; Revenue visible and chasing active</div>
       </div>
+      <div class="nav-series-row" data-series="nav-cl-dm4" onclick="navSeries('l1-dm-series4','nav-cl-dm4')"><div class="nav-dot" style="background:var(--grey)"></div><span>Series 4</span><span class="nav-series-arrow" id="arr-nav-cl-dm4">&#9656;</span></div>
+      <div class="nav-course-list" id="nav-cl-dm4">
+        <div class="nav-course-link">C1 &middot; Fleet dashboard</div>
+        <div class="nav-course-link">C2 &middot; Vehicle checks and reminders</div>
+        <div class="nav-course-link">Ch &middot; Fleet visibility confirmed</div>
+      </div>
     </div>
   </nav>
 
@@ -569,9 +575,9 @@
     <div id="view-academy" class="view active">
       <div class="page-heading"><h1>Academy</h1><p>Course scripts organised by series</p></div>
       <div class="stats-row">
-        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">14</div><div class="stat-label">Series</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">68</div><div class="stat-label">Courses</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">254</div><div class="stat-label">Total Minutes</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">15</div><div class="stat-label">Series</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">71</div><div class="stat-label">Courses</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">266</div><div class="stat-label">Total Minutes</div></div>
         <div class="stat-card"><div class="stat-value" style="color:var(--blue2)">9</div><div class="stat-label">Characters</div></div>
       </div>
       <div id="job-view" class="series-block">
@@ -778,6 +784,17 @@
           <div class="course-card" onclick="openInboxFile('reed-script-l1-dm-s3-c4')"><div class="course-num">Course 4</div><div class="course-title">Understand service reminder performance</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l1-dm-s3-c5')"><div class="course-num">Course 5</div><div class="course-title">Segment your business with business units</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l1-dm-s3-challenge')"><div class="course-num">Challenge</div><div class="course-title">Revenue visible and chasing active</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+        </div>
+      </div>
+      <div id="l1-dm-series4" class="series-block">
+        <div class="series-header" style="background:var(--grey)">
+          <div><h2>Layer 1 — Decision Maker Series 4</h2><div class="series-meta">Fleet — vehicle tracking, compliance checks, reminders and maintenance</div></div>
+          <div class="series-count">2 courses + challenge</div>
+        </div>
+        <div class="course-grid">
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-dm-s4-c1')"><div class="course-num">Course 1</div><div class="course-title">Read the fleet dashboard</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-dm-s4-c2')"><div class="course-num">Course 2</div><div class="course-title">Set up vehicle checks and reminders</div><div class="course-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-dm-s4-challenge')"><div class="course-num">Challenge</div><div class="course-title">Fleet visibility confirmed</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
     </div>
@@ -10815,6 +10832,333 @@ Clint: That is Series 3 complete. You can now find overdue invoices using the Sa
 
 [OPEN — The chasing sequences feature referenced in Course 1 is confirmed to exist on the Customer Journey plan but no HC article URL was found. Exchange 1 in this challenge covers creditor days (well-documented) rather than sequences to avoid relying on unverified steps. If the Sequences HC article is located, Exchange 1 could be updated to address an automated chasing sequence scenario instead.]
 `;
+INBOX_FILES["reed-script-l1-dm-s4-c1"] = `# Reed — Script: Read the fleet dashboard
+
+**Layer:** 1 — Decision Maker Path
+**Series:** 4 of 5 — Fleet
+**Course:** 1 of 2
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-05-01
+
+---
+
+**Learning objectives**
+1. Navigate to the fleet dashboard and identify the information each widget provides
+2. Interpret the map widget's status rings and use playback to review past vehicle movement
+3. Use the vehicle list, maintenance, and driver widgets to support daily fleet oversight
+
+**Target persona:** Decision Makers (Owners, Directors, Operations Managers)
+
+**SunComfort characters:** Logan Chance (Operations Manager)
+
+**Scenario:** SunComfort has three vehicles on the road daily across solar PV, heat pump, and power generation jobs. Logan wants to understand where his vehicles are, how drivers are performing, and whether any maintenance is coming due — all from a single view in Commusoft.
+
+**Estimated length:** 4 minutes
+
+**Target audience:** Business owners, directors, and operations managers at field service businesses using Commusoft who are responsible for fleet oversight. Assumes Commusoft Compass (Layer 0) complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Commusoft Compass (Layer 0) complete. Decision Maker Series 3 complete.
+
+**Main objective beyond learning objectives:** A decision maker who can read the fleet dashboard has a live picture of where the business's vehicles are, whether drivers are behaving safely, and what compliance tasks are approaching — without calling drivers or opening a spreadsheet. The dashboard consolidates tracking, driver performance, vehicle checks, and maintenance into one view. The payoff is not just knowing where the vehicles are; it is having the information needed to act before a problem develops.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## The fleet dashboard
+
+The fleet dashboard is Logan's central view for everything vehicle-related in Commusoft. He accesses it by selecting Fleet management from the main navigation bar, which opens the dashboard directly. The dashboard is made up of widgets: the map, vehicle list, recent trips, reminders due, maintenance due, safe driver leaderboard, vehicle checks, and total mileage. Each widget shows a different slice of fleet data, and together they give Logan a complete operational picture without opening multiple reports.
+
+---
+
+## The map widget
+
+The map widget shows the live location of every vehicle connected to a GPS tracker. Each vehicle appears as a pin on the map. Around each pin is a colour-coded status ring that shows how recently that vehicle's location was updated: green for 0 to 30 minutes ago, yellow for 30 to 90 minutes, orange for 90 to 150 minutes, and red for 150 minutes or more. A red ring does not necessarily mean a problem — it may indicate the vehicle is parked, the driver is on a long indoor job, or the tracker temporarily lost signal. Job route lines appear on the map too: blue for completed routes and green for jobs currently in progress.
+
+To review where a vehicle has been, Logan uses the playback feature. He selects a past date and time range, and the map replays the vehicle's movement at an adjustable speed. This is useful when checking a delivery time, verifying a site visit, or reviewing what happened on a particular day.
+
+Logan can also save custom locations on the map — a supplier depot, a storage site, or SunComfort's head office — with a custom icon so the map shows landmarks that are relevant to how the business operates.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: do you currently know, at any point in the working day, where each of your vehicles is and what job the driver is on?**
+
+*Yes:* The fleet dashboard centralises that information. Live pins, status rings, and job route lines mean that picture is always current without any calls or check-ins.
+*No:* The map widget provides that visibility from the moment the dashboard is open. For businesses running GPS-tracked vehicles, this is the view that replaces the daily check-in call.
+
+---
+
+## Vehicle list and detail
+
+The vehicle list widget shows all vehicles organised by status. Logan can see which vehicles are active, which are idle, and which are offline. Selecting a vehicle opens its detail view: the current driver assignment, a timeline of all actions recorded against the vehicle, and any files uploaded to the vehicle record. The timeline captures both manual entries and automatic events — driver changes, maintenance completions, and check submissions — creating an audit trail without any additional admin.
+
+From the detail view, Logan can also see which maintenance tasks and reminders are currently due or approaching for that vehicle, so he can cross-reference the dashboard summary with the individual vehicle record when something needs attention.
+
+---
+
+## Driver and maintenance widgets
+
+The safe driver leaderboard ranks drivers by their driving behaviour over the past 60 days. The ranking is based on speed, cornering, acceleration, and braking, pulling the data automatically from the GPS tracker. Logan uses the leaderboard as an ongoing performance signal rather than waiting for an incident to prompt a conversation with a driver.
+
+The maintenance due widget lists tasks that are approaching their scheduled date or mileage threshold. Logan can mark a task complete directly from the widget once the work is done, updating the record without navigating to the vehicle detail view. The vehicle checks widget gives a summary of completed, late, and missed checks over the past 30 days, so Logan can see at a glance whether drivers are completing their pre- or post-shift inspections. The total mileage chart shows fleet mileage across the past six months.
+
+*[Knowledge check — 4 options]*
+**What do the colour-coded status rings on the fleet dashboard map widget indicate?**
+
+A) The vehicle's estimated fuel level based on mileage travelled
+B) How recently the vehicle's GPS location was last updated
+C) The priority level of the current job the driver is working on
+D) The driver's safe driving score for the current day
+
+*Correct (B):* Right. The status rings indicate how recently the vehicle's location data was updated: green for 0 to 30 minutes, yellow for 30 to 90 minutes, orange for 90 to 150 minutes, and red for 150 minutes or more. A red ring signals the data is not current, but the cause may be a parked vehicle, an indoor job, or a temporary signal issue rather than a breakdown.
+*Incorrect:* The status rings show how recently the vehicle's GPS location was updated, not fuel level, job priority, or driver score. Green means the location updated within the last 30 minutes; red means it has not updated for 150 minutes or more.
+
+---
+
+## Summary
+
+The fleet dashboard is in Fleet management in the main navigation bar. The map widget shows live vehicle locations with GPS status rings: green (0 to 30 minutes), yellow (30 to 90), orange (90 to 150), red (150 or more). Job routes appear as blue (completed) or green (in progress) lines. Use playback to review past vehicle movement by date and time range. The vehicle list organises vehicles by status; selecting one opens driver assignment, timeline, and file access. The safe driver leaderboard ranks drivers by 60-day behaviour data. The maintenance due widget lists upcoming tasks and allows completion marking from the widget. The vehicle checks widget summarises completed, late, and missed checks over 30 days. The total mileage chart covers the past six months.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 4 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Logan Chance (Operations Manager)
+**Sources used:** Commusoft — Fleet management dashboard (https://help.commusoft.com/en/articles/247235-fleet-management-dashboard); Simple Tracking Overview (https://help.commusoft.com/en/articles/216858-simple-tracking-overview)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
+INBOX_FILES["reed-script-l1-dm-s4-c2"] = `# Reed — Script: Set up vehicle checks and reminders
+
+**Layer:** 1 — Decision Maker Path
+**Series:** 4 of 5 — Fleet
+**Course:** 2 of 2
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-05-01
+
+---
+
+**Learning objectives**
+1. Create a vehicle check form in settings, including failure criteria and notifications
+2. Set up vehicle reminders for time-based compliance obligations
+3. Configure vehicle maintenance tasks with time and mileage triggers
+
+**Target persona:** Decision Makers (Owners, Directors, Operations Managers)
+
+**SunComfort characters:** Logan Chance (Operations Manager)
+
+**Scenario:** SunComfort's three vehicles need a daily pre-shift inspection, insurance renewal reminders, and scheduled servicing tracked in the system. Logan wants to set these up so drivers receive the checks on their mobile app, and the right people are alerted when compliance obligations are approaching.
+
+**Estimated length:** 5 minutes
+
+**Target audience:** Business owners, directors, and operations managers at field service businesses using Commusoft who are responsible for vehicle compliance and maintenance scheduling. Assumes Commusoft Compass (Layer 0) complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Commusoft Compass (Layer 0) complete. Decision Maker Series 4 Course 1 complete. Account on the Manage my Fleet plan — vehicle checks, reminders, and maintenance settings are not available on the Simple Tracking plan.
+
+**Main objective beyond learning objectives:** A business running field vehicles has compliance obligations that do not manage themselves: drivers need structured inspection forms, insurance and MOT dates need tracking, and servicing windows need to be caught before they are missed. The tools in this course — vehicle checks, reminders, and maintenance — each handle a different category of that compliance work. Setting them up correctly means the system prompts the right people at the right time, rather than relying on memory or a separate spreadsheet.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Vehicle checks
+
+Vehicle checks are digital inspection forms that drivers complete on the Commusoft mobile app before or after a shift. Logan configures them at Profile Icon, Settings, Fleet management, Vehicle checks. He creates a new check using a four-step process. In the first step, Basic Details, he names the form and adds a description — for example, SunComfort Pre-Shift Check. In the second step, Mobile Form Design, he builds the form itself: adding pages, sections, and input fields that cover the items drivers need to inspect, such as tyre condition, lights, and fluid levels. In the third step, Failure Criteria, he defines the conditions that trigger an alert — for example, if a driver marks headlights as failed. In the fourth step, Notifications, he selects who receives an alert when a failure criterion is met: specific users, a role, or all staff.
+
+Once the check is saved, it needs to be assigned to the relevant vehicles before drivers will see it on the mobile app. Logan can also clone an existing check and customise the copy, which saves time when setting up a second vehicle with a slightly different inspection list. A check that is in use cannot be deleted; archiving it removes it from active assignments while keeping the historical records intact.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: does your business currently have a standard process for drivers to inspect vehicles before or after shifts?**
+
+*Yes:* Vehicle checks formalise that process in Commusoft. Drivers complete the form on the mobile app, failure criteria trigger alerts automatically, and the records are stored against the vehicle rather than in a separate file or paper log.
+*No:* Setting up a vehicle check now creates that process from the point it is assigned to the vehicles in the fleet. The form design step lets Logan replicate whatever inspections the business needs, even if they have never been standardised before.
+
+---
+
+## Vehicle reminders
+
+Vehicle reminders track time-based obligations like insurance renewals, MOT dates, or road tax. Logan sets them up at Profile Icon, Settings, Fleet management, Vehicle reminders. He adds a new reminder with two steps. In the first step, Basic Details, he names the reminder — for example, Insurance renewal — sets the frequency (weekly, monthly, or yearly), and configures how far in advance the alert should appear before the due date. He can mark the reminder as required if the obligation is mandatory and must not be missed. In the second step, Notifications, he selects email alert recipients and in-system notification targets.
+
+Once a reminder is created, it appears in the vehicle record and Logan can reorder reminders in the list by dragging them. A reminder that is actively assigned to a vehicle cannot be edited or deleted. If the terms of a reminder change — for example, an insurance policy renews with a different expiry date — Logan archives the current reminder and creates a new one with the updated configuration. Archiving keeps the historical record while removing the reminder from active use.
+
+---
+
+## Vehicle maintenance
+
+Vehicle maintenance tasks cover scheduled servicing: oil changes, tyre rotations, brake inspections. Logan sets them up at Profile Icon, Settings, Fleet management, Vehicle maintenance. He creates a new task with a name and any relevant notes, sets a priority level, and then configures the trigger: a time interval (weekly or monthly), a mileage threshold in kilometres, or both. When both are set, whichever is reached first fires the notification. He then selects notification recipients — a specific user, a role, or all staff — and the format: email, in-system, or both.
+
+A maintenance task that is already assigned to a vehicle cannot be edited. If a task needs to change — for example, the service interval has been updated — Logan archives the existing task and creates a new one with the correct settings. Archiving preserves the historical maintenance data without leaving the old task active.
+
+*[Knowledge check — 4 options]*
+**Logan wants to delete a vehicle reminder for an expired insurance policy. The reminder is currently assigned to two of SunComfort's vehicles. What should he do?**
+
+A) Delete it directly from the reminder list; the system removes it from both vehicles automatically
+B) Remove it from each vehicle record individually first, then delete it from the reminder list
+C) Archive it; reminders assigned to vehicles cannot be deleted, but archiving disables future use while keeping historical records
+D) Edit the reminder's due date to a past date, which effectively deactivates it without deleting it
+
+*Correct (C):* Right. Reminders actively assigned to vehicles cannot be deleted. Archiving is the correct approach: it removes the reminder from future assignments and stops any further notifications, while keeping the historical data associated with those two vehicles intact. Once archived, Logan can create a new reminder with the updated policy details if needed.
+*Incorrect:* A reminder in use cannot be deleted while it is assigned to vehicles. The correct approach is to archive it, which disables it for future assignments and stops further notifications without removing the historical record from the vehicle. If new policy details need tracking, Logan creates a replacement reminder after archiving the old one.
+
+---
+
+## Summary
+
+Vehicle checks, reminders, and maintenance settings are available on the Manage my Fleet plan only. Vehicle checks: configure at Profile Icon, Settings, Fleet management, Vehicle checks; four steps — Basic Details, Mobile Form Design, Failure Criteria, Notifications; assign to vehicles for drivers to complete on the mobile app; clone to duplicate; archive rather than delete if in use. Vehicle reminders: configure at Profile Icon, Settings, Fleet management, Vehicle reminders; name, frequency, advance notice period, required flag, and notifications; drag to reorder; archive rather than edit or delete if in use. Vehicle maintenance: configure at Profile Icon, Settings, Fleet management, Vehicle maintenance; time interval, mileage threshold, or both (first reached fires the notification); archive rather than edit or delete if assigned.
+
+---
+
+**Section count:** 4 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 5 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Logan Chance (Operations Manager)
+**Sources used:** Commusoft — Vehicle checks (https://help.commusoft.com/en/articles/246787-vehicle-checks); Vehicle reminders (https://help.commusoft.com/en/articles/245967-vehicle-reminders); Vehicle maintenance (https://help.commusoft.com/en/articles/246405-vehicle-maintenance); Adding a new vehicle (https://help.commusoft.com/en/articles/250406-adding-a-new-vehicle)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
+INBOX_FILES["reed-script-l1-dm-s4-challenge"] = `# Reed — Script: Fleet visibility confirmed
+
+**Layer:** 1 — Decision Maker Path
+**Series:** 4 of 5 — Fleet
+**Course:** Challenge
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-05-01
+
+---
+
+**Learning objectives**
+1. Apply the correct interpretation of fleet dashboard data from Course 1
+2. Identify the correct action for each configuration scenario covered in Course 2
+3. Recognise plan and in-use restrictions that affect what can be changed in fleet settings
+
+**Target persona:** Decision Makers (Owners, Directors, Operations Managers)
+
+**SunComfort characters:** Sarah Mitchell (Managing Director)
+
+**Scenario:** Sarah has been reviewing SunComfort's fleet setup this week: checking the dashboard map, reviewing the driver leaderboard, and working through vehicle checks, reminders, and maintenance configuration. A few things produced unexpected results.
+
+**Estimated length:** 3 minutes
+
+**Target audience:** Decision makers at field service businesses using Commusoft who have completed Decision Maker Series 4 Courses 1 and 2. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Decision Maker Series 4 Courses 1 and 2 complete.
+
+**Main objective beyond learning objectives:** Fleet oversight in Commusoft works across two distinct layers: reading live data from the dashboard, and configuring the compliance structure that generates that data. The challenge reinforces the points where each layer has a specific constraint — a red status ring does not mean a breakdown, a check must be assigned to vehicles before drivers can see it, and in-use reminders and maintenance tasks cannot be edited or deleted. Understanding these constraints prevents wasted time troubleshooting something that is working correctly.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Opening
+
+Clint: Sarah has been working through SunComfort's fleet setup this week: reading the dashboard map, reviewing driver performance, and configuring vehicle checks, reminders, and maintenance tasks. A few results were not what she expected. Let's work through them.
+
+---
+
+## Exchange 1: Red status ring on the map
+
+Sarah: One of our vehicles has been showing a red ring on the fleet dashboard map for most of the afternoon. I assumed something had gone wrong with the vehicle, but the driver says everything is fine. What does the red ring actually mean?
+
+Clint: The red status ring means the vehicle's GPS location has not updated in 150 minutes or more. It is not a fault indicator — it reflects the age of the location data, not the condition of the vehicle. The most common explanations are that the vehicle is parked, the driver is on a long job inside a building with limited GPS signal, or the tracker briefly lost connection. If the driver has confirmed the vehicle is fine, the map data is simply not current at that moment.
+
+---
+
+## Exchange 2: Vehicle check not appearing on mobile app
+
+Sarah: Logan set up the pre-shift check in settings and the form looks correct on his end, but the drivers are saying they cannot see it in the mobile app. We have not changed anything on the app side. What is missing?
+
+Clint: The check form is configured in settings, but it also needs to be assigned to the relevant vehicles before it appears for drivers on the mobile app. Creating the form in settings defines what the check looks like; assigning it to vehicles is what activates it for the drivers on those specific vehicles. Once Logan assigns the pre-shift check to each of SunComfort's three vehicles, the drivers will see it on the app.
+
+---
+
+## Exchange 3: Cannot edit a vehicle reminder
+
+Sarah: We updated our insurance policy last month with a new renewal date. Logan went to edit the insurance renewal reminder in settings but the edit option is not available. It was available when we first created it. What changed?
+
+Clint: Once a reminder is assigned to a vehicle, it can no longer be edited. That is expected behaviour, not a bug. To update it, Logan archives the current reminder and creates a new one with the correct renewal date and notification settings. Archiving removes it from active use and stops further notifications, while keeping the historical data on the vehicle records. The new reminder takes over from the point it is assigned.
+
+---
+
+## Exchange 4: Maintenance notification did not fire
+
+Sarah: One of the vehicles was due a service last week based on the date we set in the maintenance task, but nobody received a notification. The task is still showing as overdue rather than triggered.
+
+Clint: There are two things to check. First, confirm the notification recipients are configured correctly on the maintenance task — if no user, role, or all-staff option was selected in the Notifications step, there is no one for the system to alert. Second, if both a date and a mileage threshold were set and the mileage has not been reached, the date trigger may still be the one that fires — but the alert only goes to whoever is listed. Opening the maintenance task settings will show exactly what recipients are configured and confirm whether the trigger conditions are set up as intended.
+
+---
+
+*[Knowledge check — 4 options]*
+**SunComfort's account is on the Simple Tracking plan. Logan goes to Profile Icon, Settings, Fleet management, and cannot find Vehicle checks, Vehicle reminders, or Vehicle maintenance. What is the most likely reason?**
+
+A) These settings are hidden until at least one vehicle has been added to the fleet
+B) These settings require a separate Fleet add-on that must be purchased independently of the plan
+C) These settings are only available on the Manage my Fleet plan, not the Simple Tracking plan
+D) These settings are in a different location: Profile Icon, Settings, Reporting, Fleet
+
+*Correct (C):* Right. Vehicle checks, vehicle reminders, and vehicle maintenance configuration are features of the Manage my Fleet plan. The Simple Tracking plan provides live location monitoring and basic vehicle tracking but does not include the tools for inspections, compliance reminders, or maintenance scheduling. Upgrading the plan is the route to access these settings.
+*Incorrect:* Vehicle checks, reminders, and maintenance are plan-dependent features available on the Manage my Fleet plan only. They are not hidden by vehicle count or located under Reporting. If these settings are not visible, the account plan is the first thing to verify.
+
+---
+
+## Series close
+
+Clint: That is Series 4 complete. You can now read the fleet dashboard — tracking live vehicle locations using the map widget and status rings, reviewing the safe driver leaderboard, and monitoring maintenance and vehicle checks from a single view. You can configure custom vehicle inspection forms for your drivers to complete on the mobile app, define failure criteria that trigger alerts, and assign checks to the specific vehicles that need them. You can create vehicle reminders for time-based obligations like insurance and MOT, mark them as required where compliance depends on them, and understand that archiving is the correct approach when a reminder is assigned and needs to change. You can set up maintenance tasks with time and mileage triggers, so the right person is alerted before a service window is missed. Your fleet is visible and your compliance process has a structure.
+
+---
+
+**Section count:** 1 opening + 4 exchanges + 1 knowledge check + 1 series close
+**Estimated length:** 3 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Sarah Mitchell (Managing Director)
+**Sources used:** Commusoft — Fleet management dashboard (https://help.commusoft.com/en/articles/247235-fleet-management-dashboard); Vehicle checks (https://help.commusoft.com/en/articles/246787-vehicle-checks); Vehicle reminders (https://help.commusoft.com/en/articles/245967-vehicle-reminders); Vehicle maintenance (https://help.commusoft.com/en/articles/246405-vehicle-maintenance)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+None — all content verified against Help Centre articles.
+`;
 INBOX_FILES["ivy-induction"] = `# Enablement Specialist — Induction Plan
 
 Training is essential for your role at Commusoft. To ensure you have the best possible start, we have created this induction schedule.
@@ -11731,6 +12075,9 @@ function openInboxFile(key) {
     'reed-script-l1-dm-s3-c4': { num: 'Reed — Script', title: 'L1 Decision Maker Series 3 — Course 4: Understand service reminder performance' },
     'reed-script-l1-dm-s3-c5': { num: 'Reed — Script', title: 'L1 Decision Maker Series 3 — Course 5: Segment your business with business units' },
     'reed-script-l1-dm-s3-challenge': { num: 'Reed — Script', title: 'L1 Decision Maker Series 3 — Challenge: Revenue visible and chasing active' },
+    'reed-script-l1-dm-s4-c1': { num: 'Reed — Script', title: 'L1 Decision Maker Series 4 — Course 1: Read the fleet dashboard' },
+    'reed-script-l1-dm-s4-c2': { num: 'Reed — Script', title: 'L1 Decision Maker Series 4 — Course 2: Set up vehicle checks and reminders' },
+    'reed-script-l1-dm-s4-challenge': { num: 'Reed — Script', title: 'L1 Decision Maker Series 4 — Challenge: Fleet visibility confirmed' },
     'ivy-induction': { num: 'Ivy — People', title: 'Enablement Specialist Induction Plan v3' },
     'ivy-jd-academy': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Description' },
     'ivy-jd-advert': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Advert' },

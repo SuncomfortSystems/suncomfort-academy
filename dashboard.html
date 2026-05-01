@@ -330,6 +330,10 @@
 
     <div class="nav-layer-header" onclick="toggleLayer('nav-lb-l1ft')"><span class="nav-layer-chevron" id="lchev-nav-lb-l1ft">&#9656;</span>L1 — Field Team</div>
     <div class="nav-layer-body" id="nav-lb-l1ft" style="display:none">
+      <div class="nav-series-row" data-series="nav-cl-ft1" onclick="navSeries('l1-ft-series1','nav-cl-ft1')"><div class="nav-dot" style="background:var(--blue1)"></div><span>Series 1</span><span class="nav-series-arrow" id="arr-nav-cl-ft1">&#9656;</span></div>
+      <div class="nav-course-list" id="nav-cl-ft1">
+        <div class="nav-course-link">Getting started on the app</div>
+      </div>
       <div class="nav-series-row" data-series="nav-cl-ft2" onclick="navSeries('l1-ft-series2','nav-cl-ft2')"><div class="nav-dot" style="background:var(--blue1)"></div><span>Series 2</span><span class="nav-series-arrow" id="arr-nav-cl-ft2">&#9656;</span></div>
       <div class="nav-course-list" id="nav-cl-ft2">
         <div class="nav-course-link">C1 &middot; Travel and mark arrival</div>
@@ -354,6 +358,10 @@
 
     <div class="nav-layer-header" onclick="toggleLayer('nav-lb-l1dm')"><span class="nav-layer-chevron" id="lchev-nav-lb-l1dm">&#9656;</span>L1 — Decision Maker</div>
     <div class="nav-layer-body" id="nav-lb-l1dm" style="display:none">
+      <div class="nav-series-row" data-series="nav-cl-dm1" onclick="navSeries('l1-dm-series1','nav-cl-dm1')"><div class="nav-dot" style="background:var(--grey)"></div><span>Series 1</span><span class="nav-series-arrow" id="arr-nav-cl-dm1">&#9656;</span></div>
+      <div class="nav-course-list" id="nav-cl-dm1">
+        <div class="nav-course-link">Your business at a glance</div>
+      </div>
       <div class="nav-series-row" data-series="nav-cl-dm2" onclick="navSeries('l1-dm-series2','nav-cl-dm2')"><div class="nav-dot" style="background:var(--grey)"></div><span>Series 2</span><span class="nav-series-arrow" id="arr-nav-cl-dm2">&#9656;</span></div>
       <div class="nav-course-list" id="nav-cl-dm2">
         <div class="nav-course-link">C1 &middot; Add and manage users</div>
@@ -581,9 +589,9 @@
     <div id="view-academy" class="view active">
       <div class="page-heading"><h1>Academy</h1><p>Course scripts organised by series</p></div>
       <div class="stats-row">
-        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">16</div><div class="stat-label">Series</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">74</div><div class="stat-label">Courses</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">278</div><div class="stat-label">Total Minutes</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">18</div><div class="stat-label">Series</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">76</div><div class="stat-label">Courses</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">304</div><div class="stat-label">Total Minutes</div></div>
         <div class="stat-card"><div class="stat-value" style="color:var(--blue2)">9</div><div class="stat-label">Characters</div></div>
       </div>
       <div id="job-view" class="series-block">
@@ -733,6 +741,15 @@
         </div>
       </div>
       <div class="section-heading" style="margin-top:24px">Layer 1 — Field Team Path</div>
+            <div id="l1-ft-series1" class="series-block">
+        <div class="series-header" style="background:var(--blue1)">
+          <div><h2>Layer 1 — Field Team Series 1</h2><div class="series-meta">Getting started on the app — install, login, home screen, accepting jobs, and appointment statuses</div></div>
+          <div class="series-count">1 mini-course</div>
+        </div>
+        <div class="course-grid">
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-ft-series1')"><div class="course-num">Mini-course</div><div class="course-title">Getting started on the app</div><div class="course-meta"><span class="meta-pill">13 min</span><span class="meta-pill">Rise mini-course</span><span class="meta-pill">Field team</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+        </div>
+      </div>
       <div id="l1-ft-series2" class="series-block">
         <div class="series-header" style="background:var(--blue1)">
           <div><h2>Layer 1 — Field Team Series 2</h2><div class="series-meta">On site: arrival to job complete — travel, forms, files, assets, job report, and access outcomes</div></div>
@@ -764,6 +781,15 @@
         </div>
       </div>
       <div class="section-heading" style="margin-top:24px">Layer 1 — Decision Maker Path</div>
+            <div id="l1-dm-series1" class="series-block">
+        <div class="series-header" style="background:var(--grey)">
+          <div><h2>Layer 1 — Decision Maker Series 1</h2><div class="series-meta">Your business at a glance — Analytics dashboard, appointments view, key metrics, and data flow</div></div>
+          <div class="series-count">1 mini-course</div>
+        </div>
+        <div class="course-grid">
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-dm-series1')"><div class="course-num">Mini-course</div><div class="course-title">Your business at a glance</div><div class="course-meta"><span class="meta-pill">13 min</span><span class="meta-pill">Rise mini-course</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+        </div>
+      </div>
       <div id="l1-dm-series2" class="series-block">
         <div class="series-header" style="background:var(--grey)">
           <div><h2>Layer 1 — Decision Maker Series 2</h2><div class="series-meta">Managing your team — users, licences, roles, skills, timesheets, and offboarding</div></div>
@@ -11495,6 +11521,386 @@ Clint: That is Series 5 complete, and the full Decision Maker path done. You can
 
 None — all content verified against Help Centre articles.
 `;
+INBOX_FILES["reed-script-l1-ft-series1"] = `# Reed — Script: Getting started on the app
+
+**Layer:** 1 — Field Team Path
+**Series:** 1 of 3
+**Format:** Rise mini-course with embedded Synthesia segments and screen recordings
+**Presenter:** Clint
+**Date:** 2026-05-01
+
+---
+
+**Learning objectives**
+1. Install the Commusoft mobile app and log in using account credentials
+2. Navigate the home screen and identify the key areas visible after login
+3. Locate and accept an assigned job in the mobile app
+4. Identify the main appointment statuses and understand what each one signals to the office and the customer
+
+**Target persona:** Field Team (Technicians)
+
+**SunComfort characters:** Luke Simmons (Technician — logged-in user for all screen recordings)
+
+**Scenario:** Luke Simmons is starting his first day using the Commusoft mobile app at SunComfort. Before his first job, he needs to know how to log in, understand what the home screen is showing him, locate his assigned jobs, and know what the appointment status options mean and when to use them.
+
+**Estimated length:** 13 minutes
+
+**Target audience:** Technicians at field service businesses using Commusoft who are setting up the mobile app for the first time. Assumes Commusoft Compass (Layer 0) complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Commusoft Compass (Layer 0) complete. No other prior course required. Account credentials provided by the business.
+
+**Main objective beyond learning objectives:** A technician who does not know how to find their jobs or set the right status at the right time creates problems for themselves and the office from day one: missed appointments, confused customers, and chasing calls they should not have to deal with. This course removes that confusion before it happens. After completing it, Luke knows how to get into the app, read what is on his screen, find his jobs for the day, and understand the status options available to him at each point. Everything in the Advanced Mobile training builds on this foundation.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** Luke Simmons — Technician — Engineer role or equivalent mobile-app-enabled role.
+2. **Customer record:** None — screen recordings show the app's job list and home screen, not customer records.
+3. **Existing data:** At least two jobs assigned to Luke Simmons should be visible in the app for the screen recordings: one for the current day and one upcoming. Jobs should show realistic job descriptions and addresses.
+4. **Assets required:** Mobile device with the Commusoft app installed (or simulator). App store screens for Lesson 1 may require capturing on iOS and Android separately.
+
+---
+
+## Opening
+
+*[Synthesia segment — Clint — 60 seconds]*
+
+The Commusoft mobile app is how SunComfort's field team connects to the business while they are out on the road. Every job Luke is assigned goes through the app — he can see the details, update the status as he moves through the day, complete forms, attach files, and submit the job report without calling the office. Before any of that can happen, he needs to install the app, log in, and understand what he is looking at. In this course, you will get your bearings across four areas: installing and logging in, reading the home screen, finding and accepting your jobs, and understanding what the appointment statuses mean. The courses in your Field Team path build on these foundations — this is where it all starts.
+
+---
+
+## Lesson 1: Install and log in
+
+*[Synthesia segment — Clint — 45 seconds]*
+
+The Commusoft mobile app is available on both iOS and Android. Your business administrator will provide your login credentials — your email address and a password. You do not need to configure anything in the app before logging in; the account details that apply to your role are already set up on the office side. Your job in this lesson is to install the app and complete your first login successfully.
+
+*[Screen recording — Luke Simmons — approximately 2 minutes]*
+
+**Finding the app in the app store (30 seconds)**
+Show the Commusoft app listing in the iOS App Store or Google Play Store. Show the app name and icon clearly. Tap Install.
+
+*Narration cue: "Search for Commusoft in the App Store or Google Play. The app is free to install — your business account covers the licence. Tap Install and wait for the download to complete."*
+
+**Login screen (40 seconds)**
+Open the app after installation. Show the login screen. Enter an email address in the email field and a password in the password field. Tap Log in and show the app loading.
+
+*Narration cue: "When the app opens, you will see the login screen. Enter the email address and password your administrator has set up for you. These are the same credentials you would use to log in to the Commusoft web app if you have web access. Tap Log in and the app takes you to your home screen."*
+
+**First login — confirming the account (40 seconds)**
+Show the app loading to the home screen. Show that Luke's name and role are visible or accessible somewhere on the home screen.
+
+*Narration cue: "Once you are logged in, the app loads your account. Your jobs, diary, and settings are all connected to your specific user profile. If you log in and see no jobs assigned, check with your administrator — it may be that jobs have not yet been assigned to you in the system."*
+
+*[Rise — Yes/No reflection prompt]*
+**Before you continue: have you already received your login credentials from your business administrator?**
+
+*Yes:* You are ready to log in and follow along with the rest of this course using your own account. The screen recordings show Luke's account, but the layout and navigation will be the same for you.
+*No:* Contact your administrator before continuing. The remaining lessons involve your assigned jobs, which will only appear once your account is active and credentials are set up. You can complete the Synthesia segments in Lessons 2, 3, and 4 without logging in, but the screen recordings will be most useful once your account is ready.
+
+---
+
+## Lesson 2: Understand your home screen
+
+*[Synthesia segment — Clint — 45 seconds]*
+
+The first thing Luke sees after logging in is his home screen. This is the daily view — a summary of what is assigned to him today and any actions that need his attention. The home screen is not the full picture of everything in the system; it is the relevant picture for his working day. Understanding what each section of the home screen shows means Luke knows at a glance what he is doing, where he needs to go, and whether there is anything outstanding before he heads to his first job.
+
+*[Screen recording — Luke Simmons — approximately 2 minutes]*
+
+**Home screen overview (50 seconds)**
+Show the full home screen with Luke's jobs for the day visible. Scroll slowly through the screen to show all the sections.
+
+*Narration cue: "Luke's home screen shows his jobs for the day and any appointments he needs to action. The layout is designed around what a technician needs first thing in the morning: who to visit, what the job involves, and what time the appointment is booked for. Everything relevant to Luke's working day is here without him needing to search for it."*
+
+**Today's appointments section (40 seconds)**
+Show the list of appointments for the current day. Show each job entry with the customer name, address, and time slot visible.
+
+*Narration cue: "Each appointment in the list shows the key details: the customer name, the job address, and the time it is booked for. Tapping on a job opens the full detail — the job description, any notes from the office, the forms Luke needs to complete, and the status controls. In the next lesson, you will see how to open a job and move it through the day."*
+
+**Diary view (30 seconds)**
+Show how to switch to the diary view if it is separate from the home screen. Show how the day and time layout appears.
+
+*Narration cue: "The diary view gives Luke a visual layout of his day: each appointment in its time slot, in order. If there are back-to-back appointments or a gap mid-morning, the diary makes that visible at a glance. Luke can move between the list view and the diary view depending on which he finds easier to read."*
+
+---
+
+## Lesson 3: Accept a job
+
+*[Synthesia segment — Clint — 45 seconds]*
+
+When a job is assigned to Luke in Commusoft, it appears in his app automatically — he does not need to do anything to receive it. What he does need to do is acknowledge it. Accepting a job is how Luke confirms to the office that he has seen the appointment, is aware of the details, and intends to attend. It is the first step in the appointment status sequence and sets everything else in motion.
+
+*[Screen recording — Luke Simmons — approximately 2 minutes]*
+
+**Opening a job (30 seconds)**
+From the home screen, tap on a job in the list. Show the full job detail screen: job description, address, customer name, time, and any notes from the office.
+
+*Narration cue: "Tapping on a job opens all the detail the office has provided: the job description, the address, the customer name, any special instructions, and the forms Luke needs to complete on site. Reading this before leaving for the job means he arrives prepared."*
+
+**Accepting the job (50 seconds)**
+Show the status options or accept button on the job detail screen. Tap Accept. Show that the job status updates and the office can now see the acceptance.
+
+*Narration cue: "To accept the job, Luke taps the relevant status option or the accept button. This sends a confirmation back to the office that he has acknowledged the appointment. Until Luke accepts, the office can see the appointment is assigned but unacknowledged — accepting removes that uncertainty."*
+
+**What happens after acceptance (40 seconds)**
+Show the updated status on the job. Show any summary or confirmation that appears after acceptance.
+
+*Narration cue: "After accepting, the appointment status updates and the job moves to the next stage in Luke's day. The office can see the updated status in real time. From this point, Luke's next action is to set Travel when he leaves for the job — which is covered in full in the On Site series."*
+
+*[Rise — Knowledge check — 4 options]*
+**Luke receives a new job in his Commusoft app. He opens the job, reads the details, and decides he is ready to attend. What should he do first?**
+
+A) Call the office to confirm he has received the job and can attend
+B) Navigate to the site and update the status once he arrives
+C) Accept the job in the app so the office can see he has acknowledged the appointment
+D) Wait until the morning of the appointment to open the job and read the details
+
+*Correct (C):* Right. Accepting the job in the app is how Luke confirms to the office that he has seen the appointment and is prepared to attend. The office tracks acceptance status in the system, so this step removes uncertainty on both sides — Luke knows what he is doing and the office knows he has acknowledged it.
+*Incorrect:* Accepting the job in the app is the correct first step. It confirms to the office that Luke has read the job details and is prepared to attend. Calling to confirm creates unnecessary overhead, and waiting until the morning of the job to open the details leaves no time to prepare or raise questions with the office in advance.
+
+---
+
+## Lesson 4: Appointment statuses on the app
+
+*[Synthesia segment — Clint — 30 seconds]*
+
+The status options Luke sees on a job in the app correspond to the appointment status sequence you covered in the Commusoft Compass. Each status has a specific trigger point in the working day — and setting it at the right moment matters, both for the office's visibility and for the automatic notifications that go out to customers. The full explanation of each status is covered in the Shared Concept Library course linked below.
+
+*[Rise — embedded shared library link]*
+
+**Appointment Statuses Explained**
+*This lesson links to the Shared Concept Library course: L0-02 Appointment statuses explained.*
+
+Watch this course before continuing if you have not already completed it as part of the Commusoft Compass, or return to it any time you need a reminder of what each status means and when to use it.
+
+*[Rise — Yes/No reflection prompt]*
+**Before you finish: do you now know what each appointment status means in the Commusoft mobile app and when to set it during your working day?**
+
+*Yes:* Good. The On Site series — your next training — covers travel, arrival, on-site forms, and the full job completion sequence. Now that you know what the statuses mean, you will see exactly how they fit into each step of the job.
+*No:* Revisit the Appointment Statuses Explained course linked above. Understanding the status sequence is the foundation for everything in your Field Team training — every course that follows builds on knowing which status applies at which point in the day.
+
+---
+
+**Lesson count:** 4 lessons plus 1 opening Synthesia segment
+**Synthesia segments:** 5 (opening, Lessons 1 to 4) — each 30 to 60 seconds (Lesson 4 brief, links to shared library)
+**Rise content:** 3 screen recordings with narration cues; 2 Yes/No reflection prompts (Lessons 1 and 4); 1 knowledge check (Lesson 3); 1 embedded shared library link (Lesson 4)
+**Estimated length:** 13 minutes
+**Em dashes:** none
+**Line breaks within Synthesia scenes:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Luke Simmons (Technician — logged-in user for screen recordings)
+**Sources used:** Commusoft — Mobile App Overview (no specific HC article confirmed — see Open items)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+- **Needs human input** — Confirm the exact name and location of the Commusoft mobile app in the iOS App Store and Google Play Store. Lesson 1 screen recording requires showing the correct app listing.
+- **Needs human input** — Confirm the exact label and location of the "Accept" option on a job in the mobile app. The Lesson 3 narration refers to tapping an accept button or status option — confirm the exact UI label as it appears in the current version of the app.
+- **Needs human input** — Confirm whether Luke Simmons is set up as a mobile-app-enabled user in the SunComfort demo account. If he is not suitable for the screen recordings, confirm which technician character to use instead.
+- **Needs human input** — Confirm whether the mobile app has a separate diary view (time-slot layout) or whether the home screen list view is the only format. Lesson 2 describes both; remove the diary view reference if it does not exist as a separate view.
+- **Needs human input** — No dedicated Help Centre article confirmed for the mobile app home screen, job acceptance, or login flow. Provide HC article URLs for mobile app features before production.
+`;
+INBOX_FILES["reed-script-l1-dm-series1"] = `# Reed — Script: Your business at a glance
+
+**Layer:** 1 — Decision Maker Path
+**Series:** 1 of 5
+**Format:** Rise mini-course with embedded Synthesia segments and screen recordings
+**Presenter:** Clint
+**Date:** 2026-05-01
+
+---
+
+**Learning objectives**
+1. Access the Analytics dashboard and identify what each default widget shows
+2. Navigate the appointments view and read the daily schedule across the engineering team
+3. Identify the three to four key metrics a decision maker should check routinely
+4. Explain how a job moves through Commusoft from customer creation to payment and reporting
+
+**Target persona:** Decision Makers (Owners, Directors, Operations Managers)
+
+**SunComfort characters:** Sarah Mitchell (Managing Director — logged-in user for all screen recordings)
+
+**Scenario:** Sarah Mitchell is setting up her weekly review rhythm in Commusoft. Before she can manage SunComfort at a business level, she needs to know where the business-level data lives: the reporting dashboard, the schedule view, and the handful of metrics that actually signal how the business is running. This course gives her that orientation.
+
+**Estimated length:** 13 minutes
+
+**Target audience:** Business owners, directors, and operations managers beginning the Decision Maker path in Commusoft Academy. Assumes Commusoft Compass (Layer 0) complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Commusoft Compass (Layer 0) complete. No other prior course required.
+
+**Main objective beyond learning objectives:** A decision maker who cannot quickly read the state of their business in Commusoft will either rely on others to pull the data for them or will stop checking altogether. This course removes that dependency. After completing it, Sarah knows where the key business-level views live, what the numbers mean at a glance, and how the data she sees in reporting connects to the work happening in the field. Every subsequent Decision Maker course builds on this orientation — the focus can be on the decisions, not on finding the dashboards.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** Sarah Mitchell — Managing Director — Owner or Admin role. Required for all three screen recordings.
+2. **Customer record:** None — screen recordings show business-level dashboards, not individual customer records.
+3. **Existing data:** A realistic set of live data should be visible throughout: completed jobs from the past month in the Analytics dashboard, a mixed schedule visible in the appointments view (multiple engineers with jobs at different statuses), and meaningful figures visible in the key metrics widgets (revenue, outstanding invoices, jobs completed). Data should look like an active field service business, not an empty or demonstration account.
+4. **Assets required:** None.
+
+---
+
+## Opening
+
+*[Synthesia segment — Clint — 60 seconds]*
+
+When Sarah logs in to Commusoft as SunComfort's Managing Director, she is not looking for a specific job or customer — she is looking for a picture of how the business is running. That picture lives in two places: the Analytics dashboard, which shows how the business has performed over the past six months, and the appointments view, which shows what is happening today and this week. Together they give her the operational and financial view she needs to make decisions without asking someone to pull a report for her. In this course, you will get your bearings across the dashboard, the diary, and the handful of metrics that matter most — and you will see how the data you are reading connects to the work your team does in the field every day.
+
+---
+
+## Lesson 1: The reporting dashboard
+
+*[Synthesia segment — Clint — 45 seconds]*
+
+The Analytics dashboard is Commusoft's built-in reporting view for decision makers. It sits in the Reporting section of the main navigation bar and opens with a set of default widgets — each one summarising a different area of the business over the past six months. Sarah does not need to build anything or configure a report to see her data here. The widgets are already running. What she can do is add, remove, and rearrange them to match exactly what she reviews every week.
+
+*[Screen recording — Sarah Mitchell logged into Commusoft web app — approximately 2 minutes]*
+
+**Navigating to the Analytics dashboard (20 seconds)**
+Click the Reporting section in the main navigation bar. Show the Analytics dashboard loading with its default widgets visible.
+
+*Narration cue: "The Reporting section in the navigation bar is where decision makers spend most of their time in Commusoft. The Analytics dashboard opens here by default. The widgets you can see are already pulling live data — nothing needs to be set up to start reading this view."*
+
+**Scrolling through default widgets (50 seconds)**
+Scroll slowly through the dashboard showing the range of default widgets. Pause briefly on one or two — such as revenue and outstanding invoices — to show the data they display.
+
+*Narration cue: "Each widget covers a different slice of business performance: revenue over time, outstanding invoices, jobs completed, and others. The data covers the past six months by default. Sarah can see at a glance where performance is trending before she has opened a single report."*
+
+**Adding and removing widgets (50 seconds)**
+Open Quick Links in the top-right corner of the dashboard. Select Add/Remove Dashboard Widgets. Show the widget panel. Tick a widget to add it and show that it appears on the dashboard. Then untick another to show it can be removed.
+
+*Narration cue: "The dashboard is fully customisable. Sarah opens Quick Links and selects Add/Remove Dashboard Widgets to choose which widgets appear. The ones she does not need can be removed; the ones she reviews every Monday can be added and placed at the top. The dashboard she sees next week will reflect the choices she makes today."*
+
+*[Rise — Yes/No reflection prompt]*
+**Before you continue: does your business currently have a weekly or monthly reporting review — a set of numbers you check on a regular schedule?**
+
+*Yes:* The Analytics dashboard is the right place to anchor that review. The widgets map directly to the metrics most decision makers track, and once the dashboard is arranged to match the review habit, it is ready to open every time without any rebuild.
+*No:* This course is a good moment to decide what those numbers should be. Lessons 2 and 3 show you the schedule view and the key metrics worth watching, which will help you identify what a regular review should include.
+
+---
+
+## Lesson 2: The diary at a glance
+
+*[Synthesia segment — Clint — 45 seconds]*
+
+The appointments view in Commusoft is Sarah's daily operational picture. It shows every scheduled appointment across all engineers for any date or date range she chooses — who is working where, what jobs are booked, and what stage each appointment has reached. For a decision maker, reading the diary is not about scheduling individual jobs; it is about spotting capacity gaps, identifying patterns in how work is distributed, and knowing whether the day is set up for the team to hit their targets.
+
+*[Screen recording — Sarah Mitchell — approximately 2 minutes]*
+
+**Navigating to the appointments view (25 seconds)**
+Navigate to the Jobs section. Open the appointments or diary view. Show the full schedule for the current day with engineers listed as columns or rows, appointments visible in their time slots.
+
+*Narration cue: "The appointments view is in the Jobs section. Sarah selects it to see the full schedule for SunComfort's engineering team. Each engineer appears as a column, and their booked appointments are visible in the time slots for the day. At a glance, she can see who is busy, who has gaps, and how the day is structured."*
+
+**Filtering by engineer and date range (40 seconds)**
+Show how to filter the view by a specific engineer or date range. Change the view to show the following week.
+
+*Narration cue: "Sarah can filter the view to see one engineer or all of them, and change the date to look ahead to the following week. Reviewing the forward schedule is how she spots whether there is enough capacity booked for the week ahead — or whether a quiet patch needs filling before it becomes a revenue gap."*
+
+**Reading appointment statuses (45 seconds)**
+Show a mix of appointments at different statuses — booked, travelling, on site, and complete. Hover over or select one to show the detail that appears.
+
+*Narration cue: "Each appointment carries a status that updates as the engineer moves through the job. Booked, travelling, on site, complete — the status tells Sarah where each engineer is in their day without any check-in calls. If an appointment is still showing as booked mid-morning but the engineer should already be on site, that is a signal worth investigating."*
+
+---
+
+## Lesson 3: Key metrics to watch
+
+*[Synthesia segment — Clint — 45 seconds]*
+
+Out of everything Commusoft can show a decision maker, most businesses only need to monitor a handful of numbers regularly. Revenue — is the business generating what it should? Outstanding invoices — is cash getting tied up in unpaid work? Jobs completed — is the team hitting their output targets? Service reminders converted — are the recurring revenue opportunities being captured? These are the metrics that tell Sarah whether SunComfort is running well or whether something needs attention. In this lesson, you will see where each one lives in the dashboard.
+
+*[Screen recording — Sarah Mitchell — approximately 2 minutes and 30 seconds]*
+
+**Revenue widget (40 seconds)**
+On the Analytics dashboard, point to the revenue widget. Show the monthly trend visible in it.
+
+*Narration cue: "The revenue widget shows income over time — by month for the past six months. Sarah can see at a glance whether revenue is growing, flat, or declining, and whether this month is tracking ahead or behind the same month last year. A single widget replaces the need to pull a report for a high-level trend read."*
+
+**Outstanding invoices widget (35 seconds)**
+Show the outstanding invoices widget. Point out the total figure and, if visible, any breakdown.
+
+*Narration cue: "Outstanding invoices is the cash flow signal. The higher this number, the more revenue SunComfort has generated that has not yet been collected. This widget tells Sarah how much is sitting uncollected at any point. If it is climbing, it is a prompt to check the debt chasing process."*
+
+**Jobs completed widget (35 seconds)**
+Show the jobs completed widget. Show the count for the current period.
+
+*Narration cue: "Jobs completed shows output. Combined with the revenue figure, it tells Sarah whether the team is generating the expected amount of revenue per job — or whether a high job count is not translating into the expected income."*
+
+**Navigating to a key report from the dashboard (40 seconds)**
+From the dashboard, navigate to a specific report — for example, the Sales report or service reminder report — to show that the widgets link through to the underlying data.
+
+*Narration cue: "The dashboard widgets summarise the data. The underlying detail lives in the individual reports in the Reporting section. When a widget raises a question — why are outstanding invoices up this month? — the answer is in the report behind it. Sarah uses the dashboard to spot the question, then opens the report to find the answer."*
+
+*[Rise — Knowledge check — 4 options]*
+**Sarah notices that SunComfort's outstanding invoices widget has been climbing for three weeks in a row. Which of the following is the most appropriate next step?**
+
+A) Remove the outstanding invoices widget from the dashboard so the metric is less prominent
+B) Open the Sales report and filter for invoices that are overdue to identify which customers are holding unpaid balances
+C) Check the appointments view to see whether the engineering team is completing enough jobs
+D) Contact Commusoft support to investigate a possible system error in the invoicing data
+
+*Correct (B):* Right. A rising outstanding invoices figure means cash is accumulating in unpaid work. The Sales report, filtered for overdue invoices, shows exactly which customers are holding balances and how long those invoices have been outstanding. That is the starting point for chasing and collections — not a system error.
+*Incorrect:* A rising outstanding invoices number is a collections signal, not a system error or a scheduling issue. The Sales report filtered for overdue invoices is where Sarah finds which customers are holding unpaid balances and how long each one has been overdue. That is the next step before taking any action on the debt.
+
+---
+
+## Lesson 4: How data flows through Commusoft
+
+*[Synthesia segment — Clint — 3 minutes]*
+
+Before Sarah starts using the dashboards and reports in her weekly routine, it helps to understand where the data she is reading actually comes from. Every number in the Analytics dashboard started as an action someone took in the system — a booking, a job completion, a payment. Understanding how those actions connect means Sarah knows what she is looking at and what to do when a number does not look right.
+
+The flow starts with a customer. When a customer record is created in Commusoft, it establishes the account against which all future work, invoices, and communications will be recorded. Every subsequent action traces back to this foundation.
+
+From the customer, a job is raised against a specific work address. The job carries the description of the work, the job type, and any parts or costs that are added as work progresses. The moment a job is raised, it appears in the jobs dashboard and becomes visible to the office team.
+
+An appointment is booked against the job — a specific date, time, and engineer. That appointment appears in the appointments view, the engineer receives it on their mobile app, and the schedule is set.
+
+The engineer arrives, completes the work, and submits the job report on the mobile app. The job status updates automatically as appointment statuses change: travelling, on site, complete. Once the engineer marks the appointment as complete, the job record is updated and it moves toward invoicing.
+
+An invoice is raised against the job — either by the office team or, for field staff with the right permissions, directly from the mobile app. The invoice carries the job costs and any parts used. Once raised, it appears in the outstanding invoices count on the dashboard.
+
+The customer pays. The payment is recorded in Commusoft and the invoice is marked as paid. The revenue from that invoice moves into the revenue figures on the Analytics dashboard.
+
+The full picture — from the job raised to the payment received — is now visible in reporting. Sarah's revenue widget includes it. If it was a service reminder job, the service reminder report captures it. If there was a part on the job, the parts reports reflect it.
+
+Every figure Sarah sees in reporting is the result of someone taking an action in the system. When a number looks wrong, the place to start is by tracing back through the flow: was the job raised? Was the appointment completed? Was the invoice sent? Was the payment recorded? The answer is almost always at one of those steps.
+
+*[Rise — Yes/No reflection prompt]*
+**Before you finish: is there a step in this flow — job raised, appointment booked, job completed, invoice raised, payment recorded — where your current business process is inconsistent or where things sometimes get missed?**
+
+*Yes:* Note that step. The Decision Maker courses that follow this one go deeper into how to track and manage each of these stages: the appointments view for scheduling, the Sales report for invoice and payment visibility, and the Analytics dashboard for the combined picture. Knowing where the gap is in your flow tells you which course to prioritise.
+*No:* Good. The flow is the backbone. The Decision Maker courses build on it — covering how to monitor each stage, how to automate the follow-ups, and how to spot and recover when something falls through.
+
+---
+
+**Lesson count:** 4 lessons plus 1 opening Synthesia segment
+**Synthesia segments:** 5 (opening, Lessons 1 to 4) — each 45 seconds to 3 minutes (Lesson 4 is full Synthesia, no screen recording)
+**Rise content:** 3 screen recordings with narration cues; 2 Yes/No reflection prompts (Lessons 1 and 4); 1 knowledge check (Lesson 3)
+**Estimated length:** 13 minutes
+**Em dashes:** none
+**Line breaks within Synthesia scenes:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Sarah Mitchell (Managing Director — logged-in user for screen recordings)
+**Sources used:** Commusoft — Reporting Dashboard (https://help.commusoft.com/en/articles/216779-reporting-dashboard); Fleet management dashboard (https://help.commusoft.com/en/articles/247235-fleet-management-dashboard) (appointments view reference)
+**Pre-submission checklist:** complete
+**Flint revisions:** None required.
+
+## Open items
+
+- **Needs human input** — Confirm the exact navigation path to the appointments/diary view for a user with Managing Director or Owner role. The screen recording in Lesson 2 navigates through Jobs — confirm whether the appointments view is accessible directly from the main nav or as a sub-tab within Jobs, and confirm the exact UI label (appointments view, diary, schedule view, or other).
+- **Needs human input** — Confirm the exact labels on the default Analytics dashboard widgets for a Managing Director role. The Lesson 1 narration refers to revenue, outstanding invoices, and jobs completed — confirm these widget names match the current UI labels exactly.
+- **Needs human input** — Confirm whether the Analytics dashboard is accessible to a Managing Director role without any additional permissions setup. If certain widgets or the dashboard itself is behind a role permission, flag which ones.
+- **Needs human input** — Lesson 4 describes the standard data flow from customer to payment. Confirm whether any step in this flow differs for SunComfort's demo account configuration — for example, whether invoices in the demo are raised from the office or from the field.
+- **Needs human input** — No dedicated Help Centre article found for appointments view navigation or the diary layout as seen by a decision maker. Confirm whether an HC article exists for this view and provide the URL to add to Sources before production.
+`;
 INBOX_FILES["ivy-induction"] = `# Enablement Specialist — Induction Plan
 
 Training is essential for your role at Commusoft. To ensure you have the best possible start, we have created this induction schedule.
@@ -12385,6 +12791,7 @@ function openInboxFile(key) {
     'reed-script-l1-s8-c1': { num: 'Reed — Script', title: 'L1 Office Staff Series 8 — Course 1: Add a service reminder to a customer' },
     'reed-script-l1-s8-c2': { num: 'Reed — Script', title: 'L1 Office Staff Series 8 — Course 2: Schedule a job from a service reminder' },
     'reed-script-l1-s8-challenge': { num: 'Reed — Script', title: 'L1 Office Staff Series 8 — Challenge: Reminder triggered, job booked' },
+    'reed-script-l1-ft-series1': { num: 'Reed — Script', title: 'L1 Field Team Series 1 — Getting started on the app' },
     'reed-script-l1-ft-s2-c1': { num: 'Reed — Script', title: 'L1 Field Team Series 2 — Course 1: Travel to a job and mark your arrival' },
     'reed-script-l1-ft-s2-c2': { num: 'Reed — Script', title: 'L1 Field Team Series 2 — Course 2: Complete your on-site form' },
     'reed-script-l1-ft-s2-c3': { num: 'Reed — Script', title: 'L1 Field Team Series 2 — Course 3: Attach photos, video, and documents on site' },
@@ -12399,6 +12806,7 @@ function openInboxFile(key) {
     'reed-script-l1-ft-s3-c5': { num: 'Reed — Script', title: 'L1 Field Team Series 3 — Course 5: Invoice a job from the field' },
     'reed-script-l1-ft-s3-c6': { num: 'Reed — Script', title: 'L1 Field Team Series 3 — Course 6: Take a payment on site' },
     'reed-script-l1-ft-s3-challenge': { num: 'Reed — Script', title: 'L1 Field Team Series 3 — Challenge: On site — every tool used' },
+    'reed-script-l1-dm-series1': { num: 'Reed — Script', title: 'L1 Decision Maker Series 1 — Your business at a glance' },
     'reed-script-l1-dm-s2-c1': { num: 'Reed — Script', title: 'L1 Decision Maker Series 2 — Course 1: Add and manage users' },
     'reed-script-l1-dm-s2-c2': { num: 'Reed — Script', title: 'L1 Decision Maker Series 2 — Course 2: Assign licences and roles' },
     'reed-script-l1-dm-s2-c3': { num: 'Reed — Script', title: 'L1 Decision Maker Series 2 — Course 3: Set up skills and assign to engineers' },

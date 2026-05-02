@@ -118,6 +118,19 @@
   .swatch-info .name { font-weight: 600; font-size: 13px; }
   .swatch-info .hex { font-size: 11px; color: var(--text-muted); font-family: monospace; }
 
+  /* Course card download button */
+  .card-download { display: inline-flex; align-items: center; gap: 3px; background: none; border: 1px solid var(--border); border-radius: 10px; color: var(--text-muted); font-size: 10px; font-weight: 700; cursor: pointer; padding: 1px 7px; margin-left: 4px; vertical-align: middle; transition: background 0.1s, color 0.1s; }
+  .card-download:hover { background: var(--orange); border-color: var(--orange); color: #fff; }
+
+  /* Print styles for PDF export */
+  @media print {
+    .header, .sidebar, .panel-overlay, .stats-row, .main > *:not(.view.active), .view.active > *:not(#scriptPanel) { display: none !important; }
+    body, .layout, .main { overflow: visible !important; display: block !important; }
+    .script-panel { position: static !important; width: 100% !important; height: auto !important; box-shadow: none !important; right: 0 !important; display: flex !important; }
+    .panel-body { overflow: visible !important; height: auto !important; max-height: none !important; }
+    .panel-download, .panel-close, .panel-overlay { display: none !important; }
+  }
+
   /* Script panel */
   .panel-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.35); z-index: 200; }
   .panel-overlay.open { display: block; }
@@ -12935,6 +12948,60 @@ function toggleSidebar() {
     var navInbox = document.getElementById('nav-inbox');
     if (navInbox) navInbox.style.display = '';
   }
+})();
+
+// Inject download buttons onto course cards
+(function() {
+  function mdDownload(key, title) {
+    var content = INBOX_FILES[key];
+    if (!content) return;
+    var filename = title.replace(/[^a-zA-Z0-9\s\-]/g, '').replace(/\s+/g, '-') + '.md';
+    var blob = new Blob([content], { type: 'text/markdown;charset=utf-8' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(a.href);
+  }
+
+  document.querySelectorAll('.course-card[onclick]').forEach(function(card) {
+    if (card.style.opacity === '0.5' || card.style.cursor === 'default') return;
+    var onclick = card.getAttribute('onclick') || '';
+    var mdMatch = onclick.match(/openInboxFile\(['"]([^'"]+)['"]\)/);
+    var pdfMatch = onclick.match(/openPanel\((\d+)\)/);
+    if (!mdMatch && !pdfMatch) return;
+
+    var meta = card.querySelector('.course-meta');
+    if (!meta) return;
+
+    var btn = document.createElement('button');
+    btn.className = 'card-download';
+
+    if (mdMatch) {
+      var key = mdMatch[1];
+      if (!INBOX_FILES[key]) return;
+      btn.textContent = '↓ .md';
+      btn.title = 'Download script as Markdown';
+      btn.onclick = function(e) {
+        e.stopPropagation();
+        var title = (card.querySelector('.course-title') || {}).textContent || key;
+        mdDownload(key, title);
+      };
+    } else {
+      var num = parseInt(pdfMatch[1]);
+      btn.textContent = '↓ PDF';
+      btn.title = 'Save as PDF';
+      btn.onclick = function(e) {
+        e.stopPropagation();
+        openPanel(num);
+        setTimeout(function() { window.print(); }, 400);
+      };
+    }
+
+    meta.appendChild(btn);
+  });
 })();
 
 </script>

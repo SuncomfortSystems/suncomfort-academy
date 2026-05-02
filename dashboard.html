@@ -129,6 +129,8 @@
   .panel-title { font-size: 17px; font-weight: 700; line-height: 1.3; }
   .panel-close { background: none; border: none; color: rgba(255,255,255,0.7); font-size: 22px; cursor: pointer; padding: 0; line-height: 1; flex-shrink: 0; margin-top: 2px; }
   .panel-close:hover { color: var(--white); }
+  .panel-download { background: none; border: 1px solid rgba(255,255,255,0.3); border-radius: 4px; color: rgba(255,255,255,0.7); font-size: 11px; font-weight: 700; cursor: pointer; padding: 4px 10px; flex-shrink: 0; letter-spacing: 0.3px; }
+  .panel-download:hover { color: var(--white); border-color: rgba(255,255,255,0.6); }
   .panel-meta { background: #3d4d5c; padding: 10px 20px; flex-shrink: 0; display: flex; gap: 16px; flex-wrap: wrap; }
   .panel-meta-item { font-size: 12px; color: rgba(255,255,255,0.75); }
   .panel-meta-item strong { color: var(--white); }
@@ -337,8 +339,8 @@
         </div>
         <div class="file-grid">
           <div class="file-card">
-            <div class="file-card-title">Academy / Job View / index.md</div>
-            <div class="file-card-desc">Series index for the Job View course collection.</div>
+            <div class="file-card-title">Academy / The Job Record / index.md</div>
+            <div class="file-card-desc">Series index for The Job Record course collection.</div>
             <div class="file-card-footer"><span class="file-type type-index">Index</span></div>
           </div>
           <div class="file-card">
@@ -476,9 +478,9 @@
       </div>
         <div class="course-card" style="display:none"></div>
       </div>
-      <div id="job-view" class="series-block">
+      <div id="job-record" class="series-block">
         <div class="series-header">
-          <div><h2>Job View</h2><div class="series-meta">A complete walkthrough of the Commusoft job record and all its tabs</div></div>
+          <div><h2>The Job Record</h2><div class="series-meta">A complete walkthrough of the Commusoft job record and all its tabs</div></div>
           <div class="series-count">10 courses</div>
         </div>
         <div class="course-grid">
@@ -783,7 +785,10 @@
       <div class="panel-course-num" id="panelNum"></div>
       <div class="panel-title" id="panelTitle"></div>
     </div>
-    <button class="panel-close" onclick="closePanel()">&#x2715;</button>
+    <div style="display:flex;align-items:center;gap:10px;flex-shrink:0;margin-top:2px">
+      <button class="panel-download" id="panelDownload" onclick="downloadPanel()" style="display:none">&#8659; Download .md</button>
+      <button class="panel-close" onclick="closePanel()">&#x2715;</button>
+    </div>
   </div>
   <div class="panel-meta" id="panelMeta"></div>
   <div class="panel-body" id="panelBody"></div>
@@ -12687,14 +12692,19 @@ function openInboxFile(key) {
   document.getElementById('panelMeta').innerHTML = '';
   document.getElementById('panelBody').innerHTML = renderSettingsMd(content);
   document.getElementById('panelBody').scrollTop = 0;
-  document.getElementById('scriptPanel').classList.add('open');
+  var sp = document.getElementById('scriptPanel');
+  sp.dataset.downloadKey = key;
+  sp.dataset.downloadFilename = lbl.title.replace(/[^a-zA-Z0-9\s\-]/g, '').replace(/\s+/g, '-') + '.md';
+  document.getElementById('panelDownload').style.display = '';
+  sp.classList.add('open');
   document.getElementById('overlay').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
 
 function openPanel(num) {
   const c = COURSES[num];
-  document.getElementById('panelNum').textContent = 'Course ' + num + ' \u2014 Job View Series';
+  document.getElementById('panelDownload').style.display = 'none';
+  document.getElementById('panelNum').textContent = 'Course ' + num + ' \u2014 The Job Record';
   document.getElementById('panelTitle').textContent = c.title;
   document.getElementById('panelMeta').innerHTML =
     `<div class="panel-meta-item"><strong>Duration:</strong> ${c.duration}</div>` +
@@ -12711,6 +12721,22 @@ function closePanel() {
   document.getElementById('scriptPanel').classList.remove('open');
   document.getElementById('overlay').classList.remove('open');
   document.body.style.overflow = '';
+}
+
+function downloadPanel() {
+  var sp = document.getElementById('scriptPanel');
+  var key = sp.dataset.downloadKey;
+  var filename = sp.dataset.downloadFilename || 'script.md';
+  var content = INBOX_FILES[key];
+  if (!content) return;
+  var blob = new Blob([content], { type: 'text/markdown;charset=utf-8' });
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(a.href);
 }
 
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closePanel(); });

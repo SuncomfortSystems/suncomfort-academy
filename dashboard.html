@@ -13375,7 +13375,7 @@ function openInboxFile(key) {
   sp.dataset.downloadKey = key;
   sp.dataset.downloadFilename = lbl.title.replace(/[^a-zA-Z0-9\s\-]/g, '').replace(/\s+/g, '-') + '.md';
   var dlBtn = document.getElementById('panelDownload');
-  dlBtn.onclick = null;
+  dlBtn.onclick = downloadPanel;
   dlBtn.style.display = '';
   sp.classList.add('open');
   document.getElementById('overlay').classList.add('open');

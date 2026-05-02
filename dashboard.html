@@ -11,6 +11,7 @@
     --grey: #465564;
     --blue1: #2d91c5;
     --blue2: #1e9dc0;
+    --green: #2e7d32;
     --white: #ffffff;
     --bg: #f4f6f8;
     --surface: #ffffff;
@@ -246,7 +247,7 @@
 
     <div class="nav-item" onclick="navLayer('layer-0', this)"><div class="nav-dot" style="background:var(--orange)"></div>Layer 0 — Universal</div>
     <div class="nav-item" onclick="navLayer('layer-1-os', this)"><div class="nav-dot" style="background:var(--blue2)"></div>L1 — Office Staff</div>
-    <div class="nav-item" onclick="navLayer('layer-1-ft', this)"><div class="nav-dot" style="background:var(--blue1)"></div>L1 — Field Team</div>
+    <div class="nav-item" onclick="navLayer('layer-1-ft', this)"><div class="nav-dot" style="background:var(--green)"></div>L1 — Field Team</div>
     <div class="nav-item" onclick="navLayer('layer-1-dm', this)"><div class="nav-dot" style="background:var(--grey)"></div>L1 — Decision Maker</div>
   </nav>
 
@@ -438,6 +439,21 @@
           </div>
         </div>
       </div>
+
+      <!-- Parta -->
+      <div class="series-block">
+        <div class="series-header" style="background:#37474f">
+          <div><h2>Parta</h2><div class="series-meta">Authoring platform trials — Parta AI upload schemas and course variants</div></div>
+          <div class="series-count">1 file</div>
+        </div>
+        <div class="file-grid">
+          <div class="file-card clickable" onclick="openInboxFile('parta-trial-timeline')">
+            <div class="file-card-title">Parta trial — The job record Course 2: The timeline</div>
+            <div class="file-card-desc">Full Course 2 script with a Parta upload block at the bottom — pre-populated Learning objective, Learning outcome, Tone, Knowledge checks, Number of lessons, AI transformation, and Tell the AI prompt.</div>
+            <div class="file-card-footer"><span class="file-type" style="background:#eceff1;color:#37474f">Parta</span><span class="badge" style="background:#fff3ee;color:#fa6932">Trial</span></div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- ACADEMY -->
@@ -599,7 +615,7 @@
       </div>
       <div id="layer-1-ft" class="section-heading" style="margin-top:24px">Layer 1 — Field Team Path</div>
             <div id="l1-ft-series1" class="series-block">
-        <div class="series-header" style="background:var(--blue1)">
+        <div class="series-header" style="background:var(--green)">
           <div><h2>Layer 1 — Field Team Series 1</h2><div class="series-meta">Getting started on the app — install, login, home screen, accepting jobs, and appointment statuses</div></div>
           <div class="series-count">1 mini-course</div>
         </div>
@@ -608,7 +624,7 @@
         </div>
       </div>
       <div id="l1-ft-series2" class="series-block">
-        <div class="series-header" style="background:var(--blue1)">
+        <div class="series-header" style="background:var(--green)">
           <div><h2>Layer 1 — Field Team Series 2</h2><div class="series-meta">On site: arrival to job complete — travel, forms, files, assets, job report, and access outcomes</div></div>
           <div class="series-count">6 courses + challenge</div>
         </div>
@@ -623,7 +639,7 @@
         </div>
       </div>
       <div id="l1-ft-series3" class="series-block">
-        <div class="series-header" style="background:var(--blue1)">
+        <div class="series-header" style="background:var(--green)">
           <div><h2>Layer 1 — Field Team Series 3</h2><div class="series-meta">Advanced mobile — task checklists, parts, timecard, invoicing, and payments</div></div>
           <div class="series-count">6 courses + challenge</div>
         </div>
@@ -13106,6 +13122,132 @@ The Connect email import feature allows customer replies to Commusoft emails to 
 [OPEN — **Action for Fern.** The Series 6 challenge (Message sent and portal live) was scoped to Courses 1 and 2, with a standing note to update it once Course 3 was written. Course 3 is now complete. Fern to commission a challenge update adding a Connect-related dialogue exchange.]
 `;
 
+INBOX_FILES["parta-trial-timeline"] = `# The timeline — reading history and taking action
+
+**Series:** The job record | **Course:** 2 of 10 | **Duration:** 5 min | **Audience:** Office teams
+
+---
+
+**Characters:** Emma Clarke (Office Administrator), Jake Harris (Technician), Sophie Bennett (Office staff)
+
+**Scenario:** A customer has called with a query about Jake's heat pump service visit at a residential property in Brixton. Emma opens the timeline to piece together the full picture, responds to the customer, and puts the job on hold while a part is sourced.
+
+---
+
+**Production setup**
+
+- Logged-in user: Emma Clarke — Office Administrator — Office staff
+- Customer record: A residential customer in Brixton with a heat pump — select from the SunComfort customer CSV (south London, residential, heat pump asset)
+- Existing data: One in-progress heat pump service job. Jake Harris completed a visit the previous day — appointment marked complete and visit notes on the timeline. Sophie Bennett sent an SMS to the customer — visible on the timeline. Job not yet on hold.
+- Assets required: None
+
+---
+
+## Introduction
+
+A customer has called with a query about Jake's heat pump service visit at their Brixton property. Jake attended yesterday, but the customer says something was not explained to them. Emma opens the timeline on the job record and everything she needs is there — what Jake logged on site, what Sophie sent to the customer, every status change from the moment the job was created. No call to Jake needed. Everything is already there. The Timeline is the complete audit trail of every job, and by the end of this course, you can read it to piece together the full history of any job, find specific events quickly, and communicate and take action without leaving the record.
+
+## What the timeline records
+
+The timeline captures every significant action on the job automatically. Three types of events appear. Communications — emails, SMS messages, and logged calls — show the sender, recipient, and a preview of the message. Job records — appointments, files, parts requests, invoices — appear as cards showing key summary details. System updates appear as shorter entries: automated actions, status changes, and stage transitions. Every entry carries a timestamp and the name of whoever or whatever triggered it.
+
+## Reading timeline entries
+
+Entries appear grouped by date, with the most recent at the top. Emma can expand any entry using See more or See details to read the full content. On email cards, an inline Reply link lets her respond to the customer immediately from the same card — the reply threads back to the original message and logs on the timeline the moment it is sent. Jake's visit notes from yesterday are right there. Emma has everything she needs to answer the customer's question without making a single call.
+
+## Searching and filtering
+
+When Emma needs to find a specific event rather than scroll the full history, the search bar is the fastest route. She types a keyword and the timeline narrows immediately. The date dropdown lets her filter by Today, Yesterday, This Week, or a custom range. The user dropdown narrows the view to actions taken by a specific team member. Both filters work together, so she can isolate exactly what Sophie sent to this customer last Tuesday without scrolling through weeks of activity.
+
+For more control, the filter icon opens the advanced filter panel. Emma can toggle specific event categories on and off: Communications, Scheduled Activities, Automation, Objects, and Updates. On a busy job with a long history, showing only Communications cuts the noise immediately.
+
+---
+
+**Reflection prompt**
+
+Emma needs to find an email Sophie sent to this customer two weeks ago. Can she use the date filter and the user filter at the same time?
+
+- Yes ✓
+- No
+
+*Feedback: Both filters work together. Emma sets the date range to the relevant period and selects Sophie from the user dropdown. The timeline shows only Sophie's activity in that window.*
+
+---
+
+## Communicating from the Actions menu
+
+The Actions menu is where Emma takes action without leaving the job. She selects Send email, chooses a template, adds any recipients, and composes her message in a panel that sits alongside the record. Send SMS works the same way, using a saved template and sending immediately. Both communications log on the timeline automatically the moment they are sent — there is no separate step to record what was sent or to whom.
+
+## Notes, mentions, and call logging
+
+When Emma needs to leave an internal message on the job, she adds a note. She types @ to tag a colleague and they receive an alert immediately. Toggling Share on mobile makes the note visible to Jake in the field. If a note needs to stay visible as she moves between tabs, she toggles Important and it pins permanently to the timeline bar.
+
+When Emma takes a call from the customer, she logs it straight away. The call log captures the summary and lets her @mention anyone who needs to know. She can also schedule a follow-up activity directly after logging — assigning it to a team member with a due date, so nothing falls through after a customer call.
+
+## Putting a job on hold
+
+The query is resolved, but the part Jake needs is on backorder. Emma puts the job on hold from the Actions menu. She selects a reason from the list, adds a note for context, and sets a reminder date so the job surfaces again at the right time. The hold status appears in the sidebar immediately — anyone opening this record can see why it is paused without having to ask. To take the job off hold, she selects the link in the sidebar or books a new appointment.
+
+## Closing the job — abort and free of charge
+
+The Actions menu also surfaces two irreversible actions: Abort and Free of charge. Abort closes a job permanently with a required reason and cannot be undone — it is reserved for genuine cancellations, not jobs that need to pause. Free of charge marks the job so no customer invoice is raised, and is equally irreversible. Both actions close the job, so everything on the record should be accurate before either is selected.
+
+---
+
+**Knowledge check**
+
+Jake has completed a heat pump service visit but a part is on backorder. The job needs to wait two weeks before it can be finished. What does Emma select from the Actions menu?
+
+- A. Abort
+- B. Free of charge
+- C. On hold ✓
+- D. Nothing — the job stays open automatically
+
+*Feedback: On hold is the right choice. It pauses the job with a documented reason and a reminder date, and it can be reversed when the part arrives. Abort is permanent and only for cancellations. Free of charge removes the customer invoice, which is not what is needed here.*
+
+---
+
+## Summary
+
+Emma found everything she needed in the timeline without making a single phone call — Jake's visit notes, Sophie's communications, and the full history of the job from creation to today. The timeline holds the complete picture, the search and filter tools surface it in seconds, and the Actions menu lets her respond, log, and update status without switching screens. In the next course, you will move to the Appointments tab and learn how to book, monitor, and manage technician appointments from the job record.
+
+---
+
+## Parta upload
+
+Upload this file to Parta as a Markdown file. Copy each value below into the matching field. One field appears on the upload screen before you configure the prompt; the rest appear on the Create a course with AI screen.
+
+---
+
+**On the upload screen — Tell the AI**
+
+After adding the file, paste this into the Tell the AI field:
+
+> This is a micro-course script for Commusoft, a field service management platform used by plumbing and heating companies. The course is structured as one scrollable lesson with named sections — treat each section heading as a content block within that single lesson, not as a separate lesson. Preserve the narration text as written; do not paraphrase, simplify, or reorder it. The script includes two interactive elements marked clearly in the file: a reflection prompt (mid-lesson) and a knowledge check (near the end) — include both as in-lesson questions at the positions shown. Use Emma Clarke as the learner-facing character where a name is needed. The audience is office staff: administrators, coordinators, and customer service roles at a small to mid-size field service business.
+
+---
+
+**On the Create a course with AI screen**
+
+**Learning objective**
+> Office staff need to navigate the job timeline in Commusoft to answer customer queries accurately without calling the field team. This course solves the problem of staff not knowing where to find job history or how to take action directly from the record.
+
+**Learning outcome**
+> Read and interpret timeline entries by event type, search and filter the timeline to find specific events, and send communications, log notes, and update job status from the Actions menu.
+
+**Tone of voice**
+> General
+
+**Knowledge checks**
+> In-lesson questions
+
+**Number of lessons**
+> 1
+
+**AI content transformation**
+> How original
+`;
+
 function openInboxFile(key) {
   var content = INBOX_FILES[key];
   if (!content) { content = 'Content not found.'; }
@@ -13119,6 +13261,7 @@ function openInboxFile(key) {
     'forest-asset-dropdowns': { num: 'Forest — Research', title: 'Asset Dropdown Options' },
     'forest-asset-types': { num: 'Forest — Research', title: 'Asset Types by Group' },
     'flint-assets-final': { num: 'Flint — Review', title: 'Assets Settings Files (Final Check)' },
+    'parta-trial-timeline': { num: 'Parta — Trial', title: 'The job record Course 2 — Parta upload trial' },
     'reed-script-l0-01': { num: 'Reed — Script', title: 'L0 Shared Concept Library — 01 The customer and site hierarchy' },
     'reed-script-l0-02': { num: 'Reed — Script', title: 'L0 Shared Concept Library — 02 Appointment statuses explained' },
     'reed-script-l0-03': { num: 'Reed — Script', title: 'L0 Shared Concept Library — 03 What are job description templates' },
@@ -13219,15 +13362,86 @@ function openInboxFile(key) {
   var sp = document.getElementById('scriptPanel');
   sp.dataset.downloadKey = key;
   sp.dataset.downloadFilename = lbl.title.replace(/[^a-zA-Z0-9\s\-]/g, '').replace(/\s+/g, '-') + '.md';
-  document.getElementById('panelDownload').style.display = '';
+  var dlBtn = document.getElementById('panelDownload');
+  dlBtn.onclick = null;
+  dlBtn.style.display = '';
   sp.classList.add('open');
   document.getElementById('overlay').classList.add('open');
   document.body.style.overflow = 'hidden';
 }
 
+function coursesToMd(c) {
+  var lines = [];
+  lines.push('# ' + c.title);
+  lines.push('');
+  lines.push('**Duration:** ' + c.duration + ' | **Audience:** ' + c.persona);
+  lines.push('');
+  if (c.characters) { lines.push('**Characters:** ' + c.characters); lines.push(''); }
+  if (c.scenario) { lines.push('**Scenario:** ' + c.scenario); lines.push(''); }
+  if (c.objectives && c.objectives.length) {
+    lines.push('**Learning objectives:**');
+    lines.push('');
+    c.objectives.forEach(function(obj) { lines.push('- ' + obj); });
+    lines.push('');
+  }
+  if (c.productionSetup) {
+    lines.push('**Production setup**');
+    lines.push('');
+    var ps = c.productionSetup;
+    if (ps.loggedInUser) lines.push('- Logged-in user: ' + ps.loggedInUser);
+    if (ps.customerRecord) lines.push('- Customer record: ' + ps.customerRecord);
+    if (ps.existingData) lines.push('- Existing data: ' + ps.existingData);
+    if (ps.assetsRequired) lines.push('- Assets required: ' + ps.assetsRequired);
+    lines.push('');
+  }
+  lines.push('---');
+  lines.push('');
+  c.scenes.forEach(function(s) {
+    if (s.type === 'section') {
+      lines.push('## ' + s.heading);
+      lines.push('');
+      lines.push(s.body);
+      lines.push('');
+    } else if (s.type === 'reflection') {
+      lines.push('---');
+      lines.push('');
+      lines.push('**' + (s.label || 'Knowledge check') + '**');
+      lines.push('');
+      lines.push(s.question);
+      lines.push('');
+      if (s.options) {
+        s.options.forEach(function(opt) {
+          lines.push('- ' + opt + (opt === s.correct ? ' ✓' : ''));
+        });
+      }
+      lines.push('');
+      if (s.feedback) { lines.push('*Feedback: ' + s.feedback + '*'); lines.push(''); }
+      lines.push('---');
+      lines.push('');
+    }
+  });
+  return lines.join('\n');
+}
+
+function downloadCourse(num) {
+  var md = coursesToMd(COURSES[num]);
+  var title = (COURSES[num] && COURSES[num].title) ? COURSES[num].title : 'course';
+  var filename = title.replace(/[^a-zA-Z0-9\s\-]/g, '').replace(/\s+/g, '-') + '.md';
+  var blob = new Blob([md], { type: 'text/markdown;charset=utf-8' });
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(a.href);
+}
+
 function openPanel(num) {
   const c = COURSES[num];
-  document.getElementById('panelDownload').style.display = 'none';
+  var btn = document.getElementById('panelDownload');
+  btn.onclick = function() { downloadCourse(num); };
+  btn.style.display = '';
   document.getElementById('panelNum').textContent = 'Course ' + num + ' \u2014 The Job Record';
   document.getElementById('panelTitle').textContent = c.title;
   document.getElementById('panelMeta').innerHTML =
@@ -13502,12 +13716,11 @@ function toggleSidebar() {
       };
     } else {
       var num = parseInt(pdfMatch[1]);
-      btn.textContent = '↓ PDF';
-      btn.title = 'Save as PDF';
+      btn.textContent = '↓ .md';
+      btn.title = 'Download script as Markdown';
       btn.onclick = function(e) {
         e.stopPropagation();
-        openPanel(num);
-        setTimeout(function() { window.print(); }, 400);
+        downloadCourse(num);
       };
     }
 

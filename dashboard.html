@@ -229,41 +229,11 @@
     <div class="nav-item" onclick="showView('website', this)"><div class="nav-dot" style="background:#2e7d32"></div>SunComfort Website</div>
     <div class="nav-section" style="margin-top:16px">Series</div>
 
-    <div class="nav-series-row" data-series="nav-cl-jv" onclick="navSeries('job-view','nav-cl-jv')"><div class="nav-dot" style="background:var(--blue1)"></div><span>Job View</span></div>
-
-    <div class="nav-layer-header" onclick="toggleLayer('nav-lb-l0')"><span class="nav-layer-chevron" id="lchev-nav-lb-l0">&#9656;</span>Layer 0 — Universal</div>
-    <div class="nav-layer-body" id="nav-lb-l0" style="display:none">
-      <div class="nav-series-row" data-series="nav-cl-compass" onclick="navSeries('compass','nav-cl-compass')"><div class="nav-dot" style="background:var(--grey)"></div><span>Compass</span></div>
-      <div class="nav-series-row" data-series="nav-cl-scl" onclick="navSeries('shared-concept-library','nav-cl-scl')"><div class="nav-dot" style="background:var(--orange)"></div><span>Shared Concept Library</span></div>
-    </div>
-
-    <div class="nav-layer-header" onclick="toggleLayer('nav-lb-l1os')"><span class="nav-layer-chevron" id="lchev-nav-lb-l1os">&#9656;</span>L1 — Office Staff</div>
-    <div class="nav-layer-body" id="nav-lb-l1os" style="display:none">
-      <div class="nav-series-row" data-series="nav-cl-os1" onclick="navSeries('l1-office-series1','nav-cl-os1')"><div class="nav-dot" style="background:var(--blue1)"></div><span>Series 1</span></div>
-      <div class="nav-series-row" data-series="nav-cl-os3" onclick="navSeries('l1-office-series3','nav-cl-os3')"><div class="nav-dot" style="background:var(--blue2)"></div><span>Series 3</span></div>
-      <div class="nav-series-row" data-series="nav-cl-os4" onclick="navSeries('l1-office-series4','nav-cl-os4')"><div class="nav-dot" style="background:var(--blue2)"></div><span>Series 4</span></div>
-      <div class="nav-series-row" data-series="nav-cl-os5" onclick="navSeries('l1-office-series5','nav-cl-os5')"><div class="nav-dot" style="background:var(--blue2)"></div><span>Series 5</span></div>
-      <div class="nav-series-row" data-series="nav-cl-os6" onclick="navSeries('l1-office-series6','nav-cl-os6')"><div class="nav-dot" style="background:var(--blue2)"></div><span>Series 6</span></div>
-      <div class="nav-series-row" data-series="nav-cl-os7" onclick="navSeries('l1-office-series7','nav-cl-os7')"><div class="nav-dot" style="background:var(--blue2)"></div><span>Series 7</span></div>
-      <div class="nav-series-row" data-series="nav-cl-os8" onclick="navSeries('l1-office-series8','nav-cl-os8')"><div class="nav-dot" style="background:var(--blue2)"></div><span>Series 8</span></div>
-      <div class="nav-series-row" data-series="nav-cl-os9" onclick="navSeries('l1-office-series9','nav-cl-os9')"><div class="nav-dot" style="background:var(--blue2)"></div><span>Series 9</span></div>
-    </div>
-
-    <div class="nav-layer-header" onclick="toggleLayer('nav-lb-l1ft')"><span class="nav-layer-chevron" id="lchev-nav-lb-l1ft">&#9656;</span>L1 — Field Team</div>
-    <div class="nav-layer-body" id="nav-lb-l1ft" style="display:none">
-      <div class="nav-series-row" data-series="nav-cl-ft1" onclick="navSeries('l1-ft-series1','nav-cl-ft1')"><div class="nav-dot" style="background:var(--blue1)"></div><span>Series 1</span></div>
-      <div class="nav-series-row" data-series="nav-cl-ft2" onclick="navSeries('l1-ft-series2','nav-cl-ft2')"><div class="nav-dot" style="background:var(--blue1)"></div><span>Series 2</span></div>
-      <div class="nav-series-row" data-series="nav-cl-ft3" onclick="navSeries('l1-ft-series3','nav-cl-ft3')"><div class="nav-dot" style="background:var(--blue1)"></div><span>Series 3</span></div>
-    </div>
-
-    <div class="nav-layer-header" onclick="toggleLayer('nav-lb-l1dm')"><span class="nav-layer-chevron" id="lchev-nav-lb-l1dm">&#9656;</span>L1 — Decision Maker</div>
-    <div class="nav-layer-body" id="nav-lb-l1dm" style="display:none">
-      <div class="nav-series-row" data-series="nav-cl-dm1" onclick="navSeries('l1-dm-series1','nav-cl-dm1')"><div class="nav-dot" style="background:var(--grey)"></div><span>Series 1</span></div>
-      <div class="nav-series-row" data-series="nav-cl-dm2" onclick="navSeries('l1-dm-series2','nav-cl-dm2')"><div class="nav-dot" style="background:var(--grey)"></div><span>Series 2</span></div>
-      <div class="nav-series-row" data-series="nav-cl-dm3" onclick="navSeries('l1-dm-series3','nav-cl-dm3')"><div class="nav-dot" style="background:var(--grey)"></div><span>Series 3</span></div>
-      <div class="nav-series-row" data-series="nav-cl-dm4" onclick="navSeries('l1-dm-series4','nav-cl-dm4')"><div class="nav-dot" style="background:var(--grey)"></div><span>Series 4</span></div>
-      <div class="nav-series-row" data-series="nav-cl-dm5" onclick="navSeries('l1-dm-series5','nav-cl-dm5')"><div class="nav-dot" style="background:var(--grey)"></div><span>Series 5</span></div>
-    </div>
+    <div class="nav-item" onclick="navLayer('job-view', this)"><div class="nav-dot" style="background:var(--blue1)"></div>Job View</div>
+    <div class="nav-item" onclick="navLayer('layer-0', this)"><div class="nav-dot" style="background:var(--orange)"></div>Layer 0 — Universal</div>
+    <div class="nav-item" onclick="navLayer('layer-1-os', this)"><div class="nav-dot" style="background:var(--blue2)"></div>L1 — Office Staff</div>
+    <div class="nav-item" onclick="navLayer('layer-1-ft', this)"><div class="nav-dot" style="background:var(--blue1)"></div>L1 — Field Team</div>
+    <div class="nav-item" onclick="navLayer('layer-1-dm', this)"><div class="nav-dot" style="background:var(--grey)"></div>L1 — Decision Maker</div>
   </nav>
 
   <main class="main">
@@ -483,6 +453,7 @@
           <div class="course-card" onclick="openPanel(10)"><div class="course-num">Course 10</div><div class="course-title">Tracking opportunities on jobs</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">7 sections</span><span class="meta-pill">Decision makers</span><span class="badge badge-approved">Approved</span></div></div>
         </div>
       </div>
+      <div id="layer-0" class="section-heading" style="margin-top:24px">Layer 0 — Universal</div>
       <div id="compass" class="series-block">
         <div class="series-header" style="background:var(--grey)">
           <div><h2>The Commusoft Compass</h2><div class="series-meta">Layer 0 — entry course for all new Commusoft users</div></div>
@@ -511,6 +482,7 @@
           <div class="course-card" onclick="openInboxFile('reed-script-l0-11')"><div class="course-num">Course 11</div><div class="course-title">The customer portal — what your customers can do online</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">All staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l0-12')"><div class="course-num">Course 12</div><div class="course-title">User roles and permissions</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">All staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
+      <div id="layer-1-os" class="section-heading" style="margin-top:24px">Layer 1 — Office Staff Path</div>
       <div id="l1-office-series1" class="series-block">
         <div class="series-header" style="background:var(--blue1)">
           <div><h2>Layer 1 — Office Staff Series 1</h2><div class="series-meta">Your first day in Commusoft — dashboard navigation, customer search, and job record orientation</div></div>
@@ -611,7 +583,7 @@
           <div class="course-card" style="opacity:0.5;cursor:default"><div class="course-num">Challenge</div><div class="course-title">Part ordered, delivered, installed</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#f5f5f5;color:#999">Gap</span></div></div>
         </div>
       </div>
-      <div class="section-heading" style="margin-top:24px">Layer 1 — Field Team Path</div>
+      <div id="layer-1-ft" class="section-heading" style="margin-top:24px">Layer 1 — Field Team Path</div>
             <div id="l1-ft-series1" class="series-block">
         <div class="series-header" style="background:var(--blue1)">
           <div><h2>Layer 1 — Field Team Series 1</h2><div class="series-meta">Getting started on the app — install, login, home screen, accepting jobs, and appointment statuses</div></div>
@@ -651,7 +623,7 @@
           <div class="course-card" onclick="openInboxFile('reed-script-l1-ft-s3-challenge')"><div class="course-num">Challenge</div><div class="course-title">On site — every tool used</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Field team</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
-      <div class="section-heading" style="margin-top:24px">Layer 1 — Decision Maker Path</div>
+      <div id="layer-1-dm" class="section-heading" style="margin-top:24px">Layer 1 — Decision Maker Path</div>
             <div id="l1-dm-series1" class="series-block">
         <div class="series-header" style="background:var(--grey)">
           <div><h2>Layer 1 — Decision Maker Series 1</h2><div class="series-meta">Your business at a glance — Analytics dashboard, appointments view, key metrics, and data flow</div></div>
@@ -12754,6 +12726,13 @@ function scrollToSeries(id) {
     const el = document.getElementById(id);
     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }, 50);
+}
+
+function navLayer(id, el) {
+  showView('academy', null);
+  document.querySelectorAll('.nav-item').forEach(function(n) { n.classList.remove('active'); });
+  if (el) el.classList.add('active');
+  scrollToSeries(id);
 }
 
 function navSeries(seriesId, listId) {

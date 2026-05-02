@@ -445,8 +445,8 @@
       <div class="page-heading"><h1>Academy</h1><p>Course scripts organised by series</p></div>
       <div class="stats-row">
         <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">18</div><div class="stat-label">Series</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">76</div><div class="stat-label">Courses</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">304</div><div class="stat-label">Total Minutes</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">80</div><div class="stat-label">Courses</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">320</div><div class="stat-label">Total Minutes</div></div>
         <div class="stat-card"><div class="stat-value" style="color:var(--blue2)">9</div><div class="stat-label">Characters</div></div>
       </div>
       <div id="layer-0" class="section-heading" style="margin-top:24px">Layer 0 — Universal</div>
@@ -562,7 +562,7 @@
         <div class="course-grid">
           <div class="course-card" onclick="openInboxFile('reed-script-l1-s6-c1')"><div class="course-num">Course 1</div><div class="course-title">Send a communication from a template</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l1-s6-c2')"><div class="course-num">Course 2</div><div class="course-title">Use the invoice portal</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
-          <div class="course-card" style="opacity:0.5;cursor:default"><div class="course-num">Course 3</div><div class="course-title">Manage incoming emails with Connect</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#f5f5f5;color:#999">Gap</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-s6-c3')"><div class="course-num">Course 3</div><div class="course-title">Manage incoming emails with Connect</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l1-s6-challenge')"><div class="course-num">Challenge</div><div class="course-title">Message sent and portal live</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
@@ -590,13 +590,13 @@
       </div>
       <div id="l1-office-series9" class="series-block">
         <div class="series-header" style="background:var(--blue2)">
-          <div><h2>Layer 1 — Office Staff Series 9</h2><div class="series-meta">Suppliers and purchasing — raising purchase orders, receiving deliveries, and matching parts to jobs</div></div>
+          <div><h2>Layer 1 — Office Staff Series 9</h2><div class="series-meta">Suppliers and purchasing — raising purchase orders, accepting deliveries, and making parts available for jobs</div></div>
           <div class="series-count">2 courses + challenge</div>
         </div>
         <div class="course-grid">
-          <div class="course-card" style="opacity:0.5;cursor:default"><div class="course-num">Course 1</div><div class="course-title">Raise a purchase order with a supplier</div><div class="course-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#f5f5f5;color:#999">Gap</span></div></div>
-          <div class="course-card" style="opacity:0.5;cursor:default"><div class="course-num">Course 2</div><div class="course-title">Receive a delivery and match it to a job</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#f5f5f5;color:#999">Gap</span></div></div>
-          <div class="course-card" style="opacity:0.5;cursor:default"><div class="course-num">Challenge</div><div class="course-title">Part ordered, delivered, installed</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#f5f5f5;color:#999">Gap</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-s9-c1')"><div class="course-num">Course 1</div><div class="course-title">Raise a purchase order</div><div class="course-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-s9-c2')"><div class="course-num">Course 2</div><div class="course-title">Accept a delivery</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l1-s9-challenge')"><div class="course-num">Challenge</div><div class="course-title">Parts ordered, delivered, installed</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
       <div id="layer-1-ft" class="section-heading" style="margin-top:24px">Layer 1 — Field Team Path</div>
@@ -12599,6 +12599,515 @@ This option introduces a part-time UK hire from Q3, drawing on the £26k–£30k
 - 2 Omniplex licences during interim; 3 licences once hire is in post.
 `;
 
+INBOX_FILES["reed-script-l1-s9-c1"] = `# Reed — Script: Raise a purchase order
+
+**Layer:** 1 — Office staff path
+**Series:** 9 of 9 — Suppliers and purchasing
+**Course:** 1 of 2
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-05-02
+
+---
+
+**Learning objectives**
+1. Navigate to a supplier record and create a new purchase order
+2. Complete the key fields on a purchase order form correctly, including the VAT setting
+3. Add parts from inventory and items as free-text lines to a purchase order
+4. Save a purchase order and send it to a supplier by email or print
+
+**Target persona:** Office staff
+
+**SunComfort characters:** Emma Clarke (Office Administrator), Danny Walsh (Parts and Stores Manager)
+
+**Scenario:** SunComfort needs to order a replacement heat pump part and a supply of consumables from a supplier. Emma raises a purchase order directly from the supplier record, adds the required parts and items, and sends it to the supplier.
+
+**Estimated length:** 5 minutes
+
+**Target audience:** Office staff at field service businesses using Commusoft — administrators and coordinators responsible for raising purchase orders with suppliers. Assumes Commusoft Compass (Layer 0) and Office Staff Series 1 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Commusoft Compass (Layer 0) and Office Staff Series 1 (Your first day in Commusoft) complete.
+
+**Main objective beyond learning objectives:** A purchase order is the formal record of what you have agreed to buy, from whom, and at what price. Raising it correctly in Commusoft means the supplier receives clear instructions, the business has a traceable record of the order, and the team can check what was ordered when the delivery arrives. A PO raised without the right fields completed — or sent outside the system — creates gaps that are difficult to reconcile later.
+
+---
+
+## Production setup
+
+1. **Logged-in user:** Emma Clarke, Office Administrator, Office staff.
+2. **Customer record:** Not applicable — this course works from the supplier record, not a customer record.
+3. **Existing data:** At least one supplier record must exist in the system (for example, a heat pump parts supplier such as a fictional "Ashfield Heating Supplies"). The supplier should have an email address configured on their record. At least one part should exist in the parts inventory (for example, a heat pump expansion valve) so that the parts table can be demonstrated.
+4. **Assets required:** None.
+
+---
+
+## Introduction
+
+When SunComfort needs to order parts or materials from a supplier, a purchase order is the starting point. It is the formal record of what you are ordering, from whom, at what price, and when you expect delivery. Raising it through Commusoft means every order is traceable, the supplier gets a clear document, and the team can check what was ordered when the delivery arrives.
+
+---
+
+## Where purchase orders start
+
+Purchase orders in Commusoft live on the supplier record. Navigate to the Suppliers section, find the supplier you want to order from, and open their record. From there, select Add new purchase order. This creates a fresh PO linked directly to that supplier. The supplier name is auto-populated from the record you are working in, so you do not need to enter it manually. A PO number is also generated automatically when the order is saved — you do not need to create one yourself.
+
+*[Reflection prompt — Yes/No]*
+**Before we continue: do you already have your suppliers set up as records in Commusoft?**
+
+*Yes:* Good. Everything in this course assumes suppliers are in the system. When a supplier is on the record, their contact details are available for emailing the PO directly, and all orders raised against them build a history on their record.
+*No:* Setting up supplier records is the first step. Once a supplier is on the system, you can raise purchase orders against them, track order history, and email POs directly from Commusoft. Check with your administrator about getting suppliers added before you raise your first order.
+
+---
+
+## Filling in the purchase order
+
+With the new PO open, work through the key fields. The branch field indicates which part of the business this order relates to — select the relevant branch if your account uses more than one. The date is the date the order is being raised. The PO number will be assigned automatically when you save, so leave it as generated.
+
+The VAT setting is important. You can choose between VAT inclusive and VAT exclusive. The system recommends VAT exclusive, and if any of your technicians will be viewing or using parts on the mobile app, VAT exclusive is the only option the mobile app supports. Set this before adding any line items.
+
+Next, set the delivery defaults if you need them: delivery date, delivery method, and a mark-up percentage if your business applies one. The nominal code field links the order to the correct account in your financial records — select the code that matches the type of goods being ordered. These defaults apply to all line items on the PO, but can be overridden at the individual line level if needed.
+
+---
+
+## Adding parts and items
+
+A purchase order has two separate tables for what you are ordering: parts and items. Understanding the difference matters.
+
+The parts table is for anything that exists in your Commusoft parts inventory. When you order from the parts table, you select the part from a list — the part name, unit, and any existing cost are pulled through automatically. This keeps your inventory records consistent and allows parts to be matched against the right records when the delivery arrives. Add the quantity and confirm the unit cost, then set the VAT rate and nominal code for that line if they differ from the defaults.
+
+The items table is for everything else: one-off materials, consumables, or anything not held in your parts inventory. Add a free-text description in the item field, enter the quantity and unit cost, and set the VAT rate and nominal code. Items do not link to the parts inventory — they are a way of recording what you have ordered without needing a corresponding inventory entry.
+
+You can mix parts and items on the same PO. Order a specific heat pump component from the parts table and a box of consumables as a free-text item in the same order. Totals calculate automatically as you add lines.
+
+*[Knowledge check — 4 options]*
+**Emma needs to order a Vaillant expansion valve — a part already in the SunComfort parts inventory — and a roll of insulation tape that is not in the inventory. How should she add these to the purchase order?**
+
+A) Both should go in the items table, described in free text, to keep things simple
+B) The expansion valve in the parts table, selected from inventory; the insulation tape in the items table as a free-text entry
+C) The expansion valve in the items table and the insulation tape in the parts table
+D) Both should go in the parts table — all order lines should link to the inventory
+
+*Correct (B):* Right. The parts table is for inventory items, selected from the list. The items table is for free-text entries that do not have an inventory record. Using the correct table for each keeps your inventory records accurate and makes deliveries easier to check.
+*Incorrect:* The parts table is used for items that exist in the inventory — selected from the list. The items table is for anything not in the inventory, entered as free text. Emma should add the expansion valve in the parts table and the insulation tape as an item.
+
+---
+
+## Adding a supplier note and saving
+
+Before you save, check the Advanced options section. This is where you can add a supplier note — any instruction you want to send to the supplier alongside the order. A note might be: "Please call before delivery" or "Deliver to the rear entrance." This note appears on the printed or emailed PO document.
+
+When you are satisfied the order is complete, save the purchase order. The PO number is assigned at this point. From the saved PO, you have two options for sending it to the supplier: email the PO directly from Commusoft using the action button on the PO record, or print it and send it by post or another method. Emailing directly is the faster route and keeps a record in the system that the PO was sent.
+
+A brief note on scope: this course covers raising a PO directly from a supplier record. POs can also be linked to a specific job when parts are requested through a job — for example, when a technician requests a part from the field. That workflow is covered in a later course.
+
+---
+
+## Summary
+
+To raise a purchase order, navigate to the supplier record and select Add new purchase order. Complete the branch, date, VAT setting, delivery details, and nominal code. Add parts from your inventory using the parts table, and add non-inventory items as free text using the items table. Use Advanced options to add any supplier instructions. Save the PO — the PO number is generated automatically — then email or print it to send to the supplier.
+
+---
+
+**Section count:** 5 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 5 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Emma Clarke (Office Administrator); Danny Walsh (Parts and Stores Manager — referenced in scenario context)
+**Sources used:** Commusoft — Suppliers/vendors and purchase orders (https://help.commusoft.com/en/articles/286840-suppliers-vendors)
+**Pre-submission checklist:** complete
+**Flint revisions:** "Office Staff Path" corrected to "Office staff path" (sentence case).
+
+## Open items
+
+[OPEN — **Needs human input.** The HC article confirms the PO number is auto-generated upon saving but does not specify whether the branch field is mandatory, optional, or visible only on multi-branch account configurations. Script treats it as a standard field. Sara to confirm: is the branch field visible to all customers, or only to those with multi-branch setups? If the latter, a conditional note may be needed.]
+
+[OPEN — **Needs human input.** The HC article confirms that mark-up percentage exists as a defaults section field. It does not specify whether this field is visible to all accounts or gated by plan or configuration. Sara to confirm visibility — if it is gated, a conditional note or removal from the script may be appropriate.]
+
+[OPEN — **Needs human input.** The forward-link to the PO-from-job workflow course is written as a general forward reference ("a later course"). Sara to confirm the correct series and course slot for that content so a specific reference can be added when it is written.]
+`;
+
+INBOX_FILES["reed-script-l1-s9-c2"] = `# Reed — Script: Accept a delivery
+
+**Layer:** 1 — Office staff path
+**Series:** 9 of 9 — Suppliers and purchasing
+**Course:** 2 of 2
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-05-02
+
+---
+
+**Learning objectives**
+1. Locate a purchase order on a supplier record and review what was ordered
+2. Check the delivered items against the purchase order and confirm the order is correct
+3. Mark a purchase order as complete once delivery is confirmed
+4. Identify what to do if a delivery is incomplete or the order is no longer needed
+
+**Target persona:** Office staff
+
+**SunComfort characters:** Emma Clarke (Office Administrator), Danny Walsh (Parts and Stores Manager)
+
+**Scenario:** A delivery has arrived at SunComfort from a supplier. Danny checks the items against the purchase order, confirms everything is present, and Emma marks the PO as complete in Commusoft. When a second delivery arrives short, they know not to mark it complete yet.
+
+**Estimated length:** 4 minutes
+
+**Target audience:** Office staff at field service businesses using Commusoft — administrators and coordinators responsible for checking deliveries and managing purchase order records. Assumes Series 9 Course 1 (Raise a purchase order) complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Series 9 Course 1 (Raise a purchase order) complete.
+
+**Main objective beyond learning objectives:** The purchase order is only useful if it is closed accurately. Marking a PO as complete when the delivery is confirmed gives the business a clear, traceable record that the order was fulfilled. Leaving a PO open when the order is done, or closing it before everything has arrived, creates confusion about what is still outstanding. The habit of checking the delivery against the PO before marking it complete is the simplest control a business can apply to its purchasing process.
+
+---
+
+## Production setup
+
+1. **Logged-in user:** Emma Clarke, Office Administrator, Office staff.
+2. **Customer record:** Not applicable — this course works from the supplier record.
+3. **Existing data:** A purchase order must exist on a supplier record in a sent or open state (not yet completed or rejected). The PO should have at least two line items — one part and one item — with quantities that can be checked against a delivery. A second PO with a partial delivery scenario is useful for the incomplete delivery section.
+4. **Assets required:** None.
+
+---
+
+## Introduction
+
+You have raised a purchase order and sent it to the supplier. Now the delivery has arrived. The next step is straightforward: check what was delivered against what you ordered, and if everything is correct, mark the PO as complete. This course covers how to do that in Commusoft — and what to do when a delivery does not match the order.
+
+---
+
+## Finding the purchase order
+
+When a delivery arrives, go to the supplier record in Commusoft and open the purchase orders list. Find the PO that relates to this delivery. Purchase orders are listed on the supplier record, so if you know which supplier sent the delivery, you can navigate straight there. Open the PO to see the full details: the line items, quantities, unit costs, and any notes that were included when the order was raised.
+
+This is your reference document for the delivery check. Before you touch anything in the system, run through the PO and confirm what was supposed to arrive.
+
+---
+
+## Checking the delivery
+
+With the PO open, work through each line. For every part or item on the order, confirm that the correct quantity has arrived and that the goods match what was ordered. Check the part or item description, the quantity, and the condition. If everything on the PO is present and correct, you are ready to mark it complete.
+
+A note on language: in this workflow, you are simply checking what arrived against what was ordered. This is not a stock management process — it is a delivery check. Whether your business uses stock locations or inventory tracking is a separate subject. The action here is confirming the delivery against the PO.
+
+*[Reflection prompt — Yes/No]*
+**Does your business have a physical check process for deliveries — for example, a delivery note or a sign-off from the person who receives the goods?**
+
+*Yes:* That physical check and the Commusoft PO completion work together. Once the physical delivery is confirmed against the delivery note, marking the PO complete in Commusoft is the system record of that confirmation. Both steps matter.
+*No:* The PO in Commusoft can serve as your check document. Work through each line on the PO when the delivery arrives and confirm the quantities before marking it complete. It only takes a moment and keeps your records accurate.
+
+---
+
+## Marking the purchase order complete
+
+When the delivery is confirmed correct, mark the PO as complete. Select the Complete purchase order option on the PO record. This closes the order, records that the delivery has been received, and updates the PO status so the team can see at a glance that this order is fulfilled.
+
+If the PO was linked to a job — for example, because a technician requested parts through a job — marking the PO complete means those parts are now available for the technician to use on that job. The data chain between the PO and the job record makes this visible to the office team and the technician without any additional steps.
+
+*[Knowledge check — 4 options]*
+**Emma opens a purchase order and confirms that all items have arrived correctly. What should she do next?**
+
+A) Delete the PO — it is no longer needed once the delivery has arrived
+B) Leave the PO open — it closes automatically when the supplier sends an invoice
+C) Mark the PO as complete to record that the delivery has been received and the order is fulfilled
+D) Move the PO to a separate completed folder outside Commusoft
+
+*Correct (C):* Right. Marking the PO as complete is the correct action once the delivery is confirmed. It closes the order, records the fulfilment, and makes the status visible to the whole team.
+*Incorrect:* The correct action is to mark the PO as complete. This closes the order and records that the delivery has been received. POs do not close automatically, and deleting a PO removes the order history — which is not what you want.
+
+---
+
+## When the delivery is incomplete or the order is not proceeding
+
+Deliveries do not always match the order. If only part of the order has arrived, do not mark the PO as complete yet. Leave it open so the team can see that items are still outstanding. Make a note on the PO if that is helpful — for example, noting which items arrived and which are still expected. When the remaining items arrive and the order is fully fulfilled, then mark it complete.
+
+If the order is no longer going ahead — the job was cancelled, the parts are no longer needed, or the supplier cannot fulfil the order — do not delete the PO. Select the Reject option instead. Rejecting a PO preserves the record without marking it as completed. The order history stays intact, which matters for accounting and audit purposes.
+
+---
+
+## Summary
+
+When a delivery arrives, go to the supplier record, open the relevant purchase order, and check each line against what was delivered. If everything is correct, mark the PO as complete. If only part of the order has arrived, leave the PO open until the rest is received. If the order is no longer proceeding, reject the PO rather than deleting it. Keeping the PO status accurate means the team always knows what is outstanding and what has been fulfilled.
+
+---
+
+**Section count:** 5 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 4 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Emma Clarke (Office Administrator); Danny Walsh (Parts and Stores Manager)
+**Sources used:** Commusoft — Suppliers/vendors and purchase orders (https://help.commusoft.com/en/articles/286840-suppliers-vendors)
+**Pre-submission checklist:** complete
+**Flint revisions:** "Office Staff Path" corrected to "Office staff path" (sentence case).
+
+## Open items
+
+[OPEN — **Needs human input.** The HC article confirms that "Complete: Raises an associated invoice." The course deliberately omits the invoice workflow. Sara to confirm: (1) is the invoice creation automatic on all accounts upon PO completion, or does it require a separate action? (2) Should this be mentioned briefly in the course (e.g. "Completing a PO will also raise a supplier invoice — this is covered in a later course") or left entirely to future content?]
+
+[OPEN — **Needs human input.** The script states that marking a PO complete makes parts available for a technician on a linked job. The HC article does not detail the exact system behaviour from the technician's perspective. Sara or the product team to confirm: does the technician see a status change on their job when the linked PO is completed, or is this visibility limited to the office view of the job record?]
+`;
+
+INBOX_FILES["reed-script-l1-s9-challenge"] = `# Reed — Script: Series challenge — Parts ordered, delivered, installed
+
+**Layer:** 1 — Office staff path
+**Series:** 9 of 9 — Suppliers and purchasing
+**Course:** Series challenge
+**Format:** Synthesia micro-course — Clint and Sarah dialogue
+**Presenter:** Clint (instructional); Sarah (dialogue partner)
+**Date:** 2026-05-02
+
+---
+
+**Learning objectives**
+1. Apply the correct purchase order workflow from raising to completing
+2. Identify the right action when a delivery is incomplete
+3. Confirm what happens to a PO that is no longer needed
+
+**Target persona:** Office staff
+
+**SunComfort characters:** Emma Clarke (Office Administrator), Danny Walsh (Parts and Stores Manager)
+
+**Scenario:** SunComfort has a heat pump repair job on the books. The part needed is not on site and must be ordered from a supplier. Emma raises the purchase order, the delivery arrives with a partial shortfall, and the team must decide how to handle it. Sarah raises the decision points and Clint works through the right answers.
+
+**Estimated length:** 3 minutes
+
+**Target audience:** Office staff at field service businesses using Commusoft who have completed Series 9 Courses 1 and 2. This challenge tests the purchasing workflow against a realistic scenario. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Series 9 Courses 1 and 2 complete.
+
+**Main objective beyond learning objectives:** The purchasing workflow is only effective when each step is completed accurately and in order. A PO raised with the wrong fields, marked complete before the full delivery arrives, or deleted rather than rejected leaves gaps in the record that are difficult to trace later. This challenge confirms that learners can make the right decision at each stage of the workflow — not just follow a set of steps.
+
+---
+
+## Production setup
+
+1. **Logged-in user:** None — narration-only course, no screen recording required.
+2. **Customer record:** None.
+3. **Existing data:** None.
+4. **Assets required:** None.
+
+---
+
+## Challenge opening
+
+*[Clint — 30 seconds]*
+
+SunComfort has a heat pump repair booked for a customer in Redhill. The technician has confirmed which part is needed, but it is not in the office. Danny has checked and the part needs to be ordered. Emma is about to raise a purchase order. Sarah has the questions.
+
+---
+
+## Dialogue: The decisions
+
+*[Sarah — 15 seconds]*
+
+Emma is in the supplier record and about to fill in the PO. The supplier is auto-filled. She is not sure whether to select VAT inclusive or VAT exclusive. Does it matter which one she picks?
+
+*[Clint — 20 seconds]*
+
+It does. VAT exclusive is the safer choice for most businesses, and it is the only option the mobile app supports for parts. If any of the technicians will view or use parts information on their mobile, selecting VAT exclusive now avoids a mismatch later. The setting needs to be correct before any line items are added.
+
+*[Sarah — 15 seconds]*
+
+The part is in the SunComfort parts inventory. Emma also wants to add a few cable ties — not in the inventory — to the same order. How should she add both?
+
+*[Clint — 20 seconds]*
+
+The heat pump part goes in the parts table, selected from the inventory list. The cable ties go in the items table as a free-text entry. Parts table for inventory items, items table for everything else. Both can sit on the same purchase order, and the totals calculate automatically.
+
+*[Sarah — 15 seconds]*
+
+Emma saves the PO, the number is generated, and she emails it to the supplier from Commusoft. Two days later, the delivery arrives. Danny checks it and finds the heat pump part is there but the cable ties have not been included. What should Emma do?
+
+*[Clint — 25 seconds]*
+
+Do not mark the PO as complete. The delivery is incomplete — part of the order is still outstanding. Leave the PO open so the team can see that items are still expected. Emma can add a note to the PO to record which items arrived and which are still due. When the cable ties arrive and the order is fully fulfilled, that is the point to mark the PO complete.
+
+*[Sarah — 15 seconds]*
+
+A week later, the repair job is cancelled. The cable ties are no longer needed. Should Emma delete the purchase order or do something else?
+
+*[Clint — 20 seconds]*
+
+Reject it, not delete it. Rejecting the PO closes the order and preserves the record. Deleting it removes the order history entirely, which matters for accounting and audit purposes. The Reject option is there precisely for this situation — when an order is no longer proceeding.
+
+---
+
+## Knowledge check
+
+*[Knowledge check — 4 options]*
+**Emma has confirmed that a delivery has arrived in full and everything on the purchase order is correct. What is the right next step in Commusoft?**
+
+A) Leave the PO open — it will close automatically once the supplier invoice is received
+B) Delete the PO to keep the supplier record tidy
+C) Mark the PO as complete to record that the delivery has been received and the order is fulfilled
+D) Reject the PO to confirm the delivery has been accepted
+
+*Correct (C):* Right. Marking the PO as complete is the correct action when a delivery has been confirmed in full. It closes the order, records the fulfilment, and makes the status visible to the whole team.
+*Incorrect:* The correct action is to mark the PO as complete. POs do not close automatically, and neither deleting nor rejecting is the right action here. Reject is for orders that are no longer proceeding. Complete is for orders that have been fulfilled.
+
+---
+
+## Series close
+
+*[Clint — 30 seconds]*
+
+VAT setting checked before adding line items. Parts from the inventory in the parts table, free-text entries in the items table. PO left open when a delivery is partial. Rejected rather than deleted when an order is no longer needed. The purchasing workflow is simple when each step is done in the right order. Series 9 complete.
+
+---
+
+**Section count:** Challenge opening, 5 dialogue exchanges, 1 knowledge check, series close
+**Estimated length:** 3 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout where addressing learner; SunComfort characters referenced in scenario
+**First person (I/my):** not used
+**Characters from approved roster:** Clint (presenter); Sarah (dialogue partner); Emma Clarke (Office Administrator); Danny Walsh (Parts and Stores Manager)
+**Sources used:** Commusoft — Suppliers/vendors and purchase orders (https://help.commusoft.com/en/articles/286840-suppliers-vendors)
+**Pre-submission checklist:** complete
+**Flint revisions:** "Office Staff Path" corrected to "Office staff path" (sentence case).
+
+## Open items
+
+[OPEN — This challenge covers the PO workflow from Course 1 and Course 2 only. If a future course covers POs linked to jobs (raised through the job when a technician requests a part), this challenge should be reviewed and potentially updated to include a scenario point covering that workflow.]
+`;
+
+INBOX_FILES["reed-script-l1-s6-c3"] = `# Reed — Script: Manage incoming emails with Connect
+
+**Layer:** 1 — Office staff path
+**Series:** 6 of 9 — Customer communications
+**Course:** 3 of 3
+**Format:** Synthesia micro-course
+**Presenter:** Clint
+**Date:** 2026-05-02
+
+---
+
+**Learning objectives**
+1. Explain what the Connect email import feature does and why it matters for customer communications
+2. Identify which email connection types support incoming email import and which do not
+3. Describe how to enable email importing when setting up or editing a Google or Office 365 connection
+4. Explain how imported emails appear on the customer communications timeline
+
+**Target persona:** Office staff
+
+**SunComfort characters:** Emma Clarke (Office Administrator), Sophie Bennett (Scheduler / Customer Service Advisor)
+
+**Scenario:** SunComfort has connected its email to Commusoft. Emma notices that customer replies to job confirmations and invoice emails are landing in her personal inbox — not in Commusoft. She learns about the email import feature and how to enable it so that customer replies appear on the communications timeline where the whole team can see them.
+
+**Estimated length:** 4 minutes
+
+**Target audience:** Office staff at field service businesses using Commusoft — administrators and coordinators who send and receive customer communications. Assumes Series 6 Courses 1 and 2 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Series 6 Courses 1 and 2 (Send a communication from a template; Use the invoice portal) complete. Series 6 Course 3 builds on the assumption that the business has already connected an email address to Commusoft. The full email connection setup process is a settings-level task covered separately.
+
+**Main objective beyond learning objectives:** When a customer replies to an invoice email or a job confirmation, that reply contains useful information — a question, a change of plan, a complaint, or a payment query. If that reply lands in a personal inbox and never reaches Commusoft, it is invisible to the rest of the team. The email import feature closes that gap. A business that has it enabled creates a communications record that any team member can read and act on, without switching between Commusoft and their email client.
+
+---
+
+## Production setup
+
+1. **Logged-in user:** Emma Clarke, Office Administrator, Office staff.
+2. **Customer record:** Any existing active customer record with a communications timeline — for example, Mrs. Margaret Thompson (42 Oakwood Drive, Sevenoaks, Kent).
+3. **Existing data:** A Google Workspace or Office 365 email connection should exist in the system, either already configured with email import enabled, or set up during the course demonstration. The communications timeline for the selected customer should show at least one outgoing email (for example, a job confirmation or invoice email) so that an incoming reply can be shown appearing on the same timeline.
+4. **Assets required:** None.
+
+---
+
+## Introduction
+
+In the previous courses in this series, you learned how to send communications from within Commusoft and how to use the invoice portal. But customer communication is two-way. When a customer replies to an invoice email or a job confirmation, where does that reply go? By default, it goes to whoever's email inbox the message was sent from. It does not appear in Commusoft. The Connect email import feature changes that — and this course shows you how it works.
+
+---
+
+## What the Connect feature does
+
+When a customer receives an email sent through Commusoft — a job confirmation, an invoice, a service reminder — and they reply to it, that reply normally lands in an email inbox. If the email was sent from a connected email address that has import enabled, Commusoft can pull that reply in and display it on the customer's communications timeline.
+
+This means the whole team can see the reply without anyone needing to forward it or copy it in manually. Sophie in customer services can see the reply Emma received. Emma can see the reply Sophie received. No one needs to switch between Commusoft and their email client to stay up to date. The communications timeline becomes the single place where the conversation lives.
+
+*[Reflection prompt — Yes/No]*
+**Does your business currently have a way for the whole team to see customer email replies — or do replies land in individual inboxes?**
+
+*Yes:* The Connect email import feature formalises this within Commusoft. Instead of relying on individuals to share or forward replies, incoming emails appear automatically on the customer's communications timeline and are visible to the whole team.
+*No:* This is the gap the import feature is designed to close. Once it is enabled, customer replies to Commusoft emails appear on the timeline without any manual action. The team sees the reply as soon as it arrives.
+
+---
+
+## Which connection types support incoming email
+
+Not every email connection type in Commusoft supports incoming email. This is the most important thing to know before you try to enable it.
+
+Two connection types support incoming email import: Google Workspace accounts and Office 365 accounts. If your business has connected a Google Workspace address or an Office 365 address, you can enable email importing for that connection.
+
+Two connection types do not support incoming email: SMTP connections and domain connections. These are outbound only — they control how outgoing emails are sent, but they cannot pull replies back into Commusoft. Personal Gmail accounts — the free accounts ending in @gmail.com — also do not support the import feature. This is a Google Workspace limitation, not a Commusoft one.
+
+If your business is currently using an SMTP or domain connection, the email import feature is not available with that setup. Switching to a Google Workspace or Office 365 connection is required to use it.
+
+*[Knowledge check — 4 options]*
+**SunComfort uses a personal @gmail.com address connected via SMTP to send emails from Commusoft. Emma wants to enable email importing so customer replies appear on the timeline. Can she do this with the current setup?**
+
+A) Yes — all connected email addresses support incoming email import
+B) Yes — she just needs to enable the import option in the email settings
+C) No — SMTP connections and personal Gmail accounts do not support incoming email import
+D) No — email import is only available on the mobile app, not the web
+
+*Correct (C):* Right. SMTP connections and personal @gmail.com accounts are outbound only. To use the email import feature, SunComfort would need to connect a Google Workspace account or an Office 365 account. A personal Gmail address cannot be used for incoming import regardless of settings.
+*Incorrect:* SMTP connections and personal Gmail accounts are outbound only — they do not support incoming email import. The import feature is only available for Google Workspace and Office 365 connections. Emma would need to switch to one of those connection types to enable it.
+
+---
+
+## Enabling email importing
+
+If your business is using a Google Workspace or Office 365 connection, enabling email importing is done at the point of setting up the connection, or by editing an existing connection.
+
+For a Google connection: in the email setup panel, the receiving email section includes a step to connect to Google a second time — a separate authentication that grants Commusoft permission to read incoming emails. This is distinct from the outbound sending authentication. Complete this second authentication to enable import.
+
+For an Office 365 connection: in the email setup panel, the receiving email section asks you to choose yes or no on whether you want to import emails. Select yes, then complete the Microsoft authentication flow. The import is enabled as part of that save.
+
+One important caution that applies to both connection types: before enabling email import, make sure the email address you are connecting is not already saved as a contact address on any customer record in Commusoft. If it is, Commusoft will import all emails sent to that address — including any that are not customer-related — and this cannot be reversed. Check this before enabling the feature.
+
+The setup of email connections is an administrator task. If you are an office staff member and your business's email is already connected, your administrator may need to edit the connection to enable import. Raise it with whoever manages your Commusoft settings.
+
+---
+
+## How imported emails appear
+
+Once email importing is enabled, customer replies appear on the communications timeline of the relevant customer record. Commusoft matches the incoming email to a customer by looking for the sender's email address on customer records. When a match is found, the email is added to that customer's timeline automatically.
+
+The reply appears on the timeline alongside the original outgoing email, so the conversation thread is visible in one place. Any team member with access to the customer record can see it. No one needs to be copied in, and no one needs to forward the message.
+
+If Commusoft cannot match the sender's email address to a customer record, the email is not imported. This is why keeping customer contact details accurate in Commusoft matters — the import relies on the email address in the customer record matching the address the customer replies from.
+
+---
+
+## Summary
+
+The Connect email import feature allows customer replies to Commusoft emails to appear automatically on the customer's communications timeline. It is available for Google Workspace and Office 365 connections only. SMTP connections, domain connections, and personal Gmail accounts are outbound only and do not support incoming email. To enable it, complete the receiving email authentication step in the email setup panel. Once enabled, incoming replies are matched to customer records by email address and displayed on the timeline for the whole team to see.
+
+---
+
+**Section count:** 5 sections plus 1 reflection prompt and 1 knowledge check
+**Estimated length:** 4 minutes
+**Em dashes:** none
+**Line breaks within sections:** none
+**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
+**First person (I/my):** not used
+**Characters from approved roster:** Emma Clarke (Office Administrator); Sophie Bennett (Scheduler / Customer Service Advisor)
+**Sources used:** Commusoft — Connecting your email overview (https://help.commusoft.com/en/articles/217267-connecting-your-email-overview); Connecting your Google email (https://help.commusoft.com/en/articles/626026-connecting-your-google-email); Connecting your Office 365 email (https://help.commusoft.com/en/articles/626117-connecting-your-office365-email)
+**Pre-submission checklist:** complete
+**Flint revisions:** "Office Staff Path" corrected to "Office staff path" (sentence case).
+
+## Open items
+
+[OPEN — **Needs human input.** HC articles confirm email import is available on All-in-One / Go Paperless and above. The course does not name plans, which is consistent with Academy convention. Sara to confirm: should a plan-level caveat be added (e.g. in the introduction or a closing note), or is this left to sales/onboarding materials?]
+
+[OPEN — **Needs human input.** HC article for Google import warns not to save the email address as a contact on any customer record before enabling import, as this is irreversible. The warning is included in the script. The course uses the phrase "saved as a contact address on any customer record." HC for Google uses "saved as a contact within any customer record"; HC for Office 365 uses "linked to any customer." Sara or the product team to confirm the exact system label/terminology so the phrasing can be aligned precisely.]
+
+[OPEN — **Action for Fern.** The Series 6 challenge (Message sent and portal live) was scoped to Courses 1 and 2, with a standing note to update it once Course 3 was written. Course 3 is now complete. Fern to commission a challenge update adding a Connect-related dialogue exchange.]
+`;
+
 function openInboxFile(key) {
   var content = INBOX_FILES[key];
   if (!content) { content = 'Content not found.'; }
@@ -12646,7 +13155,11 @@ function openInboxFile(key) {
     'reed-script-l1-s5-challenge': { num: 'Reed — Script', title: 'L1 Office Staff Series 5 — Challenge: Invoice raised, paid, and synced' },
     'reed-script-l1-s6-c1': { num: 'Reed — Script', title: 'L1 Office Staff Series 6 — Course 1: Send a communication from a template' },
     'reed-script-l1-s6-c2': { num: 'Reed — Script', title: 'L1 Office Staff Series 6 — Course 2: Use the invoice portal' },
+    'reed-script-l1-s6-c3': { num: 'Reed — Script', title: 'L1 Office staff S6 C3 — Manage incoming emails with Connect' },
     'reed-script-l1-s6-challenge': { num: 'Reed — Script', title: 'L1 Office Staff Series 6 — Challenge: Message sent and portal live' },
+    'reed-script-l1-s9-c1': { num: 'Reed — Script', title: 'L1 Office staff S9 C1 — Raise a purchase order' },
+    'reed-script-l1-s9-c2': { num: 'Reed — Script', title: 'L1 Office staff S9 C2 — Accept a delivery' },
+    'reed-script-l1-s9-challenge': { num: 'Reed — Script', title: 'L1 Office staff S9 Challenge — Parts ordered, delivered, installed' },
     'reed-script-l1-s7-c1': { num: 'Reed — Script', title: 'L1 Office Staff Series 7 — Course 1: From the old way to proposals — getting started' },
     'reed-script-l1-s7-c2': { num: 'Reed — Script', title: 'L1 Office Staff Series 7 — Course 2: Build and send your first proposal' },
     'reed-script-l1-s7-challenge': { num: 'Reed — Script', title: 'L1 Office Staff Series 7 — Challenge: First proposal sent and accepted' },

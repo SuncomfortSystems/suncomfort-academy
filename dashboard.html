@@ -461,9 +461,9 @@
     <div id="view-academy" class="view active">
       <div class="page-heading"><h1>Academy</h1><p>Course scripts organised by series</p></div>
       <div class="stats-row">
-        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">20</div><div class="stat-label">Series</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">96</div><div class="stat-label">Courses</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">382</div><div class="stat-label">Total Minutes</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">21</div><div class="stat-label">Series</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">100</div><div class="stat-label">Courses</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">398</div><div class="stat-label">Total Minutes</div></div>
         <div class="stat-card"><div class="stat-value" style="color:var(--blue2)">9</div><div class="stat-label">Characters</div></div>
       </div>
       <div id="layer-0" class="section-heading" style="margin-top:24px">Layer 0 — Universal</div>
@@ -731,7 +731,7 @@
         </div>
       </div>
       <div id="l2-s2" class="series-block">
-        <div class="series-header" style="background:var(--orange)">
+        <div class="series-header" style="background:#7b1fa2">
           <div><h2>Layer 2 — Series 2</h2><div class="series-meta">Configuring jobs and scheduling — job types, pipelines, diary settings, on-site tasks, workflows, and booking portals</div></div>
           <div class="series-count">8 courses + challenge</div>
         </div>
@@ -745,6 +745,18 @@
           <div class="course-card" onclick="openInboxFile('reed-script-l2-s2-c7')"><div class="course-num">Course 7</div><div class="course-title">Configure the job booking portal</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l2-s2-c8')"><div class="course-num">Course 8</div><div class="course-title">Configure the rebooking portal</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l2-s2-challenge')"><div class="course-num">Challenge</div><div class="course-title">Jobs and scheduling configured</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+        </div>
+      </div>
+      <div id="l2-s3" class="series-block">
+        <div class="series-header" style="background:#880e4f">
+          <div><h2>Layer 2 — Series 3</h2><div class="series-meta">Assets and service reminders — asset groups, types, fields, service reminder templates, and the service reminder portal</div></div>
+          <div class="series-count">3 courses + challenge</div>
+        </div>
+        <div class="course-grid">
+          <div class="course-card" onclick="openInboxFile('reed-script-l2-s3-c1')"><div class="course-num">Course 1</div><div class="course-title">Configure asset groups, types, and fields</div><div class="course-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l2-s3-c2')"><div class="course-num">Course 2</div><div class="course-title">Set up service reminders</div><div class="course-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l2-s3-c3')"><div class="course-num">Course 3</div><div class="course-title">Configure the service reminder portal</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l2-s3-challenge')"><div class="course-num">Challenge</div><div class="course-title">Assets tracked, reminders active</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
     </div>
@@ -12612,6 +12624,351 @@ SunComfort's job and scheduling configuration is complete. Job description templ
 
 None.
 `;
+INBOX_FILES["reed-script-l2-s3-c1"] = `# Configure asset groups, types, and fields
+
+**Series:** Assets and service reminders | **Course:** 1 of 3 | **Duration:** 5 min | **Audience:** Decision makers / administrators
+
+---
+
+**Learning objectives**
+
+1. Create asset groups and asset types to match the equipment your business installs and services
+2. Configure dynamic fields and understand standard asset fields
+
+**Target audience:** Business owners, managing directors, or administrators at small to mid-size field service companies setting up or auditing their Commusoft account. SunComfort Systems is the pedagogical vehicle. The learner is configuring their own company's Commusoft account.
+
+**Assumed starting point:** Layer 2 Series 2 complete. Owner/Manager access to Commusoft settings.
+
+**Main objective beyond the learning objectives:** Every piece of equipment your engineers visit needs to be identifiable in Commusoft — by type, by make, by location at the property, and by service history. Getting the asset structure right before any equipment is recorded means every engineer, every office team member, and every report works from the same consistent taxonomy. Retrofitting this structure after thousands of asset records exist is a significant undertaking. Setting it up once, correctly, costs almost nothing.
+
+---
+
+**Characters:** Sarah Mitchell (Managing Director, Owner/Manager)
+
+**Scenario:** Sarah builds SunComfort's asset structure in Commusoft so that every piece of equipment the team installs or services can be tracked against the correct customer record.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Sarah Mitchell — Managing Director — Owner/Manager
+- **Customer record:** None required
+- **Existing data:** No asset groups or asset types yet configured.
+- **Assets required:** None
+
+---
+
+## What assets are in Commusoft
+
+An asset in Commusoft is a piece of equipment installed or serviced at a customer's property. When an engineer visits, they can view that asset's full history, update its details, scan it, and record any work against it. Assets are organised using a two-tier structure: an asset group is the broad category, and an asset type is the specific piece of equipment within that category. SunComfort installs and services solar PV systems, heat pumps, battery storage units, EV charge points, and standby generators, so each of those becomes an asset group with specific types underneath it.
+
+## Creating asset groups
+
+Go to Settings, then Assets, then Asset groups to create your groups. Enter the group name and save it, then select Configure assets to set up the dynamic form that defines which fields appear when an engineer adds or updates an asset of that group. Sarah creates the Solar PV group and configures the form to include the fields her engineers need on site: installation date, installer name, system size, and an indication of whether SunComfort carried out the installation. She repeats this process to create groups for Heat Pumps, Battery Storage, EV Charging, and Power Generation.
+
+## Creating asset types
+
+Asset types sit beneath asset groups and identify the specific equipment. Go to Settings, then Assets, then Asset types, select the parent group, and add the type name. Sarah opens the Solar PV group and adds String Inverter and Solar Panel Array as distinct asset types. Each type can carry its own additional fields on top of the group-level fields, and Sarah works through each of the five groups adding the types that reflect the actual equipment SunComfort installs and services.
+
+## Dynamic fields
+
+Dynamic fields are the dropdown lists that appear when an engineer adds an asset: make, model, fuel type, and location. You configure the available options for each field so that engineers select from a consistent list rather than typing freehand text. Sarah adds the inverter makes SunComfort works with to the make dropdown for the String Inverter type, which means every inverter record in the system will carry a standardised manufacturer name that the reporting and service reminder systems can act on reliably.
+
+---
+
+**Reflection**
+
+Sarah creates a Solar Panel Array asset type under the Solar PV group. She then creates a String Inverter asset type under the same group. Will both types share the fields Sarah configured at the Solar PV group level?
+
+- Yes ✓
+- No
+
+*Feedback: Yes. Fields configured at the group level apply to all asset types within that group. You can then add type-specific fields on top of those for any type that needs additional detail.*
+
+---
+
+## Standard asset fields
+
+Standard asset fields are a set of pre-configured fields that Commusoft applies to all new assets across your account. They include fields such as whether SunComfort installed the equipment and whether SunComfort commissioned it. Standard asset fields are available on the Customer Journey plan and above, and they can be customised using the drag-and-drop form builder in the same way as dynamic fields. For assets not installed by SunComfort, such as a solar system fitted by another contractor, the installer name field lets the team record the original installer, which is useful context for any diagnostic or service visit.
+
+## Summary
+
+SunComfort's asset structure is now built: five groups, each with the relevant equipment types underneath, and dynamic fields ensuring consistent data entry across every engineer and every property visit. In the next course, you will set up service reminder types, which are the templates that trigger automated reminders to your customers when a service is due.
+
+---
+
+**Open items**
+
+None — all content verified against HC article 216928. Plan restriction (Standard Asset Fields: Customer Journey and above) noted in course body.
+`;
+INBOX_FILES["reed-script-l2-s3-c2"] = `# Set up service reminders
+
+**Series:** Assets and service reminders | **Course:** 2 of 3 | **Duration:** 5 min | **Audience:** Decision makers / administrators
+
+---
+
+**Learning objectives**
+
+1. Create a service reminder type with the correct service period, send method, and communication templates
+2. Configure single-property and multi-property message formats and automatic job creation
+
+**Target audience:** Business owners, managing directors, or administrators at small to mid-size field service companies setting up or auditing their Commusoft account. SunComfort Systems is the pedagogical vehicle. The learner is configuring their own company's Commusoft account.
+
+**Assumed starting point:** Course 1 of this series complete. Owner/Manager access to Commusoft settings.
+
+**Main objective beyond the learning objectives:** Service reminders are the infrastructure that turns a one-off installation into a recurring revenue relationship. Once a reminder type is configured, every customer assigned that reminder will receive a notification on the correct schedule without anyone in the office manually tracking it. Getting the templates right before customers are assigned means the first reminder that goes out is professional, accurate, and contains the correct booking link.
+
+---
+
+**Characters:** Sarah Mitchell (Managing Director, Owner/Manager)
+
+**Scenario:** Sarah configures SunComfort's service reminder types so that solar PV, heat pump, generator, and battery customers all receive timely, automated reminders when their next service is due.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Sarah Mitchell — Managing Director — Owner/Manager
+- **Customer record:** None required
+- **Existing data:** No service reminder types yet configured.
+- **Assets required:** None
+
+---
+
+## What service reminders do
+
+Service reminders notify customers when a service is due and, if the service reminder portal is configured, give them a link to book and pay for it directly. The settings screen is where you build the reminder types that power this process. Each reminder type defines the name, how often the service recurs, whether the system sends the notification automatically or a staff member triggers it manually, and the email and SMS content the customer receives. You are building the template layer here; assigning reminders to individual customer records is handled by your office team day to day.
+
+## Creating a service reminder type
+
+Go to Settings, then Customers, then Service reminders. The creation form is on the left side of the screen; the list of existing reminder types builds on the right as you save each one. Sarah starts with the Solar PV Annual Service reminder: she enters the name, sets the service period to Yearly, and sets the send method to Automatic so the reminder fires without any manual trigger from the office team. She then selects the job description template to link, which tells Commusoft to create a solar service job automatically when the reminder is due.
+
+## Single-property communication template
+
+Each reminder type has two separate message templates. The single-property template is the email or SMS sent to a customer with one property. Sarah writes the Solar PV Annual Service email, using dynamic tags to pull in the customer name, the property address, and the booking portal link. For single-property customers, you set a lead time of one to eight weeks before the service is due; Sarah sets six weeks so customers have enough time to book a convenient slot before the service date passes.
+
+## Multi-property communication template
+
+The multi-property template handles customers, such as landlords, who have more than one work address on their record. Instead of sending a separate reminder for each property, Commusoft consolidates all due properties into a single monthly message. You set the send day to a date between the first and twenty-eighth of the month; Sarah chooses the first so agents and landlords receive a summary of all upcoming services at the start of each month. The booking portal link and SMS are not available in the multi-property format, so these customers are directed to call the office to schedule their services.
+
+---
+
+**Knowledge check**
+
+Sarah configures the Solar PV Annual Service reminder and links the Solar Maintenance and Service job description template to it. A customer's solar service falls due in six weeks. What happens?
+
+- A. The office team receives a task to manually send the reminder
+- B. Commusoft sends the reminder email automatically and creates a solar service job ✓
+- C. The reminder fires but no job is created until the customer confirms
+- D. Nothing happens until the customer books through the portal
+
+*Feedback: Correct. Because the send method is set to Automatic and a job description template is linked, Commusoft sends the customer notification and creates the job in the system without any manual action from the office team.*
+
+---
+
+## Follow-up messages and completing the reminder set
+
+Each service reminder type can include follow-up messages that fire at intervals after the initial notification, for customers who have not yet booked. Sarah adds a follow-up at two weeks after the first reminder and a second at four weeks, both using a slightly more urgent tone in the email body. Once the Solar PV Annual Service reminder is complete, she works through the remaining nine reminder types that SunComfort uses: heat pump annual and bi-annual, generator annual and monthly, battery storage monthly, EV charge point annual, solar and heat pump monthly check, solar generation monthly, and general maintenance annual.
+
+## Summary
+
+SunComfort now has ten service reminder types configured. Every customer assigned one of these reminders will receive the correct notification on schedule, with a direct link to book and pay for the service if the portal is live. In the next course, you will configure the service reminder portal so customers can book their own service appointments directly.
+
+---
+
+**Open items**
+
+None — all content verified against HC articles 216920, 216807.
+`;
+INBOX_FILES["reed-script-l2-s3-c3"] = `# Configure the service reminder portal
+
+**Series:** Assets and service reminders | **Course:** 3 of 3 | **Duration:** 3 min | **Audience:** Decision makers / administrators
+
+---
+
+**Learning objectives**
+
+1. Understand what the service reminder portal does and what must be in place before it goes live
+2. Configure prepayments, contact details, and notifications for the service reminder portal
+
+**Target audience:** Business owners, managing directors, or administrators at small to mid-size field service companies setting up or auditing their Commusoft account. SunComfort Systems is the pedagogical vehicle. The learner is configuring their own company's Commusoft account.
+
+**Assumed starting point:** Course 2 of this series complete. Skills, shift patterns, and service windows configured in Layer 2 Series 2. Service reminder types created in Course 2. Customer Journey plan or above.
+
+**Main objective beyond the learning objectives:** The service reminder portal converts a reminder email into a booked appointment without your office team lifting a finger. When a customer receives their service reminder, they click the link, choose a time slot that fits their schedule, pay upfront if you have enabled prepayment, and the job is created in Commusoft automatically. The only configuration required is a few settings here and one tag added to your service reminder email template.
+
+---
+
+**Characters:** Sarah Mitchell (Managing Director, Owner/Manager)
+
+**Scenario:** Sarah configures the service reminder portal so that SunComfort's residential customers can book and pay for their annual solar and heat pump services directly from the reminder email.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Sarah Mitchell — Managing Director — Owner/Manager
+- **Customer record:** None required
+- **Existing data:** Skills, shift patterns, and service windows configured (Layer 2 Series 2). Service reminder types configured in Course 2. Payment integration (Stripe or GoCardless) connected to the account.
+- **Assets required:** None
+
+---
+
+## What the service reminder portal does
+
+The service reminder portal lets customers book their own service appointments from a link in the reminder email or SMS. They see the available time slots based on your shift patterns and service windows, choose one, and the appointment is created in Commusoft. If prepayment is enabled, they pay by card at the point of booking before the job is confirmed. The service reminder portal is available on the Customer Journey plan and above.
+
+Before the portal can go live, skills and shifts must be assigned to engineers, service windows must be configured, and your job description templates must be set up with the correct invoice rules for prepayment. SunComfort completed all of these in Layer 2 Series 2, so Sarah can go straight to the portal settings. Go to Settings, then Self Service, then Service reminder portal to access the configuration screen.
+
+## Prepayments
+
+Enabling prepayment means customers pay for the service before the appointment is confirmed. Sarah enables this for the Solar PV Annual Service and Heat Pump Annual Service, which are SunComfort's two main residential service types. She sets credit card payment to activate when the service amount is under £300; above this threshold, the customer is directed to call the office. Prepayment requires a Stripe or GoCardless integration to be connected to your Commusoft account before it can be activated here.
+
+## Contact details and notifications
+
+The portal displays a contact support section where customers who need help while booking can reach your team. Sarah enters SunComfort's office phone number and email address, adds a title of "Need help booking?", and sets the available hours to Monday to Friday, 8am to 5pm. Under notifications, she selects Sophie Bennett and Ryan Potter from the scheduling team to receive in-system alerts each time a booking comes through the portal, and sets up an email notification to Sophie so she can review and assign incoming bookings promptly.
+
+---
+
+**Reflection**
+
+The service reminder portal is now configured. Sarah returns to the Solar PV Annual Service reminder type created in Course 2. Is there anything else she needs to do before the portal booking link will appear in the customer's reminder email?
+
+- Yes ✓
+- No
+
+*Feedback: Yes. The booking portal link only appears in the reminder email if the \`[service_reminder_booking_portal_url]\` tag has been added to the email template for that reminder type. Sarah needs to open the Solar PV Annual Service reminder in settings and insert that tag into the email body.*
+
+---
+
+## Summary
+
+The service reminder portal is configured and ready. Residential customers will receive their annual service reminders with a direct booking link, choose their own appointment time, and pay upfront, with your scheduling team notified the moment a booking is confirmed. This completes the Assets and service reminders series. The series challenge that follows will test the decisions made across all three courses.
+
+---
+
+**Open items**
+
+None — all content verified against HC article 217203. Plan restriction (Customer Journey and above) noted in course body.
+`;
+INBOX_FILES["reed-script-l2-s3-challenge"] = `# Assets tracked, reminders active — Series challenge
+
+**Series:** Assets and service reminders | **Course:** Challenge | **Duration:** 3 min | **Audience:** Decision makers / administrators
+
+---
+
+**Learning objectives**
+
+1. Diagnose configuration gaps in the asset and service reminder setup
+2. Apply the correct fix to real-world scenarios drawn from all three courses
+
+**Target audience:** Business owners, managing directors, or administrators at small to mid-size field service companies setting up or auditing their Commusoft account. SunComfort Systems is the pedagogical vehicle. The learner is configuring their own company's Commusoft account.
+
+**Assumed starting point:** All three courses in Layer 2 Series 3 complete.
+
+---
+
+**Characters:** Clint Barker (fictional field service business owner, Commusoft ambassador), Sarah Mitchell (Managing Director, Owner/Manager — on screen in Commusoft)
+
+**Scenario:** Clint presents four real-world scenarios drawn from the series content. The learner diagnoses each problem and selects the correct fix as Sarah.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Sarah Mitchell — Managing Director — Owner/Manager
+- **Customer record:** None required
+- **Existing data:** Full Layer 2 Series 3 configuration complete.
+- **Assets required:** None
+
+---
+
+## Introduction
+
+Clint: "You've built the asset structure, set up the service reminders, and configured the portal. Before you go live, let's make sure you can handle what comes up in the field. I've got four scenarios, and I want you to tell me what's wrong and what to do about it."
+
+---
+
+## Scenario 1
+
+Clint: "A solar company owner I know is on the Go Paperless plan. She wants to use Standard Asset Fields so every new asset record has consistent pre-configured fields across the account. But she can't find the setting anywhere. What's going on?"
+
+**Knowledge check**
+
+What is the most likely reason she cannot access Standard Asset Fields?
+
+- A. Standard Asset Fields are only available for the Appliances module, not Assets
+- B. She needs to upgrade to the Customer Journey plan or above ✓
+- C. Standard Asset Fields require a separate activation request to Commusoft support
+- D. She has not created any asset groups yet
+
+*Feedback: Standard Asset Fields are available on the Customer Journey plan and above. On Go Paperless, you can configure asset groups, asset types, and dynamic fields, but the pre-configured Standard Asset Fields that apply consistently across all new assets require a higher plan.*
+
+---
+
+## Scenario 2
+
+Clint: "One of SunComfort's engineers just installed a new string inverter and recorded it as an asset. Sarah checks the record and the make field shows 'Solar Edge', but the existing records all say 'SolarEdge'. The reports are going to be inconsistent going forward. What is the root cause and how does Sarah fix it?"
+
+**Knowledge check**
+
+What caused the inconsistency and how does Sarah correct it?
+
+- A. The make field has no options configured in the dynamic fields setup, so engineers are typing freehand; Sarah needs to add standardised manufacturer names to the dropdown ✓
+- B. The String Inverter asset type is missing from the Solar PV group; Sarah needs to recreate it with the correct fields
+- C. The group-level form is overriding the type-level make field; Sarah needs to remove the field from the group configuration
+- D. Engineers do not have permission to edit asset fields; Sarah needs to update their role settings
+
+*Feedback: Dynamic fields like make work as dropdowns with options you define. If no options are configured, engineers can type freehand text, leading to inconsistent spellings. Sarah needs to open the String Inverter asset type, find the make dynamic field, and add the standardised manufacturer names so every engineer selects from a controlled list.*
+
+---
+
+## Scenario 3
+
+Clint: "A property management company on SunComfort's books has 14 rental properties. They have been receiving 14 individual service reminder emails every time a service is due, and their office manager is calling SunComfort each month asking which reminder refers to which property. What should have been configured from the start?"
+
+**Knowledge check**
+
+What is the correct configuration for this customer?
+
+- A. A separate service reminder type created specifically for landlords and property agents
+- B. The multi-property communication template, which sends one consolidated monthly summary to customers with more than one work address ✓
+- C. Automatic job creation disabled so the office team can coordinate landlord bookings manually
+- D. The booking portal link included in each individual property email so the agent can self-book each visit
+
+*Feedback: The multi-property template sends one consolidated message on a set day each month, listing all properties with upcoming services. It keeps agents informed without flooding their inbox with individual reminders. Note that the booking portal link is not available in the multi-property format; these customers are directed to call the office to schedule their visits.*
+
+---
+
+## Scenario 4
+
+Clint: "Sarah checks the Solar PV Annual Service reminder type three weeks after configuring the portal. Reminders are going out automatically and prepayments are active, but not a single customer has booked through the portal. She opens a test email and immediately spots what is missing. What did she forget to do?"
+
+**Knowledge check**
+
+What is missing from the reminder email?
+
+- A. The payment integration has not been connected to the service reminder portal settings
+- B. The \`[service_reminder_booking_portal_url]\` tag has not been added to the email template for this reminder type ✓
+- C. The send method for this reminder type is set to Manual rather than Automatic
+- D. The service reminder type is not linked to a job description template
+
+*Feedback: Configuring the portal in Settings is only half the job. The booking link only appears in the customer's reminder email if the \`[service_reminder_booking_portal_url]\` tag has been inserted into the email template for that specific reminder type. Without it, the portal is live but customers have no way to reach it from the email they receive.*
+
+---
+
+## Summary
+
+Clint: "Four problems, four fixes. The asset structure keeps your data consistent. The reminder templates keep your customers informed on schedule. And the portal turns those reminders into booked appointments automatically, as long as the booking link makes it into the email."
+
+Your asset structure is in place and your service reminders are configured for every equipment type SunComfort installs. Residential customers can now book and pay for their next service directly from the reminder email, with your scheduling team notified the moment each appointment is confirmed.
+
+---
+
+**Open items**
+
+None.
+`;
 INBOX_FILES["reed-script-l1-ft-series1"] = `# Reed — Script: Getting started on the app
 
 **Layer:** 1 — Field Team Path
@@ -14584,6 +14941,10 @@ function openInboxFile(key) {
     'reed-script-l2-s2-c7': { num: 'Reed — Script', title: 'L2 Series 2 — Course 7: Configure the job booking portal' },
     'reed-script-l2-s2-c8': { num: 'Reed — Script', title: 'L2 Series 2 — Course 8: Configure the rebooking portal' },
     'reed-script-l2-s2-challenge': { num: 'Reed — Script', title: 'L2 Series 2 — Challenge: Jobs and scheduling configured' },
+    'reed-script-l2-s3-c1': { num: 'Reed — Script', title: 'L2 Series 3 — Course 1: Configure asset groups, types, and fields' },
+    'reed-script-l2-s3-c2': { num: 'Reed — Script', title: 'L2 Series 3 — Course 2: Set up service reminders' },
+    'reed-script-l2-s3-c3': { num: 'Reed — Script', title: 'L2 Series 3 — Course 3: Configure the service reminder portal' },
+    'reed-script-l2-s3-challenge': { num: 'Reed — Script', title: 'L2 Series 3 — Challenge: Assets tracked, reminders active' },
     'ivy-induction': { num: 'Ivy — People', title: 'Enablement Specialist Induction Plan v3' },
     'ivy-jd-academy': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Description' },
     'ivy-jd-advert': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Advert' },

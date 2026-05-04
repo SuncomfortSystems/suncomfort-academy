@@ -15088,6 +15088,7 @@ function showView(name, el) {
   document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
   document.getElementById('view-' + name).classList.add('active');
   if (el) el.classList.add('active');
+  try { localStorage.setItem('dashboardView', name); } catch(e) {}
 }
 
 function scrollToSeries(id) {
@@ -15259,7 +15260,16 @@ function toggleFolder(header) {
   chevron.classList.toggle('open');
 }
 
-document.addEventListener('DOMContentLoaded', buildSettingsUI);
+document.addEventListener('DOMContentLoaded', function() {
+  buildSettingsUI();
+  try {
+    var saved = localStorage.getItem('dashboardView');
+    if (saved && document.getElementById('view-' + saved)) {
+      var match = document.querySelector('.nav-item[onclick*="showView(\'' + saved + '\'"]');
+      showView(saved, match);
+    }
+  } catch(e) {}
+});
 
 function toggleSidebar() {
   var sidebar = document.querySelector('.sidebar');

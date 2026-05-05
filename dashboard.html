@@ -225,6 +225,7 @@
   .sp-table tr:nth-child(even) td { background: #f9fafb; }
 
 </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
 
@@ -825,6 +826,7 @@
     </div>
     <div style="display:flex;align-items:center;gap:10px;flex-shrink:0;margin-top:2px">
       <button class="panel-download" id="panelDownload" onclick="downloadPanel()" style="display:none">&#8659; Download .md</button>
+      <button class="panel-download" id="panelDownloadPDF" onclick="downloadPanelPDF()" style="display:none">&#8659; Download .pdf</button>
       <button class="panel-close" onclick="closePanel()">&#x2715;</button>
     </div>
   </div>
@@ -14543,6 +14545,8 @@ function openInboxFile(key) {
   var dlBtn = document.getElementById('panelDownload');
   dlBtn.onclick = downloadPanel;
   dlBtn.style.display = '';
+  var pdfBtn = document.getElementById('panelDownloadPDF');
+  pdfBtn.style.display = '';
   sp.classList.add('open');
   document.getElementById('overlay').classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -14614,6 +14618,22 @@ function downloadCourse(num) {
   document.body.removeChild(a);
   URL.revokeObjectURL(a.href);
 }
+
+function downloadPanelPDF() {
+  var sp = document.getElementById('scriptPanel');
+  var filename = (sp.dataset.downloadFilename || 'document.md').replace(/\.md$/, '.pdf');
+  var body = document.getElementById('panelBody');
+  var opt = {
+    margin: [12, 14, 12, 14],
+    filename: filename,
+    image: { type: 'jpeg', quality: 0.97 },
+    html2canvas: { scale: 2, useCORS: true },
+    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+    pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+  };
+  html2pdf().set(opt).from(body).save();
+}
+
 
 function openPanel(num) {
   const c = COURSES[num];

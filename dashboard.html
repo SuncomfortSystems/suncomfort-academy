@@ -369,48 +369,13 @@
       <!-- Business Cases -->
       <div class="series-block">
         <div class="series-header" style="background:#1b5e20">
-          <div><h2>Business Cases</h2><div class="series-meta">Resource and tooling proposals — draft versions for review</div></div>
-          <div class="series-count">8 files</div>
+          <div><h2>Business Cases</h2><div class="series-meta">Stack and tooling proposals</div></div>
+          <div class="series-count">1 file</div>
         </div>
         <div class="file-grid">
-          <div class="file-card clickable" onclick="openInboxFile('cedar-resource-proposal-v3')">
-            <div class="file-card-title">Cedar — Resource &amp; Tooling Proposal V3 (Recommended)</div>
-            <div class="file-card-desc">Final proposal: 2-licence Articulate + Reach 360, 2x Claude Max, Intercom Pro. No hire Q2/Q3 — both UK and India routes evaluated and deferred. Q4 reassessment. Saving ~£2,559 vs current trajectory.</div>
-            <div class="file-card-footer"><span class="file-type" style="background:#e8f5e9;color:#1b5e20">Business Case</span><span class="badge" style="background:#e8f5e9;color:#1b5e20">Recommended</span></div>
-          </div>
-          <div class="file-card clickable" onclick="openInboxFile('biz-case-draft')">
-            <div class="file-card-title">Enablement Team — Resource &amp; Tooling Proposal (Draft)</div>
-            <div class="file-card-desc">Earlier draft — hiring pause, Articulate switch, 2x Claude Max, full-time UK hire end of July. Superseded by V3.</div>
-            <div class="file-card-footer"><span class="file-type" style="background:#e8f5e9;color:#1b5e20">Business Case</span><span class="badge" style="background:#eeeeee;color:#616161">Superseded</span></div>
-          </div>
-          <div class="file-card clickable" onclick="openInboxFile('biz-case-va-ftuk-q3')">
-            <div class="file-card-title">Alternative A — Full-time UK hire from Q3 (July)</div>
-            <div class="file-card-desc">3-month pause then full-time UK Enablement Specialist from 1 July. Clean Q3 start, full quarter of UK contribution before the 3-month review.</div>
-            <div class="file-card-footer"><span class="file-type" style="background:#e8f5e9;color:#1b5e20">Business Case</span><span class="badge" style="background:#e3f2fd;color:#1565c0">Draft</span></div>
-          </div>
-          <div class="file-card clickable" onclick="openInboxFile('biz-case-vb-ftuk-q3')">
-            <div class="file-card-title">Alternative B — Full-time UK hire from Q3 (higher salary)</div>
-            <div class="file-card-desc">Same Q3 start as Alt A but at Ivy's recommended £3,250–£3,500/month range. £2,250 annual premium to broaden the candidate pool to experienced producers.</div>
-            <div class="file-card-footer"><span class="file-type" style="background:#e8f5e9;color:#1b5e20">Business Case</span><span class="badge" style="background:#e3f2fd;color:#1565c0">Draft</span></div>
-          </div>
-          <div class="file-card clickable" onclick="openInboxFile('biz-case-vc-india')">
-            <div class="file-card-title">Alternative C — Continue India hire</div>
-            <div class="file-card-desc">Resume India recruitment with improved tooling — Articulate switch plus Claude Max. Lowest headcount cost; known profile risks documented.</div>
-            <div class="file-card-footer"><span class="file-type" style="background:#e8f5e9;color:#1b5e20">Business Case</span><span class="badge" style="background:#e3f2fd;color:#1565c0">Draft</span></div>
-          </div>
-          <div class="file-card clickable" onclick="openInboxFile('ivy-biz-case-advisory')">
-            <div class="file-card-title">Ivy — People Advisory (hiring considerations)</div>
-            <div class="file-card-desc">Hiring and people-process considerations across all options: India rate, UK salary range, Q3 timeline risk, and 30/60/90 recommendation.</div>
-            <div class="file-card-footer"><span class="file-type" style="background:#fce4ec;color:#880e4f">People</span><span class="badge" style="background:#e8f5e9;color:#1b5e20">Approved</span></div>
-          </div>
-          <div class="file-card clickable" onclick="openInboxFile('ivy-parttime-advisory')">
-            <div class="file-card-title">Ivy — People Advisory (part-time viability)</div>
-            <div class="file-card-desc">Market research + Ivy assessment on hiring a 3-day part-time UK specialist at £26k–£30k FTE. Profile: CS-to-content transitioning candidate. Recommends Alt D.</div>
-            <div class="file-card-footer"><span class="file-type" style="background:#fce4ec;color:#880e4f">People</span><span class="badge" style="background:#e8f5e9;color:#1b5e20">Approved</span></div>
-          </div>
-          <div class="file-card clickable" onclick="openInboxFile('biz-case-vd-ptuk-q3')">
-            <div class="file-card-title">Alternative D — Part-time UK hire from Q3</div>
-            <div class="file-card-desc">3-day week, 0.6 FTE, £28k FTE pro-rata. ~£16,800/year. Bridges India and full-time UK cost; opens transitioning candidate pool.</div>
+          <div class="file-card clickable" onclick="openInboxFile('cedar-stack-modernisation')">
+            <div class="file-card-title">Enablement Stack Modernisation — Business Case</div>
+            <div class="file-card-desc">Proposal to retire the LMS and move to Parta + Clueso + Intercom HC + Userflow. Cost-neutral or better. Impact measured via Fin AI resolution rate. 200-course target without additional headcount.</div>
             <div class="file-card-footer"><span class="file-type" style="background:#e8f5e9;color:#1b5e20">Business Case</span><span class="badge" style="background:#e3f2fd;color:#1565c0">Draft</span></div>
           </div>
         </div>
@@ -1205,6 +1170,159 @@ function renderPanel(num) {
 }
 
 const INBOX_FILES = {};
+INBOX_FILES["cedar-stack-modernisation"] = `# Enablement Stack Modernisation — Business Case
+
+**Prepared by:** Sara Bodell, Enablement Manager
+**Date:** May 2026
+**Status:** Proposed — Pending Leadership Approval
+
+---
+
+## Executive Summary
+
+Commusoft's current enablement stack costs approximately $12,000 per year in LMS licensing and produces metrics — course completion rates — that leadership cannot act on. Completion data tells us whether a learner clicked a button. It does not tell us whether they understood the product, reduced their support requests, or renewed their contract. This proposal retires the LMS, reallocates that budget, and replaces it with a leaner, higher-signal stack built around tools customers actually use: Intercom Help Centre and in-app guidance via Userflow.
+
+The business case rests on three arguments. First, the new stack is designed to be cost-neutral or better — the LMS budget covers the replacement tooling, and a headcount saving from a vacant role that is not being replaced adds further headroom. Second, it produces a metric leadership can act on: Fin AI resolution rate. Every percentage point improvement in Fin resolution rate reduces the cost of a customer interaction from $17–25 (human-handled) to $1–4 (self-service). Third, it enables the team to build a 200-course library without adding headcount — AI tooling replaces the capacity that would otherwise require a new hire.
+
+The proposal moves enablement from a compliance model (did they complete it?) to an outcome model (did it reduce support volume and improve retention?). Industry data supports the direction: customers who complete structured training renew at 92% versus 80% for untrained customers — a 12 percentage point retention gap. A 15.5% reduction in support tickets is linked directly to customer education programmes. This is not a training project. It is a retention and support-cost project.
+
+The ask is approval to proceed with the Parta Enterprise contract (quote expected from Tuesday's meeting), retire the existing LMS, and consolidate video production under Clueso. No budget increase is required.
+
+---
+
+## The Problem
+
+The current stack has three structural weaknesses that limit its business value.
+
+**Completion data is not a business metric.** LMS completion rates average 5–15% across eLearning platforms. In corporate settings, 49% of workers admit to skipping or not fully engaging with content they technically complete. Only 8% of L&D professionals feel confident measuring business impact from their training programmes.¹ When a customer completes a module in the current LMS, the record shows a green tick. It does not show whether they can now raise a job correctly, whether they stopped calling support, or whether they renewed. The metric is a proxy for activity, not outcome.
+
+**The current stack creates duplication without insight.** Maintaining a separate LMS alongside an authoring tool means version management across two platforms, content embedded in the LMS rather than linked, and slow update cycles when the product changes. Each update must be managed in both systems. There is no connection between training activity and support volume — no feedback loop to the product support team or to Fin AI performance.
+
+**The content is not where customers are.** Customers search the Help Centre when they have a question. They encounter in-app prompts when they are working. They do not log into a separate training portal. Distributing content through the LMS adds a friction layer between the customer and the answer. Microlearning delivered in context — Help Centre articles, short videos, in-app guides — achieves approximately 80% completion versus approximately 20% for long-form LMS modules. Contextual learning produces 25–60% knowledge retention versus 8–10% for traditional methods.¹
+
+None of this is a reflection on the team. It is a structural problem with the category. Forty-two per cent of companies are actively seeking to replace or upgrade their LMS.¹ This proposal gets ahead of that curve.
+
+---
+
+## Proposed Solution
+
+Replace the LMS and current authoring and video tools with a purpose-built stack that authors once, distributes to the surfaces customers already use, and measures impact through support outcomes.
+
+| Layer | Tool | What It Does |
+| --- | --- | --- |
+| Content Authoring | Parta (replacing Trainn) | Course creation, management, one-click multi-channel publishing |
+| Video Production | Clueso (replacing Synthesia) | Screen recording → AI script → voiceover → video and written guide in one pass |
+| Distribution — Help Centre | Intercom Help Centre | Article views, unique visitors, search queries |
+| Distribution — In-App | Userflow | Prompt impressions, click-throughs, completion |
+| Funnel Tracking | Google Analytics | Traffic from HC and Userflow to course content |
+| Impact Measurement | Fin AI (Intercom) | Resolution rate trends by topic, deflection volume |
+
+Intercom Pro is already contracted and retained. The LMS is retired. No new distribution infrastructure is introduced.
+
+---
+
+## Why This Stack Works
+
+**Parta over Trainn**
+
+Trainn bundles its own LMS and academy portal into the product. The pricing includes distribution infrastructure that this proposal deliberately does not use. Paying for a bundled LMS when the strategy is to distribute through Intercom and Userflow means paying twice for a capability being removed. Parta is authoring-only by design — built to push content to external channels rather than host it internally.
+
+The practical advantages are significant. Parta operates on a single-source model: update a course once and it propagates automatically to every surface where it is published. This eliminates the version management problem. Real-time multiplayer collaboration replaces review-by-email. AI translation across 200+ languages is built in at Enterprise tier. The BYO AI Integration at Enterprise allows the team to connect Claude or Gemini via API directly — removing per-course AI generation caps and avoiding double-paying for AI capacity already contracted elsewhere.
+
+Evidence of delivery: ChurnZero moved from 66% to 91% course completion and halved their revision cycles within four months of using Parta.²
+
+**Clueso over Synthesia**
+
+Synthesia produces talking-head avatar videos. It cannot record or demonstrate actual software interfaces. For a product like Commusoft — where the customer needs to see the workflow, not a presenter — this is a meaningful capability gap. Clueso records the screen, generates an AI script and voiceover, and produces both a video walkthrough and a step-by-step written guide from a single recording session. Two content assets from one pass.
+
+For a team building 200 courses with a small headcount, the asset yield per hour of production time matters. Clueso's output model is the right fit. Pricing is approximately $120/month on the Starter plan (subject to confirmation from the vendor). Synthesia costs sit in a separate budget line and are not included in the financial case below — the transition represents a saving in that budget, not claimed here.
+
+---
+
+## Measuring What Matters
+
+The proposed primary impact metric is Fin AI resolution rate — the percentage of customer queries resolved by Intercom's AI without escalation to a human agent.
+
+This metric is directly tied to Help Centre content quality. Intercom's own documentation confirms that Fin's resolution rate depends on the relevance, accuracy, and completeness of the underlying HC articles. When HC content improves, Fin resolution rate improves. When Fin resolution rate improves, the cost per customer interaction falls.
+
+The cost differential is substantial: self-service resolution costs $1–4 per interaction; human-handled resolution costs $17–25. The industry average Fin resolution rate is 51%. Best-in-class implementations reach 85–87%.³
+
+A concrete benchmark: Pupil Progress rewrote their Help Centre content and moved their Fin resolution rate from 55% to 75% within two months, sustaining 75–80% thereafter.⁴ That 20 percentage point improvement, applied to Commusoft's support volume, translates to a material reduction in human-handled tickets. The exact saving depends on current support ticket volume — a figure the support team can supply — but the directional case is clear.
+
+Additional signal metrics that will be tracked:
+
+- Support ticket volume by topic (reduction over time as courses are published)
+- Customer renewal rate for trained versus untrained cohorts (industry benchmark: 92% vs 80%)
+- HC article views and Userflow engagement per course
+- Video watch rate and drop-off via Clueso analytics
+
+Fin resolution rate is the headline. The others build the story around it.
+
+---
+
+## Delivering 200 Courses
+
+The 200-course target is achievable with the current team configuration because AI tooling replaces the throughput previously dependent on headcount.
+
+| Team Member | Role | Contribution |
+| --- | --- | --- |
+| Sara Bodell | Enablement Manager | Course strategy, scripts, video production oversight |
+| Abbie | Enablement Coordinator | Course building in Parta, QA |
+| Nadia (on loan) | — | 10–15 hours/week support |
+| Claude Max x20 | AI tooling | Scripting, drafting, research, translation |
+
+The vacant Enablement Specialist role is not being replaced with a hire. It is being replaced with Claude Max x20 seats. The AI capability within Parta Enterprise (BYO AI) and Clueso's automated script and voiceover generation further compress the production cycle per course. Together, these reduce the per-course labour cost without reducing output quality.
+
+This is not a headcount reduction being dressed up as a technology decision. The specialist role was already vacant. The technology makes the team whole.
+
+---
+
+## Financial Case
+
+Costs are quoted in their contracted currency. Conversion to a single currency will be applied at point of contract.
+
+| Item | Annual Cost / Saving | Notes |
+| --- | --- | --- |
+| LMS budget released | +$12,000 | To be reallocated to new stack |
+| Headcount saving | +~£6,500 | Vacant Enablement Specialist role — not being replaced |
+| Intercom Pro | ~$1,188 | Existing contract — retained, no change to current spend |
+| Claude Max x20 | −~£4,329 | Replaces specialist headcount; current x2 seats ~£2,160 — uplift to x20 |
+| Clueso (video production) | −~$1,440 | ~$120/month Starter plan — subject to vendor confirmation |
+| Parta Enterprise + Analytics | TBC | 3 users, BYO AI, Performance Analytics add-on — quote expected Tuesday |
+
+**Summary position:** The LMS reallocation and headcount saving comfortably cover the confirmed new costs. The remaining headroom against the Parta contract is subject to the Tuesday quote but is expected to be positive. The proposal does not require a budget increase. Any surplus remains within the enablement budget.
+
+Note: Synthesia costs are held in a separate budget line and are not modelled here. The transition to Clueso represents a saving in that budget — a benefit not claimed in this case.
+
+**The financial case improves further if Fin resolution rate increases.** A conservative move from 51% (industry average) toward 70% on Commusoft's support volume would offset the full cost of this proposal in support deflection savings alone. That case will be quantified once current ticket volume data is available from the support team.
+
+---
+
+## Next Steps
+
+| Action | Owner | Timing |
+| --- | --- | --- |
+| Parta Enterprise quote and contract review | Sara Bodell | Tuesday meeting confirmed |
+| Clueso pricing confirmation | Sara Bodell | This week |
+| Current Fin resolution rate baseline pulled from Intercom | Sara Bodell / Support | This week |
+| Current support ticket volume by topic — baseline for impact modelling | Support team | This week |
+| LMS retirement date confirmed with IT | Sara Bodell / IT | Post-approval |
+| Leadership approval to proceed | Leadership | [date] |
+
+---
+
+## Sources
+
+1. Continu — Corporate eLearning Statistics 2025; eLearning Industry — Why LMS Completion Rates Don't Prove Learning Works; Continu research on LMS replacement
+2. Parta case study — ChurnZero
+3. Intercom — How Customer Service Metrics Are Changing in the Age of AI; Pylon — AI Ticket Deflection 2025
+4. Intercom Community — How Pupil Progress went from 55% to 75% Fin Resolution Rate in 2 months
+
+---
+
+*Prepared by Sara Bodell, Enablement Manager, Commusoft — May 2026. For internal use.*
+`;
+
 INBOX_FILES["forest-customer-settings"] = `# Forest — Research Brief: SunComfort Customer Settings vs. Help Centre
 
 **Topic:** Verification of 10 SunComfort Customer Settings against the Commusoft Help Centre
@@ -13648,543 +13766,6 @@ The profile we're hiring for:
 - Familiarity with tools like Synthesia, Intercom, Loom, Jira, or Confluence is a plus — but not a requirement. We'll teach you what you need.
 `;
 
-INBOX_FILES["ivy-biz-case-advisory"] = `# Ivy — People Advisory: Enablement Resource Business Case
-
-**Prepared by:** Ivy — Head of People
-**Date:** 2026-04-22
-**Reviewed by:** Flint — Approved
-**Purpose:** Hiring and people-process considerations to sit alongside Cedar's four business case options
-
----
-
-> **Action required — Q3 timeline:** A Q3 start (Alternative A) requires the role to be posted this week. From 22 April, a realistic UK hiring timeline puts first day closer to mid-July than 1 July. If this option is being considered seriously, recruitment needs to begin now.
-
----
-
-## On the India option (Alternative C)
-
-The current arrangement at £790/month was never calibrated for this role. A Standard Tech Writer produces manuals and Help Centre content to a brief. What is being described here — someone who builds courses independently, uses the Help Centre as a research reference, scripts against feature documentation, and owns the production cycle end to end — is a different hire. The Gemini-advised band (₹19L–₹24L; £18,000–£23,000/year) is the right target.
-
-Candidates at this level in India will be comparing Commusoft against product companies and SaaS businesses with structured L&D teams. The offer needs to be competitive on more than salary: clear scope, genuine ownership of the work, and a line into a real team matter at this level.
-
----
-
-## On the UK hire (Alternatives A and B)
-
-The ~£3,000/month figure used in both alternatives translates to £36,000/year. For a mid-level Enablement or Customer Education Specialist in the UK with LMS and video scripting experience, this sits at the lower end of the market. It is achievable for a candidate who is earlier in their career or transitioning from adjacent work (content writing, training coordination) — but it may not attract someone with independent course production experience already in place.
-
-**Recommendation:** Treat £3,000/month as the minimum and be prepared to go to £3,250–£3,500 for the right person. Both Alt A and Alt B should reflect a salary range rather than a fixed figure.
-
----
-
-## On the Q3 timeline (Alternative A)
-
-From 22 April to 1 July is approximately 10 weeks. A typical UK hiring timeline for a specialist role runs 6–8 weeks from job live to offer accepted, plus notice period. Standard UK notice for a mid-level hire is 4 weeks — which puts a realistic start date at mid-July at best.
-
-**Recommendation:** Adjust Alt A language to "from July" rather than "from 1 July" and update the cost model accordingly.
-
----
-
-## On the Q4 timeline (Alternative B)
-
-More comfortable from a recruitment perspective. A job posted in late May or June allows a thorough process with no urgency pressure. A 1 October start is very achievable with a standard timeline.
-
----
-
-## On role definition across all options
-
-The business case documents the cost of the hire but does not yet define what good looks like in the first three months. Whichever option is chosen, I recommend building a brief 30/60/90 framework alongside the hiring decision — both to use in the interview process and to set the new hire up correctly from day one. I can prepare this once the direction is confirmed.
-`;
-
-INBOX_FILES["cedar-resource-proposal-v3"] = `# Enablement Team: Resource and Tooling Proposal
-
-**Sara Bodell · Client Operations · April 2026 · For senior leadership review**
-
----
-
-## Summary
-
-| | Current trajectory | Proposed plan |
-|---|---|---|
-| 3-month cost | ~£4,750 | ~£2,191 |
-| **3-month saving** | | **~£2,559** |
-
-*Current trajectory: India-based headcount + Trainn LMS. Proposed plan: Articulate 360 (2 licences, Micro tier) + 2x Claude Max + Intercom Pro. Ongoing annual LMS saving post-switch: ~£3,485/yr. All figures ex-VAT.*
-
----
-
-## Executive summary
-
-This proposal consolidates two decisions — a planned LMS switch and a decision not to fill the Enablement Specialist vacancy in Q2 or Q3 — into a single package that reduces costs, improves tooling, and maintains team output through the remainder of the year.
-
-It recommends signing Articulate 360 immediately on a 2-licence agreement, funding two Claude Max licences and an Intercom Pro add-on to sustain and accelerate content production, and deferring any hiring decision to an end-of-Q3 review. At that point, output data from the period will be presented to inform the Q4 position.
-
-Both the UK hire and India hire routes have been formally evaluated and are not recommended at this stage. The combined effect is a three-month saving of approximately £2,559 against the current trajectory, with a permanently lower LMS cost on the other side of the platform switch.
-
----
-
-## Part one: LMS switch — Trainn to Articulate 360
-
-The LMS switch has been evaluated independently of the hiring situation and is the right move regardless. The case is based on a structured requirements assessment, a vendor meeting, and a review of current platform data.
-
-### The problem with Trainn
-
-Trainn was selected as a hosted course delivery platform, but the team does not use its primary differentiating feature — automatic step-by-step screen recording. In practice, Trainn functions as a video host. At $12,000 per year (approximately £9,500), this represents poor value for what is actually being used.
-
-More significantly, the platform is not solving the adoption problem it was supposed to address. Current data shows:
-
-- 1,728 total learners on the platform
-- 574 completions — a completion rate of just 33%
-- 62% of enrolled users have either never started or not finished a course
-
-Trainn's passive, long-form video format is a contributing factor: it is a documentation tool, not a proper e-learning platform, and it does not support the shift to shorter, role-based learning that drives engagement. The platform also has no meaningful integration with Intercom, no support for micro-learning structures, and limited reporting capability — all of which were identified as requirements during the formal evaluation.
-
-### Why Articulate 360
-
-Articulate 360 with Reach 360 was selected following a structured evaluation against a full requirements matrix covering portal setup, course structure, video embedding, assessment, reporting, integrations, learner experience, and pricing model. Key reasons for selection:
-
-- Reach 360 uses an active-user enrolment model rather than a fixed-seat licence, which scales correctly for Commusoft's learner base of 1,000+ external users without punishing growth.
-- Articulate Rise 360 enables the production of micro-learning modules — a direct response to the completion rate problem. Shorter, focused content drives measurably higher engagement than long-form video.
-- Courses built in Articulate can be embedded directly into the Intercom Help Centre, putting training at the point of need rather than requiring users to navigate to a separate platform. This is the most direct intervention available to address the 62% drop-off rate.
-- Articulate Rise AI accelerates course authoring, complementing the AI-assisted scripting workflow already in place. Critically, this enables a text-first production approach: courses can be completed and published in full from a content standpoint, with video assets added progressively as capacity allows. This eliminates the bottleneck of waiting for video production before a course can go live.
-- The platform supports internal and external portals, SSO, HubSpot and Intercom integrations, exportable reporting, and a mobile-first learner experience — meeting all critical requirements from the evaluation.
-- Articulate 360 is the industry-standard authoring tool for L&D professionals, providing the highest quality output for the Academy.
-
-### Cost comparison
-
-| Platform | Annual cost (ex-VAT) | What you get |
-|---|---|---|
-| Trainn (current) | ~£9,500 | Video hosting only — primary feature unused |
-| Articulate 360 (2 licences) + Reach 360 Micro | £6,015 | Full authoring suite + LMS + Rise AI + integrations |
-
-**Annual saving on switch: ~£3,485/yr.**
-
-This is a like-for-like platform cost comparison. The saving is based on the confirmed quote of £3,040 for 2x Articulate 360 AI licences and £2,975 for the Reach 360 Micro tier. The contract can be signed immediately — there is no dependency on the June renewal date, and starting earlier creates a migration overlap period that reduces transition risk.
-
----
-
-## Part two: hiring decision and AI-assisted production
-
-The Enablement Specialist vacancy has been open since 13 March 2026. Both available hiring routes — UK-based and India-based — have been evaluated. Neither is recommended for Q2 or Q3.
-
-### Hiring route evaluation
-
-**UK hire — ruled out.** A UK-based hire was assessed against the role scope and current team structure. The cost and lead time do not represent the right investment at this stage of team maturity. The vacancy's scope has evolved significantly since it was first opened, and this is not the right moment to commit to a senior UK hire for a role whose boundaries are still being defined.
-
-**India hire — deferred.** An India-based hire was explored, including engagement with a specialist recruiter for the Chennai market. Their assessment highlighted three material concerns:
-
-- The role title has evolved away from standard market nomenclature (Technical Writer, Senior Technical Writer, Documentation Engineer), which directly reduces discoverability on job boards and LinkedIn. Pairing the title with a conventional equivalent would be needed to attract sufficient volume.
-- The expanded scope of the role — beyond traditional Technical Writing into content strategy and cross-functional ownership — commands a premium in the Chennai market. The current budget allocation may not reflect this.
-- The international reporting line (UK manager, India-based hire) is workable but requires proactive framing in the job description and clear communication of working hours and collaboration cadence to attract the right candidates.
-
-These are solvable problems, but solving them correctly requires time the team does not currently have. Rushing the India hire into the market without addressing them risks a poor candidate pool, a prolonged process, and a hire that does not match the role as it now exists.
-
-**Recommendation: defer all hiring to end-of-Q3 review.** At that point, the team will present output data from the Q2/Q3 period, and a Q4 hiring decision — route, title, scope, and budget — will be made with better evidence.
-
-### How output is maintained without a hire
-
-- Two Claude Max licences enable significantly faster script drafting, Help Centre authoring, and content production across both the Academy and Intercom. Agentic workflows handle repetitive production tasks, allowing the team to operate above its headcount.
-- Articulate Rise AI, available as part of the Articulate 360 subscription, accelerates course module production directly within the authoring tool. The text-first model means courses are not blocked by video production — content goes live faster, and video is layered in progressively.
-- Naida (Support) has confirmed availability for three hours per day to cover screen recordings — a key production dependency that does not require a second hire to resolve.
-- The earlier Articulate start means the team can begin building a larger, better-structured course library during this period, rather than waiting until June to begin the transition.
-
-### Intercom Pro
-
-The proposal also includes the Intercom Pro add-on at $99/month (~£79/month), billed by conversation volume. Pro adds AI-powered quality assurance across all customer conversations: CX Score, Topics Explorer, Trends, Recommendations, Monitors, and Custom Scorecards. For an Enablement team working to reduce a 62% learner drop-off rate, these tools provide direct visibility into which Help Centre conversations are failing — surfacing patterns, flagging poor responses, and generating content recommendations before those gaps compound. At the base tier (up to 1,000 conversations per month), this is a fixed and predictable cost.
-
----
-
-## Full cost breakdown (3 months, ex-VAT)
-
-| Line item | Current trajectory | Proposed plan |
-|---|---|---|
-| Enablement Specialist headcount | ~£2,375 | £0 (not hiring Q2/Q3) |
-| LMS: Trainn (~£9,500/yr) | ~£2,375 | — |
-| LMS: Articulate 360 + Reach 360 Micro (£6,015/yr) | — | ~£1,504 |
-| 2x Claude Max (£75/month each) | — | ~£450 |
-| Intercom Pro (~£79/month) | — | ~£237 |
-| **Total** | **~£4,750** | **~£2,191** |
-| **3-month saving** | | **~£2,559** |
-
-*Headcount figure based on India-based hire at 10 LPA (~£9,500/yr). LMS costs based on confirmed Omniplex quote dated 22/04/2026. Claude Max estimated at £75/month per licence ex-VAT. Intercom Pro billed in USD at $99/month base; GBP equivalent approximate.*
-
----
-
-## Risks and mitigations
-
-| Risk | Mitigation |
-|---|---|
-| Output volume drops without a second team member | Claude Max is scoped specifically to accelerate scripting and content production. Naida covers screen recording for three hours per day. Articulate Rise AI and the text-first production model reduce per-module authoring time significantly. |
-| End-of-Q3 review delays Q4 hiring decision | The review has a fixed date and a defined scope: output delivered, Academy library growth, recommendation on hiring. It is a decision point, not an open-ended review. |
-| Articulate onboarding takes time away from production | Signing early gives the team an overlap period with Trainn still active. Migration can begin gradually without a hard cutover. |
-| Intercom Pro conversation volume exceeds base tier | At 1,000–5,000 conversations, the rate is $0.12 per conversation. Usage can be monitored monthly and the tier revisited at the end-of-Q3 review if needed. |
-
----
-
-## Recommendation
-
-Approve the following:
-
-1. **Articulate 360 (2-licence) + Reach 360 Micro** — sign immediately; do not wait for the June Trainn renewal.
-2. **2x Claude Max licences** — fund for the Q2/Q3 period to sustain content production.
-3. **Intercom Pro add-on** — approve at the base tier ($99/month) to support Help Centre quality.
-4. **Hiring decision deferred to end-of-Q3 2026** — no new hire in Q2/Q3. A formal review in September will determine the Q4 position with full output data.
-
----
-
-*Prepared by Sara Bodell, Enablement Manager · Client Operations · Commusoft · April 2026*
-`;
-
-INBOX_FILES["biz-case-draft"] = `# Enablement Team — Resource & Tooling Proposal (Draft)
-
-**Prepared by:** Cedar — Business Case Writer
-**Date:** 2026-04-22
-**Status:** Draft — Omniplex and Articulate 360 pricing TBC
-
----
-
-## Summary
-
-This proposal covers the cost of the Enablement function from May to December 2025, accounting for the current India-based VA arrangement, a planned pause, and a UK-based hire from Q3. Claude Max is included during the interim period only — it is dropped once a hire is in post. Omniplex runs on 1 licence during the interim and moves to 2 licences once a hire is active.
-
----
-
-## Current Arrangement (Interim — May–July)
-
-| Item | Monthly | Period | Total |
-|------|---------|--------|-------|
-| India hire | £790 | May–Jul (3 months) | £2,370 |
-| Claude Max | £100 | May–Jul (3 months) | £300 |
-| Articulate 360 | TBC | May–Jul (3 months) | TBC |
-| Omniplex (2 licences) | TBC | May–Jul (3 months) | TBC |
-
----
-
-## Pause Period
-
-A pause is planned. No hire or production costs during this period.
-
----
-
-## UK Hire (from Q3)
-
-| Item | Monthly | Period | Total |
-|------|---------|--------|-------|
-| UK hire | ~£3,000–£3,500 | Q3 start–Dec | ~£15,000–£21,000 |
-| Articulate 360 | TBC | Q3 start–Dec | TBC |
-| Omniplex (3 licences, post-hire) | TBC | Q3 start–Dec | TBC |
-
-*Claude Max dropped once hire is in post.*
-
----
-
-## Notes
-
-- Omniplex: 2 licences during interim; 3 licences once hire is active. Pricing TBC — awaiting quote.
-- Articulate 360 pricing to be confirmed.
-- UK hire salary: see Alt A (£3,000/month floor) and Alt B (£3,250–£3,500 Ivy-recommended range) for detailed breakdowns.
-- **India market rate note:** Recruiter confirmed cross-functional premium role. Gemini market analysis sets the correct band at ₹19L–₹24L (£18,000–£23,000/year). Current £790/month is well below this floor. See Alternative C for India continuation costs at the correct rate.
-`;
-
-INBOX_FILES["biz-case-va-ftuk-q3"] = `# Alternative A — Full-time UK Hire from Q3 (salary floor)
-
-**Prepared by:** Cedar — Business Case Writer
-**Date:** 2026-04-22
-**Scenario:** Pause the India arrangement, hire a full-time UK-based Customer Education Specialist from July (Q3) at the market floor salary of ~£3,000/month.
-
----
-
-## Summary
-
-This option ends the India arrangement at the close of June and brings a UK hire on board from Q3. It maximises the time a UK employee is in post before year-end. Claude Max is dropped once the hire starts. See Alternative B for the same scenario at Ivy's recommended higher salary range.
-
----
-
-## Cost Breakdown
-
-| Item | Monthly | Period | Total |
-|------|---------|--------|-------|
-| India hire | £790 | May–Jun (2 months) | £1,580 |
-| Claude Max | £100 | May–Jun (2 months) | £200 |
-| Articulate 360 | TBC | May–Jun (2 months) | TBC |
-| Omniplex (2 licences) | TBC | May–Jun | TBC |
-| UK hire (full-time) | ~£3,000 | Jul–Dec (6 months) | ~£18,000 |
-| Articulate 360 | TBC | Jul–Dec (6 months) | TBC |
-| Omniplex (3 licences, post-hire) | TBC | Jul–Dec | TBC |
-
-*Claude Max dropped from July — hire is in post.*
-
-**Estimated full-year total (excl. TBC lines): ~£19,780**
-
----
-
-## Considerations
-
-- Recruitment lead time from now to July is approximately 10 weeks — tight. Role should be posted this week for a realistic July start (Ivy advises mid-July is more likely than 1 July).
-- India arrangement runs May–June, maintaining continuity during the hiring process.
-- Claude Max dropped once UK hire is active.
-- 2 Omniplex licences during interim; 3 licences once hire is in post.
-- Salary at floor — see Alt B for the higher-range scenario.
-`;
-
-INBOX_FILES["biz-case-vb-ftuk-q3"] = `# Alternative B — Full-time UK Hire from Q3 (Ivy-recommended salary range)
-
-**Prepared by:** Cedar — Business Case Writer
-**Date:** 2026-04-22
-**Scenario:** Pause the India arrangement, hire a full-time UK-based Customer Education Specialist from July (Q3) at Ivy's recommended salary range of £3,250–£3,500/month.
-
----
-
-## Summary
-
-This option mirrors Alternative A (Q3 start) but budgets at the higher salary range recommended by Ivy to attract a candidate with existing independent course production experience. The £2,250 premium over Alt A is modest against the cost of a mis-hire.
-
----
-
-## Cost Breakdown
-
-| Item | Monthly | Period | Total |
-|------|---------|--------|-------|
-| India hire | £790 | May–Jun (2 months) | £1,580 |
-| Claude Max | £100 | May–Jun (2 months) | £200 |
-| Articulate 360 | TBC | May–Jun (2 months) | TBC |
-| Omniplex (2 licences) | TBC | May–Jun | TBC |
-| UK hire (full-time) | ~£3,375 | Jul–Dec (6 months) | ~£20,250 |
-| Articulate 360 | TBC | Jul–Dec (6 months) | TBC |
-| Omniplex (3 licences, post-hire) | TBC | Jul–Dec | TBC |
-
-*£3,375/month = midpoint of Ivy's £3,250–£3,500 recommended range.*
-*Claude Max dropped from July — hire is in post.*
-
-**Estimated full-year total (excl. TBC lines): ~£22,030**
-
----
-
-## Difference vs. Alternative A
-
-| | Alt A (£3,000/month) | Alt B (£3,375/month) | Difference |
-|--|--|--|--|
-| UK hire cost (6 months) | ~£18,000 | ~£20,250 | +£2,250 |
-| Full-year total | ~£19,780 | ~£22,030 | +£2,250 |
-
----
-
-## Considerations
-
-- Same Q3 start as Alternative A — role should be posted this week for a realistic July start.
-- Higher salary broadens the candidate pool to include experienced course producers.
-- £2,250 annual premium is modest if it avoids a mis-hire or repeat recruitment process.
-- Claude Max dropped once UK hire is active.
-- 2 Omniplex licences during interim; 3 licences once hire is in post.
-`;
-
-INBOX_FILES["biz-case-vc-india"] = `# Alternative C — Continue India Hire
-
-**Prepared by:** Cedar — Business Case Writer
-**Date:** 2026-04-22
-**Scenario:** Resume an India-based hire after the planned pause. No UK hire in 2025.
-
----
-
-## Summary
-
-This option continues with an India-based hire through year-end. However, a recruiter review has confirmed that the role requires a cross-functional profile (LMS, scripting, and video production) that commands a market premium — even in India. Continuing at the current rate secures the wrong profile. Hiring at the correct market rate significantly narrows the cost gap versus UK alternatives.
-
----
-
-## India Market Rate Context
-
-Two sources have been used to establish the correct salary band for this role. A recruiter confirmed it is a cross-functional profile commanding a premium. A Gemini market analysis refined the Enablement-specific band.
-
-| Profile | Annual (INR) | Annual (GBP) | Monthly (GBP) | Source |
-|---------|-------------|--------------|----------------|--------|
-| Enablement Specialist (high-quality, independent) | ₹19L–₹24L | £18,000–£23,000 | £1,500–£1,917 | Gemini market analysis |
-| Academy Specialist (LMS, Scripting, Video) | ₹15L–₹21L | £14,300–£20,000 | £1,192–£1,667 | Recruiter advice |
-| Standard Tech Writer (Manuals/Help Centre only) | ₹10L–₹14L | £9,500–£13,300 | £792–£1,108 | Recruiter advice |
-
-The current arrangement (£790/month) sits at the floor of the Standard Tech Writer band. To attract a high-quality candidate who can independently build courses using the Help Centre as a reference point, the correct band is **₹19L–₹24L (£18,000–£23,000/year; £1,500–£1,917/month)**.
-
----
-
-## Cost Breakdown (at Gemini-advised rate — mid-point ~£1,708/month)
-
-| Item | Monthly | Period | Total |
-|------|---------|--------|-------|
-| India hire (current, interim) | £790 | May–Jun (2 months) | £1,580 |
-| Claude Max | £100 | May–Jun (2 months) | £200 |
-| Articulate 360 | TBC | May–Jun (2 months) | TBC |
-| Omniplex (2 licences) | TBC | May–Jun | TBC |
-| Pause | — | Jul–Sep (3 months) | £0 |
-| India hire (Enablement Specialist) | ~£1,708 | Oct–Dec (3 months) | ~£5,125 |
-| Articulate 360 | TBC | Oct–Dec (3 months) | TBC |
-| Omniplex (3 licences, post-hire) | TBC | Oct–Dec | TBC |
-
-*Claude Max dropped from October — hire is in post.*
-
-**Estimated full-year total at Gemini-advised rate (excl. TBC lines): ~£6,905**
-**Range: ~£6,280 (low, ₹19L) – ~£7,530 (high, ₹24L)**
-
----
-
-## Revised Comparison vs. UK Hire (Alt A — Q3 start)
-
-At the Gemini-advised rate, the saving versus Alternative A (full-time UK from Q3, ~£19,780 excl. TBC) is approximately **£12,875** at the midpoint. This is a significant gap on paper — but it does not account for additional management overhead, limited timezone overlap, or the profile risk of a remote cross-functional hire with no UK-based team context.
-
----
-
-## Considerations
-
-- Current rate of £790/month is below the minimum for the required profile. Continuing at this rate means continuing with a mismatched hire.
-- At the correct rate, India is no longer a low-cost option — the saving versus a UK Q4 hire (Alt B) is ~£3,400, not the negligible figure previously estimated.
-- Timezone overlap remains limited for a UK-based Enablement team.
-- Does not build the medium-term UK team capability.
-- Viable only if the right candidate can be recruited and managed effectively at the correct rate, and if a UK hire is not achievable within the 2025 window.
-`;
-
-INBOX_FILES["ivy-parttime-advisory"] = `# Ivy — People Advisory: Part-Time UK Hire Viability
-
-**Prepared by:** Ivy — Head of People
-**Supporting research:** Forest — Researcher
-**Date:** 2026-04-22
-**Reviewed by:** Flint — Approved
-**Purpose:** Assessment of a part-time (3-day week, 0.6 FTE) UK hire at £26,000–£30,000 FTE pro-rata
-
----
-
-> **Role title matters.** "Customer Education Specialist" may not resonate with the candidates this salary band will attract. Consider: **Content & Education Specialist**, **Customer Learning Specialist**, or **Customer Education Writer**. These read as natural next steps from customer success or support — the exact profile most likely to apply and succeed.
-
----
-
-## The Numbers
-
-| Full-Time Salary | Annual Cost (3 days / 0.6 FTE) |
-|-----------------|-------------------------------|
-| £26,000 | £15,600 |
-| £28,000 | £16,800 |
-| £30,000 | £18,000 |
-
-The midpoint — £28,000 FTE / £16,800 pro-rata — is a realistic and respectable offer for the profile described below.
-
----
-
-## Is This Hireable?
-
-**Yes — at this salary band, you are hiring a transitioning candidate, not an established course producer.**
-
-Forest's research confirms that dedicated Learning Specialist and L&D Specialist roles in the UK command £33,758–£35,931/year FTE on average (Indeed, Jan–Feb 2026). Candidates already operating at that level will not apply at £26k–£30k.
-
-What £26k–£30k FTE does attract is someone currently in **customer success or customer support** (1–2 years experience) who:
-
-- Has written Help Centre articles, onboarding guides, or internal how-to content as part of their day-to-day work
-- Can explain software features clearly to non-technical users
-- Is actively looking to move into a content, training, or education-focused role
-- Will not arrive knowing Synthesia or Articulate — but will learn quickly
-
-This is actually a stronger starting point for this role than a traditional L&D hire. A CS-background candidate brings platform literacy and customer-facing communication instincts. The production tools can be taught; the customer empathy is harder to find.
-
----
-
-## JD Shape
-
-Lead with content and communication, not production tooling:
-
-- Writing clear, accessible content that helps software users understand and adopt new features
-- Background in customer success, support, technical writing, or similar
-- Comfort picking up new tools quickly (Synthesia, Articulate training provided)
-- Part-time, 3 days per week, remote/hybrid
-
-Avoid leading with "LMS management" or "course production" — this language filters out the right candidates.
-
----
-
-## On the Part-Time Model
-
-Three days per week is genuinely attractive to returning professionals, parents, or career-changers who want to transition without going all-in. It broadens the candidate pool and reduces risk on both sides.
-
-The throughput risk is real: three days is tight when the role involves research, scripting, production review, and Help Centre maintenance simultaneously. A clear 30/60/90 scope will prevent the hire from being spread too thin too early.
-
----
-
-## Recommendation
-
-**Alternative D: Part-time UK hire from Q3, £28,000 FTE pro-rata, 3 days per week, ~£16,800/year.**
-
-This sits between full-time UK floor (Alt A: ~£19,780) and India continuation at correct rate (Alt C: ~£9,542), and opens the most realistic candidate pool for what the role actually needs at this stage. If the hire performs well, the path to full-time is straightforward.
-
----
-
-## Market Data Sources
-
-- Indeed UK — Learning Specialist salary (137 salaries, updated January 2026)
-- Indeed UK — L&D Specialist salary (413 salaries, updated February 2026)
-- Glassdoor UK — Junior Customer Success Manager salary, London (updated March 2026)
-`;
-
-INBOX_FILES["biz-case-vd-ptuk-q3"] = `# Alternative D — Part-Time UK Hire from Q3
-
-**Prepared by:** Cedar — Business Case Writer
-**Date:** 2026-04-22
-**Scenario:** Pause the India arrangement, hire a part-time (3-day week, 0.6 FTE) UK-based Customer Education Specialist from Q3 at £28,000 FTE pro-rata.
-
----
-
-## Summary
-
-This option introduces a part-time UK hire from Q3, drawing on the £26k–£30k FTE salary band that attracts transitioning customer success and support professionals. It is a cost-effective bridge between India continuation (Alt C) and full-time UK hire (Alt A/B), with a built-in path to full-time if the hire performs well.
-
----
-
-## Cost Breakdown
-
-| Item | Monthly | Period | Total |
-|------|---------|--------|-------|
-| India hire | £790 | May–Jun (2 months) | £1,580 |
-| Claude Max | £100 | May–Jun (2 months) | £200 |
-| Articulate 360 | TBC | May–Jun (2 months) | TBC |
-| Omniplex (2 licences) | TBC | May–Jun | TBC |
-| UK hire (part-time, 3 days) | ~£1,400 | Jul–Dec (6 months) | ~£8,400 |
-| Articulate 360 | TBC | Jul–Dec (6 months) | TBC |
-| Omniplex (3 licences, post-hire) | TBC | Jul–Dec | TBC |
-
-*£1,400/month = £28,000 FTE × 0.6 ÷ 12.*
-*Claude Max dropped from July — hire is in post.*
-
-**Estimated full-year total (excl. TBC lines): ~£10,180**
-
----
-
-## Salary Range Breakdown
-
-| FTE Salary | Monthly (3 days) | Annual (3 days) | Full-year total (excl. TBC) |
-|-----------|-----------------|-----------------|----------------------------|
-| £26,000 | ~£1,300 | ~£7,800 | ~£9,580 |
-| £28,000 | ~£1,400 | ~£8,400 | ~£10,180 |
-| £30,000 | ~£1,500 | ~£9,000 | ~£10,780 |
-
----
-
-## Comparison Across Options
-
-| Option | Annual cost (excl. TBC) | Notes |
-|--------|------------------------|-------|
-| Alt C — India (correct rate) | ~£6,905 | Remote, timezone risk, no UK team |
-| Alt D — Part-time UK Q3 | ~£10,180 | UK-based, transitioning profile, path to FT |
-| Alt A — Full-time UK Q3 (floor) | ~£19,780 | Experienced producer, full throughput |
-| Alt B — Full-time UK Q3 (Ivy range) | ~£22,030 | Broader candidate pool |
-
----
-
-## Considerations
-
-- Candidate profile: CS or support professional (1–2 years) transitioning into content/education. Strong customer empathy, learns tools on the job.
-- Part-time is attractive to returners, career-changers, and parents — broadens the candidate pool.
-- Throughput will be lower than full-time; scope the first 6 months accordingly.
-- Path to full-time is straightforward if the hire performs well.
-- Same Q3 recruitment timeline as Alt A/B — role should be posted this week for a July start.
-- Claude Max dropped once hire is active.
-- 2 Omniplex licences during interim; 3 licences once hire is in post.
-`;
-
 INBOX_FILES["reed-script-l1-s9-c1"] = `# Reed — Script: Raise a purchase order
 
 **Layer:** 1 — Office staff path
@@ -14948,14 +14529,7 @@ function openInboxFile(key) {
     'ivy-induction': { num: 'Ivy — People', title: 'Enablement Specialist Induction Plan v3' },
     'ivy-jd-academy': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Description' },
     'ivy-jd-advert': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Advert' },
-    'cedar-resource-proposal-v3': { num: 'Cedar — Business Case', title: 'Enablement Team — Resource & Tooling Proposal V3 (Recommended)' },
-    'biz-case-draft': { num: 'Cedar — Business Case', title: 'Enablement Team — Resource & Tooling Proposal (Draft)' },
-    'biz-case-va-ftuk-q3': { num: 'Cedar — Business Case', title: 'Alternative A — Full-time UK hire from Q3' },
-    'biz-case-vb-ftuk-q3': { num: 'Cedar — Business Case', title: 'Alternative B — Full-time UK hire from Q3 (higher salary)' },
-    'biz-case-vc-india': { num: 'Cedar — Business Case', title: 'Alternative C — Continue India hire' },
-    'ivy-biz-case-advisory': { num: 'Ivy — People', title: 'People Advisory — Enablement Resource Business Case' },
-    'ivy-parttime-advisory': { num: 'Ivy — People', title: 'People Advisory — Part-Time UK Hire Viability' },
-    'biz-case-vd-ptuk-q3': { num: 'Cedar — Business Case', title: 'Alternative D — Part-time UK hire from Q3' }
+    'cedar-stack-modernisation': { num: 'Cedar — Business Case', title: 'Enablement Stack Modernisation — Business Case' }
   };
   var lbl = labels[key] || { num: 'Owners Inbox', title: key };
   document.getElementById('panelNum').textContent = lbl.num;

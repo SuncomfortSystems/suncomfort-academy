@@ -427,9 +427,9 @@
     <div id="view-academy" class="view active">
       <div class="page-heading"><h1>Academy</h1><p>Course scripts organised by series</p></div>
       <div class="stats-row">
-        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">22</div><div class="stat-label">Series</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">109</div><div class="stat-label">Courses</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">432</div><div class="stat-label">Total Minutes</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">23</div><div class="stat-label">Series</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">115</div><div class="stat-label">Courses</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">456</div><div class="stat-label">Total Minutes</div></div>
         <div class="stat-card"><div class="stat-value" style="color:var(--blue2)">9</div><div class="stat-label">Characters</div></div>
       </div>
       <div id="layer-0" class="section-heading" style="margin-top:24px">Layer 0 — Universal</div>
@@ -740,6 +740,20 @@
           <div class="course-card" onclick="openInboxFile('reed-script-l2-s4-c7')"><div class="course-num">Course 7</div><div class="course-title">Configure the statement portal</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l2-s4-c8')"><div class="course-num">Course 8</div><div class="course-title">Set up online payment integrations</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l2-s4-challenge')"><div class="course-num">Challenge</div><div class="course-title">Ready to raise your first invoice</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+        </div>
+      </div>
+      <div id="l2-s5" class="series-block">
+        <div class="series-header" style="background:#00695c">
+          <div><h2>Layer 2 — Series 5</h2><div class="series-meta">Proposals and sales setup — opportunity pipelines, cover pages, option templates, finance and grant templates, communications, and proposal portal (Sales+ accounts)</div></div>
+          <div class="series-count">5 courses + challenge</div>
+        </div>
+        <div class="course-grid">
+          <div class="course-card" onclick="openInboxFile('reed-script-l2-s5-c1')"><div class="course-num">Course 1</div><div class="course-title">Configure opportunity pipelines and templates</div><div class="course-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l2-s5-c2')"><div class="course-num">Course 2</div><div class="course-title">Build a cover page and option templates</div><div class="course-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l2-s5-c3')"><div class="course-num">Course 3</div><div class="course-title">Set up finance templates and grant templates</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l2-s5-c4')"><div class="course-num">Course 4</div><div class="course-title">Configure proposal and acceptance communications</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l2-s5-c5')"><div class="course-num">Course 5</div><div class="course-title">Configure the proposal portal</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l2-s5-challenge')"><div class="course-num">Challenge</div><div class="course-title">First proposal ready to send</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
     </div>
@@ -13782,6 +13796,840 @@ Series 4 is complete. SunComfort's invoicing and finance infrastructure is confi
 
 None — challenge content is drawn entirely from configuration verified across C1 through C8.
 `;
+INBOX_FILES["reed-script-l2-s5-c1"] = `# Configure opportunity pipelines and templates
+
+**Series:** Proposals and sales setup | **Course:** 1 of 6 | **Duration:** 5 min | **Audience:** Decision makers / administrators
+
+---
+
+**Learning objectives**
+
+1. Explain what opportunities and pipelines are and why they underpin the proposal process.
+2. Set the first opportunity number in Commusoft.
+3. Create the three SunComfort opportunity pipelines with their stages, rotting days, proposal blocks, automations, and after-acceptance tracking.
+4. Create the four opportunity templates and link each to the correct pipeline.
+5. Add cancel and reject reasons to support loss analysis reporting.
+
+---
+
+**Target audience:** This course is part of the Proposals and sales setup series, which is available to Sales+ accounts. The learner is Sarah Mitchell, Managing Director of SunComfort Systems, who is building her company's proposals and sales infrastructure in Commusoft. Although the scenario follows Sarah's configuration journey, you are setting up your own account as you work through each step. Every decision Sarah makes reflects the logic you apply to your own pipelines, templates, and reasons.
+
+**Assumed starting point:** You have a Commusoft Sales+ account and administrator access. No opportunity pipelines, templates, or cancel/reject reasons have been created yet. Customer records and the chart of accounts are already in place.
+
+**Main objective beyond the learning objectives:** By the end of this course, SunComfort's opportunity tracking infrastructure exists and is correctly configured. Every type of enquiry Sarah's team receives — a homeowner asking about solar, a family exploring heat pumps, a commercial client needing backup power — is captured in the right pipeline, progresses through the right stages, and cannot reach the proposal stage before the information needed to build an accurate proposal has been gathered. This is the foundation everything else in the series is built on.
+
+---
+
+**Characters:** Sarah Mitchell (Managing Director, SunComfort Systems) | Clint (Commusoft guide)
+
+**Scenario:** Sarah is working through her Commusoft Sales+ configuration. Before her team can build and send a single proposal, she needs to create the pipelines that define how opportunities move from first contact to accepted proposal, and the templates that structure each type of survey and the opportunity it creates.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Sarah Mitchell (administrator)
+- **Customer record:** None required for this course
+- **Existing data:** None — pipelines and templates are created from scratch
+- **Assets required:** SunComfort pipeline stage and automation reference data
+
+---
+
+## What opportunities and pipelines are
+
+An opportunity in Commusoft is a potential sale. It might be a homeowner who called after seeing a SunComfort van, a business that submitted an enquiry form, or a referral from a previous customer. Each opportunity moves through a set of defined stages — from first contact through survey, proposal, and on to acceptance.
+
+A pipeline is the stage structure that governs that journey. It tells Commusoft what stages exist, how long an opportunity can sit in each stage before it flags as stale, and whether sending a proposal is allowed at that point.
+
+The reason pipelines matter before you build a single proposal is that proposals are gated by pipeline stage. Until an opportunity reaches the right stage, the system prevents a proposal from being sent. This is not a restriction — it is a protection. It means your team cannot send an inaccurate proposal before the survey is complete and the information needed to price the job correctly has been captured.
+
+SunComfort operates three pipelines: one for residential solar installations, one for residential heat pump installations, and one for commercial solar and power work. Each reflects the distinct journey those customers take and the compliance steps involved along the way.
+
+---
+
+## Setting the first opportunity number
+
+Navigate to Settings, then Opportunities, then First Opportunity Number.
+
+Sarah sets this to 1001. The logic is the same as the first invoice number: this is the reference that appears on every opportunity record and on every proposal. Starting at 1001 keeps it consistent with SunComfort's customer account numbering and gives the references a professional appearance from the first enquiry.
+
+Once you save this setting, Commusoft increments it automatically with each new opportunity. You do not need to manage it again.
+
+---
+
+## Creating the three pipelines
+
+Navigate to Settings, then Opportunities, then Opportunity Pipelines. Select Add Pipeline to begin.
+
+**Pipeline 1 — Residential Solar Installation**
+
+This pipeline handles all domestic solar PV enquiries. Create the following stages in order.
+
+Solar Lead Created has a rotting threshold of three days and proposals are blocked. This is the entry point for every residential solar enquiry. The three-day rotting threshold means if nobody acts on the lead within three days, it flags in the pipeline view. Proposals are blocked because the survey has not yet happened.
+
+Survey Booked has a rotting threshold of seven days and proposals are blocked. The customer has agreed to a survey appointment, but nothing has been assessed yet.
+
+Survey Complete — Awaiting Proposal has a rotting threshold of three days and proposals are blocked. The surveyor has been and the required custom fields — roof orientation, estimated system size, and DNO application type — are captured at this stage. Proposals remain blocked until the opportunity moves forward.
+
+Proposal Sent has a rotting threshold of seven days. Proposals are now permitted. The opportunity sits here while the customer considers the proposal.
+
+Awaiting Customer Response has a rotting threshold of five days. This stage follows the initial proposal delivery and tracks whether the customer has engaged.
+
+Proposal Accepted has no rotting threshold. The sale is confirmed.
+
+DNO Approval Pending has a rotting threshold of fourteen days. This tracks the grid connection notification stage after acceptance.
+
+Now configure the automations. When an opportunity enters Solar Lead Created, Commusoft notifies Natalie Fox and assigns the opportunity to Gary Stone. When it moves to Survey Booked, the system sends the survey confirmation email to the customer. When it moves to Proposal Sent, the system sends the proposal email containing the portal link. When the opportunity reaches Proposal Accepted, Commusoft sends the acceptance email to the customer and creates a scheduled activity for Sophie Bennett to confirm next steps. When it moves to DNO Approval Pending, the system notifies Maria Rodriguez.
+
+Enable the after-acceptance tracking for this pipeline. Turn on deposit unpaid, jobs not scheduled, and finance pending. These flags appear on the opportunity record the moment it reaches Proposal Accepted, giving the operations team a clear view of what still needs to happen before the installation can be booked.
+
+Also add the custom fields required at two key stages. At Survey Complete — Awaiting Proposal, add roof orientation, estimated system size, and DNO application type. At Proposal Sent, add proposal value and finance option offered. These fields ensure the right information is captured at the right moment.
+
+**Pipeline 2 — Residential Heat Pump Installation**
+
+Create the following stages.
+
+Heat Pump Lead Created, three days rotting, proposals blocked. Survey Booked, seven days, proposals blocked. Survey Complete — Heat Loss Done, three days, proposals blocked. BUS Grant Check, three days, proposals blocked. Proposal Sent, seven days. Awaiting Customer Response, five days. Proposal Accepted. MCS Registration Pending, seven days.
+
+The BUS Grant Check stage is specific to heat pump work. Before a proposal is sent, Natalie Fox confirms the customer's EPC rating and eligibility for the £7,500 Boiler Upgrade Scheme grant. An automation fires when the opportunity enters this stage, notifying Natalie to complete the eligibility check. Only once the check is done and the opportunity moves forward can a proposal be sent.
+
+Configure automations following the same pattern as the solar pipeline. Entry to the lead stage notifies Natalie and assigns Gary. Survey Booked fires the survey confirmation. Proposal Sent fires the proposal email. Proposal Accepted fires the acceptance email and creates an activity for Sophie. Enable the same three after-acceptance tracking flags: deposit unpaid, jobs not scheduled, finance pending.
+
+**Pipeline 3 — Commercial Solar and Power**
+
+Commercial opportunities involve higher values and require tighter controls on who can move the opportunity between key stages.
+
+Create the following stages.
+
+Commercial Lead Created, five days rotting, proposals blocked. Site Survey Booked, seven days, proposals blocked. Site Survey Complete, five days, proposals blocked. Proposal in Preparation, five days, proposals blocked — only a sales manager or director can move an opportunity out of this stage. Proposal Sent, fourteen days — only a sales manager or director can move an opportunity into this stage. Negotiation, seven days. Won — Contract Setup, seven days — a sales manager, director, or owner can move an opportunity into this stage. Lost is the terminal stage for opportunities that did not convert.
+
+The stage-movement restrictions on this pipeline reflect the higher financial stakes in commercial work. A junior team member cannot inadvertently send a commercial proposal or mark a deal as won — those actions require a more senior sign-off.
+
+Configure automations. When Commercial Lead Created is entered, assign Gary Stone and notify Stephen Carter. When Proposal Sent is entered, send the commercial proposal email. When Won — Contract Setup is entered, send the acceptance email and create an activity for Emma Clarke to begin the contract setup process. Enable all three after-acceptance tracking flags.
+
+---
+
+## Creating the four opportunity templates
+
+Navigate to Settings, then Opportunities, then Opportunity Templates. Select Add Template for each of the following.
+
+Opportunity templates define the structure of each type of survey and the opportunity it generates. They are not the proposal itself — they are the scaffold that ensures every opportunity of a given type starts with the right information, the right mobile experience for the surveyor, and the right attachments ready to include.
+
+**Template 1 — Domestic Solar PV**
+
+Set the job description to Solar Survey. Set the pipeline to Residential Solar Installation.
+
+Configure expiry rules as follows: the opportunity expires fourteen days after creation if no proposal has been sent, thirty days after the proposal is sent if the customer has not responded, and seven days after expiry if still unresolved.
+
+Add the opportunity notes prompt covering roof orientation, shading, meter and consumer unit location, customer tariff, interest in an EV charger or battery, and a reminder to capture photos during the visit.
+
+Set the mobile experience to Solar Survey Arrive for the arrival prompt and Domestic Solar PV Survey for the survey questions. The surveyor sees this on the Commusoft mobile app during the visit.
+
+Attach the SunComfort Solar Proposal Terms and Conditions PDF and the MCS Consumer Code summary PDF. These travel with the proposal automatically.
+
+**Template 2 — Domestic Heat Pump**
+
+Set the job description to Heat Pump Survey. Set the pipeline to Residential Heat Pump Installation.
+
+Use the same expiry rules as the Domestic Solar PV template.
+
+The opportunity notes prompt covers heat loss calculation, existing heating system type and age, radiator sizes, hot water cylinder details, EPC rating, BUS grant eligibility, and a reminder to capture photos.
+
+Set the mobile experience to Heat Pump Survey Arrive and Domestic Heat Pump Survey.
+
+Attach the Heat Pump Terms and Conditions PDF and the Government grant information sheet.
+
+**Template 3 — Commercial Generator**
+
+Set the job description to Generator Site Survey. Set the pipeline to Commercial Solar and Power.
+
+Adjust the expiry rules: twenty-one days if no proposal is sent, thirty days after the proposal is sent, fourteen days post-expiry.
+
+The opportunity notes prompt covers critical load assessment, site access, fuel storage requirements, transfer switch type, planning permission status, noise restrictions, and photos.
+
+Set the mobile experience to Commercial Survey Arrive and Commercial Generator Survey.
+
+Attach the Commercial Terms and Conditions and the generator specification sheets.
+
+**Template 4 — Commercial Solar PV**
+
+Set the job description to Solar Survey. Set the pipeline to Commercial Solar and Power.
+
+Use the same expiry rules as the Commercial Generator template.
+
+The opportunity notes prompt covers roof or ground mount type, annual energy consumption, DNO requirements including export limitation, battery storage interest, SEG eligibility, and photos.
+
+Set the mobile experience to Commercial Survey Arrive and Commercial Solar PV Survey.
+
+Attach the Commercial Terms and Conditions and the MCS Consumer Code for commercial installations.
+
+---
+
+## Adding cancel and reject reasons
+
+Navigate to Settings, then Opportunities. Add cancel reasons and reject reasons separately.
+
+Cancel reasons apply when an opportunity closes before a proposal was ever sent. The customer did not reach that point — perhaps they went cold, the property was unsuitable, or the enquiry was a duplicate. Sarah adds all nineteen cancel reasons, covering customer-driven outcomes such as going with another provider or no longer being contactable, and internal outcomes such as the opportunity being created in error or the property being unsuitable for installation.
+
+Reject reasons apply when a customer received a proposal and chose not to accept it. The twelve reject reasons cover price sensitivity, competitive pressure, timing, and a change in the customer's personal circumstances — including moving or selling the property.
+
+Both sets of reasons feed directly into the loss analysis reporting in Commusoft. Over time, they show Sarah whether she is losing business on price, on timing, or on factors outside her control. That insight shapes how she trains her sales team and how she structures future proposals.
+
+---
+
+**Reflection**
+
+Sarah creates a Residential Solar opportunity. The pipeline is configured with proposals blocked at the Survey Booked stage. A new office administrator tries to send a proposal while the opportunity is at Survey Booked. What happens?
+
+- The proposal is sent as normal.
+- The system prevents the proposal from being sent until the opportunity moves to a stage where proposals are allowed. ✓
+- The administrator is notified but the proposal still sends.
+
+*Feedback: Pipeline stage rules can block proposals from being sent until the opportunity has progressed through the required stages. This prevents premature proposals from going out before the survey is complete and the information needed to build an accurate proposal has been captured. The block is not an error message to work around — it is the system doing exactly what Sarah configured it to do.*
+
+---
+
+## Summary
+
+You have set the first opportunity number, created three pipelines with stages, rotting thresholds, proposal blocks, automations, and after-acceptance tracking, built four opportunity templates linked to those pipelines, and added cancel and reject reasons. SunComfort can now capture every type of enquiry, route it through the correct process, and ensure the sales team cannot send a proposal before the conditions for doing so have been met. The next course builds the proposal content itself.
+
+---
+
+**Open items**
+
+All content verified against HC articles 216976 (opportunity pipelines) and 216978 (opportunity templates).
+`;
+
+INBOX_FILES["reed-script-l2-s5-c2"] = `# Build a cover page and option templates
+
+**Series:** Proposals and sales setup | **Course:** 2 of 6 | **Duration:** 5 min | **Audience:** Decision makers / administrators
+
+---
+
+**Learning objectives**
+
+1. Describe how cover pages, option templates, and add-on templates combine to form a complete proposal.
+2. Configure proposal branding in Commusoft.
+3. Build the four SunComfort cover page templates in their correct folders using the proposal builder.
+4. Build the six option templates in their correct folders with accurate line items and VAT treatment.
+5. Build the four add-on templates with correct pricing and applicable conditions.
+
+---
+
+**Target audience:** This course is part of the Proposals and sales setup series, available to Sales+ accounts. Sarah Mitchell, Managing Director of SunComfort Systems, is continuing her account configuration. You are building your own proposal content layer as you follow Sarah's steps. Every template you create here is what your customers will read, review, and base their buying decision on.
+
+**Assumed starting point:** You have completed Course 1. The three pipelines and four opportunity templates are in place. Proposal branding, cover page templates, option templates, and add-on templates have not yet been created.
+
+**Main objective beyond the learning objectives:** By the end of this course, SunComfort has a complete library of branded, structured proposal content. When a salesperson generates a proposal from an opportunity, they select the correct cover page template and the correct option template, and the proposal document is assembled automatically — branded, priced, and ready for the customer to read and accept. No reformatting, no manual line-item entry, no VAT miscalculations.
+
+---
+
+**Characters:** Sarah Mitchell (Managing Director, SunComfort Systems) | Clint (Commusoft guide)
+
+**Scenario:** Sarah's pipelines and templates are in place. Now she turns to the content of the proposal — what the customer actually receives. She works through the branding settings, the cover page templates, the option templates, and the add-on templates that make up SunComfort's full proposal library.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Sarah Mitchell (administrator)
+- **Customer record:** None required
+- **Existing data:** Pipelines and opportunity templates from Course 1
+- **Assets required:** SunComfort cover page structure, option template line items, add-on template details
+
+---
+
+## How the proposal is structured
+
+A Commusoft proposal is assembled from three distinct layers.
+
+The cover page template is the branded document wrapper. It contains every page the customer sees — the cover, the company introduction, the system design pages, the terms and conditions, and the next steps. It is built in the proposal builder using content blocks, and it uses dynamic tags to pull in customer-specific data automatically.
+
+The option template is the pricing section. It is embedded into the cover page at the relevant point and contains all the line items, VAT rates, and finance availability for a given installation type. The customer selects from the options you offer — Standard, Premium, or whichever configurations you have built.
+
+The add-on template is a set of optional extras the customer can add to their selected option before they accept. Add-ons are presented separately so the customer sees the base price clearly before deciding whether to include them.
+
+Together, these three layers form the complete proposal document. You configure them separately so they can be mixed and matched — the same Battery Storage Upgrade add-on template works across multiple solar proposal types without duplication.
+
+---
+
+## Configuring proposal branding
+
+Navigate to Settings, then Branding, then Proposal branding.
+
+Sarah sets the default text style to Montserrat 14 Medium. This becomes the default for every proposal SunComfort generates. Without this step, the proposal builder uses a generic default style, and every proposal would need to be reformatted manually to match the SunComfort brand. Setting it here means every new proposal inherits the correct typography from the start.
+
+Take a few moments to review the other branding options available — block styles, heading styles, and colour settings. Apply any that match your own brand identity before you begin building cover page templates, because these settings flow through into the builder automatically.
+
+---
+
+## Building cover page templates
+
+Navigate to Settings, then Proposals, then Cover page templates.
+
+Before you create a template, check the Marketplace. Commusoft offers a library of pre-built cover page templates you can import and customise. If a pre-built template closely matches one of your installation types, importing and adapting it is significantly faster than building from scratch. Sarah reviews the Marketplace options and imports what is available before building her four templates.
+
+The proposal builder uses six block types: Title, Text Area, Image, Video, Table, and Page Break. Dynamic tags — such as the customer's name, address, proposal date, and system size — auto-populate when the proposal is generated, so you build the template once and the details fill in correctly for every customer.
+
+Create four templates, organised into two folders.
+
+Create a folder called Solar Templates and a folder called Heat Pump Templates.
+
+**Residential Solar Installation** (Solar Templates folder)
+
+Build the following eight-page structure.
+
+Page 1 is the Cover. Use a full-width image block with the SunComfort logo, then insert dynamic tags for the customer's name and address, the proposal date, the estimated system size, and a savings headline. This is the first thing the customer sees — it should feel personalised and professional.
+
+Page 2 is the Introduction. Add a Text Area block describing SunComfort's credentials: MCS certification, NICEIC registration, Trustmark membership, and Which? Trusted Trader status. These accreditations matter to residential customers making a significant purchase decision.
+
+Page 3 is Your System. Use a combination of Text Area and Image blocks to describe the scope of the installation, the equipment specified, and the roof assessment findings from the survey.
+
+Page 4 is Why Solar. Cover the annual generation estimate, the Smart Export Guarantee export tariff, the estimated payback period, and the CO2 savings figure. Use a Table block for the financial projections.
+
+Page 5 is Pricing. This is where you embed the option template. Insert a Page Break before this page to separate it cleanly from the narrative content. The option template you embed here controls the line items, VAT, and finance options the customer sees. Do not add manual pricing to this page — the option template handles it entirely.
+
+Page 6 is Finance Options. Add a Text Area block explaining the finance products available, the representative APR, and the credit broking notice. The actual finance calculator is driven by the finance template embedded in the option template.
+
+Page 7 is Terms and Conditions. Insert the full SunComfort terms text using a Text Area block. This replaces the need to attach a separate terms document for the proposal content itself.
+
+Page 8 is Next Steps. Explain what happens after the customer accepts — deposit payment, installation scheduling, and DNO notification. Use a clear, confident tone that makes the process feel straightforward.
+
+**Commercial Solar Installation** (Solar Templates folder)
+
+Build the same structure with three additions: a three-phase electrical supply section on the Your System page, an export limitation compliance note on the Why Solar page, and a commercial ROI analysis replacing the residential payback section. Replace the domestic SEG reference with the relevant commercial export arrangement.
+
+**Residential Heat Pump Installation** (Heat Pump Templates folder)
+
+Build a similar structure with installation-specific pages. Page 3 covers the heat loss summary and existing system assessment. Page 4 covers the system design — the heat pump model, the hot water cylinder, and any radiator or underfloor heating changes. Page 5 covers the BUS grant incentive and the customer's net cost. The pricing page embeds the heat pump option template. Finance and terms follow the same structure.
+
+Create a Power Templates folder, then create the fourth template.
+
+**Commercial Generator Installation** (Power Templates folder)
+
+Page 3 covers the critical load assessment. Page 4 covers the system design — the generator model, the automatic transfer switch, and the bunded fuel tank. Page 5 covers the transfer switch specification and compliance with BS 7671. The pricing page embeds the commercial generator option template. Standard commercial terms and next steps complete the document.
+
+---
+
+## Building option templates
+
+Navigate to Settings, then Proposals, then Option templates.
+
+Create three folders: Solar Templates — UK, Heat Pump Templates — UK, and Power Templates — UK.
+
+**Residential Solar Standard** (Solar Templates — UK)
+
+Add a customer display name of Residential Solar Standard and a brief description. Enter the following line items: solar panels, inverter, mounting system, DC and AC isolators, generation meter, monitoring system, surge protection, cabling and containment, labour covering two installation days, DNO application, MCS certification, and Electrical Installation Certificate. Set the VAT rate to 0% on all line items. The zero-rate VAT applies to solar panel installation on residential properties — this is a significant saving for the customer and should be clearly visible. Set the total to £11,200 inclusive of 0% VAT.
+
+**Residential Solar Premium with Battery** (Solar Templates — UK)
+
+Include all line items from the Standard option, then add a GivEnergy 9.5kWh battery, the battery mounting hardware, and the battery installation labour. Set the total to £16,000 inclusive of 0% VAT. The 0% VAT applies because the battery is installed at the same time as the solar panels. Add a note to the template: if this battery is ever offered as a standalone retrofit to a property that already has solar, 20% VAT applies and this template must not be used for that scenario.
+
+**Commercial Solar** (Solar Templates — UK)
+
+Line items include a 22kWp three-phase solar array, SolarEdge power optimisers, the inverter, mounting, cabling, G99 export limitation equipment, generation meter, MCS certification, and Electrical Installation Certificate. Set VAT to 20% and total to £28,000 excluding VAT. Commercial solar does not benefit from the residential zero-rate.
+
+**Residential Heat Pump Standard** (Heat Pump Templates — UK)
+
+The base system is a Vaillant aroTHERM Plus 10kW air source heat pump. Line items include the heat pump unit, hot water cylinder, installation labour, system commissioning, MCS certification, and Building Regulations notification. Set VAT to 5% — the reduced rate applies to energy-saving materials installed in residential properties. The total before grant is £14,500 inclusive of 5% VAT. Apply the BUS grant deduction of £7,500. The customer pays £7,000. Finance — if offered — is calculated on £7,000, not £14,500.
+
+**Residential Heat Pump Premium** (Heat Pump Templates — UK)
+
+The system is a Mitsubishi Ecodan 14kW with underfloor heating circuits, upgraded radiators throughout the property, and a three-year extended warranty. Total before grant is £21,000 inclusive of 5% VAT. BUS grant deduction of £7,500 brings the customer's cost to £13,500. Finance is calculated on £13,500.
+
+**Commercial Generator** (Power Templates — UK)
+
+Line items include a Kohler 20kW diesel generator, automatic transfer switch, bunded fuel tank, installation and commissioning, load bank test, BS 7671 compliance certification, and handover and training. VAT is 20%. Total is £8,500 excluding VAT. No finance is offered on commercial jobs — standard 30-day invoice terms apply.
+
+---
+
+## Building add-on templates
+
+Navigate to Settings, then Proposals, then Add-on templates.
+
+Create two folders: Solar Add-ons — UK and Heat Pump Add-ons — UK.
+
+**Battery Storage Upgrade** (Solar Add-ons — UK)
+
+GivEnergy 9.5kWh battery storage upgrade. Price £4,800 inclusive of 0% VAT. Add a condition note: this add-on is only applicable where the inverter specified in the selected option template is a hybrid inverter that is battery-ready. If the customer's system uses a standard string inverter, this add-on cannot be installed and must not be offered.
+
+**Annual Solar Care Plan** (Solar Add-ons — UK)
+
+Year 1 is included at no additional cost — the full plan value is £220. From Year 2 onwards the plan costs £220 per year. The plan covers an annual inspection, an updated Electrical Installation Certificate, remote diagnostics, and an annual performance report. Present this as a value add at the point of acceptance, when the customer has just committed to the installation.
+
+**Bird Proofing Package** (Solar Add-ons — UK)
+
+PV-grade stainless steel mesh installed around the full perimeter of the array to prevent birds nesting underneath the panels. Price £350 inclusive of 20% VAT. Note: bird proofing is a separate supply that is not part of the installation itself and does not qualify for the 0% VAT rate that applies to the solar installation. The 20% rate applies correctly here.
+
+**Smart Thermostat Upgrade** (Heat Pump Add-ons — UK)
+
+Nest Learning Thermostat supplied and installed. Price £280 inclusive of 5% VAT. The 5% reduced rate applies because this is installed as part of an energy-saving installation in a residential property.
+
+---
+
+**Reflection**
+
+Sarah embeds the Residential Solar Standard option template into the Residential Solar Installation cover page. A customer receives the proposal. What does the option template control within the proposal?
+
+- The branding, font, and colour scheme of the proposal.
+- The pricing section — the line items, VAT, and finance availability the customer sees and selects. ✓
+- The introduction and company credentials pages.
+
+*Feedback: Option templates define the pricing section of a proposal — the specific equipment, labour, VAT treatment, and finance options the customer is presented with and selects from. Branding is controlled in the proposal branding settings you configured earlier. The introduction and credentials content is built directly into the cover page template. Each layer does one job, which is why you configure them separately.*
+
+---
+
+## Summary
+
+You have configured proposal branding, built four cover page templates in their correct folders, created six option templates with accurate line items and VAT treatment, and added four add-on templates. SunComfort's proposal library is now complete. The next course configures the two financial instruments — consumer finance and government grants — that can be embedded in those proposals to reduce the customer's upfront cost.
+
+---
+
+**Open items**
+
+All content verified against HC articles 216998 (cover page templates), 217000 (option templates), and 216993 (add-on templates).
+`;
+
+INBOX_FILES["reed-script-l2-s5-c3"] = `# Set up finance templates and grant templates
+
+**Series:** Proposals and sales setup | **Course:** 3 of 6 | **Duration:** 4 min | **Audience:** Decision makers / administrators
+
+---
+
+**Learning objectives**
+
+1. Explain why finance and grant templates are configured as part of proposal setup.
+2. Create the two SunComfort finance templates with correct APR, term, and deposit settings.
+3. Apply the FCA credit broking compliance requirement to finance configuration.
+4. Create the two BUS grant templates with correct tax code, nominal code, and payment terms.
+5. Explain how the grant and finance calculation interact in a proposal.
+
+---
+
+**Target audience:** This course is part of the Proposals and sales setup series, available to Sales+ accounts. Sarah Mitchell is continuing the SunComfort account build. You are configuring the finance and grant settings for your own account as you follow her steps. These templates make high-value installations financially accessible to your customers — and getting the calculation order right is essential to quoting accurately.
+
+**Assumed starting point:** You have completed Courses 1 and 2. Pipelines, opportunity templates, cover pages, option templates, and add-on templates are all in place. Finance templates and grant templates have not yet been created.
+
+**Main objective beyond the learning objectives:** By the end of this course, SunComfort can present consumer finance and government grants within every relevant proposal, with the grant correctly deducted before finance is calculated. Customers see an accurate net monthly payment on their first reading of the proposal — not a figure that needs correcting after the fact.
+
+---
+
+**Characters:** Sarah Mitchell (Managing Director, SunComfort Systems) | Clint (Commusoft guide)
+
+**Scenario:** Sarah has a complete proposal content library. Now she sets up the financial instruments that make SunComfort's higher-value installations achievable for more customers. A residential solar installation at £11,200 is a significant outlay. A heat pump at £14,500 — before the grant — is even more so. Finance and grants are not afterthoughts; they are part of the proposal from the start.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Sarah Mitchell (administrator)
+- **Customer record:** None required
+- **Existing data:** Option templates from Course 2, chart of accounts with nominal code 202 in place
+- **Assets required:** Finance template APR and term data, BUS grant details
+
+---
+
+## Why these belong in the proposal setup
+
+Finance and grant templates are configured during proposal setup because they are presented to the customer inside the proposal document. The customer does not receive a separate finance document or a separate grant letter — they see one cohesive proposal that shows them the total cost, the grant deduction where applicable, the net amount they pay, and the monthly payment if they choose finance.
+
+Configuring these templates now means every salesperson on the team can include finance and grant information consistently, without manually calculating figures or estimating monthly payments. The system handles the arithmetic; your team focuses on the conversation.
+
+---
+
+## Creating finance templates
+
+Navigate to Settings, then Proposals, then Finance templates.
+
+Sarah creates two templates.
+
+**Green Energy Finance — 5 Year**
+
+Set the term to 60 months. Set the APR to 9.9% fixed. Configure three deposit options: 10%, 20%, and 25%. You can also allow the customer to enter their own deposit amount within a range of 10% to 50% if you prefer to give them more control.
+
+Add a representative example to the template. Borrowing £10,000 over 60 months at 9.9% APR results in a monthly payment of approximately £212 and a total repayable of approximately £12,720. This representative example must appear in the proposal wherever finance is offered — it is a regulatory requirement, not an optional addition.
+
+This template is best suited to the Residential Solar Standard option, where the total is lower and the customer generally prefers to minimise the total cost of credit over a shorter term.
+
+**Green Energy Finance — 10 Year**
+
+Set the term to 120 months. Set the APR to 9.9% fixed. Use the same deposit options as the 5-year template.
+
+Representative example: borrowing £10,000 over 120 months at 9.9% APR results in a monthly payment of approximately £130 and a total repayable of approximately £15,600. The 10-year term is better suited to higher-value installations where the customer's priority is the lowest possible monthly payment, even if the total cost of credit is higher.
+
+Before you save either template, read and apply the following compliance requirement.
+
+Commusoft is a credit broker, not a lender. Offering consumer finance means SunComfort must hold the appropriate FCA credit broking permission before presenting finance options to customers. If you do not yet have FCA authorisation or a relevant appointed representative agreement in place, do not activate finance templates until you do. Configuring the templates in Commusoft now is safe — but they must not appear in proposals sent to customers until SunComfort's regulatory position is confirmed.
+
+Finance is not offered on commercial jobs. Commercial clients operate on standard 30-day invoice terms. Do not embed finance templates into the Commercial Solar or Commercial Generator option templates.
+
+---
+
+## Creating grant templates
+
+Navigate to Settings, then Finance, then Grant templates.
+
+Sarah creates two templates for the Boiler Upgrade Scheme.
+
+**BUS Grant — Air Source Heat Pump**
+
+Set the grant amount to £7,500 as a fixed value. Set the tax rate to Zero Rate. Set the nominal code to 202. Set the payment terms to 30 days. Add a note that the invoice for this grant is raised on job completion and addressed to OFGEM, not to the customer.
+
+Before you save this template, verify the current BUS grant rate at gov.uk. The £7,500 figure is correct at the time this course was written, but government grant rates can change. Building a grant template on an incorrect amount creates a discrepancy between what the proposal promises and what OFGEM actually pays — which affects SunComfort's cash flow.
+
+**BUS Grant — Ground Source Heat Pump**
+
+Use the same structure: £7,500 fixed, Zero Rate, nominal code 202, 30-day terms, invoice to OFGEM on completion. Apply the same verification instruction.
+
+---
+
+## How finance and grants work together in a proposal
+
+The sequence matters. The BUS grant is applied first, reducing the customer's cost. Finance is then calculated on the net amount the customer pays — not the total installation cost.
+
+Work through an example. A customer chooses the Residential Heat Pump Standard package. The total is £14,500 inclusive of 5% VAT. The BUS grant of £7,500 applies. The customer's net cost is £7,000 — this is what they pay to SunComfort. The grant is a separate invoice from SunComfort to OFGEM, processed after the job is complete.
+
+If that customer chooses the Green Energy Finance — 10 Year option on their £7,000 net cost at 9.9% APR, the monthly payment is approximately £91. This is the figure that appears in the proposal. Not £130 — that representative example was based on a £10,000 loan. The proposal calculator uses the actual financed amount.
+
+Presenting the grant deduction and the resulting finance figure clearly is one of the most effective things SunComfort can do to make heat pump installations feel financially achievable. Customers who initially query the £14,500 headline price often find the £91 per month net-of-grant figure genuinely manageable.
+
+---
+
+**Reflection**
+
+A customer choosing the Residential Heat Pump Standard package wants to pay by finance. The total is £14,500 inclusive of 5% VAT. The BUS grant of £7,500 applies. Finance is calculated on what amount?
+
+- £14,500 — the full installation price.
+- £7,000 — the customer's net cost after the grant. ✓
+- £6,500 — the net price excluding VAT.
+
+*Feedback: Finance is calculated on the net amount the customer pays after the BUS grant is deducted. The grant is a separate invoice raised to OFGEM on job completion — it does not form part of the customer's finance agreement. The customer only borrows what they actually owe to SunComfort, which is £7,000 in this case. The VAT is already included in the £14,500 figure and does not change the grant calculation.*
+
+---
+
+## Summary
+
+You have created two finance templates covering the 5-year and 10-year Green Energy Finance products, noted the FCA compliance requirement for credit broking, and created two BUS grant templates for air source and ground source heat pumps. You have also understood how the grant deduction and finance calculation interact within a proposal. The next course configures the communications that deliver proposals to customers and confirm their acceptance.
+
+---
+
+**Open items**
+
+Finance templates verified against HC article 217002. HC articles for loan application workflow: HC 217004 (submission), HC 217006 (acceptance), HC 217008 (rejection). No HC article found for grant templates — Sara to verify current BUS grant rates at gov.uk before activating grant templates in live proposals.
+`;
+
+INBOX_FILES["reed-script-l2-s5-c4"] = `# Configure proposal and acceptance communications
+
+**Series:** Proposals and sales setup | **Course:** 4 of 6 | **Duration:** 4 min | **Audience:** Decision makers / administrators
+
+---
+
+**Learning objectives**
+
+1. Identify the three moments in the proposal process that require an automated communication.
+2. Configure the survey confirmation template for opportunity appointments.
+3. Configure the proposal confirmation email and SMS that deliver the proposal portal link.
+4. Configure the proposal acceptance email and SMS that fire when a customer accepts online.
+
+---
+
+**Target audience:** This course is part of the Proposals and sales setup series, available to Sales+ accounts. Sarah Mitchell is setting up the communications layer for SunComfort's proposal process. You are configuring the same templates for your own account. These communications are the customer-facing side of the pipeline automations you configured in Course 1 — they are what the customer actually receives at each key moment.
+
+**Assumed starting point:** You have completed Courses 1 through 3. Pipelines, templates, finance, and grants are all configured. No proposal communications have been set up yet. The proposal portal link — the [proposal_portal_url] dynamic tag — exists in Commusoft but cannot reach the customer until the proposal confirmation email is configured.
+
+**Main objective beyond the learning objectives:** By the end of this course, every customer who has a survey booked, receives a proposal, or accepts a proposal gets an automated, personalised communication at precisely the right moment. Sarah's team does not send a single manual email in the proposal process — the system handles it, consistently, at any hour.
+
+---
+
+**Characters:** Sarah Mitchell (Managing Director, SunComfort Systems) | Clint (Commusoft guide)
+
+**Scenario:** Sarah's proposal library and financial configuration are complete. She now turns to the communications that connect that configuration to the customer experience. A beautifully built proposal means nothing if the customer never receives the link. An acceptance at 9pm means nothing if the customer wakes up the next morning without confirmation.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Sarah Mitchell (administrator)
+- **Customer record:** None required
+- **Existing data:** Pipelines from Course 1 with automations referencing survey confirmation and proposal delivery emails
+- **Assets required:** SunComfort email and SMS content, dynamic tag reference
+
+---
+
+## What these communications do and why they matter
+
+Three moments in the proposal process require a communication from SunComfort to the customer.
+
+The first is when the survey appointment is confirmed. The customer has expressed interest and agreed to a visit. A prompt, professional confirmation email and SMS signal that SunComfort is organised and attentive — and they give the customer practical information about what to expect.
+
+The second is when the proposal is sent. This is the most commercially important communication in the sequence. It delivers the link that takes the customer to the proposal portal. Without it, the customer cannot view or accept the proposal.
+
+The third is when the customer accepts. At the moment they click Accept, they need confirmation that their decision has been received and that SunComfort will be in touch. Without immediate confirmation, a customer who accepts at an unusual hour may wonder whether the acceptance registered correctly.
+
+Configuring all three now means the pipeline automations you set up in Course 1 have templates to fire. The automation points to the template; the template provides the content.
+
+---
+
+## Survey confirmation
+
+Navigate to Settings, then Schedule and dispatch, then Customer opportunity confirmation templates.
+
+Create the survey confirmation template. Sarah configures a universal rule covering any opportunity template and any salesperson. This means the same confirmation fires regardless of which survey type is booked or which team member raises the opportunity.
+
+The email body includes the survey appointment date, the arrival window, the surveyor's name, and a clear statement that the survey is free and carries no obligation. This last point is particularly important for residential customers who may not have committed to anything beyond the conversation.
+
+The SMS version carries the same essential details in condensed form: the date, the arrival window, and a contact number if the customer needs to rearrange.
+
+When the Survey Booked pipeline automation fires in Course 1's configuration, it references this template. The email and SMS send automatically the moment the appointment is saved.
+
+---
+
+## Proposal delivery
+
+Navigate to Settings, then Proposals, then Proposal confirmation.
+
+This is the template that delivers the proposal portal link to the customer. It is the most important communication in the proposal process and the one that requires the most care in its configuration.
+
+Set the email subject to: Your SunComfort proposal is ready — [opportunity_description]. The dynamic tag fills in with the relevant installation type — for example, "Your SunComfort proposal is ready — Residential Solar Installation" — so the subject line is immediately recognisable to the customer.
+
+The email body should open with a short personalised greeting using the customer's first name. Summarise what the proposal contains: the system design, the equipment specification, and the pricing options. State that the proposal is valid for 30 days. Provide SunComfort's contact details — 02030 266266 and info@suncomfortsystems.co.uk — so the customer knows how to reach the team with questions. Close with the [proposal_portal_url] tag, clearly labelled as the link to view and accept the proposal online. Conclude with [opportunity_sales_person] so the email is signed by the individual who conducted the survey.
+
+The [proposal_portal_url] tag is the mechanism by which the customer reaches the proposal portal. It must be present in this email. If it is missing, the customer has no way to access the portal, and the entire online acceptance flow breaks down.
+
+The SMS version is a short-form equivalent. It reads: Hi [customer_name:firstname], your SunComfort proposal for your [opportunity_description] is ready. View and accept it here: [proposal_portal_url] — Any questions, call 02030 266266.
+
+When the Proposal Sent pipeline automation fires, it references this template. The email and SMS send automatically as the opportunity moves into the Proposal Sent stage.
+
+---
+
+## Acceptance confirmation
+
+Navigate to Settings, then Opportunities, then Proposal Acceptance Email and SMS Template.
+
+Set the email subject to: Confirmation of Your Proposal Acceptance.
+
+The email body opens with: Hi [customer_name:firstname], followed by confirmation that proposal number [opportunity_no] for [opportunity_description] has been accepted. Acknowledge the significance of the decision briefly, then reassure the customer that the team will be in touch to confirm next steps and the installation date.
+
+The SMS version reads: Hi [customer_name:firstname], your proposal #[opportunity_no] has been accepted. We'll be in touch soon to confirm next steps.
+
+This template fires automatically the moment the customer clicks Accept in the proposal portal. No manual action from the SunComfort team is required and no delay is introduced. A customer who accepts at 11pm on a Saturday receives their confirmation within seconds. This matters because a solar or heat pump installation is a significant purchase — immediate confirmation reduces the chance of doubt setting in before the next working day.
+
+---
+
+**Reflection**
+
+A customer accepts their proposal online at 11pm on a Saturday. What triggers the acceptance email?
+
+- A member of Sarah's team manually sends the email when they see the acceptance on Monday morning.
+- The acceptance email sends automatically the moment the customer clicks Accept in the proposal portal. ✓
+- The email is queued and sends the next business day.
+
+*Feedback: The proposal acceptance template fires automatically when the customer accepts online, regardless of the time or day. This means the customer receives confirmation immediately — which is important given that a solar or heat pump installation represents a significant purchase decision. Immediate confirmation builds confidence and reduces the chance of the customer having second thoughts before Monday morning. The SunComfort team sees the acceptance and the associated activity when they next log in.*
+
+---
+
+## Summary
+
+You have configured the survey confirmation template that fires when an appointment is booked, the proposal confirmation email and SMS that deliver the portal link to the customer, and the acceptance confirmation that fires the moment a customer accepts online. Every customer-facing communication in the proposal process is now automated and personalised. The next course configures the proposal portal itself — what the customer sees when they click the link.
+
+---
+
+**Open items**
+
+No HC articles found for proposal confirmation and acceptance email settings. Sara to check Help Centre for proposal communication articles if needed for production reference.
+`;
+
+INBOX_FILES["reed-script-l2-s5-c5"] = `# Configure the proposal portal
+
+**Series:** Proposals and sales setup | **Course:** 5 of 6 | **Duration:** 3 min | **Audience:** Decision makers / administrators
+
+---
+
+**Learning objectives**
+
+1. Describe what the proposal portal is and how the customer accesses it.
+2. Explain how the portal is activated through the combination of configurations completed in earlier courses.
+3. Walk through the customer experience from clicking the proposal link to accepting online.
+4. Identify what Sarah sees in Commusoft immediately after a customer accepts through the portal.
+
+---
+
+**Target audience:** This course is part of the Proposals and sales setup series, available to Sales+ accounts. Sarah Mitchell is completing the customer-facing side of SunComfort's proposal setup. You are reviewing the same portal experience for your own account. This course ties together the configurations from Courses 2 and 4 and shows you what they produce for the customer.
+
+**Assumed starting point:** You have completed Courses 1 through 4. Pipelines, templates, finance templates, grant templates, and all proposal communications are configured. A proposal has not yet been generated or sent.
+
+**Main objective beyond the learning objectives:** By the end of this course, Sarah has a clear picture of the end-to-end customer journey through the proposal portal, and she understands what the after-acceptance state looks like in Commusoft for her operations team. The portal is not a separate system to configure in isolation — it is the output of everything built in this series. This course confirms that the output is correct.
+
+---
+
+**Characters:** Sarah Mitchell (Managing Director, SunComfort Systems) | Clint (Commusoft guide)
+
+**Scenario:** Sarah has built everything — the pipelines, the proposal content, the finance and grant templates, the communications. Now she steps into the customer's shoes. She follows the journey a customer takes from receiving the proposal email to accepting online, and then steps back into the operations view to see what Commusoft shows her team next.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Sarah Mitchell (administrator)
+- **Customer record:** None required for configuration; demo opportunity recommended for walkthrough
+- **Existing data:** All configurations from Courses 1 through 4
+- **Assets required:** None additional
+
+---
+
+## What the proposal portal is
+
+The proposal portal is the online destination the customer reaches when they click the proposal link in the email Sarah's team sends them. It is a secure, branded web page that presents the full proposal — not a PDF attachment, not a form, but an interactive document the customer can read, explore, and respond to directly.
+
+Through the portal, the customer sees every page of the cover page template: the company introduction, the system design, the pricing options, and the next steps. They can compare the Standard and Premium options if both are offered. They can select any add-ons they want. If finance is available, they can use the finance calculator to see their monthly payment based on the option and deposit they choose. When they are ready, they accept — and everything that needs to happen in Commusoft happens automatically.
+
+The portal is not a separate system that requires its own login or setup. It is a capability that is unlocked by the configurations already in place.
+
+---
+
+## How the portal is activated
+
+The portal URL is generated automatically by Commusoft the moment a proposal is created from an opportunity. You do not create or manage portal URLs manually.
+
+That URL reaches the customer through the Proposal Confirmation email configured in Course 4. The [proposal_portal_url] dynamic tag in that email becomes the live link to the customer's specific proposal.
+
+What the customer sees when they arrive at that link is determined by the cover page template built in Course 2 and the proposal branding settings configured at the start of that course. The Montserrat 14 Medium typography, the SunComfort logo, the eight-page structure — all of it flows through automatically. The portal is, in effect, the cover page template rendered as a live interactive experience rather than a static document.
+
+Because the portal's appearance and the delivery of its URL both depend on configurations already completed, you do not need to take any additional setup steps in this course. This course is about confirming that the output of those configurations is what you expect — and understanding the customer journey that results.
+
+---
+
+## The customer experience through the portal
+
+A customer receives the proposal email. The subject line reads: Your SunComfort proposal is ready — Residential Solar Installation. They click the link.
+
+The portal opens on the cover page: their name, their address, the proposal date, the estimated system size, and a savings headline. It feels personalised because it is — the dynamic tags populated those details from the opportunity record when the proposal was generated.
+
+They read through the introduction, the system design pages, and the Why Solar section. On the pricing page, they see two options: Residential Solar Standard at £11,200 inclusive of 0% VAT, and Residential Solar Premium with Battery at £16,000. The zero-rate VAT is shown clearly alongside each line item. Below the options, the Battery Storage Upgrade add-on is presented separately.
+
+They look at the finance calculator. For the Standard option, with a 10% deposit and the 10-year term, the calculator shows a monthly payment based on the net financed amount. The representative APR and example figures from the finance template appear alongside.
+
+The customer selects the Standard option, declines the battery add-on, and chooses to pay in full rather than by finance. They click Accept.
+
+The moment they click, three things happen simultaneously. The acceptance email fires to their inbox — their confirmation of proposal number [opportunity_no] for Residential Solar Installation. The opportunity stage in Commusoft updates from Awaiting Customer Response to Proposal Accepted. And the after-acceptance tracking flags update on the opportunity record.
+
+---
+
+## After acceptance — what Sarah sees
+
+When Sarah or any team member opens the opportunity record the next morning, the pipeline shows the opportunity at Proposal Accepted. The stage moved without any manual action.
+
+The after-acceptance tracking section of the opportunity shows three flags. Deposit not yet paid — the customer has accepted but has not yet made the deposit payment. Installation job not yet scheduled — the operations team have not yet booked the installation date. Finance pending — in this case, not applicable, because the customer chose to pay in full.
+
+These flags are the bridge between the sales pipeline and the operations team. They tell Sophie Bennett — who received a scheduled activity from the pipeline automation — exactly what she needs to do to move the installation forward. She does not need to read through the full opportunity record to find out what is outstanding. The tracking flags surface it immediately.
+
+The pipeline moves forward from Proposal Accepted to DNO Approval Pending once Sarah confirms that the G98 notification for the grid connection has been submitted. From that point, the sales pipeline hands off cleanly to the installation workflow.
+
+---
+
+**Reflection**
+
+A customer receives the proposal email, clicks the portal link, selects the Residential Solar Standard option, adds the Battery Storage Upgrade add-on, and accepts. What happens in Commusoft immediately?
+
+- Sarah receives an email and must manually update the opportunity stage.
+- The opportunity moves to Proposal Accepted automatically, the acceptance email fires, and the after-acceptance tracker shows the deposit and job scheduling status. ✓
+- The system marks the proposal as viewed but waits for Sarah to confirm the acceptance before updating.
+
+*Feedback: Accepting through the portal triggers the full automation chain: the opportunity stage updates to Proposal Accepted, the acceptance email sends to the customer, and the pipeline's after-acceptance tracking flags the outstanding deposit, job scheduling, and finance approval items. The sales team can see exactly what needs to happen next without checking individual records. No manual stage update is required — the configuration you put in place handles it.*
+
+---
+
+## Summary
+
+The proposal portal is the customer-facing output of everything configured in this series. It is activated by the proposal URL generated from the opportunity, delivered by the confirmation email from Course 4, and styled by the cover page template and branding settings from Course 2. When a customer accepts through the portal, the opportunity stage updates automatically, the acceptance email fires immediately, and the after-acceptance tracking gives the operations team a clear view of what happens next. The final course is a practical challenge that tests whether the full configuration holds up in a real scenario.
+
+---
+
+**Open items**
+
+No HC articles found for proposal portal and self-service acceptance settings. Sara to check Help Centre for portal configuration articles if needed for production reference.
+`;
+
+INBOX_FILES["reed-script-l2-s5-challenge"] = `# Challenge: First proposal ready to send
+
+**Series:** Proposals and sales setup | **Course:** 6 of 6 | **Duration:** 3 min | **Audience:** Decision makers / administrators
+
+---
+
+**Learning objectives**
+
+1. Trace a residential solar opportunity from first enquiry through survey to proposal acceptance.
+2. Identify which pipeline automations fire at each stage transition.
+3. Confirm that the after-acceptance tracking correctly reflects what the operations team needs to do next.
+
+---
+
+**Target audience:** This course is the challenge for the Proposals and sales setup series, available to Sales+ accounts. This is not a configuration course — the configuration is complete. This course tests whether everything built across Courses 1 through 5 works as a connected system when a real scenario runs through it. You follow Sarah Mitchell as a guide, but you should be thinking about how each step maps to your own configuration.
+
+**Assumed starting point:** You have completed Courses 1 through 5. All pipelines, templates, finance, grants, communications, and portal settings are configured. SunComfort is ready to handle its first opportunity end to end.
+
+**Main objective beyond the learning objectives:** By the end of this course, you can trace a complete opportunity journey — from the moment a customer calls in to the moment the operations team receives their handover — and you can explain which part of the configuration drives each outcome. The series is complete and the system is ready to use.
+
+---
+
+**Characters:** Sarah Mitchell (Managing Director, SunComfort Systems) | Clint (Commusoft guide)
+
+**Scenario:** A real enquiry arrives. Clint walks Sarah through three moments in the journey — the initial enquiry, the proposal build and send, and the acceptance and handover. At each moment, Sarah navigates what the system does and why. Clint closes each scenario with the key insight.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Sarah Mitchell (administrator) and Natalie Fox (sales coordinator) for the opportunity creation step
+- **Customer record:** James Whitfield — new residential customer
+- **Existing data:** All configurations from Courses 1 through 5
+- **Assets required:** None additional
+
+---
+
+## The survey appointment
+
+**Clint:** James Whitfield has just called SunComfort. He spotted a SunComfort van in his street and wants to know about solar panels for his home. Natalie Fox picks up the call and raises a new opportunity in Commusoft, selecting the Domestic Solar PV template. Sarah, what does selecting that template set up automatically?
+
+**Sarah:** Selecting the Domestic Solar PV template links the opportunity to the Residential Solar Installation pipeline. The survey job description is set to Solar Survey automatically. The opportunity notes section pre-populates with the prompts Natalie needs to cover with James — roof orientation, shading, the meter and consumer unit location, his current tariff, and whether he is interested in a battery or EV charger. The mobile experience is set to Solar Survey Arrive and Domestic Solar PV Survey, so Gary Stone's app shows the right prompts when he arrives for the survey. The attachments — the Solar Proposal Terms and Conditions and the MCS Consumer Code summary — are linked to the opportunity and will travel with the proposal when it is sent.
+
+**Clint:** Exactly. And at this point, the opportunity sits at Solar Lead Created. Proposals are blocked. Natalie cannot send a proposal today — the system will not allow it, because the survey has not happened yet and the information needed to build an accurate proposal has not been gathered. The pipeline automation fires: Natalie Fox is notified of the new lead, and the opportunity is assigned to Gary Stone. James is in the system and the process has started — correctly.
+
+---
+
+## Building and sending the proposal
+
+**Clint:** It is now two weeks later. Gary completed the survey last Tuesday. He recorded all the required custom fields at the Survey Complete — Awaiting Proposal stage: roof orientation, estimated system size, and the DNO application type. The opportunity has moved forward to Survey Complete — Awaiting Proposal and the three-day rotting clock is ticking. Sarah logs in and sees the opportunity flagged. She opens it and builds the proposal. Walk me through what she selects.
+
+**Sarah:** She opens the opportunity and starts a new proposal. She selects the Residential Solar Installation cover page template. On the pricing page, she embeds the Residential Solar Standard option template. James mentioned during the survey that he might be interested in a battery in a few years, so she adds the Battery Storage Upgrade add-on to the proposal — he can choose to include it or not when he reviews the portal. She enables both finance options: Green Energy Finance — 5 Year and Green Energy Finance — 10 Year. The proposal is now built. She sends it.
+
+**Clint:** The moment she sends, the pipeline automation fires. The Proposal Confirmation email goes to James — subject line "Your SunComfort proposal is ready — Residential Solar Installation" — with the portal link embedded. The SMS fires as a short version. The opportunity moves to Awaiting Customer Response. The rotting clock is five days. If James has not opened or responded by then, the pipeline flags the opportunity for follow-up. Everything Sarah configured in Courses 1 through 4 is doing its job without any manual action from her team.
+
+---
+
+## The acceptance and what comes next
+
+**Clint:** It is Thursday evening. James has read through the proposal on the portal. He has compared the Standard and Premium options, looked at the finance calculator, and decided he wants the Standard option at £11,200 and will pay in full — no battery, no finance. At 9:30pm, he clicks Accept. Sarah, what happens in Commusoft right now?
+
+**Sarah:** The opportunity moves to Proposal Accepted immediately — no manual update required. The acceptance email fires to James at 9:30pm, confirming proposal number 1001 for Residential Solar Installation has been accepted and that the team will be in touch. In the morning, Sophie Bennett sees a new scheduled activity on the opportunity to confirm the installation date — that activity was created by the Proposal Accepted pipeline automation. The after-acceptance tracking shows three flags: deposit not yet paid, installation job not yet scheduled, and no finance pending because James paid in full. When Sarah confirms the G98 DNO notification has been submitted, she moves the opportunity to DNO Approval Pending and the fourteen-day rotting clock starts for that stage.
+
+**Clint:** The pipeline moves from the sales team to the operations team at the exact moment James clicks Accept. Sophie knows what to do because the activity tells her. The after-acceptance flags show what is outstanding. Nothing falls through the gap between "the customer said yes" and "the installation is booked."
+
+---
+
+## Summary
+
+This challenge validated three things. First, the pipeline stage gates work as designed — proposals cannot be sent before the survey is complete and the required information is captured. Second, the proposal automation chain runs without manual intervention — from the moment the proposal is sent to the moment the customer accepts, every communication fires automatically and every stage transition updates correctly. Third, the after-acceptance handover from the sales pipeline to the operations team is immediate and clear — the flags, the activity, and the stage movement give Sophie and the rest of the team everything they need to move the installation forward from the next morning.
+
+SunComfort's proposals and sales setup is complete. Every enquiry that arrives — residential solar, heat pump, or commercial — has a pipeline to follow, a template to structure it, a proposal to be built from the library, and a communication chain to carry it to the customer and back.
+
+---
+
+**Open items**
+
+None — all scenarios fully supported by SunComfort data. HC articles referenced across this series: 216976, 216978, 216998, 217000, 216993, 217002.
+`;
+
 INBOX_FILES["reed-script-l1-ft-series1"] = `# Reed — Script: Getting started on the app
 
 **Layer:** 1 — Field Team Path
@@ -15230,6 +16078,12 @@ function openInboxFile(key) {
     'reed-script-l2-s4-c7': { num: 'Reed — Script', title: 'L2 Series 4 — Course 7: Configure the statement portal' },
     'reed-script-l2-s4-c8': { num: 'Reed — Script', title: 'L2 Series 4 — Course 8: Set up online payment integrations' },
     'reed-script-l2-s4-challenge': { num: 'Reed — Script', title: 'L2 Series 4 — Challenge: Ready to raise your first invoice' },
+    'reed-script-l2-s5-c1': { num: 'Reed — Script', title: 'L2 Series 5 — Course 1: Configure opportunity pipelines and templates' },
+    'reed-script-l2-s5-c2': { num: 'Reed — Script', title: 'L2 Series 5 — Course 2: Build a cover page and option templates' },
+    'reed-script-l2-s5-c3': { num: 'Reed — Script', title: 'L2 Series 5 — Course 3: Set up finance templates and grant templates' },
+    'reed-script-l2-s5-c4': { num: 'Reed — Script', title: 'L2 Series 5 — Course 4: Configure proposal and acceptance communications' },
+    'reed-script-l2-s5-c5': { num: 'Reed — Script', title: 'L2 Series 5 — Course 5: Configure the proposal portal' },
+    'reed-script-l2-s5-challenge': { num: 'Reed — Script', title: 'L2 Series 5 — Challenge: First proposal ready to send' },
     'ivy-induction': { num: 'Ivy — People', title: 'Enablement Specialist Induction Plan v3' },
     'ivy-jd-academy': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Description' },
     'ivy-jd-advert': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Advert' },

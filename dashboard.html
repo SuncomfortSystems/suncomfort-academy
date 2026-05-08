@@ -427,9 +427,9 @@
     <div id="view-academy" class="view active">
       <div class="page-heading"><h1>Academy</h1><p>Course scripts organised by series</p></div>
       <div class="stats-row">
-        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">23</div><div class="stat-label">Series</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">115</div><div class="stat-label">Courses</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">456</div><div class="stat-label">Total Minutes</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">24</div><div class="stat-label">Series</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--orange)">121</div><div class="stat-label">Courses</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:#2e7d32">477</div><div class="stat-label">Total Minutes</div></div>
         <div class="stat-card"><div class="stat-value" style="color:var(--blue2)">9</div><div class="stat-label">Characters</div></div>
       </div>
       <div id="layer-0" class="section-heading" style="margin-top:24px">Layer 0 — Universal</div>
@@ -754,6 +754,20 @@
           <div class="course-card" onclick="openInboxFile('reed-script-l2-s5-c4')"><div class="course-num">Course 4</div><div class="course-title">Configure proposal and acceptance communications</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l2-s5-c5')"><div class="course-num">Course 5</div><div class="course-title">Configure the proposal portal</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l2-s5-challenge')"><div class="course-num">Challenge</div><div class="course-title">First proposal ready to send</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+        </div>
+      </div>
+      <div id="l2-s6" class="series-block">
+        <div class="series-header" style="background:#00838f">
+          <div><h2>Layer 2 — Series 6</h2><div class="series-meta">Notifications and automation setup — notification settings, after sales care, workflow automations, on our way portal, and after sales care portal</div></div>
+          <div class="series-count">5 courses + challenge</div>
+        </div>
+        <div class="course-grid">
+          <div class="course-card" onclick="openInboxFile('reed-script-l2-s6-c1')"><div class="course-num">Course 1</div><div class="course-title">Configure notification settings</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l2-s6-c2')"><div class="course-num">Course 2</div><div class="course-title">Set up after sales care</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l2-s6-c3')"><div class="course-num">Course 3</div><div class="course-title">Activate and configure workflow automations</div><div class="course-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l2-s6-c4')"><div class="course-num">Course 4</div><div class="course-title">Configure the on our way portal</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l2-s6-c5')"><div class="course-num">Course 5</div><div class="course-title">Configure the after sales care portal</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l2-s6-challenge')"><div class="course-num">Challenge</div><div class="course-title">System is talking, not silent</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
     </div>
@@ -14630,6 +14644,543 @@ SunComfort's proposals and sales setup is complete. Every enquiry that arrives �
 None — all scenarios fully supported by SunComfort data. HC articles referenced across this series: 216976, 216978, 216998, 217000, 216993, 217002.
 `;
 
+INBOX_FILES["reed-script-l2-s6-c1"] = `# Configure notification settings
+
+**Series:** Notifications and automation setup | **Course:** 1 of 6 | **Duration:** 3 min | **Audience:** Decision makers / administrators
+
+---
+
+**Learning objectives**
+
+1. Configure which roles receive which in-system notifications
+2. Enable and set up engineer departure and late arrival notifications
+
+---
+
+**Target audience:** Business owners, managing directors, or administrators at small to mid-size field service companies setting up or auditing their Commusoft account. SunComfort Systems is the pedagogical vehicle. The learner is configuring their own company's Commusoft account.
+
+**Assumed starting point:** Layer 2 Series 5 complete. Account administrator access to Commusoft settings.
+
+**Main objective beyond the learning objectives:** A notification that goes to the wrong person — or to nobody at all — is operationally invisible. By the end of this course, every alert that Commusoft fires will land with the person who can act on it. That means engineers are notified when jobs are assigned, schedulers are alerted when someone is running late, and the right people see the right signals at the right moment.
+
+---
+
+**Characters:** Sarah Mitchell (Managing Director, SunComfort Systems)
+
+**Scenario:** Sarah works through SunComfort's notification settings, assigning each alert to the correct role, and then enables the engineer departure and late arrival notifications so that Sophie Bennett and Ryan Potter receive immediate alerts when scheduling is at risk.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Sarah Mitchell — Managing Director — Owner/Manager
+- **Customer record:** None required
+- **Existing data:** SunComfort user accounts and roles already configured (L2 Series 1 and L1 DM Series 2 complete)
+- **Assets required:** None
+
+---
+
+## Why notification settings matter
+
+Commusoft generates notifications automatically as work moves through the system — a job is assigned, stock runs low, a no-access is logged. The question is not whether those alerts fire, but who receives them. Without deliberate configuration, notifications default to a broad audience or to nobody useful at all. Sarah's job here is to match each alert to the role that can actually do something with it.
+
+Navigate to your profile icon, then Settings, then Notification Settings. You see a list of available notifications, each with a roles field that controls who receives that alert in-system.
+
+## Assigning roles to each notification
+
+Sarah works through SunComfort's notification list and sets the following. For the online web booking portal new booking notification, she assigns Office staff — they handle new enquiries as they arrive. For the job assigned to engineer notification, she assigns Engineer roles — each engineer needs to know the moment a job lands in their diary. For the no access logged notification, she assigns Office staff — they need to follow up with the customer and reschedule. For the abort logged notification, she assigns Office staff for the same reason. For the after sales negative review notification, she assigns Owner/Manager — Sarah wants to see every negative review before it becomes a public problem. For the stock low and reorder trigger notification, she assigns Office staff — they manage purchasing. For the purchase order delivery undelivered warning, she assigns Office staff.
+
+Work through your own list in the same way. For each notification, ask who in your business can act on that information and assign accordingly. The system may pre-fill some roles with defaults — review each one rather than accepting them without checking.
+
+## Setting up the engineer departure notification
+
+The engineer departure notification alerts your schedulers when an engineer has not yet left for their first appointment within a set window before the job is due to start. This is not a punishment mechanism — it is an early warning that gives your office time to call the engineer, adjust the diary, or update the customer before the appointment time arrives.
+
+Navigate to Settings, then Fleet management, then Engineer Departure Notification. Sarah enables the notification and sets the departure deadline to 45 minutes before the first appointment. She selects email and in-system as the notification channels and adds Sophie Bennett and Ryan Potter as recipients. Both schedulers now receive an alert if any engineer has not departed with enough time to make their first job of the day.
+
+## Setting up the engineer late arrival notification
+
+The late arrival notification works differently from the departure notification. Rather than tracking whether an engineer has left, it monitors the vehicle's GPS location against the appointment start time. If the vehicle has not reached the job site by the time the appointment is due to begin, Commusoft fires the alert.
+
+Navigate to Settings, then Fleet management, then Engineer Late Arrival Notification. Sarah enables the notification and selects email and in-system as the channels. She adds Sophie Bennett and Ryan Potter as recipients. The two notifications work together: departure catches the problem before it happens, and late arrival catches it if the engineer left on time but is still running behind.
+
+---
+
+**Reflection**
+
+Sarah receives an in-system notification that a no-access has been logged on a job. She did not configure herself as a recipient for that notification. Who did she assign it to, and why?
+
+- Owner/Manager, because Sarah needs to be aware of every field event
+- Office staff, because they are the ones who need to rebook the appointment and contact the customer ✓
+- Engineer roles, because the engineer needs to confirm the no-access was logged correctly
+
+*Feedback: No access events require an office response — someone needs to contact the customer, reschedule the appointment, and update the diary. Assigning this notification to Office staff means the people who can take action are alerted immediately, without routing it through a manager who cannot rebook the job.*
+
+---
+
+## Summary
+
+SunComfort's notification settings are now configured so that every alert reaches the person who can act on it. Office staff receive operational alerts. Engineers are notified when jobs are assigned. Sarah sees negative reviews. Sophie and Ryan are alerted when an engineer has not departed or has not arrived on time. In the next course, you will set up SunComfort's after sales care communications — the automated emails and SMS messages that go to customers after a job is closed.
+
+---
+
+**Open items**
+
+None — all content verified against HC articles 217308 (notification settings) and 245892 (engineer late arrival notifications).
+`;
+
+INBOX_FILES["reed-script-l2-s6-c2"] = `# Set up after sales care
+
+**Series:** Notifications and automation setup | **Course:** 2 of 6 | **Duration:** 4 min | **Audience:** Decision makers / administrators
+
+---
+
+**Learning objectives**
+
+1. Explain what after sales care does and when it triggers
+2. Configure the after sales care email and SMS template with dynamic tags
+
+---
+
+**Target audience:** Business owners, managing directors, or administrators at small to mid-size field service companies setting up or auditing their Commusoft account. SunComfort Systems is the pedagogical vehicle. The learner is configuring their own company's Commusoft account.
+
+**Assumed starting point:** Layer 2 Series 6 Course 1 complete. Account administrator access to Commusoft settings.
+
+**Main objective beyond the learning objectives:** Most field service businesses lose the post-job conversation entirely. The engineer leaves, the invoice is paid, and the customer hears nothing until the next service reminder arrives. After sales care closes that gap automatically. By the end of this course, SunComfort's closed jobs will trigger a personalised message that invites the customer to leave a review — without anyone on the team having to remember to send it.
+
+---
+
+**Characters:** Sarah Mitchell (Managing Director, SunComfort Systems)
+
+**Scenario:** Sarah configures SunComfort's after sales care defaults and writes the email and SMS templates that go out to customers 24 hours after a job is marked complete.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Sarah Mitchell — Managing Director — Owner/Manager
+- **Customer record:** None required
+- **Existing data:** At least one customer type configured in the system
+- **Assets required:** None
+
+---
+
+## What after sales care is and when it fires
+
+After sales care is an automated message — sent by email, SMS, or both — that goes to a customer after a job is closed. It is not a manual communication that someone on the team has to remember to send. Once configured, it fires on its own, triggered by the job reaching a closed status.
+
+The message has a single purpose: to invite the customer to leave a review via the SunComfort after sales care portal. That portal is where the customer rates the service and, if they choose, writes a comment. From SunComfort's perspective, the review lands in Commusoft where the team can read it, respond if needed, and act on any negative feedback before it becomes public.
+
+Navigate to your profile icon, then Settings, then Customers, then After Sales Care Defaults. Here you control whether after sales care is enabled for new customers and new work addresses. Sarah enables it for both. This means every new customer record and every new work address created from this point forward is automatically enrolled in after sales care — no manual opt-in required.
+
+The timing is configured at a later step when setting up the after sales care email and SMS template. Sarah sets SunComfort's to send 24 hours after the job is marked complete. This gives the engineer time to finish the paperwork and the customer time to settle before the message arrives.
+
+## Understanding the template and dynamic tags
+
+The after sales care message is not a one-size-fits-all communication. Commusoft uses dynamic tags — placeholders that pull live data from the job record — to personalise each message automatically. The customer's name, the property address, and the portal link are all inserted at the point the message sends. Sarah does not need to write a separate template for each customer type.
+
+Navigate to Settings, then Jobs, then After Sales Care Email and SMS Template. Sarah sees two sections: one for the email template and one for the SMS template.
+
+## Writing the email template
+
+Sarah composes the email subject line using tags so it references the job directly: "How was your experience? — [job_description] at [customer_address_line_1]". When this email arrives in a customer's inbox, it reads as though it was written specifically for them and specifically for that job.
+
+In the body, Sarah keeps the message short and warm. She thanks the customer for having SunComfort at their property, includes a single call to action using the [after_sales_care_portal_url] tag so the customer can reach the review page with one click, and closes with SunComfort's contact details — 020 3026 6266 and info@suncomfortsystems.co.uk — in case they have any questions before leaving their review.
+
+The goal of the email is not to sell anything or to fill space. It is to make it as easy as possible for a satisfied customer to say so publicly. Keep the body to three or four short paragraphs and let the portal link do the work.
+
+## Writing the SMS template
+
+Sarah composes the SMS to be concise — SMS messages work best when they are direct and under 160 characters to avoid using additional message credits. She uses the same tags as the email to personalise the message and includes the portal URL, which Commusoft shortens automatically at send time.
+
+SunComfort's SMS reads: "Hi [customer_name:firstname], thank you for having SunComfort at [customer_address_line_1]. We'd love your feedback: [after_sales_care_portal_url] — Questions? Call 020 3026 6266."
+
+The [customer_name:firstname] tag pulls only the first name, which keeps the tone conversational. The portal URL is shortened automatically by Commusoft, so Sarah does not need to worry about character count for the link itself. She saves both templates.
+
+---
+
+**Reflection**
+
+SunComfort's after sales care is set to send 24 hours after a job is marked complete. A customer's job is closed at 3pm on a Friday. When does the after sales care message go out?
+
+- Immediately when the job is closed
+- The following Monday morning, because the system respects working hours
+- At 3pm on Saturday ✓
+
+*Feedback: After sales care sends at the configured interval after the job is closed, regardless of the day of the week. A 24-hour delay from 3pm Friday means the message goes out at 3pm Saturday. If you want messages to arrive during the working week, factor that into your timing decision when configuring the delay.*
+
+---
+
+## Summary
+
+SunComfort's after sales care is now active. Every new customer and work address is enrolled automatically. Twenty-four hours after a job is closed, a personalised email and SMS go out to the customer, inviting them to leave a review via the portal. The templates use dynamic tags to pull the job description, address, and portal link directly from the system, so no manual editing is ever required. In the next course, you will activate the Workflow Marketplace automations and build SunComfort's proposal follow-up sequences.
+
+---
+
+**Open items**
+
+None — all content verified against HC articles 216922 (after sales care defaults) and 217021 (after sales care email and SMS template).
+`;
+
+INBOX_FILES["reed-script-l2-s6-c3"] = `# Activate and configure workflow automations
+
+**Series:** Notifications and automation setup | **Course:** 3 of 6 | **Duration:** 5 min | **Audience:** Decision makers / administrators
+
+---
+
+**Learning objectives**
+
+1. Explain what the Workflow Marketplace is and how it differs from Sequences
+2. Activate a workflow automation from the Marketplace
+3. Create a Sequence for proposal follow-up with steps, delays, and exit conditions
+
+---
+
+**Target audience:** Business owners, managing directors, or administrators at small to mid-size field service companies setting up or auditing their Commusoft account. SunComfort Systems is the pedagogical vehicle. The learner is configuring their own company's Commusoft account.
+
+**Assumed starting point:** Layer 2 Series 6 Course 2 complete. Account administrator access to Commusoft settings. Opportunity pipelines and proposal templates configured (L2 Series 5 complete).
+
+**Main objective beyond the learning objectives:** Automation is not about removing people from the process — it is about removing the parts of the process that do not need a person. By the end of this course, SunComfort's system will be doing the follow-up work that previously fell to whoever remembered to chase it. Proposals will get the right nudges at the right intervals, and the team will spend their attention on conversations that actually need them.
+
+---
+
+**Characters:** Sarah Mitchell (Managing Director, SunComfort Systems)
+
+**Scenario:** Sarah reviews the Workflow Marketplace and activates the automations relevant to SunComfort's operations, then builds two Sequences — one for residential solar proposals and one for commercial heat pump and generator proposals — so that her sales team's follow-up cadence runs automatically from the moment a proposal is sent.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Sarah Mitchell — Managing Director — Owner/Manager
+- **Customer record:** None required
+- **Existing data:** Opportunity pipelines and proposal templates from L2 Series 5; email templates for proposal follow-up communications already created
+- **Assets required:** None
+
+---
+
+## Two types of automation, two different jobs
+
+Commusoft offers two distinct automation tools: the Workflow Marketplace and Sequences. They are not interchangeable, and understanding the difference between them is the starting point for using either correctly.
+
+The Workflow Marketplace contains pre-built automations that activate with a single toggle. Each one is tied to a specific system event — a job is created, a no access is logged, a proposal is sent — and fires automatically when that event occurs. You do not build them from scratch. You review what is available, decide which ones fit your operation, and switch them on. They run in the background from that point forward without requiring any manual input.
+
+Sequences are different in structure and purpose. A Sequence is a custom multi-step workflow that you build yourself. It is triggered manually from an opportunity and executes a series of timed steps — emails, SMS messages, scheduled tasks, and in-system notifications — over a defined period, with exit conditions that stop it automatically when the customer responds or when the proposal reaches a resolution. Where the Marketplace handles event-based system triggers, Sequences handle the human-facing follow-up cadence that happens after a proposal is sent.
+
+## Activating Workflow Marketplace automations
+
+Navigate to your profile icon, then Settings, then the Automation section, then Workflow Marketplace. Sarah reviews the available pre-built automations and activates the ones that suit SunComfort's operations. You can have up to five active at once.
+
+Sarah activates the after sales response automation, which creates an office task when a customer submits a response through the after sales care portal — this ensures no review goes unread. She also activates the negative diary event task automation, which creates a task when a no access or abort is logged on a job, prompting the office to follow up. She reviews the remaining options and decides which others are appropriate for SunComfort's current stage of setup. Each automation is enabled with a single toggle. Disabled automations that were previously running will complete any in-progress actions before stopping — toggling one off does not cancel mid-flight communications.
+
+Review your own Marketplace list with the same logic: for each automation, ask whether the event it tracks is one your team needs to act on, and whether the response it generates is something you would otherwise have to manage manually.
+
+## Building the Residential Solar Proposal Follow-Up Sequence
+
+Navigate to Settings, then Automation, then Sequences. Select Add Sequence to begin.
+
+Sarah names the first Sequence "Residential Solar Proposal Follow-Up" and assigns it to Gary Stone, who manages residential solar sales. The Sequence runs from the moment a proposal is sent and follows up with the customer over the course of two weeks, stepping down in intensity if there is no response.
+
+She builds the steps in order. The Sequence opens with a three-day delay after the proposal is sent — this gives the customer time to read the proposal before any follow-up arrives. After the delay, an email goes out that includes a link to the proposal so the customer can access it easily. A four-day delay follows, and then a second email — this one offers to arrange a call to talk through any questions. After a further seven-day delay, the Sequence ends with a scheduled task assigned to Gary Stone to call the customer directly.
+
+The exit conditions are critical. Sarah sets the Sequence to exit automatically if the proposal is accepted, if the proposal is rejected, or if any incoming communication is received from the customer — a call or an email. These exit conditions mean the automated follow-up stops the moment the customer engages, so they never receive a chase email after they have already been in touch.
+
+Once the steps are in place, Sarah saves the Sequence and activates it using the toggle, which asks her to type CONFIRM before it goes live. The Sequence is now available to trigger from any residential solar opportunity.
+
+## Building the Commercial Proposal Follow-Up Sequence
+
+Sarah creates a second Sequence named "Commercial Heat Pump / Generator Proposal Follow-Up" and assigns it to Stephen Carter, who manages commercial sales. Commercial opportunities move more slowly and involve decision-makers who may need more time, so the cadence is adjusted accordingly.
+
+The steps are: a two-day delay, then a follow-up email. A three-day delay, then a scheduled task for Stephen Carter to call the decision-maker directly — commercial deals benefit from a personal call earlier in the process than residential. A five-day delay, then a final email that includes a notice that the proposal is approaching its expiry date and invites the customer to respond before the pricing changes.
+
+The exit conditions match the residential Sequence: proposal accepted, proposal rejected, or any incoming communication from the customer. Sarah saves and activates the Sequence with the CONFIRM toggle.
+
+---
+
+**Reflection**
+
+A residential solar customer receives the first follow-up email from SunComfort's Sequence on Tuesday. On Thursday, they call Gary Stone directly and tell him they want to go ahead. The Sequence still has two steps remaining. What happens?
+
+- The Sequence continues and the remaining steps fire on their original schedule
+- The Sequence pauses until Gary manually stops it
+- The Sequence exits automatically because an incoming communication was received from the customer ✓
+
+*Feedback: The exit condition triggers on any incoming communication from the customer. A direct call counts. The remaining steps — the second email and the Gary Stone call task — are cancelled automatically, so the customer is not chased after they have already been in touch. This is why exit conditions are the most important part of any Sequence.*
+
+---
+
+## Summary
+
+SunComfort now has Workflow Marketplace automations active for the events that need an automatic office response, and two Sequences running the proposal follow-up cadence for residential solar and commercial work. Neither requires manual intervention once activated — the system follows up, the exit conditions close the loop, and the team focuses on the conversations that need a human. In the next course, you will configure the on our way portal so that customers know their engineer is on the way before the van arrives at the door.
+
+---
+
+**Open items**
+
+None — all content verified against HC articles 217228 (Workflow Marketplace) and 217243 (Sequences).
+`;
+
+INBOX_FILES["reed-script-l2-s6-c4"] = `# Configure the on our way portal
+
+**Series:** Notifications and automation setup | **Course:** 4 of 6 | **Duration:** 3 min | **Audience:** Decision makers / administrators
+
+---
+
+**Learning objectives**
+
+1. Explain what the on our way portal shows the customer
+2. Configure the portal engineer profile settings and contact pop-up
+3. Set up the on our way SMS template
+
+---
+
+**Target audience:** Business owners, managing directors, or administrators at small to mid-size field service companies setting up or auditing their Commusoft account. SunComfort Systems is the pedagogical vehicle. The learner is configuring their own company's Commusoft account.
+
+**Assumed starting point:** Layer 2 Series 6 Course 3 complete. Account administrator access to Commusoft settings.
+
+**Main objective beyond the learning objectives:** The moment an engineer taps Travel on the mobile app, the customer should know about it. The on our way portal replaces the "are they coming?" anxiety with a live tracking page that shows exactly who is on the way and gives the customer a direct line to the office if they need it. By the end of this course, that experience is configured and ready for SunComfort's first appointment.
+
+---
+
+**Characters:** Sarah Mitchell (Managing Director, SunComfort Systems)
+
+**Scenario:** Sarah configures the on our way portal settings for SunComfort — including what engineer information is displayed, the contact pop-up details, and the on our way SMS template — so that every customer receives a professional, informative message the moment their engineer departs.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Sarah Mitchell — Managing Director — Owner/Manager
+- **Customer record:** None required
+- **Existing data:** Engineer user profiles exist in the system with photos and industry numbers populated
+- **Assets required:** None
+
+---
+
+## What the on our way portal shows the customer
+
+When an engineer taps Travel on the Commusoft mobile app, two things happen simultaneously: an SMS goes to the customer, and a live tracking page — the on our way portal — becomes available at the link embedded in that SMS. The customer can open the portal, see the engineer's name and photo, read their professional tagline and industry credentials, and watch the vehicle's location update in real time.
+
+For SunComfort, this matters particularly because their engineers are MCS certified — their credentials are a selling point that reinforces confidence at the moment the customer is about to let someone into their home. Displaying the MCS number on the portal is not a technical detail; it is a trust signal.
+
+Navigate to your profile icon, then Settings, then Schedule and dispatch, then On Our Way Portal.
+
+## Configuring the engineer profile settings
+
+Sarah reviews the engineer profile options. She enables Show engineer industry number — for SunComfort's engineers, this displays their MCS certification number on the portal, confirming their professional accreditation to the customer before the van has pulled up outside. She enables Show engineer tagline — each engineer's tagline, such as "MCS Certified Solar Engineer", appears on the portal page alongside their name and photo. Both settings are toggled on and saved.
+
+These settings apply across all engineers on the account. Individual engineer details — name, photo, tagline, and industry number — are managed on each user's profile in Commusoft. The portal pulls them automatically at the point the SMS fires.
+
+## Setting up the contact pop-up
+
+The contact pop-up gives the customer a way to reach the office directly from the portal page. For customers who have a question about access, timing, or the scope of the work, it is easier than searching for a phone number.
+
+In the portal settings, Sarah configures the contact pop-up as follows. She sets the email to info@suncomfortsystems.co.uk and the phone number to 020 3026 6266. She sets the pop-up title to "Questions about your visit?" and sets the available hours to Monday to Friday, 8:00 to 17:30. These details appear on the portal the moment the customer opens it.
+
+She also adds Sophie Bennett and Ryan Potter as notification recipients. When the on our way SMS fires, both schedulers receive an in-system notification confirming the engineer has marked travel — giving them a live picture of what is happening in the field without needing to chase the engineer for updates.
+
+## Writing the on our way SMS template
+
+Navigate to Settings, then Schedule and dispatch, then Job On Our Way SMS. Sarah composes the SMS template using dynamic tags so the message personalises itself to each job at the point it sends.
+
+SunComfort's SMS reads: "SunComfort: [engineer_name] is on the way to you now for your [job_description] appointment. Track your engineer: [engineer_profile_portal_url]. Questions? 020 3026 6266."
+
+The [engineer_name] tag pulls the engineer's display name. The [job_description] tag pulls the job type, so the customer knows which appointment this refers to. The [engineer_profile_portal_url] tag generates and shortens the portal link automatically — Sarah does not need to manage URLs manually. She keeps the message concise, aiming to stay within a single SMS credit of 160 characters, and saves the template.
+
+One important note: if the engineer's appointment start time has already passed when they tap Travel, the SMS will not send. This prevents customers from receiving an on our way message for a job that is already overdue. It is worth communicating to your field team that tapping Travel promptly is what triggers the customer communication.
+
+---
+
+**Reflection**
+
+Gary Stone is on his way to a solar panel inspection and taps Travel on the app. The appointment start time was 20 minutes ago. What happens?
+
+- The on our way SMS fires and the customer receives the portal link as normal
+- The on our way SMS does not fire because the appointment start time has already passed ✓
+- The SMS fires but without the portal link
+
+*Feedback: Commusoft does not send the on our way SMS if the appointment start time has already passed when the engineer marks Travel. This prevents customers from receiving a message that implies the engineer is on time when they are already running late. The portal link is only delivered when the engineer taps Travel before the appointment start time.*
+
+---
+
+## Summary
+
+The on our way portal is now configured for SunComfort. Every time an engineer taps Travel, a personalised SMS goes to the customer with a live tracking link, the portal displays the engineer's name, photo, MCS number, and tagline, and the contact pop-up gives the customer a direct line to the office. Sophie and Ryan receive an in-system notification confirming the departure. In the next course, you will configure the after sales care portal — the page the customer reaches when they click the review link in the post-job message.
+
+---
+
+**Open items**
+
+None — all content verified against HC articles 217199 (on our way portal settings) and 217125 (job on our way SMS).
+`;
+
+INBOX_FILES["reed-script-l2-s6-c5"] = `# Configure the after sales care portal
+
+**Series:** Notifications and automation setup | **Course:** 5 of 6 | **Duration:** 3 min | **Audience:** Decision makers / administrators
+
+---
+
+**Learning objectives**
+
+1. Explain what the after sales care portal shows the customer
+2. Configure the portal contact pop-up and notification recipients
+
+---
+
+**Target audience:** Business owners, managing directors, or administrators at small to mid-size field service companies setting up or auditing their Commusoft account. SunComfort Systems is the pedagogical vehicle. The learner is configuring their own company's Commusoft account.
+
+**Assumed starting point:** Layer 2 Series 6 Course 4 complete. After sales care email and SMS template configured in Course 2. Account administrator access to Commusoft settings.
+
+**Main objective beyond the learning objectives:** A negative review that you do not know about is a problem you cannot solve. This course puts SunComfort in a position to hear about unhappy customers privately — before a one-star rating appears somewhere public. The portal and its notification chain are what make that possible.
+
+---
+
+**Characters:** Sarah Mitchell (Managing Director, SunComfort Systems)
+
+**Scenario:** Sarah configures the after sales care portal settings — the contact pop-up the customer sees when they leave a review, and the notification recipients who are alerted when a negative review is submitted — so that SunComfort can respond to feedback before it escalates.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Sarah Mitchell — Managing Director — Owner/Manager
+- **Customer record:** None required
+- **Existing data:** After sales care email and SMS template configured (Course 2 complete)
+- **Assets required:** None
+
+---
+
+## What the after sales care portal shows the customer
+
+The after sales care portal is the page a customer reaches when they click the link in SunComfort's post-job email or SMS. It is where they leave their rating and, if they choose, write a comment about the service they received.
+
+From the customer's perspective, it is a simple, clean page. They see a rating prompt, a comment box, and — if configured — a contact pop-up that gives them a way to reach the SunComfort office if they want to raise something directly rather than just leaving a review. From SunComfort's perspective, it is the place where feedback becomes visible, and where the team has an opportunity to act on a negative experience before the customer shares it elsewhere.
+
+One important limitation: once a customer submits a review through the portal, they cannot edit or retract it. This makes the moment of submission final — which is exactly why the notification chain matters. A negative review needs to reach the right people quickly, while there is still an opportunity to follow up with the customer and address their concern.
+
+Navigate to your profile icon, then Settings, then Jobs, then After Sales Care Portal Settings.
+
+## Configuring the contact pop-up
+
+The contact pop-up appears on the portal page and gives the customer a direct line to the office while they are in the act of leaving feedback. For a customer who is dissatisfied, having an easy route to speak with someone can be the difference between a private conversation and a public complaint.
+
+Sarah sets the email address in the pop-up to info@suncomfortsystems.co.uk and the phone number to 020 3026 6266. She sets the pop-up title to "How did we do?" and configures the available hours as Monday to Friday, 9:00 to 17:00. These details appear on the portal page alongside the review prompt.
+
+If you prefer not to show a contact pop-up on your portal, you can disable it by setting both the phone and email fields to their "do not show" option. For most businesses, leaving it on is the better choice — it signals that the company is open to feedback and reachable, which in itself shapes how a customer perceives the experience.
+
+## Setting up notification recipients
+
+When a customer submits a review through the portal, Commusoft can notify specific people in the business. For negative reviews in particular, speed matters — the sooner the right person knows, the sooner they can follow up.
+
+Sarah configures the notification recipients as follows. For in-system notifications, she adds Logan Chance (Operations Manager) and Sarah Mitchell (MD). Both will see an in-system alert whenever any review is submitted through the portal. For email notifications — which she reserves for negative feedback specifically — she adds Logan Chance. Logan receives an email the moment a customer submits a negative review, so he can reach out to the customer that day.
+
+This two-layer approach means Sarah has visibility in-system across all reviews without being copied on every email, while Logan gets an immediate email prompt for the reviews that require a response. Configure your own notification recipients with the same logic: who needs to know immediately, who needs to know eventually, and which channel ensures they act on it.
+
+---
+
+**Reflection**
+
+A customer submits a one-star review and writes a complaint through the after sales care portal. They then realise they mixed up SunComfort with another company and want to withdraw the review. What happens?
+
+- The customer can edit the review through the portal within 24 hours
+- The review cannot be modified or retracted once submitted ✓
+- The review is automatically held for moderation before it becomes visible
+
+*Feedback: Once a customer submits a review through the after sales care portal, it is final — they cannot edit it or take it back. This is why the notification chain is so important: the faster Logan and Sarah are alerted to a negative review, the sooner they can contact the customer directly, understand the situation, and resolve it before any further action is taken.*
+
+---
+
+## Summary
+
+The after sales care portal is now configured for SunComfort. The contact pop-up gives customers a route to the office while they are leaving feedback. Logan Chance receives an immediate email notification when a negative review is submitted, and both Logan and Sarah see it in-system. The full after sales care loop is now in place: the job closes, the automated message goes out 24 hours later, the customer clicks through to the portal, and if anything goes wrong, the team knows about it immediately. In the next course, the challenge tests the complete notification chain from job creation through to feedback.
+
+---
+
+**Open items**
+
+None — all content verified against HC articles 217201 (after sales care portal settings) and 217021 (after sales care email and SMS template, cross-reference).
+`;
+
+INBOX_FILES["reed-script-l2-s6-challenge"] = `# Challenge: System is talking, not silent
+
+**Series:** Notifications and automation setup | **Course:** 6 of 6 | **Duration:** 3 min | **Audience:** Decision makers / administrators
+
+---
+
+**Learning objectives**
+
+1. Trace the notification chain from job assignment through engineer departure to customer feedback
+2. Identify which system event triggers each automated communication
+3. Confirm that negative review notifications reach the correct recipients
+
+---
+
+**Target audience:** This course is the challenge for the Notifications and automation setup series. This is not a configuration course — the configuration is complete. This course tests whether everything built across Courses 1 through 5 works as a connected system when a real scenario runs through it. You follow Sarah Mitchell and Clint through three moments in a single job's lifecycle, but you should be thinking about how each trigger maps to your own configuration.
+
+**Assumed starting point:** You have completed Courses 1 through 5 of this series. All notification settings, after sales care templates, workflow automations, on our way portal settings, and after sales care portal settings are configured. SunComfort is ready to run its first fully automated job communication chain.
+
+**Main objective beyond the learning objectives:** The series is complete and the system is talking. By the end of this course, you can trace the full communication lifecycle of a single job — from the moment it is assigned to an engineer, through the customer's live tracking experience, to the review that arrives 24 hours after the job closes — and explain which configuration decision drives each outcome.
+
+---
+
+**Characters:** Sarah Mitchell (Managing Director, SunComfort Systems) | Clint (Commusoft guide)
+
+**Scenario:** A real job moves through its lifecycle. Clint walks Sarah through three moments — job assignment, engineer departure, and post-job feedback — asking her to explain what the system does at each point and why. The job belongs to James Whitfield, a residential solar customer.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Sarah Mitchell (administrator)
+- **Customer record:** James Whitfield — existing residential customer
+- **Existing data:** All configurations from Courses 1 through 5; a solar panel inspection job assigned to Gary Stone and booked for the following morning
+- **Assets required:** None
+
+---
+
+## The job is assigned
+
+**Clint:** Sophie Bennett has just booked a solar panel inspection for James Whitfield and assigned it to Gary Stone. The job is confirmed and sitting in Gary's diary for tomorrow morning. Sarah, what notifications fire at this point?
+
+**Sarah:** Two things happen immediately when the job is assigned. Gary Stone receives an in-system notification that a job has been assigned to him — that is the job assigned to engineer notification we configured in Course 1, set to reach all engineer roles. Gary can open the notification and see the job details, the appointment time, and James's address without having to be told by the office separately. At the same time, if SunComfort had the online booking portal active and this job had come in through that channel, Office staff would also have received a new booking notification — but because Sophie booked this one directly in the system, the portal notification does not apply here. The job assigned notification is the one that matters for Gary.
+
+**Clint:** That is the first link in the chain. Gary knows he has a job. The system told him. Nobody on the office team had to pick up the phone.
+
+---
+
+## The engineer taps Travel
+
+**Clint:** It is the following morning. Gary Stone gets into his van and taps Travel on the Commusoft mobile app. His appointment start time is 9:00am and it is 8:38am — he is leaving with time to spare. James Whitfield is at home and has no idea when to expect the van. What happens for James in the next few seconds?
+
+**Sarah:** The moment Gary taps Travel, the on our way SMS fires to James automatically. The message reads: "SunComfort: Gary Stone is on the way to you now for your Solar Panel Inspection appointment. Track your engineer: [portal link]. Questions? 020 3026 6266." The portal link is already shortened and embedded. James opens it, sees Gary's name and photo, his MCS certification number, his tagline "MCS Certified Solar Engineer", and a live map showing the van's location. If James has a question before Gary arrives, he can tap the contact pop-up and reach the office on 020 3026 6266, Monday to Friday, 8:00 to 17:30. At the same time, Sophie and Ryan both receive an in-system notification confirming Gary has marked Travel — so the schedulers have a live picture of what is happening in the field.
+
+**Clint:** James does not need to wonder whether someone is coming. He has a name, a face, a credential, and a map. That is what the on our way portal is for.
+
+---
+
+## The review arrives
+
+**Clint:** Gary completes the solar panel inspection. The office closes the job that afternoon. Twenty-four hours later, James receives SunComfort's after sales care email. The subject line reads "How was your experience? — Solar Panel Inspection at 14 Birchwood Close". James clicks the portal link, reads the review page, and gives a one-star rating with a written complaint — he says the installation took longer than he was told to expect. The review is submitted. What happens in Commusoft right now?
+
+**Sarah:** Three things happen simultaneously. Logan Chance, Operations Manager, receives an email notification alerting him to the negative review — that is the email notification we set up in Course 5, which fires specifically for negative feedback. Logan and I both receive an in-system notification in Commusoft. And James's review is now visible in the system, attached to his job record, for the team to read and discuss. The review cannot be edited or retracted by James — once it is submitted it is final. So Logan has everything he needs: the rating, the written comment, James's contact details on the customer record, and the job history showing what was booked and when. He can call James that morning, acknowledge the experience, and have a conversation before James decides to share the review anywhere else.
+
+**Clint:** That is the difference between a notification chain that works and one that does not. A negative review does not sit unread in a dashboard nobody checks. It goes to the right person immediately, with enough context to act. That is the system talking — not silently, not eventually, but now.
+
+---
+
+## Summary
+
+This challenge validated three things. First, the job assignment notification chain works correctly — Gary Stone knows he has a job the moment it is booked, without any manual communication from the office. Second, the on our way experience delivers everything it should — a personalised SMS, a live tracking portal with engineer credentials, and a direct contact route — triggered automatically by a single tap in the mobile app. Third, the after sales care loop completes itself — the post-job message goes out on schedule, the customer's review reaches the portal, and a negative rating triggers an immediate, targeted notification to Logan Chance so the team can respond before the feedback becomes a public problem.
+
+SunComfort's notification and automation setup is complete. The system is talking, and the right people are listening.
+
+---
+
+**Open items**
+
+None — all scenarios fully supported by SunComfort configuration data. HC articles referenced across this series: 217308, 245892, 216922, 217021, 217228, 217243, 217199, 217125, 217201.
+`;
+
 INBOX_FILES["reed-script-l1-ft-series1"] = `# Reed — Script: Getting started on the app
 
 **Layer:** 1 — Field Team Path
@@ -16084,6 +16635,12 @@ function openInboxFile(key) {
     'reed-script-l2-s5-c4': { num: 'Reed — Script', title: 'L2 Series 5 — Course 4: Configure proposal and acceptance communications' },
     'reed-script-l2-s5-c5': { num: 'Reed — Script', title: 'L2 Series 5 — Course 5: Configure the proposal portal' },
     'reed-script-l2-s5-challenge': { num: 'Reed — Script', title: 'L2 Series 5 — Challenge: First proposal ready to send' },
+    'reed-script-l2-s6-c1': { num: 'Reed — Script', title: 'L2 Series 6 — Course 1: Configure notification settings' },
+    'reed-script-l2-s6-c2': { num: 'Reed — Script', title: 'L2 Series 6 — Course 2: Set up after sales care' },
+    'reed-script-l2-s6-c3': { num: 'Reed — Script', title: 'L2 Series 6 — Course 3: Activate and configure workflow automations' },
+    'reed-script-l2-s6-c4': { num: 'Reed — Script', title: 'L2 Series 6 — Course 4: Configure the on our way portal' },
+    'reed-script-l2-s6-c5': { num: 'Reed — Script', title: 'L2 Series 6 — Course 5: Configure the after sales care portal' },
+    'reed-script-l2-s6-challenge': { num: 'Reed — Script', title: 'L2 Series 6 — Challenge: System is talking, not silent' },
     'ivy-induction': { num: 'Ivy — People', title: 'Enablement Specialist Induction Plan v3' },
     'ivy-jd-academy': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Description' },
     'ivy-jd-advert': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Advert' },

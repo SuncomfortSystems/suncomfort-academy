@@ -371,13 +371,18 @@
       <div class="series-block">
         <div class="series-header" style="background:#1b5e20">
           <div><h2>Business Cases</h2><div class="series-meta">Stack and tooling proposals</div></div>
-          <div class="series-count">1 file</div>
+          <div class="series-count">2 files</div>
         </div>
         <div class="file-grid">
           <div class="file-card clickable" onclick="openInboxFile('cedar-stack-modernisation')">
             <div class="file-card-title">Enablement Stack Modernisation — v7</div>
             <div class="file-card-desc">Retire LMS + Synthesia; adopt Parta CMS + Clueso. Net £1,500 annual saving. Two pillars: NRR protection via in-app mastery, expansion via education-led upsell. Parta MCP (~£7,800) presented as separate Phase 2 decision. Flint approved.</div>
             <div class="file-card-footer"><span class="file-type" style="background:#e8f5e9;color:#1b5e20">Business Case</span><span class="badge" style="background:#e8f5e9;color:#1b5e20">v7</span></div>
+          </div>
+          <div class="file-card clickable" onclick="openInboxFile('cedar-stack-modernisation-v6')">
+            <div class="file-card-title">Enablement Stack Modernisation — v6 Draft</div>
+            <div class="file-card-desc">Full working draft. Retire Trainn + Synthesia; adopt Parta Studio + Clueso + Claude Max. Net £18,082 released from tool spend alone, plus ~£14,580/year deflection upside. Budget-neutral, immediate payback. Parta CMS explicitly out of scope.</div>
+            <div class="file-card-footer"><span class="file-type" style="background:#e8f5e9;color:#1b5e20">Business Case</span><span class="badge" style="background:#e3f2fd;color:#1565c0">Draft v6</span></div>
           </div>
         </div>
       </div>
@@ -1330,6 +1335,319 @@ The MCP is not included in the base financial case. It is a separate decision re
 Approve the retirement of the current LMS and Synthesia contract and the adoption of Parta CMS and Clueso on the terms described above. The base transition is cost-neutral, strategically coherent, and directly addresses the structural limitations of the current stack. It positions Commusoft's enablement function to demonstrate outcomes rather than activity, and to operate as a commercial contributor rather than a cost line.
 
 The Phase 2 MCP add-on is recommended for separate review as a capacity solution, with a decision sought before the 100-course library target is formally committed to.
+`;
+INBOX_FILES["cedar-stack-modernisation-v6"] = `# Enablement Stack Modernisation — Business Case
+
+**Prepared by:** Sara Bodell, Enablement Manager
+**Date:** May 2026
+**Status:** Draft v6 — Pending Leadership Approval
+**Read time:** 10 minutes (full document); 1 minute (Executive Summary alone)
+
+---
+
+## Executive Summary
+
+**The ask.** Approve the retirement of Trainn (LMS) and Synthesia (video), and the adoption of an authoring-first stack: Parta Studio (content), Clueso (video), Claude Max at scale (AI throughput), with Intercom Help Centre and Fin AI retained as the distribution and measurement layer.
+
+**Why this matters to leadership.** Customer education is the engine that protects current ARR and creates organic demand for Add-ons. Trained customers renew at 47% versus 21% for untrained — a 2.2× multiplier (CEdMA, *State of Customer Education 2025*).¹ Forrester finds customer-education programmes drive a 38.3% lift in adoption of products targeted by training and a 15.5% reduction in support costs.² This proposal repositions Enablement from a cost-centre with completion data leadership cannot act on, to a Performance Engine measured on Fin resolution rate, ticket deflection, and product adoption.
+
+**The headline financial picture.**
+
+| | Annual £ |
+|---|---|
+| Released from retired tools and vacant role | **£28,000** |
+| Cost of proposed stack | **£9,918** |
+| **Net released to the business** | **£18,082** |
+
+The proposal is **budget-neutral by design and net-positive in practice.** We are taking approximately £28k of already-approved budget, spending approximately £10k on a fitter system, and returning approximately £18k to the business.
+
+**Payback period: immediate.** The new stack costs less than the spend it replaces in Year 1. There is no period during which the business pays back the investment — the investment pays the business back from month one.
+
+**What changes if approved.** The team delivers a 100-course library on the path to 200, in the surfaces customers already use, measured against Fin resolution rate (current 73.9%) and ticket deflection on a known YTD volume of 6,860 conversations. No headcount increase for the current budget cycle.
+
+This page is the document. Everything that follows is supporting evidence.
+
+---
+
+## 1. Current Situation and Performance Baseline
+
+### 1.1 What is working today
+
+The team has built foundations that work. The metrics below are the baseline this proposal is measured against — not a starting position to be fixed.
+
+| Metric | Current performance | Source |
+|---|---|---|
+| Fin AI conversations involved | 79.7% | Intercom, YTD 2026 |
+| Fin resolution rate when involved | 73.9% | Intercom, YTD 2026 |
+| CSAT (positive share of rated conversations) | 78.8% (1,904 positive of 2,416 rated) | Intercom, YTD 2026 |
+| Help Centre unique viewers | 4,262 / month | Intercom Articles report |
+| Total support conversations YTD | 6,860 (~1,524/month, ~18,288 annualised) | Intercom, YTD as of May 2026 |
+
+This proposal is the next move on a working platform, not a rescue.
+
+### 1.2 The baselines the commercial case uses
+
+| Line | Figure | Source / status |
+|---|---|---|
+| Trainn LMS spend (retiring) | £9,500/year | Current contract |
+| Synthesia spend (retiring) | £10,500/year | Current contract |
+| Vacant Enablement Specialist budget | £8,000/year | Approved, unfilled |
+| Support conversations (annualised) | ~18,288 | YTD × 12/4.5 |
+| Cost per human-handled ticket | **£20 (benchmark — see §5)** | SaaS midpoint, Forest research |
+| Fin resolution rate (baseline) | 73.9% | Intercom |
+
+---
+
+## 2. The Problem With the Current Stack
+
+Four structural issues. Not complaints — category-level problems leadership should know are being addressed.
+
+**Completion data is not a business metric.** LMS completion averages 5–15% across the category. 49% of workers admit to skipping content they technically complete. Only 8% of L&D professionals are confident measuring business impact.³ When a customer ticks a course complete, the record says nothing about whether they raised a job correctly, stopped calling support, or renewed.
+
+**The current stack duplicates effort.** LMS plus authoring tool means version management in two places and slow update cycles. Synthesia videos are embedded, not linked — when the product changes, every video has to be re-edited and re-embedded.
+
+**The content is not where customers are.** Customers search the Help Centre, encounter the product, and use Beamer. They do not log into a portal. Microlearning in context achieves ~80% completion versus ~20% for long-form LMS modules; contextual retention is 25–60% versus 8–10% for traditional methods.³
+
+**No feedback loop.** No connection between training activity and support volume, Fin AI performance, or churn signal. The team is producing content blind to outcome.
+
+This is a structural problem with the category, not the team. 42% of companies are actively replacing or upgrading their LMS.³ This proposal gets ahead of that curve.
+
+---
+
+## 3. Options Considered
+
+Three options were evaluated for the authoring and distribution layer.
+
+| Option | Why not recommended |
+|---|---|
+| **A. Extend Trainn at renewal** | Preserves current limitations. Pays for a bundled LMS the strategy deliberately does not use. |
+| **B. Switch to a comparable LMS** (Articulate, Skilljar, Northpass) | Adds cost without addressing the structural issue. Content still sits behind a portal customers do not visit. |
+| **C. Authoring-first stack** (Parta + Clueso + Intercom + Claude Max) — **recommended** | Aligns with where the customer education category is moving. Connects directly to support metrics leadership already tracks. |
+
+**On video tooling.** Synthesia has served the team well. Two facts moved the decision. First, Synthesia is presenter-led — for product education where customers need to see the actual software, the avatar adds less value than screen-led tooling. Second, Synthesia's positioning has shifted toward compliance training, away from our use case. The Parta founder recommended Clueso specifically for customer education teams. Vyond was considered and ruled out on quality.
+
+---
+
+## 4. The Proposed Stack
+
+Six layers. Author once, distribute to the surfaces customers already use, measure through support outcomes.
+
+| Layer | Tool | What it does |
+|---|---|---|
+| Content authoring | **Parta Studio** (replacing Trainn) | Course creation, single-source publishing, multiplayer collaboration, AI translation, BYO AI integration |
+| Video production | **Clueso Enterprise** (replacing Synthesia) | Screen recording → AI script → voiceover → video + written guide in one pass |
+| Distribution — Help Centre | Intercom (retained) | Article hosting, search, Fin AI surface |
+| Distribution — In-app | Beamer + product surfaces (retained) | Contextual prompts, release notes |
+| Funnel tracking | Google Analytics (retained) | HC and Beamer click-through to course content |
+| Impact measurement | Fin AI (Intercom, retained) | Resolution rate by topic, deflection volume, escalation patterns |
+
+### 4.1 Why Parta over Trainn
+
+Trainn bundles an LMS and academy portal. The strategy deliberately does not use them. Paying for distribution infrastructure the team is removing is the wrong economics. Parta is authoring-only by design — built to push content to external surfaces rather than host it internally. Update a course once, propagate everywhere. Real-time multiplayer collaboration replaces review-by-email. AI translation across 200+ languages at Enterprise. BYO AI integration removes per-course AI generation caps.
+
+Evidence of delivery: ChurnZero moved from 66% to 91% course completion and halved revision cycles within four months of adopting Parta.⁴
+
+### 4.2 Why Clueso over Synthesia
+
+Clueso records the screen, generates an AI script and voiceover, and produces both a video walkthrough and a step-by-step written guide from a single session. **Two assets per recording.** That is the lever for hitting a 100-course library on the path to 200 without additional headcount.
+
+Enterprise plan includes: 3 user licences (plus 1 free Year 1), 18 hours of video exports/year, Clueprints for end-to-end blueprints, chat-based video creation, custom branded video player, hosting and analytics, comments and collaboration, pronunciation dictionary, translation glossary, branded templates, dedicated Slack channel support with onboarding.
+
+### 4.3 Why Claude Max at scale (and not the vacant Specialist hire)
+
+This is the **change story** — not making what we already do faster, but expanding what the team is structurally capable of. The vacant Enablement Specialist role is not being replaced with a UK hire. It is being replaced with a tier of AI throughput sized to the production volume the new model requires: 1× Claude Max x5 + 1× Claude Max x20 = $3,600/year (~£2,832).
+
+Combined with Clueso's two-assets-per-session output and Parta's BYO AI, the per-course production hour falls materially — the precise lever that makes the 100/200-course library achievable on the current team configuration.
+
+### 4.4 What is explicitly out of scope
+
+**Parta CMS (£18,700/year) is excluded from this proposal.** It is a learner-facing portal and analytics layer designed for organisations whose strategy is to drive customers *into* a destination training site. This proposal's strategy is the opposite — distribute training into the Help Centre, the product, and Beamer where customers already are. Adding Parta CMS would convert the case from a net release of £17k into a net additional spend of approximately £1.6k, without a strategic gap to justify it. **Recommendation: revisit Parta CMS as a separate decision in 6–12 months if a specific learner-portal use case emerges that cannot be served by the Help Centre.**
+
+---
+
+## 5. How Impact Will Be Measured
+
+The most significant shift in this proposal is from completion tracking to impact tracking. Five complementary signals replace the single (and uninformative) completion percentage.
+
+| Question | How we answer it |
+|---|---|
+| Are clients finding our content? | Intercom Articles report — 4,262 unique viewers/month already tracked |
+| Are they clicking through to courses? | Google Analytics — outbound clicks from HC articles to embedded course content |
+| Are they watching the content? | Clueso analytics — watch %, average watched ratio, engagement curve |
+| Is training improving outcomes? | Fin resolution rate by topic cluster — before / after course launch |
+| Is the overview-article framework working? | HC overview article engagement — views and click-through to linked courses |
+
+**Worked example.** A course on Custom Forms — already among the top three most-viewed HC articles with 57 viewers in the last reporting window — can be measured against Fin's resolution rate on Custom Forms queries in the 4–6 weeks after launch. That is a business impact story, not a completion percentage.
+
+**Fin resolution rate is the headline.** The others build the story around it.
+
+---
+
+## 6. Commercial Case
+
+The argument is simple. **We are taking ~£28k of already-approved budget, spending ~£11k on a fitter system, and returning ~£17k to the business.** No NPV machinery is required to read that line; this section provides the arithmetic, the deflection upside, and the sensitivity.
+
+### 6.1 Tool costs — in and out
+
+All figures annual. USD converted at 0.787 (Sara's stated rate, locked at point of contract).
+
+| Line | In / out | Annual £ | Notes |
+|---|---|---|---|
+| Trainn LMS | OUT | −£9,500 | Current contract retiring |
+| Synthesia | OUT | −£10,500 | Current contract retiring |
+| Vacant Enablement Specialist budget | OUT | −£8,000 | Role unfilled; budget released |
+| **Total released** | | **−£28,000** | |
+| Parta Studio × 2 seats | IN | +£1,417 | $1,800 |
+| Clueso Enterprise | IN | +£5,669 | $7,200; 3 seats + 1 free Year 1 |
+| Claude Max (1× x5 + 1× x20) | IN | +£2,832 | $3,600 |
+| **Total adopted** | | **+£9,918** | |
+| **Net released to the business** | | **−£18,082** | Released spend minus new spend |
+
+**Parta CMS deliberately excluded** — see §4.4.
+
+### 6.2 Support deflection — the upside on top
+
+The above releases £18k regardless of any operational improvement. The next layer is incremental support deflection — what the case looks like if the new stack moves Fin resolution rate even modestly.
+
+**Baseline arithmetic.** YTD 6,860 conversations across ~4.5 months annualises to **~18,288 conversations/year**. Fin is involved in 79.7% (~14,575) and resolves 73.9% of those (~10,771). The remaining **~7,517 conversations/year are human-handled** (Fin escalations + Fin not involved + rules & guidance routed to humans).
+
+**Cost per human-handled ticket: £20.** This is the conservative SaaS midpoint from Forest's research ($18–$35 SaaS, $30–$60 B2B technical). Flagged as a benchmark, not an internal calculation — Commusoft does not currently track loaded cost per ticket. *Assumption sensitivity tested in §6.3.*
+
+**Lever: a 5 percentage-point uplift in Fin resolution rate when involved (73.9% → 78.9%).** This is conservative against published benchmarks — Forrester finds customer-education programmes reduce support costs by 15.5%,² and Pupil Progress moved from 55% to 75% Fin resolution within two months of rewriting HC content.⁵ A 5pp shift on the current involved-volume of ~14,575 deflects approximately **729 tickets/year** from human handling.
+
+**Conservative deflection benefit: 729 × £20 = ~£14,580/year.**
+
+| Metric | Value |
+|---|---|
+| Annualised conversations | ~18,288 |
+| Fin involved (79.7%) | ~14,575 |
+| Fin resolves today (73.9%) | ~10,771 |
+| Tickets reaching humans today | ~7,517 |
+| Resolution rate uplift modelled (conservative) | +5pp (to 78.9%) |
+| Tickets deflected per year | ~729 |
+| Cost avoidance at £20/ticket | **~£14,580** |
+
+### 6.3 Sensitivity — what if the assumptions are wrong
+
+Three things leadership will challenge. Each tested here.
+
+| Assumption | Base case | If wrong (downside) | Effect on the case |
+|---|---|---|---|
+| Cost per human-handled ticket | £20 | £14 (low end of SaaS range) | Deflection benefit falls to ~£10,200/year. **Case still net-positive on tool spend alone (£18k released).** |
+| Fin resolution rate uplift | +5pp | 0pp (no improvement) | Deflection benefit = £0. **Case still net-positive on tool spend alone (£18k released).** |
+
+**The break-even statement is the strongest line in this case: even if Fin resolution rate does not improve at all, and the conservative cost-per-ticket benchmark is too high, the proposal still returns ~£18,000/year to the business through tool consolidation alone.** Every operational improvement is upside on top.
+
+### 6.4 Three-year view
+
+No discount rate applied (per leadership direction — this is an operational software swap, not a capital investment).
+
+| | Year 1 | Year 2 | Year 3 |
+|---|---|---|---|
+| Released spend (tools + vacant role) | £28,000 | £28,000 | £28,000 |
+| Adopted stack cost | £9,918 | £9,918 | £9,918 |
+| **Net released (tool spend only)** | **£18,082** | **£18,082** | **£18,082** |
+| Conservative deflection upside | £14,580 | £14,580 | £14,580 |
+| **Total annual benefit (incl. deflection)** | **£32,662** | **£32,662** | **£32,662** |
+| **Cumulative** | **£32,662** | **£65,324** | **£97,986** |
+
+**Payback period: immediate** — the released budget exceeds the adopted cost from month one. There is no payback period to compute because there is no investment phase.
+
+---
+
+## 7. Strategic Benefits Not in the Financial Table
+
+The financial table contains only what can be directly evidenced: tool spend in/out, and ticket deflection on known volume × benchmark cost. The benefits below are real and material, but they are deliberately not assigned £ values in this case — no controlled experiment proves the causal link, and leadership audiences discount inflated soft-benefit numbers heavily.
+
+They are presented here as **directional evidence cited to published sources**, framing the strategic case.
+
+**NRR protection through workflow dependency.**
+Trained customers renew at 47% versus 21% for untrained — a **2.2× multiplier** (CEdMA, *State of Customer Education 2025*).¹ Forrester finds customer education programmes deliver a **7.4% increase in customer retention** and a **+35% increase in average lifetime value per trainee**.²
+
+**Add-on revenue through organic demand.**
+Forrester finds customer-education programmes drive a **+38.3% increase in adoption of products targeted by training** and **+7.6% increase in revenue of products targeted by training**.² Customers buy add-ons when they understand the problem the add-on solves. Enablement is the mechanism that creates that understanding without sales pressure.
+
+**Champion-churn mitigation.**
+When a power user leaves a client, the account is at high risk. A robust on-demand library means new users can upskill immediately, protecting the account from staff turnover. This is the "stickiness engine" — the product becomes how the client does its job, not a tool they bought.
+
+**Agility — time-to-content compression.**
+With Parta + Clueso + Claude Max, feature releases ship with training the same week, not the same month. Add-on launches are accompanied by adoption-driving content from day one. This shortens the path from product investment to revenue realisation.
+
+**Optionality.**
+The Parta + Clueso + Claude stack also supports partner training, sales enablement, and internal onboarding without further licence spend. None of this is claimed in the financials; it is available without further investment.
+
+---
+
+## 8. Risks and Mitigations
+
+Five risks. Each with an owner and a mitigation. Surfaced here, not in an appendix.
+
+| Risk | Owner | Mitigation |
+|---|---|---|
+| **Adoption risk** — customers don't shift from the closing LMS to the new in-context surfaces | Sara Bodell | In-app announcement + Beamer + HC overview articles seeded before LMS shutdown. HC viewer volume (4,262/month) demonstrates the surface customers already use. |
+| **Benefit realisation risk** — Fin resolution rate does not improve at the rate assumed | Sara Bodell / Support | §6.3 break-even — the case stands without any Fin uplift; the £17k tool-spend release is fully independent of operational improvement. |
+| **Vendor risk** — Parta is a smaller, earlier-stage vendor than Trainn | Sara Bodell | Enterprise contract terms; ChurnZero case study evidence; Option B (alternative LMS) remains available if Parta underdelivers. |
+| **Capacity risk** — Specialist role unfilled; team relies on AI tooling to hit course-volume target | Sara Bodell | Clueso (two assets per session) + Parta BYO AI + Claude Max x5+x20 compress per-course hours. Loaned support resource (Nadia) covers interim capacity. The "no headcount increase" position is held for the current budget cycle and revisited at next review. |
+| **Measurement risk** — Fin resolution rate by topic is harder to attribute than completion data | Sara Bodell | The §5 funnel-tracking model gives five complementary signals, not one. Attribution windows defined per course launch (4–6 weeks). |
+
+---
+
+## 9. Recommendation and Next Steps
+
+**Approve the retirement of Trainn and Synthesia, and the adoption of Parta Studio, Clueso Enterprise, and scaled Claude Max.** The proposal releases approximately £18,082 of already-approved budget back to the business in Year 1, with a conservative additional ~£14,580 of support cost avoidance from ticket deflection as upside. No budget increase is required. No headcount increase is requested for the current budget cycle.
+
+| Action | Owner | Timing |
+|---|---|---|
+| Parta Studio contract execution | Sara Bodell | Within 2 weeks of approval |
+| Clueso Enterprise contract execution | Sara Bodell | Within 2 weeks of approval |
+| Claude Max seat uplift (x5 + x20) | Sara Bodell | Within 1 week of approval |
+| Trainn retirement date confirmed with IT | Sara Bodell / IT | Within 4 weeks of approval |
+| Synthesia retirement date confirmed | Sara Bodell | Within 4 weeks of approval |
+| First post-launch Fin resolution rate review (by topic cluster) | Sara Bodell / Support | 8 weeks post-stack-go-live |
+
+---
+
+## Appendix A — Assumptions Log
+
+Every numeric assumption used in this case, surfaced for audit. Confidence tier: H (High — directly evidenced), M (Medium — internal estimate or benchmark fit-for-purpose), L (Low — placeholder requiring confirmation).
+
+| # | Assumption | Value | Source | Owner | Date | Confidence |
+|---|---|---|---|---|---|---|
+| 1 | Trainn annual cost (retiring) | £9,500 | Current contract | Sara Bodell | 2026-05 | H |
+| 2 | Synthesia annual cost (retiring) | £10,500 | Current contract | Sara Bodell | 2026-05 | H |
+| 3 | Vacant Enablement Specialist budget | £8,000 | Approved, unfilled headcount line | Sara Bodell | 2026-05 | H |
+| 4 | Parta Studio × 2 annual cost | $1,800 / £1,417 | Parta quote | Sara Bodell | 2026-05 | H |
+| 5 | Clueso Enterprise annual cost | $7,200 / £5,669 | Clueso quote | Sara Bodell | 2026-05 | H |
+| 6 | Claude Max (x5 + x20) annual cost | $3,600 / £2,832 | Anthropic pricing | Sara Bodell | 2026-05 | H |
+| 7 | USD → GBP exchange rate | 0.787 | Sara's stated rate; locked at contract | Sara Bodell | 2026-05 | M |
+| 8 | YTD support conversations | 6,860 (4.5 months) | Intercom Fin performance report | Sara Bodell | 2026-05 | H |
+| 9 | Annualised conversations | ~18,288 | YTD × 12/4.5 | Cedar | 2026-05 | M |
+| 10 | Fin involved share | 79.7% | Intercom Fin performance report | Sara Bodell | 2026-05 | H |
+| 11 | Fin resolution rate (when involved) | 73.9% | Intercom Fin performance report | Sara Bodell | 2026-05 | H |
+| 12 | Cost per human-handled ticket | £20 | SaaS midpoint, Forest research ($18–$35 range) | Forest / Cedar | 2026-05 | **M — benchmark** |
+| 13 | Fin resolution rate uplift modelled | +5pp | Conservative; well inside published benchmarks | Cedar | 2026-05 | M |
+| 14 | CEdMA trained-vs-untrained renewal | 47% vs 21% (2.2×) | CEdMA *State of Customer Education 2025* | Forest | 2026-05 | H (cited only, no £ attached) |
+| 15 | Forrester customer-education benchmarks | +38.3% adoption; +7.4% retention; −15.5% support costs | Forrester / Intellum 2019, 2024 studies | Forest | 2026-05 | H (cited only, no £ attached) |
+| 16 | Headcount commitment horizon | "Current budget cycle" — not multi-year fixed | Sara's direction, 2026-05-12 | Sara Bodell | 2026-05 | M |
+
+**Items Sara may optionally verify before this case is finalised for leadership:**
+- Row 12: whether the Support team can supply a Commusoft-specific loaded cost per ticket to replace the £20 benchmark. The case stands regardless — this only adjusts the deflection-upside figure.
+
+---
+
+## Appendix B — Sources
+
+1. CEdMA, *State of Customer Education 2025* — referenced in Commusoft Performance & Revenue Strategy deck (2026).
+2. Forrester / Intellum, *The Impact of Customer Education Programs* — 2024 wave (n=300 US customer education decision-makers); 2019 wave (n=300, original study). https://www.intellum.com/news/research-impact-of-customer-education-programs and https://www.intellum.com/news/new-research-reveals-the-real-impact-of-customer-education-programs.
+3. Continu — *Corporate eLearning Statistics 2025*; eLearning Industry — *Why LMS Completion Rates Don't Prove Learning Works*; Training Industry — LMS replacement research (42% statistic).
+4. Parta case study — ChurnZero (66% → 91% completion, revision cycles halved in four months).
+5. Intercom Community — *How Pupil Progress went from 55% to 75% Fin Resolution Rate in 2 months*. https://community.intercom.com.
+6. Cost-per-ticket benchmark range — Forest research brief, May 2026. Sources: LiveChatAI 2025 support cost benchmarks; MatrixFlows Support Cost Benchmarks 2026; Lorikeet cost-per-ticket; Pylon AI ticket deflection 2025.
+7. Intercom Fin AI performance report — Commusoft instance, YTD 2026 as of approximately 2026-05-12.
+
+---
+
+*Prepared by Sara Bodell, Enablement Manager, Commusoft — May 2026. For internal leadership review.*
 `;
 
 INBOX_FILES["forest-customer-settings"] = `# Forest — Research Brief: SunComfort Customer Settings vs. Help Centre
@@ -17485,7 +17803,8 @@ function openInboxFile(key) {
     'ivy-induction': { num: 'Ivy — People', title: 'Enablement Specialist Induction Plan v3' },
     'ivy-jd-academy': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Description' },
     'ivy-jd-advert': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Advert' },
-    'cedar-stack-modernisation': { num: 'Cedar — Business Case', title: 'Enablement Stack Modernisation — Business Case' }
+    'cedar-stack-modernisation': { num: 'Cedar — Business Case', title: 'Enablement Stack Modernisation — v7' },
+    'cedar-stack-modernisation-v6': { num: 'Cedar — Business Case', title: 'Enablement Stack Modernisation — v6 Draft' }
   };
   var lbl = labels[key] || { num: 'Owners Inbox', title: key };
   document.getElementById('panelNum').textContent = lbl.num;

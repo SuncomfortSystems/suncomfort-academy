@@ -1,6 +1,6 @@
 import re
 
-draft_path = r"C:\Users\sarab\Desktop\Commusoft\Owners Inbox\Business Cases\Cedar - v6 Enablement Stack Modernisation - DRAFT.md"
+draft_path = r"C:\Users\sarab\Desktop\Commusoft\Owners Inbox\Business Cases\Cedar - Enablement Stack Modernisation - v7.md"
 dashboard_path = r"C:\Users\sarab\Desktop\Commusoft\github\suncomfort-academy\dashboard.html"
 
 with open(draft_path, "r", encoding="utf-8") as f:

@@ -18347,6 +18347,39 @@ function toggleSidebar() {
   }
 })();
 
+// Training view: only SunComfort Data and SunComfort Website shown when ?training=true
+(function() {
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('training') === 'true') {
+    // Hide Academy nav item
+    var navAcademy = document.querySelector('.nav-item[onclick*="showView(\'academy\'"]');
+    if (navAcademy) navAcademy.style.display = 'none';
+
+    // Hide the "Series" nav-section heading
+    document.querySelectorAll('.nav-section').forEach(function(el) {
+      if (el.textContent.trim() === 'Series') el.style.display = 'none';
+    });
+
+    // Hide all series nav items (navLayer-based)
+    document.querySelectorAll('.nav-item[onclick*="navLayer"]').forEach(function(el) {
+      el.style.display = 'none';
+    });
+
+    // Switch default active view from Academy to SunComfort Data
+    var viewAcademy = document.getElementById('view-academy');
+    if (viewAcademy) viewAcademy.classList.remove('active');
+
+    var viewSuncomfort = document.getElementById('view-suncomfort');
+    if (viewSuncomfort) viewSuncomfort.classList.add('active');
+
+    // Switch active nav item
+    if (navAcademy) navAcademy.classList.remove('active');
+
+    var navSuncomfort = document.querySelector('.nav-item[onclick*="showView(\'suncomfort\'"]');
+    if (navSuncomfort) navSuncomfort.classList.add('active');
+  }
+})();
+
 // Inject download buttons onto course cards
 (function() {
   function mdDownload(key, title) {

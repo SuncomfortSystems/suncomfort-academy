@@ -242,6 +242,7 @@
     <div class="nav-section">Views</div>
     <div class="nav-item" id="nav-inbox" onclick="showView('inbox', this)" style="display:none"><div class="nav-dot" style="background:#fa6932"></div>Owners Inbox</div>
     <div class="nav-item active" onclick="showView('academy', this)"><div class="nav-dot" style="background:#2d91c5"></div>Academy</div>
+    <div class="nav-item" onclick="showView('overview', this)"><div class="nav-dot" style="background:#b45309"></div>SunComfort Overview</div>
     <div class="nav-item" onclick="showView('suncomfort', this)"><div class="nav-dot" style="background:#465564"></div>SunComfort Data</div>
     <div class="nav-item" onclick="showView('website', this)"><div class="nav-dot" style="background:#2e7d32"></div>SunComfort Website</div>
     <div class="nav-section" style="margin-top:16px">Series</div>
@@ -254,6 +255,12 @@
   </nav>
 
   <main class="main">
+
+    <!-- OVERVIEW -->
+    <div id="view-overview" class="view">
+      <div class="page-heading"><h1>SunComfort Overview</h1><p>Company reference — background, team, and context for Academy content</p></div>
+      <div style="padding:32px;color:#666;font-size:15px;">Content coming soon.</div>
+    </div>
 
     <!-- INBOX -->
     <div id="view-inbox" class="view">
@@ -17662,6 +17669,7 @@ function openInboxFile(key) {
   var content = INBOX_FILES[key];
   if (!content) { content = 'Content not found.'; }
   var labels = {
+    'overview': { num: 'SunComfort', title: 'SunComfort Overview' },
     'forest-customer-settings': { num: 'Forest — Research Brief', title: 'Customer Settings Help Centre Review' },
     'flint-customer-settings': { num: 'Flint — Review', title: 'Customer Settings Help Centre Check' },
     'reed-phase2': { num: 'Reed — Planning', title: 'Academy Full Course List — Phase 2' },

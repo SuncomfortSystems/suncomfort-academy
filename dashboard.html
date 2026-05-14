@@ -244,6 +244,7 @@
     <div class="nav-item active" onclick="showView('academy', this)"><div class="nav-dot" style="background:#2d91c5"></div>Academy</div>
     <div class="nav-item" onclick="showView('overview', this)"><div class="nav-dot" style="background:#b45309"></div>SunComfort Overview</div>
     <div class="nav-item" onclick="showView('suncomfort', this)"><div class="nav-dot" style="background:#465564"></div>SunComfort Data</div>
+    <div class="nav-item" onclick="showView('branding', this)"><div class="nav-dot" style="background:#fa6932"></div>SunComfort Branding</div>
     <div class="nav-item" onclick="showView('website', this)"><div class="nav-dot" style="background:#2e7d32"></div>SunComfort Website</div>
     <div class="nav-section" style="margin-top:16px">Series</div>
 
@@ -272,16 +273,6 @@
           <tr><td style="color:var(--text-muted);font-size:13px">Customer Split</td><td>70% Residential / 30% Light Commercial</td></tr>
         </tbody>
       </table>
-
-      <div class="section-heading">Brand Colours</div>
-      <div class="swatches">
-        <div class="swatch"><div class="swatch-dot" style="background:#fa6932"></div><div class="swatch-info"><div class="name">Bright Orange</div><div class="hex">#fa6932</div></div></div>
-        <div class="swatch"><div class="swatch-dot" style="background:#f38d29"></div><div class="swatch-info"><div class="name">Light Orange</div><div class="hex">#f38d29</div></div></div>
-        <div class="swatch"><div class="swatch-dot" style="background:#465564"></div><div class="swatch-info"><div class="name">Grey</div><div class="hex">#465564</div></div></div>
-        <div class="swatch"><div class="swatch-dot" style="background:#2d91c5"></div><div class="swatch-info"><div class="name">Blue 1</div><div class="hex">#2d91c5</div></div></div>
-        <div class="swatch"><div class="swatch-dot" style="background:#1e9dc0"></div><div class="swatch-info"><div class="name">Blue 2</div><div class="hex">#1e9dc0</div></div></div>
-        <div class="swatch"><div class="swatch-dot" style="background:#ffffff; border:1px solid #ddd"></div><div class="swatch-info"><div class="name">White</div><div class="hex">#ffffff</div></div></div>
-      </div>
 
       <div class="section-heading">Core Services</div>
       <table class="inbox-table">
@@ -905,7 +896,6 @@
       <div class="page-heading"><h1>SunComfort Systems</h1><p>Fictional training company — characters, brand, and company overview</p></div>
       <div class="stats-row">
         <div class="stat-card"><div class="stat-value" style="color:var(--orange)">35</div><div class="stat-label">Characters</div></div>
-        <div class="stat-card"><div class="stat-value" style="color:var(--blue1)">6</div><div class="stat-label">Brand Colours</div></div>
       </div>
       <div class="section-heading">Characters</div>
       <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:0.6px;color:var(--text-muted);margin:0 0 10px">Leadership</div>
@@ -957,6 +947,20 @@
         <input type="text" id="settingsSearch" placeholder="Search settings..." oninput="filterSettings(this.value)" />
       </div>
       <div id="settingsContainer"></div>
+    </div>
+
+    <!-- BRANDING -->
+    <div id="view-branding" class="view">
+      <div class="page-heading"><h1>SunComfort Branding</h1><p>Brand colours, logos, and visual identity reference</p></div>
+      <div class="section-heading">Brand Colours</div>
+      <div class="swatches">
+        <div class="swatch"><div class="swatch-dot" style="background:#fa6932"></div><div class="swatch-info"><div class="name">Bright Orange</div><div class="hex">#fa6932</div></div></div>
+        <div class="swatch"><div class="swatch-dot" style="background:#f38d29"></div><div class="swatch-info"><div class="name">Light Orange</div><div class="hex">#f38d29</div></div></div>
+        <div class="swatch"><div class="swatch-dot" style="background:#465564"></div><div class="swatch-info"><div class="name">Grey</div><div class="hex">#465564</div></div></div>
+        <div class="swatch"><div class="swatch-dot" style="background:#2d91c5"></div><div class="swatch-info"><div class="name">Blue 1</div><div class="hex">#2d91c5</div></div></div>
+        <div class="swatch"><div class="swatch-dot" style="background:#1e9dc0"></div><div class="swatch-info"><div class="name">Blue 2</div><div class="hex">#1e9dc0</div></div></div>
+        <div class="swatch"><div class="swatch-dot" style="background:#ffffff; border:1px solid #ddd"></div><div class="swatch-info"><div class="name">White</div><div class="hex">#ffffff</div></div></div>
+      </div>
     </div>
 
     <!-- WEBSITE -->
@@ -17750,6 +17754,7 @@ function openInboxFile(key) {
   if (!content) { content = 'Content not found.'; }
   var labels = {
     'overview': { num: 'SunComfort', title: 'SunComfort Overview' },
+    'branding': { num: 'SunComfort', title: 'SunComfort Branding' },
     'forest-customer-settings': { num: 'Forest — Research Brief', title: 'Customer Settings Help Centre Review' },
     'flint-customer-settings': { num: 'Flint — Review', title: 'Customer Settings Help Centre Check' },
     'reed-phase2': { num: 'Reed — Planning', title: 'Academy Full Course List — Phase 2' },

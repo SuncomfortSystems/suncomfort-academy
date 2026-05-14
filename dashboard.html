@@ -224,6 +224,15 @@
   .sp-table tr:last-child td { border-bottom: none; }
   .sp-table tr:nth-child(even) td { background: #f9fafb; }
 
+  .pw-overlay { position:fixed; inset:0; background:#f0f2f5; display:flex; align-items:center; justify-content:center; z-index:99999; }
+  .pw-box { background:#fff; border:1px solid var(--border); border-radius:12px; padding:40px; width:320px; text-align:center; box-shadow:0 4px 24px rgba(0,0,0,0.08); }
+  .pw-logo { font-size:20px; font-weight:700; color:var(--grey); margin-bottom:6px; }
+  .pw-sub { font-size:13px; color:var(--text-muted); margin-bottom:24px; }
+  .pw-input { width:100%; padding:10px 12px; border:1px solid var(--border); border-radius:6px; font-size:14px; box-sizing:border-box; margin-bottom:12px; outline:none; }
+  .pw-input:focus { border-color:var(--blue1); }
+  .pw-btn { width:100%; padding:10px; background:var(--grey); color:#fff; border:none; border-radius:6px; font-size:14px; font-weight:600; cursor:pointer; }
+  .pw-btn:hover { background:var(--blue1); }
+  .pw-error { font-size:12px; color:#c62828; margin-top:8px; display:none; }
 </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
@@ -232,6 +241,16 @@
 <div class="header">
   <div class="header-logo">Sun<span>Comfort</span> Systems</div>
   <div class="header-subtitle">Content Dashboard</div>
+</div>
+
+<div class="pw-overlay" id="pwOverlay">
+  <div class="pw-box">
+    <div class="pw-logo">SunComfort Academy</div>
+    <div class="pw-sub">Enter your password to continue</div>
+    <input class="pw-input" type="password" id="pwInput" placeholder="Password" onkeydown="if(event.key==='Enter')checkPassword()" />
+    <button class="pw-btn" onclick="checkPassword()">Access Dashboard</button>
+    <div class="pw-error" id="pwError">Incorrect password. Please try again.</div>
+  </div>
 </div>
 
 <div class="layout">
@@ -18562,6 +18581,36 @@ function toggleSidebar() {
 
     meta.appendChild(btn);
   });
+})();
+
+// Password protection
+(function() {
+  var PW_KEY = 'sc_auth';
+  var PW_HASH = '9f4f3a2b1e8c6d7a0f5e2b4c8a1d3f6e9b2c5d8a1e4f7b0c3d6e9a2b5c8d1e4';
+  function hashPassword(pw) {
+    var hash = 0;
+    for (var i = 0; i < pw.length; i++) {
+      hash = ((hash << 5) - hash) + pw.charCodeAt(i);
+      hash |= 0;
+    }
+    return hash.toString(16);
+  }
+  var CORRECT = hashPassword('C0mmus0ft2026!*');
+  var overlay = document.getElementById('pwOverlay');
+  if (localStorage.getItem(PW_KEY) === CORRECT) {
+    overlay.style.display = 'none';
+  }
+  window.checkPassword = function() {
+    var val = document.getElementById('pwInput').value;
+    if (hashPassword(val) === CORRECT) {
+      localStorage.setItem(PW_KEY, CORRECT);
+      overlay.style.display = 'none';
+    } else {
+      document.getElementById('pwError').style.display = 'block';
+      document.getElementById('pwInput').value = '';
+      document.getElementById('pwInput').focus();
+    }
+  };
 })();
 
 </script>

@@ -950,6 +950,30 @@
           <div class="course-card" onclick="openInboxFile('reed-script-l3-route-challenge')"><div class="course-num">Challenge</div><div class="course-title">Route optimised, diary running efficiently</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision Makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
+      <div id="l3-variations" class="series-block">
+        <div class="series-header" style="background:#1565c0">
+          <div><h2>Layer 3 — Variations</h2><div class="series-meta">Set up variation templates, raise variations in the field, and manage them from the office</div></div>
+          <div class="series-count">3 courses + challenge</div>
+        </div>
+        <div class="course-grid">
+          <div class="course-card" onclick="openInboxFile('reed-script-l3-variations-c1')"><div class="course-num">Course 1</div><div class="course-title">Set up variation templates and option templates</div><div class="course-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l3-variations-c2')"><div class="course-num">Course 2</div><div class="course-title">Raise a variation in the field</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Field team</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l3-variations-c3')"><div class="course-num">Course 3</div><div class="course-title">Manage variations from the office</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l3-variations-challenge')"><div class="course-num">Challenge</div><div class="course-title">Variation raised, approved, and invoiced</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">All roles</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+        </div>
+      </div>
+      <div id="l3-dr" class="series-block">
+        <div class="series-header" style="background:#1565c0">
+          <div><h2>Layer 3 — Defects and Recommendations</h2><div class="series-meta">Strategy and setup for decision makers, field intelligence for technicians, and operational excellence for office teams</div></div>
+          <div class="series-count">3 courses + challenge</div>
+        </div>
+        <div class="course-grid">
+          <div class="course-card" onclick="openInboxFile('reed-script-l3-dr-c1')"><div class="course-num">Course 1</div><div class="course-title">Strategy and setup</div><div class="course-meta"><span class="meta-pill">7 min</span><span class="meta-pill">Decision Makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l3-dr-c2')"><div class="course-num">Course 2</div><div class="course-title">Field intelligence</div><div class="course-meta"><span class="meta-pill">6 min</span><span class="meta-pill">Field team</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l3-dr-c3')"><div class="course-num">Course 3</div><div class="course-title">Operational excellence</div><div class="course-meta"><span class="meta-pill">8 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l3-dr-challenge')"><div class="course-num">Challenge</div><div class="course-title">Defect spotted, proposal sent, work won</div><div class="course-meta"><span class="meta-pill">6 min</span><span class="meta-pill">All roles</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+        </div>
+      </div>
     </div>
 
     <!-- SUNCOMFORT -->
@@ -18008,6 +18032,1015 @@ INBOX_FILES["reed-script-l3-route-challenge"] = `# Route optimised, diary runnin
 
 None — challenge scenario is grounded in verified product behaviour from HC articles 234987, 216744, and 267464. All three courses represented in the dialogue.
 `;
+INBOX_FILES["reed-script-l3-variations-c1"] = `# Set up variation templates and option templates
+
+**Series:** L3 Variations | **Course:** 1 of 3 | **Duration:** 5 min | **Audience:** Admins
+
+---
+
+**Learning objectives**
+
+1. Explain the two variation workflows — Mobile-led and Office Intervention — and when each applies.
+2. Build a Variation Option Template with content blocks, a Technician Notes section, and correct internal and customer display names.
+3. Configure Cover Pages and an Opportunity Template to give every proposal a professional branded face.
+4. Complete all eight steps of the Variation Template Wizard, including deflection logic, pricing rules, and notification settings.
+
+---
+
+**Target audience:** Business owners, operations managers, and system administrators at field service and renewable energy companies using Commusoft. These are the people responsible for configuring the system before anyone raises a variation in the field. Note: SunComfort Systems is the pedagogical vehicle for this course — the setup decisions shown reflect real choices your business will face.
+
+**Assumed starting point:** You have completed the Layer 2 configuration series. Job types, job descriptions, labour rates, and supplier records are already in place. You have at least a working knowledge of Opportunity Templates from the standard proposals setup.
+
+**Main objective beyond the learning objectives:** By the end of this course, your variations engine is live: the right template appears for the right job, pricing decisions are pre-made, deflection rules route complex work to the office automatically, and Jake (or your equivalent engineer) can raise a professional proposal in the field without making a single manual pricing or routing decision.
+
+---
+
+**Characters:** Maria Rodriguez (Solar Division Lead, SunComfort Systems), Jake Harris (Senior Heat Pump Technician, SunComfort Systems), Emma Clarke (Office Administrator, SunComfort Systems), Logan Chance (Operations Manager, SunComfort Systems)
+
+**Scenario:** Maria configures SunComfort's complete variations engine from scratch, building the visual foundation, the office visibility layer, and the Variation Template Wizard so Jake can raise a professional variation at Mr. Okafor's property without calling the office once.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Maria Rodriguez, Solar Division Lead, Owner/Manager role
+- **Customer record:** Mr. David Okafor (Canary Riverside portfolio) and Mrs. Whitfield (Sevenoaks, solar job) — both must exist with active jobs
+- **Existing data:** Labour rates configured (Standard domestic rate at £45/hr); Denmans exists as a supplier; Solar PV Maintenance and Solar Installation job descriptions exist; Warranty Variation Pipeline does not exist yet (created during this course)
+- **Assets required:** None
+
+---
+
+## Why variations matter and how they flow
+
+Welcome to the first course in the Variations series. Throughout this training you'll follow SunComfort Systems, led by Maria Rodriguez, as she builds a professional framework for handling field discoveries. This setup course is designed for the decision makers who build the technical foundation before a single variation is raised. By the end, you'll have turned reactive fixes into a structured, profitable growth driver. Please note that some features shown may differ based on your plan or role level. If you're unsure what's available to you, reach out to the Support team via the in-app chat.
+
+The biggest hidden cost in a service business isn't fuel or van stock — it's the thousands of pounds in "favours" your technicians do for customers every week. When a technician like Jake spots a small leak or a frayed wire, the pressure to just fix it destroys your margins over time. Formalising how these discoveries are handled ensures every minute of labour and every part used is accounted for in your bottom line, and capturing the true value of every discovery is the only way to move from getting the job done to protecting your profit. One important boundary to set with your team upfront: a variation is specifically for additional work related to the current job's objective. If Jake identifies a fault or an upgrade that is completely unrelated to the original scope, that belongs in Defects and Recommendations, not as a variation. This distinction keeps job records focused and property findings tracked as independent opportunities for future growth.
+
+Understanding the variations lifecycle before you touch a single setting makes every configuration decision easier. The process begins with Jake identifying something on site, moves into a professional digital proposal, and concludes with updated job records and an invoice. This end-to-end chain lets Maria and Logan track additional work in real time. There are two paths through that lifecycle, and you need to understand both before you build anything. The first is the Mobile-led Workflow, designed for quick wins where Jake manages the entire lifecycle independently. When he identifies extra work at Mr. Okafor's property, he creates and completes the variation directly from his mobile, the system generates an opportunity and a proposal for the customer to approve on the spot, and once accepted the job records update immediately with an authorised transition from discovery to completion. The second is the Office Intervention Workflow, a safeguard that pauses the process and hands it to Emma. This happens in three ways: the customer isn't available to sign on site, a PO needs raising to order a part, or the system deflects automatically based on how Jake answers a question during the variation. The first two come as standard with no additional setup. The third requires Advanced Sales and is what gives you logic-driven control over high-stakes decisions, like potential warranty claims where the office needs to verify coverage before any promises are made.
+
+---
+
+## Building the visual foundation: Variation Option Templates
+
+Before building any business rules or automated triggers, the visual foundation that all your customers will see needs to be established first. This building block phase is universal — every user, regardless of plan, must configure these visual elements to ensure professional output.
+
+The visual engine of your on-site proposal is the Variation Option Template. Getting this right separates a professional, trust-building document from a bland list of parts and costs. This is the foundation Maria builds once so that when Jake sits down with Mr. Okafor, the system handles the presentation. Maria opens Settings, navigates to Proposals, and launches the Variation Option Templates editor. This is where her library of standardised layouts lives, organised by job type so Jake always pulls the right document for the right visit. She adds a new template, names it "On-site Proposal," and immediately the pricing summary block loads into the page automatically. This block is hard-coded to receive the data Jake captures on mobile and cannot be removed, but everything around it is Maria's to build.
+
+Here's something that catches most businesses off guard: the name Maria typed doesn't stay internal — it auto-populates directly into the customer-facing display name as well. She clicks Edit and updates it to "Quote," keeping her internal workflow label separate from what Mr. Okafor will see. Your internal name can be whatever makes sense for how your team organises templates; your customer display name is what gets presented in the field, so make sure those two are doing different jobs.
+
+From the panel on the left, Maria drags a Title block onto the page and a Subtitle block beneath it, types in "Quote" and "Site Assessment and Scope Adjustment," then adds a Text Area to frame the context of Jake's visit so Mr. Okafor understands why he's looking at additional costs before he sees them. Directly above the pricing summary she drops in a second Text Area with the header "Technician Notes." Businesses that lead with the technical assessment before the price get far fewer objections at the door. She finishes by adding one last Text Area beneath the pricing summary for SunComfort's acceptance terms. Whether Jake gets the signature on the spot or the job flows back to Emma, every cost is already framed, justified, and presented in a way that's hard to push back on.
+
+---
+
+## Cover Pages and Opportunity Templates
+
+Before Maria can bundle discoveries into a formal proposal, she needs Cover Pages in place. These are the branded face of every document SunComfort sends out and a mandatory prerequisite before the Opportunity Template can be configured. A document without a Cover Page carries no branding, no context, and no credibility. Commusoft's built-in marketplace stocks professionally designed templates filtered by industry, so finding something that fits takes minutes rather than hours. Depending on your plan you can take that starting point as far as you need, from editing the text through to rebuilding the layout with your own imagery. Maria browses the marketplace, filters by industry, and selects cover pages to match SunComfort's three main service lines: HVAC, Solar, and General Works. She opens each one to tailor the text to SunComfort's tone, and where she wants the document to personalise itself automatically she types an opening bracket and the system surfaces a list of dynamic fields, pulling in the customer's name, the proposal creator, and other job-specific details so every document Jake presents feels personally prepared for that customer. That personalisation is what Mr. Okafor notices without knowing why, and it's what makes the difference between a document he reads and one he signs.
+
+The Opportunity Template is the technical glue that holds all of Maria's setup work together. It's the bucket that connects her cover pages, job descriptions, and pricing data into a single ready-to-present proposal. Without it, the system has no way of knowing which branded assets to pull together when Jake raises a variation in the field. Maria navigates to Settings, opens Opportunity Templates, and adds a new template. The Basic Details screen loads with three fields: a name, the matching Job Description, and the linked cover page. She gives the template a name, selects the Solar Installation job description, and links the Solar cover page she built earlier. From that point on, the system knows exactly what to assemble every time Jake raises a variation for that job type without him making a single manual choice on site. SunComfort runs a separate Opportunity Template for each of their main service lines so the right cover page and job description are always paired with the right work, but whether you build industry-specific templates from day one or begin with a single general template and grow from there, what matters is that the bucket exists and your team is working from it consistently.
+
+---
+
+**Reflection**
+
+Maria has finished building her Variation Option Template. She notices the internal template name has auto-populated into the customer-facing display name field. Why does this matter?
+
+- It doesn't matter — the customer never sees the template name, only the pricing.
+- The internal name and display name serve different purposes: the internal name organises Maria's library, while the display name is what Mr. Okafor reads when Jake presents the proposal on site. ✓
+- The display name controls which cover page is attached to the proposal.
+- The internal name must match the Opportunity Template name exactly or the system won't link them.
+
+*Feedback: When Maria first creates the template and types an internal name, the system copies that name directly into the customer-facing display name. If she doesn't update the display name separately, Mr. Okafor will see whatever internal label Maria chose, which may not reflect how she wants the document to read in the field. The edit step is small but easy to miss, and it's visible every time Jake presents a proposal on site.*
+
+---
+
+## Setting up office visibility: Pipelines and custom fields
+
+The visual foundation Maria has built is what Jake presents in the field, but behind every great field operation is an office team that knows exactly what's happening without having to ask. This next layer of setup gives Emma that visibility, turning every variation Jake raises into a tracked, manageable opportunity that moves through the office with purpose rather than landing in an inbox and getting lost.
+
+The Opportunity Pipeline is what gives Emma visibility over every variation that leaves the field. It's the board that tells her what's been raised, what's waiting on her, and what's ready to move forward, without her needing to chase a single technician for an update. Maria has built SunComfort's Warranty Variation Pipeline with four stages: Variation Identified, Awaiting Office Review, Quote Sent and Awaiting Approval, and Approved and Ready for Works. The stage names you create are entirely yours to define. What matters is that they reflect how your office actually operates so Emma always knows exactly where an opportunity sits and what action it needs next.
+
+The final step in the pipeline setup is linking the warranty check question to the right stage. Maria does this in the Required Custom Fields step, assigning the "Does the extra work require a warranty check?" field to the Awaiting Office Review stage, making it mandatory at that point in the pipeline. When Jake answers Yes on his mobile and the opportunity lands with Emma at that stage, the question and Jake's answer are already there waiting. Emma has everything she needs to act without going back to Jake for context.
+
+To build the logic that drives the deflection, Maria navigates to Settings, opens Global, and clicks View on Custom Field Templates. This is where she creates the form Jake will see on mobile when he raises a warranty variation. She adds a new template named "Warranty Check Fields," clicks Configure to open the form builder, and drags a Toggle field onto the canvas with the question "Does the extra work require a warranty check?" She sets Show in Screens to Add and Edit and saves the field. One small step that's easy to miss: before the template can do anything it needs to be activated. Maria closes the form builder, finds the Warranty Check Fields template in the list, clicks Edit, checks the Is Active box, and saves. Without that step the field won't appear for Jake on mobile regardless of how it's configured.
+
+With the template active, Maria navigates to Settings, opens Global, and clicks View on Assign Custom Field Templates to Objects. She selects Opportunities from the Objects column, chooses Solar Installation from the second column to scope it to the right job type, then clicks Add Custom Field Template and selects Warranty Check Fields before saving. From this point on, every time Jake raises a variation against a Solar Installation job, that question is waiting for him, and his answer is what determines whether he quotes on site or the opportunity moves to Emma automatically.
+
+---
+
+## The Variation Template Wizard
+
+Everything Maria has built so far, the Variation Option Template, the Cover Pages, the Opportunity Template, the Pipeline, and the Custom Fields, all comes together in one place: the Variation Template Wizard. She navigates to Settings, opens Opportunities, and clicks View next to Variation Templates before hitting Add New to start the eight-step wizard that will bring SunComfort's variation engine to life. This is the final connection between the visual foundation and the logic layer. Once it's saved and active, Jake has everything he needs to raise a variation from his mobile without a single manual decision about what to charge, who to notify, or whether to deflect to the office.
+
+Step 1 is straightforward: Maria gives the template a clear internal description, "Warranty Check Variations," then selects the Opportunity Template it belongs to, in this case Solar Installation. That single dropdown connects this variation template to the pipeline, the cover page, and the job description Maria already configured. Everything she built earlier is now in play the moment she makes that selection.
+
+Step 2 is where the custom field work gets put to use. Maria toggles Deflect Back to Office to Yes, adds a condition, and selects "Does the extra work require a warranty check?" as the trigger field with the answer set to Yes. She then selects the Warranty Variation Pipeline and sets the stage to Awaiting Office Review, so the moment Jake answers Yes on his mobile the opportunity moves automatically to Emma's board at exactly the right stage. If you're setting up a standard variation without any deflection logic, toggle this to No and move on. If the Advanced Sales option isn't available on your plan, this step will be greyed out entirely.
+
+Step 3 is a single decision: Maria selects the Variation Option Template that controls how the proposal looks when Jake presents it to the customer. For both SunComfort templates this is the On-site Proposal she configured earlier, ensuring every document Jake presents carries the same professional structure regardless of whether it's an AC installation or a solar warranty check.
+
+Step 4 is the most detailed step in the wizard. This is where Maria defines exactly what Jake can charge for when building a quote on site, covering three distinct areas: labour, materials, and expenses. Getting this right once means Jake never has to make a pricing decision in front of a customer. For labour, Maria adds each time increment as a separate option: one hour at £45, two hours at £90, and three hours at £135, all using the Standard domestic rate, each with a short description and the correct VAT rate. For materials, Maria selects Denmans as the authorised supplier for the warranty variation, Jake will only be able to source parts from Denmans when raising this type of variation, which keeps procurement consistent and auditable. She sets the default markup at 40%. If Jake encounters a part on site that isn't already priced in your system, that markup is the only thing standing between you and an unprotected margin, so getting it right before going live matters. For expenses, Maria toggles Expense Required to Yes and adds two questions: Extended Parking as a price range giving Jake the options of £5, £10, £15, or £20, and Waste and Debris Disposal as a dynamic expense where Jake types in the exact amount he incurred on site.
+
+Step 5 gives Maria control over whether the original job's line items appear alongside the variation cost on the proposal. For SunComfort's warranty variation this is set to No, keeping the proposal focused on the variation costs alone, but for businesses where the original call-out is still outstanding and relevant to the customer's decision, enabling this ensures the customer sees the full picture before they sign.
+
+Step 6 determines what financial information Jake can see on his mobile when building the variation. For the warranty check variation Maria unticks Sales Prices, because this work may involve manufacturer liability and office review, the final pricing decision belongs with Emma rather than Jake.
+
+Step 7 is what makes the variation visible to Jake on his mobile: Maria selects the Solar PV Maintenance job description, and from that point on the Add Variation option appears on any job of that type Jake is completing. Without this step the variation template exists in the system but Jake would never see it.
+
+Step 8 is where Maria configures notifications, setting both an email notification and an internal system alert for Logan Chance and the Responsible Salesperson, so when Jake's warranty check answer triggers a deflection neither Emma nor Logan is waiting to find out. For the standard variation, Emma Clarke receives the notification on creation, keeping the office informed from the moment Jake raises the quote without flooding the whole team with alerts they don't need to act on.
+
+Once Maria saves the wizard she's prompted to activate the template or save it as a draft. She types Activate in the confirmation box and the template goes live immediately. From this moment Jake's mobile app is ready, the deflection logic is in place, and every decision about pricing, routing, and notification has already been made for him.
+
+---
+
+## Testing before going live
+
+Most businesses treat setup as something to get through. What Maria has built at SunComfort is a revenue engine: every variation Jake raises already knows what to charge, what to show the customer, who to notify, and whether to route to the office or close on the spot. The difference between businesses that win extra work consistently and those that leave it on the table almost always comes down to whether this foundation was built properly or skipped in the rush to go live.
+
+Even with every step completed, live problems are possible, and they almost always trace back to the same handful of mistakes. The Job Description isn't linked in Step 7 so Jake opens the app and the variation button simply isn't there. The customer display name was never updated so Mr. Okafor's document reads "On-site Proposal" instead of "Quote." The custom field template was built but never activated, so the warranty check question never appears for Jake and the deflection never fires. These aren't system failures — they're setup gaps, and every single one of them is invisible until someone is standing in front of a customer.
+
+Before SunComfort sends Jake to Mrs. Whitfield's property, Maria creates a test job and runs the full variation flow on a mobile device exactly as Jake would in the field. She watches the right template appear, answers Yes to the warranty check question, and confirms the opportunity lands on Emma's board at the Awaiting Office Review stage. Logan's notification fires, the proposal renders with the correct cover page and Technician Notes layout, and every figure reflects the pricing Maria configured. Ten minutes of testing is what stands between a smooth day one and a live demonstration of everything that was missed during setup.
+
+Maria's work is done, and everything she's built is now sitting in Jake's pocket waiting for the moment he finds something on site that falls outside the original scope. The next course puts you in Jake's position: on site, tablet in hand, standing in front of a customer who needs a decision.
+
+---
+
+**Open items**
+
+None — all content verified against source. Note: the source file contained a truncated sentence at Scene 11 of Chapter 1 ("...during the" with no completion). This has been resolved by describing the three deflection routes fully in the preceding section, which already contained the complete information.
+`;
+INBOX_FILES["reed-script-l3-variations-c2"] = `# Raise a variation in the field
+
+**Series:** L3 Variations | **Course:** 2 of 3 | **Duration:** 4 min | **Audience:** Field team
+
+---
+
+**Learning objectives**
+
+1. Explain why formalising field discoveries protects both business margins and professional reputation.
+2. Raise a standard variation on mobile, completing all steps from asset identification through to customer signature.
+3. Identify when to use Defects and Recommendations instead of a variation.
+4. Raise a warranty check variation and hand it off to the office cleanly using the deflection workflow.
+
+---
+
+**Target audience:** Field engineers and senior technicians at field service and renewable energy businesses using Commusoft. These are the people who encounter additional work on site and need a professional, on-the-go way to handle every discovery the moment it is found. Note: SunComfort Systems is the pedagogical vehicle for this course — the scenarios follow Jake Harris as he works through two real on-site situations.
+
+**Assumed starting point:** You have completed Course 1 of this series, or your office team has already configured variation templates for your job types. The Add Variation button is visible on your jobs in the mobile app.
+
+**Main objective beyond the learning objectives:** By the end of this course, you never need to make an awkward call to the office when you find something unexpected on site. You can raise a professional variation, capture evidence, present a proposal, and either close the deal on the spot or hand it to the office cleanly, all without leaving the job screen.
+
+---
+
+**Characters:** Jake Harris (Senior Heat Pump Technician, SunComfort Systems), Mr. David Okafor (customer, Canary Riverside), Mrs. Whitfield (customer, Sevenoaks solar job)
+
+**Scenario:** Jake is on site at two separate jobs. At Mr. Okafor's property he finds crushed ductwork that must be replaced before the AC installation can be completed. At Mrs. Whitfield's property he spots an underperforming solar inverter that may be under warranty and needs the office to verify before any price is quoted.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Jake Harris, Senior Heat Pump Technician, Engineer role
+- **Customer record:** Mr. David Okafor — AC installation job, active and in progress. Mrs. Whitfield — Solar Warranty Repair job, active and in progress.
+- **Existing data:** Variation templates configured per Course 1; Standard variation linked to AC installation job description; Warranty Check variation linked to Solar PV Maintenance job description; Labour rates, materials, and expense options all pre-configured.
+- **Assets required:** None
+
+---
+
+## Why raising a variation matters
+
+Now that the office has built the framework, you are stepping into the boots of a lead technician at SunComfort Systems to see how the system works in the real world. Your objective is to move through the mobile app steps so you can confidently justify additional work, capture high-quality evidence, and either close the deal on site or hand it back to the office with total clarity.
+
+In the field, spotting additional work that falls outside the original job scope puts you in a difficult position. Doing a favour for the customer creates revenue leakage and leaves you exposed if the work is ever queried. Formalising these discoveries on site is the only way to protect both the business's margins and your own professional reputation. A variation is your primary tool for capturing extra labour or materials that weren't in the original plan. Instead of doing freebies or phoning the office, you raise the variation on your mobile to generate a professional proposal, ensuring every minute of your time and every part you use is documented and billed correctly from the start. In most situations, your goal is to provide a quote, get a signature, and finish the work right then and there. If the customer is unavailable or if you need to order parts that aren't on your van, the system automatically routes that work to the office team so you can move on to your next job without anything falling through the cracks.
+
+One tool boundary worth knowing: if the customer asks for a quote on an unrelated fault or a potential upgrade, that belongs in Defects and Recommendations, not as a variation. Using the right tool ensures the office can track the technical history of the property correctly while you stay focused on the specific job at hand.
+
+---
+
+**Reflection**
+
+What happens if you raise a variation but the customer isn't available to sign on site?
+
+- The variation is deleted and you must start over when they are home.
+- The system automatically routes the proposal to the office team to follow up with the customer. ✓
+- You are required to wait at the property until the customer returns to sign.
+- The app forces you to complete the work for free since no signature was captured.
+
+*Feedback: When you tap Skip on the signature screen, the system takes over. The proposal is automatically created in Ongoing status and lands with Emma in the office, ready to be finalised and sent without you needing to do anything else on that job. It's a clean handoff that keeps the variation moving forward even when the on-site moment doesn't go to plan.*
+
+---
+
+## Raising a standard variation: the ductwork scenario
+
+When you're ready to start, scroll down within your job and tap the Add Variation button. If the button is greyed out it means a variation hasn't been enabled for this specific job type yet — contact your office team to check the template setup.
+
+The Standard variation is the go-to for everyday jobs: additional materials, extra labour, something that wasn't anticipated when the job was quoted but needs doing before you can complete the work properly. Imagine you are on site at Mr. Okafor's property to install a new AC unit, but upon opening the wall you find the existing ductwork is severely crushed. You can't finish the installation correctly without replacing that section first. Instead of calling the office to ask what to do, you tap Add Variation to start a discovery, document why the additional work is essential, and get a signature for the labour and materials right then and there.
+
+Step 1 asks you to identify what the extra work is against. You can select an asset already linked to the job, or if a piece of equipment isn't on the list yet, add it as an asset before you start the variation. This keeps your technical history clean and every part mapped to the right asset. If the issue is with the property itself, like the damaged ductwork in this example, choose "Add variation, but not against an asset" instead.
+
+Step 2 checks who the proposal is going to. The app pre-loads the primary contact from the job record. If the details are correct, tap Next and keep moving. If there's a missing email or the wrong person listed, fix it now. Taking thirty seconds here ensures the proposal has a destination once you hit send.
+
+Step 3 is where you prove that the discovery must be handled to complete the original job correctly. Upload high-quality photos — they are the most powerful tool you have for overcoming customer objections and justifying the extra cost. Use the Description of Work field to explain that the additional work is a physical roadblock to finishing the installation. For example: "Existing ductwork crushed and unusable; replacement required to allow airflow and complete the AC installation."
+
+In Step 4, the app handles the pricing automatically based on the standard rates set up by your office. For the ductwork fix you select "3 hours" from the labour options and the correct rate is applied instantly with zero mental maths required. By using these pre-defined buttons you ensure the quote you give Mr. Okafor is consistent with company policy every single time.
+
+Step 5 is where you capture every part required for the fix. You can use the barcode scanner to add van stock instantly, eliminating manual entry errors. If you find yourself at a local merchant for a specific item not in your database, add it as a manual entry. By entering your cost price, the system automatically applies the predefined markup established in the office, ensuring you never give away a part at cost. For those using advanced inventory features, this step also ensures that parts used from your van are recorded accurately for future replenishment.
+
+In Step 6, you capture the hidden costs like parking or specialist waste disposal. You'll see a list of expenses pre-configured for your job; simply mark each one Yes or No to include it in the total. Capturing these small costs here is what prevents a profitable job from becoming a loss due to unrecorded expenses.
+
+Step 7 is the final summary where you review the fix description and costs before presenting them to Mr. Okafor. You tap the Email or SMS icons to send the proposal, or tap Sign and Accept for Mr. Okafor to accept directly on your device. Once the signature is captured, the labour and materials are added to the existing job record automatically. You're no longer working on favours — you're working on an authorised, professional contract.
+
+A single visit often uncovers more than one discovery. If you find another issue after closing your first variation, simply tap Add Variation again to start a new proposal. These variations sit alongside each other on the job record, allowing you to capture as many quick wins as needed while you're already on site, with total clarity for the customer and the office.
+
+---
+
+## Raising a warranty check variation: the inverter scenario
+
+Now for the Warranty Check variation. This one is designed for jobs where additional work on site might also be covered under a warranty that needs checking by the office. The last thing you want is to quote a customer a price on site, only for the office to find out it should have been a warranty claim.
+
+In this second scenario, you are on a call logged in your app as a "Solar Warranty Repair." Because this job was categorised correctly in the office, your mobile app already knows to link the correct Warranty Variation template for you. While inspecting the system, you notice the solar inverter is underperforming and must be replaced to complete the repair correctly.
+
+You tap Add Variation and select the inverter in Step 1. After a quick verification of the customer's contact details in Step 2, you move into the specialised safety workflow to handle this potential warranty claim.
+
+Because this is a warranty-focused template, Step 3 changes from a "Proper Fix" description to a specialised Questions screen. It asks: "Does the extra work require a warranty check?" When you select Yes, the app recognises that the office needs to take over the decision-making process. The app branches intelligently based on your answer, hiding the pricing and labour steps and taking you straight to the handover screen. This deflection removes the pressure of making a technical liability call in front of the customer.
+
+Instead of a quote, you are presented with the Inform the Office screen, which acts as your technical handover note. Write a clear assessment such as: "Inverter underperforming; unit within manufacturer warranty period — office to confirm coverage." Take three photos of the data plate and error codes to give the office everything they need to contact the manufacturer. This detailed handover is what makes a smooth data chain possible because the office can take action without calling you back for more details.
+
+Once you tap Save, the variation is sent to the office with a status of "Ongoing (Awaiting Office Review)" for immediate action. Even with a deflected job, you can still add more variations to the same job if you find other non-warranty issues. You are now free to finish your repair job, knowing the discovery is in the right hands and being tracked professionally.
+
+---
+
+## Summary
+
+This course has covered two scenarios and a process that means you never have to make an awkward call on site again. The standard variation gives you a professional tool for capturing extra labour and materials and closing the deal with a signature. The warranty check variation gives you a clean handoff route when the decision belongs with the office rather than with you. In the next course we'll look at how Emma manages these from the web application: reviewing warranty deflections, building proposals, and closing work out.
+
+---
+
+**Open items**
+
+None — all content verified against source.
+`;
+INBOX_FILES["reed-script-l3-variations-c3"] = `# Manage variations from the office
+
+**Series:** L3 Variations | **Course:** 3 of 3 | **Duration:** 4 min | **Audience:** Office staff
+
+---
+
+**Learning objectives**
+
+1. Identify the two states a variation can arrive in and explain what action each requires.
+2. Use the notifications panel and Opportunity Dashboard to stay on top of live variations without chasing the field team.
+3. Send a pending proposal to a customer and process their approval through both the portal and the manual accept route.
+4. Handle a deflected warranty variation, verify coverage, update the proposal, and raise the invoice from the job record.
+
+---
+
+**Target audience:** Office administrators and operations staff at field service and renewable energy businesses using Commusoft. These are the people who pick up variations after the field team raises them, manage customer approval, and close out the revenue. Note: SunComfort Systems is the pedagogical vehicle for this course — the workflows follow Emma Clarke as she manages real variations that Jake has raised in the field.
+
+**Assumed starting point:** You have completed Courses 1 and 2 of this series, or your setup team has configured variation templates and your field team has already raised at least one variation. You are familiar with the Commusoft web application and the notifications panel.
+
+**Main objective beyond the learning objectives:** By the end of this course, you can handle every variation state the system can throw at you. You know how to get from a notification to a sent proposal to an accepted opportunity to a correct invoice without manual calculation, estimation, or chasing. The revenue Jake captures in the field lands correctly on the books every time.
+
+---
+
+**Characters:** Emma Clarke (Office Administrator, SunComfort Systems), Jake Harris (Senior Heat Pump Technician, SunComfort Systems), Logan Chance (Operations Manager, SunComfort Systems), Mr. David Okafor (customer, Canary Riverside), Mrs. Whitfield (customer, Sevenoaks solar job)
+
+**Scenario:** Emma manages two live variations on the same day: a pending proposal for Mr. Okafor's AC ductwork job where Jake built the quote but the customer wasn't available to sign, and a deflected warranty variation on Mrs. Whitfield's solar job where the office needs to verify manufacturer coverage before anything reaches the customer.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Emma Clarke, Office Administrator, Office Staff role
+- **Customer record:** Mr. David Okafor — AC installation job with a variation in Ongoing status; Mrs. Whitfield — Solar Warranty Repair job with a variation at Awaiting Office Review stage in the Warranty Variation Pipeline
+- **Existing data:** Both variations raised by Jake in Course 2; Warranty Variation Pipeline configured per Course 1; Logan Chance listed as notification recipient; variation proposal in Draft for Mrs. Whitfield's job
+- **Assets required:** None
+
+---
+
+## How variations land on Emma's screen
+
+The field work is done. Jake has raised the variation, documented the fault, and handed the baton to the office. This course follows Emma Clarke as she takes that data and turns it into an authorised, invoiced, and correctly closed piece of revenue.
+
+By the time a variation exists in the system, Jake has already done the heavy lifting: the work is documented, the photos are uploaded, the labour and materials are selected, and the variation is linked to either the property or a specific asset. For some businesses, and for technicians with the right permissions, the variation can be fully closed in the field without the office needing to touch it at all. When Emma does step in, the system has already structured everything Jake captured so she's never starting from scratch.
+
+Variations arrive in one of two states. Accepted or Won means Jake captured the signature on site and the work is already authorised, so Emma's next step is invoicing. Ongoing means the variation was deflected to the office and is waiting for action, so Emma's next step is intervention. That distinction is visible the moment she opens the record.
+
+The moment Jake raises a variation on site, the system creates an Opportunity on the web application and fires a notification to the relevant office contact. Emma receives the notification for a standard variation; Logan and the Responsible Salesperson receive it when a deflection rule triggers, as it does when Jake answers Yes to SunComfort's warranty check question. The notifications panel is a global feature of the web application, sitting in the top right of the screen and surfacing real-time alerts for activity happening across the business. If your team isn't seeing the alerts they'd expect, it's worth checking how notifications were configured during setup. SunComfort uses the notifications panel as their real-time pulse on field activity. Emma knows about Mr. Okafor's AC variation within seconds of Jake raising it, without a phone call or a follow-up message. For businesses with the Sales advanced add-on, the Opportunity Dashboard sits alongside the notifications panel and gives a broader view of every live variation across the business, organised by pipeline and tagged clearly so nothing gets confused with standard sales opportunities.
+
+---
+
+## Handling a pending proposal: Mr. Okafor's ductwork variation
+
+Emma opens her notifications and sees a new variation has landed from Jake. Mr. Okafor's AC installation job has identified additional ductwork that falls outside the original scope, and Jake has built the quote on site but the customer wasn't available to sign. This is the most common variation workflow Emma handles at SunComfort, and it starts the same way every time.
+
+Emma clicks the globe icon in the top right of her screen, sees the alert for Mr. Okafor's variation, and clicks the plus icon next to it. A side panel opens immediately showing the opportunity details without her needing to navigate anywhere else. From the side panel she clicks View Opportunity and the full record opens.
+
+At the top of the screen a yellow banner tells her exactly what will happen if the variation is accepted: either that it will be linked to the job, or that a new separate job will be created if the original is already closed. That banner is Emma's first orientation point every time she opens a variation record. Inside the opportunity record she works across two areas: the timeline on the right, which shows the full chronological history of the variation including when Jake raised it, any emails sent, and every status change since, and the left panel, which is where the working information lives. The left panel is organised into sections covering customer contact details, opportunity information, site details, and at the bottom the Proposal section showing the current status and the Send to Customer button. Everything Emma needs to orient herself and take action is visible without opening any additional screens.
+
+For variations that include custom field questions, like SunComfort's warranty check on Mrs. Whitfield's solar job, a Variation check section appears in the left panel beneath the site details, showing Jake's answers exactly as he completed them on mobile. Where no custom fields have been configured the section won't appear, but the rest of the left panel structure remains the same.
+
+With the details confirmed Emma clicks Send to Customer in the left panel. A Send proposal drawer opens on the right side of the screen showing a full preview of the branded proposal, the cover page, the Quote title, and the Technician Notes Jake completed on site. Emma confirms the recipient, selects the pre-configured Proposal confirmation template which includes the portal link, and sends via email or SMS. The proposal lands with Mr. Okafor and the timeline updates immediately to confirm it's been sent. That single action is what keeps SunComfort's reactive revenue moving forward rather than waiting on a customer callback.
+
+---
+
+## Processing customer approval
+
+Once the proposal is sent, Mr. Okafor can approve it in one of two ways: through the portal link in his email or SMS, or by calling the office to confirm verbally. Either route leads to the same outcome, and Emma handles both from the same place in the opportunity record.
+
+The proposal portal is the preferred route for most businesses. It gives customers a self-serve acceptance experience where they receive a link directly in their email or SMS that opens the full proposal on their own device, without needing to log in or contact the office. When Mr. Okafor chooses to approve through the portal link, he goes through the acceptance flow on his own device: reviewing the proposal options, confirming his contact details, and accepting the proposal himself. The system updates automatically the moment he completes the final step, the timeline records the acceptance, and Emma and Jake see the Approved or Won status without needing to take any manual action.
+
+Not every customer will use the portal. When Mr. Okafor calls Emma to confirm he's happy to proceed, Emma clicks the green Accept button on the pipeline stage bar at the top of the record. The proposal opens in a side panel on the right with a full preview and an Accept proposal button in the lower right corner. Clicking that button opens a modal where Emma works through the customer contact details, site details, and order summary before accepting the proposal. Both routes lead to exactly the same outcome — the difference is simply whether it's Emma or Mr. Okafor who clicks the final confirm.
+
+Whichever route Mr. Okafor took to approve, the moment the proposal moves to Approved or Won the system takes over. The timeline updates with the full confirmation and a second banner appears confirming the outcome: who accepted, when, and the job number, with a prompt to click View job on the right side of the screen. If the original job is still open, the variation is appended to it, both share the same job number, and Jake sees the update on his mobile ready to carry out the additional ductwork. If the original job is already closed, the system creates a new separate job for the variation work. Either way, nothing falls through the gap.
+
+---
+
+**Reflection**
+
+Mr. Okafor has received the proposal by email and called the office to say he's happy to proceed. Emma needs to accept the proposal on his behalf. Where does she do this?
+
+- She opens the job record, navigates to the Invoices tab, and creates an invoice to mark it as accepted.
+- She clicks the green Accept button on the pipeline stage bar at the top of the opportunity record, then works through the modal to confirm. ✓
+- She sends a second email through the portal asking Mr. Okafor to click Accept himself.
+- She updates the pipeline stage manually and types "Accepted" in the timeline.
+
+*Feedback: Emma accepts the proposal on the customer's behalf directly from the opportunity record. The green Accept button on the pipeline stage bar opens a side panel with a full preview and an Accept proposal button. Clicking through the modal covers customer contact details, site details, and the order summary. Both the portal route and this office route produce exactly the same Won status and the same job update.*
+
+---
+
+## The Opportunity Dashboard for Sales advanced users
+
+If you're managing variations without the Sales advanced add-on, everything covered so far is your complete workflow: notifications bring every variation to your attention the moment Jake raises it, the opportunity record gives you everything you need to review, send, and close, and the system handles job creation automatically.
+
+For businesses with the Sales advanced add-on, the Opportunity Dashboard gives Emma a broader view of everything that's live across the business. Every variation card is tagged clearly and organised by pipeline stage so nothing gets confused with standard sales opportunities. She confirms she's viewing the correct pipeline for the work in front of her, and from there the board tells her at a glance what's moving, what's stalled, and what's been sitting long enough to need attention before the customer's momentum fades. For variations ready to close, Emma can drag the card directly to the Won bar at the bottom of the board to bring up Accept proposal and the same modal as before, a fast alternative to opening the full record when the outcome is already clear. Each variation card sits at its current stage. Moving a card between stages is as simple as updating the stage from within the opportunity record, and every move is logged in the timeline. For Maria and Logan, this stage view transforms a busy inbox into a managed, trackable workflow where nothing gets lost between Jake raising the variation and Emma closing it out.
+
+---
+
+## Handling a deflected warranty variation: Mrs. Whitfield's solar job
+
+The second workflow Emma encounters requires more than a review and a send. When Jake answers Yes to the warranty check question on Mrs. Whitfield's solar job, the variation deflects to the Warranty Variation Pipeline and lands at the Awaiting Office Review stage, with Logan and the Responsible Salesperson notified immediately. The proposal is held in Draft and the pricing is hidden from both Jake and the customer until Emma and Logan have verified whether the manufacturer is liable for the repair.
+
+Emma clicks through from the notification into Mrs. Whitfield's opportunity record and the yellow banner confirms the variation is linked to Mrs. Whitfield's current job and awaiting office review. In the left panel the Configurations section shows Jake's answer to the warranty check question exactly as he completed it on mobile. This is the information Emma needs to contact the supplier and verify warranty eligibility before a single figure is presented to Mrs. Whitfield. Businesses that skip this step and commit to a price before the manufacturer check is done risk absorbing a cost the supplier should have covered. Jake's structured data is what makes that verification call possible without any back-and-forth between field and office.
+
+Once Emma has clarity on the warranty status she chooses the path forward. If the manufacturer confirms coverage she updates the proposal in the left panel and coordinates the replacement part before clicking Send to Customer with the revised offer. If coverage is denied, the Draft proposal is updated with the full repair costs and sent to Mrs. Whitfield for approval through the portal.
+
+In this case, the manufacturer confirms coverage for Mrs. Whitfield's inverter. The replacement part is included, so Emma updates the Draft proposal to add the labour required and a disposal expense for the old part before sending. Throughout the process, the variation status on Jake's mobile updates as the proposal moves forward, from Sent to customer through to Accepted. If he's still on site and the approval comes through in time, he can complete the work on the same visit without needing a phone call from the office. If Jake is no longer on site when the warranty is resolved, Emma clicks View job from the opportunity record and raises a new appointment from the job record to schedule his return visit. Everything he needs is already there, and he arrives back with full clarity on what's been agreed and what he's there to do.
+
+---
+
+## Invoicing the completed variation
+
+The variation is won, the work is complete, and the final step is making sure SunComfort gets paid for every minute of expertise Jake provided on site. Emma navigates to the job record directly from the opportunity by clicking View job, then opens the Invoices tab and clicks Add new invoice. The labour charge and materials Jake priced on site are already sitting in the system as Variation opportunity line items. Emma doesn't need to build the invoice from scratch, she just needs to pull them through.
+
+Emma clicks Add line items and a panel opens on the right showing everything available to invoice. She selects the relevant items with a checkbox and clicks Save and add line items to pull them through. The description on each line item defaults to the job description name and Emma can update it if she wants the invoice to be more descriptive for the customer, but the figures are already correct and the markup is already applied. The invoice reflects exactly what the customer agreed to — nothing estimated, nothing manually calculated, nothing that can drift from what Jake quoted on site.
+
+The invoice Emma just raised didn't start in the Invoices tab. It started when Maria configured the labour rates, the supplier markup, and the variation template in Course 1, and it moved forward when Jake selected the right options on his mobile at the property. Every figure was captured correctly in the field, carried through the proposal without drift, and landed in the invoice without anyone manually calculating, estimating, or chasing. That is what a properly built variations engine looks like end to end, and SunComfort now has one.
+
+Every pound of reactive revenue SunComfort captures starts with Jake spotting something on site and ends with Emma closing it out in the system. The engine that makes that happen reliably, professionally, and at scale is the one your team has just built. The only thing left is to put it to work.
+
+---
+
+**Open items**
+
+None — all content verified against source. Note: the source file used "Karen" as a customer name in the invoicing section (Scenes 5 and 6, Chapter 3). This has been corrected to Mr. Okafor and Mrs. Whitfield consistent with the established scenario. The source also had mixed pronoun usage around "Karen" (referencing "he" and "she" interchangeably) — this has been resolved by removing the character entirely and keeping the action with the named SunComfort characters.
+`;
+INBOX_FILES["reed-script-l3-variations-challenge"] = `# Variation raised, approved, and invoiced
+
+**Series:** L3 Variations | **Course:** Challenge | **Duration:** 3 min | **Audience:** Admins / Office / Field
+
+---
+
+**Learning objectives**
+
+1. Confirm understanding of the Mobile-led and Office Intervention workflows and when each is the right choice.
+2. Recall the correct field action when a customer isn't available to sign a variation on site.
+3. Identify how Emma handles a deflected warranty variation from notification through to sending the proposal.
+4. Explain how variation line items are pulled through to the invoice without manual recalculation.
+
+---
+
+**Target audience:** The complete variations audience: business owners and admins who configured the system in Course 1, field engineers who raise variations in Course 2, and office administrators who manage and invoice them in Course 3. This challenge tests all three roles working together through a single end-to-end scenario. Note: SunComfort Systems is the pedagogical vehicle throughout — the characters and situations match the three courses exactly.
+
+**Assumed starting point:** You have completed all three courses in the L3 Variations series. You understand the two variation workflows, know how Jake raises a variation on mobile, and know how Emma manages, approves, and invoices from the web application.
+
+**Main objective beyond the learning objectives:** By the end of this challenge, you can describe the complete variations lifecycle from a setup decision through to a paid invoice, and you can explain the key decision points at each stage without needing to refer back to the courses. The system is only as reliable as the people using it — this challenge confirms you are ready.
+
+---
+
+**Characters:** Clint (Commusoft Academy presenter), Sarah (Commusoft Academy presenter), Jake Harris (Senior Heat Pump Technician, SunComfort Systems), Emma Clarke (Office Administrator, SunComfort Systems), Logan Chance (Operations Manager, SunComfort Systems), Mr. David Okafor (customer, Canary Riverside), Mrs. Whitfield (customer, Sevenoaks solar job)
+
+**Scenario:** Clint and Sarah walk through a single end-to-end variations story at SunComfort Systems, testing setup decisions, field actions, and office management in one connected chain from discovery to invoice.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** N/A (challenge is dialogue-based, no screen recording required)
+- **Customer record:** N/A
+- **Existing data:** N/A
+- **Assets required:** None
+
+---
+
+**Sarah:** Right, let's put the whole variations series together. I'm going to give you a scenario and I want you to walk me through the decisions, start to finish. Ready?
+
+**Clint:** Go ahead.
+
+**Sarah:** Logan is setting up the variations engine at SunComfort. He's thinking about the two workflows available to him — Mobile-led and Office Intervention. For most of Jake's standard jobs, which one makes more sense, and why?
+
+**Clint:** Mobile-led is the right call for standard work. Jake identifies the extra work, raises the variation on his device, presents the proposal to the customer on the spot, gets the signature, and the job record updates immediately. No office involvement, no waiting. The whole thing closes while Jake is still standing in front of the customer. Office Intervention is the safeguard. It kicks in when something needs to pause before a price goes to the customer — a customer who isn't ready to sign, a part that needs ordering, or a deflection that fires because Jake's answer to a custom field question triggers a route back to Emma. Logan needs to build both into the system, but for day-to-day quick wins, Mobile-led is the engine.
+
+**Sarah:** Good. Now let's get Jake on site. He's at Mr. Okafor's property, he's raised the variation, built the quote, but Mr. Okafor has had to leave the property before Jake can get a signature. What does Jake do?
+
+**Clint:** He taps Skip on the signature screen. That single tap is the handoff. The system automatically creates the proposal in Ongoing status and it lands with Emma in the office, ready for her to send without Jake needing to do anything else on that job. He doesn't call the office, he doesn't leave a note on the job, he doesn't worry about it. The app has already moved it forward. Jake gets in the van and heads to his next job.
+
+**Sarah:** And Emma's next job is a different one — Mrs. Whitfield's solar variation, which Jake deflected. Walk me through what Emma does from the moment she sees the notification.
+
+**Clint:** Emma opens the notifications panel, sees the alert for Mrs. Whitfield's variation, and clicks through to the opportunity record. The yellow banner at the top of the record tells her straight away what state the variation is in and what will happen when it's accepted — whether it appends to the existing job or creates a new one. She reads the left panel. The Configurations section shows her Jake's answer to the warranty check question exactly as he completed it on mobile: Yes, the extra work requires a warranty check. That's the information she needs before a single figure goes to Mrs. Whitfield. She contacts the manufacturer, verifies whether the inverter replacement is covered, and then makes a decision. If coverage is confirmed she updates the Draft proposal with any additional labour and expenses before sending. If coverage is denied she updates the proposal with the full repair costs and sends it through the portal for Mrs. Whitfield to approve.
+
+**Sarah:** In this case the manufacturer confirms coverage. The proposal goes out, Mrs. Whitfield approves through the portal, and the variation moves to Won. Emma now needs to raise the invoice. What's her process?
+
+**Clint:** She clicks View job from the opportunity record, which takes her directly to the job record. She opens the Invoices tab and clicks Add new invoice. Rather than building the invoice from scratch, she clicks Add line items, and a panel opens on the right showing the Variation opportunity line items — the labour and materials Jake priced on site. She selects the relevant items with a checkbox, clicks Save and add line items, and those figures pull through to the invoice exactly as they were captured and approved. The markup is already applied. The description defaults to the job description name and Emma can update it if she wants to be more specific for Mrs. Whitfield, but the numbers don't change. What Mr. Okafor and Mrs. Whitfield approved in the proposal is what appears on the invoice — no drift, no manual calculation, no room for a dispute.
+
+**Sarah:** So the whole chain — Logan's setup decision, Jake's field action, Emma's office management, the invoice — it all connects without anyone recalculating or chasing.
+
+**Clint:** That's the point. Logan's configuration in Course 1 is what makes Jake's mobile app work correctly in Course 2. Jake's field data is what gives Emma a complete record to work from in Course 3. And the invoice is just the last step in a chain that was built properly before anyone set foot on site. The system does the heavy lifting at every handoff — the only thing that can break it is missing a step in setup or using the wrong tool in the field.
+
+**Sarah:** Which is exactly why we built three courses before this one. If you've followed the series, everything Clint just described should feel familiar. If any of it raised a question, go back to the course that covers that step. The system is ready when you are.
+
+---
+
+**Open items**
+
+None — challenge written to specification. All characters and scenarios are consistent with Courses 1, 2, and 3. The Mr. Okafor scenario (pending proposal, customer not available to sign) and the Mrs. Whitfield scenario (deflected warranty variation, manufacturer coverage confirmed) are both drawn directly from the course content.
+`;
+INBOX_FILES["reed-script-l3-dr-c1"] = `# Strategy and setup
+
+**Series:** Defects and Recommendations | **Course:** 1 of 3 | **Duration:** 7 min | **Audience:** Decision makers
+
+---
+
+**Learning objectives**
+
+1. Explain the field-to-office workflow and the commercial case for capturing defects and recommendations
+2. Distinguish between a defect and a recommendation, and between property-level and asset-level findings
+3. Navigate to the Defects and Recommendations dashboard
+4. Build a Defects and Recommendations pipeline with named stages and colours
+5. Configure defect types and recommendation types and link each to the correct pipeline
+
+**Target audience:** Business owners, managing directors, and operations managers at field service companies who make decisions about workflow, systems configuration, and commercial strategy. SunComfort Systems is the pedagogical vehicle. The learner is configuring their own company's Commusoft account.
+
+**Assumed starting point:** Commusoft account active with Owner/Manager access. Learner has a working understanding of the job lifecycle in Commusoft. No prior knowledge of the Defects and Recommendations feature is assumed.
+
+**Main objective beyond the learning objectives:** Every engineer that leaves a site without formally logging what they saw is costing the business money. This course equips decision makers to close that gap permanently by building a structured, visible pipeline that turns field observations into quoted work. Once the pipeline is live and the types are configured, the office has a real-time view of every outstanding opportunity, and the field team has a clear, consistent way to surface them.
+
+---
+
+**Characters:** Sarah Mitchell (Managing Director, Owner/Manager), Logan Chance (Operations Manager, Owner/Manager)
+
+**Scenario:** Sarah configures SunComfort's Defects and Recommendations settings, building the pipeline and types that will underpin the field-to-office workflow across all divisions.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Sarah Mitchell — Managing Director — Owner/Manager
+- **Customer record:** None required for settings configuration
+- **Existing data:** No Defects and Recommendations pipelines, defect types, or recommendation types yet configured. The Opportunities section in Settings is accessible but empty.
+- **Assets required:** None
+
+---
+
+## The commercial case for capturing what engineers see
+
+For those leading a field service operation, technical intelligence is your most valuable asset. Whether your team is maintaining solar arrays, heat pumps, or electrical systems, your engineers observe revenue opportunities on every visit — but too often these findings are lost in verbal hand-offs or paper notes that never reach the office. These are ghosted quotes: work spotted in the field that never makes it to an invoice.
+
+That is where the Defects and Recommendations feature comes in. It creates a clear, formal field-to-office workflow where on-site findings are recorded by engineers as a defect or a recommendation, synced instantly to the web app, and tracked in a centralised dashboard where they are ready to be reviewed and quoted. Before we move into the setup, take a moment to consider your current operation.
+
+---
+
+**Reflection**
+
+Do you feel that valuable revenue is currently slipping away because your office does not always hear about what the engineer saw on site?
+
+- Yes
+- No
+
+*Feedback: Whichever your answer, the Defects and Recommendations feature is designed to give your business a formal hand-off that turns technical findings into actionable, quotable work. Let's build it.*
+
+---
+
+## Defects and recommendations — knowing the difference
+
+To build a clean workflow, your team needs to speak the same language, and that starts with understanding the distinction between the two finding types. For a business like SunComfort, where the field team works across solar installations, heat pumps, and power systems, clear categorisation means the office always knows exactly what they are dealing with and how urgently they need to act.
+
+A defect is a must-fix. It covers anything affecting safety or performance — a cracked solar panel, a faulty inverter, exposed wiring. These findings require action to keep a customer's property safe and the system operational. A recommendation, by contrast, is a value-add: an upgrade or enhancement the customer's system does not yet have but would benefit from, such as battery storage for a solar array or a smart monitoring upgrade for an ageing inverter. The system is working, but there is an opportunity to make it better.
+
+## Where findings are recorded — property versus asset
+
+It is also important to understand where a finding can be attached. An engineer can raise a defect or recommendation against the property for general issues that relate to the site as a whole, such as overhanging trees shading a solar array, or against a specific asset such as a solar inverter or a heat pump unit. Linking findings to a specific asset is particularly powerful because it builds a permanent service history for that piece of equipment, helping you identify recurring faults, plan proactive replacements, and manage the full asset lifecycle.
+
+---
+
+**Reflection question**
+
+A SunComfort engineer inspects a solar installation and finds that the system is operating correctly but notices the panels have no monitoring capability, meaning the customer cannot track their generation. Should this be logged as a defect or a recommendation?
+
+- A defect, because the missing monitoring affects performance reporting ✓
+- A recommendation, because the system is working and this is an upgrade
+- Neither — this would go in the job notes
+- A defect, because safety is at risk
+
+*Feedback: This is a defect. The absence of monitoring represents a performance and compliance gap — the customer cannot verify output, and a fault could go undetected. It belongs in the defect workflow so the office can prioritise a quote. If the system were fully operational and monitored, a monitoring upgrade suggestion would be a recommendation.*
+
+[OPEN — confirm whether absence of monitoring is classified as a defect or recommendation in Commusoft's own guidance; this answer reflects SunComfort's internal policy and may need review]
+
+---
+
+## Navigating to the dashboard
+
+Before setting up the pipeline, it is worth seeing where everything lands once engineers start logging findings. On the navigation bar, click on the Customers tab and look to the right-hand side of the screen, where you will find the Defects and Recommendations widget showing a live snapshot of open findings. Click View all defects and recommendations to open the full dashboard.
+
+This dashboard is your mission control. It gives you a live, prioritised list of every finding your field team has recorded, from critical safety defects to long-term upgrade opportunities. Right now it is empty because nothing has been configured yet, but by the end of this course, every finding your engineers log will flow here automatically.
+
+## Navigating to the setup — your pipeline foundation
+
+Now that you have seen where findings land, it is time to build the structure that organises them. Navigate to Settings, then Opportunities, and locate the Defects and Recommendations Pipelines card. Click View to open the pipeline list. Sarah can see a blank list, which means the workflow has not yet been defined. Click Add new pipeline to begin.
+
+The first thing to do is name the pipeline. Click the name field and enter a name that reflects the type of work this pipeline will track. Sarah types General Maintenance, which will cover findings from across SunComfort's solar, heat pump, and power divisions to begin with. You can create multiple pipelines to separate different business streams — for example, a dedicated solar pipeline or a compliance pipeline — but one well-structured pipeline is the right starting point.
+
+## Defining the stages that map your internal process
+
+Stages are the milestones your office team will use to track each finding as it moves through your internal workflow. Click Add new stage to begin. The stage name field is where you define the first step in the process. Sarah types New, which will act as the automatic landing stage for every finding linked to this pipeline — the equivalent of an office inbox. She selects a neutral colour such as grey or light blue to indicate that these items are waiting for a first review, then clicks Save.
+
+Click Add new stage again and name the second stage Assessment. This is where the office takes responsibility for a finding — checking part availability, confirming warranty status, or verifying the scope of work. Sarah selects blue to signal that these items are actively being worked on. If a finding turns out to be invalid at this stage, the team can mark it as Resolved Not Fixed, which preserves the data and helps you audit the quality of field reporting over time.
+
+## Completing the five-stage pipeline
+
+Add a third stage called Qualified, which is the green light: the finding has been reviewed and confirmed as a genuine opportunity ready to be priced. Sarah selects amber to highlight these high-value items at a glance. The fourth stage is Proposal Created, where the office has used the Create Proposal function to send a quote. Sarah chooses teal to mark the transition into active sales activity. The fifth and final stage is Job Created, which signals that a customer has accepted a proposal and a follow-up job is now scheduled. Sarah selects bright green here because this stage represents confirmed revenue.
+
+---
+
+**Reflection**
+
+This five-stage structure works particularly well when paired with the Sales Plus feature, where proposals move through the Opportunity dashboard as the customer decides. If you are using the standard Sales feature, you may want to add extra stages after Proposal Created — such as Survey Visit or Awaiting Customer Decision — so more of the process is tracked directly in this dashboard. Think about how your own office currently tracks a quote from sending to outcome.
+
+---
+
+## Activating the pipeline
+
+Once all five stages are saved, review each one to confirm the names and colours are correct, then activate the pipeline. Type Activate when prompted and confirm. Only active pipelines appear in the mobile app, which means your engineers will only see the workflows you have approved, keeping the field process clean and consistent.
+
+From the Actions menu, you can edit the pipeline at any time as your business evolves. If you need to remove a pipeline that has never been used, you can delete it immediately. If a pipeline already has findings attached, Commusoft will offer you the option to archive it instead, which preserves all historical data while removing the pipeline from active use. This means you can continue to report on past resolved findings even after the pipeline is retired.
+
+## Configuring defect types
+
+With the pipeline active, the next step is to define the types of defects your engineers will see on their mobile devices. These types are what your team selects when logging a finding on site, so they need to be specific enough to be meaningful but not so granular that engineers struggle to find the right one. Navigate back to Settings, then Opportunities, and select Defect Types. Click Add new defect type to open the setup panel.
+
+Enter the name of the defect type. Sarah types Panel Damage or Delamination, which covers cracked, delaminated, or hail-damaged solar panels — a common finding for SunComfort's solar division. The next step is to link this type to a pipeline from the dropdown. Sarah selects General Maintenance, which means any defect logged with this type will flow into that pipeline and start at the New stage automatically. Once the pipeline is selected, click Save. Sarah also creates an Equipment Failure type routed to the same pipeline, and adds an Other type as a safety net for findings that do not fit any predefined category.
+
+## Configuring recommendation types
+
+Recommendation types follow exactly the same process. Navigate back to Opportunities settings and click View on the Recommendation Types card, then click Add new recommendation type. Sarah names the first type Efficiency Improvement, which covers scenarios such as shading affecting panel output, loft insulation that is reducing heat pump performance, or system settings that could be optimised. She links it to the General Maintenance pipeline from the dropdown and saves.
+
+The structure for recommendations works in the same way as defects: the type chosen by the engineer on site determines which pipeline the record flows into, and therefore which set of stages it will move through. You may choose to route all your types into a single pipeline for simplicity, or to separate defects and recommendations entirely if different teams handle corrective repairs versus proactive upgrades. Whatever structure works for your operation, the selection made here is the link that controls it.
+
+## Summary
+
+You have built the complete foundation for SunComfort's Defects and Recommendations workflow. The General Maintenance pipeline is active with five clearly named and colour-coded stages, the defect types and recommendation types are configured and linked, and the dashboard is ready to receive findings the moment your engineers start logging on mobile. In Course 2, we move to the field and walk through exactly how an engineer logs a finding during a live job visit.
+
+---
+
+**Open items**
+
+1. [OPEN — confirm whether the absence of monitoring is classified as a defect or recommendation in Commusoft's guidance; script currently treats it as a defect based on SunComfort's internal logic]
+2. [OPEN — confirm whether "Rotting Days" are visible or configurable on the pipeline setup screen covered in this course, or whether that is a separate setting; source data shows rotting days in the SunComfort pipelines file but the source DR Course.md does not mention them in the setup walkthrough]
+`;
+INBOX_FILES["reed-script-l3-dr-c2"] = `# Field intelligence
+
+**Series:** Defects and Recommendations | **Course:** 2 of 3 | **Duration:** 6 min | **Audience:** Field team
+
+---
+
+**Learning objectives**
+
+1. Identify when a finding should be logged as a defect versus a recommendation, and whether it belongs against a property or an asset
+2. Log a defect against a specific asset using all required fields
+3. Log a recommendation against a property using all required fields
+4. Edit, filter, and manage logged findings within the mobile app
+
+**Target audience:** Field engineers and technicians at field service companies who carry out installations, maintenance visits, and callouts using the Commusoft mobile app. SunComfort Systems is the pedagogical vehicle. The learner is applying this workflow during their own jobs.
+
+**Assumed starting point:** Learner is using the Commusoft mobile app on a live or demo job. The account administrator has already configured the Defects and Recommendations pipeline, defect types, and recommendation types in settings, as covered in Course 1 of this series.
+
+**Main objective beyond the learning objectives:** A well-documented finding is the difference between a ghosted quote and a genuine revenue opportunity. This course equips engineers with the discipline and the know-how to capture findings so thoroughly that the office can act on them without a follow-up call. Every field that gets filled in is another piece of commercial intelligence that protects the customer, supports the business, and removes the need for anyone to rely on memory.
+
+---
+
+**Characters:** Luke Patterson (Senior Solar Technician, Senior engineer)
+
+**Scenario:** Luke is on a routine solar maintenance visit at Mrs. Margaret Thompson's property in Sevenoaks, Kent, and identifies two separate findings: a cracked solar panel and trees shading the array. He logs both correctly on the mobile app before leaving the site.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Luke Patterson — Senior Solar Technician — Senior engineer (mobile app)
+- **Customer record:** Mrs. Margaret Thompson — 42 Oakwood Drive, Sevenoaks, Kent, TN13 1PF — active customer with maintenance contract. Solar PV 6kW system installed June 2023. Property has a south-facing rear roof.
+- **Existing data:** Open maintenance job assigned to Luke Patterson for Mrs. Thompson's property. The solar PV system must be listed as an asset on the customer record. The General Maintenance pipeline must be active with defect types including Panel Damage or Delamination and recommendation types including Efficiency Improvement and Vegetation Management or Shading Mitigation.
+- **Assets required:** Three demonstration photos for upload — one of the cracked panel, two for the shading scenario. These should be realistic site photos rather than stock images.
+
+---
+
+## Your role as the first line of field intelligence
+
+As a technician, you are the eyes and ears of the business. Whether you are maintaining solar arrays, installing heat pumps, or servicing power systems, every time you spot a safety risk or a potential upgrade on site, you are providing intelligence that the office cannot see from behind a desk. The Defects and Recommendations feature gives you a formal, structured way to capture that intelligence so it reaches the right people — without relying on phone calls, memory, or paper notes.
+
+These observations are called findings, and logging them is not about selling. It is about doing your job thoroughly. When you record what you see, you are giving the customer the professional service they deserve, and giving the office the information they need to protect and grow the business.
+
+## Understanding what you are logging
+
+Before you add a finding, you need to make two decisions. The first is whether it is a defect or a recommendation. A defect is anything affecting safety or performance: a cracked panel, a faulty inverter, exposed wiring — anything that needs to be fixed to keep the system safe and functioning. A recommendation is a value-add: an upgrade or improvement that is not broken but would benefit the customer, such as adding battery storage to a solar system or a smart monitoring upgrade for an ageing inverter.
+
+The second decision is where the finding belongs. You can log it against the property for issues that relate to the site in general, such as overhanging trees or a structural concern on the roof, or against a specific asset such as the solar inverter or a heat pump unit. Logging against an asset is more powerful when the issue is equipment-specific, because it becomes part of that piece of equipment's permanent service history. The defect and recommendation types available on your device reflect how your account has been configured in the admin settings, as covered in Course 1 of this series.
+
+---
+
+**Reflection**
+
+On a solar maintenance visit, you notice that the inverter is showing an error code and has stopped generating. Is this a defect or a recommendation — and should it be logged against the property or against the asset?
+
+- A defect against the asset ✓
+- A recommendation against the asset
+- A defect against the property
+- A recommendation against the property
+
+*Feedback: Correct. A non-generating inverter is a performance fault that must be fixed — that makes it a defect. Because the fault is specific to the inverter unit, you log it against the asset so the issue becomes part of that inverter's service record. This makes it far easier to track recurring faults and justify a replacement when the time comes.*
+
+---
+
+## Logging a defect against an asset — Luke's cracked panel
+
+Luke is on site at Mrs. Thompson's property in Sevenoaks for her annual solar maintenance visit. During his inspection, he notices a hairline crack on one of the panels: the system is still generating, but the crack creates a risk of water ingress, internal corrosion, and eventual short circuit. This is a defect that needs to be documented and quoted before it causes a total panel failure.
+
+To log it, tap the More menu button at the top right of the screen, then tap Defects. Any findings already logged for this job will appear here. Tap the plus icon, then select Add against Asset. A list of existing assets for the customer appears — Luke can see the solar PV system listed, so he taps it to proceed.
+
+## Completing the defect fields — photos and type
+
+The first field is photos. You can add up to three images, and this step matters more than it might seem: a clear photo removes any doubt about the severity of the issue and gives the office the visual evidence they need to justify a priority quote to the customer. Tap the upload icon and either take a new photo directly or select one from your camera roll. Luke photographs the crack from directly above and attaches a second image showing the panel's position in the row.
+
+Next, you select whether this is a defect or a recommendation. Luke confirms Defect, because the crack is a safety and performance risk. Below that, you select the Defect Type. Choose the type that best fits what you have found — if nothing matches exactly, use Other and add a note. Luke selects Panel Damage or Delamination, then moves on.
+
+## Completing the defect fields — description and impact
+
+The Description field is where you explain exactly what you found. This needs to be specific enough that another engineer or an office team member can understand the issue without calling you. Luke taps the field and types: A hairline crack has been identified on the surface of panel three, row two, south-facing rear roof. The system is still generating, but the crack presents a risk of water ingress and reduced efficiency over time. Once the description is complete, tap Done.
+
+The Impact field is where you explain the consequences of leaving the issue unresolved. This is not a repeat of the description — it is the so-what. Luke enters: Risk of water ingress leading to internal corrosion or a short circuit, creating a potential fire hazard and total panel failure. This gives the office the commercial justification they need to explain urgency to the customer and prioritise the quote accordingly. Tap Done to move on.
+
+## Completing the defect fields — work to be done, location, and priority
+
+The Work to be Done field tells the office exactly what needs to happen to resolve the issue. Be specific: include the action required and any parts or materials you think will be needed. Luke enters the remedial steps for the panel swap clearly enough that the office can price the job without needing to call him for clarification. Tap Done once the field is complete.
+
+The Location field ensures anyone returning to site goes straight to the right spot. For asset defects, be precise: Luke enters Panel three, second row from the bottom, south-facing rear roof, left-hand side when facing the array. Finally, set the Priority. For this panel, Luke selects High — the system is still running, but the risk is escalating. Critical would apply to an immediate danger such as exposed live wiring or a full system shutdown. Once all fields are complete, tap Save. The defect is now live in the system and visible on the office dashboard instantly.
+
+## Editing, deleting, and filtering your findings
+
+If you spot a typo or need to add information after saving, tap the finding and select Edit. You can update any field except the original Issue Type. Once the office has used your finding to create a proposal, the edit option will be locked to protect the integrity of the customer's quote. The same applies to deletion: if you logged something by mistake, swipe the record to the left and tap Delete — but only before a proposal has been raised. After that, the record is fixed.
+
+If your list of findings grows long on a busy job, use the filter at the top of the Defects screen to sort by priority, status, or pipeline. The search bar lets you find any finding using keywords from the description. These tools keep your records organised on the device and ensure nothing slips through before you leave the site.
+
+## Logging a recommendation against a property — the shading trees
+
+Before Luke leaves, he notices that a row of trees along the west boundary of Mrs. Thompson's property is now tall enough to cast shade across the lower panels during afternoon hours. The system is not broken, but the shading is measurably reducing output during peak sun periods. This is a recommendation, and because it relates to the property rather than a specific piece of equipment, Luke will log it against the property.
+
+Tap the plus icon again and this time select Add against Property. Upload up to three photos of the shading — Luke photographs the tree line from the garden and captures a second image showing the shadow falling across the panels. Select Recommendation as the finding type, then select the appropriate type from the list. Luke chooses Vegetation Management or Shading Mitigation, which fits the situation precisely.
+
+## Completing the recommendation fields
+
+For the Description, stick to the technical observation: Luke enters Trees along the west boundary cast shade across the lower panel row during afternoon hours, reducing sunlight exposure by an estimated one to two hours per day. For the Impact field on a recommendation, focus on the value to the customer rather than a risk: Luke types Improving shading conditions would restore full afternoon generation, increasing annual output and reducing energy bills for the customer. Tap Done.
+
+In the Work to be Done field, Luke specifies the action clearly: arrange for the boundary trees to be trimmed to below the roof line on the west side of the property, with access required to the rear garden. For the Location, he is specific: west boundary of property, trees overhanging directly above the lower panel row. Finally, Luke sets the Priority to Medium — this is a genuine efficiency improvement that should be quoted soon, but it is not a safety issue. Tap Save, and the recommendation is live on the dashboard.
+
+## Summary
+
+Luke's part in the workflow is complete. Two findings — a high-priority defect against the solar panel asset and a medium-priority recommendation against the property — are now in the system with full photographic evidence, detailed descriptions, clear impact statements, specific work instructions, and precise location references. The office team can act on both without a follow-up call. In Course 3, we move to the office to see how Emma and her team take these findings and turn them into proposals and jobs.
+
+---
+
+**Open items**
+
+None — all content verified against source material and SunComfort settings files.
+`;
+INBOX_FILES["reed-script-l3-dr-c3"] = `# Operational excellence
+
+**Series:** Defects and Recommendations | **Course:** 3 of 3 | **Duration:** 7 min | **Audience:** Office administrators / sales coordinators
+
+---
+
+**Learning objectives**
+
+1. Navigate to the Defects and Recommendations dashboard from the Customers tab
+2. Explain the difference between statuses and stages, and how each updates
+3. Use the Kanban and List views to filter, prioritise, and manage findings
+4. Create a proposal from one or more findings and understand what happens at the point of save
+5. Handle the outcomes of a proposal — accepted, partially accepted, and declined — and apply the correct resolution in each case
+6. Apply the correct scope rule to distinguish findings that belong in the DR workflow from those that belong in the job record
+
+**Target audience:** Office administrators and sales coordinators at field service companies who manage the post-visit workflow in Commusoft — reviewing findings, quoting work, and tracking follow-up jobs. SunComfort Systems is the pedagogical vehicle. The learner is managing their own company's DR workflow.
+
+**Assumed starting point:** Learner has access to the Commusoft web app as office staff. The account has an active Defects and Recommendations pipeline with at least one finding in an Open status, as configured and logged in Courses 1 and 2 of this series.
+
+**Main objective beyond the learning objectives:** The Defects and Recommendations dashboard is where field intelligence becomes commercial action. This course gives office administrators and sales coordinators the confidence to manage the full workflow from receipt to resolution — filtering for what matters, building accurate proposals at speed, and maintaining a clean dashboard that always reflects the true state of the business. Done well, this role is the difference between a busy team that constantly chases work and one that always has a qualified pipeline ready to quote.
+
+---
+
+**Characters:** Emma Clarke (Office Administrator, Office staff), Logan Chance (Operations Manager, Owner/Manager)
+
+**Scenario:** Emma works through the Defects and Recommendations dashboard at SunComfort following a busy week of maintenance visits, managing findings from multiple engineers, batching items into proposals, and clearing resolved work from the board.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Emma Clarke — Office Administrator — Office staff
+- **Customer record:** Mrs. Margaret Thompson — 42 Oakwood Drive, Sevenoaks, Kent, TN13 1PF — active customer with maintenance contract. Used as the primary example for the proposal creation walkthrough.
+- **Existing data:** Multiple findings in Open status across the General Maintenance pipeline — at minimum, a Panel Damage or Delamination defect against the solar PV asset and a Vegetation Management or Shading Mitigation recommendation against the property, both for Mrs. Thompson, as logged in Course 2. Additional findings from other customers should be present to demonstrate filter and batch functionality. All findings should be in the New or Assessment stage.
+- **Assets required:** None
+
+---
+
+## Your position in the field-to-office workflow
+
+As an office administrator or sales coordinator, you are the critical final link in the field-to-office workflow. The engineers provide the technical intelligence — what they found, what it means, and what needs to happen — and you provide the commercial action that turns those findings into revenue. Without this step, even the most thorough field documentation goes nowhere.
+
+Your tool for this is the Defects and Recommendations dashboard, and in this course you are going to master it from end to end. You will learn how to navigate it, how to read it, how to create proposals at speed, and how to handle every outcome a customer might give you. The dashboard is also your protection against what you might call the Friday afternoon scramble: with a centralised, prioritised view of every open finding, you eliminate lost paperwork, forgotten verbal messages, and the kind of revenue that used to walk out the door after every site visit.
+
+## Getting to the dashboard and understanding the findings you manage
+
+To find the dashboard, click on the Customers tab in the navigation bar and look to the right-hand side of the screen. You will see the Defects and Recommendations widget showing a live count of open findings. Click View all defects and recommendations to open the full dashboard. This is your live, prioritised list of everything the field team has logged.
+
+Before diving into the workflow, it is worth being clear about what the two types of findings represent, because that affects how you handle them commercially. A defect is a must-fix: something affecting safety or performance, like a damaged solar panel or an electrical fault, that the customer needs to address to keep their system safe. A recommendation is a value-add opportunity: a suggestion for an upgrade or improvement, like battery storage or a smart monitoring installation, where the system is working but there is an upsell to make. Both come through the same dashboard, but they carry different commercial weight — defects often need urgent attention, while recommendations can be batched and timed strategically. You will also encounter findings logged against a specific asset, such as the solar inverter, and findings logged against the property as a whole, such as shading from boundary trees.
+
+## Understanding statuses and stages
+
+To navigate the dashboard effectively, you need to understand the difference between statuses and stages, because they update differently and tell you different things. Statuses are system-controlled labels that reflect the commercial truth of a finding. They update automatically as your team takes action: Open means the finding has been received and is awaiting attention; On Proposal means a quote has been sent to the customer; Job Created means the customer has accepted and a follow-up job is now scheduled; and Resolved means the work is done or the lead has been formally closed.
+
+Stages, by contrast, are the user-defined milestones your team moves findings through manually to track your internal office process. Where a status tells the system what has happened commercially, a stage tells your team where the finding sits in your internal review process — whether it is sitting in New waiting for a first look, in Assessment while someone verifies the scope, or in Qualified and ready to be priced. Both matter, but they answer different questions.
+
+---
+
+**Reflection question**
+
+Emma receives a new finding logged by Luke from yesterday's solar visit. The finding is in the New stage and shows a status of Open. What does she need to do to change the status to On Proposal?
+
+- Drag the card to the Proposal Created stage on the Kanban board
+- Use the checkbox to select the finding, click Add Proposal, and send the quote ✓
+- Manually change the status dropdown in the side panel
+- Mark it as Qualified and the status will update automatically
+
+*Feedback: Statuses update automatically when specific actions are taken. The finding's status moves to On Proposal the moment Emma clicks Save after creating a proposal in the proposal builder. Dragging the card between stages updates the stage label only — it has no effect on the system status.*
+
+---
+
+## Status lifecycle — what each one means for you
+
+There are four statuses to understand. Open is the starting point for every new finding and also the recovery state: if a customer accepts a proposal but declines one item, or if an accepted job is later aborted, that individual item automatically reverts to Open so it is never lost. This is an important safety net — the system ensures you always have the chance to re-plan and re-quote.
+
+On Proposal is triggered automatically the moment you send a formal quote for identified findings. Job Created happens automatically when a customer accepts a proposal through their online portal, at which point a formal job record is generated and the finding moves back into the operations queue for scheduling. Resolved is the final status, and it has two variants: Resolved Fixed, which usually happens automatically when the follow-up job is marked as complete, and Resolved Not Fixed, which is a manual action you apply when a customer declines work or a lead is formally closed without repair.
+
+## Navigating the Kanban view
+
+The dashboard offers two views, each suited to a different way of working. The Kanban view is your visual flow view: it shows every open finding as a card arranged by pipeline stage, and it is ideal for understanding where work is piling up and what needs attention next. To filter the view, click the Filter icon and use the Priority dropdown to narrow your focus. Priority levels run from Critical, shown in red for immediate safety risks, through High in orange, Medium in yellow, and Low in green.
+
+Use filters to surface only the cards you need to act on right now — for example, filtering to Critical and High gives Emma an instant view of everything that needs a quote today. One important note: filters are sticky, meaning they stay active even if you navigate away from the dashboard. If your board looks empty when you return, always check for active filters and click Clear to reset the view.
+
+## Drag-and-drop stage management and the side panel
+
+The real operational power in the Kanban view is the drag-and-drop stage movement. When Emma has reviewed a finding and confirmed it is ready to move forward, she simply drags the card from New to Assessment or from Assessment to Qualified. This updates the stage in real time and gives every other member of the office team an instant, transparent view of where the work stands without needing to ask.
+
+Clicking any card opens the side panel, which is your primary workspace for reviewing and refining the field data before building a proposal. The technician's description, impact statement, work-to-be-done notes, and location details all appear here, pre-populated from the mobile app. Because these fields carry directly into the final proposal, now is the time to correct any typos, add further information gathered since the visit, or refine the wording for a customer audience. The side panel saves automatically as you type, so there is no separate save step required.
+
+## Switching to the List view for bulk administration
+
+The List view is your administrative engine. Where the Kanban gives you a visual pulse, the List view is built for high-speed actions across multiple records. Use the checkboxes to select multiple findings at once, then use the toolbar to change the stage of all selected items, mark them as resolved, or batch them into a single proposal.
+
+This bulk capability is where you recover lost time on busy weeks. What would take twenty minutes of individual clicks in the Kanban — moving ten findings from Assessment to Qualified and then marking three old resolved items as closed — takes seconds in the List view. The List view also surfaces Resolved findings, which drop off the Kanban board once they are closed, so it is the right place to audit historical data or look up the outcome of a finding from a previous month.
+
+---
+
+**Reflection**
+
+Emma has twelve findings in her dashboard. Eight are from separate customers and could each be quoted individually. Four are from Mrs. Thompson's property, including two defects and two recommendations that could all be addressed in a single return visit. What is the stronger commercial strategy?
+
+- Quote each finding individually to keep proposals simple
+- Batch Mrs. Thompson's four findings into one proposal to make a single return visit viable ✓
+
+*Feedback: Batching is almost always the stronger move. A single proposal for four findings on one site makes a return visit commercially viable — travel time is absorbed across multiple items, the customer receives one joined-up conversation, and the office saves the time of managing four separate proposals. Lower-priority items that would never justify their own job become part of a high-margin combined visit.*
+
+---
+
+## Creating a proposal from findings
+
+Once a finding is qualified and ready to quote, locate it in either view and tick the checkbox. You can select multiple findings to include in a single proposal — Emma selects both of Mrs. Thompson's open findings. Click Add Proposal in the toolbar to launch the proposal creation screen. In the side panel, confirm the customer contact, select your Opportunity Template, and assign a salesperson. Click Save.
+
+At the moment you hit Save, two things happen automatically. The finding's status moves from Open to On Proposal, alerting the whole team that these items are now active sales leads awaiting a customer decision. Simultaneously, the field data is locked: the technical record cannot be edited while the proposal is live, ensuring that what you have quoted the customer is always consistent with the evidence in the system.
+
+## Building and sending the proposal
+
+The Proposal Builder opens with each finding appearing as a pre-loaded card, populated with the site descriptions your engineer recorded on mobile. You can price a safety-critical defect repair as a mandatory cost and position upgrade recommendations as optional additions that the customer can choose to include. Add your labour, materials, and expenses to each card, and the totals update automatically, so your figures are always accurate. For detailed guidance on proposal pricing, refer to the Proposals course in the Academy.
+
+Once the costs are in, close the proposal builder, select your email or SMS template, and send it to the customer. The finding is now officially On Proposal, with a full audit trail linking the original field observation to the quote that was sent.
+
+## Handling outcomes — accepted, partially accepted, and declined
+
+When a customer accepts a proposal through their online portal, the system automatically creates a job record and moves the finding to Job Created. This status shift moves the work back into the operations queue for scheduling, and the finding will show as Resolved Fixed automatically once the follow-up job is marked complete. No manual action is required.
+
+If a customer accepts only part of the proposal — for example, Mrs. Thompson accepts the panel repair but declines the tree trimming recommendation — the declined item automatically reverts to Open. It reappears on the dashboard, ready to be re-quoted at a later date. Nothing is lost. If a customer declines everything, you must take manual action: open the side panel or use the List view checkboxes to select the relevant records and apply Resolved Not Fixed. This closes them from the active board while preserving a permanent record of the solution you offered and the customer's decision.
+
+## Knowing the scope boundary
+
+The single most important discipline for this dashboard is knowing which findings belong here and which belong in the job record. The rule is straightforward. If a finding relates directly to the scope of the current job — for example, the engineer needed an additional hour to complete the work or a follow-up appointment is required to finish the original task — that belongs in the job report or as a variation on the existing job record.
+
+If the engineer is on a solar maintenance visit and spots an unrelated issue, such as a damaged fence panel or a potential controller upgrade for the heat pump, that is a separate piece of work and belongs in the Defects and Recommendations workflow. Blurring this line means revenue gets buried in job notes and never reaches a quote, and it means the defects dashboard fills up with items that should have been handled differently. Clear scope boundaries are what make the whole field-to-office workflow reliable.
+
+## Summary
+
+You have mastered the full Defects and Recommendations dashboard workflow at SunComfort. You can navigate to the dashboard, understand the difference between statuses and stages, use both views to prioritise and manage your workload, create accurate proposals at speed, and handle every outcome a customer gives you. You also understand the scope boundary that keeps the dashboard clean and the job record accurate. The entire series — from strategy and setup in Course 1, through field logging in Course 2, to operational management here — is now complete.
+
+---
+
+**Open items**
+
+None — all content verified against source material and SunComfort settings files.
+`;
+INBOX_FILES["reed-script-l3-dr-challenge"] = `# Defect spotted, proposal sent, work won
+
+**Series:** Defects and Recommendations | **Course:** Challenge | **Duration:** 6 min | **Audience:** All roles
+
+---
+
+**Learning objectives**
+
+1. Apply the correct classification and logging process for a field finding — defect against an asset versus recommendation against a property
+2. Recognise how field data flows from mobile into the office dashboard without manual intervention
+3. Build a proposal by batching multiple findings for a single customer
+4. Handle a partial acceptance outcome and identify the correct next action for each item
+5. Demonstrate understanding of the full end-to-end workflow as a connected baton pass between the field team, the office, and the customer
+
+**Target audience:** All roles in a field service business who have completed the Defects and Recommendations series — decision makers, field engineers, and office administrators. SunComfort Systems is the pedagogical vehicle. This challenge tests whether the learner can apply the complete field-to-office workflow end to end, not just their own portion of it.
+
+**Assumed starting point:** Courses 1, 2, and 3 of the Defects and Recommendations series are complete. Learner has working knowledge of the pipeline setup, mobile logging, dashboard management, and proposal creation steps.
+
+**Main objective beyond the learning objectives:** Knowing your own part of a workflow is not enough. Real operational fluency means understanding how your actions — whether on the roof or behind a desk — create or destroy value for the person who picks up the baton next. This challenge exists to test whether the complete picture has landed: that a cracked panel spotted on a Tuesday morning in Sevenoaks can, if everyone does their part correctly, become a booked job and a satisfied customer by the end of the week.
+
+---
+
+**Characters:** Luke Patterson (Senior Solar Technician, Senior engineer), Emma Clarke (Office Administrator, Office staff), Mrs. Margaret Thompson (Customer, 42 Oakwood Drive, Sevenoaks, Kent)
+
+**Scenario:** Luke carries out a routine solar maintenance visit at Mrs. Thompson's property, spots two findings, logs them on mobile, and the baton passes to Emma in the office, who reviews the dashboard, builds a combined proposal, sends it, receives a partial acceptance, and handles both outcomes correctly.
+
+---
+
+**Production setup**
+
+- **Logged-in user (mobile):** Luke Patterson — Senior Solar Technician — Senior engineer
+- **Logged-in user (web):** Emma Clarke — Office Administrator — Office staff
+- **Customer record:** Mrs. Margaret Thompson — 42 Oakwood Drive, Sevenoaks, Kent, TN13 1PF — active customer with maintenance contract. Solar PV 6kW system installed June 2023. South-facing rear roof.
+- **Existing data:** Open maintenance job assigned to Luke Patterson for Mrs. Thompson's property. Solar PV system listed as an asset on Mrs. Thompson's customer record. General Maintenance pipeline active with Panel Damage or Delamination defect type and Vegetation Management or Shading Mitigation recommendation type both configured. At least one prior finding from a different customer already sitting in the New stage of the dashboard, to demonstrate the broader pipeline context for the office scene.
+- **Assets required:** Two sets of demo photos — three photos of a cracked solar panel, and two photos of tree shading across a panel array. Both sets should be realistic site images rather than stock.
+
+---
+
+## Scene set — a routine visit with an unexpected discovery
+
+It is a Tuesday morning in Sevenoaks. Luke Patterson, SunComfort's Senior Solar Technician, arrives at Mrs. Thompson's property on Oakwood Drive for her annual solar maintenance visit. The 6kW system was installed two years ago and has been performing well, but as Luke begins his inspection on the south-facing rear roof, he spots something that was not on the job sheet.
+
+One panel in the second row has a hairline crack across the face. The system is still generating, but Luke has seen this before: water ingress, internal corrosion, and eventually a short circuit. This needs to go on record today. And as he scans the array, he notices something else — the row of poplar trees along the west boundary has grown significantly since the system was installed and is now casting an afternoon shadow across the lower panels.
+
+---
+
+**Challenge 1 — classify the findings**
+
+Before Luke logs anything, he needs to make two decisions for each finding.
+
+**Finding 1 — the cracked panel**
+
+How should Luke classify this, and where should he log it?
+
+- A defect against the asset ✓
+- A recommendation against the asset
+- A defect against the property
+- A recommendation against the property
+
+*Feedback: The cracked panel is a defect — it is an active performance and safety risk that must be repaired. Because the issue is specific to that panel, it belongs against the asset, which links it to the solar PV system's service history and makes it easy to track over time.*
+
+**Finding 2 — the shading trees**
+
+How should Luke classify this, and where should he log it?
+
+- A defect against the asset
+- A recommendation against the property ✓
+- A defect against the property
+- A recommendation against the asset
+
+*Feedback: The trees are not broken — they are simply growing. This is a recommendation: an improvement opportunity that will increase the system's annual yield if acted upon. Because the shading comes from the property boundary rather than from a specific piece of equipment, it belongs against the property rather than an asset.*
+
+---
+
+## Luke logs the defect — the cracked panel
+
+With his classifications confirmed, Luke opens the Defects section from the More menu on the job screen. He taps the plus icon and selects Add against Asset, then selects the solar PV system from the asset list. He photographs the crack — one close-up, one wider shot showing the panel's position in the row — and attaches both.
+
+He selects Defect and chooses Panel Damage or Delamination as the type. In the Description field, he types precisely: A hairline crack has been identified on the face of panel three, second row from the bottom, south-facing rear roof. The system is generating but the crack presents a risk of water ingress. The Impact field carries the weight: Risk of water ingress leading to internal corrosion or short circuit, potential total panel failure and fire hazard. In Work to be Done, he specifies the panel replacement scope clearly enough that the office can price it without a follow-up call. For Location, he enters panel three, second row, south-facing rear roof, left side when facing the array. He sets Priority to High and taps Save.
+
+---
+
+**Challenge 2 — reviewing the field notes**
+
+Before Emma creates the proposal, she opens the side panel for Luke's defect record. She notices the Work to be Done field reads: Fix the cracked panel on the roof. The description and impact are detailed and accurate, but this instruction is too vague for the office to price the job.
+
+What should Emma do?
+
+- Create the proposal immediately — the description is enough for pricing ✓
+- Edit the Work to be Done field in the side panel before proceeding
+- Delete the finding and ask Luke to re-log it with better information
+- Move the card to Qualified and flag it for a phone call with Luke
+
+*Feedback: The side panel is the right place to refine field data before building a proposal. Emma should update the Work to be Done field with sufficient detail — specific actions and parts required — so the proposal reflects the actual scope of work. She can do this without calling Luke because the rest of the record is thorough. The system saves her changes automatically.*
+
+[OPEN — confirm whether office staff role has permission to edit the Work to be Done field on a defect once logged; source material indicates the side panel text is editable by the office but confirm this extends to all fields or only description-type fields]
+
+---
+
+## Luke logs the recommendation — the shading trees
+
+With the defect saved, Luke taps the plus icon again and selects Add against Property. He photographs the tree line from the garden, capturing a clear image of the shadow cast across the lower panel row. He selects Recommendation and chooses Vegetation Management or Shading Mitigation as the type.
+
+In the Description, he records the technical observation: Poplar trees along the west boundary now cast shade across the lower panel row during afternoon hours, reducing sunlight exposure. For Impact, he focuses on the customer benefit: Trimming the tree line would restore full afternoon generation and improve annual yield for Mrs. Thompson's system. Work to be Done specifies the scope: arrange tree trimming to bring the west boundary tree line below the roof line, access required to the rear garden. Location: west boundary, poplar trees overhanging above the lower panel row. Priority: Medium. He taps Save and his part in this workflow is done.
+
+---
+
+**Transition — the baton passes to the office**
+
+The moment Luke saves his second finding, both records appear on Emma's dashboard in the Commusoft web app. No message sent, no phone call needed, no paper left on a desk. The field intelligence is live, structured, and ready to act on.
+
+Emma opens the Defects and Recommendations dashboard from the Customers tab. She can see Luke's two findings for Mrs. Thompson sitting in the New stage of the General Maintenance pipeline: one marked High priority, one marked Medium. She reviews the side panel for each, refines the Work to be Done field on the defect to ensure the scope is clear enough to price accurately, and drags both cards to Qualified.
+
+---
+
+**Challenge 3 — building the proposal**
+
+Emma decides to batch both of Mrs. Thompson's findings into a single proposal.
+
+Why is batching the better commercial decision here?
+
+- It reduces the number of proposals to manage, making admin easier for Emma
+- It makes a return visit commercially viable by combining travel and labour across both items ✓
+- It is required by Commusoft — you cannot create separate proposals for the same customer
+- Batching makes the proposal harder for the customer to understand and is best avoided
+
+*Feedback: Batching multiple findings for the same customer into a single proposal is the key commercial strategy here. A cracked panel repair and tree trimming advice each on their own might not justify a separate trip to Sevenoaks. Together, they become a high-margin visit that covers travel costs and delivers real value to Mrs. Thompson in one appointment. This is exactly what the dashboard is designed to enable.*
+
+---
+
+## Emma builds and sends the proposal
+
+Emma uses the checkboxes to select both of Mrs. Thompson's findings, then clicks Add Proposal in the toolbar. She confirms the customer contact as Mrs. Thompson, selects the appropriate Opportunity Template, assigns herself as the responsible salesperson, and clicks Save.
+
+At the point of save, both findings move automatically from Open to On Proposal, and the field data is locked. Emma opens the Proposal Builder, where each finding appears as a pre-loaded card with Luke's site descriptions already in place. She prices the panel replacement as the primary repair item and positions the tree trimming as an optional add-on recommendation. Once all labour and materials are added, she selects the standard email template and sends the proposal to Mrs. Thompson's email address on file.
+
+---
+
+**Challenge 4 — handling the outcome**
+
+Three days later, Mrs. Thompson responds through her customer portal. She accepts the panel replacement but declines the tree trimming — she is planning to have the garden redesigned next year and would rather address the shading then.
+
+What happens in Commusoft at the point of her acceptance?
+
+- Emma needs to manually create a job for the panel repair and manually close the tree trimming finding
+- A job is created automatically for the panel repair, and the tree trimming finding reverts to Open automatically ✓
+- Both findings move to Resolved Fixed since the proposal was accepted
+- The proposal moves to Job Created but Emma needs to manually re-open the tree trimming
+
+*Feedback: When a customer accepts part of a proposal, Commusoft handles both outcomes automatically. The accepted item — the panel repair — triggers a job record and moves to Job Created. The declined item — the tree trimming — reverts to Open, sitting back in the dashboard and ready to be re-quoted at a later date. Nothing is lost. Emma does not need to take any manual action for either outcome.*
+
+---
+
+## Closing the loop
+
+The panel replacement job is now in the operations queue, ready for Sophie or Ryan to schedule. Luke will return to Mrs. Thompson's property, replace the cracked panel, and when the job is marked complete, the finding will close automatically as Resolved Fixed. The tree trimming recommendation sits quietly in Open, waiting for next year's garden redesign to clear the way — and when the time is right, Emma can pick it up from the dashboard and send a fresh quote.
+
+What started as a visual observation on a roof in Sevenoaks has become a booked repair, a satisfied customer, and a documented future opportunity. Every person in the chain played their part: Luke logged thoroughly enough that the office could act without calling him, Emma batched intelligently enough to make the visit commercially viable, and Commusoft handled the handovers automatically so nothing slipped through.
+
+## Challenge complete
+
+You have applied the complete Defects and Recommendations workflow from first observation to completed job. You classified findings correctly, reviewed and refined field data in the side panel, batched strategically, handled a partial acceptance, and understood what happens automatically at each status transition. This is the field-to-office workflow working exactly as it should. Take what you have practised here and apply it to every visit your team carries out — because every finding that is properly logged is revenue that cannot be ghosted.
+
+---
+
+**Open items**
+
+1. [OPEN — confirm whether office staff role can edit the Work to be Done field on a finding once it has been logged from mobile, or whether this is restricted to Owner/Manager access; this is significant for the Challenge 2 feedback and the C3 side panel scenes]
+`;
 
 INBOX_FILES["reed-script-l1-ft-series1"] = `# Reed — Script: Getting started on the app
 
@@ -19494,6 +20527,14 @@ function openInboxFile(key) {
     'reed-script-l3-route-c2': { num: 'Reed — Script', title: 'L3 Route Optimisation — Course 2: Configure route optimisation settings' },
     'reed-script-l3-route-c3': { num: 'Reed — Script', title: 'L3 Route Optimisation — Course 3: Use route optimisation in the diary' },
     'reed-script-l3-route-challenge': { num: 'Reed — Script', title: 'L3 Route Optimisation — Challenge: Route optimised, diary running efficiently' },
+    'reed-script-l3-variations-c1': { num: 'Reed — Script', title: 'L3 Variations — Course 1: Set up variation templates and option templates' },
+    'reed-script-l3-variations-c2': { num: 'Reed — Script', title: 'L3 Variations — Course 2: Raise a variation in the field' },
+    'reed-script-l3-variations-c3': { num: 'Reed — Script', title: 'L3 Variations — Course 3: Manage variations from the office' },
+    'reed-script-l3-variations-challenge': { num: 'Reed — Script', title: 'L3 Variations — Challenge: Variation raised, approved, and invoiced' },
+    'reed-script-l3-dr-c1': { num: 'Reed — Script', title: 'L3 Defects and Recommendations — Course 1: Strategy and setup' },
+    'reed-script-l3-dr-c2': { num: 'Reed — Script', title: 'L3 Defects and Recommendations — Course 2: Field intelligence' },
+    'reed-script-l3-dr-c3': { num: 'Reed — Script', title: 'L3 Defects and Recommendations — Course 3: Operational excellence' },
+    'reed-script-l3-dr-challenge': { num: 'Reed — Script', title: 'L3 Defects and Recommendations — Challenge: Defect spotted, proposal sent, work won' },
     'ivy-induction': { num: 'Ivy — People', title: 'Enablement Specialist Induction Plan v3' },
     'ivy-jd-academy': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Description' },
     'ivy-jd-advert': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Advert' },

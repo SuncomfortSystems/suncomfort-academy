@@ -925,6 +925,19 @@
           <div class="course-card" onclick="openInboxFile('reed-script-l3-contracts-challenge')"><div class="course-num">Challenge</div><div class="course-title">Contract running, PPM scheduled</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
+      <div id="l3-fleet" class="series-block">
+        <div class="series-header" style="background:#1565c0">
+          <div><h2>Layer 3 — Fleet Management</h2><div class="series-meta">Fleet dashboard, geo-fences and out-of-hours alerts, trip analytics and safe driver leaderboard, vehicle maintenance tracking and reminders</div></div>
+          <div class="series-count">4 courses + challenge</div>
+        </div>
+        <div class="course-grid">
+          <div class="course-card" onclick="openInboxFile('reed-script-l3-fleet-c1')"><div class="course-num">Course 1</div><div class="course-title">The fleet dashboard — reading your fleet data</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Decision Makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l3-fleet-c2')"><div class="course-num">Course 2</div><div class="course-title">Set up geo-fences and out-of-hours alerts</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Decision Makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l3-fleet-c3')"><div class="course-num">Course 3</div><div class="course-title">Trip analytics and the safe driver leaderboard</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Decision Makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l3-fleet-c4')"><div class="course-num">Course 4</div><div class="course-title">Vehicle maintenance tracking and reminders</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Decision Makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l3-fleet-challenge')"><div class="course-num">Challenge</div><div class="course-title">Fleet monitored and maintained</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision Makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+        </div>
+      </div>
     </div>
 
     <!-- SUNCOMFORT -->
@@ -17163,6 +17176,531 @@ INBOX_FILES["reed-script-l3-contracts-challenge"] = `# Series Challenge: Contrac
 
 - None — challenge content draws entirely from verified series material. Any open items in Courses 1 to 5 apply here by inheritance.
 `;
+INBOX_FILES["reed-script-l3-fleet-c1"] = `# The fleet dashboard — reading your fleet data
+
+**Series:** L3 Fleet Management | **Course:** 1 of 4 | **Duration:** 4 min | **Audience:** Decision Makers / Admins
+
+---
+
+**Learning objectives**
+
+1. Navigate to the fleet management dashboard and identify what each widget shows.
+2. Read the map widget's colour-coded status rings and use trip playback to review past vehicle movement.
+3. Use the vehicle list, safe driver leaderboard, maintenance due, vehicle checks, and total mileage widgets to build a complete daily fleet picture.
+
+---
+
+**Target audience:** Business owners, operations managers, and administrators at field service businesses — renewable energy installers, heating and plumbing contractors, facilities management companies — who are responsible for day-to-day fleet oversight and have GPS-tracked vehicles connected to Commusoft. SunComfort Systems is the pedagogical vehicle; the audience is any Commusoft client managing a GPS-tracked fleet.
+
+**Assumed starting point:** Vehicles are added to Commusoft and GPS trackers are active and transmitting. Layer 0 Compass is complete.
+
+**Main objective beyond the learning objectives:** An operations manager who can read the fleet dashboard has a live picture of the entire fleet in a single view — where every vehicle is, how recently that location was updated, whether drivers are behaving safely, and which maintenance or compliance tasks are approaching. This course turns the dashboard from a feature into a daily habit: open it in the morning, read it in two minutes, know what needs to be done.
+
+---
+
+**Characters:** Logan Chance (Operations Manager, SunComfort Systems)
+
+**Scenario:** Logan opens the fleet dashboard on a Tuesday morning before the first engineer departs. Twenty vehicles are on the books and he wants to know — without a single phone call — where things stand across the whole fleet before the day kicks off.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Logan Chance (Operations Manager)
+- **Customer record:** None
+- **Existing data:** 20 GPS-tracked vehicles active in the system; recent trips logged; maintenance tasks configured with due dates; safe driver leaderboard populated with at least 60 days of data; vehicle checks completed and some missed in the last 30 days
+- **Assets required:** None
+
+---
+
+## What the fleet dashboard shows you
+
+You reach the fleet dashboard by selecting Fleet management from the main navigation bar. The dashboard opens directly and is built from eight widgets arranged across the screen: the map, the vehicle list, recent trips, reminders due, maintenance due, the safe driver leaderboard, vehicle checks, and total mileage. Each widget draws on live data from your GPS trackers and your vehicle records — together they give you a complete operational picture without opening a single separate report or making a single phone call. Logan opens it every morning before the first van leaves the depot.
+
+---
+
+## The map widget
+
+The map widget shows the live location of every GPS-tracked vehicle as a pin on the map. Around each pin is a colour-coded status ring that tells you how recently that vehicle's location was last updated by the tracker: green means the last update was 0 to 30 minutes ago, yellow means 30 to 90 minutes, orange means 90 to 150 minutes, and red means 150 minutes or more. A red ring does not automatically mean something is wrong — the vehicle may be parked, the driver may be on a long indoor job, or the tracker may have temporarily lost signal in a basement or underground car park.
+
+Job route lines appear on the map alongside the vehicle pins. Blue lines show completed routes and green lines show routes currently in progress, so Logan can see at a glance which engineers are travelling and which have arrived on site. He can also save custom location pins — SunComfort's head office, the main equipment supplier, the storage unit in Bermondsey — so the map reflects the landmarks that matter to how the business actually operates.
+
+To review where a vehicle has been on a past day, Logan uses the playback feature. He selects a past date and time range, and the map replays that vehicle's movement at an adjustable speed. This is useful when verifying a site visit, checking a delivery time, or reviewing what happened on a day when a job went wrong.
+
+---
+
+**Reflection**
+
+Logan checks the map widget at 9:15am. Jake Harris's van shows an orange status ring. What does that tell Logan?
+
+- Jake's van has broken down and needs immediate attention.
+- Jake's van location has not updated in the last 90 to 150 minutes, which may mean the tracker lost signal or the van is parked. ✓
+- Jake is currently completing a job on site and the ring will turn green when he departs.
+
+*Feedback: The orange ring indicates the tracker has not sent a location update in the last 90 to 150 minutes. It does not confirm a problem — Jake may be on a long indoor installation with no mobile signal, or the van may be parked at a customer site. Logan can use the playback feature to review Jake's recent movement before drawing any conclusions.*
+
+---
+
+## The vehicle list widget
+
+The vehicle list widget shows all vehicles organised by status, so Logan can see at a glance which are active, which are idle, and which are offline. Selecting a vehicle opens its detail view, which shows the current driver assignment, a full timeline of manual and automatic entries, and any files uploaded to the vehicle record. The timeline captures driver changes, maintenance completions, check submissions, and any manual notes — building an audit trail without any extra admin from the operations team.
+
+From the detail view, Logan can also see which maintenance tasks and reminders are currently due or approaching for that specific vehicle, letting him cross-reference the headline numbers on the dashboard widgets with the individual vehicle record when something needs his attention.
+
+---
+
+## Maintenance, checks, leaderboard, and mileage
+
+The maintenance due widget lists all maintenance tasks that are approaching their scheduled date or mileage threshold, and Logan can mark a task complete directly from the widget the moment the work is done — no need to navigate into the vehicle record. The vehicle checks widget gives a 30-day summary of completed, late, and missed checks across the whole fleet, so Logan can see immediately whether drivers are completing their pre- or post-shift inspections without chasing anyone individually. The reminders due widget surfaces any vehicle administration reminders — such as MOT or insurance renewal — that are coming up.
+
+The safe driver leaderboard ranks every driver by their driving behaviour over the past 60 days. The score is calculated from four tracked behaviours: excessive speeding, harsh braking, harsh acceleration, and harsh cornering, each weighted differently and normalised against the distance each driver covers. Drivers scoring between 0 and 33 are in the green zone. Scores between 34 and 66 sit on a watchlist and warrant a coaching conversation. Scores of 67 or above indicate patterns that need retraining. Logan uses the leaderboard as an ongoing performance signal — not just as something to check after an incident. The total mileage chart shows the fleet's combined monthly mileage across the past six months, giving a high-level view of fleet utilisation over time.
+
+---
+
+**Reflection**
+
+Logan sees that Terry Walsh is showing a score of 71 on the safe driver leaderboard. What should Logan do first, and what does the score mean?
+
+- Terry has committed a traffic offence and Logan needs to file a report with fleet compliance.
+- Terry's score places him in the red zone, meaning the system has detected patterns of unsafe driving behaviour that warrant retraining. Logan should review the detail and arrange a conversation. ✓
+- Terry is scoring well — 71 is close to the top of the safe driving scale and no action is needed.
+
+*Feedback: A score of 67 or above places a driver in the red zone on the safe driver leaderboard. The score is calculated from GPS-recorded events including excessive speeding, harsh braking, harsh acceleration, and harsh cornering, normalised by the distance driven. A score of 71 indicates persistent patterns, not a single incident. The next step is to review the detail behind the score and have a structured conversation with Terry — the leaderboard is designed to surface coaching opportunities before a serious incident occurs.*
+
+---
+
+## Summary
+
+The fleet dashboard lives in Fleet management in the main navigation. The map widget shows live vehicle locations with colour-coded status rings: green (0 to 30 minutes), yellow (30 to 90), orange (90 to 150), red (150 or more). Blue route lines show completed journeys; green route lines show trips in progress. Use playback to replay past vehicle movement. The vehicle list shows vehicles by status and links to the full detail view. The maintenance due widget lists upcoming tasks and supports completion marking from the dashboard. The vehicle checks widget summarises 30 days of completed, late, and missed checks. The safe driver leaderboard ranks drivers by 60-day behaviour data across four scored events, with green (0 to 33), yellow (34 to 66), and red (67 or above) performance zones. The total mileage chart covers the past six months of fleet-wide mileage.
+
+---
+
+**Open items**
+
+None — all content verified against Help Centre sources: Fleet management dashboard (HC 247235), Simple Tracking Overview (HC 216858), Safe Driver Leaderboard (HC 304996).
+`;
+INBOX_FILES["reed-script-l3-fleet-c2"] = `# Set up geo-fences and out-of-hours alerts
+
+**Series:** L3 Fleet Management | **Course:** 2 of 4 | **Duration:** 4 min | **Audience:** Decision Makers / Admins
+
+---
+
+**Learning objectives**
+
+1. Explain what a geo-fence is and describe the six steps required to create one in Commusoft.
+2. Configure a geo-fence's time window and assign it to specific vehicles or the whole fleet.
+3. Set up out-of-hours alerts to monitor vehicle use outside approved business hours.
+4. Describe the notification options available for both geo-fence and out-of-hours alerts.
+
+---
+
+**Target audience:** Business owners, operations managers, and administrators at field service businesses who manage GPS-tracked vehicles and need automated alerts when vehicles move outside approved locations or operate outside business hours. SunComfort Systems is the pedagogical vehicle; the audience is any Commusoft client responsible for fleet compliance and security.
+
+**Assumed starting point:** Course 1 of this series is complete. GPS-tracked vehicles are active in Commusoft. The learner can navigate to Fleet management and read the dashboard.
+
+**Main objective beyond the learning objectives:** Once geo-fences and out-of-hours alerts are live, the system watches the fleet so Logan does not have to. Unauthorised overnight movement, vehicles leaving a depot perimeter, or a van in use on a Sunday morning all trigger an automatic notification — meaning the first Logan hears about it is an alert, not a complaint or an insurance claim.
+
+---
+
+**Characters:** Logan Chance (Operations Manager, SunComfort Systems)
+
+**Scenario:** SunComfort has experienced two incidents of unauthorised vehicle use in the past year. Logan wants to put automated boundaries in place — a geo-fence around the Elephant and Castle depot and out-of-hours alerts across the whole fleet — so he is notified automatically if a vehicle moves when it should not.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Logan Chance (Operations Manager)
+- **Customer record:** None
+- **Existing data:** 20 GPS-tracked vehicles in the system; a named depot location for SunComfort (Elephant and Castle)
+- **Assets required:** None
+
+---
+
+## What a geo-fence does
+
+A geo-fence is a defined boundary on a map. Once active in Commusoft, the system monitors whether assigned vehicles enter or exit that boundary and sends an alert the moment they do. Logan uses geo-fences to protect locations — the depot, a client's restricted site, a secure equipment yard — and to flag any movement that falls outside the expected pattern. The alert arrives in real time: Logan does not need to be watching the map for it to trigger.
+
+---
+
+## Creating a geo-fence — steps 1 to 3
+
+You create a geo-fence from the Fleet management settings in Commusoft. The process runs across six sequential steps. In step one you give the geo-fence a name — something clear and location-specific, such as Elephant and Castle Depot. In step two you define the boundary on the map: you can search for the address and let the system centre on it, use your current location, click a point on the map manually, or draw a fully custom boundary freehand. For a depot perimeter, Logan draws a boundary that wraps tightly around the yard and gates rather than using a simple radius, so passing traffic on the street does not trigger the alert. In step three you specify the days and times the geo-fence is active — for example Monday to Friday from 6pm to 8am, and all day Saturday and Sunday. This means the boundary is only enforced during the hours when vehicle movement would be unexpected, and Logan is not receiving alerts during the normal working day when engineers are legitimately collecting vehicles from the yard.
+
+---
+
+**Reflection**
+
+Logan is setting up a geo-fence for the depot. He wants to be alerted if a vehicle leaves the yard between 6pm and 8am on weekdays and at any time on weekends. Which step in the geo-fence setup process controls when the boundary is active?
+
+- Step 2 — Location, where he can restrict the boundary to certain areas of the map.
+- Step 4 — Assignment, where he selects which vehicles the fence applies to.
+- Step 3 — Time, where he sets the days and hours the geo-fence monitors for entries and exits. ✓
+
+*Feedback: Step 3 of the geo-fence setup is where you configure the time window. You can specify individual days and multiple time periods per day — so a boundary that covers weeknight hours from 6pm to 8am and the full weekend is set here. Outside the active window, the geo-fence does not monitor or alert, which prevents Logan from receiving alerts during normal working hours when engineers are legitimately moving vehicles from the depot.*
+
+---
+
+## Creating a geo-fence — steps 4 to 6
+
+In step four you assign the geo-fence to vehicles. You can apply it to one specific vehicle, a selection of vehicles, or the entire fleet. Logan applies the depot geo-fence to all 20 SunComfort vehicles — any vehicle that leaves the yard outside the active time window triggers the alert, regardless of which driver is involved. In step five you configure notifications. You can send alerts by email, by in-system notification, or both. Recipients can be set to specific named users, all users in a chosen role, or everyone in the system. Logan sets the email alert to send to himself and to Sarah Mitchell, and the in-system notification to the Operations Manager role. You also select an email template here — either an existing one from your library or a new one created specifically for geo-fence events. In step six you choose to activate the geo-fence immediately or save it as a draft for review before it goes live.
+
+One important operational note: once a geo-fence is active, its boundary cannot be edited directly. If the boundary needs to change — because the depot is extended or a new gate is added — you create a new geo-fence and delete the existing one. Logan builds the boundary carefully in step two for exactly this reason.
+
+---
+
+## Setting up out-of-hours alerts
+
+Out-of-hours alerts work alongside geo-fences but cover a different scenario: they monitor the entire fleet for vehicle use that falls outside your configured business hours, regardless of location. Where a geo-fence watches a specific place, an out-of-hours alert watches the clock.
+
+You access the out-of-hours settings through the profile icon, then Settings, then Fleet management, then Vehicle out of hours. Here you configure your business days and hours — by default Monday to Friday are enabled, and you set the start and end times for each day. You can also configure multiple time periods per day to account for a lunch break or a split shift. If your business treats public holidays as non-working days, you can apply that here too. Once business hours are saved, any GPS movement detected outside those hours triggers the alert. Logan sets business hours as Monday to Friday, 7am to 6pm — the earliest an engineer might depart and the latest a van should be returning. Any movement before 7am or after 6pm on a weekday, or at any time on a weekend, fires the alert.
+
+Notification options for out-of-hours alerts mirror those for geo-fences: email to specific users, all users in a role, or everyone; in-system notifications to specific users or a role. Logan routes both to himself and to Sarah Mitchell, and keeps the in-system notification active for the Operations Manager role so the alert is visible in the system the following morning if he misses the overnight email.
+
+---
+
+**Reflection**
+
+SunComfort has out-of-hours alerts configured for Monday to Friday, 7am to 6pm. On a Saturday at 10am, Nathan Cole's van shows GPS movement. What happens?
+
+- Nothing happens — out-of-hours alerts only apply to weekday evenings and do not cover weekends.
+- The out-of-hours alert fires because Saturday falls outside the configured business hours. ✓
+- The system flags the movement on the map but does not send a notification until Logan reviews the dashboard manually.
+
+*Feedback: Out-of-hours alerts trigger whenever GPS movement is detected outside the configured business hours — including weekends, which fall entirely outside Monday to Friday working days. The alert fires automatically and sends the configured notifications to Logan and Sarah Mitchell. Logan does not need to be watching the dashboard for the alert to reach him.*
+
+---
+
+## Summary
+
+A geo-fence is a monitored boundary on the map that alerts you when assigned vehicles enter or exit it. You create one in six steps: name, location boundary, active time window, vehicle assignment, notification configuration, and activation. Active geo-fence boundaries cannot be edited — create a new fence and delete the old one if the boundary needs to change. Out-of-hours alerts monitor the whole fleet for movement outside configured business hours, regardless of location. Both are configured in Fleet management settings and both support email and in-system notifications routed to specific users, roles, or everyone. Together, geo-fences and out-of-hours alerts mean the system watches your fleet around the clock — you only need to act when an alert arrives.
+
+---
+
+**Open items**
+
+None — all content verified against Help Centre sources: Vehicle geo-fences (HC 246597), Vehicle out of hours (HC 245540).
+`;
+INBOX_FILES["reed-script-l3-fleet-c3"] = `# Trip analytics and the safe driver leaderboard
+
+**Series:** L3 Fleet Management | **Course:** 3 of 4 | **Duration:** 4 min | **Audience:** Decision Makers / Admins
+
+---
+
+**Learning objectives**
+
+1. Navigate to a vehicle's trip history and read the data captured for an individual trip.
+2. Use the driver timeline to reconstruct an engineer's day from GPS and job activity data.
+3. Explain how the safe driver leaderboard score is calculated and what the three performance zones mean.
+4. Describe how to use leaderboard data to structure a driver coaching conversation.
+
+---
+
+**Target audience:** Business owners, operations managers, and administrators at field service businesses who manage GPS-tracked vehicles and are responsible for driver performance, route efficiency, and fleet compliance. SunComfort Systems is the pedagogical vehicle; the audience is any Commusoft client who wants to move from reactive incident management to proactive driver coaching.
+
+**Assumed starting point:** Courses 1 and 2 of this series are complete. GPS trackers are active and have been recording trip and behaviour data. The safe driver leaderboard has at least 60 days of data to draw on.
+
+**Main objective beyond the learning objectives:** Trip analytics and the safe driver leaderboard shift fleet management from reactive to proactive. Logan does not wait for a speeding complaint or a near-miss report to find out how his drivers are behaving on the road. The data is always there — his job is to read it regularly and use it as the basis for structured conversations before a pattern becomes an incident.
+
+---
+
+**Characters:** Logan Chance (Operations Manager, SunComfort Systems)
+
+**Scenario:** Logan is reviewing the past week's fleet data before a Friday afternoon team catch-up. He wants to check Jake Harris's trip from a Tuesday site visit where a customer made an informal comment about van speed, and he wants to review the full leaderboard before deciding whether to raise anything with any of the engineers.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Logan Chance (Operations Manager)
+- **Customer record:** None
+- **Existing data:** 60-plus days of GPS trip and driver behaviour data; trip history populated for all active vehicles; safe driver leaderboard showing scores across the field team
+- **Assets required:** None
+
+---
+
+## Accessing trip history
+
+You access trip data from within a vehicle's detail view on the fleet dashboard. Select the vehicle from the vehicle list widget and open its detail view, then navigate to the Trips tab. Trips are organised by day, with each completed journey listed separately. Selecting a trip opens the route on the map with a red-to-green line showing the start and end of the journey, and the detail panel alongside it shows the key metrics captured for that trip: distance travelled, average speed, duration, and departure and arrival timestamps.
+
+Logan selects Jake Harris's van and filters to Tuesday's date. He can see two trips: the outbound journey to a customer site in Herne Hill at 8:42am and the return to the depot at 4:17pm. He selects the outbound trip. The route line plots across the map and the detail panel shows 14.3 kilometres travelled, average speed of 38 kilometres per hour, departure at 8:42, and arrival at 9:21. The data does not show a speeding event on this trip — the customer comment was informal and Logan notes that the GPS data does not support a concern on this journey specifically.
+
+---
+
+**Reflection**
+
+Logan wants to check whether Jake Harris had any speeding events on a specific Tuesday trip. Where does he find this trip data?
+
+- He opens the Safe Driver Leaderboard and filters by Jake's name and Tuesday's date.
+- He selects Jake's vehicle from the vehicle list, opens the detail view, navigates to the Trips tab, and selects the relevant trip from Tuesday's list. ✓
+- He checks the recent trips widget on the main dashboard, which shows the last 10 completed trips across the whole fleet.
+
+*Feedback: Individual trip data lives in the Trips tab within a vehicle's detail view. The recent trips widget on the main dashboard shows the last 10 trips across the whole fleet but does not allow filtering by date or driver. To review a specific trip on a specific date, open the vehicle detail view and select the trip from the Trips tab — the route and all associated metrics are then available.*
+
+---
+
+## The driver timeline
+
+The driver timeline gives Logan a chronological view of everything that happened in an engineer's day — GPS movement, job arrivals, job completions, and manual entries — combined into a single scrollable record. He accesses it from the vehicle's detail view under the Driver History tab. The timeline is clickable: selecting any event on the timeline centres the map on where the vehicle was at that moment, so Logan can read a day's activity as a connected story rather than a list of disconnected data points.
+
+For the Tuesday in question, Logan opens Jake's driver timeline. He can see Jake departed the depot at 8:42, arrived at the Herne Hill site at 9:21, completed the arrive workflow at 9:23, and departed at 2:34pm after completing the job report. The timeline shows no gaps or unexplained stops. Logan closes the record — there is nothing here that warrants a conversation. The customer's comment was informal, the data does not support a concern on that trip, and Jake's overall mileage for the week is consistent with his assignment schedule.
+
+---
+
+## Reading the safe driver leaderboard
+
+The safe driver leaderboard is in Fleet management, accessible from the main navigation or directly from the dashboard. It ranks every driver by their driving behaviour over the past 60 days. The score is calculated from four GPS-recorded events: excessive speeding, which carries the highest weighting at 3.5 points per event; harsh braking and harsh acceleration, both at 2.5 points each; and harsh cornering at 1.5 points. The score is then normalised by the distance each driver covers — a driver with 10 events over 10 kilometres scores worse than a driver with 20 events over 100 kilometres — so the leaderboard measures driving quality relative to exposure, not simply the raw number of incidents.
+
+Scores fall into three performance zones. Green (0 to 33) indicates safe, consistent driving. Yellow (34 to 66) places the driver on a watchlist — the data suggests coaching is warranted. Red (67 or above) indicates patterns that are sufficiently serious to require retraining before a serious incident occurs. Logan opens the leaderboard on Friday afternoon. Jake Harris is at 22 — green, and consistent with previous weeks. Luke Patterson is at 41 — yellow, and that is an increase from 34 last week. Nathan Cole is at 28 — green. Terry Walsh is at 58 — still yellow but edging toward the red zone boundary.
+
+---
+
+**Reflection**
+
+Luke Patterson's leaderboard score has moved from 34 to 41 in one week. What does this mean and what should Logan do?
+
+- Luke's score is still in the yellow zone and Logan should wait until it crosses 67 before taking any action.
+- Luke is in the yellow watchlist zone and the upward movement suggests a trend. Logan should review Luke's recent trip and behaviour data and have a structured coaching conversation. ✓
+- The score fluctuates week to week and a move from 34 to 41 is within normal variation — no action needed.
+
+*Feedback: The yellow zone (34 to 66) is a watchlist — it signals that coaching is warranted, not that the driver has done something serious enough to warrant formal action. An upward trend from 34 to 41 in a single week is worth investigating. Logan should look at the driver timeline and recent trips to understand which event types are driving the score, then have a structured conversation with Luke using the data as the basis — not an accusation, but a coaching prompt grounded in specifics.*
+
+---
+
+## Using the leaderboard as a coaching tool
+
+The leaderboard is most useful when Logan treats it as a regular agenda item rather than an occasional check. He reviews it every Friday afternoon, notes any changes from the previous week, and flags anything that has moved into the yellow or red zone for a one-to-one the following week. For drivers in the green zone, the leaderboard data gives Logan the evidence to recognise good driving explicitly — not just to catch problems, but to acknowledge the engineers who are consistently safe on the road.
+
+For Luke Patterson, Logan opens the driver timeline for the past two weeks and notes that harsh braking events have increased, mostly on the return leg of afternoon jobs. He makes a note to discuss journey planning at the end of the day — whether Luke is leaving sites later than planned and then feeling pressure to make up time on the road. The data gives Logan a specific, factual starting point for the conversation. He is not guessing, and Luke is not being accused of anything. The GPS data is the record.
+
+---
+
+## Summary
+
+Trip history lives in the Trips tab of the vehicle detail view. Each trip shows distance, average speed, duration, and departure and arrival timestamps, with a colour-coded route on the map. The driver timeline combines GPS events and job activity into a chronological day view, with each event clickable on the map. The safe driver leaderboard covers the past 60 days and scores four event types: excessive speeding (3.5 points), harsh braking (2.5), harsh acceleration (2.5), and harsh cornering (1.5). Scores are normalised by distance. Green (0 to 33) means safe driving. Yellow (34 to 66) means the driver is on a watchlist and coaching is warranted. Red (67 or above) means patterns require retraining. Use the leaderboard as a regular coaching tool — to prompt conversations before incidents occur and to recognise consistently safe drivers by name.
+
+---
+
+**Open items**
+
+None — all content verified against Help Centre sources: Fleet management dashboard (HC 247235), Simple Tracking Overview (HC 216858), Safe Driver Leaderboard (HC 304996).
+`;
+INBOX_FILES["reed-script-l3-fleet-c4"] = `# Vehicle maintenance tracking and reminders
+
+**Series:** L3 Fleet Management | **Course:** 4 of 4 | **Duration:** 4 min | **Audience:** Decision Makers / Admins
+
+---
+
+**Learning objectives**
+
+1. Add a maintenance task to a vehicle record with a name, priority level, and notification configuration.
+2. Set a time-based and a mileage-based reminder trigger for a maintenance task.
+3. Add a vehicle reminder for an administrative deadline such as an MOT or insurance renewal.
+4. Use the maintenance due and reminders due widgets on the fleet dashboard to act on upcoming tasks.
+
+---
+
+**Target audience:** Business owners, operations managers, and administrators at field service businesses who are responsible for keeping a GPS-tracked fleet roadworthy, compliant, and maintained. SunComfort Systems is the pedagogical vehicle; the audience is any Commusoft client managing scheduled vehicle maintenance and administrative compliance deadlines across a fleet.
+
+**Assumed starting point:** Courses 1 to 3 of this series are complete. Vehicles are active in Commusoft and the fleet dashboard is in regular use.
+
+**Main objective beyond the learning objectives:** A fleet that is maintained on schedule is a fleet that does not break down on the way to a customer. This course gives Logan the tools to record every maintenance task, set reminders that fire automatically before the deadline, and track compliance from the dashboard without keeping a separate spreadsheet. The payoff is operational: fewer emergency repairs, lower costs, and engineers who arrive at jobs on time.
+
+---
+
+**Characters:** Logan Chance (Operations Manager, SunComfort Systems)
+
+**Scenario:** Logan is setting up maintenance tracking in Commusoft for the first time. He wants to record a recurring oil change for one of SunComfort's service vans, set an MOT reminder for the same vehicle, and confirm that both will surface on the fleet dashboard without him having to check the vehicle record manually.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Logan Chance (Operations Manager)
+- **Customer record:** None
+- **Existing data:** At least one active vehicle in the system; fleet dashboard in regular use
+- **Assets required:** None
+
+---
+
+## Adding a maintenance task
+
+You add a maintenance task directly from a vehicle's detail view. Select the vehicle from the vehicle list on the fleet dashboard, open its detail view, and navigate to the Maintenance tab. From there, select the option to add a new maintenance task. The task setup runs across two steps. In step one you enter the task name — something specific and searchable, such as Engine oil and filter change — add any relevant notes, and set the priority level: high, medium, or low. Priority helps Logan and his team triage the maintenance due widget when multiple tasks appear simultaneously. In step two you configure notifications: who should receive an email alert when the task falls due, and who should receive an in-system notification. Recipients can be specific named users, all users in a chosen role, or everyone in the system. Logan sets the email notification to himself and routes the in-system notification to the Operations Manager role so it is visible in the system even if he is away from his inbox.
+
+---
+
+## Time-based and mileage-based reminders
+
+Once the maintenance task is saved, you add a reminder to control when the alert fires. Commusoft supports two types of reminder trigger: time-based and mileage-based, and you can use both together on the same task if the vehicle's maintenance schedule requires it.
+
+For a time-based reminder, you set the interval in weeks or months — for example, every 26 weeks for a six-monthly oil change — and then set how far in advance the reminder fires before the next due date. Logan sets a two-week advance reminder, so he receives the alert with enough time to schedule the work during a planned downtime slot rather than reacting when the task is already overdue.
+
+For a mileage-based reminder, you set the distance interval — for example, every 10,000 kilometres — and the advance threshold at which the reminder triggers. Logan sets a 500-kilometre advance trigger, so the alert fires when the vehicle reaches 9,500 kilometres into the interval, giving the team time to book the vehicle in before the 10,000-kilometre point is reached. The GPS tracker feeds live mileage data to the vehicle record, so the mileage-based trigger fires automatically without anyone logging the odometer manually.
+
+---
+
+**Reflection**
+
+Logan sets a mileage-based reminder for an oil change every 10,000 kilometres with a 500-kilometre advance trigger. The vehicle is currently at 9,200 kilometres into the current interval. When will the reminder fire?
+
+- Immediately — because the vehicle is already past the midpoint of the interval.
+- When the vehicle reaches 9,500 kilometres in the current interval — 500 kilometres before the 10,000-kilometre due point. ✓
+- When the vehicle reaches exactly 10,000 kilometres — the advance trigger only applies from the next interval onwards.
+
+*Feedback: The advance trigger fires 500 kilometres before the due point, which means the alert will arrive when the vehicle hits 9,500 kilometres into the interval. At 9,200 kilometres, Logan has approximately 300 kilometres of driving before the reminder fires — enough lead time to plan the maintenance slot, but not so far in advance that it gets buried. The GPS tracker supplies the mileage data automatically, so Logan does not need to check the odometer manually.*
+
+---
+
+## Adding a vehicle reminder for administrative deadlines
+
+Vehicle reminders cover administrative compliance deadlines that recur on a fixed schedule — MOT renewals, insurance renewals, road tax, service intervals set by the vehicle manufacturer. You access vehicle reminders from the Fleet management settings. In the basic details step you enter the reminder name — MOT renewal, for example — and set the frequency and the advance notification window. For an MOT, Logan sets the reminder to recur annually and to fire 28 days in advance, giving him a clear month to book the test and arrange cover for the vehicle. You then configure the email and in-system notification recipients in the same way as a maintenance task.
+
+Reminders appear on the reminders due widget on the fleet dashboard as they approach their due date. Logan does not need to open the vehicle record to see that an MOT or insurance renewal is coming up — the widget surfaces it on the dashboard, and the notification fires automatically to the relevant recipients. One operational note: a reminder cannot be edited once it is actively in use. If the renewal date changes or the advance window needs adjusting, the existing reminder is archived and a new one is created with the updated settings.
+
+---
+
+**Reflection**
+
+Logan has set up an MOT reminder with a 28-day advance notification. The MOT is due on 15 June. When will the reminder first appear on the fleet dashboard's reminders due widget?
+
+- On 15 June — the day the MOT is due.
+- On 18 May — 28 days before the due date. ✓
+- On 1 June — the system rounds to the nearest month boundary before surfacing reminders.
+
+*Feedback: The reminders due widget surfaces tasks once the advance notification window opens. If the advance window is set to 28 days and the due date is 15 June, the reminder appears from 18 May. This is the prompt for Logan to book the MOT test and arrange a replacement vehicle or schedule the work around the team's job commitments. The dashboard does the watching so Logan does not have to.*
+
+---
+
+## Acting on maintenance from the dashboard
+
+The maintenance due widget on the fleet dashboard lists all maintenance tasks approaching their due date or mileage threshold across the whole fleet. Logan does not need to navigate to individual vehicle records to see what is coming up — the widget gives him the full picture in one view. When a task is completed, he marks it done directly from the widget. The record updates automatically, the reminder resets to the next interval, and the completed task is logged on the vehicle's maintenance timeline with a timestamp.
+
+The vehicle detail view also holds a complete maintenance history: every task that has been added, every completion record, and any notes or files attached to the work. This creates an audit trail for each vehicle — useful when a van is sold or transferred, when an insurer asks for service records, or when a new operations manager joins the team and needs to understand the maintenance history of the fleet they are taking on.
+
+---
+
+## Summary
+
+You add maintenance tasks from the Maintenance tab in a vehicle's detail view. Each task has a name, priority level, and notification configuration. Time-based reminders fire at a set interval — weeks or months — with a configurable advance window. Mileage-based reminders fire at a set distance interval, with a configurable advance threshold fed automatically by GPS mileage data. Vehicle reminders cover administrative deadlines such as MOT and insurance renewals; they are configured in Fleet management settings with an annual or custom frequency and an advance notification window. The maintenance due and reminders due widgets on the fleet dashboard surface upcoming tasks across the whole fleet, and tasks can be marked complete directly from the widget. A completed task logs to the vehicle's maintenance timeline automatically, building a full maintenance history without any separate record-keeping.
+
+---
+
+**Open items**
+
+None — all content verified against Help Centre sources: Vehicle maintenance (HC 246405), Vehicle reminders (HC 245967), Fleet management dashboard (HC 247235).
+`;
+INBOX_FILES["reed-script-l3-fleet-challenge"] = `# Fleet monitored and maintained
+
+**Series:** L3 Fleet Management | **Course:** 5 of 5 (Series Challenge) | **Duration:** 3 min | **Audience:** Decision Makers / Admins
+
+---
+
+**Learning objectives**
+
+1. Identify the correct widget and navigation path for a given fleet management task.
+2. Interpret a geo-fence alert or out-of-hours notification and describe the appropriate first response.
+3. Read a safe driver leaderboard score and explain what action the score warrants.
+4. Describe the correct approach when a maintenance task or vehicle reminder falls due.
+
+---
+
+**Target audience:** Business owners, operations managers, and administrators who have completed all four courses in the L3 Fleet Management series. This challenge tests the ability to apply all four courses together — reading the dashboard, managing geo-fences and alerts, interpreting driver analytics, and acting on maintenance and reminders — using scenarios drawn from SunComfort's real-world fleet operation. SunComfort Systems is the pedagogical vehicle; the audience is any Commusoft client managing a GPS-tracked fleet.
+
+**Assumed starting point:** All four courses in the L3 Fleet Management series are complete.
+
+**Main objective beyond the learning objectives:** By the end of this challenge, you can describe how the four components of fleet management — live monitoring, boundary alerts, driver performance, and vehicle maintenance — connect into a single daily workflow. Logan's fleet does not run itself, but with these tools active and in regular use, it comes very close.
+
+---
+
+**Characters:** Clint (Commusoft guide) | Sarah (Commusoft presenter)
+
+**Scenario:** Clint and Sarah run through four real-world moments from a week in Logan Chance's fleet operation at SunComfort. Each moment draws on one of the four courses and tests whether the learner can apply what they have covered.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Not applicable — dialogue format, no screen recording required.
+- **Customer record:** Not applicable.
+- **Existing data:** All configurations and data from the four preceding courses.
+- **Assets required:** None.
+
+---
+
+## Moment 1 — Monday morning dashboard check
+
+**Sarah:** It's 7:55am on Monday. Logan opens the fleet dashboard before the first engineer departs. He can see that two of the 20 vehicles have red status rings on the map widget. One of those vehicles belongs to Jake Harris, who is due on a heat pump installation in Brixton at 9am. What should Logan do, and what might a red ring actually mean?
+
+**Clint:** The red ring means Jake's tracker has not sent a location update in the last 150 minutes or more — so the map is showing where the van was, not necessarily where it is right now. It does not automatically mean a problem. If the van was parked overnight at Jake's home address and the tracker went into a low-power state, the ring will turn green the moment Jake starts the engine and the tracker reconnects. Logan's first step is to check the map and see whether the last known location makes sense — if the van is showing at Jake's home address at 7:55am, that is entirely normal. If it is showing somewhere unexpected, or if Jake calls to say the van will not start, then Logan needs to act. The red ring is a prompt to look, not a confirmation of a problem.
+
+**Sarah:** And if Logan wanted to check where Jake's van actually was last night — say there was a report of a vehicle seen near the depot late on Friday — how would he do that?
+
+**Clint:** He opens Jake's vehicle in the vehicle list, goes to the Trips tab, selects Friday, and uses the playback feature to replay the van's movement across the evening. The route will replay on the map with the red-to-green start-and-end line so he can see exactly where the van was and when.
+
+---
+
+## Moment 2 — An out-of-hours alert fires
+
+**Sarah:** It's Saturday at 11:20am. Logan receives an out-of-hours email alert: Nathan Cole's van has recorded GPS movement. SunComfort's business hours are configured as Monday to Friday, 7am to 6pm. Nathan is not scheduled to work today. What does Logan do first?
+
+**Clint:** The alert has fired correctly — Saturday falls entirely outside the configured Monday-to-Friday business hours, so any GPS movement on a Saturday triggers the out-of-hours notification automatically. Logan's first step is not to assume the worst: Nathan may have been given permission to use the van for a pre-agreed task, or there may be a legitimate reason Logan is aware of. The right first action is to contact Nathan directly and confirm. If the movement was not authorised, Logan has a timestamped GPS record of when and where the van moved — that data is already captured and available in the vehicle's trip history. The alert does the watching; Logan does the judgement call.
+
+**Sarah:** What if Logan also had a geo-fence around the depot and Nathan's van had left the depot perimeter on Saturday? Would that fire a separate alert?
+
+**Clint:** Yes, if the depot geo-fence is active on Saturdays and Nathan's van exits the boundary during that window, the geo-fence entry and exit alert fires independently of the out-of-hours alert. Logan could receive both notifications for the same event — one from the geo-fence because the boundary was crossed, and one from out-of-hours because movement occurred outside business hours. Both give him a different piece of the picture: the geo-fence tells him the van left the depot, the out-of-hours alert tells him it moved on a day it should not have been moving at all.
+
+---
+
+**Reflection**
+
+Logan receives an out-of-hours email alert on a Saturday morning showing GPS movement for Terry Walsh's van. Which of the following is the correct immediate response?
+
+- Log into the fleet dashboard and immediately mark Terry's vehicle as suspended until the incident is investigated.
+- Contact Terry directly to confirm whether the movement was authorised, while noting that the GPS trip data is already captured and available for review. ✓
+- Wait until Monday morning and raise the matter at the team catch-up — out-of-hours alerts are informational and do not require an immediate response.
+
+*Feedback: Out-of-hours alerts are a prompt, not a verdict. The GPS data is captured automatically and available in the vehicle's trip history whenever Logan needs it. The right first step is to make contact and establish whether the movement was authorised. If it was not, Logan has a timestamped record of the event to refer to — but that conversation starts with a question, not an accusation.*
+
+---
+
+## Moment 3 — Leaderboard review
+
+**Sarah:** It's Friday afternoon and Logan is reviewing the safe driver leaderboard before the weekly catch-up. He sees that Luke Patterson has moved from 41 last week to 53 this week — still in the yellow zone but trending upward. Jake Harris is at 22 and steady. Terry Walsh has jumped from 58 to 69 — he has crossed into the red zone. What does Logan do with this information?
+
+**Clint:** Let's take them separately. Jake at 22 is green and stable — Logan makes a note to acknowledge Jake's consistent driving at the next team meeting. Recognition matters as much as correction. Luke at 53 is yellow and moving in the wrong direction for the second week running — that is a trend, not noise. Logan should open Luke's driver timeline for the past two weeks, identify which event types are driving the increase, and schedule a one-to-one. The conversation should be grounded in the specific data: not "you have been driving badly" but "the GPS data shows an increase in harsh braking events on afternoon return journeys — let's talk about what is happening at the end of the day." Terry at 69 is in the red zone and that warrants a more structured response. Logan should review the detail behind the score, consider whether there is a pattern across specific routes or times of day, and arrange a formal retraining conversation rather than an informal catch-up. The leaderboard gives Logan the evidence; his job is to use it early, before a red zone score becomes a roadside incident.
+
+---
+
+## Moment 4 — Maintenance and reminders due
+
+**Sarah:** Logan opens the fleet dashboard on Wednesday morning and the maintenance due widget is showing two tasks. One is an oil and filter change for van registration SC19 RFT — the time-based reminder fired two days ago and it is now showing as due. The other is a brake inspection for SC21 VNP — that one fired last week. The reminders due widget is also showing an MOT renewal for SC19 RFT with 12 days remaining. What does Logan need to do and in what order?
+
+**Clint:** The brake inspection for SC21 VNP has been on the widget for a week, which means it is the most overdue and should go first. Brakes are a safety-critical system, so Logan routes that van off the road for the morning and books the inspection for today if a slot is available — or tomorrow at the latest. The priority level on that task should be set to high, which is how it surfaces prominently on the widget rather than sitting quietly beneath lower-priority items. The oil change for SC19 RFT has just come due, so Logan has more flexibility on timing — he can schedule that for next week during a planned low-activity day. And the MOT for SC19 RFT has 12 days to run, which is the advance notification window Logan set when he configured the reminder. He books the test for the following week and notes the date in the timeline entry on the vehicle record. When the brake inspection and oil change are completed, Logan marks both tasks done directly from the maintenance due widget — the records update automatically, the reminders reset to the next interval, and the completions log to the vehicle timeline without any separate data entry.
+
+---
+
+**Reflection**
+
+Logan marks the brake inspection for SC21 VNP as complete from the maintenance due widget. What happens next in Commusoft?
+
+- The task is removed from the maintenance due widget and Logan must manually create a new task for the next inspection interval.
+- The task is marked complete on the maintenance due widget, the completion is logged to the vehicle's maintenance timeline with a timestamp, and the reminder resets automatically to the next interval. ✓
+- The task moves to an archived state and Logan must reactivate it manually when the next interval approaches.
+
+*Feedback: Marking a maintenance task complete from the widget does three things automatically: it removes the task from the due list, it logs the completion with a timestamp on the vehicle's maintenance timeline, and it resets the reminder to the next scheduled interval. Logan does not need to create a new task or reactivate anything — the system picks up where the last completion left off. This is how the maintenance record stays current without any manual administration between service intervals.*
+
+---
+
+## Summary
+
+The fleet dashboard, geo-fences and out-of-hours alerts, driver analytics, and vehicle maintenance tracking are four tools that work together as a single fleet management system. The dashboard gives Logan the daily picture. Geo-fences and out-of-hours alerts watch the fleet when Logan is not watching. The safe driver leaderboard gives him the data to coach drivers early, before patterns become incidents. Maintenance tracking and reminders mean the fleet stays roadworthy and compliant without a separate spreadsheet or calendar. Together, they replace reactive fire-fighting with a structured, proactive approach to running a fleet — one that surfaces the right information at the right time so Logan can act before a problem, not after one.
+
+---
+
+**Open items**
+
+None — all content verified against Help Centre sources across the full series: Fleet management dashboard (HC 247235), Simple Tracking Overview (HC 216858), Safe Driver Leaderboard (HC 304996), Vehicle geo-fences (HC 246597), Vehicle out of hours (HC 245540), Vehicle maintenance (HC 246405), Vehicle reminders (HC 245967).
+`;
 
 INBOX_FILES["reed-script-l1-ft-series1"] = `# Reed — Script: Getting started on the app
 
@@ -18640,6 +19178,11 @@ function openInboxFile(key) {
     'reed-script-l3-contracts-c4': { num: 'Reed — Script', title: 'L3 Contracts and PPM — Course 4: Set up SLA templates' },
     'reed-script-l3-contracts-c5': { num: 'Reed — Script', title: 'L3 Contracts and PPM — Course 5: Read the contracts and SLA reports' },
     'reed-script-l3-contracts-challenge': { num: 'Reed — Script', title: 'L3 Contracts and PPM — Challenge: Contract running, PPM scheduled' },
+    'reed-script-l3-fleet-c1': { num: 'Reed — Script', title: 'L3 Fleet Management — Course 1: The fleet dashboard' },
+    'reed-script-l3-fleet-c2': { num: 'Reed — Script', title: 'L3 Fleet Management — Course 2: Set up geo-fences and out-of-hours alerts' },
+    'reed-script-l3-fleet-c3': { num: 'Reed — Script', title: 'L3 Fleet Management — Course 3: Trip analytics and the safe driver leaderboard' },
+    'reed-script-l3-fleet-c4': { num: 'Reed — Script', title: 'L3 Fleet Management — Course 4: Vehicle maintenance tracking and reminders' },
+    'reed-script-l3-fleet-challenge': { num: 'Reed — Script', title: 'L3 Fleet Management — Challenge: Fleet monitored and maintained' },
     'ivy-induction': { num: 'Ivy — People', title: 'Enablement Specialist Induction Plan v3' },
     'ivy-jd-academy': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Description' },
     'ivy-jd-advert': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Advert' },

@@ -938,6 +938,18 @@
           <div class="course-card" onclick="openInboxFile('reed-script-l3-fleet-challenge')"><div class="course-num">Challenge</div><div class="course-title">Fleet monitored and maintained</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision Makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
+      <div id="l3-route-optimisation" class="series-block">
+        <div class="series-header" style="background:#1565c0">
+          <div><h2>Layer 3 — Route Optimisation</h2><div class="series-meta">How the optimisation engine works, configuring settings, and using route optimisation in the diary</div></div>
+          <div class="series-count">3 courses + challenge</div>
+        </div>
+        <div class="course-grid">
+          <div class="course-card" onclick="openInboxFile('reed-script-l3-route-c1')"><div class="course-num">Course 1</div><div class="course-title">How route optimisation works — the logic and the limits</div><div class="course-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Decision Makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l3-route-c2')"><div class="course-num">Course 2</div><div class="course-title">Configure route optimisation settings</div><div class="course-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Decision Makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l3-route-c3')"><div class="course-num">Course 3</div><div class="course-title">Use route optimisation in the diary</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Decision Makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l3-route-challenge')"><div class="course-num">Challenge</div><div class="course-title">Route optimised, diary running efficiently</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision Makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+        </div>
+      </div>
     </div>
 
     <!-- SUNCOMFORT -->
@@ -17701,6 +17713,301 @@ The fleet dashboard, geo-fences and out-of-hours alerts, driver analytics, and v
 
 None — all content verified against Help Centre sources across the full series: Fleet management dashboard (HC 247235), Simple Tracking Overview (HC 216858), Safe Driver Leaderboard (HC 304996), Vehicle geo-fences (HC 246597), Vehicle out of hours (HC 245540), Vehicle maintenance (HC 246405), Vehicle reminders (HC 245967).
 `;
+INBOX_FILES["reed-script-l3-route-c1"] = `# How route optimisation works — the logic and the limits
+
+**Series:** L3 Route Optimisation | **Course:** 1 of 3 | **Duration:** 5 min | **Audience:** Decision Makers / Admins
+
+---
+
+**Learning objectives**
+
+1. Explain what the route optimisation feature does and what problem it solves
+2. Describe the four factors the scheduling engine uses to generate suggested appointments
+3. Identify the plan requirements and prerequisites needed before route optimisation can function
+4. Recognise the limits of the system — what it enforces automatically and what remains a manual decision
+
+---
+
+**Target audience:** Business owners, operations managers, or administrators at small to mid-size field service companies managing multiple engineers across a wide geographical area. SunComfort Systems is the pedagogical vehicle. The learner is evaluating and preparing to use route optimisation in their own Commusoft account.
+
+**Assumed starting point:** L2 Series 2 complete. Job description templates are set up with skills tagged. Engineers have shift patterns and skills assigned in their user profiles. The learner holds Owner/Manager access.
+
+**Main objective beyond the learning objectives:** Route optimisation is only as good as the data behind it. Before you touch a single setting, you need to understand what the engine reads, what it cannot override, and where human judgement still belongs. This course gives you that foundation so that configuration and daily use land correctly from day one.
+
+---
+
+**Characters:** Logan Chance (Operations Manager, SunComfort Systems)
+
+**Scenario:** Logan is evaluating route optimisation ahead of configuring it for SunComfort's 18-strong field team, spread across a 50-mile radius from Elephant and Castle.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Logan Chance — Operations Manager — Owner/Manager
+- **Customer record:** None
+- **Existing data:** Job description templates with skills tagged; engineers with shift patterns and skills assigned; home addresses recorded in engineer profiles
+- **Assets required:** None
+
+---
+
+## The problem route optimisation solves
+
+When you are managing 18 engineers across a 50-mile radius, the diary quickly becomes an arithmetic problem that no spreadsheet solves well. The right engineer needs to be at the right place at the right time, with the right skills, without spending half the day in a van. Route optimisation is Commusoft's answer to that problem: it uses the scheduling engine to surface suggested appointments that reduce unnecessary travel and improve how much productive time each engineer spends on site rather than in transit. Logan has watched SunComfort's job volume grow to the point where manually cross-referencing engineer locations and job types is costing the team an hour of admin every morning — route optimisation is what removes that overhead.
+
+## The four factors the engine reads
+
+The scheduling engine does not guess. When it generates a suggested appointment, it reads four specific pieces of data. The first is engineer location — either the engineer's home address or the office, depending on what is recorded in their profile; this is the starting point the engine uses to calculate travel distance. The second is shift patterns — the engine will not suggest an appointment outside the hours defined in an engineer's shift, which means SunComfort's heat pump technicians on a Monday-to-Friday pattern will never appear as available on a Saturday unless a separate shift covers it. The third is engineer skills — every engineer in Commusoft can hold a set of skills in their profile, and the engine filters suggestions so that only engineers qualified for the job type are shown. The fourth is job skill requirements — each job description template can carry required skills, and these are what the engine matches against the engineer's skill set.
+
+---
+
+**Reflection**
+
+Logan has a solar technician, Priya, whose home address is not recorded in Commusoft — only the office address is on file. A job comes in near Croydon, which is close to Priya's home but far from the office. How will the engine calculate Priya's suggested travel for that job?
+
+- It will calculate from Priya's home address ✓
+- It will calculate from the office address ✓
+- It will exclude Priya from suggestions entirely
+
+*Feedback: Both are partially correct depending on what is recorded. The engine uses the home address if one is recorded, and falls back to the office address if the home address field is blank. Because Priya's home address is not on file, the engine will calculate from the office — meaning a nearby job may appear less efficient than it actually is. Recording home addresses accurately is what makes the location factor reliable.*
+
+---
+
+## What the engine cannot override
+
+Understanding the limits is just as important as understanding the logic. Route optimisation surfaces suggestions — it does not lock the diary. Office staff can still manually book any engineer into any slot regardless of distance or shift pattern; the engine's constraints apply only to suggestions and, when distance limits are active, to customer portal bookings. This means the quality of your optimised diary depends on your team following the suggestions rather than overriding them without cause. Logan's schedulers, Sophie and Ryan, need to understand that manually placing a Croydon job with a Barnet engineer is still possible — route optimisation simply will not recommend it.
+
+## Plan and prerequisite requirements
+
+Route optimisation is available on the Customer Journey plan and above in the UK, and on the equivalent premium tiers for US accounts. If your account is on a legacy or Go Paperless plan, the feature is not available. Beyond plan access, three things must be in place before the engine can produce useful suggestions: engineers need shift patterns assigned, engineers need skills recorded, and job description templates need skills tagged. If any of these are missing, the suggestion feature will either return no results or return suggestions that do not reflect real-world constraints. Logan has confirmed that SunComfort's setup from L2 Series 2 covers all three prerequisites, which means the team is ready to configure and use the feature.
+
+## Summary
+
+Route optimisation is a tool for reducing travel time and improving engineer utilisation across a complex, multi-engineer diary. It works by reading four inputs — location, shift patterns, engineer skills, and job skill requirements — and returning suggestions that reflect all four simultaneously. It does not replace human judgement, and it does not prevent manual overrides. What it does is give Logan's scheduling team a starting point that is already geographically and operationally sensible, rather than one that has to be reasoned from scratch for every booking. In the next course, you will configure the route optimisation settings that govern distance limits and overtime slot behaviour.
+
+---
+
+**Open items**
+
+- [OPEN — The Help Centre article on route optimisation settings confirms the four-factor logic indirectly through the suggested appointments and settings articles; direct algorithm documentation was not available. Content is consistent with verified HC articles 234987 and 216744. Recommend Sara confirms the fallback behaviour (home address to office address) is accurately described before production.]
+`;
+INBOX_FILES["reed-script-l3-route-c2"] = `# Configure route optimisation settings
+
+**Series:** L3 Route Optimisation | **Course:** 2 of 3 | **Duration:** 5 min | **Audience:** Decision Makers / Admins
+
+---
+
+**Learning objectives**
+
+1. Locate the route optimisation settings in Commusoft
+2. Configure the overtime slots toggle and understand what it controls
+3. Set the maximum travel distance and choose whether it applies to the portal only or to both web and portal
+4. Understand what distance and overtime settings do and do not enforce
+
+---
+
+**Target audience:** Business owners, operations managers, or administrators at small to mid-size field service companies configuring Commusoft for the first time or auditing their scheduling setup. SunComfort Systems is the pedagogical vehicle. The learner is configuring their own Commusoft account.
+
+**Assumed starting point:** Course 1 of this series complete. Shift patterns, engineer skills, and job description templates are all configured. Owner/Manager access to Commusoft settings.
+
+**Main objective beyond the learning objectives:** The two settings in route optimisation — overtime slots and distance — have a direct impact on what customers can self-book through the portal and what schedulers see when they look for suggested appointments. Configuring them thoughtfully now prevents unfeasible bookings reaching the diary and reduces the number of manual corrections Sophie and Ryan need to make each day.
+
+---
+
+**Characters:** Logan Chance (Operations Manager, SunComfort Systems)
+
+**Scenario:** Logan configures SunComfort's route optimisation settings to match the company's 50-mile operating radius and shift pattern constraints before handing daily diary management to the scheduling team.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Logan Chance — Operations Manager — Owner/Manager
+- **Customer record:** None
+- **Existing data:** Shift patterns configured; engineer skills assigned; job description templates with skills tagged
+- **Assets required:** None
+
+---
+
+## Finding route optimisation settings
+
+All route optimisation configuration lives in Settings. Select the profile icon in the top right of Commusoft, then go to the Schedule and dispatch category, and select Route optimisation settings. Logan opens this page for the first time and finds two sections: one for overtime slots and one for distance. Both are straightforward, but both need to reflect how SunComfort actually operates rather than being left at their defaults.
+
+## Configuring overtime slots
+
+The overtime slots toggle controls whether the scheduling engine and the customer portal surface appointment slots outside an engineer's standard shift. When the toggle is on, both office staff using the suggested appointment tool and customers booking through the portal will see available slots that fall within overtime hours, provided an engineer is available. When it is off, the system restricts suggestions to defined working hours only. Logan turns overtime slots on, because SunComfort runs an on-call rotation for emergency callout jobs and those out-of-hours slots need to be bookable without requiring a manual entry every time.
+
+There is an important limit to understand here: enabling overtime slots does not prevent office staff from manually booking outside standard hours regardless of the toggle. The setting shapes what the engine suggests and what the portal offers — it does not lock the diary. Logan notes this and plans to brief Sophie and Ryan that manual bookings outside on-call hours still need a conversation before they go in.
+
+---
+
+**Reflection**
+
+SunComfort does not want customers to be able to self-book emergency callout slots through the portal — those should remain office-managed. But the scheduling team needs to see out-of-hours suggestions when they are managing emergency jobs internally. Should Logan turn overtime slots on or off?
+
+- On — office staff will see overtime suggestions, and portal customers will too
+- Off — neither office staff nor portal customers will see overtime suggestions
+- On, and then remove portal access separately ✓
+
+*Feedback: The overtime toggle applies to both the web and portal simultaneously, so turning it on does open those slots in the portal as well. If Logan wants office staff to see overtime suggestions but does not want customers to self-book them, the right approach is to turn overtime on and then ensure the relevant job types are not exposed through the customer portal at all — controlled through the portal job type configuration set up in L2 Series 2. The overtime toggle alone cannot distinguish between office and portal visibility.*
+
+---
+
+## Configuring distance limits
+
+The distance section gives Logan three options. The first — do not consider distance — removes all location-based restrictions from the scheduling engine, meaning the system will suggest any available engineer regardless of where the job is. The second — apply distance limits to the portal only — sets a maximum travel distance in miles that applies exclusively to customer self-bookings through the portal; office staff using the suggested appointment tool are not restricted. The third — apply distance limits to web and portal — enforces the same maximum distance across both office-facing suggestions and portal bookings.
+
+Logan selects the third option and sets the distance to 50 miles, which matches SunComfort's operating radius. With 18 engineers starting from Elephant and Castle and covering clients across south and central London and into the surrounding counties, a 50-mile cap prevents the engine from ever suggesting a job pairing that would put a technician an impractical distance from their next appointment. Logan enters 50 in the distance field and saves.
+
+## What distance limits do and do not enforce
+
+Setting a maximum distance filters what the engine suggests to office staff and, where portal limits are active, what customers can book. It does not prevent a manual booking beyond that distance — an office user can still drag any engineer into any slot in the diary regardless of location. The distance constraint is a guide rail for the suggestion engine and the portal, not a hard lock on the diary. Logan adds a note in SunComfort's internal scheduling guide that manual overrides beyond 50 miles require sign-off from him, since the system will not block these automatically.
+
+## Summary
+
+SunComfort's route optimisation settings are now configured: overtime slots are on to support the on-call rotation, and a 50-mile maximum distance applies to both the web and portal channels. The scheduling engine will now only suggest engineers whose shift patterns, skills, and locations make them a realistic fit for each job. In the next course, Sophie will take over and use route optimisation in the diary to book a job using the suggested appointment feature.
+
+---
+
+**Open items**
+
+None — all content verified against Help Centre article 234987 (Set up and manage Route optimisation settings). The three distance mode options, overtime slot behaviour, and the distinction between suggestions and manual overrides are all drawn directly from the HC source.
+`;
+INBOX_FILES["reed-script-l3-route-c3"] = `# Use route optimisation in the diary
+
+**Series:** L3 Route Optimisation | **Course:** 3 of 3 | **Duration:** 4 min | **Audience:** Decision Makers / Admins
+
+---
+
+**Learning objectives**
+
+1. Access the suggested appointment feature from a job in the diary
+2. Interpret the suggestions the engine returns — engineer, time slot, and travel context
+3. Select and apply a suggestion to schedule the job
+4. Recognise when to follow a suggestion and when to override it
+
+---
+
+**Target audience:** Business owners, operations managers, schedulers, or administrators at small to mid-size field service companies managing a multi-engineer diary in Commusoft. SunComfort Systems is the pedagogical vehicle. The learner is using route optimisation as part of their daily scheduling workflow.
+
+**Assumed starting point:** Courses 1 and 2 of this series complete. Route optimisation settings are configured. Engineers have shift patterns, skills, and home addresses recorded. Job description templates have skills tagged.
+
+**Main objective beyond the learning objectives:** Suggested appointments are only useful if the team trusts them and knows how to read them. This course turns that abstract trust into a daily habit — Sophie books a realistic job using the suggestion engine and understands the signals it is giving her, so that every scheduling decision starts from an optimised position rather than an ad hoc one.
+
+---
+
+**Characters:** Sophie Bennett (Scheduler / Customer Service Advisor, SunComfort Systems)
+
+**Scenario:** Sophie uses the suggested appointment feature to schedule a heat pump service visit, selecting the most efficient engineer from the engine's recommendations before confirming the booking.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Sophie Bennett — Scheduler / Customer Service Advisor — Office staff
+- **Customer record:** An existing customer with a heat pump service job raised and unscheduled
+- **Existing data:** Route optimisation settings configured (50-mile distance limit, overtime on); engineers with shift patterns, skills, and home addresses recorded; job description template for heat pump service with skills tagged
+- **Assets required:** None
+
+---
+
+## Opening a job and accessing suggestions
+
+Sophie starts in the diary, where an unscheduled heat pump service job for a customer in Bromley is sitting in the unallocated column. She opens the job, navigates to the scheduling section, and selects the Suggested appointment tab — you will find this alongside the Map View option in the scheduling panel. Commusoft then reads the job's skill requirements, checks every engineer's shift pattern and location, applies the 50-mile distance constraint Logan configured, and generates a ranked list of available options. This takes a few moments, so Sophie waits for the panel to populate before acting.
+
+## Reading the suggestions
+
+The left panel displays a list of engineer-and-time-slot combinations. Each suggestion reflects an engineer who holds the required skills, is available within their shift at that time, and falls within the configured distance from the job location. Sophie can see three suggestions for the Bromley job: the first is a heat pump technician who is already working in Lewisham that morning and whose next available slot is nearby; the second is a technician starting the day from home in Sidcup, also close to Bromley; the third is a technician based further east whose travel time would be noticeably longer. The ordering matters — the engine is surfacing the most geographically efficient options first.
+
+---
+
+**Reflection**
+
+Sophie's top suggestion is a technician who is already in Lewisham that morning and could reach the Bromley job in under 20 minutes. The second suggestion is a technician who is available at the same time but would be travelling from Sidcup. A third suggestion shows an engineer who is the customer's preferred technician but is working in Uxbridge that morning. What should Sophie do?
+
+- Select the top suggestion automatically, because route optimisation always produces the best outcome
+- Select the customer's preferred technician regardless, because customer preference overrides efficiency
+- Review the top two suggestions and apply judgement — select the preferred technician only if the customer relationship makes it worth the extra travel ✓
+
+*Feedback: Route optimisation gives Sophie a starting point, not a final answer. The suggestion engine does not know about customer relationships or account history. Sophie uses the suggestion to understand the efficiency picture clearly, then decides whether the preferred technician is worth the additional travel. On most jobs, the top suggestion is the right call. On high-value or sensitive accounts, a considered override is legitimate — the engine will not prevent it.*
+
+---
+
+## Selecting and applying a suggestion
+
+Sophie decides that the Bromley job has no strong preference on file and selects the top suggestion — the Lewisham technician at 1:30pm. She clicks the slot in the left panel and Commusoft applies it to the diary, opening the job panel for final confirmation. Sophie reviews the date, time, assigned engineer, and customer details, confirms everything is correct, and saves. The appointment now appears in the diary under the assigned technician's column, with the correct time block and job reference visible. The job status updates to reflect that the appointment is scheduled.
+
+## When to follow a suggestion and when to override
+
+Following the suggestion is the right call in the majority of cases — it is why route optimisation exists. An override is reasonable when the customer has a named preferred engineer, when a job requires a technician who is already on site at a nearby address and continuity matters, or when a last-minute job needs to be slotted in and the suggestion engine has not yet refreshed to reflect a manual rearrangement Sophie made moments earlier. What is not a good reason to override is convenience or habit — the efficiency gains from route optimisation come from using it consistently, and Sophie and Ryan's combined scheduling decisions across 18 engineers are where those gains accumulate over time.
+
+## Summary
+
+Sophie has used the suggested appointment feature to book a heat pump service job in Bromley with the most geographically efficient available technician. The workflow is repeatable: open the job, select the Suggested appointment tab, read the panel, apply judgement, confirm. Route optimisation does not replace Sophie's knowledge of the team and the customers — it gives her a reliable, data-driven starting point so that knowledge is applied to the exceptions rather than to every single booking.
+
+---
+
+**Open items**
+
+None — content verified against Help Centre articles 216744 (Suggested appointments) and 267464 (Diary and appointments). The workflow steps, suggestion panel behaviour, and the distinction between following and overriding suggestions are consistent with HC source material.
+`;
+INBOX_FILES["reed-script-l3-route-challenge"] = `# Route optimised, diary running efficiently
+
+**Series:** L3 Route Optimisation | **Challenge** | **Duration:** 3 min | **Audience:** Decision Makers / Admins
+
+---
+
+**Learning objectives**
+
+1. Confirm understanding of what the route optimisation engine reads and why prerequisites matter
+2. Identify the correct settings configuration for a given operational scenario
+3. Demonstrate the correct workflow for using suggested appointments in the diary
+
+---
+
+**Target audience:** Business owners, operations managers, schedulers, or administrators at small to mid-size field service companies who have completed the L3 Route Optimisation series. SunComfort Systems is the pedagogical vehicle. The challenge tests applied knowledge across all three courses.
+
+**Assumed starting point:** All three courses in the L3 Route Optimisation series complete.
+
+**Main objective beyond the learning objectives:** The learner can connect the configuration decisions Logan made in Courses 1 and 2 to the practical outcomes Sophie experiences in the diary in Course 3. They understand the system end to end — not just how to click through it, but why each setting matters in a real operational context.
+
+---
+
+**Characters:** Sarah (Commusoft presenter), Clint (Commusoft presenter)
+
+**Scenario:** Sarah presents a realistic SunComfort scheduling situation. Clint walks through the correct approach, testing knowledge from all three courses.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Not applicable — dialogue format, no screen recording required
+- **Customer record:** None
+- **Existing data:** Not applicable
+- **Assets required:** None
+
+---
+
+## The challenge
+
+**Sarah:** It's Monday morning at SunComfort Systems. Sophie has three unscheduled jobs in the diary — a heat pump service in Peckham, a solar panel inspection in Wimbledon, and a generator callout in Croydon. She opens each job and uses the suggested appointment feature. For the Peckham and Wimbledon jobs, the engine returns strong suggestions straight away. For the Croydon job, no suggestions appear at all. Logan set the distance limit to 50 miles, so that's not the problem. What's the most likely reason the engine is returning nothing for Croydon?
+
+**Clint:** The engine needs four things to produce a suggestion: an engineer's location, their shift pattern, their skills, and matching skills on the job description template. If any one of those is missing, the engine has nothing to work with. A blank result for one specific job usually points to the job description template — either the Croydon callout was raised using a template that has no skills tagged, or there are no engineers with a matching skill assigned to their profile. Sophie should check the job's description template first and confirm it carries the right skill requirement. If it does, she then checks whether any engineer holds that skill in their profile. One of those two things will be missing.
+
+**Sarah:** Good. Now let's say the Croydon job is sorted — the template had no skills tagged, Sophie flags it to Logan, and he updates it. Sophie generates suggestions and gets three options. The top suggestion is an engineer who is already working in Streatham that morning. The second is an engineer who is available but starting from the office in Elephant and Castle. The third is an engineer the customer specifically requested. That third engineer is working in Kingston. What should Sophie do?
+
+**Clint:** She should start with the top suggestion — the Streatham engineer. Streatham to Croydon is a short run south, and keeping jobs geographically clustered is exactly what route optimisation is designed to achieve. The customer preference matters, but Sophie needs to weigh it against what the travel actually looks like. Kingston to Croydon is a reasonable distance, but it means the preferred engineer is crossing the city mid-morning. If there's a strong account reason to send the preferred engineer — a longstanding relationship, a complex asset the engineer already knows — that's a legitimate override and the system will allow it. If the preference is a mild one, the top suggestion is the better call. Either way, Sophie makes the decision with full information rather than guessing.
+
+**Sarah:** Last one. Logan is reviewing the route optimisation settings a month into using the feature. He notices the scheduling team are regularly booking jobs outside the 50-mile limit manually, bypassing the suggestions. Should he reduce the distance limit to force compliance?
+
+**Clint:** No — and this is a common misconception. The distance limit only affects what the suggestion engine surfaces and what the customer portal will allow. It does not prevent a manual booking at any distance. Reducing the limit would make the suggestions less useful without changing the manual booking behaviour at all. The real fix is operational, not technical. Logan needs to talk to Sophie and Ryan, understand why the overrides are happening — is it customer pressure, gaps in engineer coverage, or just habit? — and address that directly. Route optimisation works when the team treats suggestions as the default and reserves manual overrides for genuine exceptions.
+
+---
+
+**Open items**
+
+None — challenge scenario is grounded in verified product behaviour from HC articles 234987, 216744, and 267464. All three courses represented in the dialogue.
+`;
 
 INBOX_FILES["reed-script-l1-ft-series1"] = `# Reed — Script: Getting started on the app
 
@@ -19183,6 +19490,10 @@ function openInboxFile(key) {
     'reed-script-l3-fleet-c3': { num: 'Reed — Script', title: 'L3 Fleet Management — Course 3: Trip analytics and the safe driver leaderboard' },
     'reed-script-l3-fleet-c4': { num: 'Reed — Script', title: 'L3 Fleet Management — Course 4: Vehicle maintenance tracking and reminders' },
     'reed-script-l3-fleet-challenge': { num: 'Reed — Script', title: 'L3 Fleet Management — Challenge: Fleet monitored and maintained' },
+    'reed-script-l3-route-c1': { num: 'Reed — Script', title: 'L3 Route Optimisation — Course 1: How route optimisation works' },
+    'reed-script-l3-route-c2': { num: 'Reed — Script', title: 'L3 Route Optimisation — Course 2: Configure route optimisation settings' },
+    'reed-script-l3-route-c3': { num: 'Reed — Script', title: 'L3 Route Optimisation — Course 3: Use route optimisation in the diary' },
+    'reed-script-l3-route-challenge': { num: 'Reed — Script', title: 'L3 Route Optimisation — Challenge: Route optimised, diary running efficiently' },
     'ivy-induction': { num: 'Ivy — People', title: 'Enablement Specialist Induction Plan v3' },
     'ivy-jd-academy': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Description' },
     'ivy-jd-advert': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Advert' },

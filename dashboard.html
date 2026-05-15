@@ -272,6 +272,7 @@
     <div class="nav-item" onclick="navLayer('layer-1-ft', this)"><div class="nav-dot" style="background:var(--green)"></div>L1 — Field Team</div>
     <div class="nav-item" onclick="navLayer('layer-1-dm', this)"><div class="nav-dot" style="background:var(--grey)"></div>L1 — Decision Maker</div>
     <div class="nav-item" onclick="navLayer('layer-2', this)"><div class="nav-dot" style="background:var(--blue1)"></div>L2 — Setup &amp; Config</div>
+    <div class="nav-item" onclick="navLayer('l3-sales-plus', this)"><div class="nav-dot" style="background:#1565c0"></div>L3 — Feature Series</div>
   </nav>
 
   <main class="main">
@@ -908,6 +909,20 @@
           <div class="course-card" onclick="openInboxFile('reed-script-l3-sales-plus-c6')"><div class="course-num">Course 6</div><div class="course-title">Track a proposal through to acceptance</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Sales teams</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l3-sales-plus-c7')"><div class="course-num">Course 7</div><div class="course-title">Use the media portal for site data</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Sales teams</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l3-sales-plus-challenge')"><div class="course-num">Challenge</div><div class="course-title">Lead to accepted proposal</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Sales teams</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+        </div>
+      </div>
+      <div id="l3-contracts-ppm" class="series-block">
+        <div class="series-header" style="background:#1565c0">
+          <div><h2>Layer 3 — Contracts and PPM</h2><div class="series-meta">Contract templates, customer contract setup, PPM auto-job creation, SLA configuration, and contracts and SLA reporting</div></div>
+          <div class="series-count">5 courses + challenge</div>
+        </div>
+        <div class="course-grid">
+          <div class="course-card" onclick="openInboxFile('reed-script-l3-contracts-c1')"><div class="course-num">Course 1</div><div class="course-title">Set up a contract template</div><div class="course-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l3-contracts-c2')"><div class="course-num">Course 2</div><div class="course-title">Link a contract to a customer</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l3-contracts-c3')"><div class="course-num">Course 3</div><div class="course-title">Configure PPM auto-job creation</div><div class="course-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l3-contracts-c4')"><div class="course-num">Course 4</div><div class="course-title">Set up SLA templates</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l3-contracts-c5')"><div class="course-num">Course 5</div><div class="course-title">Read the contracts and SLA reports</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openInboxFile('reed-script-l3-contracts-challenge')"><div class="course-num">Challenge</div><div class="course-title">Contract running, PPM scheduled</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
     </div>
@@ -16479,6 +16494,675 @@ The James Whitfield opportunity ran from cold enquiry to accepted proposal throu
 - [OPEN — confirm whether Sophie Bennett is the correct SunComfort character for the post-acceptance operations handover activity. She is referenced in L2 S5 C1 pipeline configuration and in C6 of this series — verify consistency across all scripts before production.]
 - [OPEN — confirm whether the challenge format (Clint and Sarah dialogue, no screen recording) is consistent with other challenge courses in the Academy at L3 level. Previous challenges at L1 and L2 have varied in format.]
 `;
+INBOX_FILES["reed-script-l3-contracts-c1"] = `# Set up a contract template
+
+**Series:** L3 Contracts and PPM | **Course:** 1 of 5 | **Duration:** 5 min | **Audience:** Admins / Decision Makers
+
+---
+
+**Learning objectives**
+
+1. Explain the purpose of a contract template and why it comes before any customer contract.
+2. Complete the seven-step template creation process: basic details, sales/renewals, assets, job details (SLA, PPM, service jobs, call-outs), billable rates, invoicing, and communications.
+3. Activate a template so it is available to assign to customers.
+
+---
+
+**Target audience:** Admins and decision-makers at field service businesses — typically operations managers, business owners, or senior administrators working at companies that offer recurring maintenance agreements alongside reactive and installation work. SunComfort Systems is the pedagogical vehicle: learners follow SunComfort's scenario to understand how the workflow applies to their own business.
+
+**Assumed starting point:** Learner has completed L2 Series 2 (jobs and scheduling configured). They understand job descriptions, business units, and asset types. SLA templates and PPM templates should already exist or will be created in this series; the contract template references them.
+
+**Main objective beyond the learning objectives:** By the end of this course, learners can independently build a reusable contract template that standardises service terms, billing, and PPM obligations across every customer of the same contract type — reducing setup time, eliminating manual errors, and giving the business a single point of control for renewals and pricing changes.
+
+---
+
+**Characters:** Logan Chance (Operations Manager, SunComfort Systems)
+
+**Scenario:** Logan needs to build SunComfort's first annual heat pump maintenance contract template so it can be assigned to customers like The Rose & Crown and Greenleaf Dental Practice without rebuilding the terms from scratch each time.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Logan Chance, Operations Manager, Admin role
+- **Customer record:** None required for this course — template is created in Settings, not on a customer record
+- **Existing data:** Job descriptions (Heat Pump Maintenance, Emergency Call-out) configured; at least one asset type (Heat Pump) configured; a PPM template and SLA template should exist or be noted as [OPEN] if created later in series
+- **Assets required:** None
+
+---
+
+## Why templates come first
+
+Before any customer at SunComfort receives a maintenance contract, Logan needs to build the template that defines what every contract of that type contains. Think of a contract template as a master blueprint: you design it once in Settings, then apply it to each qualifying customer. Every field you set here — pricing, PPM obligations, SLA response times, renewal behaviour — flows automatically into each customer contract created from it, which means consistency across your entire contract portfolio without rebuilding terms from scratch for every client.
+
+---
+
+## Getting into contract templates
+
+You open the contract template area by clicking your profile icon, selecting Settings, and then navigating to Contracts, where you will find Contract Templates listed. From there, you click Add contract template to launch the seven-step wizard. A progress bar across the top of the wizard tracks which step you are on and greens out as you complete each one — you work through the steps in order and cannot jump ahead, so the setup is always complete before you activate.
+
+---
+
+**Reflection**
+
+Where in Commusoft do you create a contract template?
+
+- On the customer record, under Contracts
+- In the Jobs section, under Templates
+- In Settings, under Contracts > Contract Templates ✓
+- In Reporting, under Contracts Overview
+
+*Feedback: Contract templates are a system-wide configuration, not a customer-level setting — they live in Settings so one template can serve many customers. You will link a template to an individual customer in Course 2.*
+
+---
+
+## Step 1 — Basic details
+
+You give the template a name Logan uses "Annual Heat Pump Maintenance" so the team can identify it instantly, add a brief description of the services it covers, and select a category from those configured in your system. For contract type, you choose Fixed Length (auto-renewal) so the contract rolls forward each year on the same terms without anyone having to chase renewals manually. You then set the contract period — twelve months for an annual agreement — and click Next to move on.
+
+---
+
+## Step 2 — Sales and renewals
+
+Because you chose auto-renewal, Commusoft asks you to decide when the renewal invoice generates relative to the contract's anniversary date. Logan sets the invoice to generate seven days before the expiry date, which gives Claire in finance just enough notice to handle any exceptions before the billing runs. You confirm the renewal terms carry over from the existing customer contract rather than resetting to template defaults, then proceed.
+
+---
+
+## Step 3 — Assets
+
+You define which asset types are covered under this contract. Logan selects Heat Pump as the permitted asset type, and ticks the option to automatically add matching assets to the contract when they are linked to a job — this keeps the contract record in sync with the work being done without needing manual updates each time an asset is serviced.
+
+---
+
+## Step 4 — Job details
+
+This is the most detailed step, with four sub-sections that define what work the contract governs.
+
+**SLA:** You select the SLA template that sets the response and resolution targets for contract jobs. Logan links the commercial SLA template created in Course 4 — this ensures any job raised against this contract automatically inherits those response time commitments. If you have not yet created your SLA template, you can return to this step before activating.
+
+---
+
+**Reflection**
+
+SunComfort offers emergency call-out cover as part of The Rose & Crown's contract. Which sub-section of Step 4 is the right place to configure how many emergency call-outs are included and whether additional ones are chargeable?
+
+- SLA
+- PPM
+- Service Jobs
+- Call-outs/Breakdowns ✓
+
+*Feedback: Call-outs/Breakdowns is specifically designed for allowance-based reactive cover — you set the number of included call-outs per period and define how any excess is charged. PPM handles scheduled maintenance, and Service Jobs handles planned annual visits with reminders.*
+
+---
+
+**PPM:** You select the PPM template that lists the maintenance tasks to be completed and choose whether PPM jobs are asset-based or property-based. Logan selects the Heat Pump Annual Service PPM template, sets the type to asset-based, and sets the charging method to FOC (free of charge) since preventive visits are included in the contract price. The tasks defined in the PPM template will appear on the job sheets raised against this contract.
+
+**Service jobs:** You can configure planned service visits here, choosing the preferred month for the visit and whether Commusoft should automatically create the job or send a reminder to the team to schedule it. For SunComfort's annual contract, Logan sets a single annual service job in the preferred month and opts to create the job automatically.
+
+**Call-outs/Breakdowns:** You set the maximum number of included call-outs per contract period and define how any jobs beyond that allowance are charged. Logan allows three included call-outs per year for commercial customers and sets additional call-outs to be charged at the standard labour rate.
+
+---
+
+## Step 5 — Billable rates
+
+You define the labour rates and parts pricing that apply to any chargeable work under this contract. Logan sets a flat hourly rate for heat pump labour that reflects the negotiated commercial rate — lower than the standard rate, which is why holding it here keeps the field team from accidentally applying the wrong price. You can also set markup rules for parts by category, and add pricing items for fixed charges like congestion zone fees. Any field not set here falls back to the customer price book or the standard job description rate automatically.
+
+---
+
+## Step 6 — Invoicing
+
+You configure how contract invoices are generated and sent. Logan adds a single invoice line: a fixed annual price of £850, billed yearly at the start of the contract period, with VAT applied at the standard rate, assigned to the Maintenance Contracts business unit and the correct nominal code for Claire's accounts. You set the invoice to send automatically by email so it fires without needing manual intervention each renewal cycle.
+
+---
+
+## Step 7 — Communications
+
+You attach automated notifications to key contract events. Logan adds a contract activation email so The Rose & Crown receives a welcome communication the moment the contract goes live, and sets a renewal notification to send thirty days before the anniversary date. These use the communication templates configured separately in Settings, so the wording and branding are already in place.
+
+---
+
+## Activating the template
+
+Once you have completed all seven steps, you click Save, type Activate in the confirmation box that appears, and click the Activate button. The template is now live and visible to anyone setting up a customer contract. If you need to make structural changes — such as adding new asset types or changing the contract type — you would need to archive this version and build a revised template, since active templates have limited editing to protect live customer contracts built from them.
+
+---
+
+**Reflection**
+
+Logan realises he forgot to update the PPM template linked in Step 4 before activating. What is the most accurate statement about editing an active contract template?
+
+- Active templates can be fully edited at any time without restriction
+- Active templates allow changes to the contract type and asset list freely
+- Active templates have limited editing — structural changes like asset types and contract type cannot be made after activation ✓
+- Active templates cannot be edited at all and must be deleted
+
+*Feedback: Commusoft restricts certain edits on active templates to protect the integrity of live customer contracts built from them. You can make minor adjustments, but changes to contract type or the asset list are locked. If a structural change is needed, archive the current template and create a revised one.*
+
+---
+
+**Open items**
+
+- [OPEN — confirm whether the SLA template referenced in Step 4.1 must exist before the contract template is activated, or whether this field can be left blank and filled in retrospectively. If blank is permitted, note this in narration.]
+- [OPEN — confirm the exact navigation path in the current UI build: Profile icon > Settings > Contracts > Contract Templates. Verify no intermediate menu step is missing.]
+`;
+INBOX_FILES["reed-script-l3-contracts-c2"] = `# Link a contract to a customer
+
+**Series:** L3 Contracts and PPM | **Course:** 2 of 5 | **Duration:** 4 min | **Audience:** Admins / Decision Makers
+
+---
+
+**Learning objectives**
+
+1. Locate the Contracts section on a customer record and start the customer contract setup wizard.
+2. Complete the six steps of the wizard: basic details, invoicing, addresses, assets/PPM/services, summary, and payment.
+3. Activate the customer contract and understand what changes in the system once it is live.
+
+---
+
+**Target audience:** Admins and decision-makers at field service businesses — office administrators, operations managers, or customer service staff who set up and maintain customer agreements. SunComfort Systems is the pedagogical vehicle: learners follow the workflow through a real scenario to understand how to apply it in their own business.
+
+**Assumed starting point:** Learner has completed Course 1 and understands contract templates. An active contract template already exists in the system. The customer record is set up with at least one address and one relevant asset linked.
+
+**Main objective beyond the learning objectives:** By the end of this course, learners can link an active contract template to a customer, configure the specific terms for that customer (dates, properties covered, assets included, payment method), and activate the contract — moving from a reusable template to a live, billable agreement tied to a real client.
+
+---
+
+**Characters:** Emma Clarke (Office Administrator, SunComfort Systems)
+
+**Scenario:** Emma needs to link SunComfort's Annual Heat Pump Maintenance template to Greenleaf Dental Practice in Kingston, converting the prepared template into a live contract ready for billing and PPM scheduling.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Emma Clarke, Office Administrator, Admin role
+- **Customer record:** Greenleaf Dental Practice — existing record with address (Kingston) and a Heat Pump asset already linked
+- **Existing data:** Annual Heat Pump Maintenance contract template (active); SLA template linked within that template; Heat Pump asset type configured
+- **Assets required:** None
+
+---
+
+## From template to live contract
+
+You have built the template — now it is time to apply it to a real customer. The customer contract wizard takes the master terms Logan configured and turns them into a specific, dated agreement for Greenleaf Dental Practice. Emma opens the customer record for Greenleaf Dental Practice and clicks Quick links, then selects Contracts to open the contracts panel. She clicks Add contract to launch the wizard.
+
+---
+
+## Step 1 — Basic details
+
+You choose the contract template from the dropdown — only active templates appear here, which is why Course 1 ends with activation. Emma selects Annual Heat Pump Maintenance, names this particular contract to distinguish it if Greenleaf ever takes a second agreement, enters the contract start date as 1 June, and confirms the end date calculates automatically as 31 May the following year. She selects the main contact at Greenleaf as the contract holder and assigns Logan as the responsible salesperson, then proceeds.
+
+---
+
+**Reflection**
+
+Emma tries to set up a contract for a new client but the template she wants does not appear in the dropdown. What is the most likely reason?
+
+- The template has not been linked to this customer's account type
+- The template is still in Draft status and has not been activated ✓
+- The customer record is missing a phone number
+- The contract period is set to more than twelve months
+
+*Feedback: Only active contract templates appear in the customer contract wizard. If a template does not appear, check Settings > Contracts > Contract Templates and confirm its status. A template in Draft cannot be assigned to any customer.*
+
+---
+
+## Step 2 — Invoicing
+
+Commusoft reads the billing configuration from the template and auto-generates an invoicing schedule. Emma sees a single invoice line for £650 — the annual fee for Greenleaf, which differs from the £850 Rose & Crown rate because the template allows adjustment at the customer level. She confirms the invoice date, checks that the invoice contact is set to the Greenleaf practice manager, and reviews the schedule before moving on. If a date needs shifting slightly — for example, to align with Greenleaf's payment cycle — she can adjust it here without affecting the template itself.
+
+---
+
+## Step 3 — Addresses included
+
+You select which of the customer's addresses and properties are covered by this contract. For Greenleaf Dental Practice, there is a single address in Kingston, which Commusoft pre-selects automatically. If Greenleaf had multiple sites, Emma would tick each one to include it under the same agreement. She confirms the selection and proceeds.
+
+---
+
+## Step 4 — Assets, PPM, services, and job allowances
+
+This is where the contract comes to life. Commusoft pulls through the PPM template and job allowances set in the contract template, and Emma now configures the specifics for Greenleaf. She confirms the heat pump asset at the Kingston premises is selected under the PPM schedule — the colour-coded scheduler shows the planned visits across the twelve-month period, with each square representing a job occurrence. She selects the preferred weeks for the quarterly visits using the Set Weeks feature, which auto-populates the schedule based on the frequency in the PPM template. The tracker shows 0/4, meaning four jobs are planned and none yet created — that counter will move as PPM auto-creation runs.
+
+---
+
+**Reflection**
+
+Emma configures Greenleaf's PPM schedule and sees the tracker shows 0/4. What does this mean?
+
+- Four jobs have been created and none have been completed
+- Four jobs are planned in the schedule and none have been auto-created yet ✓
+- The contract covers four properties and none have been activated
+- Four SLA breaches have occurred and none have been resolved
+
+*Feedback: The tracker shows planned versus created jobs. At this point the contract is being set up, so no jobs have been auto-created yet — that happens once the contract is active and the PPM lead time window triggers creation. You will configure that lead time in Course 3.*
+
+---
+
+## Step 5 — Summary
+
+Commusoft presents an itemised summary of everything the contract covers: the annual service fee, any call-out allowances, and the PPM schedule. Emma reviews the total, checks the VAT treatment is correct, and confirms everything matches what was agreed with Greenleaf before proceeding.
+
+---
+
+## Step 6 — Payment
+
+You complete the contract by selecting the payment method. Emma selects the invoice method aligned with Greenleaf's preference — the practice pays by bank transfer, so she confirms the standard invoicing route and does not set up an automated collection. For customers paying by Direct Debit through GoCardless, this step would include mandate setup. Emma clicks through and reaches the activation screen.
+
+---
+
+## Activating the customer contract
+
+You type Activate in the confirmation box and click the Activate button. The contract status changes to Active, and it now appears in the contracts panel on Greenleaf's record. From this point, the contract drives automatic invoice generation, PPM job creation (once the lead time window opens), and SLA assignment on any jobs raised against this customer. Emma can view the full contract at any time by clicking into it from the contracts panel, where the timeline tab will accumulate every job, invoice, and communication linked to this agreement.
+
+---
+
+## What changes when a contract goes live
+
+Once active, the contract becomes the governing document for this customer relationship. Jobs raised against Greenleaf will inherit the SLA targets from the linked SLA template, pricing for chargeable work will draw from the contract's billable rates, and PPM jobs will be created automatically on the schedule Emma just configured. The contract also becomes visible in the Contracts report, where Claire can monitor its status and upcoming renewal date alongside every other live agreement in the business.
+
+---
+
+**Open items**
+
+- [OPEN — confirm whether the annual fee on the customer contract (£650 for Greenleaf vs £850 for Rose & Crown) is adjustable within the wizard at the invoicing step, or whether the price is fixed from the template and requires a separate price book entry. Clarify for narration in Step 2.]
+- [OPEN — confirm the exact label used for the payment step in the current UI — some builds show "Payment" and others "Payment setup". Verify before recording.]
+`;
+INBOX_FILES["reed-script-l3-contracts-c3"] = `# Configure PPM auto-job creation
+
+**Series:** L3 Contracts and PPM | **Course:** 3 of 5 | **Duration:** 5 min | **Audience:** Admins / Decision Makers
+
+---
+
+**Learning objectives**
+
+1. Explain how PPM job auto-creation works and why the lead time setting matters.
+2. Locate the PPM job auto-creation settings and configure the number of days in advance that jobs are created.
+3. Select the user roles that receive notifications when PPM jobs are automatically generated.
+4. Understand the risk of changing the lead time on an established system and when caution is warranted.
+
+---
+
+**Target audience:** Admins and decision-makers at field service businesses — typically operations managers or senior administrators who configure system-wide automation settings that affect the scheduling team. SunComfort Systems is the pedagogical vehicle: learners follow Logan's configuration to understand how PPM automation applies in their own business context.
+
+**Assumed starting point:** Learner has completed Courses 1 and 2. At least one active customer contract with a PPM schedule configured now exists in the system. The learner understands what a PPM schedule is and that jobs need to be created from it.
+
+**Main objective beyond the learning objectives:** By the end of this course, learners have turned on the automation that converts a static PPM schedule into real, schedulable jobs — so that planned maintenance never falls through the cracks because someone forgot to raise a job manually. This is the configuration step that makes the contract operational, not just administrative.
+
+---
+
+**Characters:** Logan Chance (Operations Manager, SunComfort Systems)
+
+**Scenario:** Greenleaf's contract is live and Greenleaf's PPM schedule is set. Logan now needs to configure the system-wide lead time so that Commusoft automatically creates the PPM jobs in advance of each scheduled visit, giving Sophie enough time to schedule the engineer and prepare the paperwork.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Logan Chance, Operations Manager, Admin role
+- **Customer record:** Not required — this is a system-wide settings change, not a customer-level action
+- **Existing data:** At least one active customer contract with a PPM schedule (Greenleaf Dental Practice from Course 2)
+- **Assets required:** None
+
+---
+
+## What PPM auto-creation actually does
+
+Without auto-creation, someone on the SunComfort team would have to remember to raise a job manually for every scheduled PPM visit across every active contract. For a business with even a handful of maintenance customers that is a significant administrative risk — a missed job means a missed visit, a contract obligation not met, and potentially an unhappy customer. PPM auto-creation removes that risk entirely by having Commusoft raise the job automatically, a set number of days before the week the maintenance is due. The job appears in the system ready for Sophie to assign an engineer, just as if someone had created it manually.
+
+---
+
+## Where the setting lives
+
+You access PPM job auto-creation by clicking your profile icon, selecting Settings, navigating to Contracts, and clicking PPM Job Auto-Creation. You will see two fields: the number of days in advance that Commusoft creates the job, and a list of user roles to notify when that happens. These are system-wide settings — they apply to every active PPM contract, not just one customer.
+
+---
+
+**Reflection**
+
+Logan sets the PPM auto-creation lead time to five days. A PPM task is scheduled for the week beginning Monday 1 June. When will Commusoft automatically create the job?
+
+- 1 June (the day the week starts)
+- 5 June (five days into the maintenance week)
+- 27 May (five days before the week begins) ✓
+- 26 May (five working days before the week begins)
+
+*Feedback: Commusoft counts back from the beginning of the scheduled week, not from the task date itself. A five-day lead time and a week starting 1 June means the job is created on 27 May — giving Sophie several days to allocate an engineer before the visit window opens.*
+
+---
+
+## Setting the lead time
+
+You type the number of days in advance into the field next to "No. of day(s)". Logan thinks through SunComfort's workflow: Sophie needs enough notice to check engineer availability and send a confirmation to the customer, but not so much lead time that jobs pile up in the diary weeks ahead of time before any scheduling decisions can be made. He sets the lead time to seven days — enough runway for Sophie to plan without flooding the diary. For businesses with more complex scheduling or longer travel times between sites, a longer lead time may make sense; for smaller operations, five to seven days is a reasonable starting point.
+
+---
+
+## Setting notification recipients
+
+You choose which user roles receive an alert each time a PPM job is automatically created. Logan selects the Scheduler role — this means Sophie and anyone else with that role in the system gets a notification the moment a new PPM job lands, so they can act on it immediately rather than discovering it hours later. You can add multiple roles if several people need to be aware; Logan also adds the Admin role so the office team has visibility. The notification is informational: it tells the recipient that a PPM job has been created, which job it is, and which customer it relates to.
+
+---
+
+**Reflection**
+
+Why does Commusoft's own documentation warn against changing the lead time setting once it is established on a live system?
+
+- Because the system will delete all existing PPM schedules when the setting changes
+- Because changing it could disrupt the creation timing of PPM jobs already in progress and cause confusion in established workflows ✓
+- Because the lead time can only be set once and cannot be updated afterwards
+- Because changes to the lead time immediately cancel any jobs already auto-created
+
+*Feedback: The warning is about workflow disruption, not system damage. If you shorten the lead time while the system already has jobs that were created under the old timing, the team may receive duplicate or out-of-sequence jobs. If you lengthen it significantly, jobs may suddenly appear much further in advance than the team expects. On an established system, any change to the lead time should be communicated to the scheduling team first.*
+
+---
+
+## Saving and verifying the setting
+
+You click Save. The setting is now live. To verify it is working, Logan can check one of the active PPM contracts — for example, Greenleaf's — and confirm that the upcoming scheduled visit falls within the next lead time window. If it does, the job should be created by the system within the next 24 hours. Contracts with scheduled visits further out will trigger job creation when they enter the lead time window naturally.
+
+---
+
+## The data chain this setting completes
+
+With the lead time configured, the loop from Course 1 to Course 3 is now closed. Logan built the contract template with its PPM obligations, Emma linked that template to Greenleaf and configured the schedule, and now the automation ensures those scheduled obligations translate into actual jobs without any manual intervention. The PPM tracker on Greenleaf's contract — which showed 0/4 in Course 2 — will begin updating as jobs are created, moving towards 4/4 as the year progresses. That tracker, and the PPM performance report you will meet in Course 5, are how SunComfort proves to its customers that every planned visit happened.
+
+---
+
+**Open items**
+
+- [OPEN — confirm whether PPM job auto-creation runs as a nightly batch process or in near-real-time. This affects whether Logan should expect the first job to appear "within 24 hours" or more immediately after saving. Adjust narration accordingly.]
+- [OPEN — confirm whether the notification to selected user roles is an in-app notification, an email, or both. Clarify for the notification recipients narration section.]
+`;
+INBOX_FILES["reed-script-l3-contracts-c4"] = `# Set up SLA templates
+
+**Series:** L3 Contracts and PPM | **Course:** 4 of 5 | **Duration:** 4 min | **Audience:** Admins / Decision Makers
+
+---
+
+**Learning objectives**
+
+1. Explain what an SLA template defines and why it matters for contract customers.
+2. Create an SLA template: name it, add a description, configure SLA timers, set segmentation, and define breach notifications.
+3. Set business hours so SLA timers reflect actual operational availability.
+4. Link a completed SLA template to a contract template.
+
+---
+
+**Target audience:** Admins and decision-makers at field service businesses — operations managers or senior administrators responsible for defining service standards and ensuring the business meets its contractual obligations. SunComfort Systems is the pedagogical vehicle: learners follow Logan's setup to understand how to build SLA templates that reflect their own service commitments.
+
+**Assumed starting point:** Learner has completed Courses 1 to 3. They understand contract templates and know that Step 4.1 of the contract template wizard references an SLA template. At least one contract template exists. The learner understands job descriptions and priorities.
+
+**Main objective beyond the learning objectives:** By the end of this course, learners have configured measurable service-level commitments that Commusoft can track automatically — so that when a contract customer raises a job, the system knows what the response and resolution targets are, can alert the team before a breach occurs, and can report on compliance across the contract portfolio.
+
+---
+
+**Characters:** Logan Chance (Operations Manager, SunComfort Systems)
+
+**Scenario:** The Rose & Crown has an emergency response clause in its contract — critical failures must be attended within four hours. Logan needs to build an SLA template that enforces this commitment in Commusoft so the system can track compliance and alert the team before a breach occurs.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Logan Chance, Operations Manager, Admin role
+- **Customer record:** Not required — SLA templates are created in Settings, not on a customer record
+- **Existing data:** Job descriptions configured (Emergency Call-out, Heat Pump Maintenance); job priorities configured (Critical, Standard); business hours should reflect SunComfort operating hours
+- **Assets required:** None
+
+---
+
+## What an SLA template does
+
+An SLA template translates a contractual service commitment into something Commusoft can actively monitor. Without it, a four-hour emergency response target exists only on paper — no one in the system knows the clock is ticking from the moment a job is raised. With an SLA template linked to the contract, Commusoft starts measuring automatically the moment a relevant job is created, alerts the team before the window closes, and records whether the target was met. That record feeds directly into the SLA reports you will see in Course 5.
+
+---
+
+## Creating the template
+
+You navigate to the SLA template area by clicking your profile icon, selecting Settings, and finding SLA Templates under Contracts. Logan clicks Add SLA template, enters the name "Commercial Emergency Response" so it is clearly identifiable when linking to contract templates, and adds a description explaining that it covers four-hour emergency attendance for commercial heat pump and generator customers. He clicks Save to create the template structure, then moves into the configuration sections.
+
+---
+
+**Reflection**
+
+Logan wants the SLA timer to start the moment a job is created and measure the time until an engineer physically arrives on site. Which SLA timer type should he select?
+
+- Job creation to first diary event
+- Job creation to engineer arrival time ✓
+- Job creation to job completion
+- Actual vs. required completion dates
+
+*Feedback: Engineer arrival time is the right measure for an emergency attendance commitment — it captures the moment the engineer is physically on site, which is what the response time clause in The Rose & Crown's contract specifies. "First diary event" measures when a diary entry is created, not when the engineer actually arrives.*
+
+---
+
+## Configuring SLA timers
+
+You add the timer or timers that reflect your commitment. Logan adds a Job creation to engineer arrival time timer and sets the target at four hours — this is the response window The Rose & Crown's contract specifies for emergency call-outs. He also adds a Job creation to job completion timer set to eight hours for full resolution, so the team can see both targets on any job raised against this customer. Each timer is added separately, and you can have multiple timers on a single SLA template to capture both response and resolution obligations.
+
+---
+
+## Setting segmentation
+
+Segmentation lets you apply different targets to different job types within the same template. Logan applies the four-hour timer specifically to jobs with a Critical priority and the Emergency Call-out job description — so standard maintenance visits are not measured against emergency targets. He leaves the remaining job descriptions unmeasured under this template, since routine service work is governed by the PPM schedule rather than response time commitments. You can also choose to apply the SLA under all conditions without segmentation, which is the right choice for simpler agreements where every job type carries the same target.
+
+---
+
+## Breach notifications
+
+You configure two types of alert. The first is a potential breach warning: Logan sets this to fire ninety minutes before the four-hour window closes, targeting the Scheduler and Admin roles — giving Sophie enough time to escalate if an engineer has not yet been dispatched. The second is a breach notification: this fires the moment the target is missed, targeting the same roles plus the Operations Manager role so Logan knows immediately. Each notification can be linked to a pre-built email template so the wording is professional and consistent rather than a raw system alert.
+
+---
+
+**Reflection**
+
+What is the difference between a potential breach warning and a breach notification in Commusoft SLA templates?
+
+- They are the same thing — both fire at the moment of breach
+- A potential breach warning fires before the SLA window closes; a breach notification fires when the target is actually missed ✓
+- A potential breach warning goes to customers; a breach notification goes to internal staff
+- Breach notifications are only available on paid plan upgrades
+
+*Feedback: The two alerts serve different purposes. The potential breach warning is proactive — it gives the team a window to act before the commitment is broken. The breach notification is reactive — it records that the target was missed and triggers escalation. Using both gives teams the best chance of staying compliant and the clearest record when they do not.*
+
+---
+
+## Business hours
+
+You set the working days and hours that SLA timers respect. Logan configures SunComfort's business hours as Monday to Friday, 8am to 6pm, with Saturday morning cover from 9am to 1pm. This means a Critical job raised at 5pm on a Friday does not have its four-hour clock running through Saturday night — the timer pauses outside business hours and resumes when the team is operational. For The Rose & Crown, where emergency cover is a genuine commitment, Logan separately considers whether a true 24/7 response target should have no business hour restrictions at all — and notes this as a decision to confirm with Sarah before the contract is sent.
+
+---
+
+## Linking the SLA template to a contract template
+
+Once saved, the SLA template is ready to be linked to a contract template in Step 4.1 of the contract template wizard. If Logan is building the SLA template after the contract template already exists, he can return to the contract template, edit Step 4.1, and link this template — the change will apply to all future customer contracts created from that template, though existing live customer contracts may need to be reviewed separately. The connection between SLA template and contract is what makes Course 5's reports meaningful: every job raised under a contract inherits these targets and Commusoft records whether they were met.
+
+---
+
+**Open items**
+
+- [OPEN — confirm whether editing Step 4.1 of an active contract template to add or change an SLA template propagates to existing live customer contracts, or only applies to new customer contracts created from that point forward. This is important for the final narration paragraph.]
+- [OPEN — confirm whether SunComfort's scenario should include a 24/7 SLA option for The Rose & Crown given the emergency generator cover. If the Help Centre confirms 24/7 is supported (no business hours restriction), include this as an explicit option in the business hours narration rather than a note.]
+`;
+INBOX_FILES["reed-script-l3-contracts-c5"] = `# Read the contracts and SLA reports
+
+**Series:** L3 Contracts and PPM | **Course:** 5 of 5 | **Duration:** 4 min | **Audience:** Admins / Decision Makers
+
+---
+
+**Learning objectives**
+
+1. Navigate to and read the Contracts report: understand its columns, apply filters, and identify contracts approaching renewal.
+2. Navigate to and read the PPM performance report: understand its metrics and use it to identify maintenance obligations that are behind schedule.
+3. Navigate to and use the SLA due to breach report and widget: understand the countdown system and act on at-risk jobs.
+4. Read the SLA jobs report and SLA performance by job description report to assess historical SLA compliance.
+
+---
+
+**Target audience:** Admins and decision-makers at field service businesses — operations managers, business owners, and finance staff who need visibility over the health of their contract portfolio, maintenance compliance, and service-level performance. SunComfort Systems is the pedagogical vehicle: learners follow Logan and Claire's use of the reports to understand how to apply the same reporting approach in their own business.
+
+**Assumed starting point:** Learner has completed Courses 1 to 4. Active customer contracts exist in the system with PPM schedules configured and SLA templates linked. At least one SLA-governed job has been raised so the SLA reports have data to show.
+
+**Main objective beyond the learning objectives:** By the end of this course, learners can use Commusoft's contracts and SLA reporting suite to answer the questions that matter to the business: which contracts are due for renewal, is the PPM work getting done on schedule, and are we meeting our SLA commitments? These reports turn the configuration work from Courses 1 to 4 into visible, actionable intelligence.
+
+---
+
+**Characters:** Logan Chance (Operations Manager, SunComfort Systems); Claire Hudson (Administrator, Finance, SunComfort Systems)
+
+**Scenario:** Three months after SunComfort's first commercial contracts went live, Logan and Claire want to check that the contract portfolio is healthy, PPM visits are running on schedule, and the emergency response SLA for The Rose & Crown is being met consistently.
+
+---
+
+**Production setup**
+
+- **Logged-in user:** Logan Chance, Operations Manager, Admin role (primary); Claire Hudson, Finance Administrator, Finance role (referenced for contracts report context)
+- **Customer records:** Greenleaf Dental Practice (active contract, PPM visits underway); The Rose & Crown (active contract, SLA-governed jobs raised)
+- **Existing data:** Multiple active contracts; PPM jobs auto-created and some completed; at least one Critical job raised against The Rose & Crown with an SLA result recorded
+- **Assets required:** None
+
+---
+
+## The reporting suite for contracts and SLA
+
+Everything configured in Courses 1 to 4 generates data that Commusoft collects and surfaces through a set of dedicated reports. You reach all of them through the Reporting tab, navigating to either the Jobs or Customers subcategory depending on which report you need. Logan starts his monthly review here, working through four reports that together give him a complete picture of SunComfort's contract health.
+
+---
+
+## The Contracts report
+
+You navigate to the Contracts report by going to the Reporting tab and selecting Contracts. The report lists every contract in the system with five key columns: contract template, customer name, contract category, status, and contract start and expiry dates. Claire uses this report at the end of each month to identify any contracts showing a status of "Customer Renewal Required" — these are fixed-length contracts where the customer has not yet confirmed whether they want to continue, and they need a follow-up call before the expiry date passes. You filter by status to isolate just the renewal-pending contracts, then download the list to Excel for Claire to work from. The contracts report is the business's early warning system for revenue that needs protecting.
+
+---
+
+**Reflection**
+
+Claire filters the Contracts report by status and sees three contracts showing "Customer Renewal Required". What does this status mean and what action should she take?
+
+- The contracts have already expired and been automatically terminated
+- The contracts are fixed-length agreements where the renewal period has opened and the customer has not yet confirmed continuation — Claire should follow up before expiry ✓
+- The contracts have been cloned and are waiting for a second approval
+- The contracts are on auto-renewal and will renew without any action needed
+
+*Feedback: "Customer Renewal Required" applies to Fixed Length contracts that do not auto-renew. The system flags them when the renewal window opens — typically seven days before expiry based on the template setting — but the business still needs to act. Auto-renewal contracts would simply roll over; only manual renewal contracts reach this status.*
+
+---
+
+## The PPM performance report
+
+You open the PPM performance report by going to Reporting, then Customers, then PPM Performance. Logan uses this to check that Greenleaf's quarterly heat pump maintenance visits are progressing as planned. The report shows planned jobs against completed jobs with timing metrics: how many were completed in the correct month, how many slipped to the following month, and how many are still in progress or need attention. Logan filters by Greenleaf Dental Practice and the current contract period to see that three of the four quarterly visits have been completed on time and one is still upcoming — the schedule is healthy. A business with dozens of PPM contracts would use this report to spot patterns: if a particular PPM template is consistently producing late completions, that is a capacity or scheduling signal, not just an admin note.
+
+---
+
+**Reflection**
+
+Logan filters the PPM performance report and sees that for one customer, several jobs show as "Needs Attention". What is the most helpful next step?
+
+- Delete those jobs and re-create them from the PPM schedule
+- Archive the PPM template and build a new one
+- Investigate the specific jobs flagged, check whether they were aborted, incomplete, or unassigned, and take corrective action ✓
+- Contact the customer to cancel the PPM obligation for those months
+
+*Feedback: "Needs Attention" is a flag that something has interrupted the normal flow — it does not tell you what the problem is, only that there is one. Drilling into the flagged jobs from the report shows the specific issue: an aborted job, a missing diary entry, or a job that was raised but never completed. The report's value is that it surfaces these issues so they can be resolved, not that it resolves them automatically.*
+
+---
+
+## The SLA due to breach report
+
+You open the SLA due to breach report by going to Reporting, then Jobs, then SLA Due to Breach. This report is Logan's live operational view: it shows every open job that is approaching or has already passed its SLA target, ordered by urgency. The SLA Countdown column shows time remaining before breach for each job — green means a notification has not yet been sent, red means one has. Logan filters by The Rose & Crown to see whether any Critical emergency call-out is running close to the four-hour response window. On a busy Monday morning, this report is the first thing the scheduling team checks: jobs at the top of the list need engineer assignment or escalation immediately. You can also add the SLA Due to Breach widget to your dashboard, which groups jobs into four countdown buckets — zero to sixty minutes, sixty to one-twenty, one-twenty to two-forty, and over two-forty — so the urgency picture is visible without navigating to the report every time.
+
+---
+
+## The SLA jobs report and performance by job description
+
+The SLA jobs report provides a historical record of every job under SLA governance, with a dedicated breach indicator column showing whether each job met its target and, if not, when the breach occurred. Logan uses this when The Rose & Crown's account manager asks for a compliance summary: he filters by customer and date range, downloads to Excel, and has a clean record of every emergency call-out, its response time, and whether the four-hour target was met. The SLA performance by job description report takes the same data and aggregates it: it shows each job description with the total jobs measured, the percentage completed within SLA, and the breakdown between completed, ongoing, and aborted jobs. Logan uses this to spot whether Emergency Call-out as a job type is consistently meeting the target across all contract customers, or whether the performance gap is concentrated on one customer or one time period.
+
+---
+
+**Reflection**
+
+Logan wants to know what percentage of Emergency Call-out jobs across all commercial contracts met the SLA target last quarter. Which report gives him this answer most directly?
+
+- The Contracts report, filtered by category
+- The SLA due to breach report, filtered by priority
+- The SLA performance by job description report, filtered by job description and date range ✓
+- The PPM performance report, filtered by contract template
+
+*Feedback: The SLA performance by job description report is designed for exactly this question — it aggregates SLA compliance by job description and shows the percentage of jobs that met the target. The SLA jobs report would show individual job-level data, which is useful for a detailed audit but requires more manual analysis to reach a summary figure.*
+
+---
+
+## Turning reports into decisions
+
+The four reports in this course work together as a management rhythm for Logan. The Contracts report runs monthly — Claire checks renewals and flags anything at risk. The PPM performance report runs quarterly — Logan confirms that planned maintenance visits are completing on schedule. The SLA due to breach report runs daily — the scheduling team checks it first thing to prioritise engineer dispatch. The SLA jobs report runs on demand — when a customer asks for a compliance record or Logan needs to investigate a service complaint. Together, the configuration from Courses 1 to 4 and the visibility from this course form a complete contracts and PPM system, from the first template setting to the final performance answer.
+
+---
+
+**Open items**
+
+- [OPEN — confirm the exact navigation path for the Contracts report in the current UI build. The Help Centre mentions Reporting > Jobs > SLA due to breach as the route for the SLA report, but does not explicitly state whether the Contracts report is under Reporting > Jobs or Reporting > Customers. Verify before recording.]
+- [OPEN — confirm whether "Needs Attention" is the exact label used in the PPM performance report for jobs that have an issue, or whether the UI uses different wording (e.g. "Requires Attention" or a flag icon without text label). Adjust narration accordingly.]
+`;
+INBOX_FILES["reed-script-l3-contracts-challenge"] = `# Series Challenge: Contract running, PPM scheduled
+
+**Series:** L3 Contracts and PPM | **Course:** Challenge | **Duration:** 3 min | **Audience:** Admins / Decision Makers
+
+---
+
+**Learning objectives**
+
+1. Recall and apply the key decisions and configuration steps from all five courses in the series.
+2. Demonstrate understanding of how contract templates, customer contracts, PPM auto-creation, SLA templates, and reports connect as a single system.
+
+---
+
+**Target audience:** Admins and decision-makers who have completed all five courses in the L3 Contracts and PPM series. SunComfort Systems is the pedagogical vehicle.
+
+**Assumed starting point:** Full series completion — contract template built, customer contract linked, PPM auto-creation configured, SLA template set up, reports reviewed.
+
+**Main objective beyond the learning objectives:** The challenge confirms whether the learner can move from individual feature knowledge to joined-up thinking — recognising the dependencies between steps, the consequences of missing one, and the correct sequence of decisions when setting up a new contract from scratch.
+
+---
+
+**Characters:** Sarah Mitchell (Managing Director, SunComfort Systems); Clint (AI presenter)
+
+**Scenario:** Sarah has taken on a new commercial contract customer — Mr. Brian Clayton in Tower Hamlets wants an annual heat pump maintenance agreement for his rental property portfolio. Sarah is reviewing everything the team has set up and wants to make sure the end-to-end system is in place before the contract goes live.
+
+---
+
+**Production setup**
+
+- **Presenter setup:** Clint and Sarah on screen together, conversational format. Sarah asks; Clint responds and guides.
+- **Assets required:** None — no screen recording, challenge is dialogue-only with on-screen text cues as needed.
+
+---
+
+**Sarah:** We have a new residential maintenance customer — Brian Clayton in Tower Hamlets, heat pump service agreement, £195 a year. Before Emma links the contract, I want to make sure we have not missed any steps. Walk me through the sequence.
+
+**Clint:** Before Emma can link anything to Brian's record, Logan needs to confirm a matching contract template is already active in Settings. The template is the master definition — contract type, PPM obligations, SLA link, billing — and it has to be active before it will even appear in the customer contract wizard. If Logan built the residential template back in Course 1, Emma is ready to go. If it does not exist yet, that is the first job.
+
+**Sarah:** The template exists and it is active. What does Emma actually do when she opens Brian's record?
+
+**Clint:** She goes to Quick links on Brian's customer record, selects Contracts, and clicks Add contract. The six-step wizard opens and she works through it in order: basic details and start date, invoicing schedule, addresses covered, then the assets and PPM configuration. That fourth step is where the PPM schedule becomes specific to Brian — she selects his heat pump asset, confirms the PPM template tasks, and sets the preferred weeks for the annual service visit. The wizard calculates the invoice schedule automatically from the template, so Claire does not need to build anything manually.
+
+**Sarah:** And the PPM jobs — when do those actually get created in the system?
+
+**Clint:** That depends on the lead time Logan set in PPM auto-creation settings. If the lead time is seven days, Commusoft will automatically raise the job seven days before the week the PPM visit is scheduled. Sophie gets a notification the moment it is created and can assign an engineer straight away. The contract just needs to be active and the visit needs to be within the lead time window — the system does the rest.
+
+**Sarah:** We have an emergency response clause for some of our commercial customers but not for Brian's residential contract. Do we need a separate SLA template for residential, or can we leave SLA blank on the residential template?
+
+**Clint:** You have two options. If Brian's contract genuinely carries no response time commitment, you can leave the SLA field blank in the contract template — no SLA timer will run on jobs raised under that contract, and they will not appear in the SLA compliance reports. If you do want to track response times even informally, you would build a separate residential SLA template with softer targets and link it to the residential contract template. The commercial template Logan built in Course 4 — the four-hour emergency response one — stays linked only to commercial contracts. The two never mix unless you deliberately share a template.
+
+**Sarah:** Last question. Three months in, how do I know the system is working? That Brian's visit happened and that The Rose & Crown's emergency response is holding up?
+
+**Clint:** Two different reports for two different questions. For Brian's PPM visit, the PPM performance report under Reporting shows planned versus completed jobs by customer — you will see the annual visit listed, and once it is done the completion count moves from 0/1 to 1/1. For The Rose & Crown's emergency response, the SLA performance by job description report shows the percentage of Emergency Call-out jobs that met the four-hour target. If that percentage drops, you have a pattern to investigate. And day-to-day, the SLA due to breach report and the dashboard widget give Sophie the live view she needs to act before a target is missed rather than after. The reports only have answers because the configuration in Courses 1 to 4 set the questions correctly in the first place.
+
+**Sarah:** Perfect. Emma, you are good to go.
+
+---
+
+**Open items**
+
+- None — challenge content draws entirely from verified series material. Any open items in Courses 1 to 5 apply here by inheritance.
+`;
 
 INBOX_FILES["reed-script-l1-ft-series1"] = `# Reed — Script: Getting started on the app
 
@@ -17950,6 +18634,12 @@ function openInboxFile(key) {
     'reed-script-l3-sales-plus-c6': { num: 'Reed — Script', title: 'L3 Sales+ — Course 6: Track a proposal through to acceptance' },
     'reed-script-l3-sales-plus-c7': { num: 'Reed — Script', title: 'L3 Sales+ — Course 7: Use the media portal for site data' },
     'reed-script-l3-sales-plus-challenge': { num: 'Reed — Script', title: 'L3 Sales+ — Challenge: Lead to accepted proposal' },
+    'reed-script-l3-contracts-c1': { num: 'Reed — Script', title: 'L3 Contracts and PPM — Course 1: Set up a contract template' },
+    'reed-script-l3-contracts-c2': { num: 'Reed — Script', title: 'L3 Contracts and PPM — Course 2: Link a contract to a customer' },
+    'reed-script-l3-contracts-c3': { num: 'Reed — Script', title: 'L3 Contracts and PPM — Course 3: Configure PPM auto-job creation' },
+    'reed-script-l3-contracts-c4': { num: 'Reed — Script', title: 'L3 Contracts and PPM — Course 4: Set up SLA templates' },
+    'reed-script-l3-contracts-c5': { num: 'Reed — Script', title: 'L3 Contracts and PPM — Course 5: Read the contracts and SLA reports' },
+    'reed-script-l3-contracts-challenge': { num: 'Reed — Script', title: 'L3 Contracts and PPM — Challenge: Contract running, PPM scheduled' },
     'ivy-induction': { num: 'Ivy — People', title: 'Enablement Specialist Induction Plan v3' },
     'ivy-jd-academy': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Description' },
     'ivy-jd-advert': { num: 'Ivy — People', title: 'Customer Education Specialist — Job Advert' },

@@ -1065,6 +1065,86 @@
         <div class="char-card"><div class="char-avatar">PN</div><div><div class="char-name">Pete Nolan</div><div class="char-role">Maintenance Technician</div><div style="font-size:11px;color:var(--text-muted);margin-top:2px">Engineer</div></div></div>
         <div class="char-card"><div class="char-avatar blue">GV</div><div><div class="char-name">Gavin Stubbs</div><div class="char-role">Maintenance Technician</div><div style="font-size:11px;color:var(--text-muted);margin-top:2px">Engineer</div></div></div>
       </div>
+      <!-- Job Pipelines -->
+      <div class="section-heading" style="margin-top:28px">Job Pipelines</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-bottom:28px">
+
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow:hidden">
+          <div style="background:#1565c0;color:#fff;padding:12px 16px;font-weight:700;font-size:14px">Installation — Solar PV &amp; Heat Pumps</div>
+          <div style="padding:12px 16px">
+            <div style="font-size:13px;color:var(--text-muted);margin-bottom:10px">For installation jobs raised after survey and sale are complete.</div>
+            <ol style="margin:0;padding-left:18px;font-size:13px;line-height:2">
+              <li><strong>New Job</strong> — created, no appointment yet</li>
+              <li>Parts &amp; Materials Ordered</li>
+              <li>Installation Booked</li>
+              <li>Installation In Progress</li>
+              <li>Commissioning &amp; Testing</li>
+              <li>MCS / DNO Paperwork Submitted</li>
+              <li><strong>Job Complete</strong> — auto-complete stage</li>
+            </ol>
+          </div>
+        </div>
+
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow:hidden">
+          <div style="background:#2e7d32;color:#fff;padding:12px 16px;font-weight:700;font-size:14px">Service / Maintenance</div>
+          <div style="padding:12px 16px">
+            <div style="font-size:13px;color:var(--text-muted);margin-bottom:10px">For planned and recurring service visits.</div>
+            <ol style="margin:0;padding-left:18px;font-size:13px;line-height:2">
+              <li><strong>Service Due</strong> — job created, no appointment yet</li>
+              <li>Appointment Booked</li>
+              <li>Parts Required</li>
+              <li>Service In Progress</li>
+              <li>Remedial Work Identified</li>
+              <li><strong>Service Report Issued</strong> — auto-complete stage</li>
+            </ol>
+          </div>
+        </div>
+
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow:hidden">
+          <div style="background:#b45309;color:#fff;padding:12px 16px;font-weight:700;font-size:14px">Reactive / Callout</div>
+          <div style="padding:12px 16px">
+            <div style="font-size:13px;color:var(--text-muted);margin-bottom:10px">For unplanned fault response and emergency visits.</div>
+            <ol style="margin:0;padding-left:18px;font-size:13px;line-height:2">
+              <li><strong>Callout Logged</strong> — job created, no appointment yet</li>
+              <li>Engineer Assigned</li>
+              <li>On Site</li>
+              <li>Parts Required</li>
+              <li>First Fix Complete</li>
+              <li>Return Visit Required</li>
+              <li><strong>Fault Resolved</strong> — auto-complete stage</li>
+            </ol>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Labour Rates -->
+      <div class="section-heading" style="margin-top:4px">Labour Rates</div>
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:28px">
+        <table style="width:100%;border-collapse:collapse;font-size:13px">
+          <thead>
+            <tr style="background:var(--grey);color:#fff">
+              <th style="padding:10px 14px;text-align:left;font-weight:600">Role</th>
+              <th style="padding:10px 14px;text-align:left;font-weight:600">Character example</th>
+              <th style="padding:10px 14px;text-align:right;font-weight:600">Cost rate (£/hr)</th>
+              <th style="padding:10px 14px;text-align:right;font-weight:600">Sale rate (£/hr)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border)"><td style="padding:9px 14px;font-weight:600">Senior Solar Technician</td><td style="padding:9px 14px;color:var(--text-muted)">Luke Patterson</td><td style="padding:9px 14px;text-align:right">£32</td><td style="padding:9px 14px;text-align:right;font-weight:600;color:var(--orange)">£85</td></tr>
+            <tr style="border-bottom:1px solid var(--border)"><td style="padding:9px 14px">Solar Technician</td><td style="padding:9px 14px;color:var(--text-muted)">Sam Ossie, Ben Ashworth, Frank McCarthy</td><td style="padding:9px 14px;text-align:right">£22</td><td style="padding:9px 14px;text-align:right;font-weight:600;color:var(--orange)">£65</td></tr>
+            <tr style="border-bottom:1px solid var(--border)"><td style="padding:9px 14px;font-weight:600">Senior Heat Pump Technician</td><td style="padding:9px 14px;color:var(--text-muted)">Jake Harris</td><td style="padding:9px 14px;text-align:right">£31</td><td style="padding:9px 14px;text-align:right;font-weight:600;color:var(--orange)">£80</td></tr>
+            <tr style="border-bottom:1px solid var(--border)"><td style="padding:9px 14px">Heat Pump Technician</td><td style="padding:9px 14px;color:var(--text-muted)">Marcus Webb, Dean Fletcher, Chris Barlow, Liam Doyle, Karl Simmons, Jez Harding</td><td style="padding:9px 14px;text-align:right">£23</td><td style="padding:9px 14px;text-align:right;font-weight:600;color:var(--orange)">£68</td></tr>
+            <tr style="border-bottom:1px solid var(--border)"><td style="padding:9px 14px">Generator / Power Technician</td><td style="padding:9px 14px;color:var(--text-muted)">Nathan Cole, Scott Turner, Amy Marsh, Reece Holloway, Tony Bridges</td><td style="padding:9px 14px;text-align:right">£26</td><td style="padding:9px 14px;text-align:right;font-weight:600;color:var(--orange)">£75</td></tr>
+            <tr style="border-bottom:1px solid var(--border)"><td style="padding:9px 14px">Maintenance Technician</td><td style="padding:9px 14px;color:var(--text-muted)">Terry Walsh, Pete Nolan, Gavin Stubbs</td><td style="padding:9px 14px;text-align:right">£18</td><td style="padding:9px 14px;text-align:right;font-weight:600;color:var(--orange)">£55</td></tr>
+            <tr style="border-bottom:1px solid var(--border)"><td style="padding:9px 14px">Solar/Electrical Technician</td><td style="padding:9px 14px;color:var(--text-muted)">Roman Blake, Owen Griffiths, Callum Drake</td><td style="padding:9px 14px;text-align:right">£24</td><td style="padding:9px 14px;text-align:right;font-weight:600;color:var(--orange)">£70</td></tr>
+            <tr style="border-bottom:1px solid var(--border)"><td style="padding:9px 14px">Office Administrator</td><td style="padding:9px 14px;color:var(--text-muted)">Emma Clarke, Sophie Bennett, Ryan Potter, Claire Hudson, Tom Mercer, Danny Walsh</td><td style="padding:9px 14px;text-align:right">£14</td><td style="padding:9px 14px;text-align:right;font-weight:600;color:var(--orange)">£35</td></tr>
+            <tr><td style="padding:9px 14px">Operations Manager / Director</td><td style="padding:9px 14px;color:var(--text-muted)">Logan Chance, Sarah Mitchell, Maria Rodriguez</td><td style="padding:9px 14px;text-align:right">£24</td><td style="padding:9px 14px;text-align:right;font-weight:600;color:var(--orange)">£55</td></tr>
+          </tbody>
+        </table>
+        <div style="padding:10px 14px;font-size:11px;color:var(--text-muted);border-top:1px solid var(--border)">All rates ex-VAT. Based on 2025/2026 UK renewable energy sector market data. Configure via Settings → Edit business details → cost rate p/hr + sale rate p/hr per engineer profile.</div>
+      </div>
+
       <div class="section-heading" style="margin-top:28px">Settings <span class="count">189</span></div>
       <div class="settings-search-bar">
         <input type="text" id="settingsSearch" placeholder="Search settings..." oninput="filterSettings(this.value)" />
@@ -15553,6 +15633,8 @@ INBOX_FILES["reed-script-l2-s6-c5"] = `# Configure the after sales care portal
 
 **Series:** Notifications and automation setup | **Course:** 5 of 6 | **Duration:** 3 min | **Audience:** Decision makers / administrators
 
+**Key:** \`reed-script-l2-s6-c5\`
+
 ---
 
 **Learning objectives**
@@ -15572,7 +15654,7 @@ INBOX_FILES["reed-script-l2-s6-c5"] = `# Configure the after sales care portal
 
 **Characters:** Sarah Mitchell (Managing Director, SunComfort Systems)
 
-**Scenario:** Sarah configures the after sales care portal settings — the contact pop-up the customer sees when they leave a review, and the notification recipients who are alerted when a negative review is submitted — so that SunComfort can respond to feedback before it escalates.
+**Scenario:** Sarah configures the after sales care portal settings — the contact pop-up the customer sees when they leave a review, and the notification recipients who are alerted when a review is submitted — so that SunComfort can respond to feedback before it escalates.
 
 ---
 
@@ -15587,53 +15669,49 @@ INBOX_FILES["reed-script-l2-s6-c5"] = `# Configure the after sales care portal
 
 ## What the after sales care portal shows the customer
 
-The after sales care portal is the page a customer reaches when they click the link in SunComfort's post-job email or SMS. It is where they leave their rating and, if they choose, write a comment about the service they received.
+The after sales care portal is the page a customer reaches when they click the link in SunComfort's post-job email or SMS. It is where they leave their rating and, if they choose, write a comment about the service they received. From the customer's perspective, it is a simple, clean page: a rating prompt, a comment box, and — if configured — a contact pop-up that gives them a way to reach the SunComfort office directly rather than simply leaving a score and moving on.
 
-From the customer's perspective, it is a simple, clean page. They see a rating prompt, a comment box, and — if configured — a contact pop-up that gives them a way to reach the SunComfort office if they want to raise something directly rather than just leaving a review. From SunComfort's perspective, it is the place where feedback becomes visible, and where the team has an opportunity to act on a negative experience before the customer shares it elsewhere.
+From SunComfort's perspective, the portal is where feedback becomes visible and actionable. One important limitation shapes how the notification chain needs to work: once a customer submits a review through the portal, they cannot modify or retract it. That makes the moment of submission final, which is exactly why the notification recipients you set up in this course matter — a negative review needs to reach the right people quickly, while there is still time to contact the customer and address their concern privately.
 
-One important limitation: once a customer submits a review through the portal, they cannot edit or retract it. This makes the moment of submission final — which is exactly why the notification chain matters. A negative review needs to reach the right people quickly, while there is still an opportunity to follow up with the customer and address their concern.
-
-Navigate to your profile icon, then Settings, then Jobs, then After Sales Care Portal Settings.
+Navigate to your profile icon, then Settings, then Self-service, then After Sales Care Portal Settings, then View.
 
 ## Configuring the contact pop-up
 
 The contact pop-up appears on the portal page and gives the customer a direct line to the office while they are in the act of leaving feedback. For a customer who is dissatisfied, having an easy route to speak with someone can be the difference between a private conversation and a public complaint.
 
-Sarah sets the email address in the pop-up to info@suncomfortsystems.co.uk and the phone number to 020 3026 6266. She sets the pop-up title to "How did we do?" and configures the available hours as Monday to Friday, 9:00 to 17:00. These details appear on the portal page alongside the review prompt.
-
-If you prefer not to show a contact pop-up on your portal, you can disable it by setting both the phone and email fields to their "do not show" option. For most businesses, leaving it on is the better choice — it signals that the company is open to feedback and reachable, which in itself shapes how a customer perceives the experience.
+Sarah sets the email address field to show SunComfort's company email — info@suncomfortsystems.co.uk — and the phone number to show SunComfort's company phone, 020 3026 6266. She sets the pop-up title to "How did we do?" and the description to a short line inviting customers to get in touch, then sets the availability timing to Monday to Friday, 9:00 to 17:00. These details appear on the portal page alongside the review prompt. If you prefer not to show a contact pop-up at all, set both the phone and email fields to "Don't Show" — removing both hides the entire pop-up from the portal page.
 
 ## Setting up notification recipients
 
-When a customer submits a review through the portal, Commusoft can notify specific people in the business. For negative reviews in particular, speed matters — the sooner the right person knows, the sooner they can follow up.
+When a customer submits a review through the portal, Commusoft can notify specific people in the business. For negative reviews in particular, speed matters: the sooner the right person knows, the sooner they can follow up.
 
-Sarah configures the notification recipients as follows. For in-system notifications, she adds Logan Chance (Operations Manager) and Sarah Mitchell (MD). Both will see an in-system alert whenever any review is submitted through the portal. For email notifications — which she reserves for negative feedback specifically — she adds Logan Chance. Logan receives an email the moment a customer submits a negative review, so he can reach out to the customer that day.
+In the Notifications section, Sarah configures the in-system notification recipients by selecting the Owner/Manager access role from the dropdown. Any user with that role — including Sarah and Logan Chance — will receive an in-system alert whenever a review is submitted through the portal. For email notifications, she adds Logan Chance individually by selecting him from the user dropdown, so he receives a direct email the moment a customer submits a negative review and can reach out to the customer that day.
 
-This two-layer approach means Sarah has visibility in-system across all reviews without being copied on every email, while Logan gets an immediate email prompt for the reviews that require a response. Configure your own notification recipients with the same logic: who needs to know immediately, who needs to know eventually, and which channel ensures they act on it.
+This two-layer approach gives Sarah visibility across all reviews in-system without Logan being copied on every routine notification, while Logan gets an immediate email prompt for the reviews that need a real response. Configure your own recipients with the same logic: which access role needs in-system visibility, and which individual needs an email that demands action.
 
 ---
 
 **Reflection**
 
-A customer submits a one-star review and writes a complaint through the after sales care portal. They then realise they mixed up SunComfort with another company and want to withdraw the review. What happens?
+A customer submits a one-star review through the after sales care portal. They then realise they left the review on the wrong company and want to withdraw it. What happens?
 
 - The customer can edit the review through the portal within 24 hours
 - The review cannot be modified or retracted once submitted ✓
 - The review is automatically held for moderation before it becomes visible
 
-*Feedback: Once a customer submits a review through the after sales care portal, it is final — they cannot edit it or take it back. This is why the notification chain is so important: the faster Logan and Sarah are alerted to a negative review, the sooner they can contact the customer directly, understand the situation, and resolve it before any further action is taken.*
+*Feedback: Once a customer submits a review through the after sales care portal, it is final — they cannot modify it or take it back. This is why the notification chain is so important. The faster the right people are alerted to a negative review, the sooner they can contact the customer directly, understand the situation, and resolve it before any further action is taken.*
 
 ---
 
 ## Summary
 
-The after sales care portal is now configured for SunComfort. The contact pop-up gives customers a route to the office while they are leaving feedback. Logan Chance receives an immediate email notification when a negative review is submitted, and both Logan and Sarah see it in-system. The full after sales care loop is now in place: the job closes, the automated message goes out 24 hours later, the customer clicks through to the portal, and if anything goes wrong, the team knows about it immediately. In the next course, the challenge tests the complete notification chain from job creation through to feedback.
+The after sales care portal is now configured for SunComfort. The contact pop-up gives customers a direct route to the office while they are leaving feedback. The Owner/Manager role receives in-system notifications for all reviews, and Logan Chance receives an immediate email notification when a negative review is submitted. The full after sales care loop is now in place: the job closes, the automated message goes out 24 hours later, the customer clicks through to the portal, and if anything goes wrong, the right people know about it immediately. In the next course, the series challenge runs a real job through the entire notification chain from assignment through to feedback.
 
 ---
 
 **Open items**
 
-None — all content verified against HC articles 217201 (after sales care portal settings) and 217021 (after sales care email and SMS template, cross-reference).
+None — all content verified against HC article 217201 (after sales care portal settings). Navigation path confirmed as Settings > Self-service > After Sales Care Portal Settings. In-system notifications confirmed as role-based (access role dropdown); email notifications confirmed as user, role, or custom address.
 `;
 
 INBOX_FILES["reed-script-l2-s6-challenge"] = `# Challenge: System is talking, not silent
@@ -22165,6 +22243,128 @@ After adding the file, paste this into the Tell the AI field:
 
 **AI content transformation**
 > Simplify
+`;
+
+INBOX_FILES["parta-c2-timeline-draft"] = `# Parta lesson draft: The timeline — reading history and taking action
+
+**Series:** Layer 1 — Office Staff Series 2 | **Course:** 2 of 10
+**Lesson format:** 1 lesson | **Estimated time:** 5 min
+**Video tool:** Clueso screen recording
+
+---
+
+## How this lesson is structured
+
+This draft separates what belongs in text blocks from what belongs in the video. The video is a continuous SunComfort walkthrough — Emma doing the steps. The text blocks carry the concepts, rules, and reference material that are clearer to read than to watch. They complement each other: the video shows the doing; the text explains the knowing. Some overlap is intentional reinforcement.
+
+---
+
+## [TEXT BLOCK — Lesson intro]
+
+**What you will learn**
+
+- Read and interpret timeline entries by event type
+- Search and filter the timeline to find specific events
+- Send communications, log notes, and update job status from the Actions menu
+
+Mrs. Thompson has called about Jake's heat pump service visit. She says something was not explained to her before he came out. Emma opens the timeline on the job record — and everything she needs to answer the query is already there. This lesson shows you how to use the timeline to piece together the full picture of any job, find specific events in seconds, and take action without switching screens.
+
+---
+
+## [VIDEO — SunComfort walkthrough]
+
+**What to record (Clueso):** Emma Clarke is logged in. She opens Mrs. Thompson's in-progress heat pump service job and navigates to the Timeline tab.
+
+The recording shows, in sequence:
+- The timeline open — all three entry types visible in context: Jake's visit notes (job record card), Sophie's communication (email or SMS), and a system status update
+- Expanding Jake's visit notes with "See more" — the full report visible without leaving the record
+- Using the date filter and the user filter together — filtering to Sophie's activity last week
+- The Actions menu — Emma selects Send email, composes in the side panel, sends; the email appears on the timeline immediately
+- Logging a call — typing a summary, @mentioning Jake
+- On hold — Emma selects On hold from the Actions menu, picks a reason, adds a note, sets a reminder date; the hold badge appears in the sidebar
+
+**Narration note:** The video narration does not define the three entry types or explain the on hold/abort distinction — those are in the text blocks below. The narration guides the viewer through what Emma is doing and why.
+
+**Approx. duration:** 2.5–3 min
+
+---
+
+## [TEXT BLOCK — Three types of timeline entries]
+
+The timeline captures every significant action on the job automatically. Three types of entries appear:
+
+**Communications** — emails, SMS messages, and logged calls. Each entry shows the sender, the recipient, and a preview of the message. On email cards, an inline Reply link lets you respond from the same card — the reply threads back to the original message and logs on the timeline the moment it is sent.
+
+**Job records** — appointments, parts requests, files, invoices. These appear as summary cards. Select See details to read the full record without leaving the timeline.
+
+**System updates** — automated actions, status changes, and stage transitions. Shorter entries that show what the system did and when.
+
+Every entry carries a timestamp and the name of whoever or whatever triggered it. Nothing is added manually — the timeline builds itself as the job moves forward.
+
+---
+
+## [TEXT BLOCK — Searching and filtering]
+
+When you need to find a specific event rather than scroll the full history:
+
+- **Search bar** — type a keyword and the timeline narrows to matching entries immediately
+- **Date dropdown** — filter by Today, Yesterday, This Week, or a custom date range
+- **User dropdown** — narrow to actions taken by one specific team member
+- **Filter icon** — toggle event categories on and off: Communications, Scheduled Activities, Automation, Objects, and Updates
+
+The date filter and user filter work together — set both at the same time to isolate exactly what one person did in a specific window. On a busy job with a long history, showing only Communications removes all the noise immediately.
+
+---
+
+## [QUIZ — Reflection prompt]
+
+Emma needs to find an email Sophie sent to Mrs. Thompson two weeks ago. Can she use the date filter and the user filter at the same time?
+
+- Yes ✓
+- No
+
+*Feedback (correct):* Both filters work together. Emma sets the date range to the relevant period and selects Sophie from the user dropdown. The timeline shows only Sophie's activity in that window.
+
+*Feedback (incorrect):* They do work together. Emma sets the date range and selects Sophie from the user dropdown — the timeline shows only her activity in that window.
+
+---
+
+## [TEXT BLOCK — On hold, Abort, and Free of charge]
+
+Three actions in the Actions menu affect the overall status of a job. Only one is reversible:
+
+**On hold** — pauses the job with a documented reason and a reminder date. The hold badge appears in the sidebar immediately so anyone who opens the record can see why it is paused. To remove the hold, select the link in the sidebar or book a new appointment. Use this whenever a job needs to wait — for a part on backorder, for a customer callback, for any temporary pause.
+
+**Abort** — permanently closes the job with a required reason. It cannot be undone. Reserved for genuine cancellations only.
+
+**Free of charge** — closes the job so no customer invoice is raised. Also irreversible. Use only when you are certain the work should not be billed.
+
+If there is any doubt, use On hold. It is the only option you can reverse.
+
+---
+
+## [QUIZ — Knowledge check]
+
+Jake has completed a heat pump service visit but a part is on backorder. The job needs to wait two weeks. What does Emma select from the Actions menu?
+
+A. Abort
+B. Free of charge
+C. On hold ✓
+D. Nothing — the job stays open automatically
+
+*Feedback (correct):* On hold is right. It pauses the job with a documented reason and a reminder date, and can be reversed when the part arrives. Abort is permanent and only for genuine cancellations. Free of charge removes the customer invoice, which is not needed here.
+
+*Feedback (incorrect):* The correct answer is On hold. It is the only reversible option — the job pauses with a reason and a reminder, and can be taken off hold when the part arrives. Abort permanently closes the job. Free of charge removes the customer invoice. The job does not stay open automatically without action.
+
+---
+
+## Production notes
+
+- Text blocks load in Parta before and after the video — learner reads the intro, watches the walkthrough, reads the concept blocks, takes each quiz in sequence
+- The video does not narrate the three entry types or the on hold/abort distinction — those live in the text blocks
+- Overlap between video and text is intentional: the video shows Emma filtering; the text block names and defines the filter options for reference
+- Approx. 35–40% of original script content moves to text blocks; the video covers the workflow demonstration
+- The reflection prompt (yes/no) and knowledge check (4-option) both become Parta quiz blocks — neither is embedded in the video
 `;
 
 function openInboxFile(key) {

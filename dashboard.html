@@ -1438,6 +1438,15 @@ function esc(str) {
   return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
+function renderOpenItems(text) {
+  if (!text) return '';
+  const items = text.match(/\(\d+\)\s*[^(]+/g);
+  if (!items || items.length < 2) return esc(text);
+  return '<ul style="margin:4px 0 0 0;padding-left:16px;font-size:13px;line-height:1.65">' +
+    items.map(i => '<li style="margin-bottom:4px">' + esc(i.replace(/^\(\d+\)\s*/, '').trim()) + '</li>').join('') +
+    '</ul>';
+}
+
 function renderPanel(num) {
   const c = COURSES[num];
 
@@ -1486,7 +1495,7 @@ function renderPanel(num) {
 
     if (c.openItems) {
       const isClean = c.openItems.toLowerCase().startsWith('none');
-      overviewHtml += `<div class="sc-meta-block" style="border-left:3px solid ${isClean ? '#22c55e' : '#f59e0b'};padding-left:12px"><strong>Open items</strong><br><span style="font-size:13px">${esc(c.openItems)}</span></div>`;
+      overviewHtml += `<div class="sc-meta-block" style="border-left:3px solid ${isClean ? '#22c55e' : '#f59e0b'};padding-left:12px"><strong>Open items</strong>${renderOpenItems(c.openItems)}</div>`;
     }
 
     // ── Tab 2: Script (type === "section" only) ──
@@ -1585,7 +1594,7 @@ function renderPanel(num) {
   // Open items
   if (c.openItems) {
     const isClean = c.openItems.toLowerCase().startsWith('none');
-    html += `<div class="sc-meta-block" style="border-left:3px solid ${isClean ? '#22c55e' : '#f59e0b'};padding-left:12px"><strong>Open items</strong><br><span style="font-size:13px">${esc(c.openItems)}</span></div>`;
+    html += `<div class="sc-meta-block" style="border-left:3px solid ${isClean ? '#22c55e' : '#f59e0b'};padding-left:12px"><strong>Open items</strong>${renderOpenItems(c.openItems)}</div>`;
   }
 
   return html;

@@ -236,7 +236,7 @@
 
   /* Course 8 tab panel */
   .panel-body.panel-tabbed { padding:0; }
-  .panel-tabs { display:flex; gap:0; border-bottom:2px solid var(--border); padding:0 20px; background:var(--surface); flex-shrink:0; }
+  .panel-tabs { display:flex; gap:0; border-bottom:2px solid var(--border); padding:0 20px; background:var(--surface); flex-shrink:0; position:sticky; top:0; z-index:10; box-shadow:0 2px 4px rgba(0,0,0,0.06); }
   .panel-tab { padding:10px 18px; font-size:13px; font-weight:600; color:var(--text-muted); cursor:pointer; border-bottom:2px solid transparent; margin-bottom:-2px; transition:color 0.15s, border-color 0.15s; white-space:nowrap; user-select:none; }
   .panel-tab:hover { color:var(--text); }
   .panel-tab.active { color:var(--orange); border-bottom-color:var(--orange); }
@@ -22664,7 +22664,7 @@ function downloadPanelPDF() {
   var filename = (sp.dataset.downloadFilename || 'document.md').replace(/\.md$/, '.pdf');
   var body = document.getElementById('panelBody');
   var opt = {
-    margin: [12, 14, 12, 14],
+    margin: [15, 15, 15, 15],
     filename: filename,
     image: { type: 'jpeg', quality: 0.97 },
     html2canvas: { scale: 2, useCORS: true },
@@ -22680,6 +22680,11 @@ function openPanel(num) {
   var btn = document.getElementById('panelDownload');
   btn.onclick = function() { downloadCourse(num); };
   btn.style.display = '';
+  var pdfBtn = document.getElementById('panelDownloadPDF');
+  pdfBtn.style.display = '';
+  var sp = document.getElementById('scriptPanel');
+  var pdfFilename = (c && c.title ? c.title : 'Course-' + num).replace(/[^a-zA-Z0-9\s\-]/g, '').replace(/\s+/g, '-') + '.pdf';
+  sp.dataset.downloadFilename = pdfFilename;
   document.getElementById('panelNum').textContent = 'Course ' + num + ' \u2014 The Job Record';
   document.getElementById('panelTitle').textContent = c.title;
   document.getElementById('panelMeta').innerHTML =

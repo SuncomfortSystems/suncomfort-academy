@@ -182,6 +182,8 @@
   .panel-notes h4 { margin: 0 0 10px; font-size: 12px; font-weight: 700; color: var(--grey); text-transform: uppercase; letter-spacing: .05em; }
   .note-item { background: #fff; border: 1px solid var(--border); border-left: 3px solid #fa6932; border-radius: 6px; padding: 8px 12px; margin-bottom: 8px; font-size: 13px; line-height: 1.45; white-space: pre-wrap; word-break: break-word; }
   .note-item .note-meta { font-size: 11px; color: var(--text-muted); margin-top: 5px; }
+  .note-resolve { margin-left: 8px; font-size: 11px; color: var(--text-muted); cursor: pointer; user-select: none; text-decoration: none; }
+  .note-resolve:hover { color: #fa6932; text-decoration: underline; }
   .note-empty { font-size: 13px; color: var(--text-muted); font-style: italic; margin-bottom: 10px; }
   .note-toggle { display: inline-block; font-size: 12px; color: #fa6932; cursor: pointer; font-weight: 700; user-select: none; margin-top: 2px; }
   .note-toggle:hover { text-decoration: underline; }
@@ -19446,8 +19448,10 @@ function renderNotes() {
   if (!mine.length) { list.innerHTML = '<div class="note-empty">No notes yet — be the first to leave one.</div>'; return; }
   list.innerHTML = mine.map(function(n) {
     var d = n.date ? new Date(n.date).toLocaleDateString() : '';
+    // Only notes saved with the new Id column can be resolved (old rows have id:'').
+    var resolve = n.id ? ' <span class="note-resolve" onclick="resolveNote(\'' + escNote(n.id) + '\')">Resolve</span>' : '';
     return '<div class="note-item">' + escNote(n.note) +
-      '<div class="note-meta">' + escNote(n.from || 'Anonymous') + (d ? ' · ' + d : '') + '</div></div>';
+      '<div class="note-meta">' + escNote(n.from || 'Anonymous') + (d ? ' · ' + d : '') + resolve + '</div></div>';
   }).join('');
 }
 
@@ -19464,10 +19468,12 @@ function submitNote() {
   if (!NOTES_ENDPOINT) { alert('Notes backend not set up yet.'); return; }
   var btn = document.getElementById('noteSubmit');
   btn.disabled = true; btn.textContent = 'Saving…';
+  // Stable per-note id so a single note can later be resolved (matched in the sheet's Id column).
+  var noteId = Date.now() + '-' + Math.random().toString(36).slice(2);
   fetch(NOTES_ENDPOINT, {
     method: 'POST',
     headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-    body: JSON.stringify({ course: currentNoteLabel, key: currentNoteKey, note: text, from: author })
+    body: JSON.stringify({ course: currentNoteLabel, key: currentNoteKey, note: text, from: author, id: noteId })
   })
     .then(function(r) { return r.json(); })
     .then(function() {
@@ -19477,6 +19483,29 @@ function submitNote() {
       loadNotes();
     })
     .catch(function() { btn.disabled = false; btn.textContent = 'Save note'; alert('Could not save note. Please try again.'); });
+}
+
+function resolveNote(id) {
+  if (!id || !NOTES_ENDPOINT) return;
+  // Optimistically mark the matching note 'done' so renderNotes hides it immediately.
+  var prev = null;
+  for (var i = 0; i < notesCache.length; i++) {
+    if (String(notesCache[i].id) === String(id)) { prev = notesCache[i].status; notesCache[i].status = 'done'; break; }
+  }
+  renderNotes();
+  fetch(NOTES_ENDPOINT, {
+    method: 'POST',
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    body: JSON.stringify({ kind: 'resolve', id: id })
+  })
+    .then(function(r) { return r.json(); })
+    .catch(function() {
+      // Backend unreachable — quietly restore the note so nothing is lost, and never throw.
+      for (var j = 0; j < notesCache.length; j++) {
+        if (String(notesCache[j].id) === String(id)) { notesCache[j].status = (prev == null ? 'open' : prev); break; }
+      }
+      renderNotes();
+    });
 }
 
 function openInboxFile(key) {

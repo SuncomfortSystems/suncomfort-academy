@@ -88,11 +88,32 @@
   .badge { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
   .badge-approved { background: #e8f5e9; color: #2e7d32; }
 
-  .status-pill { display: inline-block; font-size: 11px; padding: 2px 9px; border-radius: 10px; font-weight: 600; cursor: pointer; user-select: none; border: 1px solid transparent; transition: filter 0.15s, box-shadow 0.15s; }
-  .status-pill:hover { filter: brightness(0.97); box-shadow: 0 0 0 2px rgba(0,0,0,0.05); }
-  .status-draft { background: #eceff1; color: #546e7a; }
+  /* Card: read-only active-state pill */
+  .status-pill { display: inline-block; font-size: 11px; padding: 2px 9px; border-radius: 10px; font-weight: 600; }
+  .status-draft { background: #fdecea; color: #c62828; }
   .status-review { background: #fff3e0; color: #e65100; }
   .status-approved { background: #e8f5e9; color: #2e7d32; }
+
+  /* Panel footer: clickable Draft > Review > Approved traffic light */
+  .panel-status-footer { flex-shrink: 0; border-top: 2px solid var(--border); background: var(--surface); padding: 11px 20px; display: flex; align-items: center; gap: 12px; box-shadow: 0 -2px 4px rgba(0,0,0,0.05); }
+  .status-footer-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--text-muted); }
+  .status-seg { display: flex; align-items: center; gap: 8px; }
+  .status-step { font-size: 12px; font-weight: 700; padding: 5px 14px; border-radius: 14px; cursor: pointer; user-select: none; opacity: 0.4; transition: opacity 0.15s, box-shadow 0.15s; }
+  .status-step:hover { opacity: 0.8; }
+  .status-step.active { opacity: 1; box-shadow: 0 0 0 2px rgba(0,0,0,0.07); }
+  .status-step.locked { cursor: not-allowed; opacity: 0.25; }
+  .status-step.locked:hover { opacity: 0.25; }
+  .status-step-draft { background: #fdecea; color: #c62828; }
+  .status-step-review { background: #fff3e0; color: #e65100; }
+  .status-step-approved { background: #e8f5e9; color: #2e7d32; }
+  .status-arrow { color: var(--text-muted); font-weight: 700; font-size: 13px; }
+  .status-footer-hint { font-size: 11px; color: var(--text-muted); font-style: italic; margin-left: auto; }
+
+  /* Open items as a tick-off checklist */
+  .open-items-list { list-style: none; margin: 8px 0 0 0; padding: 0; font-size: 13px; line-height: 1.5; }
+  .open-items-list li { margin-bottom: 6px; display: flex; align-items: flex-start; gap: 8px; }
+  .open-items-list input[type=checkbox] { margin-top: 2px; flex-shrink: 0; cursor: pointer; }
+  .open-items-list .oi-text.done { text-decoration: line-through; opacity: 0.5; }
 
   .series-block { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-bottom: 28px; }
   .series-header { background: var(--blue1); color: var(--white); padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
@@ -1168,6 +1189,7 @@
   </div>
   <div class="panel-meta" id="panelMeta"></div>
   <div class="panel-body" id="panelBody"></div>
+  <div class="panel-status-footer" id="panelStatusFooter" style="display:none"></div>
 </div>
 
 <script>
@@ -1767,13 +1789,20 @@ function esc(str) {
   return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
-function renderOpenItems(text) {
+function renderOpenItems(text, key) {
   if (!text) return '';
   const items = text.match(/\(\d+\)\s*[^(]+/g);
   if (items && items.length) {
-    return '<ul style="margin:6px 0 0 0;padding-left:18px;font-size:13px;line-height:1.65">' +
-      items.map(i => '<li style="margin-bottom:4px">' + esc(i.replace(/^\(\d+\)\s*/, '').trim()) + '</li>').join('') +
-      '</ul>';
+    let h = '<ul class="open-items-list">';
+    items.forEach((it, i) => {
+      const label = esc(it.replace(/^\(\d+\)\s*/, '').trim());
+      const done = key && itemChecked(key, i);
+      h += '<li><input type="checkbox" ' + (done ? 'checked' : '') +
+        ' onchange="toggleOpenItem(\'' + key + '\',' + i + ',this)">' +
+        '<span class="oi-text' + (done ? ' done' : '') + '">' + label + '</span></li>';
+    });
+    h += '</ul>';
+    return h;
   }
   return '<div style="margin-top:6px;font-size:13px;line-height:1.6">' + esc(text) + '</div>';
 }
@@ -1827,7 +1856,7 @@ function renderPanel(num) {
 
   if (c.openItems) {
     const isClean = c.openItems.toLowerCase().startsWith('none');
-    overviewHtml += `<div class="sc-meta-block" style="border-left:3px solid ${isClean ? '#22c55e' : '#f59e0b'};padding-left:12px"><strong>Open items</strong>${renderOpenItems(c.openItems)}</div>`;
+    overviewHtml += `<div class="sc-meta-block" style="border-left:3px solid ${isClean ? '#22c55e' : '#f59e0b'};padding-left:12px"><strong>Open items</strong>${renderOpenItems(c.openItems, 'panel-' + num)}</div>`;
   }
 
   // ── Tab 2: Script (type === "section" only) ──
@@ -22852,6 +22881,8 @@ function openInboxFile(key) {
   document.getElementById('panelMeta').innerHTML = '';
   document.getElementById('panelBody').innerHTML = renderSettingsMd(content);
   document.getElementById('panelBody').scrollTop = 0;
+  var footer = document.getElementById('panelStatusFooter');
+  if (footer) { footer.style.display = 'none'; footer.innerHTML = ''; }
   var sp = document.getElementById('scriptPanel');
   sp.dataset.downloadKey = key;
   sp.dataset.downloadFilename = lbl.title.replace(/[^a-zA-Z0-9\s\-]/g, '').replace(/\s+/g, '-') + '.md';
@@ -22977,6 +23008,7 @@ function openPanel(num) {
   panelBody.classList.add('panel-tabbed');
   panelBody.innerHTML = renderPanel(num);
   panelBody.scrollTop = 0;
+  renderStatusFooter(num);
   document.getElementById('scriptPanel').classList.add('open');
   document.getElementById('overlay').classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -23400,12 +23432,15 @@ document.addEventListener('DOMContentLoaded', function() {
   initStatusPills();
 });
 
-// ---- Course status toggle (Draft -> Review -> Approved) ----
-// COMMITTED_STATUS is the shared baseline saved in this file. Live clicks are
-// stored in the browser and read on top of it; ask Fern to snapshot clicks here.
+// ---- Course status (Draft -> Review -> Approved) ----
+// The card shows only the active state, read-only. The clickable traffic light
+// lives in the panel footer. Approved is locked until all open items are ticked.
+// COMMITTED_STATUS is the shared baseline saved in this file; live clicks are
+// stored in the browser and read on top of it. Ask Fern to snapshot clicks here.
 var COMMITTED_STATUS = {};
 var STATUS_ORDER = ['Draft', 'Review', 'Approved'];
 var STATUS_CLASS = { Draft: 'status-draft', Review: 'status-review', Approved: 'status-approved' };
+var STATUS_STEP_CLASS = { Draft: 'status-step-draft', Review: 'status-step-review', Approved: 'status-step-approved' };
 
 function statusKeyFor(card) {
   var oc = card.getAttribute('onclick') || '';
@@ -23425,10 +23460,37 @@ function getStatus(key) {
 function setStatus(key, v) {
   try { localStorage.setItem('cstatus:' + key, v); } catch (e) {}
 }
-function renderStatusPill(pill, status) {
+
+// Open-item tick state (per course key + item index)
+function itemChecked(key, i) {
+  try { return localStorage.getItem('citem:' + key + ':' + i) === '1'; } catch (e) { return false; }
+}
+function setItemChecked(key, i, v) {
+  try { localStorage.setItem('citem:' + key + ':' + i, v ? '1' : '0'); } catch (e) {}
+}
+function courseOpenItemCount(num) {
+  var c = COURSES[num];
+  if (!c || !c.openItems) return 0;
+  if (c.openItems.toLowerCase().trim().indexOf('none') === 0) return 0;
+  var m = c.openItems.match(/\(\d+\)\s*[^(]+/g);
+  return m ? m.length : 0;
+}
+function approvalUnlocked(num) {
+  var key = 'panel-' + num;
+  var n = courseOpenItemCount(num);
+  for (var i = 0; i < n; i++) { if (!itemChecked(key, i)) return false; }
+  return true;
+}
+
+// Card: read-only active-state pill
+function renderCardPill(pill, status) {
   pill.className = 'status-pill ' + STATUS_CLASS[status];
   pill.textContent = status === 'Approved' ? '✓ Approved' : status;
-  pill.title = 'Status: ' + status + ' — click to advance (Draft → Review → Approved)';
+  pill.title = 'Status: ' + status;
+}
+function updateCardPill(key) {
+  var pill = document.querySelector('.status-pill[data-statuskey="' + key + '"]');
+  if (pill) renderCardPill(pill, getStatus(key));
 }
 function initStatusPills() {
   var cards = document.querySelectorAll('.course-card');
@@ -23441,17 +23503,48 @@ function initStatusPills() {
       var old = meta.querySelector('.badge');
       if (old) old.parentNode.removeChild(old);
       var pill = document.createElement('span');
-      renderStatusPill(pill, getStatus(key));
-      pill.addEventListener('click', function(e) {
-        e.stopPropagation();
-        var cur = getStatus(key);
-        var next = STATUS_ORDER[(STATUS_ORDER.indexOf(cur) + 1) % STATUS_ORDER.length];
-        setStatus(key, next);
-        renderStatusPill(pill, next);
-      });
+      pill.dataset.statuskey = key;
+      renderCardPill(pill, getStatus(key));
       meta.appendChild(pill);
     })(cards[i]);
   }
+}
+
+// Panel footer: clickable Draft > Review > Approved
+function renderStatusFooter(num) {
+  var footer = document.getElementById('panelStatusFooter');
+  if (!footer) return;
+  var key = 'panel-' + num;
+  var unlocked = approvalUnlocked(num);
+  var status = getStatus(key);
+  // Integrity: cannot stay Approved if open items get unticked
+  if (status === 'Approved' && !unlocked) { setStatus(key, 'Review'); status = 'Review'; }
+  footer.dataset.num = '' + num;
+  var h = '<span class="status-footer-label">Status</span><div class="status-seg">';
+  STATUS_ORDER.forEach(function(name, idx) {
+    if (idx) h += '<span class="status-arrow">›</span>';
+    var locked = (name === 'Approved' && !unlocked);
+    var cls = 'status-step ' + STATUS_STEP_CLASS[name] + (name === status ? ' active' : '') + (locked ? ' locked' : '');
+    h += '<span class="' + cls + '" onclick="setPanelStatus(\'' + num + '\',\'' + name + '\')"' +
+      (locked ? ' title="Tick all open items to approve"' : '') + '>' + name + '</span>';
+  });
+  h += '</div>';
+  if (!unlocked) h += '<span class="status-footer-hint">Tick all open items to approve</span>';
+  footer.innerHTML = h;
+  footer.style.display = '';
+}
+function setPanelStatus(num, name) {
+  if (name === 'Approved' && !approvalUnlocked(num)) return;
+  setStatus('panel-' + num, name);
+  renderStatusFooter(num);
+  updateCardPill('panel-' + num);
+}
+function toggleOpenItem(key, i, el) {
+  setItemChecked(key, i, el.checked);
+  var span = el.parentNode.querySelector('.oi-text');
+  if (span) span.classList.toggle('done', el.checked);
+  var footer = document.getElementById('panelStatusFooter');
+  if (footer && footer.dataset.num) renderStatusFooter(footer.dataset.num);
 }
 
 function toggleSidebar() {

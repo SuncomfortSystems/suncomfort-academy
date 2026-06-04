@@ -177,6 +177,20 @@
   .panel-meta-item strong { color: var(--white); }
   .panel-body { flex: 1; overflow-y: auto; padding: 24px 28px; }
 
+  /* Notes section */
+  .panel-notes { border-top: 2px solid var(--border); background: #f8f9fb; padding: 14px 28px; flex-shrink: 0; max-height: 40vh; overflow-y: auto; }
+  .panel-notes h4 { margin: 0 0 10px; font-size: 12px; font-weight: 700; color: var(--grey); text-transform: uppercase; letter-spacing: .05em; }
+  .note-item { background: #fff; border: 1px solid var(--border); border-left: 3px solid #fa6932; border-radius: 6px; padding: 8px 12px; margin-bottom: 8px; font-size: 13px; line-height: 1.45; white-space: pre-wrap; word-break: break-word; }
+  .note-item .note-meta { font-size: 11px; color: var(--text-muted); margin-top: 5px; }
+  .note-empty { font-size: 13px; color: var(--text-muted); font-style: italic; margin-bottom: 10px; }
+  .note-toggle { display: inline-block; font-size: 12px; color: #fa6932; cursor: pointer; font-weight: 700; user-select: none; margin-top: 2px; }
+  .note-toggle:hover { text-decoration: underline; }
+  .note-form { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
+  .note-form input, .note-form textarea { font-family: inherit; font-size: 13px; padding: 8px 10px; border: 1px solid var(--border); border-radius: 6px; width: 100%; box-sizing: border-box; }
+  .note-form textarea { min-height: 64px; resize: vertical; }
+  .note-form button { align-self: flex-end; background: #fa6932; color: #fff; border: none; border-radius: 6px; padding: 8px 18px; font-size: 13px; font-weight: 600; cursor: pointer; }
+  .note-form button:disabled { opacity: .5; cursor: default; }
+
   /* Rendered script styles */
   .sc-title { font-size: 20px; font-weight: 700; color: var(--grey); margin-bottom: 4px; }
   .sc-meta-block { background: var(--bg); border-left: 3px solid var(--orange); border-radius: 0 6px 6px 0; padding: 12px 16px; margin-bottom: 20px; font-size: 13px; line-height: 1.6; }
@@ -1016,6 +1030,16 @@
   <div class="panel-meta" id="panelMeta"></div>
   <div class="panel-body" id="panelBody"></div>
   <div class="panel-status-footer" id="panelStatusFooter" style="display:none"></div>
+  <div class="panel-notes" id="panelNotes" style="display:none">
+    <h4>Notes</h4>
+    <div id="notesList"></div>
+    <div class="note-toggle" id="noteAddToggle" onclick="toggleNoteForm()">+ Add a note</div>
+    <div class="note-form" id="noteForm" style="display:none">
+      <input type="text" id="noteAuthor" placeholder="Your name" autocomplete="name" />
+      <textarea id="noteText" placeholder="Leave a note about this script or data…"></textarea>
+      <button id="noteSubmit" onclick="submitNote()">Save note</button>
+    </div>
+  </div>
 </div>
 
 <script>
@@ -19378,6 +19402,78 @@ D. Nothing — the job stays open automatically
 - The reflection prompt (yes/no) and knowledge check (4-option) both become Parta quiz blocks — neither is embedded in the video
 `;
 
+// ===== Dashboard Notes (Google Sheet backend) =====
+// Paste your Apps Script Web App URL between the quotes below to go live.
+var NOTES_ENDPOINT = 'https://script.google.com/macros/s/AKfycbyLELFIYvoE_kaUzTrYINz_rQUVXlzUkU6QCdPZ9blB7vUq5TDSnKFt13MBQNwTfolT/exec';
+var currentNoteKey = '';
+var currentNoteLabel = '';
+var notesCache = [];
+
+function setNoteContext(key, label) {
+  currentNoteKey = key || '';
+  currentNoteLabel = label || key || '';
+  var box = document.getElementById('panelNotes');
+  if (!box) return;
+  if (!currentNoteKey) { box.style.display = 'none'; return; }
+  box.style.display = '';
+  document.getElementById('noteForm').style.display = 'none';
+  var ta = document.getElementById('noteText'); if (ta) ta.value = '';
+  loadNotes();
+}
+
+function escNote(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+
+function loadNotes() {
+  var list = document.getElementById('notesList');
+  if (!NOTES_ENDPOINT) { list.innerHTML = '<div class="note-empty">Notes backend not set up yet.</div>'; return; }
+  list.innerHTML = '<div class="note-empty">Loading notes…</div>';
+  fetch(NOTES_ENDPOINT)
+    .then(function(r) { return r.json(); })
+    .then(function(rows) { notesCache = rows || []; renderNotes(); })
+    .catch(function() { list.innerHTML = '<div class="note-empty">Could not load notes.</div>'; });
+}
+
+function renderNotes() {
+  var list = document.getElementById('notesList');
+  var mine = notesCache.filter(function(n) {
+    return String(n.key) === String(currentNoteKey) && String(n.status || '').toLowerCase() !== 'done';
+  });
+  if (!mine.length) { list.innerHTML = '<div class="note-empty">No notes yet — be the first to leave one.</div>'; return; }
+  list.innerHTML = mine.map(function(n) {
+    var d = n.date ? new Date(n.date).toLocaleDateString() : '';
+    return '<div class="note-item">' + escNote(n.note) +
+      '<div class="note-meta">' + escNote(n.from || 'Anonymous') + (d ? ' · ' + d : '') + '</div></div>';
+  }).join('');
+}
+
+function toggleNoteForm() {
+  var f = document.getElementById('noteForm');
+  f.style.display = (f.style.display === 'none') ? '' : 'none';
+  if (f.style.display !== 'none') document.getElementById('noteText').focus();
+}
+
+function submitNote() {
+  var text = document.getElementById('noteText').value.trim();
+  var author = document.getElementById('noteAuthor').value.trim();
+  if (!text) { document.getElementById('noteText').focus(); return; }
+  if (!NOTES_ENDPOINT) { alert('Notes backend not set up yet.'); return; }
+  var btn = document.getElementById('noteSubmit');
+  btn.disabled = true; btn.textContent = 'Saving…';
+  fetch(NOTES_ENDPOINT, {
+    method: 'POST',
+    headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+    body: JSON.stringify({ course: currentNoteLabel, key: currentNoteKey, note: text, from: author })
+  })
+    .then(function(r) { return r.json(); })
+    .then(function() {
+      document.getElementById('noteText').value = '';
+      document.getElementById('noteForm').style.display = 'none';
+      btn.disabled = false; btn.textContent = 'Save note';
+      loadNotes();
+    })
+    .catch(function() { btn.disabled = false; btn.textContent = 'Save note'; alert('Could not save note. Please try again.'); });
+}
+
 function openInboxFile(key) {
   var content = INBOX_FILES[key];
   if (!content) { content = 'Content not found.'; }
@@ -19569,6 +19665,7 @@ function openInboxFile(key) {
   sp.classList.add('open');
   document.getElementById('overlay').classList.add('open');
   document.body.style.overflow = 'hidden';
+  setNoteContext('inbox:' + key, lbl.title);
 }
 
 function coursesToMd(c) {
@@ -19687,12 +19784,14 @@ function openPanel(num) {
   document.getElementById('scriptPanel').classList.add('open');
   document.getElementById('overlay').classList.add('open');
   document.body.style.overflow = 'hidden';
+  setNoteContext('course:' + num, c.title);
 }
 
 function closePanel() {
   document.getElementById('scriptPanel').classList.remove('open');
   document.getElementById('overlay').classList.remove('open');
   document.body.style.overflow = '';
+  setNoteContext('', '');
 }
 
 function switchPanelTab(name) {
@@ -20086,6 +20185,7 @@ function openSettingsPanel(name) {
   document.getElementById('scriptPanel').classList.add('open');
   document.getElementById('overlay').classList.add('open');
   document.body.style.overflow = 'hidden';
+  setNoteContext('settings:' + name, name);
 }
 
 function toggleFolder(header) {

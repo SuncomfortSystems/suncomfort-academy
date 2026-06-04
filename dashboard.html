@@ -20231,15 +20231,6 @@ function toggleSidebar() {
   btn.title = collapsed ? 'Expand sidebar' : 'Collapse sidebar';
 }
 
-// Inbox only shown when ?admin=true is present in the URL
-(function() {
-  var params = new URLSearchParams(window.location.search);
-  if (params.get('admin') === 'true') {
-    var navInbox = document.getElementById('nav-inbox');
-    if (navInbox) navInbox.style.display = '';
-  }
-})();
-
 // Training view: only SunComfort Data and SunComfort Website shown when ?training=true
 (function() {
   var params = new URLSearchParams(window.location.search);

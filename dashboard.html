@@ -1764,10 +1764,12 @@ function esc(str) {
 function renderOpenItems(text) {
   if (!text) return '';
   const items = text.match(/\(\d+\)\s*[^(]+/g);
-  if (!items || items.length < 2) return esc(text);
-  return '<ul style="margin:4px 0 0 0;padding-left:16px;font-size:13px;line-height:1.65">' +
-    items.map(i => '<li style="margin-bottom:4px">' + esc(i.replace(/^\(\d+\)\s*/, '').trim()) + '</li>').join('') +
-    '</ul>';
+  if (items && items.length) {
+    return '<ul style="margin:6px 0 0 0;padding-left:18px;font-size:13px;line-height:1.65">' +
+      items.map(i => '<li style="margin-bottom:4px">' + esc(i.replace(/^\(\d+\)\s*/, '').trim()) + '</li>').join('') +
+      '</ul>';
+  }
+  return '<div style="margin-top:6px;font-size:13px;line-height:1.6">' + esc(text) + '</div>';
 }
 
 function renderPanel(num) {

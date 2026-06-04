@@ -88,6 +88,12 @@
   .badge { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 10px; font-weight: 600; }
   .badge-approved { background: #e8f5e9; color: #2e7d32; }
 
+  .status-pill { display: inline-block; font-size: 11px; padding: 2px 9px; border-radius: 10px; font-weight: 600; cursor: pointer; user-select: none; border: 1px solid transparent; transition: filter 0.15s, box-shadow 0.15s; }
+  .status-pill:hover { filter: brightness(0.97); box-shadow: 0 0 0 2px rgba(0,0,0,0.05); }
+  .status-draft { background: #eceff1; color: #546e7a; }
+  .status-review { background: #fff3e0; color: #e65100; }
+  .status-approved { background: #e8f5e9; color: #2e7d32; }
+
   .series-block { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-bottom: 28px; }
   .series-header { background: var(--blue1); color: var(--white); padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
   .series-header h2 { font-size: 16px; font-weight: 700; }
@@ -23391,7 +23397,62 @@ document.addEventListener('DOMContentLoaded', function() {
       showView(saved, match);
     }
   } catch(e) {}
+  initStatusPills();
 });
+
+// ---- Course status toggle (Draft -> Review -> Approved) ----
+// COMMITTED_STATUS is the shared baseline saved in this file. Live clicks are
+// stored in the browser and read on top of it; ask Fern to snapshot clicks here.
+var COMMITTED_STATUS = {};
+var STATUS_ORDER = ['Draft', 'Review', 'Approved'];
+var STATUS_CLASS = { Draft: 'status-draft', Review: 'status-review', Approved: 'status-approved' };
+
+function statusKeyFor(card) {
+  var oc = card.getAttribute('onclick') || '';
+  var m = oc.match(/openPanel\(\s*'?([^')]+?)'?\s*\)/);
+  if (m) return 'panel-' + m[1];
+  m = oc.match(/openInboxFile\(\s*'([^']+)'\s*\)/);
+  if (m) return m[1];
+  return null;
+}
+function getStatus(key) {
+  try {
+    var v = localStorage.getItem('cstatus:' + key);
+    if (v && STATUS_ORDER.indexOf(v) !== -1) return v;
+  } catch (e) {}
+  return COMMITTED_STATUS[key] || 'Draft';
+}
+function setStatus(key, v) {
+  try { localStorage.setItem('cstatus:' + key, v); } catch (e) {}
+}
+function renderStatusPill(pill, status) {
+  pill.className = 'status-pill ' + STATUS_CLASS[status];
+  pill.textContent = status === 'Approved' ? '✓ Approved' : status;
+  pill.title = 'Status: ' + status + ' — click to advance (Draft → Review → Approved)';
+}
+function initStatusPills() {
+  var cards = document.querySelectorAll('.course-card');
+  for (var i = 0; i < cards.length; i++) {
+    (function(card) {
+      var key = statusKeyFor(card);
+      if (!key) return;
+      var meta = card.querySelector('.course-meta');
+      if (!meta) return;
+      var old = meta.querySelector('.badge');
+      if (old) old.parentNode.removeChild(old);
+      var pill = document.createElement('span');
+      renderStatusPill(pill, getStatus(key));
+      pill.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var cur = getStatus(key);
+        var next = STATUS_ORDER[(STATUS_ORDER.indexOf(cur) + 1) % STATUS_ORDER.length];
+        setStatus(key, next);
+        renderStatusPill(pill, next);
+      });
+      meta.appendChild(pill);
+    })(cards[i]);
+  }
+}
 
 function toggleSidebar() {
   var sidebar = document.querySelector('.sidebar');

@@ -182,6 +182,8 @@
   .panel-notes h4 { margin: 0 0 10px; font-size: 12px; font-weight: 700; color: var(--grey); text-transform: uppercase; letter-spacing: .05em; }
   .note-item { background: #fff; border: 1px solid var(--border); border-left: 3px solid #fa6932; border-radius: 6px; padding: 8px 12px; margin-bottom: 8px; font-size: 13px; line-height: 1.45; white-space: pre-wrap; word-break: break-word; }
   .note-item .note-meta { font-size: 11px; color: var(--text-muted); margin-top: 5px; }
+  .note-item.note-resolved { opacity: .55; text-decoration: line-through; }
+  .note-item.note-resolved .note-meta { text-decoration: none; }
   .note-resolve { margin-left: 8px; font-size: 11px; color: var(--text-muted); cursor: pointer; user-select: none; text-decoration: none; }
   .note-resolve:hover { color: #fa6932; text-decoration: underline; }
   .note-empty { font-size: 13px; color: var(--text-muted); font-style: italic; margin-bottom: 10px; }
@@ -19449,8 +19451,9 @@ function renderNotes() {
   list.innerHTML = mine.map(function(n) {
     var d = n.date ? new Date(n.date).toLocaleDateString() : '';
     // Only notes saved with the new Id column can be resolved (old rows have id:'').
-    var resolve = n.id ? ' <span class="note-resolve" onclick="resolveNote(\'' + escNote(n.id) + '\')">Resolve</span>' : '';
-    return '<div class="note-item">' + escNote(n.note) +
+    // Once resolved this session, strike it through and drop the Resolve link.
+    var resolve = (n.id && !n._resolved) ? ' <span class="note-resolve" onclick="resolveNote(\'' + escNote(n.id) + '\')">Resolve</span>' : '';
+    return '<div class="note-item' + (n._resolved ? ' note-resolved' : '') + '">' + escNote(n.note) +
       '<div class="note-meta">' + escNote(n.from || 'Anonymous') + (d ? ' · ' + d : '') + resolve + '</div></div>';
   }).join('');
 }
@@ -19487,10 +19490,10 @@ function submitNote() {
 
 function resolveNote(id) {
   if (!id || !NOTES_ENDPOINT) return;
-  // Optimistically mark the matching note 'done' so renderNotes hides it immediately.
-  var prev = null;
+  // Strike the note through immediately (transient flag — still visible this session).
+  // The backend marks it 'done', so it's filtered out next time the panel reopens.
   for (var i = 0; i < notesCache.length; i++) {
-    if (String(notesCache[i].id) === String(id)) { prev = notesCache[i].status; notesCache[i].status = 'done'; break; }
+    if (String(notesCache[i].id) === String(id)) { notesCache[i]._resolved = true; break; }
   }
   renderNotes();
   fetch(NOTES_ENDPOINT, {
@@ -19500,9 +19503,9 @@ function resolveNote(id) {
   })
     .then(function(r) { return r.json(); })
     .catch(function() {
-      // Backend unreachable — quietly restore the note so nothing is lost, and never throw.
+      // Backend unreachable — un-strike so nothing is lost, and never throw.
       for (var j = 0; j < notesCache.length; j++) {
-        if (String(notesCache[j].id) === String(id)) { notesCache[j].status = (prev == null ? 'open' : prev); break; }
+        if (String(notesCache[j].id) === String(id)) { notesCache[j]._resolved = false; break; }
       }
       renderNotes();
     });
@@ -19684,6 +19687,7 @@ function openInboxFile(key) {
   document.getElementById('panelNum').textContent = lbl.num;
   document.getElementById('panelTitle').textContent = lbl.title;
   document.getElementById('panelMeta').innerHTML = '';
+  document.getElementById('panelBody').classList.remove('panel-tabbed');
   document.getElementById('panelBody').innerHTML = renderSettingsMd(content);
   document.getElementById('panelBody').scrollTop = 0;
   var footer = document.getElementById('panelStatusFooter');
@@ -20214,6 +20218,7 @@ function openSettingsPanel(name) {
   document.getElementById('panelNum').textContent = 'SunComfort Settings';
   document.getElementById('panelTitle').textContent = name;
   document.getElementById('panelMeta').innerHTML = '';
+  document.getElementById('panelBody').classList.remove('panel-tabbed');
   document.getElementById('panelBody').innerHTML = renderSettingsMd(content);
   document.getElementById('panelBody').scrollTop = 0;
   document.getElementById('scriptPanel').classList.add('open');

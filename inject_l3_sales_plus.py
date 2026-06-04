@@ -1,6 +1,6 @@
 import os
 
-scripts_dir = r"C:\Users\sarab\Desktop\Commusoft\Owners Inbox\Scripts"
+scripts_dir = r"C:\Users\sarab\Desktop\Commusoft\Content"
 dashboard_path = r"C:\Users\sarab\Desktop\Commusoft\github\suncomfort-academy\dashboard.html"
 
 files = [

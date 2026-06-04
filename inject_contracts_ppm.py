@@ -1,6 +1,6 @@
 import re
 
-scripts_dir = r"C:\Users\sarab\Desktop\Commusoft\Owners Inbox\Scripts"
+scripts_dir = r"C:\Users\sarab\Desktop\Commusoft\Content"
 dashboard_path = r"C:\Users\sarab\Desktop\Commusoft\github\suncomfort-academy\dashboard.html"
 
 files = {
@@ -15,7 +15,7 @@ files = {
 with open(dashboard_path, "r", encoding="utf-8") as f:
     html = f.read()
 
-# Find the insertion point — after the last l3-sales-plus entry
+# Find the insertion point â€” after the last l3-sales-plus entry
 insert_after = "INBOX_FILES[\"reed-script-l3-sales-plus-challenge\"]"
 pattern = re.compile(
     r'(INBOX_FILES\["reed-script-l3-sales-plus-challenge"\] = `.*?`;\n)',

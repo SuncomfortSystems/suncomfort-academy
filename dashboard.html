@@ -233,6 +233,20 @@
   .pw-btn { width:100%; padding:10px; background:var(--grey); color:#fff; border:none; border-radius:6px; font-size:14px; font-weight:600; cursor:pointer; }
   .pw-btn:hover { background:var(--blue1); }
   .pw-error { font-size:12px; color:#c62828; margin-top:8px; display:none; }
+
+  /* Course 8 tab panel */
+  .panel-body.panel-tabbed { padding:0; }
+  .panel-tabs { display:flex; gap:0; border-bottom:2px solid var(--border); padding:0 20px; background:var(--surface); flex-shrink:0; }
+  .panel-tab { padding:10px 18px; font-size:13px; font-weight:600; color:var(--text-muted); cursor:pointer; border-bottom:2px solid transparent; margin-bottom:-2px; transition:color 0.15s, border-color 0.15s; white-space:nowrap; user-select:none; }
+  .panel-tab:hover { color:var(--text); }
+  .panel-tab.active { color:var(--orange); border-bottom-color:var(--orange); }
+  .panel-tab-content { display:none; }
+  .panel-tab-content.active { display:block; }
+  .kc-question { font-weight:600; font-size:13px; margin-bottom:8px; line-height:1.55; }
+  .kc-options { list-style:none; margin:0 0 8px; padding:0; }
+  .kc-options li { font-size:13px; padding:4px 10px; border-radius:4px; margin-bottom:3px; line-height:1.5; }
+  .kc-options li.kc-correct { background:#e8f5e9; color:#2e7d32; font-weight:700; }
+  .kc-options li.kc-other { background:#f8f9fb; color:var(--text-muted); }
 </style>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
@@ -1426,6 +1440,90 @@ function esc(str) {
 
 function renderPanel(num) {
   const c = COURSES[num];
+
+  // ── Course 8: tab layout ───────────────────────────────────────────────────
+  if (num === 8) {
+    // Helper: render one reflection item for the Knowledge Check tab
+    function renderKcItem(s) {
+      let h = '';
+      h += '<div class="sc-interactivity" style="margin-bottom:16px">';
+      h += `<div class="sc-interactivity-label">${esc(s.label)}</div>`;
+      h += `<p class="kc-question">${esc(s.question)}</p>`;
+      h += '<ul class="kc-options">';
+      s.options.forEach(o => {
+        // Determine if this option is the correct one
+        // For Yes/No options the correct field is the word itself; for A/B/C/D options it is the letter
+        const letter = o.split('.')[0].trim(); // e.g. "A" from "A. Requested", or "Yes"
+        const isCorrect = (letter === s.correct) || (o === s.correct);
+        h += `<li class="${isCorrect ? 'kc-correct' : 'kc-other'}">${esc(o)}${isCorrect ? ' ✓' : ''}</li>`;
+      });
+      h += '</ul>';
+      h += `<div class="sc-feedback">${esc(s.feedback)}</div>`;
+      h += '</div>';
+      return h;
+    }
+
+    // ── Tab 1: Overview ──
+    let overviewHtml = '';
+    overviewHtml += '<div class="sc-meta-block">';
+    overviewHtml += '<strong>Learning objectives</strong><ol style="margin:6px 0 0 18px;font-size:13px;line-height:1.7">';
+    c.objectives.forEach(o => { overviewHtml += `<li>${esc(o)}</li>`; });
+    overviewHtml += '</ol></div>';
+
+    overviewHtml += `<div class="sc-meta-block"><strong>Persona</strong><br><span style="font-size:13px">${esc(c.persona)}</span></div>`;
+    overviewHtml += `<div class="sc-meta-block"><strong>Characters</strong><br><span style="font-size:13px">${esc(c.characters)}</span></div>`;
+    overviewHtml += `<div class="sc-meta-block"><strong>Scenario</strong><br><span style="font-size:13px">${esc(c.scenario)}</span></div>`;
+
+    if (c.productionSetup) {
+      overviewHtml += '<div class="sc-meta-block"><strong>Production setup</strong>';
+      overviewHtml += '<table style="font-size:13px;margin-top:6px;width:100%;border-collapse:collapse">';
+      overviewHtml += `<tr><td style="padding:3px 12px 3px 0;font-weight:600;white-space:nowrap;vertical-align:top">Logged-in user</td><td style="line-height:1.5">${esc(c.productionSetup.loggedInUser)}</td></tr>`;
+      overviewHtml += `<tr><td style="padding:3px 12px 3px 0;font-weight:600;white-space:nowrap;vertical-align:top">Customer record</td><td style="line-height:1.5">${esc(c.productionSetup.customerRecord)}</td></tr>`;
+      overviewHtml += `<tr><td style="padding:3px 12px 3px 0;font-weight:600;white-space:nowrap;vertical-align:top">Existing data</td><td style="line-height:1.5">${esc(c.productionSetup.existingData)}</td></tr>`;
+      overviewHtml += `<tr><td style="padding:3px 12px 3px 0;font-weight:600;white-space:nowrap;vertical-align:top">Assets required</td><td style="line-height:1.5">${esc(c.productionSetup.assetsRequired)}</td></tr>`;
+      overviewHtml += '</table></div>';
+    }
+
+    if (c.openItems) {
+      const isClean = c.openItems.toLowerCase().startsWith('none');
+      overviewHtml += `<div class="sc-meta-block" style="border-left:3px solid ${isClean ? '#22c55e' : '#f59e0b'};padding-left:12px"><strong>Open items</strong><br><span style="font-size:13px">${esc(c.openItems)}</span></div>`;
+    }
+
+    // ── Tab 2: Script (type === "section" only) ──
+    let scriptHtml = '';
+    c.scenes.forEach(s => {
+      if (s.type === 'section') {
+        scriptHtml += `<div class="sc-scene-heading">${esc(s.heading)}</div>`;
+        s.body.split('\n\n').forEach(p => { scriptHtml += `<p class="sc-body" style="margin-bottom:8px">${esc(p)}</p>`; });
+        scriptHtml += '<hr class="sc-hr">';
+      }
+    });
+
+    // ── Tab 3: Knowledge Check (type === "reflection" only) ──
+    let kcHtml = '';
+    c.scenes.forEach(s => {
+      if (s.type === 'reflection') {
+        kcHtml += renderKcItem(s);
+      }
+    });
+    if (!kcHtml) kcHtml = '<p class="sc-body" style="color:var(--text-muted)">No knowledge checks in this course.</p>';
+
+    // ── Assemble tabs ──
+    let html = '';
+    html += '<div class="panel-tabs" id="panelTabBar">';
+    html += '<div class="panel-tab active" onclick="switchPanelTab(\'overview\')">Overview</div>';
+    html += '<div class="panel-tab" onclick="switchPanelTab(\'script\')">Script</div>';
+    html += '<div class="panel-tab" onclick="switchPanelTab(\'kc\')">Knowledge Check</div>';
+    html += '</div>';
+
+    html += '<div class="panel-tab-content active" id="ptab-overview" style="padding:20px 24px">' + overviewHtml + '</div>';
+    html += '<div class="panel-tab-content" id="ptab-script" style="padding:20px 24px">' + scriptHtml + '</div>';
+    html += '<div class="panel-tab-content" id="ptab-kc" style="padding:20px 24px">' + kcHtml + '</div>';
+
+    return html;
+  }
+
+  // ── All other courses: existing render path ────────────────────────────────
   let html = '';
 
   // Objectives — v202604280022
@@ -22588,8 +22686,15 @@ function openPanel(num) {
     `<div class="panel-meta-item"><strong>Duration:</strong> ${c.duration}</div>` +
     `<div class="panel-meta-item"><strong>Persona:</strong> ${c.persona}</div>` +
     `<div class="panel-meta-item"><strong>Characters:</strong> ${c.characters}</div>`;
-  document.getElementById('panelBody').innerHTML = renderPanel(num);
-  document.getElementById('panelBody').scrollTop = 0;
+  var panelBody = document.getElementById('panelBody');
+  // Course 8 uses a tab layout \u2014 remove default padding so the tab bar sits flush
+  if (num === 8) {
+    panelBody.classList.add('panel-tabbed');
+  } else {
+    panelBody.classList.remove('panel-tabbed');
+  }
+  panelBody.innerHTML = renderPanel(num);
+  panelBody.scrollTop = 0;
   document.getElementById('scriptPanel').classList.add('open');
   document.getElementById('overlay').classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -22599,6 +22704,20 @@ function closePanel() {
   document.getElementById('scriptPanel').classList.remove('open');
   document.getElementById('overlay').classList.remove('open');
   document.body.style.overflow = '';
+}
+
+function switchPanelTab(name) {
+  // Deactivate all tabs and content panes
+  document.querySelectorAll('#panelTabBar .panel-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('#panelBody .panel-tab-content').forEach(c => c.classList.remove('active'));
+  // Activate the selected tab and content pane
+  const tabMap = { overview: 0, script: 1, kc: 2 };
+  const tabs = document.querySelectorAll('#panelTabBar .panel-tab');
+  if (tabs[tabMap[name]]) tabs[tabMap[name]].classList.add('active');
+  const pane = document.getElementById('ptab-' + name);
+  if (pane) pane.classList.add('active');
+  // Scroll panel body back to top on tab switch
+  document.getElementById('panelBody').scrollTop = 0;
 }
 
 function downloadPanel() {

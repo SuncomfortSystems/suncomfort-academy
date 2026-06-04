@@ -1328,7 +1328,7 @@ COURSES['l0-01'] = {
     existingData: "None",
     assetsRequired: "None"
   },
-  openItems: "(1) Needs human input — No dedicated Help Centre article identified for the customer and work address hierarchy. Content verified against Commusoft Terminology article only. Confirm with Enablement Manager whether a specific HC article exists for this topic before production — if so, add it to Sources used and verify all claims against it.",
+  openItems: "(1) No dedicated Help Centre article identified for the customer and work address hierarchy. Content verified against Commusoft Terminology article only. Confirm with Enablement Manager whether a specific HC article exists for this topic before production — if so, add it to Sources used and verify all claims against it.",
   scenes: [
     {type:"section", heading:"Introduction", body:"When you open a customer record in Commusoft, you will notice it can have multiple addresses beneath it. That structure is not an accident. Commusoft separates the person or company you trade with from the places where work is carried out, and understanding that separation will make everything from booking a job to raising an invoice feel logical rather than confusing.\n\nThe hierarchy has three levels: the customer at the top, work addresses beneath them, and then jobs, assets, and service reminders sitting under each work address. Each level has a distinct purpose, and knowing which level you are working at tells you exactly where to look and where to log."},
     {type:"section", heading:"The customer record", body:"The customer record represents the commercial relationship. It holds the person or company you trade with: their contact details, billing address, communication preferences, and financial history. When you raise an invoice in Commusoft, it is addressed to the customer, even when the work took place at a completely different property."},
@@ -1355,7 +1355,7 @@ COURSES['l0-02'] = {
     existingData: "None",
     assetsRequired: "None"
   },
-  openItems: "(1) Needs human input — The two cited HC sources give different spellings for the Travelling status: article 517998 uses \"Travelling,\" article 267464 uses \"Travel.\" This script uses \"Travelling\" for consistency with Job View Course 3 (The appointments tab), which was verified against article 517998. Confirm with Enablement Manager or product team which spelling matches the current UI label before production.",
+  openItems: "(1) The two cited HC sources give different spellings for the Travelling status: article 517998 uses \"Travelling,\" article 267464 uses \"Travel.\" This script uses \"Travelling\" for consistency with Job View Course 3 (The appointments tab), which was verified against article 517998. Confirm with Enablement Manager or product team which spelling matches the current UI label before production.",
   scenes: [
     {type:"section", heading:"Introduction", body:"Every appointment in Commusoft carries a status. That status is the live signal that tells every member of your team exactly where a job stands — whether a technician has accepted a visit, whether they are on the road, or whether they arrived and could not get in. When your team reads and updates statuses consistently, no one needs to call anyone to find out what is happening.\n\nThere are eight appointment statuses in Commusoft. Seven are updated by the technician directly from the mobile app as the job progresses. One is an office-only action. Together they create a live picture of every appointment in your schedule."},
     {type:"section", heading:"The progression statuses", body:"When Sophie at SunComfort books a heat pump service and assigns it to Jake, the appointment waits for Jake to respond on his app. When Jake agrees to attend, he marks the appointment Accepted. When he leaves the depot, he marks it Travelling. When he arrives at the property and has access, he marks it Arrived.\n\nOnce an appointment reaches Arrived it is locked and cannot be edited — the visit is live on site. When Jake finishes the work and leaves, he marks it Left. Each of these four updates appears in Sophie\'s schedule the moment it is saved."},
@@ -1409,7 +1409,7 @@ COURSES['l0-04'] = {
     existingData: "None",
     assetsRequired: "None"
   },
-  openItems: "(1) Needs human input — The section on system tags in notification templates (square bracket tags auto-filled by Commusoft) has no HC source. The cited article covers estimate dynamic tagging only. Identify and verify the correct HC article for notification template system tags before production — or confirm with the product team that the square bracket syntax and auto-fill behaviour described here is accurate.",
+  openItems: "(1) The section on system tags in notification templates (square bracket tags auto-filled by Commusoft) has no HC source. The cited article covers estimate dynamic tagging only. Identify and verify the correct HC article for notification template system tags before production — or confirm with the product team that the square bracket syntax and auto-fill behaviour described here is accurate.",
   scenes: [
     {type:"section", heading:"Introduction", body:"When your team uses a template in Commusoft — whether for an estimate, a notification, or a customer confirmation — there are usually details that change from job to job. The property might need eight solar panels or twelve. The roof might be slate or concrete tile. Typing those details from scratch every time is slow, and relying on memory means they sometimes get missed. Commusoft solves this with dynamic tags: placeholders that sit inside templates and become fillable fields the moment the template is used.\n\nSunComfort creates hundreds of proposals a year for solar panel installations. Gary, the sales surveyor, does not type a new estimate structure for each customer. He opens a template, and the tags inside it prompt him for exactly what he needs to enter."},
     {type:"section", heading:"What is a dynamic tag", body:"A dynamic tag is a word or phrase placed inside curly brackets in a template body — something like {number of panels} or {roof type}. That text does not appear in the finished document as written. When Gary selects that template to create a new estimate, Commusoft converts each tag into a field and asks him to fill it in. Once he enters the values and saves, the estimate body updates with the correct information in place.\n\nThe tag acts as both a prompt and a container. It tells the person creating the document what information is needed, and it holds the place where that information will appear in the finished output. Nothing gets missed because the tag makes the requirement visible before the document is finalised."},
@@ -1490,7 +1490,7 @@ COURSES['l0-07'] = {
     existingData: "None",
     assetsRequired: "None"
   },
-  openItems: "(1) Needs human input — Job pipelines may be restricted to specific Commusoft plans (Customer Journey and Field Automation). This course does not mention plan availability. Confirm with Enablement Manager or product team whether a plan restriction note is required before production.",
+  openItems: "(1) Job pipelines may be restricted to specific Commusoft plans (Customer Journey and Field Automation). This course does not mention plan availability. Confirm with Enablement Manager or product team whether a plan restriction note is required before production.",
   scenes: [
     {type:"section", heading:"Introduction", body:"When you have jobs at multiple points of completion — some waiting for parts, some ready to schedule, some in commissioning — tracking where each one stands can consume as much time as the work itself. A job pipeline gives you a structured way to organise that progress inside Commusoft. It breaks the journey of a job into named stages, and as the work moves forward, the job moves through the pipeline. Instead of chasing updates, you see the state of every job at a glance.\n\nAt SunComfort, Logan oversees all heat pump installations. Each one can take weeks from initial survey to final commissioning. Without a pipeline, Logan\'s day involves a lot of phone calls. With one in place, he opens the pipeline view and sees exactly where every installation job sits — which stage it is in, what is next, and which ones need action."},
     {type:"section", heading:"Stages and pipelines", body:"A job pipeline is made up of stages. Each stage represents a step in the job\'s lifecycle. For SunComfort\'s installation pipeline, that might be Survey Booked, Parts Ordered, Installation Day, Commissioning, and Complete. Stages are configured with names and colours so they are easy to read in the appointments view and pipeline view. Each stage you create also adds a corresponding view on the job dashboard, so you can filter to see all jobs at any given point in the workflow.\n\nPipelines and stages are related but not the same thing. A stage is a single step. A pipeline is the full sequence of steps a job moves through from start to finish. A business might have multiple pipelines — one for installations, one for maintenance contracts, one for emergency call-outs — each with stages that match the specific workflow for that type of work."},
@@ -1545,7 +1545,7 @@ COURSES['l0-09'] = {
     existingData: "None",
     assetsRequired: "None"
   },
-  openItems: "(1) Needs human input — Retention and Grant invoice types are referenced in the Final invoice deduction sentence (\"subtracts any Deposit, Interim, Retention, or Grant invoices already issued\") but are not defined anywhere in the script body. Verify against the HC article whether these types require a brief description in the \"Other invoice types worth knowing\" section, or whether the current in-passing reference is the intended approach.",
+  openItems: "(1) Retention and Grant invoice types are referenced in the Final invoice deduction sentence (\"subtracts any Deposit, Interim, Retention, or Grant invoices already issued\") but are not defined anywhere in the script body. Verify against the HC article whether these types require a brief description in the \"Other invoice types worth knowing\" section, or whether the current in-passing reference is the intended approach.",
   scenes: [
     {type:"section", heading:"Introduction", body:"Commusoft supports multiple invoice types, each designed for a specific point in the job lifecycle. For a straightforward callout, your team raises one invoice when the work is done. For a large installation or a phased project, billing might be staged across several invoice types before the job closes. Knowing the difference means the right invoice is raised at the right time — and the final amount the customer owes is always correct.\n\nClaire handles all invoicing at SunComfort. For a standard maintenance visit, she raises one Final invoice when the technician is finished. For a large commercial heat pump installation, the billing runs in stages. A Deposit comes first, an Interim covers the halfway point, and the Final closes everything out — with Commusoft handling the deductions automatically."},
     {type:"section", heading:"Deposit, Interim, and Final", body:"These three invoice types form the core of staged billing. A Deposit invoice is created automatically in Commusoft when a customer accepts a proposal and it is converted into a job. It represents the upfront payment agreed at quote stage, and its value is deducted from the total when the Final invoice is raised. An Interim invoice is issued during the job for progress billing. SunComfort might raise one partway through a large installation to draw down on costs before the work is complete. Multiple Interim invoices can be raised on a single job, and all of them are deducted from the Final total. The Final invoice closes the job. It incorporates the pricing from the original proposal and subtracts any Deposit, Interim, Retention, or Grant invoices already issued — so the amount shown is exactly what remains due.\n\nClaire does not calculate what is left. When she raises the Final invoice, Commusoft deducts all previously issued invoices from the job total and shows the outstanding balance automatically."},
@@ -1624,7 +1624,7 @@ COURSES['l0-12'] = {
     existingData: "None",
     assetsRequired: "None"
   },
-  openItems: "(1) Needs human input — Verify the four field-staff role labels (Engineer, Engineer with diary, Engineer with invoicing, Senior engineer) against the HC article and current Commusoft UI before production. These were corrected from incorrectly written Technician variants — confirm the exact names as they appear in the system.",
+  openItems: "(1) Verify the four field-staff role labels (Engineer, Engineer with diary, Engineer with invoicing, Senior engineer) against the HC article and current Commusoft UI before production. These were corrected from incorrectly written Technician variants — confirm the exact names as they appear in the system.",
   scenes: [
     {type:"section", heading:"Introduction", body:"Every user in Commusoft is assigned a role, and that role determines what they can see and do in the system. Commusoft uses a hierarchical permission structure: each role level includes everything the level below it can access, plus additional capabilities. You do not configure permissions one by one — you pick the right level for the person, and the system is set accordingly. There is also a separate setting for platform access — whether a user works on the web app, the mobile app, or both — which is configured independently of the role.\n\nSarah is setting up two new users today. One is a heat pump technician joining the field team. The other is an office administrator who will manage customers and scheduling. They need different roles, different platform access, and the right combination of both."},
     {type:"section", heading:"The main role levels", body:"The role structure moves from field access through to full system control. The Engineer role is the base level for field staff — they can view their personal schedule and complete their assigned appointments, but cannot invoice or accept payments. The Engineer with diary role adds the ability to create jobs, manage their own appointments, and search customer records. The Engineer with invoicing role extends that to raising invoices and taking payment on site. The Senior engineer role adds visibility of all technician schedules across the team and the ability to reassign appointments. The Office staff role covers customer management, job creation, scheduling, invoicing, and payments, but excludes financial reconciliation and system settings. The Financial office staff role adds full financial authority, including data amendments and accounting package exports. The Owner/Manager role has complete system control, including user management and system configuration.\n\nFor Sarah\'s new field technician — completing assigned appointments on the mobile app — the base Engineer role is the right level. For the new office administrator managing customers and scheduling — but not reconciliation or system settings — the Office staff role is correct."},
@@ -1852,7 +1852,7 @@ The customer is who you bill. The work address is where you work. Everything ope
 
 ## Open items
 
-- **Needs human input** — No dedicated Help Centre article identified for the customer and work address hierarchy. Content verified against Commusoft Terminology article only. Confirm with Enablement Manager whether a specific HC article exists for this topic before production — if so, add it to Sources used and verify all claims against it.
+- No dedicated Help Centre article identified for the customer and work address hierarchy. Content verified against Commusoft Terminology article only. Confirm with Enablement Manager whether a specific HC article exists for this topic before production — if so, add it to Sources used and verify all claims against it.
 
 `;
 
@@ -1954,7 +1954,7 @@ Four progression statuses — Accepted, Travelling, Arrived, Left — track ever
 
 ## Open items
 
-- **Needs human input** — The two cited HC sources give different spellings for the Travelling status: article 517998 uses "Travelling," article 267464 uses "Travel." This script uses "Travelling" for consistency with Job View Course 3 (The appointments tab), which was verified against article 517998. Confirm with Enablement Manager or product team which spelling matches the current UI label before production.
+- The two cited HC sources give different spellings for the Travelling status: article 517998 uses "Travelling," article 267464 uses "Travel." This script uses "Travelling" for consistency with Job View Course 3 (The appointments tab), which was verified against article 517998. Confirm with Enablement Manager or product team which spelling matches the current UI label before production.
 
 `;
 
@@ -2162,7 +2162,7 @@ A dynamic tag is a placeholder in a template body that becomes a fillable field 
 
 ## Open items
 
-- **Needs human input** — The section on system tags in notification templates (square bracket tags auto-filled by Commusoft) has no HC source. The cited article covers estimate dynamic tagging only. Identify and verify the correct HC article for notification template system tags before production — or confirm with the product team that the square bracket syntax and auto-fill behaviour described here is accurate.
+- The section on system tags in notification templates (square bracket tags auto-filled by Commusoft) has no HC source. The cited article covers estimate dynamic tagging only. Identify and verify the correct HC article for notification template system tags before production — or confirm with the product team that the square bracket syntax and auto-fill behaviour described here is accurate.
 
 `;
 
@@ -2472,7 +2472,7 @@ A job pipeline is a workflow system made up of stages that a job moves through f
 
 ## Open items
 
-- **Needs human input** — Job pipelines may be restricted to specific Commusoft plans (Customer Journey and Field Automation). This course does not mention plan availability. Confirm with Enablement Manager or product team whether a plan restriction note is required before production.
+- Job pipelines may be restricted to specific Commusoft plans (Customer Journey and Field Automation). This course does not mention plan availability. Confirm with Enablement Manager or product team whether a plan restriction note is required before production.
 
 `;
 
@@ -2686,7 +2686,7 @@ Commusoft provides multiple invoice types, each suited to a specific stage or bi
 
 ## Open items
 
-- **Needs human input** — Retention and Grant invoice types are referenced in the Final invoice deduction sentence ("subtracts any Deposit, Interim, Retention, or Grant invoices already issued") but are not defined anywhere in the script body. Verify against the HC article whether these types require a brief description in the "Other invoice types worth knowing" section, or whether the current in-passing reference is the intended approach.
+- Retention and Grant invoice types are referenced in the Final invoice deduction sentence ("subtracts any Deposit, Interim, Retention, or Grant invoices already issued") but are not defined anywhere in the script body. Verify against the HC article whether these types require a brief description in the "Other invoice types worth knowing" section, or whether the current in-passing reference is the intended approach.
 
 `;
 
@@ -2984,7 +2984,7 @@ Every user in Commusoft is assigned a role that determines what they can access,
 
 ## Open items
 
-- **Needs human input** — Verify the four field-staff role labels (Engineer, Engineer with diary, Engineer with invoicing, Senior engineer) against the HC article and current Commusoft UI before production. These were corrected from incorrectly written Technician variants — confirm the exact names as they appear in the system.
+- Verify the four field-staff role labels (Engineer, Engineer with diary, Engineer with invoicing, Senior engineer) against the HC article and current Commusoft UI before production. These were corrected from incorrectly written Technician variants — confirm the exact names as they appear in the system.
 
 `;
 
@@ -3211,9 +3211,9 @@ For questions that need a direct conversation, your Commusoft account manager is
 
 ## Open items
 
-- **Needs human input** — Resource links in Lesson 5 (Help Centre URL, Academy URL, account manager contact page) are listed as cards without confirmed URLs. Confirm correct links with Enablement Manager before production.
-- **Needs human input** — Lesson 3 screen recording narration cues are provisional. Confirm exact navigation structure and section names against the current Commusoft UI before recording begins.
-- **Needs human input** — Lesson 3 references "appointments view" as the section name. Confirm this matches the current UI label before recording.
+- Resource links in Lesson 5 (Help Centre URL, Academy URL, account manager contact page) are listed as cards without confirmed URLs. Confirm correct links with Enablement Manager before production.
+- Lesson 3 screen recording narration cues are provisional. Confirm exact navigation structure and section names against the current Commusoft UI before recording begins.
+- Lesson 3 references "appointments view" as the section name. Confirm this matches the current UI label before recording.
 
 `;
 
@@ -3409,12 +3409,12 @@ D) Check the appointments view for the date the job was completed
 
 ## Open items
 
-- **Needs human input** — Confirm the exact section labels in the navigation bar against the current Commusoft UI before screen recording begins. The terminology article lists: Customer Dashboard, Opportunity Dashboard, Jobs Dashboard, Suppliers Dashboard, Fleet Dashboard, Reporting Dashboard. Confirm these are the exact labels as displayed in the navbar, and confirm whether Opportunity and Fleet are visible on an Office staff role.
-- **Needs human input** — Confirm the exact location and UI label of the global search bar. The terminology article describes it as positioned next to the navbar — confirm its exact placement and whether it carries a visible search icon or placeholder text.
-- **Needs human input** — Confirm whether the Settings section is visible to an Office staff role. If not, remove the Settings reference from the Lesson 1 profile icon narration cue.
-- **Needs human input** — Confirm the tabs visible on a job record for an Office staff user. The Lesson 4 screen recording narration refers to Appointments and Timeline tabs — confirm the exact tab labels as they appear in the current UI.
-- **Needs human input** — Confirm David Okafor's customer record is set up in the demo environment with multiple work addresses and at least one open job. If he is not suitable for screen recording, confirm which customer to use instead.
-- **Needs human input** — No dedicated Help Centre article found for dashboard navigation or global search. Confirm whether HC articles exist for these topics and provide URLs to add to the Sources field before production.
+- Confirm the exact section labels in the navigation bar against the current Commusoft UI before screen recording begins. The terminology article lists: Customer Dashboard, Opportunity Dashboard, Jobs Dashboard, Suppliers Dashboard, Fleet Dashboard, Reporting Dashboard. Confirm these are the exact labels as displayed in the navbar, and confirm whether Opportunity and Fleet are visible on an Office staff role.
+- Confirm the exact location and UI label of the global search bar. The terminology article describes it as positioned next to the navbar — confirm its exact placement and whether it carries a visible search icon or placeholder text.
+- Confirm whether the Settings section is visible to an Office staff role. If not, remove the Settings reference from the Lesson 1 profile icon narration cue.
+- Confirm the tabs visible on a job record for an Office staff user. The Lesson 4 screen recording narration refers to Appointments and Timeline tabs — confirm the exact tab labels as they appear in the current UI.
+- Confirm David Okafor's customer record is set up in the demo environment with multiple work addresses and at least one open job. If he is not suitable for screen recording, confirm which customer to use instead.
+- No dedicated Help Centre article found for dashboard navigation or global search. Confirm whether HC articles exist for these topics and provide URLs to add to the Sources field before production.
 `;
 
 INBOX_FILES["reed-script-l1-s3-c1"] = `# Reed — Script: Add a customer
@@ -16764,13 +16764,13 @@ Setting up Advanced Stock Control begins with four steps. First, configure your 
 
 ## Open items
 
-[OPEN — Needs human input. The HC article on stock inventory settings confirms the FIFO/LIFO setting is permanent and cannot be changed after saving. The script presents this as a decision requiring operations manager sign-off. Sara to confirm: is there any in-product warning or confirmation prompt before saving, or does saving immediately lock the setting? If there is a prompt, the script should reference it.]
+[OPEN — The HC article on stock inventory settings confirms the FIFO/LIFO setting is permanent and cannot be changed after saving. The script presents this as a decision requiring operations manager sign-off. Sara to confirm: is there any in-product warning or confirmation prompt before saving, or does saving immediately lock the setting? If there is a prompt, the script should reference it.]
 
-[OPEN — Needs human input. The HC article on stock locations confirms up to four bin location levels. The SunComfort settings document uses three levels (Zone, Shelf, Bin). The script uses three. Sara to confirm whether three levels is the correct SunComfort configuration, or whether a fourth level (Compartment) is also in use.]
+[OPEN — The HC article on stock locations confirms up to four bin location levels. The SunComfort settings document uses three levels (Zone, Shelf, Bin). The script uses three. Sara to confirm whether three levels is the correct SunComfort configuration, or whether a fourth level (Compartment) is also in use.]
 
-[OPEN — Needs human input. The van reorder template section states that the system transfers stock from the HQ Stockroom before raising a supplier PO. The HC article on Part reorder templates references a "Replenishment" field that controls this behaviour. Sara or the product team to confirm: is this behaviour configured per part within the template (a toggle or dropdown), and if so, what does that field look like in the UI? The script describes the outcome but not the exact click path for the replenishment toggle.]
+[OPEN — The van reorder template section states that the system transfers stock from the HQ Stockroom before raising a supplier PO. The HC article on Part reorder templates references a "Replenishment" field that controls this behaviour. Sara or the product team to confirm: is this behaviour configured per part within the template (a toggle or dropdown), and if so, what does that field look like in the UI? The script describes the outcome but not the exact click path for the replenishment toggle.]
 
-[OPEN — Needs human input. The HC article confirms part reorder templates check stock daily at 2pm. Sara to confirm: is this time zone-specific (UK time), and is it configurable per account or fixed? If configurable, a note may be appropriate in the script.]
+[OPEN — The HC article confirms part reorder templates check stock daily at 2pm. Sara to confirm: is this time zone-specific (UK time), and is it configurable per account or fixed? If configurable, a note may be appropriate in the script.]
 `;
 INBOX_FILES["reed-script-l3-stock-c2"] = `# Reed — Script: Managing Stock In and Out
 
@@ -16905,13 +16905,13 @@ Every stock movement follows the same principle: record it at the point it happe
 
 ## Open items
 
-[OPEN — Needs human input. The HC article on the Individual Parts record describes the "Stock due in" section as the route for receipting deliveries linked to a PO — specifically, entering the actual quantity received and selecting the destination location, then clicking Mark as arrived. The script follows this exactly. Sara to confirm: does this receipting action also update the PO status on the supplier record, or does the PO need to be marked as complete separately as described in the L1 S9 C2 script? These may be two different workflows (stock receipting vs PO completion) that coexist, or one may trigger the other.]
+[OPEN — The HC article on the Individual Parts record describes the "Stock due in" section as the route for receipting deliveries linked to a PO — specifically, entering the actual quantity received and selecting the destination location, then clicking Mark as arrived. The script follows this exactly. Sara to confirm: does this receipting action also update the PO status on the supplier record, or does the PO need to be marked as complete separately as described in the L1 S9 C2 script? These may be two different workflows (stock receipting vs PO completion) that coexist, or one may trigger the other.]
 
-[OPEN — Needs human input. The script describes allocating parts to a job from the job's Costs tab. The HC article on Stock Workflows references the parts section of a job and part statuses (Requested, On Order, Available, Installed). Sara to confirm the exact click path for reserving already-available stock against a job from the office side — specifically, whether this is done from the job Costs tab, a separate parts tab, or the part record's Reserve list tab.]
+[OPEN — The script describes allocating parts to a job from the job's Costs tab. The HC article on Stock Workflows references the parts section of a job and part statuses (Requested, On Order, Available, Installed). Sara to confirm the exact click path for reserving already-available stock against a job from the office side — specifically, whether this is done from the job Costs tab, a separate parts tab, or the part record's Reserve list tab.]
 
-[OPEN — Needs human input. The baton transition from Danny (office) to Luke (field) assumes Luke can see reserved parts in the mobile app and that the picking list workflow is optional. The HC article on stock control for engineers and the picking list article confirm these are separate configurations. Sara to confirm: should C2 stay at a high level on the field handover (as written), or should it detail the picking list steps more explicitly? If the latter, the Production Setup will need a picking list configuration requirement added.]
+[OPEN — The baton transition from Danny (office) to Luke (field) assumes Luke can see reserved parts in the mobile app and that the picking list workflow is optional. The HC article on stock control for engineers and the picking list article confirm these are separate configurations. Sara to confirm: should C2 stay at a high level on the field handover (as written), or should it detail the picking list steps more explicitly? If the latter, the Production Setup will need a picking list configuration requirement added.]
 
-[OPEN — Needs human input. The manual transfer section states the History tab records the movement as "Transfer without a job" — this category is confirmed in the HC article on Managing Stock Locations. Sara to confirm: is there a separate "Transfer for a job" category that applies when a transfer is linked to a job record, and if so, does the allocation workflow (parts reserved against a job) generate this action type rather than a manual transfer?]
+[OPEN — The manual transfer section states the History tab records the movement as "Transfer without a job" — this category is confirmed in the HC article on Managing Stock Locations. Sara to confirm: is there a separate "Transfer for a job" category that applies when a transfer is linked to a job record, and if so, does the allocation workflow (parts reserved against a job) generate this action type rather than a manual transfer?]
 `;
 INBOX_FILES["reed-script-l3-stock-c3"] = `# Reed — Script: Stock Reporting and Visibility
 
@@ -17056,13 +17056,13 @@ The stock data your team creates through daily movements gives you three things 
 
 ## Open items
 
-[OPEN — Needs human input. The script states that Logan can navigate to a part record and see stock across all locations in one view. The HC article on the Individual Parts record confirms the current stock table shows holdings by location. Sara to confirm: is this view available to Owner/Manager system role users without restriction, or is any location-level visibility gated by user permissions?]
+[OPEN — The script states that Logan can navigate to a part record and see stock across all locations in one view. The HC article on the Individual Parts record confirms the current stock table shows holdings by location. Sara to confirm: is this view available to Owner/Manager system role users without restriction, or is any location-level visibility gated by user permissions?]
 
-[OPEN — Needs human input. The Reporting tab section references a "Parts report" under Reporting > Parts. The HC article on Reporting: Parts confirms four report types exist. Sara to confirm the exact navigation path in the current UI — specifically whether this is accessed via the Reporting tab's hamburger/sidebar menu or via a direct link — so the Production Setup can include the correct demo environment path.]
+[OPEN — The Reporting tab section references a "Parts report" under Reporting > Parts. The HC article on Reporting: Parts confirms four report types exist. Sara to confirm the exact navigation path in the current UI — specifically whether this is accessed via the Reporting tab's hamburger/sidebar menu or via a direct link — so the Production Setup can include the correct demo environment path.]
 
-[OPEN — Needs human input. The write-offs section describes filtering the History tab by action type to isolate stock reductions. The HC article confirms "Manually adjusted" as an action type in the history filter. Sara to confirm: is there a dedicated "Written off" or "Wastage" filter option in the action type dropdown, or do write-offs appear under "Manually adjusted" with the wastage reason visible as a detail in the expanded row? The script describes the outcome correctly but the exact filter label may need updating.]
+[OPEN — The write-offs section describes filtering the History tab by action type to isolate stock reductions. The HC article confirms "Manually adjusted" as an action type in the history filter. Sara to confirm: is there a dedicated "Written off" or "Wastage" filter option in the action type dropdown, or do write-offs appear under "Manually adjusted" with the wastage reason visible as a detail in the expanded row? The script describes the outcome correctly but the exact filter label may need updating.]
 
-[OPEN — Needs human input. The reserve list section states that Logan can reprioritise parts between jobs if balance available is zero. The HC article on the Individual Parts record confirms an "Unreserve" workflow exists on the reserve list tab. Sara to confirm: is the unreserve action available to Owner/Manager users, or is it restricted to the user who performed the original reservation or to Office staff roles?]
+[OPEN — The reserve list section states that Logan can reprioritise parts between jobs if balance available is zero. The HC article on the Individual Parts record confirms an "Unreserve" workflow exists on the reserve list tab. Sara to confirm: is the unreserve action available to Owner/Manager users, or is it restricted to the user who performed the original reservation or to Office staff roles?]
 `;
 INBOX_FILES["reed-script-l3-stock-challenge"] = `# Reed — Script: Challenge — Stock Ordered, Received, and Allocated
 
@@ -17192,11 +17192,11 @@ Every step in this chain matters. The reorder trigger fires when stock drops bel
 
 ## Open items
 
-[OPEN — Needs human input. Step four's knowledge check note — "the reorder template will check again at 2pm — at that point the balance available of 4 is below the minimum of 5, so a new PO may be triggered" — is included in the incorrect feedback only. Sara to confirm: when a reorder template fires and raises a PO, does it check against balance available or against total stock? If it checks balance available (4 < 5), a new PO would fire the same evening after the allocation. If it checks total stock (10 > 5), it would not. This affects whether the "may be triggered" note in the incorrect feedback is accurate and whether a note should be added to the correct feedback path as well.]
+[OPEN — Step four's knowledge check note — "the reorder template will check again at 2pm — at that point the balance available of 4 is below the minimum of 5, so a new PO may be triggered" — is included in the incorrect feedback only. Sara to confirm: when a reorder template fires and raises a PO, does it check against balance available or against total stock? If it checks balance available (4 < 5), a new PO would fire the same evening after the allocation. If it checks total stock (10 > 5), it would not. This affects whether the "may be triggered" note in the incorrect feedback is accurate and whether a note should be added to the correct feedback path as well.]
 
-[OPEN — Needs human input. The challenge assumes the automated PO is visible on the Rexel supplier record. The HC article on Parts reorder list confirms POs are raised daily at 2pm and sent directly to suppliers. Sara to confirm: is the auto-raised PO also visible on the job record if the reorder was linked to a job-level parts request, or does it only appear on the supplier record? The challenge currently routes Danny to the supplier record only.]
+[OPEN — The challenge assumes the automated PO is visible on the Rexel supplier record. The HC article on Parts reorder list confirms POs are raised daily at 2pm and sent directly to suppliers. Sara to confirm: is the auto-raised PO also visible on the job record if the reorder was linked to a job-level parts request, or does it only appear on the supplier record? The challenge currently routes Danny to the supplier record only.]
 
-[OPEN — Needs human input. Step three presents a binary choice between job allocation and van transfer. The challenge assumes these are distinct actions with distinct outcomes. Sara to confirm: when stock is allocated to a job from the job record, does the system prompt for a specific pick location within the HQ Stockroom (i.e. bin location), or does it simply reserve from the location total? If bin location is required, the scenario branch correct feedback may need an additional line.]
+[OPEN — Step three presents a binary choice between job allocation and van transfer. The challenge assumes these are distinct actions with distinct outcomes. Sara to confirm: when stock is allocated to a job from the job record, does the system prompt for a specific pick location within the HQ Stockroom (i.e. bin location), or does it simply reserve from the location total? If bin location is required, the scenario branch correct feedback may need an additional line.]
 `;
 INBOX_FILES["reed-script-l3-forms-c1"] = `# Build your first custom form
 
@@ -18564,11 +18564,11 @@ Watch this course before continuing if you have not already completed it as part
 
 ## Open items
 
-- **Needs human input** — Confirm the exact name and location of the Commusoft mobile app in the iOS App Store and Google Play Store. Lesson 1 screen recording requires showing the correct app listing.
-- **Needs human input** — Confirm the exact label and location of the "Accept" option on a job in the mobile app. The Lesson 3 narration refers to tapping an accept button or status option — confirm the exact UI label as it appears in the current version of the app.
-- **Needs human input** — Confirm whether Luke Simmons is set up as a mobile-app-enabled user in the SunComfort demo account. If he is not suitable for the screen recordings, confirm which technician character to use instead.
-- **Needs human input** — Confirm whether the mobile app has a separate diary view (time-slot layout) or whether the home screen list view is the only format. Lesson 2 describes both; remove the diary view reference if it does not exist as a separate view.
-- **Needs human input** — No dedicated Help Centre article confirmed for the mobile app home screen, job acceptance, or login flow. Provide HC article URLs for mobile app features before production.
+- Confirm the exact name and location of the Commusoft mobile app in the iOS App Store and Google Play Store. Lesson 1 screen recording requires showing the correct app listing.
+- Confirm the exact label and location of the "Accept" option on a job in the mobile app. The Lesson 3 narration refers to tapping an accept button or status option — confirm the exact UI label as it appears in the current version of the app.
+- Confirm whether Luke Simmons is set up as a mobile-app-enabled user in the SunComfort demo account. If he is not suitable for the screen recordings, confirm which technician character to use instead.
+- Confirm whether the mobile app has a separate diary view (time-slot layout) or whether the home screen list view is the only format. Lesson 2 describes both; remove the diary view reference if it does not exist as a separate view.
+- No dedicated Help Centre article confirmed for the mobile app home screen, job acceptance, or login flow. Provide HC article URLs for mobile app features before production.
 `;
 INBOX_FILES["reed-script-l1-dm-series1"] = `# Reed — Script: Your business at a glance
 
@@ -18761,11 +18761,11 @@ Every figure Sarah sees in reporting is the result of someone taking an action i
 
 ## Open items
 
-- **Needs human input** — Confirm the exact navigation path to the appointments/diary view for a user with Managing Director or Owner role. The screen recording in Lesson 2 navigates through Jobs — confirm whether the appointments view is accessible directly from the main nav or as a sub-tab within Jobs, and confirm the exact UI label (appointments view, diary, schedule view, or other).
-- **Needs human input** — Confirm the exact labels on the default Analytics dashboard widgets for a Managing Director role. The Lesson 1 narration refers to revenue, outstanding invoices, and jobs completed — confirm these widget names match the current UI labels exactly.
-- **Needs human input** — Confirm whether the Analytics dashboard is accessible to a Managing Director role without any additional permissions setup. If certain widgets or the dashboard itself is behind a role permission, flag which ones.
-- **Needs human input** — Lesson 4 describes the standard data flow from customer to payment. Confirm whether any step in this flow differs for SunComfort's demo account configuration — for example, whether invoices in the demo are raised from the office or from the field.
-- **Needs human input** — No dedicated Help Centre article found for appointments view navigation or the diary layout as seen by a decision maker. Confirm whether an HC article exists for this view and provide the URL to add to Sources before production.
+- Confirm the exact navigation path to the appointments/diary view for a user with Managing Director or Owner role. The screen recording in Lesson 2 navigates through Jobs — confirm whether the appointments view is accessible directly from the main nav or as a sub-tab within Jobs, and confirm the exact UI label (appointments view, diary, schedule view, or other).
+- Confirm the exact labels on the default Analytics dashboard widgets for a Managing Director role. The Lesson 1 narration refers to revenue, outstanding invoices, and jobs completed — confirm these widget names match the current UI labels exactly.
+- Confirm whether the Analytics dashboard is accessible to a Managing Director role without any additional permissions setup. If certain widgets or the dashboard itself is behind a role permission, flag which ones.
+- Lesson 4 describes the standard data flow from customer to payment. Confirm whether any step in this flow differs for SunComfort's demo account configuration — for example, whether invoices in the demo are raised from the office or from the field.
+- No dedicated Help Centre article found for appointments view navigation or the diary layout as seen by a decision maker. Confirm whether an HC article exists for this view and provide the URL to add to Sources before production.
 `;
 
 
@@ -18892,11 +18892,11 @@ To raise a purchase order, navigate to the supplier record and select Add new pu
 
 ## Open items
 
-[OPEN — **Needs human input.** The HC article confirms the PO number is auto-generated upon saving but does not specify whether the branch field is mandatory, optional, or visible only on multi-branch account configurations. Script treats it as a standard field. Sara to confirm: is the branch field visible to all customers, or only to those with multi-branch setups? If the latter, a conditional note may be needed.]
+[OPEN — The HC article confirms the PO number is auto-generated upon saving but does not specify whether the branch field is mandatory, optional, or visible only on multi-branch account configurations. Script treats it as a standard field. Sara to confirm: is the branch field visible to all customers, or only to those with multi-branch setups? If the latter, a conditional note may be needed.]
 
-[OPEN — **Needs human input.** The HC article confirms that mark-up percentage exists as a defaults section field. It does not specify whether this field is visible to all accounts or gated by plan or configuration. Sara to confirm visibility — if it is gated, a conditional note or removal from the script may be appropriate.]
+[OPEN — The HC article confirms that mark-up percentage exists as a defaults section field. It does not specify whether this field is visible to all accounts or gated by plan or configuration. Sara to confirm visibility — if it is gated, a conditional note or removal from the script may be appropriate.]
 
-[OPEN — **Needs human input.** The forward-link to the PO-from-job workflow course is written as a general forward reference ("a later course"). Sara to confirm the correct series and course slot for that content so a specific reference can be added when it is written.]
+[OPEN — The forward-link to the PO-from-job workflow course is written as a general forward reference ("a later course"). Sara to confirm the correct series and course slot for that content so a specific reference can be added when it is written.]
 `;
 
 INBOX_FILES["reed-script-l1-s9-c2"] = `# Reed — Script: Accept a delivery
@@ -19015,9 +19015,9 @@ When a delivery arrives, go to the supplier record, open the relevant purchase o
 
 ## Open items
 
-[OPEN — **Needs human input.** The HC article confirms that "Complete: Raises an associated invoice." The course deliberately omits the invoice workflow. Sara to confirm: (1) is the invoice creation automatic on all accounts upon PO completion, or does it require a separate action? (2) Should this be mentioned briefly in the course (e.g. "Completing a PO will also raise a supplier invoice — this is covered in a later course") or left entirely to future content?]
+[OPEN — The HC article confirms that "Complete: Raises an associated invoice." The course deliberately omits the invoice workflow. Sara to confirm: (1) is the invoice creation automatic on all accounts upon PO completion, or does it require a separate action? (2) Should this be mentioned briefly in the course (e.g. "Completing a PO will also raise a supplier invoice — this is covered in a later course") or left entirely to future content?]
 
-[OPEN — **Needs human input.** The script states that marking a PO complete makes parts available for a technician on a linked job. The HC article does not detail the exact system behaviour from the technician's perspective. Sara or the product team to confirm: does the technician see a status change on their job when the linked PO is completed, or is this visibility limited to the office view of the job record?]
+[OPEN — The script states that marking a PO complete makes parts available for a technician on a linked job. The HC article does not detail the exact system behaviour from the technician's perspective. Sara or the product team to confirm: does the technician see a status change on their job when the linked PO is completed, or is this visibility limited to the office view of the job record?]
 `;
 
 INBOX_FILES["reed-script-l1-s9-challenge"] = `# Reed — Script: Series challenge — Parts ordered, delivered, installed
@@ -19272,9 +19272,9 @@ The Connect email import feature allows customer replies to Commusoft emails to 
 
 ## Open items
 
-[OPEN — **Needs human input.** HC articles confirm email import is available on All-in-One / Go Paperless and above. The course does not name plans, which is consistent with Academy convention. Sara to confirm: should a plan-level caveat be added (e.g. in the introduction or a closing note), or is this left to sales/onboarding materials?]
+[OPEN — HC articles confirm email import is available on All-in-One / Go Paperless and above. The course does not name plans, which is consistent with Academy convention. Sara to confirm: should a plan-level caveat be added (e.g. in the introduction or a closing note), or is this left to sales/onboarding materials?]
 
-[OPEN — **Needs human input.** HC article for Google import warns not to save the email address as a contact on any customer record before enabling import, as this is irreversible. The warning is included in the script. The course uses the phrase "saved as a contact address on any customer record." HC for Google uses "saved as a contact within any customer record"; HC for Office 365 uses "linked to any customer." Sara or the product team to confirm the exact system label/terminology so the phrasing can be aligned precisely.]
+[OPEN — HC article for Google import warns not to save the email address as a contact on any customer record before enabling import, as this is irreversible. The warning is included in the script. The course uses the phrase "saved as a contact address on any customer record." HC for Google uses "saved as a contact within any customer record"; HC for Office 365 uses "linked to any customer." Sara or the product team to confirm the exact system label/terminology so the phrasing can be aligned precisely.]
 
 [OPEN — **Action for Fern.** The Series 6 challenge (Message sent and portal live) was scoped to Courses 1 and 2, with a standing note to update it once Course 3 was written. Course 3 is now complete. Fern to commission a challenge update adding a Connect-related dialogue exchange.]
 `;
@@ -19429,7 +19429,12 @@ function loadNotes() {
   list.innerHTML = '<div class="note-empty">Loading notes…</div>';
   fetch(NOTES_ENDPOINT)
     .then(function(r) { return r.json(); })
-    .then(function(rows) { notesCache = rows || []; renderNotes(); })
+    .then(function(data) {
+      // Backend now returns { notes:[...], state:{...} }. Stay robust to the
+      // old bare-array shape too, in case an older deployment is still live.
+      notesCache = Array.isArray(data) ? data : (data && data.notes) || [];
+      renderNotes();
+    })
     .catch(function() { list.innerHTML = '<div class="note-empty">Could not load notes.</div>'; });
 }
 
@@ -20205,6 +20210,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   } catch(e) {}
   initStatusPills();
+  loadState();   // pull shared statuses + open-item ticks, then re-render
 });
 
 // ---- Course status (Draft -> Review -> Approved) ----
@@ -20217,6 +20223,62 @@ var STATUS_ORDER = ['Draft', 'Review', 'Approved'];
 var STATUS_CLASS = { Draft: 'status-draft', Review: 'status-review', Approved: 'status-approved' };
 var STATUS_STEP_CLASS = { Draft: 'status-step-draft', Review: 'status-step-review', Approved: 'status-step-approved' };
 
+// ---- Shared state (Google Sheet "State" tab) ----
+// STATE_CACHE mirrors the shared backend so statuses and open-item ticks are
+// the same for everyone and survive a browser cache clear. It is filled once on
+// page boot by loadState() and updated optimistically on every click. The Sheet
+// keys are identical to the old localStorage keys: 'cstatus:<key>' and
+// 'citem:<key>:<i>'. localStorage is still written as an offline fallback.
+var STATE_CACHE = {};
+
+// POST a single key/value to the shared backend using the same text/plain
+// "simple request" technique as submitNote (keeps it a CORS simple request so
+// Apps Script does not need to handle a preflight). Failures are swallowed so a
+// flaky network never blocks the UI — the optimistic cache + localStorage hold.
+function postState(stateKey, value, from) {
+  if (!NOTES_ENDPOINT) return;
+  try {
+    fetch(NOTES_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify({ kind: 'state', key: stateKey, value: value, from: from || '' })
+    }).catch(function() {});
+  } catch (e) {}
+}
+
+// One-time load on page boot. Pulls the shared state map, fills STATE_CACHE,
+// then re-renders the card grid and any open panel so shared state shows at once.
+function loadState() {
+  if (!NOTES_ENDPOINT) return;
+  fetch(NOTES_ENDPOINT)
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      var state = (data && !Array.isArray(data) && data.state) ? data.state : null;
+      if (!state) return;
+      STATE_CACHE = state;
+      try { initStatusPills(); } catch (e) {}
+      try { refreshOpenPanelState(); } catch (e) {}
+    })
+    .catch(function() {}); // unreachable backend: keep localStorage fallback, never throw
+}
+
+// Re-sync the currently open course panel (footer + open-item checkboxes) from
+// STATE_CACHE. Safe to call when no panel is open.
+function refreshOpenPanelState() {
+  var footer = document.getElementById('panelStatusFooter');
+  if (!footer || footer.style.display === 'none' || !footer.dataset.num) return;
+  var num = footer.dataset.num;
+  var key = 'panel-' + num;
+  var boxes = document.querySelectorAll('#panelBody input[type="checkbox"][onchange*="toggleOpenItem"]');
+  for (var i = 0; i < boxes.length; i++) {
+    var checked = itemChecked(key, i);
+    boxes[i].checked = checked;
+    var span = boxes[i].parentNode.querySelector('.oi-text');
+    if (span) span.classList.toggle('done', checked);
+  }
+  renderStatusFooter(num);
+}
+
 function statusKeyFor(card) {
   var oc = card.getAttribute('onclick') || '';
   var m = oc.match(/openPanel\(\s*'?([^')]+?)'?\s*\)/);
@@ -20226,6 +20288,9 @@ function statusKeyFor(card) {
   return null;
 }
 function getStatus(key) {
+  // Shared backend first, then per-browser localStorage, then committed baseline.
+  var sc = STATE_CACHE['cstatus:' + key];
+  if (sc && STATUS_ORDER.indexOf(sc) !== -1) return sc;
   try {
     var v = localStorage.getItem('cstatus:' + key);
     if (v && STATUS_ORDER.indexOf(v) !== -1) return v;
@@ -20233,15 +20298,33 @@ function getStatus(key) {
   return COMMITTED_STATUS[key] || 'Draft';
 }
 function setStatus(key, v) {
-  try { localStorage.setItem('cstatus:' + key, v); } catch (e) {}
+  var stateKey = 'cstatus:' + key;
+  STATE_CACHE[stateKey] = v;                                  // optimistic shared update
+  try { localStorage.setItem(stateKey, v); } catch (e) {}     // offline fallback
+  postState(stateKey, v, currentNoteAuthor());                // push to shared backend
 }
 
 // Open-item tick state (per course key + item index)
 function itemChecked(key, i) {
+  var sc = STATE_CACHE['citem:' + key + ':' + i];
+  if (sc === '1') return true;
+  if (sc === '0') return false;
   try { return localStorage.getItem('citem:' + key + ':' + i) === '1'; } catch (e) { return false; }
 }
 function setItemChecked(key, i, v) {
-  try { localStorage.setItem('citem:' + key + ':' + i, v ? '1' : '0'); } catch (e) {}
+  var stateKey = 'citem:' + key + ':' + i;
+  var val = v ? '1' : '0';
+  STATE_CACHE[stateKey] = val;                                // optimistic shared update
+  try { localStorage.setItem(stateKey, val); } catch (e) {}   // offline fallback
+  postState(stateKey, val, currentNoteAuthor());              // push to shared backend
+}
+
+// Best-effort author for the "UpdatedBy" column — reuse the notes author field if filled.
+function currentNoteAuthor() {
+  try {
+    var el = document.getElementById('noteAuthor');
+    return el ? (el.value || '').trim() : '';
+  } catch (e) { return ''; }
 }
 function courseOpenItemCount(num) {
   var c = COURSES[num];

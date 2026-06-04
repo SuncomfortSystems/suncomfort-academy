@@ -536,7 +536,7 @@
           <div class="series-count">6 courses + challenge</div>
         </div>
         <div class="course-grid">
-          <div class="course-card" onclick="openInboxFile('reed-script-l1-s5-c1')"><div class="course-num">Course 1</div><div class="course-title">Raise and send an invoice</div><div class="course-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openPanel('l1-os-s5-c1')"><div class="course-num">Course 1</div><div class="course-title">Raise and send an invoice</div><div class="course-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l1-s5-c2')"><div class="course-num">Course 2</div><div class="course-title">Mark an invoice as paid</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l1-s5-c3')"><div class="course-num">Course 3</div><div class="course-title">Raise a credit note</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l1-s5-c4')"><div class="course-num">Course 4</div><div class="course-title">Send a customer statement</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
@@ -1639,6 +1639,39 @@ COURSES['l0-12'] = {
   ]
 };
 
+COURSES['l1-os-s5-c1'] = {
+  contentType: "Walkthrough",
+  pathLabel: "L1 Office Staff · Series 5: Getting paid · Course 1 of 6",
+  title: "Raise and send an invoice",
+  duration: "5 min",
+  persona: "Office staff",
+  characters: "Claire Hudson (Administrator / Financial office staff)",
+  scenario: "A heat pump installation job at SunComfort is complete and ready to invoice. Claire raises a final invoice from the job record, selects the correct breakdown, and sends it to the customer.",
+  objectives: [
+    "Navigate to the correct starting point to raise an invoice from a job",
+    "Select the right invoice type and breakdown style for the work completed",
+    "Save and send the invoice to the customer"
+  ],
+  buildBySection: [
+    {section: "Introduction", media: "Text"},
+    {section: "Choosing the right invoice type", media: "Screen recording"},
+    {section: "Building the invoice", media: "Screen recording"},
+    {section: "Saving and sending", media: "Screen recording + gif"},
+    {section: "Summary", media: "Text"}
+  ],
+  productionNotes: "Record on the web app — line items can only be added there, not on the mobile app. Log in as Claire Hudson (Administrator / Financial office staff). Have one completed heat pump installation job ready to invoice: work marked complete so the Invoices tab and Add new invoice are available, with parts and labour already on the job so a breakdown can be shown. Start recording from the job search so the full path is captured (search → open job → Invoices tab → Add new invoice). To show the invoice-type options meaningfully, use a job where a Deposit has already been raised. For the send step, make sure the customer record has an email address so the email / print options are live.",
+  openItems: "(1) The exact steps to send/email a standard invoice from the invoice record (as opposed to consolidated invoices, which have a checkbox at save time) are not explicitly detailed in the HC article. Confirm the exact route (email button location on the invoice record) before production.",
+  scenes: [
+    {type:"section", heading:"Introduction", body:"The invoice is the financial record of every job. Once the work is complete, the invoice is what turns a completed visit into a payment owed. Raising it correctly — with the right type, the right breakdown, and the right line items — means the customer has everything they need to pay and the finance team has everything they need to reconcile."},
+    {type:"section", heading:"Choosing the right invoice type", body:"To raise an invoice, search for the job, open it, and navigate to the Invoices tab. Select Add new invoice. The first decision is the invoice type. Commusoft supports multiple types including Deposit, Interim, Final, Draft, and Consolidated. For most completed jobs, Final is the type to select. Deposit is used to collect payment before work begins. Interim invoices are raised mid-project when billing in stages. Draft saves the invoice without marking it as issued, useful when the invoice needs review before it goes to the customer. Selecting the right type from the start ensures the invoice is treated correctly in the financial records."},
+    {type:"reflection", label:"Reflection prompt", question:"Before we continue: does your business invoice in stages — for example, a deposit at the start and a final invoice at completion?", options:["Yes","No"], correct:"Yes", feedback:"The Deposit and Interim types are built for this. Each invoice at each stage is a separate record on the job, and the Final invoice closes the billing when the work is done. The sequence is visible on the Invoices tab throughout the job.", feedbackAlt:"A Final invoice at completion is the standard path. It is the most common invoice type and the one most jobs will use. The other types are available when you need them."},
+    {type:"section", heading:"Building the invoice", body:"With the invoice type selected, complete the invoice details: description, date, and any additional information relevant to this job. Next, choose the breakdown style. No breakdown produces a single line item total. Breakdown by category separates labour and parts. Full breakdown lists every individual item. Full breakdown by category groups items by type. The right choice depends on what the customer expects to see and what your business standard is. Add the line items in the breakdown section — this must be done on the web app, not the mobile app. Review the totals before saving."},
+    {type:"section", heading:"Saving and sending", body:"When the invoice is complete, click Save invoice. If the invoice needs one more review before it goes out, use the Draft option in Advanced options — a draft is saved but not issued and can be edited before being finalised. Once saved, the invoice can be printed or emailed directly to the customer from the invoice record. For businesses on compatible plans, a checkbox at the point of saving allows the invoice to be emailed to the customer immediately without a separate step."},
+    {type:"reflection", label:"Knowledge check", question:"Claire is raising an invoice for a job that is not yet finished. The customer has agreed to pay a percentage of the total now, with the remainder due on completion. Which invoice type should she select?", options:["A. Final — all invoices for active jobs should be raised as Final","B. Draft — save it now and convert it to a final invoice when the job is complete","C. Deposit — to collect payment before or during the work, ahead of the final invoice","D. Consolidated — to group this job with others on the same account"], correct:"C", feedback:"Right. A Deposit invoice is used to collect payment before or during work, ahead of the final invoice. Claire raises the Deposit now and raises the Final invoice when the job is complete.", feedbackAlt:"The Deposit type is the right choice here. It is used to collect payment before or during work, with the Final invoice following at completion. Draft saves the invoice without issuing it, and Consolidated groups multiple jobs into one invoice — neither fits this scenario."},
+    {type:"section", heading:"Summary", body:"To raise an invoice, navigate to the job, open the Invoices tab, and select Add new invoice. Choose the invoice type — Final for completed work, Deposit for upfront payment, Interim for staged billing, Draft for review before issue. Select the breakdown style, add line items on the web app, and save. Send the invoice to the customer by email or print it from the invoice record. The invoice type you select shapes how the record is treated in the financial system, so selecting it correctly at the start matters."}
+  ]
+};
+
 function esc(str) {
   return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
@@ -1698,7 +1731,26 @@ function renderPanel(num) {
   overviewHtml += `<div class="sc-meta-block"><strong>Characters</strong><br><span style="font-size:13px">${esc(c.characters)}</span></div>`;
   overviewHtml += `<div class="sc-meta-block"><strong>Scenario</strong><br><span style="font-size:13px">${esc(c.scenario)}</span></div>`;
 
-  if (c.productionSetup) {
+  if (c.buildBySection || c.productionNotes) {
+    // ── NEW build-sheet format (Walkthrough etc.) ──
+    if (c.contentType || c.duration) {
+      const whatBits = [];
+      if (c.contentType) whatBits.push(esc(c.contentType));
+      if (c.duration) whatBits.push(esc(c.duration));
+      overviewHtml += `<div class="sc-meta-block"><strong>What this is</strong><br><span style="font-size:13px">${whatBits.join(' · ')}</span></div>`;
+    }
+    if (c.buildBySection && c.buildBySection.length) {
+      overviewHtml += '<div class="sc-meta-block"><strong>Build by section</strong>';
+      overviewHtml += '<table style="font-size:13px;margin-top:6px;width:100%;border-collapse:collapse">';
+      c.buildBySection.forEach(b => {
+        overviewHtml += `<tr><td style="padding:3px 12px 3px 0;font-weight:600;vertical-align:top">${esc(b.section)}</td><td style="line-height:1.5">${esc(b.media)}</td></tr>`;
+      });
+      overviewHtml += '</table></div>';
+    }
+    if (c.productionNotes) {
+      overviewHtml += `<div class="sc-meta-block"><strong>Production notes</strong><br><span style="font-size:13px;line-height:1.6">${esc(c.productionNotes)}</span></div>`;
+    }
+  } else if (c.productionSetup) {
     overviewHtml += '<div class="sc-meta-block"><strong>Production setup</strong>';
     overviewHtml += '<table style="font-size:13px;margin-top:6px;width:100%;border-collapse:collapse">';
     overviewHtml += `<tr><td style="padding:3px 12px 3px 0;font-weight:600;white-space:nowrap;vertical-align:top">Logged-in user</td><td style="line-height:1.5">${esc(c.productionSetup.loggedInUser)}</td></tr>`;
@@ -19801,7 +19853,9 @@ function openPanel(num) {
   sp.dataset.downloadFilename = pdfFilename;
   // Determine header label based on key type
   var headerLabel;
-  if (typeof num === 'string' && num.startsWith('l0-')) {
+  if (c && c.contentType && c.pathLabel) {
+    headerLabel = c.contentType + ' \u2014 ' + c.pathLabel;
+  } else if (typeof num === 'string' && num.startsWith('l0-')) {
     var courseNum = parseInt(num.split('-')[1], 10);
     headerLabel = 'Concept ' + courseNum + ' \u2014 Shared Concept Library';
   } else {

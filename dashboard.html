@@ -697,13 +697,13 @@
           <div class="series-count">6 courses + challenge</div>
         </div>
         <div class="course-grid">
-          <div class="course-card" onclick="openInboxFile('reed-script-l2-s1-c1')"><div class="course-num">Course 1</div><div class="course-title">Configure your company details and branding</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
-          <div class="course-card" onclick="openInboxFile('reed-script-l2-s1-c2')"><div class="course-num">Course 2</div><div class="course-title">Set up customer types and communication rules</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
-          <div class="course-card" onclick="openInboxFile('reed-script-l2-s1-c3')"><div class="course-num">Course 3</div><div class="course-title">Configure your email and SMS templates</div><div class="course-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
-          <div class="course-card" onclick="openInboxFile('reed-script-l2-s1-c4')"><div class="course-num">Course 4</div><div class="course-title">Set up advertising sources and customer account numbers</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
-          <div class="course-card" onclick="openInboxFile('reed-script-l2-s1-c5')"><div class="course-num">Course 5</div><div class="course-title">Configure the customer login portal</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
-          <div class="course-card" onclick="openInboxFile('reed-script-l2-s1-c6')"><div class="course-num">Course 6</div><div class="course-title">Set up custom field templates</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
-          <div class="course-card" onclick="openInboxFile('reed-script-l2-s1-challenge')"><div class="course-num">Challenge</div><div class="course-title">Account ready to take customers</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openPanel('reed-script-l2-s1-c1')"><div class="course-num">Walkthrough</div><div class="course-title">Configure your company details and branding</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openPanel('reed-script-l2-s1-c2')"><div class="course-num">Walkthrough</div><div class="course-title">Set up customer types and communication rules</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openPanel('reed-script-l2-s1-c3')"><div class="course-num">Walkthrough</div><div class="course-title">Configure your email and SMS templates</div><div class="course-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openPanel('reed-script-l2-s1-c4')"><div class="course-num">Walkthrough</div><div class="course-title">Set up advertising sources and customer account numbers</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openPanel('reed-script-l2-s1-c5')"><div class="course-num">Walkthrough</div><div class="course-title">Configure the customer login portal</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openPanel('reed-script-l2-s1-c6')"><div class="course-num">Walkthrough</div><div class="course-title">Set up custom field templates</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openPanel('reed-script-l2-s1-challenge')"><div class="course-num">Walkthrough</div><div class="course-title">Account ready to take customers</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
       <div id="l2-s2" class="series-block">
@@ -3861,6 +3861,253 @@ COURSES['reed-script-l1-dm-s5-challenge'] = {
     {type:"section", heading:"Exchange 4: Workflow Marketplace not visible in Settings", body:"Sarah: One of the team members tried to enable the Proposal Chase workflow but could not find the Workflow Marketplace in Settings at all. She is on an admin level access. Is there a permission issue?\n\nClint: Access level is unlikely to be the cause if she has admin permissions. The more likely explanation is the account plan. The Workflow Marketplace requires the Customer Journey or Automation plan; it is not available on the Go Paperless plan or legacy plans. If SunComfort's account is on a plan that does not include it, the feature will not appear in Settings regardless of the user's role. Checking the current plan with the Commusoft account manager is the first step."},
     {type:"reflection", label:"Knowledge check", question:"Logan reviews the workflow history for the debt chasing workflow and finds a stage showing as \"Failed\" for one customer. What does this tell him, and what should he do next?", options:["A. The stage failed but retried automatically; Logan should wait 24 hours to see if the next attempt succeeds","B. The stage failed and the entire workflow has halted for that customer; Logan should check the customer's contact details and communication rules","C. The stage failed because the workflow was edited while it was running; Logan should re-enable the workflow to restart it","D. The stage failed because the customer's invoice was paid before the stage ran; no action is needed"], correct:"B", feedback:"Right. A Failed status means the stage encountered a problem — usually a customer with no valid contact details — and the entire workflow halted for that record. There is no automatic retry. Logan should open the customer record, confirm a valid email address is present, and check that an email communication rule is enabled. Once fixed, the workflow can be restarted for that customer.", feedbackAlt:"A Failed stage halts the entire workflow for that record permanently — there is no automatic retry. The most common cause is missing contact details on the customer record, not a payment or an edit conflict. Logan should check the customer's email address and communication rules, correct any issues, and then restart the workflow for that record."},
     {type:"section", heading:"Series close", body:"Clint: That is Series 5 complete, and the full Decision Maker path done. You can now access the Workflow Marketplace, enable and configure pre-built workflows for debt chasing, estimate and proposal follow-up, payment receipts, and after-sales feedback, and read the workflow history to understand exactly what happened and why. You can build prospect follow-up sequences from delay, communication, and action blocks, activate them, assign them to specific records, and configure exit criteria so the sequence stops when the prospect responds or the proposal is accepted. You can diagnose the most common automation failures: communication rules not configured, contact details missing, a workflow disabled too late for records already in progress, and sequences running past the point they should have stopped. The manual work behind consistent customer communication has a structure now. The question is what you do with the time it gives back."}
+  ]
+};
+
+COURSES['reed-script-l2-s1-c1'] = {
+  contentType: "Walkthrough",
+  pathLabel: "L2 Setup & Configuration · Series 1: Getting your account ready · Course 1 of 6",
+  title: "Configure your company details and branding",
+  duration: "4 min",
+  persona: "Admins",
+  characters: "Sarah Mitchell (Managing Director, Owner/Manager)",
+  scenario: "Sarah is configuring SunComfort's Commusoft account before the team goes live, starting with company details and the branding settings that determine how the business appears on customer-facing documents and portals.",
+  objectives: [
+    "Enter and update your company contact details, trading name, and address in Commusoft",
+    "Add trade registration and industry-specific numbers that appear on customer documents",
+    "Configure document branding, letterhead settings, and self-service portal appearance"
+  ],
+  buildBySection: [
+    {section: "Setting up your company details", media: "Screen recording", note: "Capture profile icon → Settings → Your business details → Company details → trading name, registered address, phone, email, website fields → save."},
+    {section: "Registration numbers and credentials", media: "Screen recording", note: "Capture Company registration numbers (VAT, Companies House) and UK industry specific numbers (MCS, NICEIC, Trustmark) being entered."},
+    {section: "Document branding", media: "Screen recording + GIF", note: "Screen-record Settings → Branding → Letterhead settings and Document branding; logo upload and colour scheme to SunComfort orange. GIF the colour/logo applied to a generated PDF if available."},
+    {section: "Self-service portal branding", media: "Screen recording", note: "Capture Self service branding → logo upload, primary and button colours, live preview, portal selector."},
+    {section: "User groups", media: "Screen recording", note: "Capture Settings → Users → User groups → creating the seven SunComfort groups (Management, Sales, Office, Solar, Heat Pumps, Power, Maintenance)."},
+    {section: "Summary", media: "Text", note: "Recap text only — no recording needed."}
+  ],
+  productionNotes: [
+    "Record on the web app, logged in as Sarah Mitchell (Managing Director, Owner/Manager).",
+    "No customer record required.",
+    "Have a Commusoft account with company name and address pre-entered, but registration numbers, branding, and industry credentials not yet configured.",
+    "Have the SunComfort logo file ready for upload to both document branding and self-service branding.",
+    "Start from the profile icon so the full Settings navigation path is captured.",
+    "Note the order matters for user groups — the first group created is auto-assigned to all existing users, so create groups before users are active."
+  ],
+  openItems: "None — all content verified against HC articles 217246, 217249, 217254, 217281, 217286, 217291, 217304.",
+  scenes: [
+    {type:"section", heading:"Setting up your company details", body:"Your company details are the foundation of everything Commusoft puts in front of your customers. The name, address, and contact information you enter here flow into invoices, job confirmation emails, engineer job sheets, and the contact section of your self-service portals. To get started, select the profile icon in the top-right corner, go to Settings, then select Your business details and open Company details.\n\nYou will see fields for your trading name, registered address, phone number, primary email, and website. Update each field to match your current details and save. If your company trades under a name that differs from your registered legal name, enter the trading name here so it appears on all customer-facing documents."},
+    {type:"section", heading:"Registration numbers and credentials", body:"Field service businesses operate under a range of registration numbers that customers, building control officers, and scheme administrators expect to see on documentation. Open Company registration numbers to enter your VAT registration number and Companies House number. These appear in the footer of invoices and other formal documents.\n\nFor trade-specific credentials, open UK industry specific numbers. This is where you record your Gas Safe registration, MCS certification number, NICEIC or NAPIT registration, and any other scheme credentials relevant to your services. Sarah adds SunComfort's MCS number, NICEIC registration, and Trustmark credentials here. They will appear automatically on job documentation without anyone needing to add them manually."},
+    {type:"section", heading:"Document branding", body:"Move to Branding in the Settings menu. Letterhead settings controls the header and footer design on printed correspondence such as letters. Document branding controls the logo, colours, and layout used on all PDFs including invoices, job reports, and engineer job sheets. Upload your company logo and set your colour scheme here, and every PDF generated from that point forward carries your branding. Sarah uploads the SunComfort logo and sets the primary colour to match the company orange used across all customer-facing materials."},
+    {type:"reflection", label:"Reflection prompt", question:"Sarah uploads the company logo under Document branding. Will this logo automatically appear on invoices, job reports, and engineer job sheets?", options:["Yes","No"], correct:"Yes", feedback:"Yes. Document branding applies to all PDFs generated in Commusoft, including invoices and job reports. One upload covers all document types.", feedbackAlt:"Document branding applies to all PDFs generated in Commusoft, including invoices and job reports. One upload covers all document types, so the logo appears everywhere automatically."},
+    {type:"section", heading:"Self-service portal branding", body:"Self-service branding controls how the customer-facing portals look when your customers open an invoice link, a service reminder, or an on-our-way notification. Open Self service branding in the Branding section, upload your logo, and set your primary colour and button colours. A live preview updates as you make changes, and a portal selector lets you check how each portal type will appear. This is worth configuring before any portals go live so customers see your brand rather than the default Commusoft styling."},
+    {type:"section", heading:"User groups", body:"Before your team starts using the system, it is worth creating your user groups. Found at Settings, then Users, then User groups, they let you organise staff into named teams for diary filtering and job segmentation. Sarah creates seven groups for SunComfort: Management, Sales, Office, Solar, Heat Pumps, Power, and Maintenance. Once the groups exist, each user can be assigned to one. The first group you create is automatically assigned to all existing users, so add your groups before your users are active in the system. User groups do not control system access or permissions; that is managed through user roles."},
+    {type:"section", heading:"Summary", body:"Your company details, registration numbers, document branding, self-service portal appearance, and user group structure are now in place. Every customer-facing document and portal will carry the right name, credentials, and branding from this point forward. In the next course, you will configure customer types and communication rules, the settings that shape how SunComfort categorises its customers and when automated communications are sent."}
+  ]
+};
+
+COURSES['reed-script-l2-s1-c2'] = {
+  contentType: "Walkthrough",
+  pathLabel: "L2 Setup & Configuration · Series 1: Getting your account ready · Course 2 of 6",
+  title: "Set up customer types and communication rules",
+  duration: "4 min",
+  persona: "Admins",
+  characters: "Sarah Mitchell (Managing Director, Owner/Manager)",
+  scenario: "Sarah configures the customer types and communication rules that will shape how SunComfort's team categorises new customers and how the system handles automated communication based on customer type.",
+  objectives: [
+    "Create and configure customer types to categorise your customer base",
+    "Set up communication rules that control when automated messages are sent to each customer type"
+  ],
+  buildBySection: [
+    {section: "Customer types", media: "Screen recording", note: "Capture Settings → Customers → Customer types → reviewing Residential and Commercial defaults and adding Solar Commercial and Heat Pump Commercial."},
+    {section: "Communication rules", media: "Screen recording", note: "Capture Settings → Customers → Communication rules → linking communication types to customer types and assigning templates per type."},
+    {section: "Summary", media: "Text", note: "Recap text only — no recording needed."}
+  ],
+  productionNotes: [
+    "Record on the web app, logged in as Sarah Mitchell (Managing Director, Owner/Manager).",
+    "No customer record required.",
+    "Have company details and branding configured (Course 1 complete) but Customer Types and Communication Rules not yet set up.",
+    "Have the relevant email and SMS templates available to assign within communication rules, or note they are assigned in the next step.",
+    "Show both the default types (Residential, Commercial) and the two new ones added so the type selector is meaningful."
+  ],
+  openItems: "None — all content verified against HC articles 216908, 216910.",
+  scenes: [
+    {type:"section", heading:"Customer types", body:"Customer types are the categories your team assigns to a customer when they are added to the system. They determine what kind of business you are dealing with and feed into filtering, reporting, and any communication rules you configure. To access this setting, go to Settings, select the Customers section, and open Customer types.\n\nCommusoft includes Residential and Commercial types by default. You can add new types, rename the defaults, or archive any that are not relevant to your business. Sarah reviews SunComfort's customer base and keeps Residential and Commercial, then adds two additional types: Solar Commercial and Heat Pump Commercial. These let the team distinguish between commercial clients for different services, which feeds into cleaner reporting and separate communication rules for each group."},
+    {type:"section", heading:"Communication rules", body:"Communication rules determine when specific automated messages fire based on the customer type assigned to a record. Go to Settings, then Customers, then Communication rules to configure them. Each rule links a communication type, such as a job confirmation email or an invoice notification, to one or more customer types. This means you can send a more formal job confirmation to commercial clients and a warmer, conversational version to residential homeowners, automatically, without the office team making a manual decision each time.\n\nSarah sets up separate rules for residential and commercial customers. She assigns the appropriate email and SMS templates to each customer type so the right communication fires regardless of which team member processes the booking. If no rules are configured, the same communication fires for all customers regardless of type, which is simpler but less targeted for businesses with a mixed customer base."},
+    {type:"reflection", label:"Knowledge check", question:"Sarah wants residential customers to receive a different job confirmation email to commercial customers. Where does she configure this?", options:["A. Email templates","B. Communication rules","C. Customer types","D. Notification settings"], correct:"B", feedback:"Communication rules is the right setting. It links specific communication types to specific customer types, so each group receives the message assigned to them. Customer types defines the categories; email templates is where the message content lives; notification settings controls internal user alerts, not customer-facing communications.", feedbackAlt:"Communication rules is the setting that links specific communication types to specific customer types, so each group receives the message assigned to them. Customer types only defines the categories, email templates holds the message content, and notification settings controls internal alerts — none of which directs different messages by type on their own."},
+    {type:"section", heading:"Summary", body:"Customer types give you a structured way to categorise your customer base from the moment the first record is added. Communication rules use those types to direct the right automated messages to the right audiences. Together they keep your data organised and your communications targeted without extra manual steps from your team. In the next course, you will configure your email and SMS templates, the content that your communication rules and automated workflows will send."}
+  ]
+};
+
+COURSES['reed-script-l2-s1-c3'] = {
+  contentType: "Walkthrough",
+  pathLabel: "L2 Setup & Configuration · Series 1: Getting your account ready · Course 3 of 6",
+  title: "Configure your email and SMS templates",
+  duration: "5 min",
+  persona: "Admins",
+  characters: "Sarah Mitchell (Managing Director, Owner/Manager)",
+  scenario: "Sarah builds the email and SMS template library that SunComfort's team will use to communicate with customers, starting with the sender name and signature that will appear on every outbound message.",
+  objectives: [
+    "Set your SMS sender name and configure your email signature template",
+    "Create and organise email templates for customer communications",
+    "Set up SMS templates for job-related messages"
+  ],
+  buildBySection: [
+    {section: "Your SMS sender name", media: "Screen recording", note: "Capture Settings → Communications → Set up your SMS name → entering SunComfort as the sender name."},
+    {section: "Your email signature", media: "Screen recording", note: "Capture Settings → Communications → Email signature template → editor with company name, phone, website, MCS logo, NICEIC registration → save."},
+    {section: "Creating email templates", media: "Screen recording + GIF", note: "Capture Settings → Communications → Email templates → Add new folder → adding templates; GIF typing an opening bracket to show the tag list inserting personalisation fields."},
+    {section: "Creating SMS templates", media: "Screen recording", note: "Capture Settings → Communications → SMS templates → folder and templates, residential and commercial versions; show tags."},
+    {section: "Summary", media: "Text", note: "Recap text only — no recording needed."}
+  ],
+  productionNotes: [
+    "Record on the web app, logged in as Sarah Mitchell (Managing Director, Owner/Manager).",
+    "No customer record required.",
+    "Have company details, customer types, and communication rules configured (Courses 1 and 2 complete) but no email or SMS templates yet.",
+    "Have the SunComfort name, main phone number, website, MCS logo, and NICEIC registration ready for the signature.",
+    "Plan the folder structure in advance: a General folder (general enquiry response, parts delay notification) and an Installations folder (date confirmation, survey booking, post-job summary).",
+    "For SMS, build residential and commercial job confirmation and on-our-way versions to align with the communication rules from Course 2."
+  ],
+  openItems: "None — all content verified against HC articles 217257, 217259, 217272, 217275.",
+  scenes: [
+    {type:"section", heading:"Your SMS sender name", body:"Before building any templates, there are two visible settings to configure that affect every message the system sends. The first is your SMS sender name, found at Settings, then Communications, then Set up your SMS name. This is the name your customers see as the sender when they receive an SMS from Commusoft. Sarah enters SunComfort so that customers immediately recognise who the message is from rather than seeing an unfamiliar phone number."},
+    {type:"section", heading:"Your email signature", body:"The email signature is a closing block that appends automatically to every email sent from Commusoft, whether your team sends it manually or an automation triggers it. To set it up, go to Settings, then Communications, then Email signature template. Use the editor to add your company name, phone number, website, and any trade accreditations you want customers to see. Sarah adds SunComfort's name, main phone number, MCS logo, and NICEIC registration. Once saved, this signature appears on all outbound emails without any team member needing to add it manually."},
+    {type:"reflection", label:"Reflection prompt", question:"Sarah sets up the email signature once in settings. Will it appear on automated emails sent by workflows, as well as emails sent manually by the office team?", options:["Yes","No"], correct:"Yes", feedback:"Yes. The email signature template applies to all outbound emails from Commusoft, whether sent manually or triggered automatically by a workflow or sequence.", feedbackAlt:"The email signature template applies to all outbound emails from Commusoft, whether sent manually or triggered automatically by a workflow or sequence — so it appears on automated messages too."},
+    {type:"section", heading:"Creating email templates", body:"Email templates live at Settings, then Communications, then Email templates. To add a new template, select Add new folder, name the folder, then add templates within it. Each template supports rich text formatting and tags. Tags are personalisation fields that insert live data when the message is sent: customer name, job address, job reference, technician name, invoice total, and dozens of other values. Type an opening bracket to see the full list of available tags and insert the ones you need into the subject line and body.\n\nSarah creates a General folder first, adding a general enquiry response template and a parts delay notification. She then creates an Installations folder with templates for installation date confirmation, survey booking, and post-job summary. Organising templates in named folders by type means the office team can find the right template quickly when they need it, rather than scrolling through a flat list."},
+    {type:"section", heading:"Creating SMS templates", body:"SMS templates follow the same structure. Go to Settings, then Communications, then SMS templates, create a folder, and add your templates within it. Keep SMS messages concise: include the key details the customer needs (job date, technician name, and a number to call with queries) and nothing that would make the message too long to read quickly on a phone. Tags work the same way as in email templates. Sarah creates job confirmation and on-our-way SMS templates, building separate versions for residential and commercial customers to align with the communication rules she configured in the previous course."},
+    {type:"section", heading:"Summary", body:"Your SMS sender name, email signature, and template libraries are now configured. Your team can send consistent, professional communications from the first day they are live, and every automated workflow has a template to draw on when it fires. In the next course, you will set up advertising sources and customer account numbering, two short settings that keep your customer data well-organised from the very first record."}
+  ]
+};
+
+COURSES['reed-script-l2-s1-c4'] = {
+  contentType: "Walkthrough",
+  pathLabel: "L2 Setup & Configuration · Series 1: Getting your account ready · Course 4 of 6",
+  title: "Set up advertising sources and customer account numbers",
+  duration: "3 min",
+  persona: "Admins",
+  characters: "Sarah Mitchell (Managing Director, Owner/Manager)",
+  scenario: "Sarah completes two short configuration steps before the first customer is added to SunComfort's account: advertising sources for reporting and customer account numbering for consistent record identification.",
+  objectives: [
+    "Configure advertising sources to track where new customers come from",
+    "Set the starting number for customer account references"
+  ],
+  buildBySection: [
+    {section: "Advertising sources", media: "Screen recording", note: "Capture Settings → Customers → Advertising sources → adding SunComfort's marketing-mix sources plus an Other catch-all."},
+    {section: "Customer account numbers", media: "Screen recording", note: "Capture Settings → Customers → Customer account number → setting the starting number to 1001."},
+    {section: "Summary", media: "Text", note: "Recap text only — no recording needed."}
+  ],
+  productionNotes: [
+    "Record on the web app, logged in as Sarah Mitchell (Managing Director, Owner/Manager).",
+    "No customer record required.",
+    "Have previous courses in the series complete; advertising sources and customer account number settings not yet configured.",
+    "Have SunComfort's marketing sources ready to add (e.g. Google Search organic, Google Ads, Facebook and Instagram, Customer Referral, Builder and Developer Referral, Which? Trusted Trader, Trustmark, Vehicle Livery) plus an Other option.",
+    "Set the account number starting point to 1001 to demonstrate the four-digit format."
+  ],
+  openItems: "None — all content verified against HC articles 216906, 216918.",
+  scenes: [
+    {type:"section", heading:"Advertising sources", body:"Advertising sources are the options your team selects when adding a new customer to record how that customer found your business. Go to Settings, then Customers, then Advertising sources to configure your list. The data feeds into reporting, so over time you can see which marketing channels are generating new business and which are not delivering. Sarah adds sources that reflect SunComfort's actual marketing mix: Google Search (organic), Google Ads, Facebook and Instagram, Customer Referral, Builder and Developer Referral, Which? Trusted Trader, Trustmark, Vehicle Livery, and several others.\n\nKeep your list accurate and realistic. Too many rarely-used options leads to staff selecting the nearest available match rather than the right one. Sarah adds a catch-all option called Other to cover any source that does not fit a named category, so no customer record is left with a blank source field."},
+    {type:"section", heading:"Customer account numbers", body:"Customer account numbers give every customer a unique reference that appears on their record, on invoices, and in correspondence. To set the starting number, go to Settings, then Customers, then Customer account number. Sarah sets the starting number to 1001. The four-digit format creates a clean, professional reference and implies the business had an established customer base before moving to Commusoft, which is true for a company founded in 2012. Once the first customer is saved, Commusoft assigns subsequent customers the next number in the sequence automatically."},
+    {type:"reflection", label:"Knowledge check", question:"Sarah sets the customer account starting number to 1001 and adds the first customer. What account number will the second customer receive?", options:["A. 1001","B. 1002","C. 1000","D. The system assigns a random number"], correct:"B", feedback:"1002. Commusoft assigns account numbers sequentially from the starting point you set. Each new customer receives the next number automatically.", feedbackAlt:"Commusoft assigns account numbers sequentially from the starting point you set, so the second customer receives 1002. Each new customer takes the next number automatically."},
+    {type:"section", heading:"Summary", body:"Two short settings, one lasting outcome: your team can record where every new customer comes from, and every customer will carry a consistent account reference from their first record onwards. In the next course, you will configure the customer login portal, which gives your customers online access to their jobs, invoices, and scheduled appointments."}
+  ]
+};
+
+COURSES['reed-script-l2-s1-c5'] = {
+  contentType: "Walkthrough",
+  pathLabel: "L2 Setup & Configuration · Series 1: Getting your account ready · Course 5 of 6",
+  title: "Configure the customer login portal",
+  duration: "3 min",
+  persona: "Admins",
+  characters: "Sarah Mitchell (Managing Director, Owner/Manager), Emma Clarke (Office Administrator, Office staff)",
+  scenario: "Sarah reviews what the customer portal offers, then Emma demonstrates granting portal access to an existing customer so the team can see exactly what the experience looks like before rolling it out.",
+  objectives: [
+    "Understand what customers can access through the customer portal",
+    "Grant portal access from a customer record and manage existing access"
+  ],
+  buildBySection: [
+    {section: "What the customer portal offers", media: "Screen recording", note: "Capture an overview of the portal: jobs, invoices, certificates, and upcoming appointments visible to the customer once access is granted."},
+    {section: "Granting access to a customer", media: "Screen recording", note: "Capture customer record → Manage portal access from the actions menu → entering the customer email → invitation flow; also show returning to view last login, update access, or revoke."},
+    {section: "Summary", media: "Text", note: "Recap text only — no recording needed."}
+  ],
+  productionNotes: [
+    "Record on the web app. The introduction is presented as Sarah Mitchell (Managing Director, Owner/Manager); the granting-access demonstration is performed as Emma Clarke (Office Administrator, Office staff).",
+    "Use Mrs. Margaret Thompson — an existing active residential customer with at least one completed solar installation job, one raised invoice, and one upcoming scheduled appointment (from the SunComfort Customer Accounts file).",
+    "Ensure Margaret's record is fully populated (completed job, issued invoice, diary appointment) and has an email address so the invitation can be sent.",
+    "Show the Manage portal access menu including the options to view last login, update access details, and revoke access.",
+    "See the open item below regarding the two-user recording split."
+  ],
+  openItems: "[OPEN — Production note: this course uses two logged-in users (Sarah Mitchell for the introduction, Emma Clarke for the granting access demonstration). Two separate screen recording sessions are required. Confirm with production whether to keep the split or simplify to a single user — Emma could introduce the portal feature as well as demonstrate it, which would remove the need for a second recording session.]",
+  scenes: [
+    {type:"section", heading:"What the customer portal offers", body:"The customer portal is an online account your customers log into to see their jobs, invoices, certificates, and upcoming appointments. Once access is granted, the customer receives an invitation email with a link to set up their own credentials. Inside the portal they can view and filter their invoices, see the dates and details of scheduled appointments, access any certificates raised for them, and add new jobs or properties if you have enabled those options. The portal sits alongside your office team as a self-service layer, reducing the volume of routine inbound calls about invoice status and upcoming visits."},
+    {type:"section", heading:"Granting access to a customer", body:"To grant portal access, open the customer record and select Manage portal access from the customer actions menu. Emma selects this option on Margaret Thompson's record and enters Margaret's email address. Margaret receives an invitation link that lets her choose a username and password to set up her portal account. From that point, every invoice raised, every appointment booked, and every certificate issued for Margaret is visible in her portal automatically, with no extra step required from the office team.\n\nEmma can return to Manage portal access at any time to see when Margaret last logged in, update her access details, or revoke access entirely. Revoking access removes Margaret's login immediately and prevents any further access to the portal until access is granted again."},
+    {type:"reflection", label:"Reflection prompt", question:"Emma grants Margaret portal access today. A new job is booked for Margaret next week. Will that job appear in Margaret's portal account automatically?", options:["Yes","No"], correct:"Yes", feedback:"Yes. The portal shows all current and future jobs on the customer's account automatically. There is no separate step to make individual jobs visible once access has been granted.", feedbackAlt:"The portal shows all current and future jobs on the customer's account automatically. Once access has been granted there is no separate step to make individual jobs visible — the new job appears on its own."},
+    {type:"section", heading:"Summary", body:"The customer portal gives your customers visibility into their account without creating extra work for your team. Access is granted from the customer record, managed through the same menu, and everything on the customer's account is visible in the portal from the moment access goes live. In the next course, you will set up custom field templates, which let you add business-specific data fields to customer and work address records."}
+  ]
+};
+
+COURSES['reed-script-l2-s1-c6'] = {
+  contentType: "Walkthrough",
+  pathLabel: "L2 Setup & Configuration · Series 1: Getting your account ready · Course 6 of 6",
+  title: "Set up custom field templates",
+  duration: "4 min",
+  persona: "Admins",
+  characters: "Sarah Mitchell (Managing Director, Owner/Manager)",
+  scenario: "Sarah creates custom field templates to capture installation credentials and commercial site information that SunComfort needs on customer and work address records, then assigns them so the fields appear on every relevant record.",
+  objectives: [
+    "Create a custom field template with the appropriate field types for your business",
+    "Assign the template to the correct object types so the fields appear on records"
+  ],
+  buildBySection: [
+    {section: "What custom field templates do", media: "Screen recording", note: "Brief overview screen showing where custom field templates live and that they extend standard records; can show an empty Custom field templates list."},
+    {section: "Creating a template", media: "Screen recording", note: "Capture Settings → Global → Custom field templates → Add new template → naming and building the Solar Installation template with text/number/date/dropdown/checkbox field types; build Heat Pump Installation and Commercial Site templates."},
+    {section: "Assigning templates to objects", media: "Screen recording", note: "Capture Settings → Global → Assign custom field templates to objects → selecting object types and assigning templates (Solar Installation and Heat Pump Installation to Customer; Commercial Site to Work address)."},
+    {section: "Summary", media: "Text", note: "Recap text only — no recording needed."}
+  ],
+  productionNotes: [
+    "Record on the web app, logged in as Sarah Mitchell (Managing Director, Owner/Manager).",
+    "No customer record required for creation and assignment; optionally use Mrs. Margaret Thompson (residential solar installation customer) to show the fields in context on a record.",
+    "Have Settings > Global > Custom field templates empty at the start so the build is shown from scratch.",
+    "Have the field lists ready: Solar Installation (MCS Certificate Number, DNO Reference, System Size in kW, Battery Installed, SEG Registered); Heat Pump Installation (MCS Certificate Number, BUS Grant Reference, Heat Pump Model, F-Gas Certificate Number); Commercial Site (Site Contact Name, Out of Hours Contact, Access Codes, Health and Safety Requirements).",
+    "Emphasise the two-step nature: creating a template does nothing until it is assigned to an object type."
+  ],
+  openItems: "[OPEN — HC article for Custom Field Templates (217220) references a maximum number of custom fields. The SunComfort Settings file shows templates with more fields than this limit may allow. Before this course goes to production, confirm with the Enablement Manager: is the limit per template, per object type, or across all templates in the account? The script does not state a limit to avoid giving incorrect information.]",
+  scenes: [
+    {type:"section", heading:"What custom field templates do", body:"Commusoft records come with a standard set of fields covering the most common customer, job, and site data. Custom field templates extend those records with fields that are specific to your business. A template is a named group of fields you build in settings and then assign to a record type. Once assigned, those fields appear on every record of that type and can be filled in by any team member with access to that record.\n\nSunComfort needs to capture MCS certificate numbers and government grant references on customer records for solar and heat pump installations, and site contact details and health and safety requirements on commercial work addresses. Sarah creates templates for both of these before the team starts entering customer data, so the right fields are there from the first record."},
+    {type:"section", heading:"Creating a template", body:"Go to Settings, then under the Global section select Custom field templates. Select Add new template and give it a clear, descriptive name. Sarah names the first one Solar Installation so anyone configuring a customer record knows immediately what it is for. Use the form builder to add fields to the template. Each field has a name and a type: text for free-form entries such as a certificate number or reference, number for numeric values, date for date fields, dropdown for a controlled list of options, and checkbox for yes or no values.\n\nSarah adds fields for MCS Certificate Number, DNO Reference, System Size in kilowatts, Battery Installed, and SEG Registered to the Solar Installation template. She then creates a second template called Heat Pump Installation with fields for MCS Certificate Number, BUS Grant Reference, Heat Pump Model, and F-Gas Certificate Number. A third template, Commercial Site, captures Site Contact Name, Out of Hours Contact, Access Codes, and Health and Safety Requirements for work addresses. When all fields are added to each template, she saves and moves to the assignment step."},
+    {type:"section", heading:"Assigning templates to objects", body:"Creating a template is only the first step. The fields do not appear on any records until you assign the template to an object type. Go to Settings, then under Global select Assign custom field templates to objects. You will see a list of object types in the system. Select an object type and choose the template you want to assign from the dropdown. Sarah assigns both the Solar Installation and Heat Pump Installation templates to the Customer object type, and the Commercial Site template to Work address. From this point, the custom fields from each template appear on every customer record and every work address record in the system, ready to be filled in."},
+    {type:"reflection", label:"Knowledge check", question:"Sarah creates the Solar Installation custom field template but does not open Assign custom field templates to objects. Where will the custom fields appear?", options:["A. On all customer records immediately","B. On no records — templates must be assigned before fields appear","C. Only on records created after today","D. Only on job records"], correct:"B", feedback:"Templates must be assigned to an object type before the fields appear anywhere. Creating the template defines the fields; assignment is the step that makes them live on records. Both steps are required.", feedbackAlt:"Creating a template only defines the fields — they do not appear on any records until the template is assigned to an object type. Both steps are required, so without assignment the fields appear nowhere."},
+    {type:"section", heading:"Summary", body:"Custom field templates let you extend Commusoft records with the specific data your business needs to capture. Create the template in Custom field templates, then assign it to the relevant object type in Assign custom field templates to objects. From that point, every record of that type shows your custom fields ready to be completed. That brings Layer 2 Series 1 to a close. In the series challenge, you will work through a scenario that ties together all the configuration decisions made across the series."}
+  ]
+};
+
+COURSES['reed-script-l2-s1-challenge'] = {
+  contentType: "Walkthrough",
+  pathLabel: "L2 Setup & Configuration · Series 1: Getting your account ready · Challenge",
+  title: "Account ready to take customers",
+  duration: "3 min",
+  persona: "Admins",
+  characters: "Clint (AI presenter), Sarah Mitchell (Managing Director — dialogue partner)",
+  scenario: "SunComfort is 48 hours from going live. Clint runs Sarah through a pre-go-live review, asking questions that surface the key decisions made across the series and the consequences of skipping any of them.",
+  objectives: [
+    "Apply correct judgement to account setup decisions across company details, customer types, templates, and portal configuration",
+    "Identify what goes wrong when key setup steps are skipped or done out of order"
+  ],
+  buildBySection: [
+    {section: "The pre-go-live review", media: "Screen recording", note: "Capture the account settings as the backdrop while Clint frames the review; this is a dialogue-led recap walkthrough across the configured settings."},
+    {section: "What happens when company details are skipped", media: "Screen recording", note: "Show the company registration numbers / industry numbers settings as the consequence of missing VAT and trade credentials is discussed."},
+    {section: "The communication rules consequence", media: "Screen recording", note: "Show the communication rules and customer type settings as the wrong-type scenario is walked through."},
+    {section: "The portal timing question", media: "Screen recording", note: "Show the Manage portal access route on a customer record as the timing question is answered."},
+    {section: "Account ready", media: "Text", note: "On-screen recap text confirming all settings configured — no recording needed."}
+  ],
+  productionNotes: [
+    "Record on the web app, logged in as Sarah Mitchell (Managing Director, Owner/Manager).",
+    "No customer record required.",
+    "Have all Series 1 settings configured as per Courses 1 through 6 so the review reflects a genuinely ready account.",
+    "This is a dialogue challenge between Clint (AI presenter) and Sarah; the four dialogue exchanges are delivered as one continuous review section.",
+    "End on the Account ready recap confirming every setting is in place ahead of go-live."
+  ],
+  openItems: "None.",
+  scenes: [
+    {type:"section", heading:"The pre-go-live review", body:"Clint: SunComfort goes live in two days. Sarah Mitchell is running a final check of the account with Clint before the office team adds their first customer. Clint opens with the question every administrator should ask before any record is created: is everything your customer will see correct? The answer runs through every setting in this series, from the company name on invoices to the fields waiting on a new customer record.\n\nClint: What would happen if the team started adding customers before the company registration numbers were entered?\n\nSarah: Invoices would go out without a VAT registration number, which is a legal requirement on any VAT-registered invoice.\n\nClint: Correct — and the trade credentials belong on that list too. Gas Safe numbers, MCS certifications, and NICEIC registrations are equally important because customers and building control officers check them on documentation. These are not cosmetic details. Getting them right before the first job is a matter of compliance.\n\nClint: Here is a scenario. A new customer is added by the office team but assigned to the wrong customer type by mistake, Residential instead of Commercial. What will happen when the job confirmation fires?\n\nSarah: The communication rules I configured will send the residential version of the confirmation email to a commercial client, because the rule fires based on the customer type on the record. The fix is straightforward, but it only works cleanly if customer types were set up correctly to begin with and the team knows which type to assign at the point of adding a customer.\n\nClint: One final question: a long-standing customer has been asking for a way to check her invoices online. At what point in the setup process can you grant portal access?\n\nSarah: Access can be granted at any time from the customer record, and every invoice, appointment, and certificate on the account becomes visible in the portal automatically the moment access goes live. The only dependency is having an email address on the customer record to send the invitation to."},
+    {type:"section", heading:"Account ready", body:"SunComfort's account is ready. Company details, registration numbers, document branding, self-service portal branding, user groups, customer types, communication rules, email and SMS templates, advertising sources, account numbering, customer portal, and custom field templates are all configured. The team can add their first customer, raise their first job, and send their first communication knowing that everything behind it is set up correctly. The next series covers job and scheduling configuration, the settings that determine how SunComfort builds and manages the work its team will carry out."}
   ]
 };
 

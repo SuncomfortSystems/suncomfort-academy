@@ -536,7 +536,7 @@
           <div class="series-count">6 courses + challenge</div>
         </div>
         <div class="course-grid">
-          <div class="course-card" onclick="openPanel('l1-os-s5-c1')"><div class="course-num">Course 1</div><div class="course-title">Raise and send an invoice</div><div class="course-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="course-card" onclick="openPanel('l1-os-s5-c1')"><div class="course-num">Walkthrough</div><div class="course-title">Raise and send an invoice</div><div class="course-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l1-s5-c2')"><div class="course-num">Course 2</div><div class="course-title">Mark an invoice as paid</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l1-s5-c3')"><div class="course-num">Course 3</div><div class="course-title">Raise a credit note</div><div class="course-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="course-card" onclick="openInboxFile('reed-script-l1-s5-c4')"><div class="course-num">Course 4</div><div class="course-title">Send a customer statement</div><div class="course-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
@@ -1653,13 +1653,20 @@ COURSES['l1-os-s5-c1'] = {
     "Save and send the invoice to the customer"
   ],
   buildBySection: [
-    {section: "Introduction", media: "Text"},
-    {section: "Choosing the right invoice type", media: "Screen recording"},
-    {section: "Building the invoice", media: "Screen recording"},
-    {section: "Saving and sending", media: "Screen recording + gif"},
-    {section: "Summary", media: "Text"}
+    {section: "Introduction", media: "Text", note: "On-screen text only — no recording needed."},
+    {section: "Choosing the right invoice type", media: "Screen recording", note: "Capture job search → open job → Invoices tab → Add new invoice → the invoice-type dropdown."},
+    {section: "Building the invoice", media: "Screen recording", note: "Capture the invoice details, choosing the breakdown style, and adding line items."},
+    {section: "Saving and sending", media: "Screen recording + gif", note: "Screen-record Save invoice → email/print from the record. Gif the Draft toggle under Advanced options."},
+    {section: "Summary", media: "Text", note: "Recap text only — no recording needed."}
   ],
-  productionNotes: "Record on the web app — line items can only be added there, not on the mobile app. Log in as Claire Hudson (Administrator / Financial office staff). Have one completed heat pump installation job ready to invoice: work marked complete so the Invoices tab and Add new invoice are available, with parts and labour already on the job so a breakdown can be shown. Start recording from the job search so the full path is captured (search → open job → Invoices tab → Add new invoice). To show the invoice-type options meaningfully, use a job where a Deposit has already been raised. For the send step, make sure the customer record has an email address so the email / print options are live.",
+  productionNotes: [
+    "Record on the web app — line items can only be added there, not on the mobile app.",
+    "Log in as Claire Hudson (Administrator / Financial office staff).",
+    "Have one completed heat pump installation job ready to invoice: work marked complete so the Invoices tab and Add new invoice are available, with parts and labour already on the job so a breakdown can be shown.",
+    "Start recording from the job search so the full path is captured: search → open job → Invoices tab → Add new invoice.",
+    "To show the invoice-type options meaningfully, use a job where a Deposit has already been raised.",
+    "For the send step, make sure the customer record has an email address so the email / print options are live."
+  ],
   openItems: "(1) The exact steps to send/email a standard invoice from the invoice record (as opposed to consolidated invoices, which have a checkbox at save time) are not explicitly detailed in the HC article. Confirm the exact route (email button location on the invoice record) before production.",
   scenes: [
     {type:"section", heading:"Introduction", body:"The invoice is the financial record of every job. Once the work is complete, the invoice is what turns a completed visit into a payment owed. Raising it correctly — with the right type, the right breakdown, and the right line items — means the customer has everything they need to pay and the finance team has everything they need to reconcile."},
@@ -1741,14 +1748,27 @@ function renderPanel(num) {
     }
     if (c.buildBySection && c.buildBySection.length) {
       overviewHtml += '<div class="sc-meta-block"><strong>Build by section</strong>';
-      overviewHtml += '<table style="font-size:13px;margin-top:6px;width:100%;border-collapse:collapse">';
+      overviewHtml += '<div style="font-size:12px;color:var(--text-muted);margin:2px 0 6px">What to produce for each part of the script.</div>';
+      overviewHtml += '<table style="font-size:13px;width:100%;border-collapse:collapse">';
       c.buildBySection.forEach(b => {
-        overviewHtml += `<tr><td style="padding:3px 12px 3px 0;font-weight:600;vertical-align:top">${esc(b.section)}</td><td style="line-height:1.5">${esc(b.media)}</td></tr>`;
+        overviewHtml += '<tr style="border-bottom:1px solid var(--border)">';
+        overviewHtml += `<td style="padding:7px 12px 7px 0;font-weight:600;vertical-align:top;width:30%">${esc(b.section)}</td>`;
+        overviewHtml += `<td style="padding:7px 12px 7px 0;vertical-align:top;white-space:nowrap;width:20%">${esc(b.media)}</td>`;
+        overviewHtml += `<td style="padding:7px 0;vertical-align:top;line-height:1.45;color:var(--text-muted)">${b.note ? esc(b.note) : ''}</td>`;
+        overviewHtml += '</tr>';
       });
       overviewHtml += '</table></div>';
     }
     if (c.productionNotes) {
-      overviewHtml += `<div class="sc-meta-block"><strong>Production notes</strong><br><span style="font-size:13px;line-height:1.6">${esc(c.productionNotes)}</span></div>`;
+      overviewHtml += '<div class="sc-meta-block"><strong>Production notes</strong>';
+      if (Array.isArray(c.productionNotes)) {
+        overviewHtml += '<ul style="margin:6px 0 0 18px;font-size:13px;line-height:1.55">';
+        c.productionNotes.forEach(p => { overviewHtml += `<li style="margin-bottom:5px">${esc(p)}</li>`; });
+        overviewHtml += '</ul>';
+      } else {
+        overviewHtml += `<br><span style="font-size:13px;line-height:1.6">${esc(c.productionNotes)}</span>`;
+      }
+      overviewHtml += '</div>';
     }
   } else if (c.productionSetup) {
     overviewHtml += '<div class="sc-meta-block"><strong>Production setup</strong>';

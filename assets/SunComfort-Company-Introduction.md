@@ -20,9 +20,9 @@ SunComfort Systems is an independent renewable energy and power services company
 
 | Service | Revenue Share | Notes |
 |---|---|---|
-| Solar | 50% | Flagship service — UK and US |
-| Heat Pumps | 20% | Primarily UK market |
-| Power / Generators | 20% | Primarily US market |
+| Solar | 50% | Flagship service |
+| Heat Pumps | 20% | |
+| Power / Generators | 20% | |
 | General Maintenance | 10% | Incidental on-site work |
 
 Electrical work is embedded across all services as a supporting trade, not a standalone revenue line. General Maintenance covers incidental remedial work (plastering, minor plumbing, minor electrical) completed alongside primary service visits.
@@ -53,8 +53,8 @@ Electrical work is embedded across all services as a supporting trade, not a sta
 
 - **35 employees total**
 - Leadership: Managing Director, Operations Manager, Solar Division Lead
-- Field Teams: 28 staff across Solar, Heat Pumps, Power, and General Maintenance
-- Office/Support: 7 staff covering scheduling, sales, administration, parts, and marketing
+- Field Teams: 22 engineers across heat pumps, solar, power, and general maintenance
+- Office/Support: 10 staff covering scheduling, sales, administration, finance, parts, and marketing
 
 ---
 

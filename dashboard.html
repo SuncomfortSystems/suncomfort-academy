@@ -1051,17 +1051,29 @@
 const COURSES = {};
 
 COURSES[1] = {
+  contentType: "Walkthrough",
+  pathLabel: "L1 Office Staff · Series 2: The job record · Walkthrough 1 of 10",
   title: "The job record — overview and sidebar",
   duration: "5 min", persona: "Office teams",
   characters: "Emma Clarke",
   scenario: "Emma picks up an annual solar service job for Mrs. Thompson, a residential customer in Sevenoaks. She opens the job record for the first time and reads everything she needs before taking any action.",
   objectives: ["Navigate the job record sidebar and identify its key sections","Understand how the sidebar adapts to job type and context","Know which tab to use for each type of job action"],
-  productionSetup: {
-    loggedInUser: "Emma Clarke — Office Administrator — Office staff",
-    customerRecord: "Mrs. Margaret Thompson — 42 Oakwood Drive, Sevenoaks, Kent, TN13 1PF — existing active customer with solar PV 6kW system (installed June 2023) and air source heat pump (installed March 2021). Active maintenance contract.",
-    existingData: "Job 1 (primary job for recording): Originated from an accepted opportunity. One appointment actioned and completed. Job is complete. No invoice raised, no free-of-charge status set. Solar PV asset linked to the job in the sidebar. Job 2 (supplementary scene only): A recall job on Mrs. Thompson’s record, currently on hold. Used only to show the on-hold badge — customer and location are secondary for this scene.",
-    assetsRequired: "None"
-  },
+  buildBySection: [
+    {section: "Introduction", media: "Text", note: "On-screen text only — no recording needed."},
+    {section: "The job record layout", media: "Screen recording", note: "Open the job record: sidebar on the left, tabbed area on the right. Show how the sidebar content adapts to job type where a suitable job is available."},
+    {section: "The sidebar — customer, site, and job details", media: "Screen recording", note: "Capture the top of the sidebar: bill-responsible party, work address, record-locking indicator, job number, description, notes, and the linked solar PV asset."},
+    {section: "The sidebar — completion actions and classification", media: "Screen recording", note: "Capture the completion actions (raise final invoice / mark free of charge) and the classification fields: priority, customer references, business unit, user group."},
+    {section: "The sidebar — status, SLAs, and contacts", media: "Screen recording", note: "Use Job 2 (on-hold recall) to show the on-hold badge, reason, and reminder date, plus the recall link, SLA countdown, and contacts section."},
+    {section: "The sidebar — defects and financial performance", media: "Screen recording", note: "Capture the defects, recommendations, and proposals area and the financial performance widget."},
+    {section: "The tabs", media: "Screen recording", note: "Capture the tab row: Timeline, Appointments, Parts, Forms, Files, Costs, Invoices, Opportunities."},
+    {section: "Summary", media: "Text", note: "Recap text only — no recording needed."}
+  ],
+  productionNotes: [
+    "Record on the web app, logged in as Emma Clarke (Office Administrator — Office staff).",
+    "Primary record: Job 1 on Mrs. Margaret Thompson (42 Oakwood Drive, Sevenoaks, Kent, TN13 1PF) — originated from an accepted opportunity, one appointment actioned and completed, job complete, no invoice raised and no free-of-charge status set, with the solar PV asset linked in the sidebar.",
+    "Supplementary: Job 2 — a recall job on Mrs. Thompson's record, currently on hold — used only to show the on-hold badge.",
+    "No assets required."
+  ],
   openItems: "Two open items: (1) Site Access Information sidebar section noted in HC but not covered — confirm with Enablement Manager whether to include. (2) Recall ‘blame responsibility’ label — confirm exact UI wording and visibility for office users.",
   scenes: [
     {type:"section", heading:"Introduction", body:"Emma Clarke starts her morning with a new job on the screen — an annual solar service for Mrs. Thompson, a residential customer in Sevenoaks. She has not worked on this job before, and before she does anything, she reads it. The job record is the single place where everything about this job lives: every instruction, every appointment, every document, and every conversation, all in one view. By the end of this walkthrough, you can navigate the job record with confidence, read the sidebar accurately, and know exactly which tab to open for any task."},
@@ -1077,17 +1089,31 @@ COURSES[1] = {
 };
 
 COURSES[2] = {
+  contentType: "Walkthrough",
+  pathLabel: "L1 Office Staff · Series 2: The job record · Walkthrough 2 of 10",
   title: "The timeline — reading history and taking action",
   duration: "5 min", persona: "Office teams",
   characters: "Emma Clarke, Jake Harris, Sophie Bennett",
   scenario: "Mrs. Thompson has called to query why she was not told before Jake’s visit that parts might be required and that a second visit could be needed. Emma opens the timeline to piece together the full picture, responds to the customer, and puts the job on hold while the part is sourced.",
   objectives: ["Read and interpret timeline entries by event type","Search and filter the timeline to find specific events","Send communications, log notes, and update job status from the Actions menu"],
-  productionSetup: {
-    loggedInUser: "Emma Clarke — Office Administrator — Office staff (primary recording user). Sophie Bennett — Scheduler — Office staff (action taken prior to recording). Jake Harris — Heat Pump Technician — Senior engineer (mobile action taken prior to recording).",
-    customerRecord: "Mrs. Margaret Thompson — 42 Oakwood Drive, Sevenoaks, Kent, TN13 1PF — existing active customer with air source heat pump (installed March 2021).",
-    existingData: "One in-progress heat pump service job on Mrs. Thompson's record. The following actions must have been taken before recording begins: Sophie Bennett sent a communication to Mrs. Thompson from the web app explaining that the technician will visit to assess whether materials are required, which may result in a second visit. Jake Harris attended the appointment on mobile, completed the job report (report must state: 'heat pump assessed and part needs ordering'), and added one part to the job — it appears as Requested on the web. The job is not on hold. The timeline shows a mix of: Sophie's communication, Jake's visit completion, the part request, and system status updates.",
-    assetsRequired: "Pre-written email text (outside the system, ready to paste during recording — Emma's voice, acknowledging Mrs. Thompson's query and confirming next steps)."
-  },
+  buildBySection: [
+    {section: "Introduction", media: "Text", note: "On-screen text only — no recording needed."},
+    {section: "What the timeline records", media: "Screen recording", note: "Show the timeline with the three event types visible: communications, job records (appointments, files, parts, invoices), and system updates."},
+    {section: "Reading timeline entries", media: "Screen recording", note: "Expand an entry with See more / See details; show the inline Reply link on Jake's and Sophie's cards."},
+    {section: "Searching and filtering", media: "Screen recording", note: "Demonstrate the search bar, the date and user dropdowns used together, and the advanced filter panel toggles."},
+    {section: "Communicating from the Actions menu", media: "Screen recording", note: "Open the Actions menu and show Send email (template) and Send SMS, each logging to the timeline."},
+    {section: "Notes, mentions, and call logging", media: "Screen recording", note: "Add a note with an @ mention, the Share on mobile and Important toggles, and log a call with a follow-up activity."},
+    {section: "Putting a job on hold", media: "Screen recording", note: "From the Actions menu, put the job on hold with a reason, note, and reminder date; show the hold badge appearing in the sidebar."},
+    {section: "Closing the job — abort and free of charge", media: "Screen recording", note: "Show the Abort and Free of charge actions in the menu without committing them (both irreversible)."},
+    {section: "Summary", media: "Text", note: "Recap text only — no recording needed."}
+  ],
+  productionNotes: [
+    "Record on the web app, logged in as Emma Clarke (Office Administrator — Office staff) as the primary recording user.",
+    "Set up prior to recording: Sophie Bennett (Scheduler) sent a communication to Mrs. Thompson explaining the technician will assess whether materials are required and a second visit may be needed; Jake Harris (Heat Pump Technician) attended on mobile, completed the job report stating 'heat pump assessed and part needs ordering', and added one part that shows as Requested on the web.",
+    "Customer record: Mrs. Margaret Thompson (42 Oakwood Drive, Sevenoaks, Kent, TN13 1PF) with an air source heat pump installed March 2021.",
+    "The job is not on hold at the start; the timeline shows a mix of Sophie's communication, Jake's visit completion, the part request, and system status updates.",
+    "Asset: pre-written email text prepared outside the system, ready to paste during recording (Emma's voice, acknowledging Mrs. Thompson's query and confirming next steps)."
+  ],
   openItems: "None — all content verified across two Help Centre articles and Commusoft Terminology reference.",
   scenes: [
     {type:"section", heading:"Introduction", body:"Mrs. Thompson has called with a query about Jake’s heat pump service visit. Jake attended yesterday, but she says something was not explained to her. Emma opens the timeline on the job record and everything she needs is there — what Jake logged on site, what Sophie sent to the customer, every status change from the moment the job was created. No call to Jake needed. Everything is already there. The Timeline is the complete audit trail of every job, and by the end of this walkthrough, you can read it to piece together the full history of any job, find specific events quickly, and communicate and take action without leaving the record."},
@@ -1105,17 +1131,28 @@ COURSES[2] = {
 };
 
 COURSES[3] = {
+  contentType: "Walkthrough",
+  pathLabel: "L1 Office Staff · Series 2: The job record · Walkthrough 3 of 10",
   title: "The appointments tab",
   duration: "4 min", persona: "Office teams",
   characters: "Sophie Bennett, Jake Harris",
   scenario: "A residential heat pump service job has come in and needs a technician assigned. Sophie books the appointment, monitors it through the day as Jake travels to site, and reschedules when the customer calls to change the time.",
   objectives: ["Book a new appointment from the job record","Monitor appointment status in real time and review completed appointment feedback","Edit, reschedule, and cancel appointments and understand when each option applies"],
-  productionSetup: {
-    loggedInUser: "Sophie Bennett \u2014 Scheduler \u2014 Office staff",
-    customerRecord: "Mrs. Margaret Thompson \u2014 42 Oakwood Drive, Sevenoaks, TN13 1PF \u2014 existing active customer with annual heat pump maintenance contract. One open heat pump service job created with no appointments booked.",
-    existingData: "One completed heat pump service job on Mrs. Thompson's record (to show the Past section populated); one new open heat pump service job with no appointments yet booked.",
-    assetsRequired: "None"
-  },
+  buildBySection: [
+    {section: "Introduction", media: "Text", note: "On-screen text only \u2014 no recording needed."},
+    {section: "The appointments tab", media: "Screen recording", note: "Open the Appointments tab and show the Upcoming and Past sections; Past already carries Mrs. Thompson's previous service history."},
+    {section: "Booking an appointment", media: "Screen recording", note: "Use Add new appointment, pick a slot, assign Jake, add description and access notes, and save; note the second-technician repeat for the same slot."},
+    {section: "Monitoring appointment status", media: "Screen recording", note: "Show the status moving through Accepted, Travelling, Arrived, and Left, plus the feedback, timestamps, and location map in the detail panel."},
+    {section: "Appointment details", media: "Screen recording", note: "Open the detail panel: logistics, linked arrive/report workflows, and the red/green communication dots with manual trigger."},
+    {section: "Managing changes", media: "Screen recording", note: "Show Reschedule, Reassign, and Change details available in Accepted status and locking after Travelling; contrast Cancel with Delete."},
+    {section: "Summary", media: "Text", note: "Recap text only \u2014 no recording needed."}
+  ],
+  productionNotes: [
+    "Record on the web app, logged in as Sophie Bennett (Scheduler \u2014 Office staff).",
+    "Customer record: Mrs. Margaret Thompson (42 Oakwood Drive, Sevenoaks, TN13 1PF) with an annual heat pump maintenance contract.",
+    "Have one completed heat pump service job on the record (to populate the Past section) and one new open heat pump service job with no appointments yet booked.",
+    "No assets required."
+  ],
   openItems: "None \u2014 all content verified against Help Centre article (Using the appointments tab) and Enablement Manager clarification 2026-04-28.",
   scenes: [
     {type:"section", heading:"Introduction", body:"Mrs. Thompson\u2019s heat pump service job is open on Sophie\u2019s screen \u2014 job created, customer confirmed, but no appointment booked yet. The Appointments tab is where that changes. It is where Sophie turns a job into a scheduled appointment, tracks Jake\u2019s progress through the day, and handles any changes that come in. By the end of this walkthrough, you can book an appointment, read the status as it updates in real time, and manage changes confidently when plans shift."},
@@ -1131,17 +1168,34 @@ COURSES[3] = {
 };
 
 COURSES[4] = {
+  contentType: "Walkthrough",
+  pathLabel: "L1 Office Staff · Series 2: The job record · Walkthrough 4 of 10",
   title: "Understanding job costs",
   duration: "5 min", persona: "Office teams / finance staff",
   characters: "Claire Hudson, Luke Patterson, Logan Chance",
   scenario: "Luke has just completed a residential solar service at Mrs. Thompson's property in Sevenoaks. His mobile app logged an extra hour due to a sync error. Claire opens the Costs tab to check the job’s financial position and corrects the labour entry.",
   objectives: ["Identify the difference between forecasted and actual cost categories","Explain how appointments and parts generate cost records automatically","Manually add and edit labour and travel entries when technicians miss a step"],
-  productionSetup: {
-    loggedInUser: "Claire Hudson — Administrator (finance) — Office staff (web). Luke Patterson — Senior Solar Technician — Senior engineer (mobile).",
-    customerRecord: "Mrs. Margaret Thompson — 42 Oakwood Drive, Sevenoaks, Kent, TN13 1PF — existing active customer with solar PV 6kW system (installed June 2023).",
-    existingData: "One open solar service job on Mrs. Thompson’s record. The job has one appointment remaining — it has not been completed. Luke has added 3 parts on mobile during the job (allow real time to pass between appointment actions so timestamps look realistic — do NOT complete the job). Parts status across the 3 parts: (1) one part left as Requested, (2) one part ordered with PO raised, (3) one part ordered with PO completed and supplier invoice raised. One future appointment is scheduled on the job.",
-    assetsRequired: "None"
-  },
+  buildBySection: [
+    {section: "Introduction", media: "Text", note: "On-screen text only — no recording needed."},
+    {section: "Forecasted and actual — the split", media: "Screen recording", note: "Open the Costs tab and show the Forecasted and Actual sections side by side, with the job sitting in both states at once."},
+    {section: "Forecasted costs in detail", media: "Screen recording", note: "Show scheduled labour, requested parts, and raised purchase orders under Forecasted; note that scheduled labour is edited in the Appointments tab, not here."},
+    {section: "Actual costs in detail", media: "Screen recording", note: "Show labour, installed parts, and reconciled supplier invoices moving into Actual as work is confirmed."},
+    {section: "Adding manual labour", media: "Screen recording", note: "Under Actual costs, use Add labour and show the Date and Time versus Total Time entry methods."},
+    {section: "Editing records and the disconnection rule", media: "Screen recording", note: "Edit a paired labour/travel record and show the disconnection warning when switching a linked record to Total Time."},
+    {section: "The financial performance widget", media: "Screen recording", note: "Show the sidebar widget (total invoiced, actual costs, estimated margin) and note it draws from the near real-time reporting database."},
+    {section: "Raising an invoice from the job", media: "Screen recording", note: "Move to the Invoices tab, Add new invoice, select Final, use Copy from job, set the date, and choose a breakdown style."},
+    {section: "Adding line items to the invoice", media: "Screen recording", note: "Use Add line items to invoice; only parts marked Installed appear as options."},
+    {section: "Saving and converting a draft invoice", media: "Screen recording", note: "Show Advanced options / Save invoice as draft, then Draft Invoices → View → Convert draft to invoice; contrast with saving directly."},
+    {section: "Raising a credit note", media: "Screen recording", note: "From the invoice, Quick Links → Raise credit note (pre-filled), edit line items, save; note the customer-profile route for non-invoice credits."},
+    {section: "Summary", media: "Text", note: "Recap text only — no recording needed."}
+  ],
+  productionNotes: [
+    "Record the web-app steps logged in as Claire Hudson (Administrator, finance — Office staff); Luke Patterson (Senior Solar Technician) is the mobile actor for actions taken before recording.",
+    "Customer record: Mrs. Margaret Thompson (42 Oakwood Drive, Sevenoaks, Kent, TN13 1PF) with a solar PV 6kW system installed June 2023.",
+    "Have one open solar service job on the record with one appointment remaining and not yet completed, and one future appointment scheduled. Do NOT complete the job.",
+    "Luke has added 3 parts on mobile during the job, with realistic time between actions: one left as Requested, one ordered with PO raised, and one ordered with PO completed and supplier invoice raised.",
+    "No assets required."
+  ],
   openItems: "Two open items: (1) Confirm which invoice type is most commonly used for a standard residential solar service job at SunComfort: Final or Additional. (2) Confirm whether labour entries from the Costs tab are automatically pulled through to the invoice line items panel, or whether Claire selects them manually from a list.",
   scenes: [
     {type:"section", heading:"Introduction", body:"Luke has just completed a residential solar service at Mrs. Thompson's property in Sevenoaks. Claire opens the Costs tab and finds the job’s financial position waiting for her — what was forecast before Luke attended, what is now confirmed as actual spend, and one entry that needs correcting before the job reaches invoice. The Costs tab separates what SunComfort expected to spend from what was actually spent, so the financial position of any job is visible at any point in the workflow. By the end of this walkthrough, you can read the Costs tab accurately, understand how costs move between categories as work progresses, and manually add or correct entries when needed."},
@@ -1161,17 +1215,29 @@ COURSES[4] = {
 };
 
 COURSES[5] = {
+  contentType: "Walkthrough",
+  pathLabel: "L1 Office Staff · Series 2: The job record · Walkthrough 5 of 10",
   title: "Invoices and WIP",
   duration: "5 min", persona: "Office teams / finance staff",
   characters: "Claire Hudson, Nathan Cole, Danny Walsh, Sophie Bennett",
   scenario: "A generator callout at The Rose & Crown in Guildford is complete. Nathan has logged his time, Danny has marked the replacement part as installed, and the job is ready to bill. Claire opens the Invoices tab to review WIP and raises the final invoice.",
   objectives: ["Navigate the Revenue and WIP sections of the Invoices tab","Manage WIP items and generate a customer invoice","Raise a credit note against a finalised invoice"],
-  productionSetup: {
-    loggedInUser: "Claire Hudson — Administrator (finance) — Office staff",
-    customerRecord: "The Rose & Crown — 128 High Street, Guildford, GU1 3HZ — light commercial hospitality customer, contact Tom Bradshaw (Owner). Standby Kohler 20kW generator installed 2021, annual commercial service contract.",
-    existingData: "One completed generator service job. Nathan Cole’s labour in WIP under Labour. Danny Walsh’s replacement part marked installed in WIP under Materials. Service charge added by Sophie Bennett in WIP under Services. No invoice raised yet.",
-    assetsRequired: "None"
-  },
+  buildBySection: [
+    {section: "Introduction", media: "Text", note: "On-screen text only — no recording needed."},
+    {section: "The Invoices tab — WIP and Revenue", media: "Screen recording", note: "Open the Invoices tab and show the Revenue and WIP areas; demonstrate the Revenue document-type filter (All, Draft invoices, Invoices, Credit notes)."},
+    {section: "Navigating WIP", media: "Screen recording", note: "Show the four WIP categories: Services (Sophie's charge), Labour (Nathan's time), Materials (Danny's installed part), and Expenses."},
+    {section: "Adding and removing WIP items", media: "Screen recording", note: "Add a fixed-price charge via Add new service, link a supplier invoice as an expense, and delete a WIP item permanently before generating."},
+    {section: "Generating an invoice", media: "Screen recording", note: "Use Add new invoice to pull every active WIP item in as line items, review, and Finalise — clearing invoiced items from WIP."},
+    {section: "Raising a credit note", media: "Screen recording", note: "From the original invoice in Revenue, use Raise credit note, select lines, add an internal reason, and save."},
+    {section: "The revenue summary", media: "Screen recording", note: "Show the revenue summary at the top of the Invoices tab: total invoiced, payments received, credits applied, and remaining balance."},
+    {section: "Summary", media: "Text", note: "Recap text only — no recording needed."}
+  ],
+  productionNotes: [
+    "Record on the web app, logged in as Claire Hudson (Administrator, finance — Office staff).",
+    "Customer record: The Rose & Crown (128 High Street, Guildford, GU1 3HZ) — light commercial hospitality customer, contact Tom Bradshaw (Owner), with a standby Kohler 20kW generator installed 2021 and an annual commercial service contract.",
+    "Have one completed generator service job ready to bill, with WIP populated and no invoice raised yet: Nathan Cole's labour under Labour, Danny Walsh's replacement part marked installed under Materials, and Sophie Bennett's service charge under Services.",
+    "No assets required."
+  ],
   openItems: "None — all content verified against Help Centre article and Commusoft Terminology reference.",
   scenes: [
     {type:"section", heading:"Introduction", body:"The generator callout at The Rose & Crown is complete. Nathan has logged his time on site, Danny has marked the replacement part as installed, and the service charge Sophie added at booking is sitting in WIP. Claire opens the Invoices tab and everything that happened on this job is waiting to become a customer invoice. This is where the data chain completes — field work, parts, and services all arriving in one place. By the end of this walkthrough, you can read the Invoices tab, manage WIP before billing, generate a final invoice, and raise a credit note when one is needed."},
@@ -1187,17 +1253,27 @@ COURSES[5] = {
 };
 
 COURSES[6] = {
+  contentType: "Walkthrough",
+  pathLabel: "L1 Office Staff · Series 2: The job record · Walkthrough 6 of 10",
   title: "Managing job files",
   duration: "3 min", persona: "Office teams",
   characters: "Emma Clarke, Luke Patterson",
   scenario: "Mrs. Thompson's solar installation is complete. Luke has uploaded site photos from his mobile app. Emma adds a signed survey document, organises the files, and confirms sharing before the customer invoice is raised.",
   objectives: ["Upload files from the office and configure sharing settings for field technicians","Organise, filter, and retrieve files using tags and sort options","Manage photos returned from the field and download files in bulk"],
-  productionSetup: {
-    loggedInUser: "Emma Clarke — Office Administrator — Office staff",
-    customerRecord: "Mrs. Margaret Thompson — 42 Oakwood Drive, Sevenoaks, Kent, TN13 1PF — existing active customer with annual maintenance contract. Solar PV 6kW system installed June 2023.",
-    existingData: "One completed solar installation job. Luke Patterson has uploaded installation photos via the mobile app — already in the Files tab, shared by default, mobile device icons visible. No office-uploaded files yet.",
-    assetsRequired: "One signed site survey document (PDF, under 10 MB) for Emma to upload during the walkthrough"
-  },
+  buildBySection: [
+    {section: "Introduction", media: "Text", note: "On-screen text only — no recording needed."},
+    {section: "Uploading and sharing files", media: "Screen recording", note: "Drag the signed survey PDF into the upload area, add a tag, toggle Share on mobile, and save; show the mobile device icon appearing."},
+    {section: "Photos from the field", media: "Screen recording", note: "Show Luke's mobile-uploaded photos already present and shared by default, with the mobile icon already showing."},
+    {section: "Viewing and organising files", media: "Screen recording", note: "Open a photo in the side-panel preview, navigate between images, and rename a file (extension preserved automatically)."},
+    {section: "Filtering and downloading", media: "Screen recording", note: "Apply the Site Survey tag in the filter panel, select files, and bulk Download as a zip; note the uploader, date, and file-type filters."},
+    {section: "Summary", media: "Text", note: "Recap text only — no recording needed."}
+  ],
+  productionNotes: [
+    "Record on the web app, logged in as Emma Clarke (Office Administrator — Office staff).",
+    "Customer record: Mrs. Margaret Thompson (42 Oakwood Drive, Sevenoaks, Kent, TN13 1PF) with an annual maintenance contract and a solar PV 6kW system installed June 2023.",
+    "Have one completed solar installation job with Luke Patterson's installation photos already uploaded via the mobile app (in the Files tab, shared by default, mobile icons visible) and no office-uploaded files yet.",
+    "Asset: one signed site survey document (PDF, under 10 MB) for Emma to upload during the walkthrough."
+  ],
   openItems: "None — all content verified against Help Centre article and Commusoft Terminology reference.",
   scenes: [
     {type:"section", heading:"Introduction", body:"Mrs. Thompson's solar installation is complete and the job record needs to hold everything: the site survey, the installation photos Luke took on site, the signed customer documents. Emma opens the Files tab and finds Luke’s photos already waiting. The Files tab is where every document, photo, and certificate connected to a job lives, accessible to the whole team without email chains or shared folders. By the end of this walkthrough, you can upload and share files from the office, manage photos as they arrive from the field, and retrieve anything you need in seconds."},
@@ -1211,17 +1287,27 @@ COURSES[6] = {
 };
 
 COURSES[7] = {
+  contentType: "Walkthrough",
+  pathLabel: "L1 Office Staff · Series 2: The job record · Walkthrough 7 of 10",
   title: "Managing forms on jobs",
   duration: "3 min", persona: "Office teams",
   characters: "Emma Clarke, Jake Harris",
   scenario: "Mrs. Thompson's heat pump installation is complete. Jake has submitted an MCS commissioning checklist via his mobile app. Emma previews it, sends it to the customer, and voids an earlier draft submitted with incorrect details.",
   objectives: ["View, preview, and distribute compliance certificates from the Forms tab","Create a form from the office and understand editing rules for completed forms","Void a form correctly to preserve the audit trail"],
-  productionSetup: {
-    loggedInUser: "Emma Clarke — Office Administrator — Office staff",
-    customerRecord: "Mrs. Margaret Thompson — 42 Oakwood Drive, Sevenoaks, Kent, TN13 1PF — existing active customer with annual maintenance contract. Air source heat pump installed March 2021.",
-    existingData: "One completed heat pump installation job. Jake Harris has submitted an MCS commissioning checklist via iOS mobile app — visible in the Forms tab with Completed status and iOS icon. One earlier completed form with incorrect property details also visible in the grid.",
-    assetsRequired: "None"
-  },
+  buildBySection: [
+    {section: "Introduction", media: "Text", note: "On-screen text only — no recording needed."},
+    {section: "Reading the forms grid", media: "Screen recording", note: "Show the forms grid columns and the device icons (globe for web, iOS/Android for mobile); Jake's MCS checklist shows a mobile icon and Completed status."},
+    {section: "Previewing and sending a certificate", media: "Screen recording", note: "Preview Jake's checklist as a PDF, then send using the purple Email button; contrast with the browser controls that are not tracked."},
+    {section: "Creating a form from the office", media: "Screen recording", note: "Use Add new form, select a template, complete fields (typed signature with font selection), and Save as draft or Save and complete."},
+    {section: "Editing and voiding forms", media: "Screen recording", note: "Show that re-saving a completed form changes the Completed by attribution, then void the incorrect form by typing VOID (watermark preserved)."},
+    {section: "Summary", media: "Text", note: "Recap text only — no recording needed."}
+  ],
+  productionNotes: [
+    "Record on the web app, logged in as Emma Clarke (Office Administrator — Office staff).",
+    "Customer record: Mrs. Margaret Thompson (42 Oakwood Drive, Sevenoaks, Kent, TN13 1PF) with an annual maintenance contract and an air source heat pump installed March 2021.",
+    "Have one completed heat pump installation job with Jake Harris's MCS commissioning checklist submitted via the iOS mobile app (Completed status, iOS icon) and one earlier completed form with incorrect property details also in the grid.",
+    "No assets required."
+  ],
   openItems: "None — all content verified against Help Centre article and Commusoft Terminology reference.",
   scenes: [
     {type:"section", heading:"Introduction", body:"Jake has just submitted his MCS commissioning checklist from Mrs. Thompson's property in Sevenoaks — a residential heat pump installation that needs its compliance documentation to reach the customer quickly. Emma opens the Forms tab and the checklist is already there, submitted from Jake’s mobile. The Forms tab holds every certificate and checklist connected to a job, whether it was completed on site or created from the office. By the end of this walkthrough, you can view and distribute certificates, create forms from the office, and manage forms that need to be corrected or removed from the record without breaking the audit trail."},
@@ -1236,24 +1322,37 @@ COURSES[7] = {
 };
 
 COURSES[8] = {
+  contentType: "Walkthrough",
+  pathLabel: "L1 Office Staff · Series 2: The job record · Walkthrough 8 of 10",
   title: "Sourcing and fulfilling job parts",
   duration: "5 min", persona: "Office teams",
   characters: "Danny Walsh",
   scenario: "Danny is managing parts for an open generator service job at The Rose & Crown in Guildford, sourcing a transfer switch and cable clips through manual entry and the catalogue, then fulfilling using a mix of supplier order and general stock.",
   objectives: ["Navigate the Parts tab and understand its sub-tabs","Add parts to a job manually and via the catalogue","Fulfil requested parts using a mix of methods in a single action","Read the resulting part statuses and understand the cost impact on the job","Cancel, return, or delete parts correctly"],
-  productionSetup: {
-    loggedInUser: "Danny Walsh — Parts and Stores Manager — Office staff",
-    customerRecord: "The Rose & Crown — 128 High Street, Guildford, GU1 3HZ — commercial hospitality property, contact Tom Bradshaw (Owner). Kohler 20kW standby generator, installed 2021, active annual commercial service contract.",
-    existingData: "One open generator service job on The Rose & Crown’s record. No parts yet added. The faulty transfer switch has been identified and noted on the job; Danny is now responsible for sourcing the parts needed before the return visit.",
-    assetsRequired: "None"
-  },
-  openItems: "(1) Add new part button label — confirm 'Add new part' matches current production UI. (2) Catalogue dropdown — confirm the dropdown arrow and 'Add parts from catalogue' label match current UI. (3) Fulfilment panel labels — confirm 'Order remaining from supplier', 'Fulfill from general', and 'Leave remaining on request' are exact labels; confirm quantity splitting across methods is available in one action. (4) Ready to fulfil step — confirm this is a distinct review step before the Fulfill button. (5) Mark as installed — confirm whether office staff can also do this from the web in a no-stock-control context. (6) Back to available — confirm exact button label and whether quantity selection is a separate step. (7) Cancelling an ordered part — confirm whether this deletes the full PO or only the specific line item.",
+  buildBySection: [
+    {section: "Introduction", media: "Text", note: "On-screen text only — no recording needed."},
+    {section: "The Parts tab", media: "Screen recording", note: "Open the Parts tab and show the sub-tabs (Requested, On Order, Available, Installed, Cancelled, Returned, All parts) plus search, filters, and grouping."},
+    {section: "Adding a part manually", media: "Screen recording", note: "On the Requested tab, use Add new part to create the transfer switch as a new part: unit cost, markup, tax, quantity, and Status set to Requested; show the Web source indicator."},
+    {section: "Adding parts from the catalogue", media: "Screen recording", note: "Use the dropdown next to Add new part → Add parts from catalogue, browse/search, set quantity to four with the plus button, and Save."},
+    {section: "Fulfilling requested parts", media: "Screen recording", note: "Select both lines and Fulfill selected parts; assign Order from supplier to the transfer switch and split the cable clips (two Order from supplier, two Mark as available); review the Ready to fulfil summary and Fulfill."},
+    {section: "Reading the statuses", media: "Screen recording", note: "Show the resulting On Order and Available lines, View/Edit on an On Order line, Mark as installed, and Back to available; note the All parts read-only view with source icons."},
+    {section: "Cost impact on the job", media: "Screen recording", note: "Show the Costs tab updating: general-stock cable clips post at fulfilment; ordered items post when the PO is received."},
+    {section: "Cancelling, returning, and deleting parts", media: "Screen recording", note: "Contrast Mark as cancelled (recycle bin, removes the PO for ordered parts), Mark as returned (supplier-ordered parts only), and Delete (type 'delete' to confirm)."},
+    {section: "Summary", media: "Text", note: "Recap text only — no recording needed."}
+  ],
+  productionNotes: [
+    "Record on the web app, logged in as Danny Walsh (Parts and Stores Manager — Office staff).",
+    "Customer record: The Rose & Crown (128 High Street, Guildford, GU1 3HZ) — commercial hospitality property, contact Tom Bradshaw (Owner), with a Kohler 20kW standby generator installed 2021 and an active annual commercial service contract.",
+    "Have one open generator service job on the record with no parts yet added; the faulty transfer switch has been identified and noted on the job.",
+    "No assets required."
+  ],
+  openItems: "(1) Add new part button label — confirm 'Add new part' matches current production UI. (2) Catalogue dropdown — confirm the dropdown arrow and 'Add parts from catalogue' label match current UI. (3) Ready to fulfil step — confirm this is a distinct review step before the Fulfill button. (4) Mark as installed — confirm whether office staff can also do this from the web in a no-stock-control context. (5) Back to available — confirm exact button label and whether quantity selection is a separate step. (6) Cancelling an ordered part — confirm whether this deletes the full PO or only the specific line item.",
   scenes: [
     {type:"section", heading:"Introduction", body:"Danny Walsh manages parts and stores for SunComfort from the office in Elephant and Castle. A fault has been identified on the Kohler generator at The Rose & Crown in Guildford — a transfer switch needs replacing and a set of cable clips are also required before the return visit. Danny needs to add both items to the job, choose how to source them, and make sure the Parts tab reflects the full picture before anyone heads back to site. In this walkthrough, you follow that process from the first click to the final status update."},
     {type:"section", heading:"The Parts tab", body:"The Parts tab is where all materials for a specific job are tracked from initial request through to installation. Danny opens The Rose & Crown’s job record and navigates to the Parts tab. Across the top he can see a row of sub-tabs: Requested, On Order, Available, Installed, Cancelled, and Returned, with All parts providing a master overview of every item regardless of status. He can also see a search field, date and category filters, and the option to reorder columns or group items by attributes such as status or supplier. The tab supports up to 100 parts per page, which covers the full scope of even large commercial jobs."},
     {type:"section", heading:"Adding a part manually", body:"The transfer switch is not in the catalogue yet, so Danny adds it by hand. He clicks the Requested tab to confirm he is in the right place, then clicks Add new part. A search field opens and he types the part name. When the system finds no existing record, he creates it as a new part: he sets the unit cost, checks the markup and tax rates, and enters a quantity of one. Before saving, he reviews the Status field. Two options are available: Requested, which means the part still needs to be ordered or sourced, or Installed, which skips the ordering process entirely and records the part as already fitted. Danny sets the status to Requested and saves. The transfer switch now appears in the Requested list with a Web source indicator, showing it was entered from the office."},
     {type:"section", heading:"Adding parts from the catalogue", body:"The cable clips are already in SunComfort’s parts catalogue, so Danny uses a faster method. He clicks the small dropdown arrow next to the Add new part button and selects Add parts from catalogue. A side panel opens showing a browsable category structure. Danny either clicks through the category cards to narrow his search or types directly into the search bar. When he finds cable clips, he uses the purple plus button to set the quantity to four and clicks Save. The items are added to the Requested list instantly. The catalogue method is the right choice whenever parts are already set up in the system, as it avoids re-entering cost, markup, and tax information that is already stored."},
-    {type:"section", heading:"Fulfilling requested parts", body:"Danny now has two line items in the Requested tab: one transfer switch and four cable clips. He selects both using the checkboxes and clicks Fulfill selected parts. The fulfilment side panel opens, showing each item with a set of fulfilment method options.\n\nFor the transfer switch, Danny selects Order remaining from supplier. This will raise a purchase order.\n\nFor the cable clips, he splits the quantity across two methods: two units go to Order remaining from supplier to arrive with the transfer switch delivery, and the remaining two he sets to Fulfill from general. Fulfilling from general moves parts directly to Available without creating a purchase order — it is the correct choice when materials are already on hand and do not need to be tied to an incoming delivery.\n\nWhen all lines have a fulfilment method assigned, the side panel shows a Ready to fulfil summary. Danny reviews the selections and clicks Fulfill to confirm. The process is complete in a single action."},
+    {type:"section", heading:"Fulfilling requested parts", body:"Danny now has two line items in the Requested tab: one transfer switch and four cable clips. He selects both using the checkboxes and clicks Fulfill selected parts. The fulfilment side panel opens, showing each item with a set of fulfilment method options.\n\nFor the transfer switch, Danny selects Order from supplier. This will raise a purchase order.\n\nFor the cable clips, he splits the quantity across two methods: two units go to Order from supplier to arrive with the transfer switch delivery, and the remaining two he sets to Mark as available. Marking parts as available moves them directly to Available without creating a purchase order — it is the correct choice when materials are already on hand and do not need to be tied to an incoming delivery.\n\nWhen all lines have a fulfilment method assigned, the side panel shows a Ready to fulfil summary. Danny reviews the selections and clicks Fulfill to confirm. The process is complete in a single action."},
     {type:"reflection", label:"Reflection prompt", question:"Danny fulfilled four cable clips: two from general stock and two via a purchase order. Before checking the Parts tab, do you expect to see them listed as two separate lines?", options:["Yes","No"], correct:"Yes", feedback:"Commusoft creates one record per fulfilment method. The two cable clips fulfilled from general stock appear in Available straight away. The two on the purchase order, along with the transfer switch, sit in On Order until the delivery is confirmed."},
     {type:"section", heading:"Reading the statuses", body:"With fulfilment complete, the Parts tab shows three lines. The transfer switch sits in On Order, waiting for the supplier delivery. Two cable clips sit in On Order alongside it. Two cable clips are in Available, already fulfilled from general stock and ready to use. Each status tells Danny something specific about where that part is in the workflow.\n\nOn Order means the part has been added to a purchase order but has not yet been received. Danny can click View next to an On Order line to see the associated PO details, or Edit to adjust the sale price if needed.\n\nAvailable means the part is physically on hand and ready to be used. Danny can edit both cost price and sale price on Available lines. When a technician installs an Available part, he selects it and clicks Mark as installed; the part moves to the Installed sub-tab and its cost is added to the job’s profitability calculation.\n\nInstalled means the part has been physically fitted. If a reversal is needed, Danny selects the item in the Installed tab, clicks Back to available, selects the quantity, and confirms.\n\nThe All parts sub-tab provides a read-only view of every part on the job regardless of status, including a source icon on each line showing whether it was added from the web app, iOS, or Android."},
     {type:"reflection", label:"Knowledge check", question:"Danny fulfilled two cable clips from general stock. Where do those cable clips appear in the Parts tab immediately after fulfilment?", options:["A. Requested","B. On Order","C. Available","D. Installed"], correct:"C", feedback:"Parts fulfilled from general stock skip both Requested and On Order and move directly to Available. They are already on hand, so there is no wait for a delivery. On Order is the status for parts tied to a purchase order that has not yet been received. They only reach Installed once a technician marks them as fitted."},
@@ -1264,44 +1363,71 @@ COURSES[8] = {
 };
 
 COURSES[9] = {
+  contentType: "Walkthrough",
+  pathLabel: "L1 Office Staff · Series 2: The job record · Walkthrough 9 of 10",
   title: "Sourcing and fulfilling job parts — stock control",
   duration: "4 min", persona: "Office teams",
   characters: "Danny Walsh, Nathan Cole (context only)",
   scenario: "Danny fulfils a transfer switch request for a generator job at The Rose & Crown by drawing from SunComfort’s Elephant and Castle stockroom, then tracks the part through to installation and handles a return.",
-  objectives: ["Fulfil a parts request by drawing from a named stock location","Understand what Available means in a stock-controlled environment","Recognise the Picked Up and Installed statuses and what caused each","Return a part to stock from the web","Identify when to use Fulfill from general even with stock control active"],
-  productionSetup: {
-    loggedInUser: "Danny Walsh — Parts and Stores Manager — Office staff",
-    customerRecord: "The Rose & Crown — 128 High Street, Guildford, GU1 3HZ — commercial hospitality property, contact Tom Bradshaw (Owner). Kohler 20kW standby generator, installed 2021, active annual commercial service contract.",
-    existingData: "One open generator service job on The Rose & Crown’s record. A parts request for one transfer switch is already in the Requested tab. Stock control is enabled. The Elephant and Castle stockroom shows two units of the transfer switch in inventory.",
-    assetsRequired: "None"
-  },
-  openItems: "(1) Fulfill from stock label — confirm this is the exact label in the current production UI. (2) Stock location selection — confirm the fulfilment panel shows available locations and quantities when Fulfill from stock is selected, and whether location selection is in the same panel or a separate screen. (3) Picked Up trigger — confirm whether office staff can also trigger Picked Up from the web, or whether it is exclusively a mobile/picklist action. (4) Return from Picked Up — confirm parts can be returned from Picked Up status from the web without the technician performing any action in their app first. (5) Fulfill from general with stock control — confirm the option is visible in the fulfilment panel alongside Fulfill from stock.",
+  objectives: ["Fulfil a parts request by drawing from a named stock location","Understand what Available means in a stock-controlled environment","Recognise the Picked Up and Installed statuses and what caused each","Return a part to stock from the web","Identify when to use Mark as available even with stock control active"],
+  buildBySection: [
+    {section: "Introduction", media: "Text", note: "On-screen text only — no recording needed."},
+    {section: "How the Parts tab differs with stock control", media: "Screen recording", note: "Show the Parts tab with stock control active: the Fulfill from stock option and the additional Picked Up status between Available and Installed."},
+    {section: "Fulfilling from a stock location", media: "Screen recording", note: "Select the requested transfer switch, Fulfill selected parts → Fulfill from stock, choose the Elephant and Castle stockroom, confirm quantity one, and save; inventory decrements. See open items — panel default display and Mark as available visibility are unconfirmed."},
+    {section: "What Available means with stock control", media: "Screen recording", note: "Show the part in Available: reserved in the stock system, still physically on the shelf."},
+    {section: "Picked Up — what Danny sees", media: "Screen recording", note: "Show the Picked Up status arriving in the office view after Nathan confirms collection on mobile or a picklist is scanned — no office action triggers it."},
+    {section: "Installed — what Danny sees", media: "Screen recording", note: "Show the move to Installed after Nathan confirms on site and the cost landing in Actual costs; note office staff can also Mark as installed from Available or Picked Up."},
+    {section: "Returning parts to stock", media: "Screen recording", note: "From Available (or Picked Up), use Mark as returned to send the part to the 'Parts not used' list; note installed parts cannot be returned this way."},
+    {section: "Summary", media: "Text", note: "Recap text only — no recording needed."}
+  ],
+  productionNotes: [
+    "Record on the web app, logged in as Danny Walsh (Parts and Stores Manager — Office staff); Nathan Cole is the mobile actor referenced for context only.",
+    "Customer record: The Rose & Crown (128 High Street, Guildford, GU1 3HZ) — commercial hospitality property, contact Tom Bradshaw (Owner), with a Kohler 20kW standby generator installed 2021 and an active annual commercial service contract.",
+    "Have one open generator service job with a parts request for one transfer switch already in the Requested tab.",
+    "Stock control must be enabled, with the Elephant and Castle stockroom showing two units of the transfer switch in inventory.",
+    "No assets required."
+  ],
+  openItems: "(1) Fulfill from stock label — confirm this is the exact label in the current production UI. (2) Stock location selection — confirm the fulfilment panel shows available locations and quantities when Fulfill from stock is selected, and whether location selection is in the same panel or a separate screen. (3) Default display of stock locations and parts-available quantities in the fulfilment panel may be a BUG — Abbie is investigating (ENB-243). Confirm the intended behaviour before recording the fulfilment panel. (4) Mark as available under stock control — confirm the exact stock-level trigger for when this option appears alongside Fulfill from stock. Per ENB-243, with 0 stock 'Mark as available' replaces the old option, and with partial stock the request can be split (fulfil some from stock, order the remainder). Not yet documented in HC — confirm the precise trigger with the feature_jobs team. Confirmed and closed: (5) Picked Up is a mobile or picklist-only status; office and web users cannot pick up a part (ENB-243), so the office view only ever receives the update. (6) Parts can be returned to stock from the web from both Available and Picked Up status.",
   scenes: [
     {type:"section", heading:"Introduction", body:"SunComfort holds a central stockroom at Elephant and Castle managed by Danny Walsh. When a fault is identified on the generator at The Rose & Crown and a transfer switch is requested for the job, the question is not when a supplier can deliver — it is whether the part is already on the shelf. With stock control enabled, Danny can check inventory, draw from a specific location, and track the part from the stockroom to installation without raising a purchase order. In this walkthrough, you follow that process from fulfilment through to the status updates Danny sees in the Parts tab, and you see how to return a part to stock if it is no longer needed."},
     {type:"section", heading:"How the Parts tab differs with stock control", body:"The Parts tab looks largely the same whether stock control is enabled or not. What changes is what Danny can do when fulfilling a request. With stock control active, a new fulfilment option appears alongside the supplier order and general stock options: Fulfill from stock. This option lets Danny draw from a named storage location and records the movement against that location in the stock system. The part’s journey also includes an additional status, Picked Up, which appears between Available and Installed and is unique to stock-controlled workflows."},
-    {type:"section", heading:"Fulfilling from a stock location", body:"A transfer switch request is sitting in the Requested tab. Danny selects it using the checkbox and clicks Fulfill selected parts. The fulfilment panel opens and shows the available fulfilment options. Danny selects Fulfill from stock. The panel shows the stock locations that hold this part, along with current quantities at each location. The Elephant and Castle stockroom has two units. Danny selects that location, confirms the quantity as one, and saves.\n\nThe part moves from Requested to Available. The stockroom inventory is decremented immediately: one unit is now reserved for this job and cannot be allocated to another.\n\nThe fulfilment panel also offers Fulfill from general as an option, even with stock control enabled. This moves a part directly to Available without drawing from a named location. It is useful for incidental materials on hand that are not tracked in the stock system. Danny uses Fulfill from stock here because SunComfort holds transfer switches in managed inventory and needs the movement recorded against the stockroom."},
+    {type:"section", heading:"Fulfilling from a stock location", body:"A transfer switch request is sitting in the Requested tab. Danny selects it using the checkbox and clicks Fulfill selected parts. The fulfilment panel opens and shows the available fulfilment options. Danny selects Fulfill from stock. The panel shows the stock locations that hold this part, along with current quantities at each location. The Elephant and Castle stockroom has two units. Danny selects that location, confirms the quantity as one, and saves.\n\nThe part moves from Requested to Available. The stockroom inventory is decremented immediately: one unit is now reserved for this job and cannot be allocated to another.\n\nDepending on the stock level, the fulfilment panel may also offer Mark as available as an option even with stock control enabled. When shown, it moves a part directly to Available without drawing from a named location. It is useful for incidental materials on hand that are not tracked in the stock system. Danny uses Fulfill from stock here because SunComfort holds transfer switches in managed inventory and needs the movement recorded against the stockroom."},
     {type:"section", heading:"What Available means with stock control", body:"Available does not mean the part has physically moved. It means the part is reserved in the stock system: it is still on the shelf at Elephant and Castle, but it is held for this job. Danny can see it against the job in the Available sub-tab. Nathan Cole knows it will be ready for collection before his return visit."},
     {type:"reflection", label:"Reflection prompt", question:"A transfer switch has just moved to Available against the job. Has it been delivered to the job site or collected by Nathan?", options:["Yes","No"], correct:"No", feedback:"Available means reserved in the stock system, not physically moved. The transfer switch is still on the shelf at Elephant and Castle. It is held for this job and cannot be allocated elsewhere, but the physical movement happens only when Nathan confirms collection."},
     {type:"section", heading:"Picked Up — what Danny sees", body:"Before his return visit to The Rose & Crown, Nathan collects the transfer switch from the Elephant and Castle stockroom. When he confirms collection in his mobile app, the part moves from Available to Picked Up in the Parts tab. The status can also update when a stock manager scans a picklist. Danny sees this status update in the office. Picked Up means the part has physically left the stockroom and is with Nathan on the van. It is a status unique to stock control: it exists because Available confirmed the reservation, and Picked Up confirms the physical movement. Danny has not taken any action to trigger this change; the update arrives when Nathan confirms collection on his device or when a picklist is scanned."},
     {type:"section", heading:"Installed — what Danny sees", body:"On site at The Rose & Crown, Nathan installs the transfer switch and marks it as installed in his mobile app. The part moves to the Installed sub-tab in Danny’s view. At the same moment, the cost of the part lands in the Actual costs section of the Costs tab. The stock cost price is recorded against the job automatically: no manual cost entry is required on the office side. While the status is typically set by the technician on mobile, office staff can also mark parts as installed from the web by selecting items in the Available or Picked Up tab and clicking Mark as installed, which is available to Danny if the situation requires it."},
     {type:"reflection", label:"Knowledge check", question:"The transfer switch moves from Picked Up to Installed in the Parts tab. What caused this status change?", options:["A. Danny clicked Mark as installed in the Parts tab on the web","B. Nathan confirmed installation in his mobile app on site","C. The part was received from the supplier and marked as delivered","D. The job was closed and Commusoft updated the status automatically"], correct:"B", feedback:"In this scenario, the change was triggered by Nathan confirming the work on site in his mobile app. While office staff can mark parts as installed from the web, the typical trigger in a live workflow is the technician confirming on mobile. Danny sees the update in the Parts tab and the cost lands in the Costs tab automatically at that point."},
     {type:"section", heading:"Returning parts to stock", body:"If a part is no longer needed after it has been drawn from stock, Danny returns it from the web. He opens the Available tab, selects the part, and clicks Mark as returned. Using the Return action sends the part to the \"Parts not used\" operational list for further processing. The movement is recorded in the audit trail.\n\nParts can be returned from Available or Picked Up status. Once a part has been marked as installed, it cannot be returned to stock through this route."},
-    {type:"section", heading:"Summary", body:"Stock control gives SunComfort a precise record of what it holds, where it is, and which job it is allocated to at every point in the workflow. Danny drew the transfer switch from the Elephant and Castle stockroom, reserved it for the job, and then tracked it through to installation by reading the status updates that arrived as Nathan moved through his workflow on site. You can now fulfil from a stock location, recognise what each status means and what triggered it, use Fulfill from general when a part sits outside the managed stock system, and return unused parts to inventory correctly. In the next walkthrough, you will move to the Opportunities tab and see how additional work identified on a job is tracked through to a won proposal."}
+    {type:"section", heading:"Summary", body:"Stock control gives SunComfort a precise record of what it holds, where it is, and which job it is allocated to at every point in the workflow. Danny drew the transfer switch from the Elephant and Castle stockroom, reserved it for the job, and then tracked it through to installation by reading the status updates that arrived as Nathan moved through his workflow on site. You can now fulfil from a stock location, recognise what each status means and what triggered it, use Mark as available when a part sits outside the managed stock system, and return unused parts to inventory correctly. In the next walkthrough, you will move to the Opportunities tab and see how additional work identified on a job is tracked through to a won proposal."}
   ]
 };
 
 COURSES[10] = {
+  contentType: "Walkthrough",
+  pathLabel: "L1 Office Staff · Series 2: The job record · Walkthrough 10 of 10",
   title: "Tracking opportunities on jobs",
   duration: "4 min", persona: "Decision makers / operations managers",
   characters: "Stephen Carter, Luke Patterson, Logan Chance",
   scenario: "Luke logs a recommendation during Mrs. Thompson's annual solar service. Stephen monitors the opportunity as it moves from draft to sent to won, and Logan reviews conversion rate and margin data at the end of the week.",
   objectives: ["Navigate the Opportunities dashboard and read the funnel chart and performance widgets","Understand the difference between a recommendation and a variation","Filter and manage opportunities in the grid and interpret conversion and margin data"],
-  productionSetup: {
-    loggedInUser: "Stephen Carter — Sales Director — Office staff",
-    customerRecord: "Mrs. Margaret Thompson — 42 Oakwood Drive, Sevenoaks, Kent, TN13 1PF — existing active customer with annual maintenance contract. Solar PV 6kW system installed June 2023.",
-    existingData: "One open annual solar service job. Luke Patterson has logged a recommendation (soiled panels underperforming) via mobile app — visible in the Opportunities tab as a Draft recommendation. No proposal sent yet. A second won opportunity from a previous job on Mrs. Thompson's record is visible to demonstrate the funnel and won widgets populated.",
-    assetsRequired: "None"
-  },
+  buildBySection: [
+    {section: "Introduction", media: "Text", note: "On-screen text only — no recording needed."},
+    {section: "What the Opportunities tab tracks", media: "Screen recording", note: "Open the Opportunities tab and show every proposal on the job with status, assigned salesperson, and value."},
+    {section: "The dashboard widgets", media: "Screen recording", note: "Show the four widgets: the funnel chart, Proposal Won, Proposal Sent, and Sales Performance; note add-ons are excluded until selected."},
+    {section: "Reading the funnel chart", media: "Screen recording", note: "Show Luke's panel-clean recommendation moving from Draft to Sent and explain a sharp Sent-to-Won drop versus a wide funnel."},
+    {section: "Opportunity types", media: "Screen recording", note: "Distinguish recommendations (field observations, Customer Journey plan or higher) from variations (scope changes to agreed work); both share the pipeline."},
+    {section: "Managing opportunities in the grid", media: "Screen recording", note: "Filter by Sent, sort by Last updated, and open an opportunity to view, edit, or update its status manually."},
+    {section: "Reviewing conversion rate and margin", media: "Screen recording", note: "Show the Sales Performance widget and read conversion rate and average margin together."},
+    {section: "The data chain from field to office", media: "Screen recording", note: "Show a won opportunity with confirmed margin, tracing it back to Luke's mobile observation."},
+    {section: "Summary", media: "Text", note: "Recap text only — no recording needed."}
+  ],
+  productionNotes: [
+    "Record on the web app, logged in as Stephen Carter (Sales Director — Office staff); Luke Patterson is the mobile actor for the logged recommendation.",
+    "Customer record: Mrs. Margaret Thompson (42 Oakwood Drive, Sevenoaks, Kent, TN13 1PF) with an annual maintenance contract and a solar PV 6kW system installed June 2023.",
+    "Have one open annual solar service job with Luke Patterson's recommendation (soiled panels underperforming) logged via mobile and showing as a Draft recommendation, with no proposal sent yet.",
+    "Include a second, won opportunity from a previous job on the record so the funnel and won widgets are populated.",
+    "No assets required."
+  ],
   openItems: "None — all content verified against Help Centre article and Commusoft Terminology reference.",
   scenes: [
     {type:"section", heading:"Introduction", body:"Luke is carrying out Mrs. Thompson's annual solar service in Sevenoaks. During the visit he notices the panels are heavily soiled and underperforming — an observation worth a conversation with the customer. He logs a recommendation from his mobile app before he leaves site. In Stephen’s view in the office, that recommendation is already visible as a draft proposal. The Opportunities tab is where field observations become tracked, measurable revenue. By the end of this walkthrough, you can read the Opportunities dashboard, understand the different types of additional work it tracks, and use the performance data to see how well field observations are converting into revenue."},

@@ -1496,6 +1496,16 @@ COURSES['l0-01'] = {
     assetsRequired: "None"
   },
   openItems: "(1) No dedicated Help Centre article identified for the customer and work address hierarchy. Content verified against Commusoft Terminology article only. Confirm with Enablement Manager whether a specific HC article exists for this topic before production — if so, add it to Sources used and verify all claims against it.",
+  buildBySection: [
+    {section: "Introduction", media: "Text", note: "On-screen text only — every customer record can hold multiple addresses; introduce the three-level hierarchy of customer, then work addresses, then jobs, assets, and service reminders beneath each."},
+    {section: "The customer record", media: "Text", note: "On-screen text only — the customer record is the commercial relationship holding contact details, billing address, preferences, and financial history; invoices are addressed to the customer even when work happens elsewhere."},
+    {section: "The work address", media: "Text", note: "On-screen text only — a work address is any property where work is carried out; jobs, assets, and service reminders sit under it; use the David Okafor landlord example (one customer, eight work addresses)."},
+    {section: "Summary", media: "Text", note: "Recap text only — the customer is who you bill, the work address is where you work, and everything operational sits under the work address."}
+  ],
+  productionNotes: [
+    "Narration-only Concept — no screen recording required.",
+    "No logged-in user, customer record, existing data, or assets needed."
+  ],
   scenes: [
     {type:"section", heading:"Introduction", body:"When you open a customer record in Commusoft, you will notice it can have multiple addresses beneath it. That structure is not an accident. Commusoft separates the person or company you trade with from the places where work is carried out, and understanding that separation will make everything from booking a job to raising an invoice feel logical rather than confusing.\n\nThe hierarchy has three levels: the customer at the top, work addresses beneath them, and then jobs, assets, and service reminders sitting under each work address. Each level has a distinct purpose, and knowing which level you are working at tells you exactly where to look and where to log."},
     {type:"section", heading:"The customer record", body:"The customer record represents the commercial relationship. It holds the person or company you trade with: their contact details, billing address, communication preferences, and financial history. When you raise an invoice in Commusoft, it is addressed to the customer, even when the work took place at a completely different property."},
@@ -1523,6 +1533,16 @@ COURSES['l0-02'] = {
     assetsRequired: "None"
   },
   openItems: "(1) The two cited HC sources give different spellings for the Travelling status: article 517998 uses \"Travelling,\" article 267464 uses \"Travel.\" This script uses \"Travelling\" for consistency with Job View Walkthrough 3 (The appointments tab), which was verified against article 517998. Confirm with Enablement Manager or product team which spelling matches the current UI label before production.",
+  buildBySection: [
+    {section: "Introduction", media: "Text", note: "On-screen text only — every appointment carries a status; eight statuses in total, seven updated by the technician on the mobile app and one office-only."},
+    {section: "The progression statuses", media: "Text", note: "On-screen text only — Accepted, Travelling, Arrived, Left; Arrived locks the appointment as live on site; each update appears in the scheduler's view the moment it is saved."},
+    {section: "Exception statuses", media: "Text", note: "On-screen text only — Rejected, No Access, and Aborted set by the technician, all leaving the job open for follow-up; Cancelled is the only office-set status."},
+    {section: "Summary", media: "Text", note: "Recap text only — four progression statuses and four exception statuses together give a live feed of the field operation."}
+  ],
+  productionNotes: [
+    "Narration-only Concept — no screen recording required.",
+    "No logged-in user, customer record, existing data, or assets needed."
+  ],
   scenes: [
     {type:"section", heading:"Introduction", body:"Every appointment in Commusoft carries a status. That status is the live signal that tells every member of your team exactly where a job stands — whether a technician has accepted a visit, whether they are on the road, or whether they arrived and could not get in. When your team reads and updates statuses consistently, no one needs to call anyone to find out what is happening.\n\nThere are eight appointment statuses in Commusoft. Seven are updated by the technician directly from the mobile app as the job progresses. One is an office-only action. Together they create a live picture of every appointment in your schedule."},
     {type:"section", heading:"The progression statuses", body:"When Sophie at SunComfort books a heat pump service and assigns it to Jake, the appointment waits for Jake to respond on his app. When Jake agrees to attend, he marks the appointment Accepted. When he leaves the depot, he marks it Travelling. When he arrives at the property and has access, he marks it Arrived.\n\nOnce an appointment reaches Arrived it is locked and cannot be edited — the visit is live on site. When Jake finishes the work and leaves, he marks it Left. Each of these four updates appears in Sophie\'s schedule the moment it is saved."},
@@ -1550,6 +1570,16 @@ COURSES['l0-03'] = {
     assetsRequired: "None"
   },
   openItems: "None — all content verified against Help Centre article.",
+  buildBySection: [
+    {section: "Introduction", media: "Text", note: "On-screen text only — job creation involves many fields; a job description template is a saved blueprint that pre-populates the standard details the moment it is selected."},
+    {section: "What a template holds", media: "Text", note: "On-screen text only — default duration, skill requirements, mobile workflows, pricing items, up to three service reminders, and the customer portal booking settings."},
+    {section: "How templates appear in the workflow", media: "Text", note: "On-screen text only — selecting the job description pre-populates the job; any field can be overridden; templates also connect to automatic invoicing on job completion."},
+    {section: "Summary", media: "Text", note: "Recap text only — a template pre-populates the key job details for a specific type of work, making job creation consistent and fast."}
+  ],
+  productionNotes: [
+    "Narration-only Concept — no screen recording required.",
+    "No logged-in user, customer record, existing data, or assets needed."
+  ],
   scenes: [
     {type:"section", heading:"Introduction", body:"When someone in your office creates a new job in Commusoft, there are a lot of fields to fill in: the type of work, the duration, the priority, the workflow, the pricing. Entering all of that from scratch on every job is slow, and it relies on whoever is creating the job to remember exactly what the defaults should be. A job description template solves that. It is a saved blueprint that pre-populates the standard details automatically the moment it is selected.\n\nSunComfort carries out hundreds of heat pump services every year. Sophie in the office does not fill in those details from scratch each time. She selects the Heat Pump Annual Service template, and Commusoft does the rest."},
     {type:"section", heading:"What a template holds", body:"A job description template is more than a name and a colour in the appointments view. It carries the default duration so the slot is sized correctly, the skill requirements so the right technician can be assigned, the mobile workflows so the technician on site knows exactly what they need to complete, and the pricing items so the job starts with the correct labour rate already attached.\n\nTemplates also set up service reminders — up to three per template — that either apply to existing customer records or create new ones automatically when the job is raised. For jobs that go through the customer portal, where a customer books directly online, the template controls what appears in the booking window: the service description, the estimated pricing, and how far into the future the customer can schedule a visit."},
@@ -1577,6 +1607,16 @@ COURSES['l0-04'] = {
     assetsRequired: "None"
   },
   openItems: "(1) The section on system tags in notification templates (square bracket tags auto-filled by Commusoft) has no HC source. The cited article covers estimate dynamic tagging only. Identify and verify the correct HC article for notification template system tags before production — or confirm with the product team that the square bracket syntax and auto-fill behaviour described here is accurate.",
+  buildBySection: [
+    {section: "Introduction", media: "Text", note: "On-screen text only — templates hold details that change from job to job; dynamic tags are placeholders that become fillable fields the moment a template is used."},
+    {section: "What is a dynamic tag", media: "Text", note: "On-screen text only — a word or phrase in curly brackets such as {number of panels}; it converts to a field on template selection and updates the finished document once values are entered and saved."},
+    {section: "System tags in notification templates", media: "Text", note: "On-screen text only — notification templates use square-bracket tags that Commusoft fills automatically from the job record, contrasted with user-defined estimate tags."},
+    {section: "Summary", media: "Text", note: "Recap text only — curly-bracket estimate tags are user-filled and square-bracket notification tags are system-filled; both ensure complete, accurate documents."}
+  ],
+  productionNotes: [
+    "Narration-only Concept — no screen recording required.",
+    "No logged-in user, customer record, existing data, or assets needed."
+  ],
   scenes: [
     {type:"section", heading:"Introduction", body:"When your team uses a template in Commusoft — whether for an estimate, a notification, or a customer confirmation — there are usually details that change from job to job. The property might need eight solar panels or twelve. The roof might be slate or concrete tile. Typing those details from scratch every time is slow, and relying on memory means they sometimes get missed. Commusoft solves this with dynamic tags: placeholders that sit inside templates and become fillable fields the moment the template is used.\n\nSunComfort creates hundreds of proposals a year for solar panel installations. Gary, the sales surveyor, does not type a new estimate structure for each customer. He opens a template, and the tags inside it prompt him for exactly what he needs to enter."},
     {type:"section", heading:"What is a dynamic tag", body:"A dynamic tag is a word or phrase placed inside curly brackets in a template body — something like {number of panels} or {roof type}. That text does not appear in the finished document as written. When Gary selects that template to create a new estimate, Commusoft converts each tag into a field and asks him to fill it in. Once he enters the values and saves, the estimate body updates with the correct information in place.\n\nThe tag acts as both a prompt and a container. It tells the person creating the document what information is needed, and it holds the place where that information will appear in the finished output. Nothing gets missed because the tag makes the requirement visible before the document is finalised."},
@@ -1604,6 +1644,16 @@ COURSES['l0-05'] = {
     assetsRequired: "None"
   },
   openItems: "None — all content verified against Help Centre article.",
+  buildBySection: [
+    {section: "Introduction", media: "Text", note: "On-screen text only — a specific arrival time is fragile in field service; a service window gives a realistic arrival range that appears automatically in confirmations and the booking portal."},
+    {section: "How service windows work", media: "Text", note: "On-screen text only — two parts, an internal name for the team and customer-facing arrival text; each links to an event type (AM, PM, or Full Day) and all event types must be covered before the setup can be saved."},
+    {section: "Where service windows appear", media: "Text", note: "On-screen text only — in the appointments view, in customer notifications, and in the customer booking portal slots."},
+    {section: "Summary", media: "Text", note: "Recap text only — a pre-configured arrival range with an internal name and customer-facing text, linked to an event type, appearing automatically across all communications."}
+  ],
+  productionNotes: [
+    "Narration-only Concept — no screen recording required.",
+    "No logged-in user, customer record, existing data, or assets needed."
+  ],
   scenes: [
     {type:"section", heading:"Introduction", body:"When you book an appointment in Commusoft, you need to tell the customer when to expect the technician. A specific arrival time feels precise, but in field service, a job running over or a longer journey than expected can shift that time significantly. Service windows solve this. Rather than committing to an exact time, you give the customer a realistic arrival range — Morning or Afternoon, for example — that appears automatically in their confirmation message and booking portal. The customer knows what to plan for. The technician has the flexibility to run the day without breaking promises.\n\nAt SunComfort, Sophie books dozens of heat pump service appointments every week. Rather than committing to a specific arrival time for each one, she assigns a service window. The customer receives their confirmation email showing the arrival range. Sophie does not type it each time — Commusoft pulls it from the service window configuration automatically."},
     {type:"section", heading:"How service windows work", body:"A service window has two parts: an internal name that your team sees in the diary, and customer-facing text that appears in confirmation messages. The internal name might be something like AM Service Call — a quick reference for the scheduling team. The customer-facing text would say 8am to 1pm — what the customer actually needs to know. You configure these separately so your team\'s shorthand and your customer\'s communication can each be as clear as they need to be.\n\nEach service window also connects to an event type — AM, PM, or Full Day — which determines how the appointment sits in the appointments view and which windows are available for each type of booking. Before saving the setup, Commusoft requires windows to cover all event types, so there is always a window available regardless of how an appointment is booked."},
@@ -1631,6 +1681,16 @@ COURSES['l0-06'] = {
     assetsRequired: "None"
   },
   openItems: "None — all content verified against Help Centre article.",
+  buildBySection: [
+    {section: "Introduction", media: "Text", note: "On-screen text only — nominal codes route an exported transaction to the correct account; a nominal code is a unique identifier for a category in the chart of accounts."},
+    {section: "The three account types", media: "Text", note: "On-screen text only — Sales codes for customer invoices, Expense codes for supplier invoices, and Bank codes for payments and credit notes; an uncoded item lands in a default category needing correction."},
+    {section: "How nominal codes connect to accounting software", media: "Text", note: "On-screen text only — codes are mapped once during setup to accounts in Xero, Sage, QuickBooks, FreeAgent, or Kashflow; a mismatch causes reconciliation problems."},
+    {section: "Summary", media: "Text", note: "Recap text only — a nominal code categorises transactions and routes them to the correct account; three account types; accurate setup makes month-end a check rather than a correction."}
+  ],
+  productionNotes: [
+    "Narration-only Concept — no screen recording required.",
+    "No logged-in user, customer record, existing data, or assets needed."
+  ],
   scenes: [
     {type:"section", heading:"Introduction", body:"When you raise an invoice in Commusoft and export it to your accounting software, that transaction has to land somewhere in your accounts. Nominal codes tell it where to go. A nominal code is a unique identifier assigned to a category in your chart of accounts — the list your business uses to organise every financial transaction. Pricing items in Commusoft carry nominal codes, and when the data is exported, each transaction is routed to the correct account automatically.\n\nAt SunComfort, Tom manages the connection between Commusoft and Xero. When a heat pump installation invoice is exported, the labour charge goes to the correct revenue account and the parts cost goes to the correct expense account — because nominal codes are already attached to each pricing item. Tom does not touch either entry."},
     {type:"section", heading:"The three account types", body:"Commusoft uses nominal codes across three account types. Sales codes are linked to customer invoices — they categorise income from labour, materials, callout fees, and other chargeable items. Expense codes are linked to supplier invoices — they categorise money going out for parts, subcontractors, and other costs. Bank codes are linked to payments and credit notes — they record where money is received or held.\n\nEvery financial transaction in Commusoft belongs to one of these three types, and each needs a nominal code to route it correctly when it is exported. A pricing item without a code may land in a default category in the accounting software and require manual correction — which is exactly the kind of month-end problem that nominal codes exist to prevent."},
@@ -1658,6 +1718,16 @@ COURSES['l0-07'] = {
     assetsRequired: "None"
   },
   openItems: "(1) Job pipelines may be restricted to specific Commusoft plans (Customer Journey and Field Automation). This walkthrough does not mention plan availability. Confirm with Enablement Manager or product team whether a plan restriction note is required before production.",
+  buildBySection: [
+    {section: "Introduction", media: "Text", note: "On-screen text only — a job pipeline organises job progress into named stages so the state of every job is visible at a glance instead of chasing updates."},
+    {section: "Stages and pipelines", media: "Text", note: "On-screen text only — a stage is a single step with a name and colour that adds a job dashboard view; a pipeline is the full sequence of stages; a business can run multiple pipelines for different work types."},
+    {section: "How pipelines create visibility", media: "Text", note: "On-screen text only — jobs enter at the first stage and move through as work progresses, manually or by rule; completion rules can close jobs automatically; the pipeline view gives a real-time picture."},
+    {section: "Summary", media: "Text", note: "Recap text only — a pipeline is the stages a job moves through; distinguish stage from pipeline; pipelines create visibility and can auto-close jobs on the right conditions."}
+  ],
+  productionNotes: [
+    "Narration-only Concept — no screen recording required.",
+    "No logged-in user, customer record, existing data, or assets needed."
+  ],
   scenes: [
     {type:"section", heading:"Introduction", body:"When you have jobs at multiple points of completion — some waiting for parts, some ready to schedule, some in commissioning — tracking where each one stands can consume as much time as the work itself. A job pipeline gives you a structured way to organise that progress inside Commusoft. It breaks the journey of a job into named stages, and as the work moves forward, the job moves through the pipeline. Instead of chasing updates, you see the state of every job at a glance.\n\nAt SunComfort, Logan oversees all heat pump installations. Each one can take weeks from initial survey to final commissioning. Without a pipeline, Logan\'s day involves a lot of phone calls. With one in place, he opens the pipeline view and sees exactly where every installation job sits — which stage it is in, what is next, and which ones need action."},
     {type:"section", heading:"Stages and pipelines", body:"A job pipeline is made up of stages. Each stage represents a step in the job\'s lifecycle. For SunComfort\'s installation pipeline, that might be Survey Booked, Parts Ordered, Installation Day, Commissioning, and Complete. Stages are configured with names and colours so they are easy to read in the appointments view and pipeline view. Each stage you create also adds a corresponding view on the job dashboard, so you can filter to see all jobs at any given point in the workflow.\n\nPipelines and stages are related but not the same thing. A stage is a single step. A pipeline is the full sequence of steps a job moves through from start to finish. A business might have multiple pipelines — one for installations, one for maintenance contracts, one for emergency call-outs — each with stages that match the specific workflow for that type of work."},
@@ -1685,6 +1755,17 @@ COURSES['l0-08'] = {
     assetsRequired: "None"
   },
   openItems: "None — all content verified against Help Centre articles.",
+  buildBySection: [
+    {section: "Introduction", media: "Text", note: "On-screen text only — a job can show several labels at once, each measuring something different; use Emma's job showing Needs Attention, No Access, and Return Visit Required."},
+    {section: "Job status — the system view", media: "Text", note: "On-screen text only — set automatically by Commusoft; the six values (Without a Diary Event, In Progress, Needs Attention, On Hold, Completed, Closed) reflect the job's overall position."},
+    {section: "Appointment status — the field view", media: "Text", note: "On-screen text only — recorded by the technician on the mobile app; describes the outcome of a single visit (e.g. No Access), not the job as a whole."},
+    {section: "Job stage — the workflow view", media: "Text", note: "On-screen text only — a position in a custom pipeline moved manually by the office, such as Return Visit Required; contrasted with the automatic job status and the field-set appointment status."},
+    {section: "Summary", media: "Text", note: "Recap text only — job status (system), appointment status (field), and job stage (workflow) read together give a complete picture of any job."}
+  ],
+  productionNotes: [
+    "Narration-only Concept — no screen recording required.",
+    "No logged-in user, customer record, existing data, or assets needed."
+  ],
   scenes: [
     {type:"section", heading:"Introduction", body:"When you open a job in Commusoft, you may see several different labels describing where it stands. A system status on the job itself. An outcome recorded against the last appointment. A stage in the pipeline your business has set up. These are not duplicates of the same information — each one measures something different. Understanding what each label means is what allows you to read a job record accurately and take the right action without second-guessing what you are looking at.\n\nEmma starts every day by reviewing the job list. On one heat pump service job, she can see three labels at the same time: the job itself shows Needs Attention, the last appointment shows No Access, and in the pipeline the job is sitting at Return Visit Required. Three labels on one job — and each one is telling her something different."},
     {type:"section", heading:"Job status — the system view", body:"A job status is set automatically by Commusoft based on what has happened on the job. It reflects the overall position of the work, not the outcome of any individual appointment. There are six job status values. Without a Diary Event means the job has been created but no appointment has been booked against it yet. In Progress means the job has a future appointment scheduled. Needs Attention means the job has past appointments but no future ones currently booked — it may be stalled and needs follow-up. On Hold means the job has been deliberately paused. Completed means the work is done and the job is ready to be invoiced. Closed is the final status, set automatically by Commusoft when the final invoice is raised against the job.\n\nThe job status gives Emma an overview of every job\'s position without opening each record. A job in Needs Attention is her signal that something needs chasing — a technician could not get access, a part is being waited on, or a follow-up appointment was simply never booked."},
@@ -1713,6 +1794,16 @@ COURSES['l0-09'] = {
     assetsRequired: "None"
   },
   openItems: "(1) Retention and Grant invoice types are referenced in the Final invoice deduction sentence (\"subtracts any Deposit, Interim, Retention, or Grant invoices already issued\") but are not defined anywhere in the script body. Verify against the HC article whether these types require a brief description in the \"Other invoice types worth knowing\" section, or whether the current in-passing reference is the intended approach.",
+  buildBySection: [
+    {section: "Introduction", media: "Text", note: "On-screen text only — Commusoft supports multiple invoice types for different points in the job lifecycle; one invoice for a callout, staged billing for a large installation."},
+    {section: "Deposit, Interim, and Final", media: "Text", note: "On-screen text only — Deposit created automatically on proposal acceptance, Interim for progress billing (multiple allowed), and Final which closes the job and deducts all earlier invoices automatically."},
+    {section: "Other invoice types worth knowing", media: "Text", note: "On-screen text only — Additional, Draft, Pre-final, Consolidated, and Contract invoices and the scenario each one covers."},
+    {section: "Summary", media: "Text", note: "Recap text only — the range of invoice types and their uses; raising the right type at the right stage keeps billing accurate and accounts clean."}
+  ],
+  productionNotes: [
+    "Narration-only Concept — no screen recording required.",
+    "No logged-in user, customer record, existing data, or assets needed."
+  ],
   scenes: [
     {type:"section", heading:"Introduction", body:"Commusoft supports multiple invoice types, each designed for a specific point in the job lifecycle. For a straightforward callout, your team raises one invoice when the work is done. For a large installation or a phased project, billing might be staged across several invoice types before the job closes. Knowing the difference means the right invoice is raised at the right time — and the final amount the customer owes is always correct.\n\nClaire handles all invoicing at SunComfort. For a standard maintenance visit, she raises one Final invoice when the technician is finished. For a large commercial heat pump installation, the billing runs in stages. A Deposit comes first, an Interim covers the halfway point, and the Final closes everything out — with Commusoft handling the deductions automatically."},
     {type:"section", heading:"Deposit, Interim, and Final", body:"These three invoice types form the core of staged billing. A Deposit invoice is created automatically in Commusoft when a customer accepts a proposal and it is converted into a job. It represents the upfront payment agreed at quote stage, and its value is deducted from the total when the Final invoice is raised. An Interim invoice is issued during the job for progress billing. SunComfort might raise one partway through a large installation to draw down on costs before the work is complete. Multiple Interim invoices can be raised on a single job, and all of them are deducted from the Final total. The Final invoice closes the job. It incorporates the pricing from the original proposal and subtracts any Deposit, Interim, Retention, or Grant invoices already issued — so the amount shown is exactly what remains due.\n\nClaire does not calculate what is left. When she raises the Final invoice, Commusoft deducts all previously issued invoices from the job total and shows the outstanding balance automatically."},
@@ -1740,6 +1831,15 @@ COURSES['l0-10'] = {
     assetsRequired: "None"
   },
   openItems: "None — all content verified against Help Centre article.",
+  buildBySection: [
+    {section: "Introduction", media: "Text", note: "On-screen text only — every user needs a licence; three types (Contracted, Monthly Rolling, Daily); Sarah's seasonal technician and occasional subcontractor need different types."},
+    {section: "The three licence types", media: "Text", note: "On-screen text only — Contracted (twelve-month, best price, cannot reduce before renewal), Monthly Rolling (no commitment, cancel anytime), and Daily (charged on active days, billed in arrears, cannot be converted); match each to Sarah's two users."},
+    {section: "Summary", media: "Text", note: "Recap text only — the three licence types and their fit; matching the type to the employment pattern keeps costs proportionate."}
+  ],
+  productionNotes: [
+    "Narration-only Concept — no screen recording required.",
+    "No logged-in user, customer record, existing data, or assets needed."
+  ],
   scenes: [
     {type:"section", heading:"Introduction", body:"Every user in Commusoft needs a licence, and the licence type you choose determines how you are billed and how much flexibility you have to add or remove that user. Commusoft provides three types: Contracted, Monthly Rolling, and Daily. Each one is designed for a different pattern of use. Choosing the right type for each person on your team is the difference between a licence bill that reflects actual usage and one that charges you for access that is not being used.\n\nSarah is adding two new users this week. One is a seasonal heat pump technician joining the team for six months. The other is an electrical subcontractor who handles specialist jobs a few times a year. She needs a different licence type for each."},
     {type:"section", heading:"The three licence types", body:"A Contracted licence runs for twelve months and offers the most competitive pricing because of the commitment. It cannot be reduced before the contract renewal date, which makes it the right choice for permanent, core team members who will use the system consistently throughout the year. A Monthly Rolling licence has no minimum commitment. It can be cancelled at any time and billed month to month, which makes it the right choice for seasonal workers, staff on probation, or anyone whose tenure is uncertain. A Daily licence is charged based on actual usage — a daily rate applies on any day when the user logs in, completes an appointment action, or has an appointment booked against them. There is no monthly minimum. Daily licences are billed in arrears, unlike Contracted and Monthly Rolling licences which are billed in advance. A Daily licence cannot be converted to a Contracted or Monthly Rolling licence — if a different licence type is needed later, a new licence must be set up. Daily licences are designed for subcontractors or occasional users who may use the system only a handful of times in a given month.\n\nFor Sarah\'s seasonal technician — joining for six months with a clear start and end date — the Monthly Rolling licence is the right choice. For the electrical subcontractor who might work two days this month and none the next, the Daily licence reflects how they are actually used."},
@@ -1765,6 +1865,16 @@ COURSES['l0-11'] = {
     assetsRequired: "None"
   },
   openItems: "None — all content verified against Help Centre article.",
+  buildBySection: [
+    {section: "Introduction", media: "Text", note: "On-screen text only — the customer portal is a secure self-service space for jobs, invoices, appointments, and certificates; useful to domestic and commercial customers alike."},
+    {section: "What customers can do in the portal", media: "Text", note: "On-screen text only — view invoices, view certificates filtered by date or technician, see upcoming and past appointments, add properties and register jobs, and invite their own users with feature-level access."},
+    {section: "Activating and managing portal access", media: "Text", note: "On-screen text only — send a portal link from the customer record in a single action; the customer sets up a login by email; access can be restricted or removed and additional users managed from the same record."},
+    {section: "Summary", media: "Text", note: "Recap text only — a secure self-service space activated from the customer record; multiple users with feature-level restrictions; removes routine status calls."}
+  ],
+  productionNotes: [
+    "Narration-only Concept — no screen recording required.",
+    "No logged-in user, customer record, existing data, or assets needed."
+  ],
   scenes: [
     {type:"section", heading:"Introduction", body:"The customer portal is a secure online space where your customers can access information about their jobs, invoices, appointments, and certificates — without contacting your office. For a domestic customer, it is a convenient way to download a certificate or check on an upcoming visit. For a commercial client managing multiple sites, it is a self-service hub that handles most of the routine enquiries your office would otherwise field every week.\n\nSunComfort has a commercial property company on their books with over 40 sites across London. Their facilities manager used to contact Emma regularly for invoice copies and appointment confirmations. Emma sent a portal link from the customer record in under a minute. Now the facilities manager logs in, finds what they need, and SunComfort\'s office gets to focus on the work."},
     {type:"section", heading:"What customers can do in the portal", body:"Once a customer has portal access, they can view and manage several areas of their account. They can see all their invoices — paid and outstanding — with amounts, dates, and invoice numbers. They can view certificates filtered by date or by the technician who attended, so compliance documents are always traceable without calling the office. They can see their upcoming and past appointments with job IDs and scheduled times. They can add new properties to their account and register new jobs directly. They can also invite members of their own organisation to access the portal, assigning each person access only to the features they need.\n\nFor SunComfort\'s commercial client, this means the facilities manager can give individual site managers access to their own sites — each one seeing only the invoices and appointments relevant to their properties — without SunComfort having to manage those requests manually."},
@@ -1792,6 +1902,16 @@ COURSES['l0-12'] = {
     assetsRequired: "None"
   },
   openItems: "(1) Verify the four field-staff role labels (Engineer, Engineer with diary, Engineer with invoicing, Senior engineer) against the HC article and current Commusoft UI before production. These were corrected from incorrectly written Technician variants — confirm the exact names as they appear in the system.",
+  buildBySection: [
+    {section: "Introduction", media: "Text", note: "On-screen text only — every user is assigned a role in a hierarchical permission structure; platform access (web, mobile, or both) is set separately; Sarah is setting up a technician and an administrator."},
+    {section: "The main role levels", media: "Text", note: "On-screen text only — Engineer, Engineer with diary, Engineer with invoicing, Senior engineer, Office staff, Financial office staff, and Owner/Manager, and what each level adds; Engineer for the technician, Office staff for the administrator."},
+    {section: "Platform access — separate from role", media: "Text", note: "On-screen text only — web, mobile, both, or neither, configured independently of the role; mobile-only for the technician, web-only for the administrator."},
+    {section: "Summary", media: "Text", note: "Recap text only — roles are hierarchical from Engineer to Owner/Manager; platform access is separate; assign the lowest role that covers the user's needs."}
+  ],
+  productionNotes: [
+    "Narration-only Concept — no screen recording required.",
+    "No logged-in user, customer record, existing data, or assets needed."
+  ],
   scenes: [
     {type:"section", heading:"Introduction", body:"Every user in Commusoft is assigned a role, and that role determines what they can see and do in the system. Commusoft uses a hierarchical permission structure: each role level includes everything the level below it can access, plus additional capabilities. You do not configure permissions one by one — you pick the right level for the person, and the system is set accordingly. There is also a separate setting for platform access — whether a user works on the web app, the mobile app, or both — which is configured independently of the role.\n\nSarah is setting up two new users today. One is a heat pump technician joining the field team. The other is an office administrator who will manage customers and scheduling. They need different roles, different platform access, and the right combination of both."},
     {type:"section", heading:"The main role levels", body:"The role structure moves from field access through to full system control. The Engineer role is the base level for field staff — they can view their personal schedule and complete their assigned appointments, but cannot invoice or accept payments. The Engineer with diary role adds the ability to create jobs, manage their own appointments, and search customer records. The Engineer with invoicing role extends that to raising invoices and taking payment on site. The Senior engineer role adds visibility of all technician schedules across the team and the ability to reassign appointments. The Office staff role covers customer management, job creation, scheduling, invoicing, and payments, but excludes financial reconciliation and system settings. The Financial office staff role adds full financial authority, including data amendments and accounting package exports. The Owner/Manager role has complete system control, including user management and system configuration.\n\nFor Sarah\'s new field technician — completing assigned appointments on the mobile app — the base Engineer role is the right level. For the new office administrator managing customers and scheduling — but not reconciliation or system settings — the Office staff role is correct."},
@@ -2121,6 +2241,20 @@ COURSES['reed-script-l1-ft-series1'] = {
     assetsRequired: "Mobile device with the Commusoft app installed (or simulator). App store screens for Lesson 1 may require capturing on iOS and Android separately."
   },
   openItems: "(1) Luke Simmons is not on the approved SunComfort staff roster — replace with an approved technician character before production (nearest equivalents: Sam Ossie, Solar Technician with diary; or Jake Harris, Senior Heat Pump Technician). (2) Confirm the exact name and location of the Commusoft mobile app in the iOS App Store and Google Play Store. (3) Confirm the exact label and location of the accept option on a job in the current version of the mobile app. (4) Confirm whether the mobile app has a separate diary view or whether the home screen list view is the only format — remove the diary view reference in the home screen walkthrough if it does not exist as a separate view. (5) No dedicated Help Centre article confirmed for mobile app home screen, job acceptance, or login flow — provide URLs before production.",
+  buildBySection: [
+    {section: "Getting started on the app", media: "Text", note: "On-screen text only — frame the app as how the field team connects to the business and preview the four areas: install and log in, the home screen, finding and accepting jobs, and appointment statuses."},
+    {section: "Install and log in", media: "Screen recording", note: "Capture finding the app in the App Store or Google Play → login screen with credentials entered → app loading through to the home screen."},
+    {section: "Understand your home screen", media: "Screen recording", note: "Capture the full home screen with the day's jobs → today's appointments with customer name and address visible → the diary view layout."},
+    {section: "Accept a job", media: "Screen recording", note: "Capture opening a job from the home screen and reading the full job detail → tapping accept and the status updating → confirmation visible after acceptance."},
+    {section: "Appointment statuses on the app", media: "Text", note: "On-screen text only — links out to the Shared Concept Library walkthrough Appointment Statuses Explained; no recording needed."}
+  ],
+  productionNotes: [
+    "Record on the Commusoft mobile app, logged in as Luke Simmons (Technician, mobile-app-enabled role).",
+    "No customer record is required — the recordings show the app job list and home screen, not customer records.",
+    "Have at least two jobs assigned to the recording technician visible in the app: one for the current day and one upcoming, each with a realistic job description and address.",
+    "Use a mobile device with the Commusoft app installed, or a simulator.",
+    "Capture the App Store and Google Play install screens separately on iOS and Android."
+  ],
   scenes: [
     {type:"section", heading:"Getting started on the app", body:"The Commusoft mobile app is how SunComfort\'s field team connects to the business while they are out on the road. Every job assigned goes through the app — you can see the details, update the status as you move through the day, complete forms, attach files, and submit the job report without calling the office. Before any of that can happen, you need to install the app, log in, and understand what you are looking at. This walkthrough covers four areas: installing and logging in, reading the home screen, finding and accepting your jobs, and understanding what the appointment statuses mean."},
     {type:"section", heading:"Install and log in", body:"The Commusoft mobile app is available on both iOS and Android. Your business administrator will provide your login credentials — your email address and a password. You do not need to configure anything in the app before logging in; the account details that apply to your role are already set up on the office side.\n\n[VIDEO — Screen recording: finding the app in the App Store or Google Play, login screen with credentials entered, app loading to the home screen. Approximately 2 minutes.]"},
@@ -2153,6 +2287,20 @@ COURSES['reed-script-l1-dm-series1'] = {
     assetsRequired: "None."
   },
   openItems: "(1) Confirm the exact navigation path to the appointments view for a Managing Director role — confirm whether accessible from the main nav or as a sub-tab within Jobs, and confirm the exact UI label. (2) Confirm the exact labels on the default Analytics dashboard widgets for a Managing Director role — the script refers to revenue, outstanding invoices, and jobs completed. (3) Confirm whether the Analytics dashboard is accessible to a Managing Director role without additional permissions setup. (4) Confirm whether any step in the data flow described in the final lesson differs for the SunComfort demo account configuration. (5) No dedicated Help Centre article found for the appointments view as seen by a decision maker — provide URL before production.",
+  buildBySection: [
+    {section: "Your business at a glance", media: "Text", note: "On-screen text only — frame the decision maker view across the Analytics dashboard and the appointments view, and how the data connects to the team's fieldwork."},
+    {section: "The reporting dashboard", media: "Screen recording", note: "Capture navigating to the Analytics dashboard → scrolling through the default widgets → adding and removing widgets via Quick Links."},
+    {section: "The diary at a glance", media: "Screen recording", note: "Capture navigating to the appointments view → the full schedule for the day with engineers visible → filtering by engineer and date range → reading appointment statuses."},
+    {section: "Key metrics to watch", media: "Screen recording", note: "Capture the revenue widget showing the monthly trend → the outstanding invoices widget → the jobs completed widget → navigating from a widget through to the underlying report."},
+    {section: "How data flows through Commusoft", media: "Text", note: "On-screen text only — walk the flow from customer → job → appointment → completion → invoice → payment → reporting; no recording needed."}
+  ],
+  productionNotes: [
+    "Record on the web app, logged in as Sarah Mitchell (Managing Director, Owner or Admin role) for all three screen recordings.",
+    "No customer record is required — the recordings show business-level dashboards, not individual customer records.",
+    "Have completed jobs from the past month in the account so the Analytics dashboard widgets show live figures.",
+    "Set up a mixed schedule in the appointments view with multiple engineers at different appointment statuses.",
+    "Populate the key metrics widgets with meaningful revenue, outstanding invoices, and jobs completed figures so the data reads as an active field service business."
+  ],
   scenes: [
     {type:"section", heading:"Your business at a glance", body:"When you log in to Commusoft as a decision maker, you are not looking for a specific job or customer — you are looking for a picture of how the business is running. That picture lives in two places: the Analytics dashboard, which shows how the business has performed over recent months, and the appointments view, which shows what is happening today and this week. Together they give you the operational and financial view you need to make decisions without asking someone to pull a report. In this walkthrough, you will get your bearings across the dashboard, the diary, and the metrics that matter most — and you will see how the data connects to the work your team does in the field every day."},
     {type:"section", heading:"The reporting dashboard", body:"The Analytics dashboard is Commusoft\'s built-in reporting view for decision makers. It sits in the Reporting section of the main navigation bar and opens with a set of default widgets, each one summarising a different area of the business. You do not need to build anything or configure a report to see your data here. What you can do is add, remove, and rearrange the widgets to match exactly what you review every week.\n\n[VIDEO — Screen recording: navigating to the Analytics dashboard, scrolling through default widgets, adding and removing widgets via Quick Links. Approximately 2 minutes.]"},

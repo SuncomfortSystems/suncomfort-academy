@@ -1647,6 +1647,20 @@ COURSES['l0-02'] = {
     assetsRequired: "None"
   },
   openItems: "(1) The two cited HC sources give different spellings for the Travelling status: article 517998 uses \"Travelling,\" article 267464 uses \"Travel.\" This script uses \"Travelling\" for consistency with Job View Walkthrough 3 (The appointments tab), which was verified against article 517998. Confirm with Enablement Manager or product team which spelling matches the current UI label before production.",
+  buildBySection: [
+    {section:"Introduction", media:"Written text", note:"On-screen text only — narration-only concept walkthrough, no screen recording."},
+    {section:"The progression statuses", media:"Screen recording + text", note:"Capture the appointments view with statuses updating: Accepted, Travelling, Arrived (locked), Left. No talking head."},
+    {section:"Exception statuses", media:"Screen recording + text", note:"Show the four exception statuses on the appointments view: Rejected, No Access, Aborted, and the office-only Cancelled."},
+    {section:"Summary", media:"Written text", note:"Recap text only — no recording needed."},
+    {section:"Reflection prompt", media:"Expanding section", note:"Knowledge check, revealed on click in the article."},
+    {section:"Knowledge check", media:"Expanding section", note:"Knowledge check, revealed on click in the article."}
+  ],
+  productionSetup: [
+    "*Logged-in user: None — narration-only course, no screen recording required",
+    "*Customer record: None",
+    "*Existing data: None",
+    "*Assets required: None"
+  ],
   scenes: [
     {type:"section", heading:"Introduction", body:"Every appointment in Commusoft carries a status. That status is the live signal that tells every member of your team exactly where a job stands — whether a technician has accepted a visit, whether they are on the road, or whether they arrived and could not get in. When your team reads and updates statuses consistently, no one needs to call anyone to find out what is happening.\n\nThere are eight appointment statuses in Commusoft. Seven are updated by the technician directly from the mobile app as the job progresses. One is an office-only action. Together they create a live picture of every appointment in your schedule."},
     {type:"section", heading:"The progression statuses", body:"When Sophie at SunComfort books a heat pump service and assigns it to Jake, the appointment waits for Jake to respond on his app. When Jake agrees to attend, he marks the appointment Accepted. When he leaves the depot, he marks it Travelling. When he arrives at the property and has access, he marks it Arrived.\n\nOnce an appointment reaches Arrived it is locked and cannot be edited — the visit is live on site. When Jake finishes the work and leaves, he marks it Left. Each of these four updates appears in Sophie\'s schedule the moment it is saved."},

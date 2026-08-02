@@ -8683,113 +8683,91 @@ COURSES['reed-script-l3-forms-c1'] = {
   pathLabel: "L6 Custom Forms",
   title: "Build your first custom form",
   duration: "6 min",
-  persona: "Admins",
-  characters: "Sarah Mitchell (Managing Director, Owner/Manager); Emma Clarke (Office Administrator, Office staff)",
-  scenario: "Sarah builds SunComfort\\'s custom forms library — adding marketplace forms for standard commissioning checklists and building a bespoke Solar PV Annual Service Report from scratch — so that every engineer visit produces a properly structured, customer-ready document.",
+  persona: "Decision makers",
+  characters: "Sarah Mitchell (Managing Director, Owner/Manager)",
+  scenario: "SunComfort's solar maintenance visits are still being recorded on paper, so Sarah sets up the forms library and creates the Solar PV Annual Service Report that will replace it.",
   objectives: [
-    "Create and organise custom form categories",
-    "Add a pre-built form from the Commusoft marketplace and link it to the correct job description",
-    "Build a custom form from scratch using the form builder, selecting and configuring the appropriate field types",
-    "Activate a form and understand the rules that apply once a form is live"
+    "Check the marketplace before building, and import a pre-built form if one fits",
+    "Distinguish custom form categories from folders, and explain which one your technicians see",
+    "Create a form and complete its basic details",
+    "Explain why a form cannot be activated until its Word document exists",
+    "Test a finished form on iOS, Android and the web before letting your team use it"
   ],
   productionSetup: [
-    "*Logged-in user: Sarah Mitchell, Managing Director, Owner/Manager. DRAFT, needs confirming before recording.",
-    "*Customer record: None. This walkthrough is settings configuration rather than work on a customer record.",
-    "*Existing data: Whatever the scenario needs on screen: Sarah builds SunComfort's custom forms library — adding marketplace forms for standard commissioning checklists and building a bespoke Solar PV Annual Service Report from scratch — so that every engineer visit produces a properly structured, customer-ready document. DRAFT, needs confirming before recording.",
-    "*Assets required: None unless the script names one. DRAFT, needs confirming before recording.",
-    "Drafted 2026-07-31 from this script's own scenario, because no Production Setup existed. Every line needs confirming against the recording account before use.*"
+    "Logged-in user: Sarah Mitchell, Managing Director, Owner/Manager.",
+    "Customer record: None. This walkthrough is settings configuration.",
+    "Existing data: No custom forms and no custom form categories configured. The account has Solar and Renewables among its selected industries so the category list is not empty. The marketplace is reachable and populated. One exported form zip file on the recording machine for the import demonstration.",
+    "Assets required: One custom form zip file for the import step."
   ],
   buildBySection: [
-    {section:"Why custom forms change the field service game", media:"Written text", note:"On-screen text only — frame the move from paper/verbal handovers to digital records tied to the job. Media was the ambiguous value Text; set to Written text 2026-07-30, confirm if this section is actually animated slides."},
-    {section:"Setting up categories first", media:"Screen recording", note:"Capture Settings > Forms > Custom form categories > Add category, creating the five SunComfort service-line categories."},
-    {section:"Navigating to custom forms", media:"Screen recording", note:"Capture Settings > Forms > Custom forms showing the empty library and the two routes: Add from marketplace and Add new form."},
-    {section:"Adding a form from the marketplace", media:"Screen recording", note:"Capture Add from marketplace > search Condensing Solar > View PDF preview > Add custom form > assign category > link job description > Activate (type Activate to confirm)."},
-    {section:"Understanding the activation rule", media:"Written text", note:"On-screen text only — once activated, structure is locked; clone from Actions to make structural changes. Media was the ambiguous value Text; set to Written text 2026-07-30, confirm if this section is actually animated slides."},
-    {section:"Building a form from scratch — starting with basic details", media:"Screen recording", note:"Capture Add new form > form name, description, category, link to Solar Maintenance job description."},
-    {section:"Building the form — field types and structure", media:"Screen recording", note:"Capture Add field for each type: date, text, number, dropdown, checkbox, Yes/No dropdown, two signature fields; review field order."},
-    {section:"Activating the form", media:"Screen recording", note:"Capture Activate (type Activate to confirm); note the remaining marketplace imports done off-camera."},
-    {section:"Summary", media:"Written text", note:"Recap text only — no recording needed."},
-    {section:"Reflection prompt", media:"Expanding section", note:"Knowledge check, revealed on click in the article."},
-    {section:"Knowledge check", media:"Expanding section", note:"Knowledge check, revealed on click in the article."}
+    {section:"Look in the marketplace before you build anything", media:"Screen recording", note:"Web capture. Settings, Forms, Custom forms, add from marketplace. Show the industry filters, preview a PDF, add a form."},
+    {section:"Reflection prompt, marketplace", media:"Expanding section", note:"Reflection."},
+    {section:"Categories and folders are not the same thing", media:"Written text + screenshot", note:"Explains the difference. One screenshot showing the folder tree beside the category column so both are visible at once."},
+    {section:"Creating the form", media:"Screen recording", note:"Web capture. Add new form, template name, description, category dropdown, continue."},
+    {section:"Why you cannot activate it yet", media:"Written text", note:"Explains the two halves and points at Using the form builder and Walkthrough 2. No asset."},
+    {section:"Reflection question, why activate is unavailable", media:"Expanding section", note:"Knowledge check."},
+    {section:"Sharing a form you already have", media:"Screen recording + gif", note:"Web capture of import form and the file picker. Gif the point about selecting the zip without extracting it."},
+    {section:"Test on every platform before your team uses it", media:"Screen recording", note:"Web capture of a form completed on a test job, then the generated PDF. Show the same form on iOS and Android side by side if the recording setup allows."},
+    {section:"Keep a copy", media:"Written text", note:"Closing paragraph, the download-a-copy habit, and the handover to Walkthrough 2."}
   ],
-  productionNotes: [
-    "Record on the web app, logged in as Sarah Mitchell (Managing Director, Owner/Manager). No customer record needed for settings configuration.",
-    "Have job description templates already configured for Solar Maintenance, Heat Pump Installation, Solar Installation, Generator Service / Maintenance, and Heat Pump Service, with no custom forms or categories yet, so the library builds from empty.",
-    "Settings path is Profile icon > Settings > Forms; create the five categories (Solar, Heat Pumps, Power and Generators, Electrical, Handover and Compliance) before importing or building any form.",
-    "For the marketplace beat use the Condensing Solar Commissioning Check List; show View PDF preview before Add custom form.",
-    "For the from-scratch build use the Solar PV Annual Service Report and add each field type in order so the learner sees date, text, number, dropdown, checkbox, Yes/No, and two signature fields.",
-    "Open items below are unresolved navigation/behaviour questions flagged by Reed — confirm against a live demo before recording."
-  ],
-  openItems: "(1) Confirm Custom forms navigation path for both UK and US accounts. (2) Confirm whether job description link is set within the form or within the job description template. (3) Confirm whether signature fields auto-capture timestamp on mobile submission. (4) Confirm whether PDF preview is available before or after adding a marketplace form.",
   scenes: [
-    {type:"section", heading:"Why custom forms change the field service game", body:"Every time one of SunComfort's engineers completes a commissioning job, a maintenance visit, or a safety inspection, they are generating information that has real value: to the customer, to the business, and in some cases to the regulator. A solar commissioning checklist submitted to the MCS. An electrical installation certificate required for insurance. A heat pump service record that protects the manufacturer warranty. These are not optional extras — they are the evidence trail that underpins SunComfort's professional reputation. Custom forms in Commusoft are how you capture that evidence digitally, consistently, and without paper. Engineers complete them on the mobile app during the job visit, and the completed form is saved automatically against the job record where the office can access it immediately, review it, and send it to the customer if needed. Before building anything, it is worth understanding what the system gives you: the ability to use pre-built industry forms from the Commusoft marketplace, or to build entirely bespoke forms using a drag-and-drop form builder, or both. Does your team currently rely on paper forms, PDFs, or verbal handovers to capture compliance and service documentation on site? *Feedback: Custom forms are designed precisely for this transition — moving your documentation from paper and email attachments to a structured, digital workflow that is tied directly to the job record. Whether you start with marketplace forms or build your own, the outcome is the same: every visit produces consistent, professional records automatically.*"},
-    {type:"reflection", label:"Reflection prompt", question:"Does your team currently rely on paper forms, PDFs, or verbal handovers to capture compliance and service documentation on site?", options:["Yes","No"], correct:"", feedback:"Custom forms are designed precisely for this transition — moving your documentation from paper and email attachments to a structured, digital workflow that is tied directly to the job record. Whether you start with marketplace forms or build your own, the outcome is the same: every visit produces consistent, professional records automatically.", feedbackAlt:"Even where some of your documentation is already digital, custom forms bring it into one place — tied directly to the job record, completed on mobile, and stored automatically. The outcome is the same: every visit produces consistent, professional records without a separate step."},
-    {type:"section", heading:"Setting up categories first", body:"Before building any forms, it pays to set up categories. Categories organise your forms into logical groups that make them easy to find — both for your office team in settings and for engineers browsing forms on the mobile app. Navigate to Settings, then select Forms from the left-hand menu, and choose Custom form categories. Click Add category to create the first group.\\n\\nSarah creates five categories that reflect SunComfort\\'s service lines: Solar, Heat Pumps, Power and Generators, Electrical, and Handover and Compliance. She enters each name and clicks Save. With the categories in place, every form she builds or imports will slot into the right group from the outset, and as SunComfort\\'s form library grows, engineers will always be able to find the relevant form within two taps on their device."},
-    {type:"section", heading:"Navigating to custom forms", body:"With the categories ready, navigate to Settings, then Forms, and select Custom forms. This is your form library — the place where every form SunComfort uses lives, whether it came from the marketplace or was built in-house. At the moment it is empty, but by the end of this walkthrough, SunComfort will have a working library covering their main service types. You have two routes from here: Add from marketplace, which gives you access to over forty pre-built industry forms with one click, and Add new form, which opens the form builder so you can design a form from scratch. Sarah will use both today."},
-    {type:"section", heading:"Adding a form from the marketplace", body:"Sarah's first priority is the Condensing Solar Commissioning Check List, which SunComfort's solar engineers need for every solar installation job. Click Add from marketplace to open the marketplace browser. You can search by name or browse by category. Sarah types Condensing Solar in the search bar and the form appears immediately. She clicks View PDF preview first, which shows her exactly how the completed form will look when it is generated as a PDF for the customer — a useful check before committing. Satisfied that the layout matches SunComfort's needs, she clicks Add custom form. The form now appears in her library marked as a draft. She opens it, assigns it to the Solar category, and links it to the Solar Installation job description so it appears automatically on every solar installation job. She then clicks Activate, types Activate when prompted to confirm, and the form is live. The moment any solar installation job is scheduled, the form will appear on the assigned engineer's mobile device ready to be completed. After Sarah activates the Condensing Solar Commissioning Check List and links it to the Solar Installation job description, what happens the next time a solar installation job is scheduled and assigned to an engineer? *Feedback: Once a form is activated and linked to a job description, it appears automatically on the mobile app for any engineer assigned to a job of that type. There is no manual step required from the engineer or the office for the form to appear — the link between the form and the job description does the work.*"},
-    {type:"reflection", label:"Knowledge check", question:"After Sarah activates the Condensing Solar Commissioning Check List and links it to the Solar Installation job description, what happens the next time a solar installation job is scheduled and assigned to an engineer?", options:["A. The engineer must go to Settings and download the form manually before each job","B. The form appears automatically on the engineer\\'s mobile as part of the job — no action required","C. The form is emailed to the customer at the point of job creation","D. Emma must attach the form to the job manually from the web app before it becomes visible on mobile"], correct:"B", feedback:"Right. Once a form is activated and linked to a job description, it appears automatically on the mobile app for any engineer assigned to a job of that type. There is no manual step required from the engineer or the office for the form to appear — the link between the form and the job description does the work.", feedbackAlt:"The form appears automatically. Once a form is activated and linked to a job description, any engineer assigned to a job of that type sees it on their mobile as part of the job — no manual download, attachment, or email step is needed. The link between the form and the job description does the work."},
-    {type:"section", heading:"Understanding the activation rule", body:"Before moving to the form builder, there is one rule worth knowing. Once a form is activated, its structure is locked — you cannot edit the fields directly without first cloning it. This protects the integrity of previously submitted data: if a field changes after engineers have already completed the form, the historical records become inconsistent and unreliable.\\n\\nThe correct approach, when you need to make structural changes to a live form, is to clone it from the Actions menu. Cloning creates an editable draft that you can modify, activate as the new version, and replace the old one with. The original remains in your library preserving all historical submissions. Sarah makes a note of this now, because she knows SunComfort\\'s forms will evolve as the business grows and the team\\'s compliance needs sharpen."},
-    {type:"section", heading:"Building a form from scratch — starting with basic details", body:"Now Sarah turns to a form the marketplace does not cover: SunComfort\\'s Solar PV Annual Service Report. This is a bespoke record designed to MCS guidance for annual post-installation inspections, and it needs to capture very specific data including inverter diagnostics, string voltage readings, and generation performance against expected output. Click Add new form to open the builder.\\n\\nThe first step is basic details. Sarah enters the form name — Solar PV Annual Service Report — types a brief description explaining the purpose and the MCS context, and assigns it to the Solar category she created earlier. She then links it to the Solar Maintenance job description from the job description dropdown, so it automatically appears on annual service visits. With these details saved, the form builder opens and Sarah is ready to add her fields."},
-    {type:"section", heading:"Building the form — field types and structure", body:"The form builder presents a blank canvas with an Add field button. Each field type captures a different kind of information, and choosing the right type for each question makes the form both easier to complete on mobile and more consistent in its output. Sarah adds an Inspection date field using the date type, which gives the engineer a date picker on mobile rather than a free-text entry box. She adds an Engineer name field using the text type, keeping it short and clearly labelled. She then adds a number field for System size in kWp, a text field for Inverter make and model, and a dropdown field for Panel condition rated as Good, Fair, or Poor, which standardises the assessment across all engineers and makes office review straightforward. For the electrical test readings, she uses number fields for each string voltage measurement. She adds a checkbox field for Inverter error log reviewed, and a Yes/No dropdown for Remedial works recommended. At the bottom of the form, she adds two signature fields — one for the engineer and one for the customer — which capture the name, signature, and timestamp automatically when completed on mobile. Sarah reviews the form, confirms the field order makes sense for an engineer working through an inspection from top to bottom, and saves. Sarah wants to ensure that the remedial works question on the Solar PV Annual Service Report produces a consistent, comparable answer across all engineers rather than a free-text description. Which field type should she use? *Feedback: A dropdown field with fixed options — Yes or No — is the right choice here. It constrains the answer to one of two values, which makes the data consistent and searchable. A free-text field would produce varied answers that are harder to act on and impossible to filter or report across multiple jobs.*"},
-    {type:"reflection", label:"Knowledge check", question:"Sarah wants to ensure that the remedial works question on the Solar PV Annual Service Report produces a consistent, comparable answer across all engineers rather than a free-text description. Which field type should she use?", options:["A. A text field with a character limit","B. A dropdown with Yes and No as the only options","C. A number field","D. A checkbox field"], correct:"B", feedback:"A dropdown field with fixed options — Yes or No — is the right choice here. It constrains the answer to one of two values, which makes the data consistent and searchable. A free-text field would produce varied answers that are harder to act on and impossible to filter or report across multiple jobs.", feedbackAlt:"A dropdown with Yes and No as the only options is the right choice. It constrains the answer to one of two values, which makes the data consistent and searchable. A text field, number field, or checkbox would not give the same clean, comparable Yes/No result across every engineer and every job."},
-    {type:"section", heading:"Activating the form", body:"With all fields added and the layout reviewed, Sarah is ready to make the Solar PV Annual Service Report live. Click Activate at the top of the form, type Activate when prompted to confirm, and the form is active. It is now linked to the Solar Maintenance job description, categorised under Solar, and ready to appear on every solar maintenance visit SunComfort\\'s engineers carry out.\\n\\nSarah follows the same process to add the remaining marketplace forms she needs — the Air to Water Heat Pump Commissioning Checklist linked to Heat Pump Installation, the Plant Commissioning Service Record linked to Generator Installation, and the Electrical Installation Certificate linked to Solar Installation and Generator Installation. Each one takes under two minutes to import, categorise, link, and activate. SunComfort\\'s form library is taking shape."},
-    {type:"section", heading:"Summary", body:"SunComfort's custom forms library is now live. Sarah has created five categories that organise the library by service line, imported key compliance forms from the marketplace, built a bespoke Solar PV Annual Service Report with the correct field types for each data point, and activated every form against the right job description. In Walkthrough 2, we look at exactly how forms are assigned to job types in detail, how to control when forms appear, and what happens when your form library needs to evolve. 1. [OPEN — confirm whether the Custom forms path is Profile icon > Settings > Forms > Custom forms or whether the navigation differs between UK and US account configurations; Settings document shows this path but it should be verified against a live demo environment] 2. [OPEN — confirm whether the job description link is set within the form itself or from within the job description template; Settings document indicates it is set from within the form — confirm this is accurate before recording] 3. [OPEN — confirm whether signature fields capture timestamp automatically on mobile, or whether the timestamp is recorded separately against the form submission; assumed automatic based on Commusoft digital forms feature description] 4. [OPEN — confirm whether marketplace forms can be previewed as PDFs before adding, or whether the PDF preview is only available after the form has been added to the library; script assumes preview before adding based on the Settings document steps] 1. [OPEN — confirm Custom forms navigation path for both UK and US accounts] 2. [OPEN — confirm whether job description link is set within the form or within the job description template] 3. [OPEN — confirm whether signature fields auto-capture timestamp on mobile submission] 4. [OPEN — confirm whether PDF preview is available before or after adding a marketplace form]"}
-  ]
+    {type:"section", heading:"Look in the marketplace before you build anything", body:"Before opening the builder, check whether the form already exists. Commusoft ships a marketplace of pre-built forms across the trades, covering gas, electrical, commercial catering, HVAC, oil and renewables, and a document you adapt is faster than a document you design.\\n\\nOpen Settings, then Forms, then Custom forms, and choose add from marketplace. Preview the PDF of anything that looks close before committing to it. If it fits, add it, and you have a working configuration and a Word template to adjust rather than a blank page. Support's most common answer to \"how do I build this form\" is that a version of it is already there."},
+    {type:"reflection", question:"Do you know whether a standard version of your most-used certificate already exists in the marketplace?", options:["Yes", "No"], correct:"", feedback:"It costs a minute to look and can save a day. Marketplace forms are generic, so you will want to review the configuration and add your branding, but adapting one is considerably quicker than starting from nothing."},
+    {type:"section", heading:"Categories and folders are not the same thing", body:"Two organising tools sit in this area and they do different jobs, which is worth getting straight before creating anything.\\n\\nCategories group your forms for the person completing them. When a technician opens the forms list on their phone, that list is arranged by category, so this is the one that affects work on site. The categories available come from the industries selected on your Commusoft account, so you see the ones relevant to your trades rather than all of them. Folders are web-side only. They tidy the settings screen for whoever maintains the library, and a technician never sees them."},
+    {type:"section", heading:"Creating the form", body:"Choose add new form and start with the basic details. The template name is what technicians pick from on site, so make it unambiguous: Solar PV Annual Service Report tells someone exactly when to reach for it in a way that Service Form does not.\\n\\nThe description gives your team context about what the form is for, and the category is the one your technicians will browse. Complete those three and continue. You now have a saved form with no fields and no document, which is the normal starting state."},
+    {type:"section", heading:"Why you cannot activate it yet", body:"Try to activate the form at this point and Commusoft will not let you. That is not a fault. A custom form is two halves: the configuration you build here, which decides what gets asked on site, and a Word document, which decides how the answers are laid out on the finished certificate. Without the document there is nowhere for the answers to go.\\n\\nThe fields themselves are built in the form builder, which works the same way across every part of Commusoft that uses it and is covered separately in Using the form builder. The document comes next, in Walkthrough 2."},
+    {type:"reflection", question:"You have created a form, completed the basic details, and built all your pages and fields. Activate is still unavailable. Why?", options:["The form needs approving by a Commusoft administrator first", "No Word document has been uploaded yet, and a form cannot go live without one", "Custom forms can only be activated at the start of a billing period", "The form has not been added to a job report workflow template"], correct:"No Word document has been uploaded yet, and a form cannot go live without one", feedback:"A form is a configuration plus a Word document. Until the document has been created and uploaded there is nothing to generate the finished certificate from, so Commusoft keeps the form in draft."},
+    {type:"section", heading:"Sharing a form you already have", body:"If a form has been built elsewhere, in another Commusoft account or by a colleague, you can bring it in whole. An exported form arrives as a single zip file containing both the configuration and the Word document, and it is imported with the import form button.\\n\\nDo not open or extract the zip. Each file inside is password protected during export, with a random password nobody has access to, and that is deliberate: it stops the two halves being separated. Select the zip exactly as it is. Once imported the form appears in your list as a draft, ready to review and activate."},
+    {type:"section", heading:"Test on every platform before your team uses it", body:"Once the document is uploaded and the form is active, test it before telling anyone it is ready. Test on iOS, on Android and on the web, because the platforms behave differently and a form that reads well on one can be awkward on another.\\n\\nThis is not box ticking. A toggle with several options may be comfortable on one device and cramped on another, and finding that out now means changing it to a dropdown rather than hearing about it from a technician standing in a customer's loft. Run the form through on a test job, then look at the finished PDF and check the answers land where you expect."},
+    {type:"section", heading:"Keep a copy", body:"Once the form is working, download it and keep the copy somewhere safe. Downloading gives you the configuration and the Word document together in one zip.\\n\\nThat copy is your undo. If someone edits the live form and the certificate stops generating properly, you can import the copy and be back where you started. Never make changes directly to an active form that is in daily use. In Walkthrough 2 you will build the Word document that makes this form usable."}
+  ],
+  openItems: "1. [OPEN — confirm the exact label of the marketplace button. Existing content says \"Add from Marketplace\" and the source video says \"add from marketplace\"; the on-screen casing has not been verified.] 2. [OPEN — confirm whether the category list is genuinely filtered by the industries selected on the account, or whether all categories are always shown. The source video states it is filtered, but this has not been checked against a second account.] 3. [OPEN — confirm whether a side-by-side iOS and Android capture is possible in the recording setup. If not, the platform testing section becomes written text with a single device capture.]"
 };
-
 COURSES['reed-script-l3-forms-c2'] = {
   contentType: "Walkthrough",
   pathLabel: "L6 Custom Forms",
   title: "Assign forms and control when they appear",
   duration: "5 min",
-  persona: "Admins",
-  characters: "Sarah Mitchell (Managing Director, Owner/Manager)",
-  scenario: "Sarah reviews SunComfort\\'s growing forms library, checks that each form is correctly linked to the right job description, clones and replaces an outdated form, and sets the library up to stay manageable as the company\\'s service lines expand.",
+  persona: "Decision makers",
+  characters: "Sarah Mitchell (Managing Director, Owner/Manager), Luke Patterson (Senior Solar Technician)",
+  scenario: "SunComfort's Solar PV Annual Service Report is built and active, but Sarah needs the compliance sections completed on every visit rather than whenever a technician remembers, so she makes it a required on-site task in the solar maintenance workflow.",
   objectives: [
-    "Explain how custom forms are linked to job description templates and why that link controls when forms appear on mobile",
-    "Describe what triggers a form to appear on an engineer\\'s device and what the engineer sees",
-    "Clone an existing form to create an editable version while preserving the original\\'s submission history",
-    "Delete or replace a live form responsibly, understanding the effect on engineers in the field"
+    "Identify the two places a custom form can be added to a job: on mobile and on the web",
+    "Explain that on-site tasks prompt a technician to complete a form rather than delivering it",
+    "Configure a Form task inside a job report workflow template so the form is not left to memory",
+    "Apply the clone workaround when a workflow template is already active",
+    "Decide, for a given form, whether prompting is enough or the task should be required"
   ],
   productionSetup: [
-    "*Logged-in user: Sarah Mitchell, Managing Director, Owner/Manager. DRAFT, needs confirming before recording.",
-    "*Customer record: None. This walkthrough is settings configuration rather than work on a customer record.",
-    "*Existing data: Whatever the scenario needs on screen: Sarah reviews SunComfort's growing forms library, checks that each form is correctly linked to the right job description, clones and replaces an outdated form, and sets the library up to stay manageable as the company's service lines expand. DRAFT, needs confirming before recording.",
-    "*Assets required: None unless the script names one. DRAFT, needs confirming before recording.",
-    "Drafted 2026-07-31 from this script's own scenario, because no Production Setup existed. Every line needs confirming against the recording account before use.*"
+    "Logged-in user: Sarah Mitchell, Managing Director, Owner/Manager.",
+    "Customer record: None. This walkthrough is settings configuration.",
+    "Existing data: Solar PV Annual Service Report built, Word document uploaded, status Active, in the Solar category. A second active form, Electrical Installation Certificate, so the Forms dropdown shows a genuine choice. One job report workflow template for solar maintenance in Active status, used to demonstrate the missing Step 2, and the same template cloned to draft during the walkthrough. One scheduled solar maintenance appointment assigned to Luke Patterson, for the mobile view at the close.",
+    "Assets required: None."
   ],
   buildBySection: [
-    {section:"How forms find their way to an engineer\\\\'s phone", media:"Written text", note:"On-screen text only — the activation-plus-link connection between a form and every job of that type. Media was the ambiguous value Text; set to Written text 2026-07-30, confirm if this section is actually animated slides."},
-    {section:"What the engineer actually sees", media:"Screen recording + text", note:"Capture the mobile Menu > Certificates / Forms list, draft vs completed states; can be supported with on-screen text."},
-    {section:"Reviewing your library and keeping it connected", media:"Screen recording", note:"Capture Settings > Forms > Custom forms library view; open Electrical Installation Certificate and add Generator Installation to the linked job descriptions, then save."},
-    {section:"When a form needs updating — the clone workflow", media:"Screen recording", note:"Capture Actions > Clone on the active form, rename original to v1, edit the draft, add Monitoring system reference number field, activate the new version."},
-    {section:"Deleting a form from the library", media:"Screen recording + text", note:"Capture Actions > Delete and the confirmation/warning; reinforce with on-screen text on when deletion is appropriate."},
-    {section:"Summary", media:"Written text", note:"Recap text only — no recording needed."},
-    {section:"Reflection prompt", media:"Expanding section", note:"Knowledge check, revealed on click in the article."},
-    {section:"Knowledge check", media:"Expanding section", note:"Knowledge check, revealed on click in the article."}
+    {section:"Activating a form is only half the job", media:"Written text", note:"Article introduction, including the point that no job description link exists. No asset."},
+    {section:"Where a form is added", media:"Screen recording", note:"Two captures in one video. Mobile: Luke's phone, open appointment, Menu, Certificates, plus button, pick the form from the list, stop before completing it. Then web: the same form reached from the job record."},
+    {section:"On-site tasks: making sure it actually gets done", media:"Written text + screenshot", note:"Explains that a task prompts rather than delivers, and names the three task types. One screenshot alongside: Settings, Job, job report workflow templates, showing the position in the menu."},
+    {section:"Reflection question, where tasks are configured", media:"Expanding section", note:"Knowledge check."},
+    {section:"Adding the Form task", media:"Screen recording", note:"Web capture. Open the draft template, Step 2, add new on-site task, set type to Form, open the Forms dropdown, choose the report, set the asset option, save."},
+    {section:"The step that is not there", media:"Screen recording + gif", note:"Web capture. Open the **active** template first and show Step 2 absent, then clone, then show Step 2 present on the draft. Gif the missing-step moment; it is the whole point of the section and easy to miss at full speed."},
+    {section:"Reflection question, the missing Step 2", media:"Expanding section", note:"Knowledge check."},
+    {section:"Which forms need a task", media:"Written text", note:"Decision guidance. No asset."},
+    {section:"What Luke sees", media:"Screen recording + text", note:"Mobile capture. The on-site task on the job screen, tapped to open the form. One Clueso video, then the closing paragraph and the handover to the Office teams path as article text."}
   ],
-  productionNotes: [
-    "Record on the web app, logged in as Sarah Mitchell (Managing Director, Owner/Manager). No customer record required.",
-    "Have the Walkthrough 1 library already configured: Solar PV Annual Service Report, Condensing Solar Commissioning Check List, Air to Water Heat Pump Commissioning Checklist, Plant Commissioning Service Record, and Electrical Installation Certificate, each active and linked.",
-    "The Solar PV Annual Service Report should show at least two completed submissions so the clone-and-replace scenario has a credible history to protect.",
-    "For the library-review beat, set the Electrical Installation Certificate linked only to Solar Installation so Sarah can be shown adding Generator Installation live.",
-    "For the clone beat, rename the original to Solar PV Annual Service Report v1 and add the Monitoring system reference number field to the cloned draft before activating.",
-    "Open items below are unresolved behaviour/label questions flagged by Reed — confirm against a live demo before recording."
-  ],
-  openItems: "(1) Confirm whether adding a new job description link to an already-active form requires reactivation, or whether the change takes effect immediately. (2) Confirm whether Commusoft prevents deletion of forms with existing submissions, or whether deletion is permitted with a warning. (3) Confirm the exact label for the mobile navigation path to forms (Menu > Certificates / Forms) against the current app version.",
   scenes: [
-    {type:"section", heading:"How forms find their way to an engineer's phone", body:"In Walkthrough 1, Sarah built SunComfort's forms library and activated each form. But activating a form is only half the story. The moment a form is activated and linked to a job description, Commusoft creates a permanent connection between that form and every job of that type. When a job is scheduled and an engineer is assigned to it, the linked form appears automatically on that engineer's mobile device as part of the job record — no manual step from the office, no action required from the engineer before they arrive on site. This connection is the engine that makes the whole system work consistently. The right form always shows up on the right job because the rule is set at the job description level, not the job level. Sarah does not have to think about forms when she books a solar maintenance visit — the Solar PV Annual Service Report is already waiting for whichever engineer is dispatched, because the Solar Maintenance job description carries that instruction every time. Does your business currently have a process for making sure engineers receive the right paperwork before they arrive on site? *Feedback: Whether your current process is paper-based, email-based, or informal, linking forms to job descriptions replaces all of it with a single rule that applies automatically. Once the link is in place, no one needs to remember to send the form — it is already there.*"},
-    {type:"reflection", label:"Reflection prompt", question:"Does your business currently have a process for making sure engineers receive the right paperwork before they arrive on site?", options:["Yes","No"], correct:"", feedback:"Whether your current process is paper-based, email-based, or informal, linking forms to job descriptions replaces all of it with a single rule that applies automatically. Once the link is in place, no one needs to remember to send the form — it is already there.", feedbackAlt:"Linking forms to job descriptions gives you that process built in. It replaces any manual or informal step with a single rule that applies automatically — once the link is in place, no one needs to remember to send the form, because it is already there on the job."},
-    {type:"section", heading:"What the engineer actually sees", body:"Understanding what the engineer sees on their device helps you make better decisions about form design and library structure. When an engineer opens a job in the Commusoft mobile app, they navigate to the Menu and select Certificates / Forms. Any forms linked to that job type are listed there and available to open and complete. If a form has been started but not yet submitted, it appears as a draft that the engineer can return to and continue.\\n\\nThe engineer taps the form, works through each page and field in sequence, and when all required fields are complete, saves it to finalise. Once saved, the form is marked as completed and syncs to the web app automatically, where it appears on the job\\'s Certificates tab and becomes visible to the office immediately. The engineer cannot edit the form after saving — this is intentional and protects the integrity of the record. If a correction is genuinely needed after submission, that is handled from the web app by an office user, not by asking the engineer to redo the form on their device."},
-    {type:"section", heading:"Reviewing your library and keeping it connected", body:"As SunComfort's services grow, so does the form library. It is good practice to review the library periodically to check that every active form is correctly linked to the right job description, that no form has slipped into draft or been inadvertently disconnected, and that the categories still reflect how the business is organised. Navigate to Settings, then Forms, then Custom forms to see the full library with each form's status, category, and linked job descriptions at a glance. Sarah opens the library and works through each active form, confirming the job description links. She notices the Electrical Installation Certificate is currently linked only to Solar Installation, but it should also cover Generator Installation — a connection she missed when setting it up. She opens the form, adds Generator Installation to the linked job descriptions, and saves. [OPEN — confirm whether adding a new job description link to an already-active form requires reactivation, or whether the change takes effect immediately; assumed immediate based on Settings document wording but this should be verified against a live demo environment] The form is still active and its structure is unchanged, so existing submissions are unaffected — only the trigger rule has expanded. Sarah wants to link the Electrical Installation Certificate to an additional job description without changing any of its fields. What is the correct approach? *Feedback: Adding a job description link does not change the form's structure, so cloning is not required. You can open the active form, update the job description links, and save — the form remains active and all existing submissions are preserved. Cloning is only necessary when you need to change the fields themselves.*"},
-    {type:"reflection", label:"Knowledge check", question:"Sarah wants to link the Electrical Installation Certificate to an additional job description without changing any of its fields. What is the correct approach?", options:["A. Clone the form, link the new job description to the cloned version, and activate it as a replacement","B. Open the active form, add the new job description link, and save — no cloning needed","C. Delete the form and rebuild it from scratch with both job descriptions linked","D. Create a second copy of the form with a different name and link it to the second job description only"], correct:"B", feedback:"Adding a job description link does not change the form\\'s structure, so cloning is not required. You can open the active form, update the job description links, and save — the form remains active and all existing submissions are preserved. Cloning is only necessary when you need to change the fields themselves.", feedbackAlt:"Open the active form, add the new job description link, and save. Because this does not change the form\\'s structure, cloning, deleting, or duplicating the form is unnecessary — the form stays active and all existing submissions are preserved. Cloning is only needed when you change the fields themselves."},
-    {type:"section", heading:"When a form needs updating — the clone workflow", body:"This is the situation that catches businesses out. A form has been active for three months, engineers have submitted it on fifteen jobs, and Sarah realises that the Solar PV Annual Service Report is missing a field for recording the monitoring system reference number — something the office now needs for warranty registration. She cannot edit the active form directly. The rule exists to protect those fifteen historical submissions: changing a field retroactively would make the records inconsistent and potentially invalidate them for compliance purposes. The correct approach is to clone the form. From the Actions menu on the active form, Sarah clicks Clone. Commusoft creates an exact duplicate in draft status, leaving the original untouched. Sarah renames the original to Solar PV Annual Service Report v1 so it is clearly marked as the previous version. She opens the cloned draft, renames it Solar PV Annual Service Report, adds the Monitoring system reference number field in the correct position, reviews the full field order, and activates the new version. It is now live and linked to the Solar Maintenance job description. The v1 record remains in the library as a read-only archive — all fifteen historical submissions are intact and accessible. From the next job onwards, engineers see the updated form automatically. An active form has been submitted on twelve jobs over the past two months. Sarah needs to add two new fields to it. What must she do before making any changes? *Feedback: Active forms cannot be edited directly because doing so would make the fields inconsistent with historical submissions. Cloning creates a draft copy that you can modify and activate, while the original remains in the library to preserve the submission history of every job it was used on. This is the version control method Commusoft recommends for all structural changes to live forms.*"},
-    {type:"reflection", label:"Knowledge check", question:"An active form has been submitted on twelve jobs over the past two months. Sarah needs to add two new fields to it. What must she do before making any changes?", options:["A. Edit the form directly in settings — active forms can be modified without consequence","B. Clone the form to create an editable draft, then make the changes and activate the new version","C. Delete the form, rebuild it with the new fields, and activate the new version","D. Archive the form and start over with a new form name"], correct:"B", feedback:"Active forms cannot be edited directly because doing so would make the fields inconsistent with historical submissions. Cloning creates a draft copy that you can modify and activate, while the original remains in the library to preserve the submission history of every job it was used on. This is the version control method Commusoft recommends for all structural changes to live forms.", feedbackAlt:"Clone the form first. Active forms cannot be edited directly because that would make the fields inconsistent with the twelve historical submissions. Cloning creates an editable draft you modify and activate, while the original stays in the library preserving every past submission. Deleting or rebuilding from scratch would lose that history."},
-    {type:"section", heading:"Deleting a form from the library", body:"There are situations where a form is no longer needed and should be removed from the library entirely — perhaps a job type has been discontinued, or a marketplace form has been superseded by a more current version. Before deleting, it is worth understanding the effect. Deleting an active form removes it from use immediately: engineers will no longer see it on their mobile devices, and it will not appear on any new jobs of the linked type. Completed submissions that have already synced are retained on the job records where they were submitted and are not lost. To delete a form, open it from the library, navigate to the Actions menu, and select Delete. Commusoft will ask you to confirm. If the form has active submissions, you may see a warning — read it carefully before proceeding. In practice, deletion is appropriate for draft forms that were never activated, or for retired forms where the clone-and-replace workflow has already moved engineers to the updated version. For any form that has a submission history, consider leaving it in the library under a versioned name rather than deleting it outright, so that historical job records remain traceable. [OPEN — confirm whether Commusoft prevents deletion of forms with existing submissions, or whether deletion is permitted with a warning; the Help Centre states active forms are removed from use upon deletion but does not clarify whether the system blocks or warns for forms with submission history]"},
-    {type:"section", heading:"Summary", body:"The link between a form and a job description is the rule that makes your library work in the field. When that connection is correctly set, engineers always see the right form on the right job without any manual intervention from the office. When the library needs to grow or change, the clone workflow is the safe path: preserve the history, update the form, and activate the new version. In Walkthrough 3, the baton passes to the field — Luke will show you what it looks like to receive and complete one of these forms on site, and Emma will walk through what happens in the office once the submission comes in. 1. [OPEN — confirm whether adding a new job description link to an already-active form requires reactivation, or whether the change takes effect immediately; assumed immediate based on Settings document wording but this should be verified against a live demo environment] 2. [OPEN — confirm whether Commusoft prevents deletion of forms with existing submissions, or whether deletion is permitted with a warning; the Help Centre states active forms are removed from use upon deletion but does not clarify whether the system blocks or warns for forms with a submission history] 3. [OPEN — confirm the exact label for the mobile navigation path to forms; HC article states Menu > Certificates / Forms but this should be verified against the current mobile app version as navigation labels sometimes differ between app versions]"}
-  ]
+    {type:"section", heading:"Activating a form is only half the job", body:"You finished the last walkthrough with an active form and a Word document behind it. Nothing has reached a technician yet. Activation makes a form available, and that is a different thing from anyone actually completing it. The gap between those two states is where most form projects quietly stall, and it is worth ten minutes of your time now rather than a fortnight of chasing paperwork later.\\n\\nStart by clearing up the thing most people expect to find and cannot. There is no way to link a form to a job description or a job type so that it lands on the right jobs by itself. That connection does not exist in Commusoft, and looking for it is the single most common reason people contact support about custom forms."},
+    {type:"section", heading:"Where a form is added", body:"A custom form is added from a job, and there are two places you can do it. A technician adds one from the job on their phone, and an office user adds one from the job on the web. Those are the only two, and every active form is available in both.\\n\\nOn mobile, Luke opens the appointment, taps Menu, selects Certificates, and taps the plus button to pick the Solar PV Annual Service Report from the list of active forms. On the web, the same forms are reachable from the job record, which matters when a form needs starting or adding from the office rather than from site. Nothing you configure changes this. Once a form is active, it is available on every job."},
+    {type:"section", heading:"On-site tasks: making sure it actually gets done", body:"If every active form is already available, the problem is not access. It is memory. Nothing so far obliges Luke to open that form, and nothing tells you when he has not.\\n\\nThat is what an on-site task is for. It does not deliver the form and it does not create anything. It is a list of tasks shown on the job, flagging what needs doing before leaving site, and one of those tasks can point at a custom form. Take it a step further and the task can be made required.\\n\\nThe part that surprises people is where this lives. On-site tasks are nowhere near your forms. They sit inside job report workflow templates, under Settings and then Job. Commusoft offers three kinds: a general task for instructions such as tidying the site, a photo task for images you need captured, and a Form task, which points at one of your custom forms."},
+    {type:"reflection", question:"Where do you configure an on-site task that requires a custom form to be completed?", options:["In the custom form itself, under Settings then Forms", "In the job description template for that job type", "In a job report workflow template, under Settings then Job", "On the individual job, at the point it is booked"], correct:"In a job report workflow template, under Settings then Job", feedback:"On-site tasks live in job report workflow templates, reached through Settings and then Job. This catches people out because it sits a long way from the form settings where the form was built. There is no way to attach a form from the form's own screen, and no mechanism for linking a form to a job type or job description."},
+    {type:"section", heading:"Adding the Form task", body:"Open Settings, choose Job, and click View on job report workflow templates. Open the template that covers your solar maintenance work, go to Step 2, on-site tasks, and choose add new on-site task. Set the type of task to Form, and your active forms appear in the Forms dropdown, which is why the form had to be activated first.\\n\\nChoose the Solar PV Annual Service Report, then decide how it relates to assets. You can set it as a standalone requirement, once per asset, or as a single form covering every asset on the visit. For an annual service across a multi-panel installation, one form covering all assets keeps Luke's paperwork proportionate to the visit. Save the task, continue through the remaining steps, and the template is ready."},
+    {type:"section", heading:"The step that is not there", body:"Here is where a good many people stop and contact support. You open your workflow template, and Step 2 does not exist. The editor moves straight past on-site tasks to the mobile setup, and there is no way to add anything.\\n\\nNothing has gone wrong. Step 2 only appears while a workflow template is in draft. Once a template has been activated it is locked to changes of this kind, and the editor skips the step entirely rather than telling you why. The way through is to clone the template, type Clone to confirm, then open the new draft copy, where Step 2 is waiting. Add your Form task there, work through the remaining steps, and activate the clone in place of the original."},
+    {type:"reflection", question:"You open an active job report workflow template to add a Form task, and Step 2 is missing. What is happening?", options:["The template is corrupted and needs rebuilding from scratch", "Your custom form is still in draft, so no tasks can be added", "Step 2 only appears on draft templates, so the active template must be cloned first", "On-site tasks require an additional Commusoft module"], correct:"Step 2 only appears on draft templates, so the active template must be cloned first", feedback:"An active template hides Step 2 rather than showing it as unavailable, which makes it look like the feature is missing. Clone the template, add the Form task to the draft copy, then activate the clone. Nothing is wrong with either the template or the form."},
+    {type:"section", heading:"Which forms need a task", body:"Deciding which forms get an on-site task is a business judgement rather than a technical one, and it comes down to a single question: is it acceptable for this form to be missed?\\n\\nAnything carrying a compliance obligation belongs in a task. A gas safety record, an electrical installation certificate, a commissioning checklist that a warranty depends on: these are the documents whose absence costs you money, and leaving them to memory is a risk you can remove in five minutes. Forms that are useful but occasional, such as a general observation report, need nothing at all. They sit in the Certificates list on every job, ready for whoever wants them."},
+    {type:"section", heading:"What Luke sees", body:"Once the cloned template is active, the difference shows up on the next job of that type. Luke opens his appointment and the on-site task is there on the job screen, listed with anything else he has been asked to do before leaving. He taps it, the Solar PV Annual Service Report opens, and he works through it page by page.\\n\\nThe baton then passes from Luke in the field to Emma in the office, where the completed certificate arrives on the job record ready to send to the customer. That side of the handover is covered in Managing forms on jobs, in the office staff path."}
+  ],
+  openItems: "1. [OPEN — confirm the exact wording of the asset-linking options on the Form task. The Help Centre describes them as a standalone requirement, per asset, or a single form covering all assets, but the on-screen labels have not been verified against the product.] 2. [OPEN — confirm whether the Certificates menu item on mobile reads Certificates or Certificates / Forms. Both appear in existing content and the label may differ between iOS and Android.] 3. [OPEN — confirm the web path for adding a form to a job. Verified that adding from the web is one of the two ways, but the exact navigation on the job record has not been checked against the product and the script currently describes it only in general terms.] 4. [OPEN — the previous version of this walkthrough, filed as C2, taught that forms are linked to job description templates and appear automatically on jobs of that type. That mechanism does not exist. The old file must be retired rather than left alongside this one, and the same error runs through C1.]"
 };
-
 COURSES['reed-script-l3-forms-c3'] = {
   contentType: "Walkthrough",
   pathLabel: "L6 Custom Forms",
@@ -8838,7 +8816,7 @@ COURSES['reed-script-l3-forms-c3'] = {
     {type:"section", heading:"Saving as a draft and submitting the completed form", body:"If Luke needs to pause before completing the form — perhaps the customer is not on site yet for the signature, or he needs to check a reading before confirming it — he taps the back arrow through the form pages until the option to Save draft and close appears. The draft syncs when connectivity allows and remains visible in the Certificates / Forms list as a draft for him to return to. Saving a draft does not submit the form to the office, so Emma will not see it as a completed record until Luke finalises it.\\n\\nWhen the form is fully complete, Luke taps Save to finalise. The form status changes from draft to completed, and it queues for synchronisation. When the device connects — either on the customer\\'s WiFi or once Luke is back in mobile coverage — the completed form syncs to the web app automatically. Luke sees the status update to Completed on his device, confirming the record has reached the server. The baton now passes from Luke on site to Emma in the office, where the completed form becomes the foundation of the customer\\'s service record."},
     {type:"section", heading:"Emma's view: finding and reviewing the submitted form", body:"Emma is in the office when the Solar PV Annual Service Report syncs through. She opens the job record for Luke's solar maintenance visit, navigates to the Certificates tab, and the completed form is listed there alongside the form number, the date and time it was submitted, and a note of whether it has been sent to the customer yet. She clicks to open the form and reviews it against the job record — checking that the readings are consistent with the system size recorded on the customer account, that both signatures are present, and that the remedial works field has been answered. The Certificates tab is where all of Emma's post-visit review work happens. Both custom forms and any other compliance certificates submitted on the job appear here, identified by type so she can distinguish between them at a glance. For each form, she can see who created it, when it was submitted, and whether it has been sent to the customer — a piece of tracking information that helps her work through her post-visit checklist without having to ask engineers or check emails to confirm what has been sent. Emma opens the job record after Luke's visit and sees the Solar PV Annual Service Report listed in the Certificates tab with a Completed status. What can Emma do from this tab? *Feedback: From the Certificates tab, Emma can view, send, or delete completed forms. Editing a submitted form is possible from the web app, but it is not done from within the tab list — it requires opening the form and using the edit function. Engineers cannot edit a completed form on mobile after it has been saved; corrections are handled by office web users when genuinely needed.*"},
     {type:"section", heading:"Downloading, sending, and handling incomplete forms", body:"When Emma is satisfied that the Solar PV Annual Service Report is accurate and complete, she sends it to the customer. She hovers over the form row in the Certificates tab to reveal the action buttons — she selects the option to send the form, and Commusoft generates a PDF and emails it to the customer address recorded on the job. The sent date is logged against the form record automatically, so Emma can confirm at any point that the customer received their copy. If the form is not complete — a required field was missed, or a signature is absent because the customer was not on site — Emma has two options. For a minor correction where the data is otherwise solid, she can edit the form from the web app, fill the missing field, and send. For a more significant gap that requires the engineer's input, she can contact Luke and, if the job is still open, arrange for the additional information to be captured before the form is finalised. [OPEN — confirm the exact web app edit path for completed custom forms — the HC notes that forms submitted on mobile can be edited by a web user, but the specific navigation path within the job record to access the edit function is not documented in the articles reviewed; this should be verified against a live demo environment before recording] The customer always receives a complete, accurate record — the form design and the review process work together to make that the standard outcome, not the exception."},
-    {type:"section", heading:"Summary", body:"The custom forms workflow is now complete from end to end. Luke found the form automatically on his assigned job, worked through each field type on mobile, captured photos and signatures, and submitted the record. Emma reviewed it in the Certificates tab, confirmed it was accurate, and sent the PDF to the customer. Every step of that journey was set in motion by the configuration work in Walkthroughs 1 and 2 — the form builder, the categories, the job description links, and the activation rules. The Challenge that follows brings the full workflow together in a single scenario, testing the decisions at each handover point from admin configuration through to customer delivery. 1. [OPEN — confirm whether the photo field in custom forms supports up to 3 photos per field when completed via the mobile app; the form builder documentation states 3 photos per field but mobile app behaviour should be verified] 2. [OPEN — confirm whether the customer signature field captures a timestamp automatically alongside the signature, or whether only the engineer signature includes a timestamp; assumed both capture timestamps based on the Signature field description] 3. [OPEN — confirm the exact web app navigation path for editing a completed custom form submitted via mobile; HC confirms web editing is possible but does not document the path] 4. [OPEN — confirm whether \"Save draft and close\" wording is accurate for the current mobile app version or whether the label differs; sourced from HC article on Custom Forms in the Mobile App but app labels can change between versions]"},
+    {type:"section", heading:"Summary", body:"The custom forms workflow is now complete from end to end. Luke found the form in the Certificates list on his assigned job, worked through each field type on mobile, captured photos and signatures, and submitted the record. Emma reviewed it in the Certificates tab, confirmed it was accurate, and sent the PDF to the customer. Every step of that journey was set in motion by the configuration work in Walkthroughs 1 and 2 — the form builder, the categories, the Word document, and the activation rules. The Challenge that follows brings the full workflow together in a single scenario, testing the decisions at each handover point from admin configuration through to customer delivery. 1. [OPEN — confirm whether the photo field in custom forms supports up to 3 photos per field when completed via the mobile app; the form builder documentation states 3 photos per field but mobile app behaviour should be verified] 2. [OPEN — confirm whether the customer signature field captures a timestamp automatically alongside the signature, or whether only the engineer signature includes a timestamp; assumed both capture timestamps based on the Signature field description] 3. [OPEN — confirm the exact web app navigation path for editing a completed custom form submitted via mobile; HC confirms web editing is possible but does not document the path] 4. [OPEN — confirm whether \"Save draft and close\" wording is accurate for the current mobile app version or whether the label differs; sourced from HC article on Custom Forms in the Mobile App but app labels can change between versions]"},
     
     
     {type:"reflection", label:"Knowledge check", question:"Emma opens the job record after Luke\\'s visit and sees the Solar PV Annual Service Report listed in the Certificates tab with a Completed status. What can Emma do from this tab?", options:["A. She can edit the form directly to correct any errors Luke made before sending it to the customer","B. She can view, send to the customer, or delete the form — but editing is only possible via the web app edit function, not from the tab itself","C. She can only view the form — all other actions require contacting Commusoft support","D. She can open the form and hand it back to Luke to complete any missing fields from the mobile app"], correct:"B", feedback:"From the Certificates tab, Emma can view, send, or delete completed forms. Editing a submitted form is possible from the web app, but it is not done from within the tab list — it requires opening the form and using the edit function. Engineers cannot edit a completed form on mobile after it has been saved; corrections are handled by office web users when genuinely needed.", feedbackAlt:"From the Certificates tab, Emma can view, send, or delete completed forms. Editing is possible from the web app but not from the tab list itself — it requires opening the form and using the edit function. She cannot hand the form back to Luke to edit on mobile, and actions do not require contacting support."}
@@ -8852,7 +8830,7 @@ COURSES['reed-script-l3-forms-challenge'] = {
   duration: "3 min",
   persona: "All roles",
   characters: "Sarah Mitchell (Managing Director, Owner/Manager); Luke Patterson (Senior Solar Technician, Senior engineer); Emma Clarke (Office Administrator, Office staff)",
-  scenario: "SunComfort has started offering battery storage installations. Sarah needs to create a Battery Storage Commissioning Record, link it to the Battery Storage Installation job description, and activate it. Luke completes the form on site. Emma reviews and sends it to the customer.",
+  scenario: "SunComfort has started offering battery storage installations. Sarah needs to create a Battery Storage Commissioning Record, activate it, and make sure it is completed on every installation. Luke completes the form on site. Emma reviews and sends it to the customer.",
   objectives: [
     "Apply the full custom forms workflow — from form creation through assignment, mobile completion, and office review — in a single connected scenario",
     "Make the correct decision at each handover point in the workflow",
@@ -8861,14 +8839,14 @@ COURSES['reed-script-l3-forms-challenge'] = {
   productionSetup: [
     "*Logged-in user: Sarah Mitchell, Managing Director, Owner/Manager. DRAFT, needs confirming before recording.",
     "*Customer record: None. This walkthrough is settings configuration rather than work on a customer record.",
-    "*Existing data: Whatever the scenario needs on screen: SunComfort has started offering battery storage installations. Sarah needs to create a Battery Storage Commissioning Record, link it to the Battery Storage Installation job description, and activate it. Luke completes the form on site. Emma reviews and sends it to the customer. DRAFT, needs confirming before recording.",
+    "*Existing data: Whatever the scenario needs on screen: SunComfort has started offering battery storage installations. Sarah needs to create a Battery Storage Commissioning Record, activate it, and make sure it is completed on every installation. Luke completes the form on site. Emma reviews and sends it to the customer. DRAFT, needs confirming before recording.",
     "*Assets required: None unless the script names one. DRAFT, needs confirming before recording.",
     "Drafted 2026-07-31 from this script's own scenario, because no Production Setup existed. Every line needs confirming against the recording account before use.*"
   ],
   buildBySection: [
     {section:"The situation", media:"Written text", note:"On-screen text only — set up the battery storage scenario and the missing commissioning form. Media was the ambiguous value Text; set to Written text 2026-07-30, confirm if this section is actually animated slides."},
     {section:"Decision 1 — Where does Sarah start?", media:"Screen recording + text", note:"Capture Settings > Forms > Custom forms with both routes (Add from marketplace / Add new form); present as a branching decision with on-screen text."},
-    {section:"Decision 2 — Linking the form", media:"Screen recording + text", note:"Capture the link-before-activate vs activate-first choice; show linking the Battery Storage Installation job description then Activate."},
+    {section:"Decision 2 — Making sure it actually gets completed", media:"Screen recording + text", note:"Capture the available-only vs on-site-task choice; show Step 2 missing on the active template, the clone, then adding the Form task."},
     {section:"Decision 3 — Luke on site", media:"Screen recording + text", note:"Mobile / iPad recording — required battery capacity field; show Save draft and close path as the correct branch."},
     {section:"Decision 4 — Emma in the office", media:"Screen recording + text", note:"Web app — missing customer signature on the Certificates tab; present the three response options."},
     {section:"Challenge complete", media:"Written text", note:"Recap text only — no recording needed."},
@@ -8876,7 +8854,7 @@ COURSES['reed-script-l3-forms-challenge'] = {
   ],
   productionNotes: [
     "This challenge spans three roles and two recording setups: web app for Sarah\\'s admin decisions and Emma\\'s office review, and a mobile / iPad capture for Luke\\'s on-site decision. Record the on-site beat on an actual device.",
-    "Have a Battery Storage Installation job description template already in place, with no Battery Storage Commissioning Record form existing yet at the start, and the Walkthrough 1 custom form categories present.",
+    "Have an active job report workflow template covering battery storage installations already in place, with no Battery Storage Commissioning Record form existing yet at the start, and the Walkthrough 1 custom form categories present.",
     "Have an existing SunComfort customer with a Battery Storage Installation job in progress assigned to Luke Patterson.",
     "Structure each decision as a branch: capture the correct path live and present the incorrect-path feedback as on-screen text rather than recording broken states.",
     "Decision 4 is a three-option decision (A send anyway, B edit and add a note, C ask Luke to return). Both B and C are framed as acceptable/strong by the script — C is the most thorough. Present them as graded responses rather than a single right/wrong, and confirm with the script writer how to score B vs C before final build. Flagged for Sara.",
@@ -8887,8 +8865,8 @@ COURSES['reed-script-l3-forms-challenge'] = {
     {type:"section", heading:"The situation", body:"SunComfort has won its first battery storage installations. The job type is set up, appointments are being booked, and Luke is scheduled on site next week. Sarah realises there is no commissioning form yet for battery storage — engineers are carrying out the job with no structured record of what was tested, what passed, and what the customer was handed over. She needs to fix this before Luke\\'s first site visit."},
     {type:"section", heading:"Decision 1 — Where does Sarah start?", body:"Sarah navigates to Settings, then Forms, then Custom forms. She needs to create a Battery Storage Commissioning Record. She has two options. Sarah searches the marketplace for battery storage commissioning. [OPEN — confirm whether a battery storage commissioning form is currently available in the Commusoft marketplace; if it is, the challenge should reference it by exact name; if not, Option A leads correctly to Option B as the fallback — this branch assumes the marketplace does not have an exact match and the learner should proceed to build from scratch] No exact match appears. Checking the marketplace before building from scratch is always the right first step — it takes thirty seconds and could save an hour of form building if the form already exists. Since no match is found, Sarah clicks Add new form to build the record she needs. *Feedback: Checking the marketplace first is good practice — there are over forty pre-built forms available and one of them may match your needs. When no match exists, building from scratch is the correct next step. The marketplace and the form builder are complementary tools, not alternatives.* Sarah clicks Add new form without checking the marketplace. The form builder opens and she can proceed. Skipping the marketplace check is not a critical error, but it is worth knowing that checking first takes less than a minute and could save significant configuration time if a pre-built form already exists. *Feedback: Building from scratch works, but checking the marketplace first is always worth the thirty seconds. If a pre-built form exists, you can import it, review it, and activate it in a fraction of the time it takes to build field by field. It is worth making the marketplace your first stop for any new form type.*"},
     {type:"reflection", label:"Knowledge check", question:"SunComfort needs a Battery Storage Commissioning Record that does not yet exist. What is the best first move?", options:["A. Build from scratch immediately without checking the marketplace, to save time","B. Check Add from marketplace first; if no exact match exists, build from scratch with Add new form","C. Wait until after Luke\\'s first visit so the form can be based on what he records","D. Ask Commusoft support to create the form on SunComfort\\'s behalf"], correct:"B", feedback:"Checking the marketplace first is good practice — there are over forty pre-built forms available and one of them may match your needs. When no match exists, building from scratch is the correct next step. The marketplace and the form builder are complementary tools, not alternatives.", feedbackAlt:"Check the marketplace first, then build from scratch if no match exists. The marketplace check takes thirty seconds and could save an hour of building if a pre-built form already fits. Building from scratch straight away still works, but skips a quick win — and waiting or outsourcing the build would leave the next job without a record."},
-    {type:"section", heading:"Decision 2 — Linking the form", body:"Sarah has built the Battery Storage Commissioning Record and is about to activate it. She needs to decide which job description to link it to before activating. The form goes live without a job description link. Engineers assigned to battery storage installation jobs will not see the form on their mobile devices because there is no connection between the form and the job type. Sarah will need to open the form, add the job description link, and confirm the change takes effect. Activating without linking is not a breaking error, but it creates a gap: any jobs booked between activation and the moment the link is added will not have the form available to the engineer. *Feedback: Linking before activating is the cleaner workflow. Once the link is in place and the form is activated, every new job of that type automatically carries the form — no gap, no manual follow-up. Linking and activating in a single step is the recommended approach.* Sarah links the form to the Battery Storage Installation job description, then clicks Activate and types Activate to confirm. From this point forward, every battery storage installation job carries the Battery Storage Commissioning Record automatically. Luke's appointment next week already has the form waiting in his job record. *Feedback: Correct. Linking before activating means the form is connected and ready the moment it goes live. There is no window where the job type exists without a form, and no risk that an early job slips through without the record being completed.*"},
-    {type:"reflection", label:"Knowledge check", question:"Sarah has built the Battery Storage Commissioning Record. What is the cleaner way to make it live so it is ready for Luke\\'s job next week?", options:["A. Activate the form first, then add the job description link afterwards","B. Link the form to the Battery Storage Installation job description, then activate it","C. Activate the form and leave it unlinked — engineers can attach it manually on the job","D. Link the form to every job description so it never gets missed"], correct:"B", feedback:"Linking before activating means the form is connected and ready the moment it goes live. There is no window where the job type exists without a form, and no risk that an early job slips through without the record being completed.", feedbackAlt:"Link before activating. That way the form is connected and ready the moment it goes live, with no gap where a battery storage job is booked but the form is not yet attached. Activating first leaves that gap, leaving it unlinked means engineers never see it, and linking it to every job type would attach it where it does not belong."},
+    {type:"section", heading:"Decision 2 — Making sure it actually gets completed", body:"Sarah has built the Battery Storage Commissioning Record and activated it. Battery storage is notifiable work, so this record has to be completed on every installation, not whenever a technician remembers. She needs to decide how to make that happen. The form is genuinely available. Any active form shows in the Certificates list on every job, on mobile and on the web, and Luke can add it himself in a couple of taps. Nothing further is required to make it reachable. *Feedback: Available is not the same as done. Nothing prompts Luke to open it and nothing tells Sarah when he has not, which is exactly the gap that leaves a notifiable installation without its record. Activation makes a form usable. It does not make it happen.* Sarah opens Settings, then Job, then job report workflow templates, and finds the template covering battery storage installations. She goes to Step 2, on-site tasks, adds a new on-site task, sets the type of task to Form, and picks the Battery Storage Commissioning Record from the Forms dropdown. Luke will now see it listed on the job screen as something to deal with before he leaves. *Feedback: Correct. An on-site task does not deliver the form, since the form was already available. What it does is prompt for it, and a task can be made required. For anything carrying a compliance obligation, that is the difference between a record you hope was completed and one you know was.*"},
+    {type:"reflection", label:"Knowledge check", question:"Sarah has built the Battery Storage Commissioning Record. What is the cleaner way to make it live so it is ready for Luke\\'s job next week?", options:["A. Activate it and rely on technicians finding it in the Certificates list","B. Add it as a Form task in the job report workflow template so it is prompted for on the job","C. Email the form to each technician before their appointment","D. Create a separate form for every battery storage job as it is booked"], correct:"B", feedback:"Linking before activating means the form is connected and ready the moment it goes live. There is no window where the job type exists without a form, and no risk that an early job slips through without the record being completed.", feedbackAlt:"Link before activating. That way the form is connected and ready the moment it goes live, with no gap where a battery storage job is booked but the form is not yet attached. Activating first leaves that gap, leaving it unlinked means engineers never see it, and linking it to every job type would attach it where it does not belong."},
     {type:"section", heading:"Decision 3 — Luke on site", body:"Luke arrives at the battery storage installation. He opens the Commusoft mobile app, finds his job, and navigates to Menu, then Certificates / Forms. The Battery Storage Commissioning Record is listed. He works through the form and reaches the battery capacity field, which uses a number field. He is not certain of the exact figure — it is marked as a required field. The form cannot be saved as completed with a required field empty. The system will prevent Luke from finalising the form until all required fields are answered. Required fields are marked during the form build stage to ensure that the completed record always contains the minimum data the business needs — a partially completed compliance record is not a compliance record. *Feedback: Required fields are there for a reason — they define the minimum data the business needs from every submission. The form will not save as complete until all required fields are answered. If Luke is not certain of a value, saving as a draft and returning to it is always the right move.* Luke taps back through the pages until the Save draft and close option appears. He steps outside to check the battery specification on the installation documentation, confirms the capacity figure, returns to the form, enters the value, works through the remaining fields, and saves to finalise. The form status changes to Completed and syncs to the web app when the device connects. *Feedback: Correct. Saving as a draft preserves everything Luke has entered and lets him return to the form once he has the missing information. It is far better to take the time on site to get the record right than to submit an incomplete form and create extra work for the office afterwards.*"},
     {type:"reflection", label:"Knowledge check", question:"Luke reaches the required battery capacity field and is not certain of the exact figure. What should he do?", options:["A. Leave the required field empty and save the form as complete","B. Enter an approximate value so the form can be finalised quickly","C. Save the form as a draft, confirm the specification on site, then return and complete the field","D. Submit the form and ask the office to fill in the capacity later"], correct:"C", feedback:"Saving as a draft preserves everything Luke has entered and lets him return to the form once he has the missing information. The form will not save as complete with a required field empty, and it is far better to take the time on site to get the record right than to submit an incomplete or approximate figure.", feedbackAlt:"Save as a draft, confirm the specification on site, then return and complete the field. The form will not save as complete with the required field empty, so option A is impossible; entering an approximate value or leaving it for the office both risk an inaccurate compliance record. Saving as a draft preserves Luke\\'s work until he has the correct figure."},
     {type:"section", heading:"Decision 4 — Emma in the office", body:"The Battery Storage Commissioning Record syncs and Emma sees it on the Certificates tab of the job record. She opens it, reviews it, and notices that the customer signature field is empty — Luke completed his engineer signature but the customer was not on site to sign at the time of submission. Emma needs to decide what to do. The form goes to the customer unsigned. Depending on the nature of the job, an unsigned commissioning record could be a compliance risk — it provides no confirmation that the customer was present for the handover or agreed to the system status recorded. For a battery storage installation, which involves a significant electrical system in the customer's property, the absence of a customer sign-off is worth addressing before the form is sent. *Feedback: Sending an incomplete compliance record to the customer is not the recommended approach, particularly for installation jobs where the customer signature serves as a handover confirmation. One of the office's key responsibilities is reviewing completed forms before sending — catching this gap is exactly what that review is for.* Emma opens the form from the web app and uses the edit function to add a note to the customer signature section explaining that the customer was not present at the time of completion and that a follow-up signature will be obtained. She saves the updated form and sends the PDF. This is a pragmatic approach that makes the absence transparent rather than leaving a blank field with no explanation. *Feedback: A good approach. Editing the form to document the circumstance is better than sending a blank field with no context. The office has the ability to edit submitted forms from the web app precisely for situations like this — where the engineer completed everything within their control but a genuine constraint prevented full completion.* Emma contacts Luke and, since the job is still open, arranges for him to visit the customer briefly to obtain the signature. Once Luke has it, Emma reviews the updated form in the Certificates tab and sends the completed PDF to the customer. This is the most thorough option — the form is fully complete before it is sent, and the customer receives the record they should have received on the day of installation. *Feedback: Correct. Where it is practical to obtain a missing signature, doing so produces the most complete and defensible compliance record. The office review process exists to catch exactly these situations before the form reaches the customer. Well done.*"},
@@ -27731,301 +27709,298 @@ Every step in this chain matters. The reorder trigger fires when stock drops bel
 `;
 INBOX_FILES["reed-script-l3-forms-c1"] = `# Build your first custom form
 
-**Series:** Custom Forms | **Walkthrough:** 1 of 3 | **Duration:** 6 min | **Audience:** Decision makers / Admins
+**Series:** Custom Forms | **Walkthrough:** 1 of 4 | **Duration:** 6 min | **Audience:** Decision makers
+**Voice:** Archer (Clueso AI voiceover)
+**Content type:** Walkthrough
 
 ---
 
 **Learning objectives**
 
-1. Explain what custom forms are and how they fit into the field service workflow
-2. Create and organise custom form categories
-3. Add a pre-built form from the Commusoft marketplace and link it to the correct job description
-4. Build a custom form from scratch using the form builder, selecting and configuring the appropriate field types
-5. Activate a form and understand the rules that apply once a form is live
+1. Check the marketplace before building, and import a pre-built form if one fits
+2. Distinguish custom form categories from folders, and explain which one your technicians see
+3. Create a form and complete its basic details
+4. Explain why a form cannot be activated until its Word document exists
+5. Test a finished form on iOS, Android and the web before letting your team use it
 
-**Target audience:** Business owners, managing directors, and operations managers at field service companies who are responsible for configuring compliance and reporting workflows. SunComfort Systems is the pedagogical vehicle. The learner is configuring their own company's Commusoft account to capture structured field data consistently across all job types.
+**Target persona:** Decision makers
 
-**Assumed starting point:** Commusoft account active with Owner/Manager access. Learner has a working understanding of the job lifecycle and job description templates. The L2 Job Setup series — specifically the walkthrough on job types, categories, and descriptions — is recommended prior knowledge.
+**SunComfort characters:** Sarah Mitchell (Managing Director, Owner/Manager)
 
-**Main objective beyond the learning objectives:** A field service business that relies on verbal handovers and paper sign-offs is a business with gaps it cannot see. This walkthrough equips decision makers to close those gaps permanently by building digital forms that are attached to the right jobs, completed on site, and stored automatically against the job record. Once your forms are live and linked, your team stops carrying clipboards and starts producing consistent, professional documentation for every visit.
+**Scenario:** SunComfort's solar maintenance visits are still being recorded on paper, so Sarah sets up the forms library and creates the Solar PV Annual Service Report that will replace it.
 
----
+**Estimated length:** 6 minutes
 
-**Characters:** Sarah Mitchell (Managing Director, Owner/Manager), Emma Clarke (Office Administrator, Office staff)
+**Target audience:** Business owners, managing directors and operations managers at field service companies who are moving compliance paperwork off paper. They hold Owner/Manager access and are setting up their own company's forms library for the first time. SunComfort Systems is the pedagogical vehicle, not the audience.
 
-**Scenario:** Sarah builds SunComfort's custom forms library — adding marketplace forms for standard commissioning checklists and building a bespoke Solar PV Annual Service Report from scratch — so that every engineer visit produces a properly structured, customer-ready document.
+**Assumed starting point:** Commusoft account active with Owner/Manager access, on a plan that includes custom forms. No custom forms or categories configured yet. The learner understands the job lifecycle.
 
----
-
-**Production setup**
-
-- **Logged-in user:** Sarah Mitchell — Managing Director — Owner/Manager
-- **Customer record:** None required for settings configuration
-- **Existing data:** Job description templates already configured for Solar Maintenance, Heat Pump Installation, Solar Installation, Generator Service / Maintenance, and Heat Pump Service. No custom forms or custom form categories yet configured. Settings path accessible at Profile icon > Settings > Forms.
-- **Assets required:** None
-
----
+**Main objective beyond the learning objectives:** Most businesses build their first form twice, because they start from a blank builder without checking what already exists and without knowing the document has to come first. Getting the order right turns a fortnight of back and forth into an afternoon.
 
 ---
 
 ## Production Setup
 
-1. **Logged-in user:** Sarah Mitchell, Managing Director, Owner/Manager. DRAFT, needs confirming before recording.
-2. **Customer record:** None. This walkthrough is settings configuration rather than work on a customer record.
-3. **Existing data:** Whatever the scenario needs on screen: Sarah builds SunComfort's custom forms library — adding marketplace forms for standard commissioning checklists and building a bespoke Solar PV Annual Service Report from scratch — so that every engineer visit produces a properly structured, customer-ready document. DRAFT, needs confirming before recording.
-4. **Assets required:** None unless the script names one. DRAFT, needs confirming before recording.
-
-*Drafted 2026-07-31 from this script's own scenario, because no Production Setup existed. Every line needs confirming against the recording account before use.*
-
-## Why custom forms change the field service game
-
-Every time one of SunComfort's engineers completes a commissioning job, a maintenance visit, or a safety inspection, they are generating information that has real value: to the customer, to the business, and in some cases to the regulator. A solar commissioning checklist submitted to the MCS. An electrical installation certificate required for insurance. A heat pump service record that protects the manufacturer warranty. These are not optional extras — they are the evidence trail that underpins SunComfort's professional reputation.
-
-Custom forms in Commusoft are how you capture that evidence digitally, consistently, and without paper. Engineers complete them on the mobile app during the job visit, and the completed form is saved automatically against the job record where the office can access it immediately, review it, and send it to the customer if needed. Before building anything, it is worth understanding what the system gives you: the ability to use pre-built industry forms from the Commusoft marketplace, or to build entirely bespoke forms using a drag-and-drop form builder, or both.
+1. **Logged-in user:** Sarah Mitchell, Managing Director, Owner/Manager.
+2. **Customer record:** None. This walkthrough is settings configuration.
+3. **Existing data:** No custom forms and no custom form categories configured. The account has Solar and Renewables among its selected industries so the category list is not empty. The marketplace is reachable and populated. One exported form zip file on the recording machine for the import demonstration.
+4. **Assets required:** One custom form zip file for the import step.
 
 ---
 
-**Reflection**
+## Look in the marketplace before you build anything
 
-Does your team currently rely on paper forms, PDFs, or verbal handovers to capture compliance and service documentation on site?
+Before opening the builder, check whether the form already exists. Commusoft ships a marketplace of pre-built forms across the trades, covering gas, electrical, commercial catering, HVAC, oil and renewables, and a document you adapt is faster than a document you design.
+
+Open Settings, then Forms, then Custom forms, and choose add from marketplace. Preview the PDF of anything that looks close before committing to it. If it fits, add it, and you have a working configuration and a Word template to adjust rather than a blank page. Support's most common answer to "how do I build this form" is that a version of it is already there.
+
+---
+
+**Reflection prompt**
+
+Do you know whether a standard version of your most-used certificate already exists in the marketplace?
 
 - Yes
 - No
 
-*Feedback: Custom forms are designed precisely for this transition — moving your documentation from paper and email attachments to a structured, digital workflow that is tied directly to the job record. Whether you start with marketplace forms or build your own, the outcome is the same: every visit produces consistent, professional records automatically.*
+*Feedback: It costs a minute to look and can save a day. Marketplace forms are generic, so you will want to review the configuration and add your branding, but adapting one is considerably quicker than starting from nothing.*
 
 ---
 
-## Setting up categories first
+## Categories and folders are not the same thing
 
-Before building any forms, it pays to set up categories. Categories organise your forms into logical groups that make them easy to find — both for your office team in settings and for engineers browsing forms on the mobile app. Navigate to Settings, then select Forms from the left-hand menu, and choose Custom form categories. Click Add category to create the first group.
+Two organising tools sit in this area and they do different jobs, which is worth getting straight before creating anything.
 
-Sarah creates five categories that reflect SunComfort's service lines: Solar, Heat Pumps, Power and Generators, Electrical, and Handover and Compliance. She enters each name and clicks Save. With the categories in place, every form she builds or imports will slot into the right group from the outset, and as SunComfort's form library grows, engineers will always be able to find the relevant form within two taps on their device.
-
-## Navigating to custom forms
-
-With the categories ready, navigate to Settings, then Forms, and select Custom forms. This is your form library — the place where every form SunComfort uses lives, whether it came from the marketplace or was built in-house. At the moment it is empty, but by the end of this walkthrough, SunComfort will have a working library covering their main service types.
-
-You have two routes from here: Add from marketplace, which gives you access to over forty pre-built industry forms with one click, and Add new form, which opens the form builder so you can design a form from scratch. Sarah will use both today.
-
-## Adding a form from the marketplace
-
-Sarah's first priority is the Condensing Solar Commissioning Check List, which SunComfort's solar engineers need for every solar installation job. Click Add from marketplace to open the marketplace browser. You can search by name or browse by category. Sarah types Condensing Solar in the search bar and the form appears immediately. She clicks View PDF preview first, which shows her exactly how the completed form will look when it is generated as a PDF for the customer — a useful check before committing.
-
-Satisfied that the layout matches SunComfort's needs, she clicks Add custom form. The form now appears in her library marked as a draft. She opens it, assigns it to the Solar category, and links it to the Solar Installation job description so it appears automatically on every solar installation job. She then clicks Activate, types Activate when prompted to confirm, and the form is live. The moment any solar installation job is scheduled, the form will appear on the assigned engineer's mobile device ready to be completed.
+Categories group your forms for the person completing them. When a technician opens the forms list on their phone, that list is arranged by category, so this is the one that affects work on site. The categories available come from the industries selected on your Commusoft account, so you see the ones relevant to your trades rather than all of them. Folders are web-side only. They tidy the settings screen for whoever maintains the library, and a technician never sees them.
 
 ---
 
-**Reflection question**
+## Creating the form
 
-After Sarah activates the Condensing Solar Commissioning Check List and links it to the Solar Installation job description, what happens the next time a solar installation job is scheduled and assigned to an engineer?
+Choose add new form and start with the basic details. The template name is what technicians pick from on site, so make it unambiguous: Solar PV Annual Service Report tells someone exactly when to reach for it in a way that Service Form does not.
 
-- The engineer must go to Settings and download the form manually before each job
-- The form appears automatically on the engineer's mobile as part of the job — no action required ✓
-- The form is emailed to the customer at the point of job creation
-- Emma must attach the form to the job manually from the web app before it becomes visible on mobile
-
-*Feedback: Once a form is activated and linked to a job description, it appears automatically on the mobile app for any engineer assigned to a job of that type. There is no manual step required from the engineer or the office for the form to appear — the link between the form and the job description does the work.*
+The description gives your team context about what the form is for, and the category is the one your technicians will browse. Complete those three and continue. You now have a saved form with no fields and no document, which is the normal starting state.
 
 ---
 
-## Understanding the activation rule
+## Why you cannot activate it yet
 
-Before moving to the form builder, there is one rule worth knowing. Once a form is activated, its structure is locked — you cannot edit the fields directly without first cloning it. This protects the integrity of previously submitted data: if a field changes after engineers have already completed the form, the historical records become inconsistent and unreliable.
+Try to activate the form at this point and Commusoft will not let you. That is not a fault. A custom form is two halves: the configuration you build here, which decides what gets asked on site, and a Word document, which decides how the answers are laid out on the finished certificate. Without the document there is nowhere for the answers to go.
 
-The correct approach, when you need to make structural changes to a live form, is to clone it from the Actions menu. Cloning creates an editable draft that you can modify, activate as the new version, and replace the old one with. The original remains in your library preserving all historical submissions. Sarah makes a note of this now, because she knows SunComfort's forms will evolve as the business grows and the team's compliance needs sharpen.
-
-## Building a form from scratch — starting with basic details
-
-Now Sarah turns to a form the marketplace does not cover: SunComfort's Solar PV Annual Service Report. This is a bespoke record designed to MCS guidance for annual post-installation inspections, and it needs to capture very specific data including inverter diagnostics, string voltage readings, and generation performance against expected output. Click Add new form to open the builder.
-
-The first step is basic details. Sarah enters the form name — Solar PV Annual Service Report — types a brief description explaining the purpose and the MCS context, and assigns it to the Solar category she created earlier. She then links it to the Solar Maintenance job description from the job description dropdown, so it automatically appears on annual service visits. With these details saved, the form builder opens and Sarah is ready to add her fields.
-
-## Building the form — field types and structure
-
-The form builder presents a blank canvas with an Add field button. Each field type captures a different kind of information, and choosing the right type for each question makes the form both easier to complete on mobile and more consistent in its output. Sarah adds an Inspection date field using the date type, which gives the engineer a date picker on mobile rather than a free-text entry box. She adds an Engineer name field using the text type, keeping it short and clearly labelled.
-
-She then adds a number field for System size in kWp, a text field for Inverter make and model, and a dropdown field for Panel condition rated as Good, Fair, or Poor, which standardises the assessment across all engineers and makes office review straightforward. For the electrical test readings, she uses number fields for each string voltage measurement. She adds a checkbox field for Inverter error log reviewed, and a Yes/No dropdown for Remedial works recommended. At the bottom of the form, she adds two signature fields — one for the engineer and one for the customer — which capture the name, signature, and timestamp automatically when completed on mobile. Sarah reviews the form, confirms the field order makes sense for an engineer working through an inspection from top to bottom, and saves.
+The fields themselves are built in the form builder, which works the same way across every part of Commusoft that uses it and is covered separately in Using the form builder. The document comes next, in Walkthrough 2.
 
 ---
 
 **Reflection question**
 
-Sarah wants to ensure that the remedial works question on the Solar PV Annual Service Report produces a consistent, comparable answer across all engineers rather than a free-text description. Which field type should she use?
+You have created a form, completed the basic details, and built all your pages and fields. Activate is still unavailable. Why?
 
-- A text field with a character limit
-- A dropdown with Yes and No as the only options ✓
-- A number field
-- A checkbox field
+- The form needs approving by a Commusoft administrator first
+- No Word document has been uploaded yet, and a form cannot go live without one ✓
+- Custom forms can only be activated at the start of a billing period
+- The form has not been added to a job report workflow template
 
-*Feedback: A dropdown field with fixed options — Yes or No — is the right choice here. It constrains the answer to one of two values, which makes the data consistent and searchable. A free-text field would produce varied answers that are harder to act on and impossible to filter or report across multiple jobs.*
+*Feedback: A form is a configuration plus a Word document. Until the document has been created and uploaded there is nothing to generate the finished certificate from, so Commusoft keeps the form in draft.*
 
 ---
 
-## Activating the form
+## Sharing a form you already have
 
-With all fields added and the layout reviewed, Sarah is ready to make the Solar PV Annual Service Report live. Click Activate at the top of the form, type Activate when prompted to confirm, and the form is active. It is now linked to the Solar Maintenance job description, categorised under Solar, and ready to appear on every solar maintenance visit SunComfort's engineers carry out.
+If a form has been built elsewhere, in another Commusoft account or by a colleague, you can bring it in whole. An exported form arrives as a single zip file containing both the configuration and the Word document, and it is imported with the import form button.
 
-Sarah follows the same process to add the remaining marketplace forms she needs — the Air to Water Heat Pump Commissioning Checklist linked to Heat Pump Installation, the Plant Commissioning Service Record linked to Generator Installation, and the Electrical Installation Certificate linked to Solar Installation and Generator Installation. Each one takes under two minutes to import, categorise, link, and activate. SunComfort's form library is taking shape.
+Do not open or extract the zip. Each file inside is password protected during export, with a random password nobody has access to, and that is deliberate: it stops the two halves being separated. Select the zip exactly as it is. Once imported the form appears in your list as a draft, ready to review and activate.
 
-## Summary
+---
 
-SunComfort's custom forms library is now live. Sarah has created five categories that organise the library by service line, imported key compliance forms from the marketplace, built a bespoke Solar PV Annual Service Report with the correct field types for each data point, and activated every form against the right job description. In Walkthrough 2, we look at exactly how forms are assigned to job types in detail, how to control when forms appear, and what happens when your form library needs to evolve.
+## Test on every platform before your team uses it
+
+Once the document is uploaded and the form is active, test it before telling anyone it is ready. Test on iOS, on Android and on the web, because the platforms behave differently and a form that reads well on one can be awkward on another.
+
+This is not box ticking. A toggle with several options may be comfortable on one device and cramped on another, and finding that out now means changing it to a dropdown rather than hearing about it from a technician standing in a customer's loft. Run the form through on a test job, then look at the finished PDF and check the answers land where you expect.
+
+---
+
+## Keep a copy
+
+Once the form is working, download it and keep the copy somewhere safe. Downloading gives you the configuration and the Word document together in one zip.
+
+That copy is your undo. If someone edits the live form and the certificate stops generating properly, you can import the copy and be back where you started. Never make changes directly to an active form that is in daily use. In Walkthrough 2 you will build the Word document that makes this form usable.
+
+---
+
+## Build by section
+
+| Section | Media | Note |
+|---|---|---|
+| Look in the marketplace before you build anything | Screen recording | Web capture. Settings, Forms, Custom forms, add from marketplace. Show the industry filters, preview a PDF, add a form. |
+| Reflection prompt, marketplace | Expanding section | Reflection. |
+| Categories and folders are not the same thing | Written text + screenshot | Explains the difference. One screenshot showing the folder tree beside the category column so both are visible at once. |
+| Creating the form | Screen recording | Web capture. Add new form, template name, description, category dropdown, continue. |
+| Why you cannot activate it yet | Written text | Explains the two halves and points at Using the form builder and Walkthrough 2. No asset. |
+| Reflection question, why activate is unavailable | Expanding section | Knowledge check. |
+| Sharing a form you already have | Screen recording + gif | Web capture of import form and the file picker. Gif the point about selecting the zip without extracting it. |
+| Test on every platform before your team uses it | Screen recording | Web capture of a form completed on a test job, then the generated PDF. Show the same form on iOS and Android side by side if the recording setup allows. |
+| Keep a copy | Written text | Closing paragraph, the download-a-copy habit, and the handover to Walkthrough 2. |
 
 ---
 
 **Open items**
 
-1. [OPEN — confirm whether the Custom forms path is Profile icon > Settings > Forms > Custom forms or whether the navigation differs between UK and US account configurations; Settings document shows this path but it should be verified against a live demo environment]
-2. [OPEN — confirm whether the job description link is set within the form itself or from within the job description template; Settings document indicates it is set from within the form — confirm this is accurate before recording]
-3. [OPEN — confirm whether signature fields capture timestamp automatically on mobile, or whether the timestamp is recorded separately against the form submission; assumed automatic based on Commusoft digital forms feature description]
-4. [OPEN — confirm whether marketplace forms can be previewed as PDFs before adding, or whether the PDF preview is only available after the form has been added to the library; script assumes preview before adding based on the Settings document steps]
-
----
-
-**Open items block**
-
-1. [OPEN — confirm Custom forms navigation path for both UK and US accounts]
-2. [OPEN — confirm whether job description link is set within the form or within the job description template]
-3. [OPEN — confirm whether signature fields auto-capture timestamp on mobile submission]
-4. [OPEN — confirm whether PDF preview is available before or after adding a marketplace form]
+1. [OPEN — confirm the exact label of the marketplace button. Existing content says "Add from Marketplace" and the source video says "add from marketplace"; the on-screen casing has not been verified.]
+2. [OPEN — confirm whether the category list is genuinely filtered by the industries selected on the account, or whether all categories are always shown. The source video states it is filtered, but this has not been checked against a second account.]
+3. [OPEN — confirm whether a side-by-side iOS and Android capture is possible in the recording setup. If not, the platform testing section becomes written text with a single device capture.]
 `;
 INBOX_FILES["reed-script-l3-forms-c2"] = `# Assign forms and control when they appear
 
-**Series:** Custom Forms | **Walkthrough:** 2 of 3 | **Duration:** 5 min | **Audience:** Admins / Decision makers
+**Series:** Custom Forms | **Walkthrough:** 3 of 3 | **Duration:** 5 min | **Audience:** Decision makers
+**Voice:** Archer (Clueso AI voiceover)
+**Content type:** Walkthrough
 
 ---
 
 **Learning objectives**
 
-1. Explain how custom forms are linked to job description templates and why that link controls when forms appear on mobile
-2. Describe what triggers a form to appear on an engineer's device and what the engineer sees
-3. Clone an existing form to create an editable version while preserving the original's submission history
-4. Delete or replace a live form responsibly, understanding the effect on engineers in the field
-5. Identify the correct approach when a form needs updating after it has already been used
+1. Identify the two places a custom form can be added to a job: on mobile and on the web
+2. Explain that on-site tasks prompt a technician to complete a form rather than delivering it
+3. Configure a Form task inside a job report workflow template so the form is not left to memory
+4. Apply the clone workaround when a workflow template is already active
+5. Decide, for a given form, whether prompting is enough or the task should be required
 
-**Target audience:** Office administrators, managing directors, and operations managers at field service companies who are responsible for configuring and maintaining the forms library in Commusoft. SunComfort Systems is the pedagogical vehicle, not the audience. The learner manages their own company's form library and needs to understand not just how to build forms but how to keep them accurate and under control as the business grows.
+**Target persona:** Decision makers
 
-**Assumed starting point:** Learner has completed Walkthrough 1 of the Custom Forms series and has an active forms library with at least one form already built and activated. They have Owner/Manager access and a working understanding of job description templates.
+**SunComfort characters:** Sarah Mitchell (Managing Director, Owner/Manager), Luke Patterson (Senior Solar Technician, Senior engineer)
 
-**Main objective beyond the learning objectives:** A forms library that nobody maintains is a liability. This walkthrough gives admins the confidence to grow the library, correct mistakes, and retire outdated forms without breaking existing records or causing confusion on site. The practical outcome is a form library that is always clean, always current, and always connected to the right jobs — so engineers see exactly what they need, nothing they do not, and the office never has to chase a correction after the fact.
+**Scenario:** SunComfort's Solar PV Annual Service Report is built and active, but Sarah needs the compliance sections completed on every visit rather than whenever a technician remembers, so she makes it a required on-site task in the solar maintenance workflow.
 
----
+**Estimated length:** 5 minutes
 
-**Characters:** Sarah Mitchell (Managing Director, Owner/Manager)
+**Target audience:** Business owners, managing directors and operations managers at field service companies who have built a custom form and now need it completed reliably on site. They hold Owner/Manager access and are responsible for compliance paperwork getting done consistently rather than for doing it themselves. SunComfort Systems is the pedagogical vehicle, not the audience.
 
-**Scenario:** Sarah reviews SunComfort's growing forms library, checks that each form is correctly linked to the right job description, clones and replaces an outdated form, and sets the library up to stay manageable as the company's service lines expand.
+**Assumed starting point:** Walkthroughs 1 and 2 of the Custom Forms series complete. At least one custom form is built, has a Word document uploaded, and is active. A job report workflow template already exists for the relevant job type.
 
----
-
-**Production setup**
-
-- **Logged-in user:** Sarah Mitchell — Managing Director — Owner/Manager
-- **Customer record:** None required
-- **Existing data:** Custom forms library already configured from Walkthrough 1 — Solar PV Annual Service Report (active, linked to Solar Maintenance), Condensing Solar Commissioning Check List (active, linked to Solar Installation), Air to Water Heat Pump Commissioning Checklist (active, linked to Heat Pump Installation), Plant Commissioning Service Record (active, linked to Generator Installation), Electrical Installation Certificate (active, linked to Solar Installation and Generator Installation). Job description templates already in place for Solar Maintenance, Heat Pump Installation, Solar Installation, Generator Service / Maintenance, and Heat Pump Service. The Solar PV Annual Service Report should show at least two completed submissions so the clone and replace scenario has a credible history to protect.
-- **Assets required:** None
-
----
+**Main objective beyond the learning objectives:** Building a form is the part most businesses manage on their own. Getting it completed on every visit, without anyone in the office chasing it, is the part that quietly fails. Once you stop expecting the form to find the job by itself and start using on-site tasks to prompt for it, you stop discovering missing paperwork a week after the visit.
 
 ---
 
 ## Production Setup
 
-1. **Logged-in user:** Sarah Mitchell, Managing Director, Owner/Manager. DRAFT, needs confirming before recording.
-2. **Customer record:** None. This walkthrough is settings configuration rather than work on a customer record.
-3. **Existing data:** Whatever the scenario needs on screen: Sarah reviews SunComfort's growing forms library, checks that each form is correctly linked to the right job description, clones and replaces an outdated form, and sets the library up to stay manageable as the company's service lines expand. DRAFT, needs confirming before recording.
-4. **Assets required:** None unless the script names one. DRAFT, needs confirming before recording.
-
-*Drafted 2026-07-31 from this script's own scenario, because no Production Setup existed. Every line needs confirming against the recording account before use.*
-
-## How forms find their way to an engineer's phone
-
-In Walkthrough 1, Sarah built SunComfort's forms library and activated each form. But activating a form is only half the story. The moment a form is activated and linked to a job description, Commusoft creates a permanent connection between that form and every job of that type. When a job is scheduled and an engineer is assigned to it, the linked form appears automatically on that engineer's mobile device as part of the job record — no manual step from the office, no action required from the engineer before they arrive on site.
-
-This connection is the engine that makes the whole system work consistently. The right form always shows up on the right job because the rule is set at the job description level, not the job level. Sarah does not have to think about forms when she books a solar maintenance visit — the Solar PV Annual Service Report is already waiting for whichever engineer is dispatched, because the Solar Maintenance job description carries that instruction every time.
+1. **Logged-in user:** Sarah Mitchell, Managing Director, Owner/Manager.
+2. **Customer record:** None. This walkthrough is settings configuration.
+3. **Existing data:** Solar PV Annual Service Report built, Word document uploaded, status Active, in the Solar category. A second active form, Electrical Installation Certificate, so the Forms dropdown shows a genuine choice. One job report workflow template for solar maintenance in **Active** status, used to demonstrate the missing Step 2, and the same template cloned to draft during the walkthrough. One scheduled solar maintenance appointment assigned to Luke Patterson, for the mobile view at the close.
+4. **Assets required:** None.
 
 ---
 
-**Reflection**
+## Activating a form is only half the job
 
-Does your business currently have a process for making sure engineers receive the right paperwork before they arrive on site?
+You finished the last walkthrough with an active form and a Word document behind it. Nothing has reached a technician yet. Activation makes a form available, and that is a different thing from anyone actually completing it. The gap between those two states is where most form projects quietly stall, and it is worth ten minutes of your time now rather than a fortnight of chasing paperwork later.
 
-- Yes
-- No
-
-*Feedback: Whether your current process is paper-based, email-based, or informal, linking forms to job descriptions replaces all of it with a single rule that applies automatically. Once the link is in place, no one needs to remember to send the form — it is already there.*
+Start by clearing up the thing most people expect to find and cannot. There is no way to link a form to a job description or a job type so that it lands on the right jobs by itself. That connection does not exist in Commusoft, and looking for it is the single most common reason people contact support about custom forms.
 
 ---
 
-## What the engineer actually sees
+## Where a form is added
 
-Understanding what the engineer sees on their device helps you make better decisions about form design and library structure. When an engineer opens a job in the Commusoft mobile app, they navigate to the Menu and select Certificates / Forms. Any forms linked to that job type are listed there and available to open and complete. If a form has been started but not yet submitted, it appears as a draft that the engineer can return to and continue.
+A custom form is added from a job, and there are two places you can do it. A technician adds one from the job on their phone, and an office user adds one from the job on the web. Those are the only two, and every active form is available in both.
 
-The engineer taps the form, works through each page and field in sequence, and when all required fields are complete, saves it to finalise. Once saved, the form is marked as completed and syncs to the web app automatically, where it appears on the job's Certificates tab and becomes visible to the office immediately. The engineer cannot edit the form after saving — this is intentional and protects the integrity of the record. If a correction is genuinely needed after submission, that is handled from the web app by an office user, not by asking the engineer to redo the form on their device.
+On mobile, Luke opens the appointment, taps Menu, selects Certificates, and taps the plus button to pick the Solar PV Annual Service Report from the list of active forms. On the web, the same forms are reachable from the job record, which matters when a form needs starting or adding from the office rather than from site. Nothing you configure changes this. Once a form is active, it is available on every job.
 
 ---
 
-## Reviewing your library and keeping it connected
+## On-site tasks: making sure it actually gets done
 
-As SunComfort's services grow, so does the form library. It is good practice to review the library periodically to check that every active form is correctly linked to the right job description, that no form has slipped into draft or been inadvertently disconnected, and that the categories still reflect how the business is organised. Navigate to Settings, then Forms, then Custom forms to see the full library with each form's status, category, and linked job descriptions at a glance.
+If every active form is already available, the problem is not access. It is memory. Nothing so far obliges Luke to open that form, and nothing tells you when he has not.
 
-Sarah opens the library and works through each active form, confirming the job description links. She notices the Electrical Installation Certificate is currently linked only to Solar Installation, but it should also cover Generator Installation — a connection she missed when setting it up. She opens the form, adds Generator Installation to the linked job descriptions, and saves. [OPEN — confirm whether adding a new job description link to an already-active form requires reactivation, or whether the change takes effect immediately; assumed immediate based on Settings document wording but this should be verified against a live demo environment] The form is still active and its structure is unchanged, so existing submissions are unaffected — only the trigger rule has expanded.
+That is what an on-site task is for. It does not deliver the form and it does not create anything. It is a list of tasks shown on the job, flagging what needs doing before leaving site, and one of those tasks can point at a custom form. Take it a step further and the task can be made required.
+
+The part that surprises people is where this lives. On-site tasks are nowhere near your forms. They sit inside job report workflow templates, under Settings and then Job. Commusoft offers three kinds: a general task for instructions such as tidying the site, a photo task for images you need captured, and a Form task, which points at one of your custom forms.
 
 ---
 
 **Reflection question**
 
-Sarah wants to link the Electrical Installation Certificate to an additional job description without changing any of its fields. What is the correct approach?
+Where do you configure an on-site task that requires a custom form to be completed?
 
-- Clone the form, link the new job description to the cloned version, and activate it as a replacement
-- Open the active form, add the new job description link, and save — no cloning needed ✓
-- Delete the form and rebuild it from scratch with both job descriptions linked
-- Create a second copy of the form with a different name and link it to the second job description only
+- In the custom form itself, under Settings then Forms
+- In the job description template for that job type
+- In a job report workflow template, under Settings then Job ✓
+- On the individual job, at the point it is booked
 
-*Feedback: Adding a job description link does not change the form's structure, so cloning is not required. You can open the active form, update the job description links, and save — the form remains active and all existing submissions are preserved. Cloning is only necessary when you need to change the fields themselves.*
+*Feedback: On-site tasks live in job report workflow templates, reached through Settings and then Job. This catches people out because it sits a long way from the form settings where the form was built. There is no way to attach a form from the form's own screen, and no mechanism for linking a form to a job type or job description.*
 
 ---
 
-## When a form needs updating — the clone workflow
+## Adding the Form task
 
-This is the situation that catches businesses out. A form has been active for three months, engineers have submitted it on fifteen jobs, and Sarah realises that the Solar PV Annual Service Report is missing a field for recording the monitoring system reference number — something the office now needs for warranty registration. She cannot edit the active form directly. The rule exists to protect those fifteen historical submissions: changing a field retroactively would make the records inconsistent and potentially invalidate them for compliance purposes.
+Open Settings, choose Job, and click View on job report workflow templates. Open the template that covers your solar maintenance work, go to Step 2, on-site tasks, and choose add new on-site task. Set the type of task to Form, and your active forms appear in the Forms dropdown, which is why the form had to be activated first.
 
-The correct approach is to clone the form. From the Actions menu on the active form, Sarah clicks Clone. Commusoft creates an exact duplicate in draft status, leaving the original untouched. Sarah renames the original to Solar PV Annual Service Report v1 so it is clearly marked as the previous version. She opens the cloned draft, renames it Solar PV Annual Service Report, adds the Monitoring system reference number field in the correct position, reviews the full field order, and activates the new version. It is now live and linked to the Solar Maintenance job description. The v1 record remains in the library as a read-only archive — all fifteen historical submissions are intact and accessible. From the next job onwards, engineers see the updated form automatically.
+Choose the Solar PV Annual Service Report, then decide how it relates to assets. You can set it as a standalone requirement, once per asset, or as a single form covering every asset on the visit. For an annual service across a multi-panel installation, one form covering all assets keeps Luke's paperwork proportionate to the visit. Save the task, continue through the remaining steps, and the template is ready.
+
+---
+
+## The step that is not there
+
+Here is where a good many people stop and contact support. You open your workflow template, and Step 2 does not exist. The editor moves straight past on-site tasks to the mobile setup, and there is no way to add anything.
+
+Nothing has gone wrong. Step 2 only appears while a workflow template is in draft. Once a template has been activated it is locked to changes of this kind, and the editor skips the step entirely rather than telling you why. The way through is to clone the template, type Clone to confirm, then open the new draft copy, where Step 2 is waiting. Add your Form task there, work through the remaining steps, and activate the clone in place of the original.
 
 ---
 
 **Reflection question**
 
-An active form has been submitted on twelve jobs over the past two months. Sarah needs to add two new fields to it. What must she do before making any changes?
+You open an active job report workflow template to add a Form task, and Step 2 is missing. What is happening?
 
-- Edit the form directly in settings — active forms can be modified without consequence
-- Clone the form to create an editable draft, then make the changes and activate the new version ✓
-- Delete the form, rebuild it with the new fields, and activate the new version
-- Archive the form and start over with a new form name
+- The template is corrupted and needs rebuilding from scratch
+- Your custom form is still in draft, so no tasks can be added
+- Step 2 only appears on draft templates, so the active template must be cloned first ✓
+- On-site tasks require an additional Commusoft module
 
-*Feedback: Active forms cannot be edited directly because doing so would make the fields inconsistent with historical submissions. Cloning creates a draft copy that you can modify and activate, while the original remains in the library to preserve the submission history of every job it was used on. This is the version control method Commusoft recommends for all structural changes to live forms.*
-
----
-
-## Deleting a form from the library
-
-There are situations where a form is no longer needed and should be removed from the library entirely — perhaps a job type has been discontinued, or a marketplace form has been superseded by a more current version. Before deleting, it is worth understanding the effect. Deleting an active form removes it from use immediately: engineers will no longer see it on their mobile devices, and it will not appear on any new jobs of the linked type. Completed submissions that have already synced are retained on the job records where they were submitted and are not lost.
-
-To delete a form, open it from the library, navigate to the Actions menu, and select Delete. Commusoft will ask you to confirm. If the form has active submissions, you may see a warning — read it carefully before proceeding. In practice, deletion is appropriate for draft forms that were never activated, or for retired forms where the clone-and-replace workflow has already moved engineers to the updated version. For any form that has a submission history, consider leaving it in the library under a versioned name rather than deleting it outright, so that historical job records remain traceable. [OPEN — confirm whether Commusoft prevents deletion of forms with existing submissions, or whether deletion is permitted with a warning; the Help Centre states active forms are removed from use upon deletion but does not clarify whether the system blocks or warns for forms with submission history]
+*Feedback: An active template hides Step 2 rather than showing it as unavailable, which makes it look like the feature is missing. Clone the template, add the Form task to the draft copy, then activate the clone. Nothing is wrong with either the template or the form.*
 
 ---
 
-## Summary
+## Which forms need a task
 
-The link between a form and a job description is the rule that makes your library work in the field. When that connection is correctly set, engineers always see the right form on the right job without any manual intervention from the office. When the library needs to grow or change, the clone workflow is the safe path: preserve the history, update the form, and activate the new version. In Walkthrough 3, the baton passes to the field — Luke will show you what it looks like to receive and complete one of these forms on site, and Emma will walk through what happens in the office once the submission comes in.
+Deciding which forms get an on-site task is a business judgement rather than a technical one, and it comes down to a single question: is it acceptable for this form to be missed?
+
+Anything carrying a compliance obligation belongs in a task. A gas safety record, an electrical installation certificate, a commissioning checklist that a warranty depends on: these are the documents whose absence costs you money, and leaving them to memory is a risk you can remove in five minutes. Forms that are useful but occasional, such as a general observation report, need nothing at all. They sit in the Certificates list on every job, ready for whoever wants them.
+
+---
+
+## What Luke sees
+
+Once the cloned template is active, the difference shows up on the next job of that type. Luke opens his appointment and the on-site task is there on the job screen, listed with anything else he has been asked to do before leaving. He taps it, the Solar PV Annual Service Report opens, and he works through it page by page.
+
+The baton then passes from Luke in the field to Emma in the office, where the completed certificate arrives on the job record ready to send to the customer. That side of the handover is covered in Managing forms on jobs, in the office staff path.
+
+---
+
+## Build by section
+
+| Section | Media | Note |
+|---|---|---|
+| Activating a form is only half the job | Written text | Article introduction, including the point that no job description link exists. No asset. |
+| Where a form is added | Screen recording | Two captures in one video. Mobile: Luke's phone, open appointment, Menu, Certificates, plus button, pick the form from the list, stop before completing it. Then web: the same form reached from the job record. |
+| On-site tasks: making sure it actually gets done | Written text + screenshot | Explains that a task prompts rather than delivers, and names the three task types. One screenshot alongside: Settings, Job, job report workflow templates, showing the position in the menu. |
+| Reflection question, where tasks are configured | Expanding section | Knowledge check. |
+| Adding the Form task | Screen recording | Web capture. Open the draft template, Step 2, add new on-site task, set type to Form, open the Forms dropdown, choose the report, set the asset option, save. |
+| The step that is not there | Screen recording + gif | Web capture. Open the **active** template first and show Step 2 absent, then clone, then show Step 2 present on the draft. Gif the missing-step moment; it is the whole point of the section and easy to miss at full speed. |
+| Reflection question, the missing Step 2 | Expanding section | Knowledge check. |
+| Which forms need a task | Written text | Decision guidance. No asset. |
+| What Luke sees | Screen recording + text | Mobile capture. The on-site task on the job screen, tapped to open the form. One Clueso video, then the closing paragraph and the handover to the Office teams path as article text. |
 
 ---
 
 **Open items**
 
-1. [OPEN — confirm whether adding a new job description link to an already-active form requires reactivation, or whether the change takes effect immediately; assumed immediate based on Settings document wording but this should be verified against a live demo environment]
-2. [OPEN — confirm whether Commusoft prevents deletion of forms with existing submissions, or whether deletion is permitted with a warning; the Help Centre states active forms are removed from use upon deletion but does not clarify whether the system blocks or warns for forms with a submission history]
-3. [OPEN — confirm the exact label for the mobile navigation path to forms; HC article states Menu > Certificates / Forms but this should be verified against the current mobile app version as navigation labels sometimes differ between app versions]
+1. [OPEN — confirm the exact wording of the asset-linking options on the Form task. The Help Centre describes them as a standalone requirement, per asset, or a single form covering all assets, but the on-screen labels have not been verified against the product.]
+2. [OPEN — confirm whether the Certificates menu item on mobile reads Certificates or Certificates / Forms. Both appear in existing content and the label may differ between iOS and Android.]
+3. [OPEN — confirm the web path for adding a form to a job. Verified that adding from the web is one of the two ways, but the exact navigation on the job record has not been checked against the product and the script currently describes it only in general terms.]
+4. [OPEN — the previous version of this walkthrough, filed as C2, taught that forms are linked to job description templates and appear automatically on jobs of that type. That mechanism does not exist. The old file must be retired rather than left alongside this one, and the same error runs through C1.]
+
+---
+
+**Note on terminology.** This script says technician throughout, per Sara on 1 August. The Help Centre still says engineer, including in the sentences quoted during research. That update is in progress and is not a defect in the source articles.
 `;
 INBOX_FILES["reed-script-l3-forms-c3"] = `# Complete forms on mobile and review in the office
 
@@ -28152,7 +28127,7 @@ If the form is not complete — a required field was missed, or a signature is a
 
 ## Summary
 
-The custom forms workflow is now complete from end to end. Luke found the form automatically on his assigned job, worked through each field type on mobile, captured photos and signatures, and submitted the record. Emma reviewed it in the Certificates tab, confirmed it was accurate, and sent the PDF to the customer. Every step of that journey was set in motion by the configuration work in Walkthroughs 1 and 2 — the form builder, the categories, the job description links, and the activation rules. The Challenge that follows brings the full workflow together in a single scenario, testing the decisions at each handover point from admin configuration through to customer delivery.
+The custom forms workflow is now complete from end to end. Luke found the form in the Certificates list on his assigned job, worked through each field type on mobile, captured photos and signatures, and submitted the record. Emma reviewed it in the Certificates tab, confirmed it was accurate, and sent the PDF to the customer. Every step of that journey was set in motion by the configuration work in Walkthroughs 1 and 2 — the form builder, the categories, the Word document, and the activation rules. The Challenge that follows brings the full workflow together in a single scenario, testing the decisions at each handover point from admin configuration through to customer delivery.
 
 ---
 
@@ -28185,7 +28160,7 @@ INBOX_FILES["reed-script-l3-forms-challenge"] = `# Challenge: Form built, assign
 
 **Characters:** Sarah Mitchell (Managing Director, Owner/Manager), Luke Patterson (Senior Solar Technician, Senior engineer), Emma Clarke (Office Administrator, Office staff)
 
-**Scenario:** SunComfort has started offering battery storage installations. Sarah needs to create a Battery Storage Commissioning Record, link it to the Battery Storage Installation job description, and activate it. Luke completes the form on site. Emma reviews and sends it to the customer.
+**Scenario:** SunComfort has started offering battery storage installations. Sarah needs to create a Battery Storage Commissioning Record, activate it, and make sure it is completed on every installation. Luke completes the form on site. Emma reviews and sends it to the customer.
 
 ---
 
@@ -28193,7 +28168,7 @@ INBOX_FILES["reed-script-l3-forms-challenge"] = `# Challenge: Form built, assign
 
 - **Logged-in user:** Sarah Mitchell — Managing Director — Owner/Manager (admin sections); Luke Patterson — Senior Solar Technician — Senior engineer (mobile section); Emma Clarke — Office Administrator — Office staff (office review section)
 - **Customer record:** An existing SunComfort customer with a Battery Storage Installation job in progress assigned to Luke Patterson
-- **Existing data:** A Battery Storage Installation job description template already exists. No Battery Storage Commissioning Record form exists yet at the start of the challenge. The custom form categories from Walkthrough 1 are in place.
+- **Existing data:** A job report workflow template covering battery storage installations already exists, in Active status, so the missing Step 2 can be demonstrated. No Battery Storage Commissioning Record form exists yet at the start of the challenge. The custom form categories from Walkthrough 1 are in place.
 - **Assets required:** None
 
 ---
@@ -28204,7 +28179,7 @@ INBOX_FILES["reed-script-l3-forms-challenge"] = `# Challenge: Form built, assign
 
 1. **Logged-in user:** Sarah Mitchell, Managing Director, Owner/Manager. DRAFT, needs confirming before recording.
 2. **Customer record:** None. This walkthrough is settings configuration rather than work on a customer record.
-3. **Existing data:** Whatever the scenario needs on screen: SunComfort has started offering battery storage installations. Sarah needs to create a Battery Storage Commissioning Record, link it to the Battery Storage Installation job description, and activate it. Luke completes the form on site. Emma reviews and sends it to the customer. DRAFT, needs confirming before recording.
+3. **Existing data:** Whatever the scenario needs on screen: SunComfort has started offering battery storage installations. Sarah needs to create a Battery Storage Commissioning Record, activate it, and make sure it is completed on every installation. Luke completes the form on site. Emma reviews and sends it to the customer. DRAFT, needs confirming before recording.
 4. **Assets required:** None unless the script names one. DRAFT, needs confirming before recording.
 
 *Drafted 2026-07-31 from this script's own scenario, because no Production Setup existed. Every line needs confirming against the recording account before use.*
@@ -28241,9 +28216,9 @@ Sarah clicks Add new form without checking the marketplace. The form builder ope
 
 ---
 
-## Decision 2 — Linking the form
+## Decision 2 — Making sure it actually gets completed
 
-Sarah has built the Battery Storage Commissioning Record and is about to activate it. She needs to decide which job description to link it to before activating.
+Sarah has built the Battery Storage Commissioning Record and activated it. Battery storage is notifiable work, so this record has to be completed on every installation, not whenever a technician remembers. She needs to decide how to make that happen.
 
 **Option A:** Activate the form first, then link it to the Battery Storage Installation job description afterwards.
 
@@ -28253,17 +28228,17 @@ Sarah has built the Battery Storage Commissioning Record and is about to activat
 
 **Branch — Option A: Activate first, link afterwards**
 
-The form goes live without a job description link. Engineers assigned to battery storage installation jobs will not see the form on their mobile devices because there is no connection between the form and the job type. Sarah will need to open the form, add the job description link, and confirm the change takes effect. Activating without linking is not a breaking error, but it creates a gap: any jobs booked between activation and the moment the link is added will not have the form available to the engineer.
+The form is genuinely available. Any active form shows in the Certificates list on every job, on mobile and on the web, and Luke can add it himself in a couple of taps. Nothing further is required to make it reachable.
 
-*Feedback: Linking before activating is the cleaner workflow. Once the link is in place and the form is activated, every new job of that type automatically carries the form — no gap, no manual follow-up. Linking and activating in a single step is the recommended approach.*
+*Feedback: Available is not the same as done. Nothing prompts Luke to open it and nothing tells Sarah when he has not, which is exactly the gap that leaves a notifiable installation without its record. Activation makes a form usable. It does not make it happen.*
 
 ---
 
 **Branch — Option B: Link before activating**
 
-Sarah links the form to the Battery Storage Installation job description, then clicks Activate and types Activate to confirm. From this point forward, every battery storage installation job carries the Battery Storage Commissioning Record automatically. Luke's appointment next week already has the form waiting in his job record.
+Sarah opens Settings, then Job, then job report workflow templates, and finds the template covering battery storage installations. She goes to Step 2, on-site tasks, adds a new on-site task, sets the type of task to Form, and picks the Battery Storage Commissioning Record from the Forms dropdown. Luke will now see it listed on the job screen as something to deal with before he leaves.
 
-*Feedback: Correct. Linking before activating means the form is connected and ready the moment it goes live. There is no window where the job type exists without a form, and no risk that an early job slips through without the record being completed.*
+*Feedback: Correct. An on-site task does not deliver the form, since the form was already available. What it does is prompt for it, and a task can be made required. For anything carrying a compliance obligation, that is the difference between a record you hope was completed and one you know was.*
 
 ---
 

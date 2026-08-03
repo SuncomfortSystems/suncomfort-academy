@@ -887,7 +887,7 @@
 
 
           <div class="walkthrough-card" onclick="openPanel('reed-script-l3-forms-c2')"><div class="walkthrough-num">Walkthrough 4</div><div class="walkthrough-title">Assign forms and control when they appear</div><div class="walkthrough-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
-          <div class="walkthrough-card" onclick="openPanel('reed-script-l3-forms-c3')"><div class="walkthrough-num">Walkthrough 5</div><div class="walkthrough-title">Complete forms on mobile and review in the office</div><div class="walkthrough-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Field teams / Office teams</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
+          
           <div class="walkthrough-card" onclick="openPanel('reed-script-l3-forms-challenge')"><div class="walkthrough-num">Challenge</div><div class="walkthrough-title">Form built, assigned, and signed off</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">All roles</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
         </div>
       </div>
@@ -8778,61 +8778,6 @@ COURSES['reed-script-l3-forms-c2'] = {
   ],
   openItems: "1. [OPEN — confirm the exact wording of the asset-linking options on the Form task. The Help Centre describes them as a standalone requirement, per asset, or a single form covering all assets, but the on-screen labels have not been verified against the product.] 2. [OPEN — confirm whether the Certificates menu item on mobile reads Certificates or Certificates / Forms. Both appear in existing content and the label may differ between iOS and Android.] 3. [OPEN — confirm the web path for adding a form to a job. Verified that adding from the web is one of the two ways, but the exact navigation on the job record has not been checked against the product and the script currently describes it only in general terms.] 4. [OPEN — the previous version of this walkthrough, filed as C2, taught that forms are linked to job description templates and appear automatically on jobs of that type. That mechanism does not exist. The old file must be retired rather than left alongside this one, and the same error runs through C1.]"
 };
-COURSES['reed-script-l3-forms-c3'] = {
-  contentType: "Walkthrough",
-  pathLabel: "L6 Custom Forms",
-  title: "Complete forms on mobile and review in the office",
-  duration: "5 min",
-  persona: "Field teams / Office teams",
-  characters: "Luke Patterson (Senior Solar Technician, Senior engineer); Emma Clarke (Office Administrator, Office staff)",
-  scenario: "Luke arrives on site for a solar PV annual service visit and completes the Solar PV Annual Service Report on his mobile device. Emma then reviews the submitted form in the web app, downloads the PDF, and sends it to the customer.",
-  objectives: [
-    "Locate and open an assigned form within a job on the Commusoft mobile app",
-    "Complete each field type correctly, including date pickers, toggles, dropdowns, photo uploads, and signature fields",
-    "Save a form as a draft to return to it, and submit a completed form to sync it with the web app",
-    "Review a submitted form against the job record in the web app and access its download and send options"
-  ],
-  productionSetup: [
-    "*Logged-in user: Emma Clarke, Office Administrator, Office staff. DRAFT, needs confirming before recording.",
-    "*Customer record: None. This walkthrough is settings configuration rather than work on a customer record.",
-    "*Existing data: Whatever the scenario needs on screen: Luke arrives on site for a solar PV annual service visit and completes the Solar PV Annual Service Report on his mobile device. Emma then reviews the submitted form in the web app, downloads the PDF, and sends it to the customer. DRAFT, needs confirming before recording.",
-    "*Assets required: None unless the script names one. DRAFT, needs confirming before recording.",
-    "Drafted 2026-07-31 from this script's own scenario, because no Production Setup existed. Every line needs confirming against the recording account before use.*"
-  ],
-  buildBySection: [
-    {section:"Luke\\\\'s morning: the form is already waiting", media:"Screen recording", note:"Record on iPad / mobile app as Luke — open the job, tap Menu > Certificates / Forms, show the Solar PV Annual Service Report listed automatically."},
-    {section:"Completing the form field by field", media:"Screen recording", note:"Mobile / iPad recording — date picker, pre-populated engineer name, number pad, Good/Fair/Poor toggle, decimal string voltages, checkbox, Yes/No toggle."},
-    {section:"Uploading a photo and capturing signatures", media:"Screen recording", note:"Mobile / iPad recording — photo upload (camera or library, up to 3), engineer and customer signature fields drawn on screen."},
-    {section:"Saving as a draft and submitting the completed form", media:"Screen recording", note:"Mobile / iPad recording — Save draft and close, then Save to finalise; show status change to Completed and sync."},
-    {section:"Emma\\\\'s view: finding and reviewing the submitted form", media:"Screen recording", note:"Switch to web app as Emma — open the job, Certificates tab, open the form, review readings and signatures."},
-    {section:"Downloading, sending, and handling incomplete forms", media:"Screen recording", note:"Web app — hover the form row for action buttons, send to generate PDF and email; cover edit-from-web and contact-engineer paths."},
-    {section:"Summary", media:"Written text", note:"Recap text only — no recording needed."},
-    {section:"Knowledge check", media:"Expanding section", note:"Knowledge check, revealed on click in the article."}
-  ],
-  productionNotes: [
-    "This walkthrough has two recording setups: a mobile / iPad capture for Luke\\'s on-site sections (logged in as Luke Patterson, Senior Solar Technician) and a web app capture for Emma\\'s office sections (logged in as Emma Clarke, Office staff). Record the mobile sections on an actual device or iPad — these field beats cannot be shown on the web app.",
-    "Have a Solar Maintenance job in progress assigned to Luke, with the Solar PV Annual Service Report linked and active, and showing as an unstarted form (no draft in progress) when the demo begins.",
-    "Have a photo of a solar panel installation saved to the device (stock image is fine) for the photo-upload beat, plus a second image of an inverter display.",
-    "Use a second device or screen for the office-side web app walkthrough so the handover from Luke to Emma is clear.",
-    "Show the engineer name field pre-populating automatically from the logged-in user, and both signature fields being drawn on screen.",
-    "Open items below are unresolved photo-limit, signature-timestamp, edit-path, and label questions flagged by Reed — confirm against a live demo before recording."
-  ],
-  openItems: "(1) Confirm whether the photo field supports up to 3 photos per field when completed via the mobile app. (2) Confirm whether the customer signature field captures a timestamp automatically alongside the signature, or whether only the engineer signature includes a timestamp. (3) Confirm the exact web app navigation path for editing a completed custom form submitted via mobile. (4) Confirm whether the Save draft and close wording is accurate for the current mobile app version.",
-  scenes: [
-    {type:"section", heading:"Luke's morning: the form is already waiting", body:"Luke has been assigned to a solar PV annual service visit today. He arrives on site, opens the Commusoft mobile app, and navigates to his job for the day. The job details show the customer address, the scheduled appointment time, and the job description — Solar Maintenance. He does not need to go looking for the form. To access it, he taps the Menu and selects Certificates / Forms. The Solar PV Annual Service Report is listed there, assigned automatically because of the link Sarah set up in settings. This is the value of the configuration work done in Walkthroughs 1 and 2 — Luke never has to wonder which form to use, find a paper copy, or ask the office to send him anything. The right form is already attached to this job and only this job type. He taps the form name to open it and begins working through it from the top of the first page."},
-    {type:"section", heading:"Completing the form field by field", body:"The first page of the Solar PV Annual Service Report opens with the inspection date field. Luke taps it and a date picker appears — he selects today's date using the calendar interface rather than typing it manually, which means the date is always in the correct format and never ambiguous. The next field is his engineer name, which is pre-populated using the non-editable input type — his name appears automatically because he is the logged-in user, saving him from typing it and ensuring the record is always accurate. Working through the form, Luke encounters several different field types. For System size in kWp he taps the number field and the device shows a number pad. For Panel condition he taps the toggle and cycles through the options — Good, Fair, or Poor — until the correct assessment is selected. For each string voltage reading he enters a decimal value. When he reaches the single checkbox for Inverter error log reviewed, he taps to confirm he has checked it. For Remedial works recommended, he taps the Yes / No toggle. Each field type has been chosen by Sarah to make the engineer's input as quick and unambiguous as possible — there is no room for a poorly worded free-text answer to cause confusion in the office later. Luke reaches the Remedial works recommended field and needs to record his answer. The field is a Yes / No toggle. Why is a toggle a better choice than a free-text field for this question? *Feedback: A toggle constrains the answer to Yes or No, which means every engineer on every job records the same type of response. The office can immediately see whether remedial work has been flagged without having to interpret varied phrasing. Consistency in the data is what makes the record actionable — and it starts with choosing the right field type.*"},
-    {type:"reflection", label:"Knowledge check", question:"Luke reaches the Remedial works recommended field and needs to record his answer. The field is a Yes / No toggle. Why is a toggle a better choice than a free-text field for this question?", options:["A. A toggle is faster to complete and constrains the answer to one of two consistent values, making it easier for the office to act on","B. A free-text field is easier for engineers to use because they can write exactly what they observed","C. Toggles are only available on certain mobile devices and are not reliable for compliance records","D. A toggle requires less storage space than a free-text field"], correct:"A", feedback:"A toggle constrains the answer to Yes or No, which means every engineer on every job records the same type of response. The office can immediately see whether remedial work has been flagged without having to interpret varied phrasing. Consistency in the data is what makes the record actionable — and it starts with choosing the right field type.", feedbackAlt:"The toggle is the better choice because it constrains the answer to Yes or No, so every engineer records the same type of response and the office can act on it without interpreting varied phrasing. A free-text field would produce inconsistent answers; the other reasons given are not why the toggle is preferred."},
-    {type:"section", heading:"Uploading a photo and capturing signatures", body:"After working through the technical readings, Luke reaches the photo field. He taps the photo upload field and the device opens the camera or the photo library — he can take a new photo or select an existing one. For today's visit, he takes a shot of the panel array showing the condition he has recorded in the form, which gives the office and the customer a visual reference to accompany the written assessment. The photo field accepts up to three photos, so he adds a second image of the inverter display. [OPEN — confirm whether the photo field in custom forms supports up to 3 photos per field as stated in the form builder documentation, or whether there is a different limit when forms are completed via the mobile app rather than web; the form builder article states 3 photos per field but this should be verified in the mobile app] At the bottom of the form, Luke reaches the two signature fields — one for the engineer and one for the customer. He signs the engineer signature field using his finger on the device screen. His name and the current date and time are recorded alongside the signature automatically. He then hands the device to the customer, who signs the customer field in the same way. [OPEN — confirm whether the customer signature field captures a timestamp automatically alongside the signature, or whether only the engineer signature includes a timestamp; assumed both capture timestamps based on the form builder Signature field description, but this should be verified] Both signatures are locked to the form record the moment they are drawn and cannot be altered after the form is saved."},
-    {type:"section", heading:"Saving as a draft and submitting the completed form", body:"If Luke needs to pause before completing the form — perhaps the customer is not on site yet for the signature, or he needs to check a reading before confirming it — he taps the back arrow through the form pages until the option to Save draft and close appears. The draft syncs when connectivity allows and remains visible in the Certificates / Forms list as a draft for him to return to. Saving a draft does not submit the form to the office, so Emma will not see it as a completed record until Luke finalises it.\\n\\nWhen the form is fully complete, Luke taps Save to finalise. The form status changes from draft to completed, and it queues for synchronisation. When the device connects — either on the customer\\'s WiFi or once Luke is back in mobile coverage — the completed form syncs to the web app automatically. Luke sees the status update to Completed on his device, confirming the record has reached the server. The baton now passes from Luke on site to Emma in the office, where the completed form becomes the foundation of the customer\\'s service record."},
-    {type:"section", heading:"Emma's view: finding and reviewing the submitted form", body:"Emma is in the office when the Solar PV Annual Service Report syncs through. She opens the job record for Luke's solar maintenance visit, navigates to the Certificates tab, and the completed form is listed there alongside the form number, the date and time it was submitted, and a note of whether it has been sent to the customer yet. She clicks to open the form and reviews it against the job record — checking that the readings are consistent with the system size recorded on the customer account, that both signatures are present, and that the remedial works field has been answered. The Certificates tab is where all of Emma's post-visit review work happens. Both custom forms and any other compliance certificates submitted on the job appear here, identified by type so she can distinguish between them at a glance. For each form, she can see who created it, when it was submitted, and whether it has been sent to the customer — a piece of tracking information that helps her work through her post-visit checklist without having to ask engineers or check emails to confirm what has been sent. Emma opens the job record after Luke's visit and sees the Solar PV Annual Service Report listed in the Certificates tab with a Completed status. What can Emma do from this tab? *Feedback: From the Certificates tab, Emma can view, send, or delete completed forms. Editing a submitted form is possible from the web app, but it is not done from within the tab list — it requires opening the form and using the edit function. Engineers cannot edit a completed form on mobile after it has been saved; corrections are handled by office web users when genuinely needed.*"},
-    {type:"section", heading:"Downloading, sending, and handling incomplete forms", body:"When Emma is satisfied that the Solar PV Annual Service Report is accurate and complete, she sends it to the customer. She hovers over the form row in the Certificates tab to reveal the action buttons — she selects the option to send the form, and Commusoft generates a PDF and emails it to the customer address recorded on the job. The sent date is logged against the form record automatically, so Emma can confirm at any point that the customer received their copy. If the form is not complete — a required field was missed, or a signature is absent because the customer was not on site — Emma has two options. For a minor correction where the data is otherwise solid, she can edit the form from the web app, fill the missing field, and send. For a more significant gap that requires the engineer's input, she can contact Luke and, if the job is still open, arrange for the additional information to be captured before the form is finalised. [OPEN — confirm the exact web app edit path for completed custom forms — the HC notes that forms submitted on mobile can be edited by a web user, but the specific navigation path within the job record to access the edit function is not documented in the articles reviewed; this should be verified against a live demo environment before recording] The customer always receives a complete, accurate record — the form design and the review process work together to make that the standard outcome, not the exception."},
-    {type:"section", heading:"Summary", body:"The custom forms workflow is now complete from end to end. Luke found the form in the Certificates list on his assigned job, worked through each field type on mobile, captured photos and signatures, and submitted the record. Emma reviewed it in the Certificates tab, confirmed it was accurate, and sent the PDF to the customer. Every step of that journey was set in motion by the configuration work in Walkthroughs 1 and 2 — the form builder, the categories, the Word document, and the activation rules. The Challenge that follows brings the full workflow together in a single scenario, testing the decisions at each handover point from admin configuration through to customer delivery. 1. [OPEN — confirm whether the photo field in custom forms supports up to 3 photos per field when completed via the mobile app; the form builder documentation states 3 photos per field but mobile app behaviour should be verified] 2. [OPEN — confirm whether the customer signature field captures a timestamp automatically alongside the signature, or whether only the engineer signature includes a timestamp; assumed both capture timestamps based on the Signature field description] 3. [OPEN — confirm the exact web app navigation path for editing a completed custom form submitted via mobile; HC confirms web editing is possible but does not document the path] 4. [OPEN — confirm whether \"Save draft and close\" wording is accurate for the current mobile app version or whether the label differs; sourced from HC article on Custom Forms in the Mobile App but app labels can change between versions]"},
-    
-    
-    {type:"reflection", label:"Knowledge check", question:"Emma opens the job record after Luke\\'s visit and sees the Solar PV Annual Service Report listed in the Certificates tab with a Completed status. What can Emma do from this tab?", options:["A. She can edit the form directly to correct any errors Luke made before sending it to the customer","B. She can view, send to the customer, or delete the form — but editing is only possible via the web app edit function, not from the tab itself","C. She can only view the form — all other actions require contacting Commusoft support","D. She can open the form and hand it back to Luke to complete any missing fields from the mobile app"], correct:"B", feedback:"From the Certificates tab, Emma can view, send, or delete completed forms. Editing a submitted form is possible from the web app, but it is not done from within the tab list — it requires opening the form and using the edit function. Engineers cannot edit a completed form on mobile after it has been saved; corrections are handled by office web users when genuinely needed.", feedbackAlt:"From the Certificates tab, Emma can view, send, or delete completed forms. Editing is possible from the web app but not from the tab list itself — it requires opening the form and using the edit function. She cannot hand the form back to Luke to edit on mobile, and actions do not require contacting support."}
-  ]
-};
-
 COURSES['reed-script-l3-forms-challenge'] = {
   contentType: "Walkthrough",
   pathLabel: "L6 Custom Forms",
@@ -10165,10 +10110,6 @@ const COURSE_HC_LINKS = {
   ],
   'reed-script-l3-forms-c2': [
     {title: 'Create and manage custom forms', url: 'https://help.commusoft.com/en/articles/217047-create-and-manage-custom-forms'},
-    {title: 'Understanding the Job Record', url: 'https://help.commusoft.com/en/articles/324265-understanding-the-job-record'},
-  ],
-  'reed-script-l3-forms-c3': [
-    {title: 'Completing forms in the mobile app', url: 'https://help.commusoft.com/en/articles/258920-completing-forms-in-the-mobile-app'},
     {title: 'Understanding the Job Record', url: 'https://help.commusoft.com/en/articles/324265-understanding-the-job-record'},
   ],
   'reed-script-l3-forms-challenge': [
@@ -28213,142 +28154,6 @@ The baton then passes from Luke in the field to Emma in the office, where the co
 
 **Note on terminology.** This script says technician throughout, per Sara on 1 August. The Help Centre still says engineer, including in the sentences quoted during research. That update is in progress and is not a defect in the source articles.
 `;
-INBOX_FILES["reed-script-l3-forms-c3"] = `# Complete forms on mobile and review in the office
-
-**Series:** Custom Forms | **Walkthrough:** 3 of 3 | **Duration:** 5 min | **Audience:** Field team / Office staff
-
----
-
-**Learning objectives**
-
-1. Locate and open an assigned form within a job on the Commusoft mobile app
-2. Complete each field type correctly, including date pickers, toggles, dropdowns, photo uploads, and signature fields
-3. Save a form as a draft to return to it, and submit a completed form to sync it with the web app
-4. Review a submitted form against the job record in the web app and access its download and send options
-5. Identify the correct action when a completed form is incomplete or requires correction
-
-**Target audience:** Field engineers and office administrators at field service companies using Commusoft. SunComfort Systems is the pedagogical vehicle, not the audience. The learner is either an engineer who needs to understand how to find, complete, and submit forms on site, or an office administrator who reviews submitted forms, downloads PDFs, and manages the record after the fact. The walkthrough covers both perspectives within a single, continuous workflow.
-
-**Assumed starting point:** Learner understands what custom forms are and that they are linked to job types (covered in Walkthroughs 1 and 2 of this series). Field engineers are familiar with the Commusoft mobile app and can navigate to an assigned job. Office staff have web app access with at least Office staff system role permissions.
-
-**Main objective beyond the learning objectives:** A custom form only delivers value when it is completed correctly and reviewed promptly. This walkthrough closes the loop on everything built and configured in the earlier walkthroughs — the engineer knows exactly what to do on site, the office knows exactly where to find the result, and the customer receives a professional, accurate record of the work carried out. When both ends of the chain work smoothly, compliance documentation stops being an afterthought and becomes a reliable output of every single visit.
-
----
-
-**Characters:** Luke Patterson (Senior Solar Technician, Senior engineer), Emma Clarke (Office Administrator, Office staff)
-
-**Scenario:** Luke arrives on site for a solar PV annual service visit and completes the Solar PV Annual Service Report on his mobile device. Emma then reviews the submitted form in the web app, downloads the PDF, and sends it to the customer.
-
----
-
-**Production setup**
-
-- **Logged-in user — field section:** Luke Patterson — Senior Solar Technician — Senior engineer (mobile app)
-- **Logged-in user — office section:** Emma Clarke — Office Administrator — Office staff (web app)
-- **Customer record:** An existing SunComfort customer with a solar PV system, with a Solar Maintenance job in progress assigned to Luke Patterson. The Solar PV Annual Service Report must be linked and active for the Solar Maintenance job description (configured in Walkthroughs 1 and 2).
-- **Existing data:** The Solar Maintenance job must be in an open, in-progress state with Luke Patterson assigned and an appointment time showing for today's date. The Solar PV Annual Service Report should appear as an unstarted form on the job — no draft in progress at the point the demo begins.
-- **Assets required:** A photo of a solar panel installation (can be a stock image saved to the device) for use in the photo upload field demonstration. A second device or screen for the office-side web app walkthrough.
-
----
-
----
-
-## Production Setup
-
-1. **Logged-in user:** Emma Clarke, Office Administrator, Office staff. DRAFT, needs confirming before recording.
-2. **Customer record:** None. This walkthrough is settings configuration rather than work on a customer record.
-3. **Existing data:** Whatever the scenario needs on screen: Luke arrives on site for a solar PV annual service visit and completes the Solar PV Annual Service Report on his mobile device. Emma then reviews the submitted form in the web app, downloads the PDF, and sends it to the customer. DRAFT, needs confirming before recording.
-4. **Assets required:** None unless the script names one. DRAFT, needs confirming before recording.
-
-*Drafted 2026-07-31 from this script's own scenario, because no Production Setup existed. Every line needs confirming against the recording account before use.*
-
-## Luke's morning: the form is already waiting
-
-Luke has been assigned to a solar PV annual service visit today. He arrives on site, opens the Commusoft mobile app, and navigates to his job for the day. The job details show the customer address, the scheduled appointment time, and the job description — Solar Maintenance. He does not need to go looking for the form. To access it, he taps the Menu and selects Certificates / Forms. The Solar PV Annual Service Report is listed there, assigned automatically because of the link Sarah set up in settings.
-
-This is the value of the configuration work done in Walkthroughs 1 and 2 — Luke never has to wonder which form to use, find a paper copy, or ask the office to send him anything. The right form is already attached to this job and only this job type. He taps the form name to open it and begins working through it from the top of the first page.
-
----
-
-## Completing the form field by field
-
-The first page of the Solar PV Annual Service Report opens with the inspection date field. Luke taps it and a date picker appears — he selects today's date using the calendar interface rather than typing it manually, which means the date is always in the correct format and never ambiguous. The next field is his engineer name, which is pre-populated using the non-editable input type — his name appears automatically because he is the logged-in user, saving him from typing it and ensuring the record is always accurate.
-
-Working through the form, Luke encounters several different field types. For System size in kWp he taps the number field and the device shows a number pad. For Panel condition he taps the toggle and cycles through the options — Good, Fair, or Poor — until the correct assessment is selected. For each string voltage reading he enters a decimal value. When he reaches the single checkbox for Inverter error log reviewed, he taps to confirm he has checked it. For Remedial works recommended, he taps the Yes / No toggle. Each field type has been chosen by Sarah to make the engineer's input as quick and unambiguous as possible — there is no room for a poorly worded free-text answer to cause confusion in the office later.
-
----
-
-**Reflection question**
-
-Luke reaches the Remedial works recommended field and needs to record his answer. The field is a Yes / No toggle. Why is a toggle a better choice than a free-text field for this question?
-
-- A toggle is faster to complete and constrains the answer to one of two consistent values, making it easier for the office to act on ✓
-- A free-text field is easier for engineers to use because they can write exactly what they observed
-- Toggles are only available on certain mobile devices and are not reliable for compliance records
-- A toggle requires less storage space than a free-text field
-
-*Feedback: A toggle constrains the answer to Yes or No, which means every engineer on every job records the same type of response. The office can immediately see whether remedial work has been flagged without having to interpret varied phrasing. Consistency in the data is what makes the record actionable — and it starts with choosing the right field type.*
-
----
-
-## Uploading a photo and capturing signatures
-
-After working through the technical readings, Luke reaches the photo field. He taps the photo upload field and the device opens the camera or the photo library — he can take a new photo or select an existing one. For today's visit, he takes a shot of the panel array showing the condition he has recorded in the form, which gives the office and the customer a visual reference to accompany the written assessment. The photo field accepts up to three photos, so he adds a second image of the inverter display. [OPEN — confirm whether the photo field in custom forms supports up to 3 photos per field as stated in the form builder documentation, or whether there is a different limit when forms are completed via the mobile app rather than web; the form builder article states 3 photos per field but this should be verified in the mobile app]
-
-At the bottom of the form, Luke reaches the two signature fields — one for the engineer and one for the customer. He signs the engineer signature field using his finger on the device screen. His name and the current date and time are recorded alongside the signature automatically. He then hands the device to the customer, who signs the customer field in the same way. [OPEN — confirm whether the customer signature field captures a timestamp automatically alongside the signature, or whether only the engineer signature includes a timestamp; assumed both capture timestamps based on the form builder Signature field description, but this should be verified] Both signatures are locked to the form record the moment they are drawn and cannot be altered after the form is saved.
-
----
-
-## Saving as a draft and submitting the completed form
-
-If Luke needs to pause before completing the form — perhaps the customer is not on site yet for the signature, or he needs to check a reading before confirming it — he taps the back arrow through the form pages until the option to Save draft and close appears. The draft syncs when connectivity allows and remains visible in the Certificates / Forms list as a draft for him to return to. Saving a draft does not submit the form to the office, so Emma will not see it as a completed record until Luke finalises it.
-
-When the form is fully complete, Luke taps Save to finalise. The form status changes from draft to completed, and it queues for synchronisation. When the device connects — either on the customer's WiFi or once Luke is back in mobile coverage — the completed form syncs to the web app automatically. Luke sees the status update to Completed on his device, confirming the record has reached the server. The baton now passes from Luke on site to Emma in the office, where the completed form becomes the foundation of the customer's service record.
-
----
-
-## Emma's view: finding and reviewing the submitted form
-
-Emma is in the office when the Solar PV Annual Service Report syncs through. She opens the job record for Luke's solar maintenance visit, navigates to the Certificates tab, and the completed form is listed there alongside the form number, the date and time it was submitted, and a note of whether it has been sent to the customer yet. She clicks to open the form and reviews it against the job record — checking that the readings are consistent with the system size recorded on the customer account, that both signatures are present, and that the remedial works field has been answered.
-
-The Certificates tab is where all of Emma's post-visit review work happens. Both custom forms and any other compliance certificates submitted on the job appear here, identified by type so she can distinguish between them at a glance. For each form, she can see who created it, when it was submitted, and whether it has been sent to the customer — a piece of tracking information that helps her work through her post-visit checklist without having to ask engineers or check emails to confirm what has been sent.
-
----
-
-**Reflection question**
-
-Emma opens the job record after Luke's visit and sees the Solar PV Annual Service Report listed in the Certificates tab with a Completed status. What can Emma do from this tab?
-
-- She can edit the form directly to correct any errors Luke made before sending it to the customer
-- She can view, send to the customer, or delete the form — but editing is only possible via the web app edit function, not from the tab itself ✓
-- She can only view the form — all other actions require contacting Commusoft support
-- She can open the form and hand it back to Luke to complete any missing fields from the mobile app
-
-*Feedback: From the Certificates tab, Emma can view, send, or delete completed forms. Editing a submitted form is possible from the web app, but it is not done from within the tab list — it requires opening the form and using the edit function. Engineers cannot edit a completed form on mobile after it has been saved; corrections are handled by office web users when genuinely needed.*
-
----
-
-## Downloading, sending, and handling incomplete forms
-
-When Emma is satisfied that the Solar PV Annual Service Report is accurate and complete, she sends it to the customer. She hovers over the form row in the Certificates tab to reveal the action buttons — she selects the option to send the form, and Commusoft generates a PDF and emails it to the customer address recorded on the job. The sent date is logged against the form record automatically, so Emma can confirm at any point that the customer received their copy.
-
-If the form is not complete — a required field was missed, or a signature is absent because the customer was not on site — Emma has two options. For a minor correction where the data is otherwise solid, she can edit the form from the web app, fill the missing field, and send. For a more significant gap that requires the engineer's input, she can contact Luke and, if the job is still open, arrange for the additional information to be captured before the form is finalised. [OPEN — confirm the exact web app edit path for completed custom forms — the HC notes that forms submitted on mobile can be edited by a web user, but the specific navigation path within the job record to access the edit function is not documented in the articles reviewed; this should be verified against a live demo environment before recording] The customer always receives a complete, accurate record — the form design and the review process work together to make that the standard outcome, not the exception.
-
----
-
-## Summary
-
-The custom forms workflow is now complete from end to end. Luke found the form in the Certificates list on his assigned job, worked through each field type on mobile, captured photos and signatures, and submitted the record. Emma reviewed it in the Certificates tab, confirmed it was accurate, and sent the PDF to the customer. Every step of that journey was set in motion by the configuration work in Walkthroughs 1 and 2 — the form builder, the categories, the Word document, and the activation rules. The Challenge that follows brings the full workflow together in a single scenario, testing the decisions at each handover point from admin configuration through to customer delivery.
-
----
-
-**Open items**
-
-1. [OPEN — confirm whether the photo field in custom forms supports up to 3 photos per field when completed via the mobile app; the form builder documentation states 3 photos per field but mobile app behaviour should be verified]
-2. [OPEN — confirm whether the customer signature field captures a timestamp automatically alongside the signature, or whether only the engineer signature includes a timestamp; assumed both capture timestamps based on the Signature field description]
-3. [OPEN — confirm the exact web app navigation path for editing a completed custom form submitted via mobile; HC confirms web editing is possible but does not document the path]
-4. [OPEN — confirm whether "Save draft and close" wording is accurate for the current mobile app version or whether the label differs; sourced from HC article on Custom Forms in the Mobile App but app labels can change between versions]
-`;
 INBOX_FILES["reed-script-l3-forms-challenge"] = `# Challenge: Form built, assigned, and signed off
 
 **Series:** Custom Forms | **Walkthrough:** Challenge | **Duration:** 3 min | **Audience:** All — Decision makers / Admins / Field team / Office staff
@@ -30869,7 +30674,6 @@ function openInboxFile(key) {
     'reed-script-l3-stock-challenge': { num: 'Reed — Script', title: 'L3 Advanced Stock Control — Challenge: Stock ordered, received, and allocated' },
     'reed-script-l3-forms-c1': { num: 'Reed — Script', title: 'L3 Custom Forms — Walkthrough 1: Build your first custom form' },
     'reed-script-l3-forms-c2': { num: 'Reed — Script', title: 'L3 Custom Forms — Walkthrough 2: Assign forms and control when they appear' },
-    'reed-script-l3-forms-c3': { num: 'Reed — Script', title: 'L3 Custom Forms — Walkthrough 3: Complete forms on mobile and review in the office' },
     'reed-script-l3-forms-challenge': { num: 'Reed — Script', title: 'L3 Custom Forms — Challenge: Form built, assigned, and signed off' },
     'reed-script-l3-analytics-c1': { num: 'Reed — Script', title: 'L3 Analytics — Walkthrough 1: Your analytics dashboard' },
     'reed-script-l3-analytics-c2': { num: 'Reed — Script', title: 'L3 Analytics — Walkthrough 2: Build a tabular report' },

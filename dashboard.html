@@ -2516,8 +2516,8 @@ COURSES['reed-script-l1-ft-series1'] = {
   duration: "13 min", persona: "Field teams",
   contentType: "Mini-walkthrough",
   pathLabel: "L3 Field teams · Series 1",
-  characters: "Luke Simmons (Technician — logged-in user for all screen recordings)",
-  scenario: "Luke Simmons is starting his first day using the Commusoft mobile app at SunComfort. Before his first job, he needs to know how to log in, understand what the home screen is showing him, locate his assigned jobs, and know what the appointment statuses mean and when to use them.",
+  characters: "Luke Patterson (Technician — logged-in user for all screen recordings)",
+  scenario: "Luke Patterson is starting his first day using the Commusoft mobile app at SunComfort. Before his first job, he needs to know how to log in, understand what the home screen is showing him, locate his assigned jobs, and know what the appointment statuses mean and when to use them.",
   objectives: [
     "Install the Commusoft mobile app and log in using account credentials",
     "Navigate the home screen and identify the key areas visible after login",
@@ -2525,14 +2525,14 @@ COURSES['reed-script-l1-ft-series1'] = {
     "Identify the main appointment statuses and understand what each one signals to the office and the customer"
   ],
   productionSetup: {
-    loggedInUser: "Luke Simmons — Technician — Engineer role or equivalent mobile-app-enabled role. [OPEN — Luke Simmons is not on the approved SunComfort staff roster. Confirm which technician character to use for this recording before production.]",
+    loggedInUser: "Luke Patterson — Technician — Engineer role or equivalent mobile-app-enabled role. [OPEN — Luke Patterson is not on the approved SunComfort staff roster. Confirm which technician character to use for this recording before production.]",
     customerRecord: "None — screen recordings show the app job list and home screen, not customer records.",
     existingData: "At least two jobs assigned to the recording technician should be visible in the app: one for the current day and one upcoming. Jobs should show realistic job descriptions and addresses.",
     assetsRequired: "Mobile device with the Commusoft app installed (or simulator). App store screens for Lesson 1 may require capturing on iOS and Android separately."
   },
-  openItems: "(1) Luke Simmons is not on the approved SunComfort staff roster — replace with an approved technician character before production (nearest equivalents: Sam Ossie, Solar Technician with diary; or Jake Harris, Senior Heat Pump Technician). (2) Confirm the exact name and location of the Commusoft mobile app in the iOS App Store and Google Play Store. (3) Confirm the exact label and location of the accept option on a job in the current version of the mobile app. (4) Confirm whether the mobile app has a separate diary view or whether the home screen list view is the only format — remove the diary view reference in the home screen walkthrough if it does not exist as a separate view. (5) No dedicated Help Centre article confirmed for mobile app home screen, job acceptance, or login flow — provide URLs before production.",
+  openItems: "(1) Luke Patterson is not on the approved SunComfort staff roster — replace with an approved technician character before production (nearest equivalents: Sam Ossie, Solar Technician with diary; or Jake Harris, Senior Heat Pump Technician). (2) Confirm the exact name and location of the Commusoft mobile app in the iOS App Store and Google Play Store. (3) Confirm the exact label and location of the accept option on a job in the current version of the mobile app. (4) Confirm whether the mobile app has a separate diary view or whether the home screen list view is the only format — remove the diary view reference in the home screen walkthrough if it does not exist as a separate view. (5) No dedicated Help Centre article confirmed for mobile app home screen, job acceptance, or login flow — provide URLs before production.",
   productionSetup: [
-    "Logged-in user: Luke Simmons (Technician — logged-in user for all screen recordings)",
+    "Logged-in user: Luke Patterson (Technician — logged-in user for all screen recordings)",
     "Customer record: see scenario",
     "Existing data: see Build by section notes below",
     "Assets required: None"
@@ -2548,7 +2548,7 @@ COURSES['reed-script-l1-ft-series1'] = {
     {section:"Before you finish", media:"Expanding section", note:"Knowledge check, revealed on click in the article."}
   ],
   productionNotes: [
-    "Record on the Commusoft mobile app, logged in as Luke Simmons (Technician, mobile-app-enabled role).",
+    "Record on the Commusoft mobile app, logged in as Luke Patterson (Technician, mobile-app-enabled role).",
     "No customer record is required — the recordings show the app job list and home screen, not customer records.",
     "Have at least two jobs assigned to the recording technician visible in the app: one for the current day and one upcoming, each with a realistic job description and address.",
     "Use a mobile device with the Commusoft app installed, or a simulator.",
@@ -3564,7 +3564,7 @@ COURSES['reed-script-l1-ft-s2-c1'] = {
   title: "Travel to a job and mark your arrival",
   duration: "3 min",
   persona: "Field teams",
-  characters: "Luke Simmons (Technician)",
+  characters: "Luke Patterson (Senior Solar Technician, Senior engineer)",
   scenario: "Luke has his appointments for the day loaded in the Commusoft mobile app. He needs to set the right status at the right moment so the office knows where he is and the customer knows when to expect him.",
   objectives: [
     "Locate assigned jobs on the home screen and diary in the mobile app",
@@ -3587,7 +3587,7 @@ COURSES['reed-script-l1-ft-s2-c1'] = {
   ],
   productionNotes: [
     "Record on the mobile app — this is the engineer's phone workflow, not the web app.",
-    "Log in as a field technician (Luke Simmons in the scenario) with appointments scheduled for the day.",
+    "Log in as a field technician (Luke Patterson in the scenario) with appointments scheduled for the day.",
     "Have at least one upcoming appointment with a blurred address so the unlock-on-Travel behaviour can be shown.",
     "Start the recording on the home screen so assigned jobs and the diary tab are both visible.",
     "If possible, have an On Our Way SMS template configured so the Travel trigger can be demonstrated.",
@@ -3610,7 +3610,7 @@ COURSES['reed-script-l1-ft-s2-c2'] = {
   title: "Complete your on-site form",
   duration: "4 min",
   persona: "Field teams",
-  characters: "Luke Simmons (Technician)",
+  characters: "Luke Patterson (Senior Solar Technician, Senior engineer)",
   scenario: "Luke is on site at a solar installation and needs to complete a compliance certificate. He has all the details but the form is long and the customer needs a copy emailed immediately on completion.",
   objectives: [
     "Access and complete an on-site form in the Commusoft mobile app",
@@ -3624,6 +3624,7 @@ COURSES['reed-script-l1-ft-s2-c2'] = {
     "*Assets required: None."
   ],
   buildBySection: [
+    {section:"Mark yourself arrived first", media:"Screen recording + gif", note:"Mobile capture. Show the plus button present at Arrived status, then the same appointment marked as left with the plus button gone. GIF the difference; it is the whole point of the section."},
     {section:"Accessing and starting a form", media:"Screen recording", note:"Capture Menu → Certificates/Forms showing linked forms and statuses, tapping the plus button, selecting the form type, the customer/work address review screen, and the form opening page by page. Also show the form-task route from the job screen."},
     {section:"Saving as draft or completing", media:"Screen recording", note:"Capture tapping back through pages to Save draft and close, and selecting Save to submit a completed form. Note the locked state and the clone-to-edit route."},
     {section:"Form statuses", media:"Screen recording + gif", note:"Show a form moving through Draft, Waiting to sync, Completed and Failed to sync. GIF the email/print PDF action from a Completed form."},
@@ -3633,7 +3634,7 @@ COURSES['reed-script-l1-ft-s2-c2'] = {
   ],
   productionNotes: [
     "Record on the mobile app — this is the engineer's phone workflow.",
-    "Log in as a field technician (Luke Simmons in the scenario) on an Arrived appointment.",
+    "Log in as a field technician (Luke Patterson in the scenario) on an Arrived appointment.",
     "Have a multi-page custom form (a compliance certificate) linked to the job so the page-by-page completion and the form-task route can both be shown.",
     "Be ready to demonstrate Save draft and close on a partly completed form, then return and complete it.",
     "Show a Completed form so the email/print PDF actions are available; ensure the customer record has an email address.",
@@ -3641,7 +3642,8 @@ COURSES['reed-script-l1-ft-s2-c2'] = {
   ],
   openItems: "None — all content verified against Help Centre articles.",
   scenes: [
-    {type:"section", heading:"Accessing and starting a form", body:"To access forms from within a job appointment, go to Menu and select Certificates/Forms. This shows all forms linked to the appointment along with their current status. To start a new form, tap the plus button and select the form type. Before the form opens, Commusoft shows the customer and work address details for Luke to review. Once confirmed, the form opens page by page. Luke works through each page, completing the required fields before moving to the next. If the job workflow includes a form task — a task that requires a specific form to be completed before Luke can leave the appointment — the form is accessible directly from the task on the job screen. Luke should complete it through the task, not separately through the menu, so that the task registers as complete."},
+    {type:"section", heading:"Mark yourself arrived first", body:"Before anything else, check the appointment is marked as Arrived. New forms can only be added to an appointment while it is at Arrived status. Once you mark yourself as left, the option to add a form disappears, and there is no warning beforehand explaining why.\n\nThis catches people out because nothing is broken and nothing looks wrong. The plus button simply is not there. If you reach the end of a job, mark yourself as left, and then remember the certificate, you are already too late. Add the form before you close the appointment down."},
+    {type:"section", heading:"Accessing and starting a form", body:"To access forms from within a job appointment, go to Menu and select Certificates/Forms. This shows all forms linked to the appointment along with their current status. To start a new form, tap the plus button and select the form type. Before the form opens, Commusoft shows the customer and work address details for Luke to review. Once confirmed, the form opens page by page. Luke works through each page, completing the required fields before moving to the next.\n\nIf the form you need is not in the list, swipe down on the forms list to refresh it. The app holds the list it downloaded last, so a form the office activated or amended this morning will not appear until the device fetches it again. That single gesture solves most cases of a form being missing.\n\nIf the job workflow includes a form task — a task that requires a specific form to be completed before Luke can leave the appointment — the form is accessible directly from the task on the job screen. Luke should complete it through the task, not separately through the menu, so that the task registers as complete."},
     {type:"section", heading:"Saving as draft or completing", body:"If Luke needs to pause part way through — the customer is unavailable to sign, or he needs to check a measurement — he can save the form as a draft. To do this, he taps back through the pages until the option to Save draft and close appears. The draft is saved on the device and he can return to it later. While a form is in draft, it is not on the office record and it is not visible to the office team. When all pages and fields are complete, Luke selects Save. This submits the form as complete. A completed form is locked immediately — it cannot be edited after this point. If a form needs to be changed after submission, Luke or the office can clone it, which creates an editable copy as a new draft, and complete the corrected version."},
     {type:"reflection", label:"Reflection prompt", question:"Before we continue: have you ever needed to complete a compliance certificate on paper and then enter the information again in a separate system?", options:["Yes","No"], correct:"Yes", feedback:"The on-site form in Commusoft replaces both steps. Luke completes it once on the device, and it is available to the office immediately when it syncs — no re-entry needed.", feedbackAlt:"The on-site form is your single step. Complete it on site, save it as complete, and it syncs to the office record automatically. No follow-up paperwork is needed."},
     {type:"section", heading:"Form statuses", body:"After Luke saves a form as complete, it moves through four statuses. Draft means the form was saved part way through and has not yet been submitted — it is only on Luke's device. Waiting to sync means the form was submitted but is queued for upload, which happens when the device connects to a network. Completed means the form has synced successfully to the server and is available on the office record. Failed to sync means the upload did not complete and Luke needs to retry when he has a better connection. Once a form reaches Completed status, it can be printed as a PDF or emailed directly to the customer from within the app. Luke can email the certificate to the customer before he leaves the site if that is what was agreed."},
@@ -3656,7 +3658,7 @@ COURSES['reed-script-l1-ft-s2-c3'] = {
   title: "Attach photos, video, and documents on site",
   duration: "4 min",
   persona: "Field teams",
-  characters: "Luke Simmons (Technician)",
+  characters: "Luke Patterson (Senior Solar Technician, Senior engineer)",
   scenario: "Luke has completed the solar installation and needs to photograph the finished work, scan the signed customer paperwork, and make sure the files are accessible to the office when he leaves site.",
   objectives: [
     "Access the file attachment area from a job appointment in the mobile app",
@@ -3679,7 +3681,7 @@ COURSES['reed-script-l1-ft-s2-c3'] = {
   ],
   productionNotes: [
     "Record on the mobile app — this is the engineer's phone workflow.",
-    "Log in as a field technician (Luke Simmons in the scenario) on an Arrived appointment.",
+    "Log in as a field technician (Luke Patterson in the scenario) on an Arrived appointment.",
     "Have a job with several existing attachments so filter, search and batch actions are meaningful.",
     "Note the device platform: Choose from gallery supports more file types on Android than iOS — record on Android if you want to show the fuller list.",
     "Be ready to demonstrate Scan document by capturing a signed paper form as a PDF.",
@@ -3748,7 +3750,7 @@ COURSES['reed-script-l1-ft-s2-c5'] = {
   title: "Complete the job report",
   duration: "4 min",
   persona: "Field teams",
-  characters: "Luke Simmons (Technician)",
+  characters: "Luke Patterson (Senior Solar Technician, Senior engineer)",
   scenario: "Luke has finished the solar installation work on site. All tasks are done and he needs to close out the appointment correctly — completing the job report, getting the customer to sign, and making the right call when the app asks whether the job is complete.",
   objectives: [
     "Complete the required on-site tasks before leaving an appointment",
@@ -3771,7 +3773,7 @@ COURSES['reed-script-l1-ft-s2-c5'] = {
   ],
   productionNotes: [
     "Record on the mobile app — this is the engineer's phone workflow.",
-    "Log in as a field technician (Luke Simmons in the scenario) with on-site work finished.",
+    "Log in as a field technician (Luke Patterson in the scenario) with on-site work finished.",
     "Have a job with at least one mandatory on-site task so the block-before-Leave behaviour can be shown.",
     "Be ready to collect a digital signature on the device and add completion notes.",
     "Set up automatic job report sending if you want to show the report going to the customer on close; ensure the customer record has an email address.",
@@ -3838,7 +3840,7 @@ COURSES['reed-script-l1-ft-s2-challenge'] = {
   title: "Series challenge — Job complete, report sent",
   duration: "3 min",
   persona: "Field teams",
-  characters: "Luke Simmons (Technician); Nathan Cole (Technician)",
+  characters: "Luke Patterson (Senior Solar Technician, Senior engineer); Nathan Cole (Technician)",
   scenario: "SunComfort has two technicians with different situations landing in the same afternoon. Luke is finishing a two-day solar installation and Nathan encounters an access problem at his final job. Each decision is raised in turn, then the right call is worked through.",
   objectives: [
     "Apply the correct status at each stage of the field appointment workflow",
@@ -3859,7 +3861,7 @@ COURSES['reed-script-l1-ft-s2-challenge'] = {
   ],
   productionNotes: [
     "Record on the mobile app — this is the engineer's phone workflow.",
-    "This is a challenge built from Series 2 Walkthroughs 1 to 6; reuse the same demo technician logins (Luke Simmons, Nathan Cole).",
+    "This is a challenge built from Series 2 Walkthroughs 1 to 6; reuse the same demo technician logins (Luke Patterson, Nathan Cole).",
     "Have the four illustrative moments ready to capture: an incomplete photo task, the Is the job complete? Yes path on a finished job, the No Access flow with questions and a photo, and an Abort with a reason.",
     "Use test jobs for any destructive beats — selecting Yes at Is the job complete? closes the whole job.",
     "Keep the dialogue exchanges tight; the screen recording supports the spoken decisions rather than leading them.",
@@ -3880,7 +3882,7 @@ COURSES['reed-script-l1-ft-s3-c1'] = {
   title: "Complete an on-site task checklist",
   duration: "3 min",
   persona: "Field teams",
-  characters: "Luke Simmons (Technician)",
+  characters: "Luke Patterson (Senior Solar Technician, Senior engineer)",
   scenario: "Luke opens his appointment for a solar panel service and finds a task list waiting for him on the job screen. The list includes a general task, a photo task, and a form task. He needs to complete all three before he can leave the appointment.",
   objectives: [
     "Identify the three types of on-site task that can appear on a job",
@@ -3901,7 +3903,7 @@ COURSES['reed-script-l1-ft-s3-c1'] = {
     {section:"Knowledge check", media:"Expanding section", note:"Knowledge check, revealed on click in the article."}
   ],
   productionNotes: [
-    "Record on the mobile app (engineer's phone), logged in as a field technician (Luke Simmons in the scenario).",
+    "Record on the mobile app (engineer's phone), logged in as a field technician (Luke Patterson in the scenario).",
     "Have an appointment in Arrived status with an on-site task list configured: at least one general task, one photo task, and one form task.",
     "For the photo task, show the camera/gallery opening from inside the task interface — and contrast with a photo taken on the device camera saved to the gallery that does not register.",
     "For the form task, show the form opening directly from the task; note that opening the same form via Menu, Certificates/Forms does not count as task completion.",
@@ -4011,7 +4013,7 @@ COURSES['reed-script-l1-ft-s3-c4'] = {
   title: "Log your hours with the timecard",
   duration: "3 min",
   persona: "Field teams",
-  characters: "Luke Simmons (Technician)",
+  characters: "Luke Patterson (Senior Solar Technician, Senior engineer)",
   scenario: "SunComfort is rolling out the mobile timecard so technicians can log their own hours. Luke needs to understand how the widget works before his first day using it.",
   objectives: [
     "Locate and use the timecard widget on the mobile app home screen",
@@ -4032,7 +4034,7 @@ COURSES['reed-script-l1-ft-s3-c4'] = {
     {section:"Knowledge check", media:"Expanding section", note:"Knowledge check, revealed on click in the article."}
   ],
   productionNotes: [
-    "Record on the mobile app (engineer's phone), logged in as a field technician (Luke Simmons in the scenario).",
+    "Record on the mobile app (engineer's phone), logged in as a field technician (Luke Patterson in the scenario).",
     "Mobile timecards must be enabled in account settings so the widget is visible on the home screen.",
     "Demonstrate the full Clock in → Start break → End break → Clock out sequence.",
     "Have a previous-day timecard left open (not clocked out) so the amend-before-clock-in beat can be shown.",
@@ -4054,7 +4056,7 @@ COURSES['reed-script-l1-ft-s3-c5'] = {
   title: "Invoice a job from the field",
   duration: "4 min",
   persona: "Field teams",
-  characters: "Luke Simmons (Technician)",
+  characters: "Luke Patterson (Senior Solar Technician, Senior engineer)",
   scenario: "Luke has completed a straightforward solar panel service call. The customer wants to pay immediately and Luke has been authorised to raise the invoice on site. He needs to raise it from the app, confirm the contents, and send it before leaving.",
   objectives: [
     "Access the Invoices section of a job from the mobile app",
@@ -4076,7 +4078,7 @@ COURSES['reed-script-l1-ft-s3-c5'] = {
     {section:"Knowledge check", media:"Expanding section", note:"Knowledge check, revealed on click in the article."}
   ],
   productionNotes: [
-    "Record on the mobile app (engineer's phone), logged in as a field technician (Luke Simmons in the scenario).",
+    "Record on the mobile app (engineer's phone), logged in as a field technician (Luke Patterson in the scenario).",
     "Have a complete, single-visit job (a solar panel service in the scenario) with billable items already recorded — parts, labour, and/or service charges — so the invoice builds from real job costs.",
     "Confirm the technician has authorisation to invoice from the field in the demo account.",
     "Make sure the customer record has a correct billing address and an email so the send step (email or invoice portal) is live.",
@@ -4099,7 +4101,7 @@ COURSES['reed-script-l1-ft-s3-c6'] = {
   title: "Take a payment on site",
   duration: "3 min",
   persona: "Field teams",
-  characters: "Luke Simmons (Technician)",
+  characters: "Luke Patterson (Senior Solar Technician, Senior engineer)",
   scenario: "Luke has completed a solar panel service and raised the invoice on site. The customer wants to pay by card before he leaves. Luke needs to process the payment through the SumUp integration without interrupting the confirmation flow.",
   objectives: [
     "Access the payment section of a job from the mobile app",
@@ -4121,7 +4123,7 @@ COURSES['reed-script-l1-ft-s3-c6'] = {
     {section:"Knowledge check", media:"Expanding section", note:"Knowledge check, revealed on click in the article."}
   ],
   productionNotes: [
-    "Record on the mobile app (engineer's phone), logged in as a field technician (Luke Simmons in the scenario).",
+    "Record on the mobile app (engineer's phone), logged in as a field technician (Luke Patterson in the scenario).",
     "Have a complete job with an invoice raised or ready to be settled so the payment section can be opened.",
     "The SumUp integration must be set up: active SumUp account linked to Commusoft, SumUp app installed on the device, a SumUp card reader connected, and a compatible plan (UK: Go Paperless, Customer Journey, Automation).",
     "Capture the auto-redirect from SumUp back to Commusoft — the key beat is not closing the SumUp app before the redirect completes.",
@@ -15933,7 +15935,7 @@ INBOX_FILES["reed-script-l1-ft-s2-c1"] = `# Reed — Script: Travel to a job and
 
 **Target persona:** Field teams (technicians)
 
-**SunComfort characters:** Luke Simmons (Technician)
+**SunComfort characters:** Luke Patterson (Senior Solar Technician, Senior engineer)
 
 **Scenario:** Luke has his appointments for the day loaded in the Commusoft mobile app. He needs to set the right status at the right moment so the office knows where he is and the customer knows when to expect him.
 
@@ -16007,7 +16009,7 @@ Your assigned appointments appear on the home screen and in the diary tab of the
 **Line breaks within sections:** none
 **Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
 **First person (I/my):** not used
-**Characters from approved roster:** Luke Simmons (Technician)
+**Characters from approved roster:** Luke Patterson (Senior Solar Technician, Senior engineer)
 **Sources used:** Commusoft — Managing jobs on the mobile app (https://help.commusoft.com/en/articles/284397-managing-jobs-on-the-mobile-app); Appointment statuses (https://help.commusoft.com/en/articles/216882-appointment-statuses)
 **Pre-submission checklist:** complete
 **Flint revisions:** None required.
@@ -16028,13 +16030,15 @@ INBOX_FILES["reed-script-l1-ft-s2-c2"] = `# Reed — Script: Complete your on-si
 ---
 
 **Learning objectives**
-1. Access and complete an on-site form in the Commusoft mobile app
-2. Save a form as a draft when it cannot be finished in one session
-3. Identify the four form statuses and explain what each means for the record
+1. Add a form to an appointment while it is at Arrived status, and explain why that matters
+2. Refresh the forms list when a form you expect is not showing
+3. Access and complete an on-site form in the Commusoft mobile app
+4. Save a form as a draft when it cannot be finished in one session
+5. Identify the four form statuses and explain what each means for the record
 
 **Target persona:** Field teams (technicians)
 
-**SunComfort characters:** Luke Simmons (Technician)
+**SunComfort characters:** Luke Patterson (Senior Solar Technician, Senior engineer)
 
 **Scenario:** Luke is on site at a solar installation and needs to complete a compliance certificate. He has all the details but the form is long and the customer needs a copy emailed immediately on completion.
 
@@ -16042,7 +16046,7 @@ INBOX_FILES["reed-script-l1-ft-s2-c2"] = `# Reed — Script: Complete your on-si
 
 **Target audience:** Field team staff at field service businesses using Commusoft — technicians who complete compliance certificates, risk assessments, or inspection records on the mobile app. Assumes Commusoft Compass (Layer 1) and Field teams Series 2 Walkthrough 1 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
 
-**Assumed starting point:** Field teams Series 2 Walkthrough 1 complete. Appointment marked as Arrived.
+**Assumed starting point:** Field teams Series 2 Walkthrough 1 complete. The technician knows how to travel to a job and mark arrival, which this walkthrough then treats as a precondition rather than assuming it is understood.
 
 **Main objective beyond learning objectives:** A form saved as draft is not on the office record — it exists only on the device. A form saved as complete is locked and synced. Technicians who understand the difference between the two, and what each status means for the paperwork trail, will complete forms correctly the first time and avoid situations where a customer asks for their certificate and the office cannot find it.
 
@@ -16057,11 +16061,21 @@ INBOX_FILES["reed-script-l1-ft-s2-c2"] = `# Reed — Script: Complete your on-si
 
 ---
 
+## Mark yourself arrived first
+
+Before anything else, check the appointment is marked as Arrived. New forms can only be added to an appointment while it is at Arrived status. Once you mark yourself as left, the option to add a form disappears, and there is no warning beforehand explaining why.
+
+This catches people out because nothing is broken and nothing looks wrong. The plus button simply is not there. If you reach the end of a job, mark yourself as left, and then remember the certificate, you are already too late. Add the form before you close the appointment down.
+
+---
+
 ## Accessing and starting a form
 
 To access forms from within a job appointment, go to Menu and select Certificates/Forms. This shows all forms linked to the appointment along with their current status. To start a new form, tap the plus button and select the form type. Before the form opens, Commusoft shows the customer and work address details for Luke to review. Once confirmed, the form opens page by page. Luke works through each page, completing the required fields before moving to the next.
 
-If the job workflow includes a form task — a task that requires a specific form to be completed before Luke can leave the appointment — the form is accessible directly from the task on the job screen. Luke should complete it through the task, not separately through the menu, so that the task registers as complete.
+If the form you need is not in the list, swipe down on the forms list to refresh it. The app holds the list it downloaded last, so a form the office activated or amended this morning will not appear until the device fetches it again. That single gesture solves most cases of a form being missing.
+
+If the job workflow includes a form task, a task that requires a specific form to be completed before Luke can leave the appointment, the form is accessible directly from the task on the job screen. Luke should complete it through the task, not separately through the menu, so that the task registers as complete.
 
 ---
 
@@ -16100,7 +16114,7 @@ D) The error cannot be corrected — the form is locked and a new form must be r
 
 ## Summary
 
-Access forms for a job through Menu, Certificates/Forms, and tap the plus button to start a new one. If a form task is in the workflow, complete it through the task on the job screen — not separately. Work through the pages and save as draft if you need to pause. A draft is only on your device and is not visible to the office. Select Save when the form is complete — it is locked immediately and queued to sync. The four statuses are: Draft (on device only), Waiting to sync (submitted but queued), Completed (synced and on the office record), and Failed to sync (retry needed). Once completed, email or print the form directly from the app before leaving site.
+Mark yourself arrived before anything else, because a form cannot be added once you have marked yourself as left. Access forms for a job through Menu, Certificates/Forms, and tap the plus button to start a new one. If the form you need is missing, swipe down to refresh the list. If a form task is in the workflow, complete it through the task on the job screen — not separately. Work through the pages and save as draft if you need to pause. A draft is only on your device and is not visible to the office. Select Save when the form is complete — it is locked immediately and queued to sync. The four statuses are: Draft (on device only), Waiting to sync (submitted but queued), Completed (synced and on the office record), and Failed to sync (retry needed). Once completed, email or print the form directly from the app before leaving site.
 
 ---
 
@@ -16110,7 +16124,7 @@ Access forms for a job through Menu, Certificates/Forms, and tap the plus button
 **Line breaks within sections:** none
 **Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
 **First person (I/my):** not used
-**Characters from approved roster:** Luke Simmons (Technician)
+**Characters from approved roster:** Luke Patterson (Senior Solar Technician, Senior engineer)
 **Sources used:** Commusoft — Custom forms in the mobile app (https://help.commusoft.com/en/articles/258920-custom-forms-in-the-mobile-app); Managing jobs on the mobile app (https://help.commusoft.com/en/articles/284397-managing-jobs-on-the-mobile-app); Configuring on-site tasks (https://help.commusoft.com/en/articles/561197-configuring-on-site-tasks)
 **Pre-submission checklist:** complete
 **Flint revisions:** None required.
@@ -16137,7 +16151,7 @@ INBOX_FILES["reed-script-l1-ft-s2-c3"] = `# Reed — Script: Attach photos, vide
 
 **Target persona:** Field teams (technicians)
 
-**SunComfort characters:** Luke Simmons (Technician)
+**SunComfort characters:** Luke Patterson (Senior Solar Technician, Senior engineer)
 
 **Scenario:** Luke has completed the solar installation and needs to photograph the finished work, scan the signed customer paperwork, and make sure the files are accessible to the office when he leaves site.
 
@@ -16213,7 +16227,7 @@ Access file attachments from a job appointment through Menu, then Attached files
 **Line breaks within sections:** none
 **Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
 **First person (I/my):** not used
-**Characters from approved roster:** Luke Simmons (Technician)
+**Characters from approved roster:** Luke Patterson (Senior Solar Technician, Senior engineer)
 **Sources used:** Commusoft — Attaching files in the app (https://help.commusoft.com/en/articles/216877-attaching-files-in-the-app); Managing jobs on the mobile app (https://help.commusoft.com/en/articles/284397-managing-jobs-on-the-mobile-app); Configuring on-site tasks (https://help.commusoft.com/en/articles/561197-configuring-on-site-tasks)
 **Pre-submission checklist:** complete
 **Flint revisions:** None required.
@@ -16341,7 +16355,7 @@ INBOX_FILES["reed-script-l1-ft-s2-c5"] = `# Reed — Script: Complete the job re
 
 **Target persona:** Field teams (technicians)
 
-**SunComfort characters:** Luke Simmons (Technician)
+**SunComfort characters:** Luke Patterson (Senior Solar Technician, Senior engineer)
 
 **Scenario:** Luke has finished the solar installation work on site. All tasks are done and he needs to close out the appointment correctly — completing the job report, getting the customer to sign, and making the right call when the app asks whether the job is complete.
 
@@ -16415,7 +16429,7 @@ Before setting Leave status, complete all mandatory on-site tasks — general ta
 **Line breaks within sections:** none
 **Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
 **First person (I/my):** not used
-**Characters from approved roster:** Luke Simmons (Technician)
+**Characters from approved roster:** Luke Patterson (Senior Solar Technician, Senior engineer)
 **Sources used:** Commusoft — Managing jobs on the mobile app (https://help.commusoft.com/en/articles/284397-managing-jobs-on-the-mobile-app); Appointment statuses (https://help.commusoft.com/en/articles/216882-appointment-statuses); Configuring on-site tasks (https://help.commusoft.com/en/articles/561197-configuring-on-site-tasks)
 **Pre-submission checklist:** complete
 **Flint revisions:** None required.
@@ -16537,7 +16551,7 @@ INBOX_FILES["reed-script-l1-ft-s2-challenge"] = `# Reed — Script: Series chall
 
 **Target persona:** Field teams (technicians)
 
-**SunComfort characters:** Luke Simmons (Technician); Nathan Cole (Technician)
+**SunComfort characters:** Luke Patterson (Senior Solar Technician, Senior engineer); Nathan Cole (Technician)
 
 **Scenario:** SunComfort has two technicians with different situations landing in the same afternoon. Luke is finishing a two-day solar installation and Nathan encounters an access problem at his final job. Each decision is raised in turn, then the right call is worked through.
 
@@ -16633,7 +16647,7 @@ A photo task completed through the task interface, not the gallery. A Yes at the
 **Line breaks within sections:** none
 **Second person present tense:** used throughout for learner address
 **First person (I/my):** not used
-**Characters from approved roster:** Luke Simmons (Technician, referenced in scenario); Nathan Cole (Technician, referenced in scenario)
+**Characters from approved roster:** Luke Patterson (Technician, referenced in scenario); Nathan Cole (Technician, referenced in scenario)
 **Sources used:** Commusoft — Managing jobs on the mobile app (https://help.commusoft.com/en/articles/284397-managing-jobs-on-the-mobile-app); Appointment statuses (https://help.commusoft.com/en/articles/216882-appointment-statuses); Configuring on-site tasks (https://help.commusoft.com/en/articles/561197-configuring-on-site-tasks); Attaching files in the app (https://help.commusoft.com/en/articles/216877-attaching-files-in-the-app)
 **Pre-submission checklist:** complete
 **Flint revisions:** None required.
@@ -16660,7 +16674,7 @@ INBOX_FILES["reed-script-l1-ft-s3-c1"] = `# Reed — Script: Complete an on-site
 
 **Target persona:** Field teams (technicians)
 
-**SunComfort characters:** Luke Simmons (Technician)
+**SunComfort characters:** Luke Patterson (Senior Solar Technician, Senior engineer)
 
 **Scenario:** Luke opens his appointment for a solar panel service and finds a task list waiting for him on the job screen. The list includes a general task, a photo task, and a form task. He needs to complete all three before he can leave the appointment.
 
@@ -16730,7 +16744,7 @@ On-site tasks appear on the job screen and must be completed through their own i
 **Line breaks within sections:** none
 **Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
 **First person (I/my):** not used
-**Characters from approved roster:** Luke Simmons (Technician)
+**Characters from approved roster:** Luke Patterson (Senior Solar Technician, Senior engineer)
 **Sources used:** Commusoft — Configuring on-site tasks (https://help.commusoft.com/en/articles/561197-configuring-on-site-tasks); Managing jobs on the mobile app (https://help.commusoft.com/en/articles/284397-managing-jobs-on-the-mobile-app)
 **Pre-submission checklist:** complete
 **Flint revisions:** None required.
@@ -16953,7 +16967,7 @@ INBOX_FILES["reed-script-l1-ft-s3-c4"] = `# Reed — Script: Log your hours with
 
 **Target persona:** Field teams (technicians)
 
-**SunComfort characters:** Luke Simmons (Technician)
+**SunComfort characters:** Luke Patterson (Senior Solar Technician, Senior engineer)
 
 **Scenario:** SunComfort is rolling out the mobile timecard so technicians can log their own hours. Luke needs to understand how the widget works before his first day using it.
 
@@ -17023,7 +17037,7 @@ The timecard widget appears on the app home screen and is enabled by the office 
 **Line breaks within sections:** none
 **Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
 **First person (I/my):** not used
-**Characters from approved roster:** Luke Simmons (Technician)
+**Characters from approved roster:** Luke Patterson (Senior Solar Technician, Senior engineer)
 **Sources used:** Commusoft — Timecard widget (https://help.commusoft.com/en/articles/216885-timecard-widget)
 **Pre-submission checklist:** complete
 **Flint revisions:** None required.
@@ -17050,7 +17064,7 @@ INBOX_FILES["reed-script-l1-ft-s3-c5"] = `# Reed — Script: Invoice a job from 
 
 **Target persona:** Field teams (technicians)
 
-**SunComfort characters:** Luke Simmons (Technician)
+**SunComfort characters:** Luke Patterson (Senior Solar Technician, Senior engineer)
 
 **Scenario:** Luke has completed a straightforward solar panel service call. The customer wants to pay immediately and Luke has been authorised to raise the invoice on site. He needs to raise it from the app, confirm the contents, and send it before leaving.
 
@@ -17124,7 +17138,7 @@ Access the Invoices section from within the job appointment in the app. Raising 
 **Line breaks within sections:** none
 **Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
 **First person (I/my):** not used
-**Characters from approved roster:** Luke Simmons (Technician)
+**Characters from approved roster:** Luke Patterson (Senior Solar Technician, Senior engineer)
 **Sources used:** Commusoft — Managing jobs on the mobile app (https://help.commusoft.com/en/articles/284397-managing-jobs-on-the-mobile-app)
 **Pre-submission checklist:** complete
 **Flint revisions:** None required.
@@ -17151,7 +17165,7 @@ INBOX_FILES["reed-script-l1-ft-s3-c6"] = `# Reed — Script: Take a payment on s
 
 **Target persona:** Field teams (technicians)
 
-**SunComfort characters:** Luke Simmons (Technician)
+**SunComfort characters:** Luke Patterson (Senior Solar Technician, Senior engineer)
 
 **Scenario:** Luke has completed a solar panel service and raised the invoice on site. The customer wants to pay by card before he leaves. Luke needs to process the payment through the SumUp integration without interrupting the confirmation flow.
 
@@ -17225,7 +17239,7 @@ From within the job appointment, open the payment section and select Add a payme
 **Line breaks within sections:** none
 **Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
 **First person (I/my):** not used
-**Characters from approved roster:** Luke Simmons (Technician)
+**Characters from approved roster:** Luke Patterson (Senior Solar Technician, Senior engineer)
 **Sources used:** Commusoft — SumUp integration (https://help.commusoft.com/en/articles/216658); Managing jobs on the mobile app (https://help.commusoft.com/en/articles/284397-managing-jobs-on-the-mobile-app)
 **Pre-submission checklist:** complete
 **Flint revisions:** None required.
@@ -28977,15 +28991,15 @@ INBOX_FILES["reed-script-l1-ft-series1"] = `# Reed — Script: Getting started o
 4. Identify the main appointment statuses and understand what each one signals to the office and the customer
 
 **Target persona:** Field teams
-**SunComfort characters:** Luke Simmons (Technician — logged-in user for all screen recordings)
-**Scenario:** Luke Simmons is starting his first day using the Commusoft mobile app at SunComfort. Before his first job, he needs to know how to log in, understand what the home screen is showing him, locate his assigned jobs, and know what the appointment statuses mean and when to use them.
+**SunComfort characters:** Luke Patterson (Technician — logged-in user for all screen recordings)
+**Scenario:** Luke Patterson is starting his first day using the Commusoft mobile app at SunComfort. Before his first job, he needs to know how to log in, understand what the home screen is showing him, locate his assigned jobs, and know what the appointment statuses mean and when to use them.
 **Estimated length:** 13 min
 
 ---
 
 ## Production Setup
 
-- **Logged-in user:** Luke Simmons (Technician — logged-in user for all screen recordings)
+- **Logged-in user:** Luke Patterson (Technician — logged-in user for all screen recordings)
 - **Customer record:** see scenario
 - **Existing data:** see Build by section notes below
 - **Assets required:** None

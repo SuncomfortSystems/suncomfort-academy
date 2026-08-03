@@ -880,8 +880,12 @@
         </div>
         <div class="walkthrough-grid">
           <div class="walkthrough-card" onclick="openPanel('reed-script-l3-forms-c1')"><div class="walkthrough-num">Walkthrough 1</div><div class="walkthrough-title">Build your first custom form</div><div class="walkthrough-meta"><span class="meta-pill">6 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
-          <div class="walkthrough-card" onclick="openPanel('reed-script-l3-forms-c2')"><div class="walkthrough-num">Walkthrough 2</div><div class="walkthrough-title">Assign forms and control when they appear</div><div class="walkthrough-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
-          <div class="walkthrough-card" onclick="openPanel('reed-script-l3-forms-c3')"><div class="walkthrough-num">Walkthrough 3</div><div class="walkthrough-title">Complete forms on mobile and review in the office</div><div class="walkthrough-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Field teams / Office teams</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
+<div class="walkthrough-card" onclick="openPanel('reed-script-l3-forms-c2word')"><div class="walkthrough-num">Walkthrough 2</div><div class="walkthrough-title">Design your Word document template</div><div class="walkthrough-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+<div class="walkthrough-card" onclick="openPanel('reed-script-l3-forms-c3tag')"><div class="walkthrough-num">Walkthrough 3</div><div class="walkthrough-title">Tag the document with the add-in</div><div class="walkthrough-meta"><span class="meta-pill">7 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+
+
+          <div class="walkthrough-card" onclick="openPanel('reed-script-l3-forms-c2')"><div class="walkthrough-num">Walkthrough 4</div><div class="walkthrough-title">Assign forms and control when they appear</div><div class="walkthrough-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Admins</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
+          <div class="walkthrough-card" onclick="openPanel('reed-script-l3-forms-c3')"><div class="walkthrough-num">Walkthrough 5</div><div class="walkthrough-title">Complete forms on mobile and review in the office</div><div class="walkthrough-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Field teams / Office teams</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
           <div class="walkthrough-card" onclick="openPanel('reed-script-l3-forms-challenge')"><div class="walkthrough-num">Challenge</div><div class="walkthrough-title">Form built, assigned, and signed off</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">All roles</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
         </div>
       </div>
@@ -9449,6 +9453,94 @@ COURSES['l0-13'] = {
     {type:"section", heading:"Before you leave the builder", body:"Whatever feature brought you here, finish by walking the form yourself on the devices your team actually uses. iOS and Android behave differently and a set of options that sits comfortably on one can be cramped on the other, which sometimes means changing a toggle to a dropdown.\\n\\nThe builder is the same everywhere, so this is the only time you need to learn it. What changes between features is what you are building and who completes it, not how the fields work."}
   ],
   openItems: "1. [OPEN — confirm the exact on-screen label of the asset tick box on a list page. Existing content refers to it as \"select page asset first\" and a support recording calls it engaging with the appliance or asset system. The two may be different versions of the interface.] 2. [OPEN — confirm the exact label and behaviour of visible on list. It is demonstrated in a support recording and asked about in tickets, but it does not appear in the Help Centre form builder article, so the wording has not been verified against documentation.] 3. [OPEN — confirm whether dependency conditions can only reference fields on the same page. Existing content states the question must be on the current page, but this has not been checked against multi-page forms.] 4. [OPEN — the Help Centre article describes \"24+\" input types while the previous course covered around twenty. The reference table this walkthrough points at should be reconciled with the product before it is published.]"
+};
+
+COURSES['reed-script-l3-forms-c2word'] = {
+  contentType: "Walkthrough",
+  pathLabel: "L6 Custom Forms",
+  title: "Design your Word document template",
+  duration: "5 min",
+  persona: "Decision makers",
+  characters: "Sarah Mitchell (Managing Director, Owner/Manager)",
+  scenario: "Sarah has configured the Solar PV Annual Service Report in Commusoft and now needs the document that customers will actually receive, so she starts from the Commusoft portrait template and shapes it around SunComfort's branding.",
+  objectives: [
+    "Start from the Commusoft portrait or landscape template rather than a blank document",
+    "Explain what each region of the template is for, and why the header and footer carry the details that must repeat",
+    "Distinguish registered business details, site details and customer details, and recognise when two of them are the same",
+    "Build the body of the form using tables, and avoid the two formatting traps that catch people out",
+    "Apply your brand colours to column headings so the finished certificate looks like your company's document"
+  ],
+  productionSetup: [
+    "Logged-in user: Sarah Mitchell, Managing Director, Owner/Manager.",
+    "Customer record: None. This walkthrough happens in Word.",
+    "Existing data: Solar PV Annual Service Report configured and saved in Commusoft with its pages and fields complete, status showing no Word document available. The Commusoft portrait and landscape templates open in Word. SunComfort logo file available on the recording machine. [OPEN — confirm how learners obtain the two templates; the source video says they are available on request.]",
+    "Assets required: Commusoft portrait template, Commusoft landscape template, SunComfort logo image file."
+  ],
+  buildBySection: [
+    {section:"Start from the template, not a blank page", media:"Written text", note:"Article introduction. Include the template downloads here if they are made available."},
+    {section:"The header and footer earn their place", media:"Screen recording", note:"Word capture. Open the portrait template, show the header with certificate name and logo, then the footer with page reference and document number field. Show a two-page version so the repeat is visible."},
+    {section:"Reflection prompt, multi-page branding", media:"Expanding section", note:"Reflection."},
+    {section:"Three sets of details, and why they differ", media:"Screenshot", note:"Still of the three detail blocks with the date and accreditation row. Clearer as a labelled still than in motion."},
+    {section:"Building the body with tables", media:"Screen recording + gif", note:"Word capture. Insert a table, merge a cell, split a cell into label and input. Gif the two-tables-merging problem and the blank line that prevents it."},
+    {section:"Making it look like your document", media:"Screen recording", note:"Word capture. Select a heading cell, Home tab, fill colour, custom colour by hex, adjust text colour. Then the logo realignment after typing a longer name."},
+    {section:"Ready to tag", media:"Written text", note:"Closing paragraph and the handover to Walkthrough 3."}
+  ],
+  scenes: [
+    {type:"section", heading:"Start from the template, not a blank page", body:"Your form is configured and saved, and Commusoft will not let you activate it yet, because there is no document for the answers to land in. That document is the part your customer actually receives, and building it from a blank page is where most people lose an afternoon.\\n\\nCommusoft provides two templates to work from, one portrait and one landscape. Both are laid out for the way certificates are actually structured, with the regions already in place. Open the portrait one and shape it around your business rather than starting from nothing."},
+    {type:"section", heading:"The header and footer earn their place", body:"Look at the header first. It holds the certificate name and your company logo, and it sits in the header for a specific reason: anything placed there repeats automatically if the finished document runs onto a second page. A long service record with several pages carries your branding on every one of them without you doing anything further.\\n\\nThe footer works the same way. It carries a page reference, and it also carries a standard field input from the Commusoft add-in, which gives every page a consistent certificate or document number. On a lengthy document that is what stops loose pages becoming untraceable."},
+    {type:"reflection", question:"Have you ever received a multi-page document where only the first page was branded?", options:["Yes", "No"], correct:"", feedback:"Anything you place in the header or footer repeats on every page automatically. Anything you place in the body does not. That single distinction is why the templates put the certificate name, the logo and the document number where they are."},
+    {type:"section", heading:"Three sets of details, and why they differ", body:"Below the header the template gives you three blocks that are easy to confuse. Registered business details are your own company. Site details are the address where the work is carried out and where the form is completed. Customer details are the person or organisation the certificate belongs to.\\n\\nOften the site and the customer are the same, because the work happens at the customer's own address. Often they are not, and that is exactly when this matters: a landlord receiving a certificate for a tenanted property needs both, and getting them the wrong way round makes the document wrong. The template also has room for a date and an accreditation number, which is where a registered business number or a technician's accrediting body reference goes."},
+    {type:"section", heading:"Building the body with tables", body:"Everything specific to your form goes in the body, and tables are how you structure it. Delete the example table if it does not suit, and insert your own from the Insert tab.\\n\\nLeave a blank line between one table and the next. Two tables placed directly against each other merge into one, and separating them again is more work than avoiding it. Within a table, merge cells to create a full-width heading, and split a cell into rows or columns where you need a label beside an input. That label and input pairing is the pattern the whole document is built from: a cell naming the field, and a cell beside it that will hold the answer."},
+    {type:"section", heading:"Making it look like your document", body:"Column headings arrive black, which looks like a template rather than a certificate from your business. Select the heading cell, open the Home tab, and choose a fill colour. If you have brand colours, enter the hex or RGB value directly rather than picking something approximate.\\n\\nSet the text colour to suit the background you have chosen, so a dark fill carries light text. One thing to watch as you finish: typing a longer certificate name into the header pushes the logo out of position. Place your cursor after the name and backspace until the logo sits where it should."},
+    {type:"section", heading:"Ready to tag", body:"The document now has your structure, your branding and empty cells waiting for answers. What it does not have yet is any connection to Commusoft. Nothing in it knows which cell holds the customer's address or where the technician's signature belongs.\\n\\nThat connection is made with the Commusoft add-in for Word, which is Walkthrough 3. Save this document somewhere you can find it, because you will be working in the same file."}
+  ],
+  openItems: "1. [OPEN — confirm how learners obtain the portrait and landscape templates. The source video describes them as available on request, which does not work for a self-serve walkthrough. If they can be attached to the Help Centre article or the Learning page, the introduction should link them directly.] 2. [OPEN — confirm whether the landscape template differs beyond orientation. The source video states the same principles apply and does not detail any difference, so this script treats them as equivalent.] 3. [OPEN — confirm the exact name of the standard field used in the footer. The source video refers to it as a certificate number that can be changed to form number or document number, but the add-in's own label has not been verified.]"
+};
+
+COURSES['reed-script-l3-forms-c3tag'] = {
+  contentType: "Walkthrough",
+  pathLabel: "L6 Custom Forms",
+  title: "Tag the document with the add-in",
+  duration: "7 min",
+  persona: "Decision makers",
+  characters: "Sarah Mitchell (Managing Director, Owner/Manager)",
+  scenario: "Sarah has designed the layout for SunComfort's Solar PV Annual Service Report and now needs the empty cells connected to the questions technicians answer on site.",
+  objectives: [
+    "Install the Commusoft add-in in Word and sign in to your account",
+    "Tag a cell with a standard field, and explain where standard field data comes from",
+    "Choose which address tags to include, and distinguish the job address from the customer address",
+    "Build a repeating tag across a column so a list page fills several rows",
+    "Upload the finished document and keep a copy you can restore from"
+  ],
+  productionSetup: [
+    "Logged-in user: Sarah Mitchell, Managing Director, Owner/Manager, with mobile access enabled on her user account.",
+    "Customer record: None. This walkthrough happens in Word.",
+    "Existing data: Solar PV Annual Service Report configured and saved in Commusoft, including a list page for assets with at least four items allowed, so the repeating tag can be demonstrated across four rows. The Word layout from Walkthrough 2 open, with an address block, a job details block and a four row asset table, all empty. The Commusoft add-in not yet installed, so the installation can be shown from the start.",
+    "Assets required: The Word document from Walkthrough 2."
+  ],
+  buildBySection: [
+    {section:"Installing the add-in", media:"Screen recording", note:"Word capture. Insert tab, Get Add-ins, search Commusoft, add, confirm, then the sign in panel. Show a fresh install rather than an account already signed in."},
+    {section:"Choosing your form", media:"Screen recording", note:"Word capture. The form dropdown, selecting the report, next, then the panel showing standard fields above the configured sections."},
+    {section:"Standard fields, and where they come from", media:"Written text", note:"Explains the source of standard field data. No asset."},
+    {section:"Tagging a cell", media:"Screen recording + gif", note:"Word capture. Cursor into a cell, click the field, tag lands. Gif a field greying out after use, which is otherwise easy to miss."},
+    {section:"Reflection question, which address", media:"Expanding section", note:"Knowledge check."},
+    {section:"Repeating tags", media:"Screen recording + gif", note:"Word capture, and the most important recording in this walkthrough. Highlight the full column including the heading row, apply the field, answer the repeat prompt, then zoom the resulting row numbering. Gif the selection itself, slowly."},
+    {section:"Reflection question, shifted rows", media:"Expanding section", note:"Knowledge check."},
+    {section:"Uploading, and keeping a copy", media:"Screen recording", note:"Word capture of upload to Commusoft, then the form in Commusoft showing a Word document is now available."},
+    {section:"When the form changes, the document changes", media:"Written text", note:"Closing paragraph and the handover to Walkthrough 4."}
+  ],
+  scenes: [
+    {type:"section", heading:"Installing the add-in", body:"The add-in is what connects Word to your Commusoft account, and it is installed from inside Word rather than from Commusoft. Go to the Insert tab, choose Get Add-ins, search for Commusoft and add it. Word will ask you to confirm you know what you are installing.\\n\\nOnce added, the add-in appears in your ribbon and opens its own panel. Sign in with your normal Commusoft credentials. If sign in fails, the usual cause is that the user account does not have mobile access, which the add-in needs because it connects through the same route the mobile app uses."},
+    {type:"section", heading:"Choosing your form", body:"With the add-in signed in, a dropdown lists the custom forms on your account. Only forms you have configured appear, so if the one you want is missing, it has not been saved yet.\\n\\nSelect the form and click next. Below it you will see the standard fields, then the sections you built yourself, and an upload to Commusoft button that you will use at the end. Everything from here is a matter of putting your cursor in the right cell and clicking the right field."},
+    {type:"section", heading:"Standard fields, and where they come from", body:"The standard fields are worth understanding before you tag anything, because they save your technicians a great deal of typing. They cover the certificate number Commusoft generates, your accreditation details, your company details, the customer's details, the job address and the job details, and the details of whoever completed the form.\\n\\nNone of that is configured on your form. It is already in your account settings or generated by the system, which means it is filled in automatically on every certificate and stays right when your company details change. If your address appears on a certificate through a standard field, updating it in settings updates every future certificate without anyone reopening a document."},
+    {type:"section", heading:"Tagging a cell", body:"Tagging is two clicks. Put your cursor in the cell where the answer should appear, then click the field name in the add-in panel. The tag drops into the cell.\\n\\nOnce a field has been used it greys out in the panel, because a tag can only appear once in a document. For an address, add only the tags you actually use: if address line three is always empty for your customers, leaving it out avoids a gap in the finished certificate. Sarah also leaves the name off the site address, because a gas safety record stays valid across a change of tenant and the property is what the certificate is about."},
+    {type:"reflection", question:"A certificate is generated for a rented property. Which address should the site details come from?", options:["The customer address, since that is who the certificate belongs to", "The job address, so the certificate is always generated for the property inspected", "Either, since Commusoft uses whichever one is populated", "Both, tagged into the same cell so one fills if the other is empty"], correct:"The job address, so the certificate is always generated for the property inspected", feedback:"The job address is the site of the work. Using it means the certificate is generated for the property, not the main customer, which matters whenever those differ. A landlord with fifteen properties is one customer and fifteen job addresses, and a certificate carrying the landlord's own address instead of the inspected property is wrong."},
+    {type:"section", heading:"Repeating tags", body:"Here is the part that is genuinely fiddly, and the part support is asked about most. A tag can only be used once, so a table with four rows for four appliances cannot simply have the same tag four times. Repeating tags solve it.\\n\\nHighlight the entire column, including the heading row at the top, then click the field in the add-in. Answer yes when asked whether to repeat the tag, and the cells fill with numbered variants: row two, row three, row four. Check the numbering after it lands, because the first tag is placed from row two even though you selected from the heading down, and getting that wrong shifts every asset by one row. Repeating tags only work for fields on a list page. Anywhere else, the tag simply drops into the last cell you highlighted."},
+    {type:"reflection", question:"You highlight a four row column and apply a repeating tag, but the appliances come out shifted by one row on the finished certificate. What most likely went wrong?", options:["The list page allows more items than the table has rows", "The heading row was not included in the selection, so the numbering started in the wrong place", "Repeating tags were applied to a field that is not on a list page", "The document was uploaded before the tags finished generating"], correct:"The heading row was not included in the selection, so the numbering started in the wrong place", feedback:"Select the whole column including the heading row. The first tag is placed from row two, so a selection that starts one row lower pushes everything down. It is worth checking the numbering visually before uploading, because it looks entirely correct until real data arrives."},
+    {type:"section", heading:"Uploading, and keeping a copy", body:"When every cell is tagged, use upload to Commusoft in the add-in panel. That sends the document back to your account, layout, branding, tags and all, and the form can be activated once it arrives.\\n\\nUploading does not save the document to your machine, so save your own copy as well. Keep it somewhere you will find it, named with a version number. If someone later edits the live form and certificates stop generating correctly, that copy is what you restore from."},
+    {type:"section", heading:"When the form changes, the document changes", body:"One habit will save you more trouble than anything else here. The configuration and the document have to stay in step.\\n\\nIf you remove a field from the form, remove its tag from the document. If you add a field and want it on the certificate, add its tag. A tag left behind for a field that no longer exists, or a new question with nowhere to land, produces a certificate that looks broken to whoever receives it. Walkthrough 4 covers getting the finished form in front of your technicians."}
+  ],
+  openItems: "1. [OPEN — confirm the add-in installation path on current Word versions. Source recordings show both the Home ribbon and the Insert tab as the route to Get Add-ins, which may be a version difference.] 2. [OPEN — confirm the exact wording of the repeat prompt that appears when a column is highlighted, so the script can quote it rather than describe it.] 3. [OPEN — confirm whether the greyed-out behaviour applies to standard fields as well as configured fields, or only to fields already placed in the current document.] 4. [OPEN — Word Online will run the add-in but does not support tagging in headers and footers or repeating tags. This walkthrough assumes desktop Word throughout. Confirm whether a note about the online limitation belongs here or is adequately covered in the series prerequisites.]"
 };
 function esc(str) {
   return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
@@ -30017,6 +30109,272 @@ The builder is the same everywhere, so this is the only time you need to learn i
 2. [OPEN — confirm the exact label and behaviour of visible on list. It is demonstrated in a support recording and asked about in tickets, but it does not appear in the Help Centre form builder article, so the wording has not been verified against documentation.]
 3. [OPEN — confirm whether dependency conditions can only reference fields on the same page. Existing content states the question must be on the current page, but this has not been checked against multi-page forms.]
 4. [OPEN — the Help Centre article describes "24+" input types while the previous course covered around twenty. The reference table this walkthrough points at should be reconciled with the product before it is published.]
+`;
+INBOX_FILES["reed-script-l3-forms-c2word"] = `# Design your Word document template
+
+**Series:** Custom Forms | **Walkthrough:** 2 of 4 | **Duration:** 5 min | **Audience:** Decision makers
+**Voice:** Archer (Clueso AI voiceover)
+**Content type:** Walkthrough
+
+---
+
+**Learning objectives**
+
+1. Start from the Commusoft portrait or landscape template rather than a blank document
+2. Explain what each region of the template is for, and why the header and footer carry the details that must repeat
+3. Distinguish registered business details, site details and customer details, and recognise when two of them are the same
+4. Build the body of the form using tables, and avoid the two formatting traps that catch people out
+5. Apply your brand colours to column headings so the finished certificate looks like your company's document
+
+**Target persona:** Decision makers
+
+**SunComfort characters:** Sarah Mitchell (Managing Director, Owner/Manager)
+
+**Scenario:** Sarah has configured the Solar PV Annual Service Report in Commusoft and now needs the document that customers will actually receive, so she starts from the Commusoft portrait template and shapes it around SunComfort's branding.
+
+**Estimated length:** 5 minutes
+
+**Target audience:** Business owners, managing directors and operations managers at field service companies who have built a custom form in Commusoft and now need the document behind it. Comfortable in Word to the level of typing and clicking, not designers. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Walkthrough 1 of the Custom Forms series complete. A custom form is configured and saved, with its pages and fields in place, and is showing as unable to activate because no Word document exists yet.
+
+**Main objective beyond the learning objectives:** The document is the only part of this your customer ever sees. A certificate that arrives looking like a form template with a logo dropped on it undercuts the work behind it. Starting from a structured template rather than a blank page is the difference between a document you are happy to send and one you apologise for.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** Sarah Mitchell, Managing Director, Owner/Manager.
+2. **Customer record:** None. This walkthrough happens in Word.
+3. **Existing data:** Solar PV Annual Service Report configured and saved in Commusoft with its pages and fields complete, status showing no Word document available. The Commusoft portrait and landscape templates open in Word. SunComfort logo file available on the recording machine. [OPEN — confirm how learners obtain the two templates; the source video says they are available on request.]
+4. **Assets required:** Commusoft portrait template, Commusoft landscape template, SunComfort logo image file.
+
+---
+
+## Start from the template, not a blank page
+
+Your form is configured and saved, and Commusoft will not let you activate it yet, because there is no document for the answers to land in. That document is the part your customer actually receives, and building it from a blank page is where most people lose an afternoon.
+
+Commusoft provides two templates to work from, one portrait and one landscape. Both are laid out for the way certificates are actually structured, with the regions already in place. Open the portrait one and shape it around your business rather than starting from nothing.
+
+---
+
+## The header and footer earn their place
+
+Look at the header first. It holds the certificate name and your company logo, and it sits in the header for a specific reason: anything placed there repeats automatically if the finished document runs onto a second page. A long service record with several pages carries your branding on every one of them without you doing anything further.
+
+The footer works the same way. It carries a page reference, and it also carries a standard field input from the Commusoft add-in, which gives every page a consistent certificate or document number. On a lengthy document that is what stops loose pages becoming untraceable.
+
+---
+
+**Reflection prompt**
+
+Have you ever received a multi-page document where only the first page was branded?
+
+- Yes
+- No
+
+*Feedback: Anything you place in the header or footer repeats on every page automatically. Anything you place in the body does not. That single distinction is why the templates put the certificate name, the logo and the document number where they are.*
+
+---
+
+## Three sets of details, and why they differ
+
+Below the header the template gives you three blocks that are easy to confuse. Registered business details are your own company. Site details are the address where the work is carried out and where the form is completed. Customer details are the person or organisation the certificate belongs to.
+
+Often the site and the customer are the same, because the work happens at the customer's own address. Often they are not, and that is exactly when this matters: a landlord receiving a certificate for a tenanted property needs both, and getting them the wrong way round makes the document wrong. The template also has room for a date and an accreditation number, which is where a registered business number or a technician's accrediting body reference goes.
+
+---
+
+## Building the body with tables
+
+Everything specific to your form goes in the body, and tables are how you structure it. Delete the example table if it does not suit, and insert your own from the Insert tab.
+
+Leave a blank line between one table and the next. Two tables placed directly against each other merge into one, and separating them again is more work than avoiding it. Within a table, merge cells to create a full-width heading, and split a cell into rows or columns where you need a label beside an input. That label and input pairing is the pattern the whole document is built from: a cell naming the field, and a cell beside it that will hold the answer.
+
+---
+
+## Making it look like your document
+
+Column headings arrive black, which looks like a template rather than a certificate from your business. Select the heading cell, open the Home tab, and choose a fill colour. If you have brand colours, enter the hex or RGB value directly rather than picking something approximate.
+
+Set the text colour to suit the background you have chosen, so a dark fill carries light text. One thing to watch as you finish: typing a longer certificate name into the header pushes the logo out of position. Place your cursor after the name and backspace until the logo sits where it should.
+
+---
+
+## Ready to tag
+
+The document now has your structure, your branding and empty cells waiting for answers. What it does not have yet is any connection to Commusoft. Nothing in it knows which cell holds the customer's address or where the technician's signature belongs.
+
+That connection is made with the Commusoft add-in for Word, which is Walkthrough 3. Save this document somewhere you can find it, because you will be working in the same file.
+
+---
+
+## Build by section
+
+| Section | Media | Note |
+|---|---|---|
+| Start from the template, not a blank page | Written text | Article introduction. Include the template downloads here if they are made available. |
+| The header and footer earn their place | Screen recording | Word capture. Open the portrait template, show the header with certificate name and logo, then the footer with page reference and document number field. Show a two-page version so the repeat is visible. |
+| Reflection prompt, multi-page branding | Expanding section | Reflection. |
+| Three sets of details, and why they differ | Screenshot | Still of the three detail blocks with the date and accreditation row. Clearer as a labelled still than in motion. |
+| Building the body with tables | Screen recording + gif | Word capture. Insert a table, merge a cell, split a cell into label and input. Gif the two-tables-merging problem and the blank line that prevents it. |
+| Making it look like your document | Screen recording | Word capture. Select a heading cell, Home tab, fill colour, custom colour by hex, adjust text colour. Then the logo realignment after typing a longer name. |
+| Ready to tag | Written text | Closing paragraph and the handover to Walkthrough 3. |
+
+---
+
+**Open items**
+
+1. [OPEN — confirm how learners obtain the portrait and landscape templates. The source video describes them as available on request, which does not work for a self-serve walkthrough. If they can be attached to the Help Centre article or the Learning page, the introduction should link them directly.]
+2. [OPEN — confirm whether the landscape template differs beyond orientation. The source video states the same principles apply and does not detail any difference, so this script treats them as equivalent.]
+3. [OPEN — confirm the exact name of the standard field used in the footer. The source video refers to it as a certificate number that can be changed to form number or document number, but the add-in's own label has not been verified.]
+`;
+INBOX_FILES["reed-script-l3-forms-c3tag"] = `# Tag the document with the add-in
+
+**Series:** Custom Forms | **Walkthrough:** 3 of 4 | **Duration:** 7 min | **Audience:** Decision makers
+**Voice:** Archer (Clueso AI voiceover)
+**Content type:** Walkthrough
+
+---
+
+**Learning objectives**
+
+1. Install the Commusoft add-in in Word and sign in to your account
+2. Tag a cell with a standard field, and explain where standard field data comes from
+3. Choose which address tags to include, and distinguish the job address from the customer address
+4. Build a repeating tag across a column so a list page fills several rows
+5. Upload the finished document and keep a copy you can restore from
+
+**Target persona:** Decision makers
+
+**SunComfort characters:** Sarah Mitchell (Managing Director, Owner/Manager)
+
+**Scenario:** Sarah has designed the layout for SunComfort's Solar PV Annual Service Report and now needs the empty cells connected to the questions technicians answer on site.
+
+**Estimated length:** 7 minutes
+
+**Target audience:** Business owners, managing directors and operations managers at field service companies who have a form configured and a Word layout designed, and now need the two joined. They hold Owner/Manager access and a user account with mobile access, which the add-in requires. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Walkthroughs 1 and 2 of the Custom Forms series complete. A custom form is configured and saved with its pages and fields in place, and a Word document has been laid out with empty cells ready to receive answers. Word 2016 or later on the desktop.
+
+**Main objective beyond the learning objectives:** Tagging is where the two halves of a custom form become one thing. It is also where the work goes wrong most often and most invisibly, because a document with a missing or wrongly placed tag looks perfectly fine until a certificate reaches a customer with a blank where the appliance details should be.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** Sarah Mitchell, Managing Director, Owner/Manager, with mobile access enabled on her user account.
+2. **Customer record:** None. This walkthrough happens in Word.
+3. **Existing data:** Solar PV Annual Service Report configured and saved in Commusoft, including a list page for assets with at least four items allowed, so the repeating tag can be demonstrated across four rows. The Word layout from Walkthrough 2 open, with an address block, a job details block and a four row asset table, all empty. The Commusoft add-in not yet installed, so the installation can be shown from the start.
+4. **Assets required:** The Word document from Walkthrough 2.
+
+---
+
+## Installing the add-in
+
+The add-in is what connects Word to your Commusoft account, and it is installed from inside Word rather than from Commusoft. Go to the Insert tab, choose Get Add-ins, search for Commusoft and add it. Word will ask you to confirm you know what you are installing.
+
+Once added, the add-in appears in your ribbon and opens its own panel. Sign in with your normal Commusoft credentials. If sign in fails, the usual cause is that the user account does not have mobile access, which the add-in needs because it connects through the same route the mobile app uses.
+
+---
+
+## Choosing your form
+
+With the add-in signed in, a dropdown lists the custom forms on your account. Only forms you have configured appear, so if the one you want is missing, it has not been saved yet.
+
+Select the form and click next. Below it you will see the standard fields, then the sections you built yourself, and an upload to Commusoft button that you will use at the end. Everything from here is a matter of putting your cursor in the right cell and clicking the right field.
+
+---
+
+## Standard fields, and where they come from
+
+The standard fields are worth understanding before you tag anything, because they save your technicians a great deal of typing. They cover the certificate number Commusoft generates, your accreditation details, your company details, the customer's details, the job address and the job details, and the details of whoever completed the form.
+
+None of that is configured on your form. It is already in your account settings or generated by the system, which means it is filled in automatically on every certificate and stays right when your company details change. If your address appears on a certificate through a standard field, updating it in settings updates every future certificate without anyone reopening a document.
+
+---
+
+## Tagging a cell
+
+Tagging is two clicks. Put your cursor in the cell where the answer should appear, then click the field name in the add-in panel. The tag drops into the cell.
+
+Once a field has been used it greys out in the panel, because a tag can only appear once in a document. For an address, add only the tags you actually use: if address line three is always empty for your customers, leaving it out avoids a gap in the finished certificate. Sarah also leaves the name off the site address, because a gas safety record stays valid across a change of tenant and the property is what the certificate is about.
+
+---
+
+**Reflection question**
+
+A certificate is generated for a rented property. Which address should the site details come from?
+
+- The customer address, since that is who the certificate belongs to
+- The job address, so the certificate is always generated for the property inspected ✓
+- Either, since Commusoft uses whichever one is populated
+- Both, tagged into the same cell so one fills if the other is empty
+
+*Feedback: The job address is the site of the work. Using it means the certificate is generated for the property, not the main customer, which matters whenever those differ. A landlord with fifteen properties is one customer and fifteen job addresses, and a certificate carrying the landlord's own address instead of the inspected property is wrong.*
+
+---
+
+## Repeating tags
+
+Here is the part that is genuinely fiddly, and the part support is asked about most. A tag can only be used once, so a table with four rows for four appliances cannot simply have the same tag four times. Repeating tags solve it.
+
+Highlight the entire column, including the heading row at the top, then click the field in the add-in. Answer yes when asked whether to repeat the tag, and the cells fill with numbered variants: row two, row three, row four. Check the numbering after it lands, because the first tag is placed from row two even though you selected from the heading down, and getting that wrong shifts every asset by one row. Repeating tags only work for fields on a list page. Anywhere else, the tag simply drops into the last cell you highlighted.
+
+---
+
+**Reflection question**
+
+You highlight a four row column and apply a repeating tag, but the appliances come out shifted by one row on the finished certificate. What most likely went wrong?
+
+- The list page allows more items than the table has rows
+- The heading row was not included in the selection, so the numbering started in the wrong place ✓
+- Repeating tags were applied to a field that is not on a list page
+- The document was uploaded before the tags finished generating
+
+*Feedback: Select the whole column including the heading row. The first tag is placed from row two, so a selection that starts one row lower pushes everything down. It is worth checking the numbering visually before uploading, because it looks entirely correct until real data arrives.*
+
+---
+
+## Uploading, and keeping a copy
+
+When every cell is tagged, use upload to Commusoft in the add-in panel. That sends the document back to your account, layout, branding, tags and all, and the form can be activated once it arrives.
+
+Uploading does not save the document to your machine, so save your own copy as well. Keep it somewhere you will find it, named with a version number. If someone later edits the live form and certificates stop generating correctly, that copy is what you restore from.
+
+---
+
+## When the form changes, the document changes
+
+One habit will save you more trouble than anything else here. The configuration and the document have to stay in step.
+
+If you remove a field from the form, remove its tag from the document. If you add a field and want it on the certificate, add its tag. A tag left behind for a field that no longer exists, or a new question with nowhere to land, produces a certificate that looks broken to whoever receives it. Walkthrough 4 covers getting the finished form in front of your technicians.
+
+---
+
+## Build by section
+
+| Section | Media | Note |
+|---|---|---|
+| Installing the add-in | Screen recording | Word capture. Insert tab, Get Add-ins, search Commusoft, add, confirm, then the sign in panel. Show a fresh install rather than an account already signed in. |
+| Choosing your form | Screen recording | Word capture. The form dropdown, selecting the report, next, then the panel showing standard fields above the configured sections. |
+| Standard fields, and where they come from | Written text | Explains the source of standard field data. No asset. |
+| Tagging a cell | Screen recording + gif | Word capture. Cursor into a cell, click the field, tag lands. Gif a field greying out after use, which is otherwise easy to miss. |
+| Reflection question, which address | Expanding section | Knowledge check. |
+| Repeating tags | Screen recording + gif | Word capture, and the most important recording in this walkthrough. Highlight the full column including the heading row, apply the field, answer the repeat prompt, then zoom the resulting row numbering. Gif the selection itself, slowly. |
+| Reflection question, shifted rows | Expanding section | Knowledge check. |
+| Uploading, and keeping a copy | Screen recording | Word capture of upload to Commusoft, then the form in Commusoft showing a Word document is now available. |
+| When the form changes, the document changes | Written text | Closing paragraph and the handover to Walkthrough 4. |
+
+---
+
+**Open items**
+
+1. [OPEN — confirm the add-in installation path on current Word versions. Source recordings show both the Home ribbon and the Insert tab as the route to Get Add-ins, which may be a version difference.]
+2. [OPEN — confirm the exact wording of the repeat prompt that appears when a column is highlighted, so the script can quote it rather than describe it.]
+3. [OPEN — confirm whether the greyed-out behaviour applies to standard fields as well as configured fields, or only to fields already placed in the current document.]
+4. [OPEN — Word Online will run the add-in but does not support tagging in headers and footers or repeating tags. This walkthrough assumes desktop Word throughout. Confirm whether a note about the online limitation belongs here or is adequately covered in the series prerequisites.]
 `;
 
 // ===== Dashboard Notes (Google Sheet backend) =====

@@ -471,6 +471,8 @@
           <div class="walkthrough-card" onclick="openPanel('l0-11')"><div class="walkthrough-num">Concept 11</div><div class="walkthrough-title">The customer portal — what your customers can do online</div><div class="walkthrough-meta"><span class="meta-pill">4 min</span><span class="meta-pill">All staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="walkthrough-card" onclick="openPanel('l0-12')"><div class="walkthrough-num">Concept 12</div><div class="walkthrough-title">User roles and permissions</div><div class="walkthrough-meta"><span class="meta-pill">4 min</span><span class="meta-pill">All staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
 <div class="walkthrough-card" onclick="openPanel('l0-13')"><div class="walkthrough-num">Walkthrough 13</div><div class="walkthrough-title">Using the form builder</div><div class="walkthrough-meta"><span class="meta-pill"></span><span class="meta-pill">Office teams and decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+<div class="walkthrough-card" onclick="openPanel('l0-14')"><div class="walkthrough-num">Walkthrough 14</div><div class="walkthrough-title">Choosing the right field type</div><div class="walkthrough-meta"><span class="meta-pill">8 min</span><span class="meta-pill">Office teams and decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+
 
         </div>
       </div>
@@ -9542,6 +9544,54 @@ COURSES['reed-script-l3-forms-c3tag'] = {
   ],
   openItems: "1. [OPEN — confirm the add-in installation path on current Word versions. Source recordings show both the Home ribbon and the Insert tab as the route to Get Add-ins, which may be a version difference.] 2. [OPEN — confirm the exact wording of the repeat prompt that appears when a column is highlighted, so the script can quote it rather than describe it.] 3. [OPEN — confirm whether the greyed-out behaviour applies to standard fields as well as configured fields, or only to fields already placed in the current document.] 4. [OPEN — Word Online will run the add-in but does not support tagging in headers and footers or repeating tags. This walkthrough assumes desktop Word throughout. Confirm whether a note about the online limitation belongs here or is adequately covered in the series prerequisites.]"
 };
+
+COURSES['l0-14'] = {
+  contentType: "Walkthrough",
+  pathLabel: "L1 Foundations · Shared Concept Library · Walkthrough 14 of 14",
+  title: "Choosing the right field type",
+  duration: "8 min",
+  persona: "Office teams and decision makers",
+  characters: "Sarah Mitchell (Managing Director, Owner/Manager)",
+  scenario: "Sarah has the pages of her solar service record laid out and now has to decide, field by field, what each question should actually be.",
+  objectives: [
+    "Choose between the text and number fields, and know the limit that decides it",
+    "Choose between the four ways of offering a set of choices, based on how many options there are",
+    "Use the capture fields for dates, times, signatures and photos, and set sensible limits",
+    "Recognise the fields that fill themselves in, so you stop asking for information Commusoft already holds",
+    "Use sections and plain text to make a long form readable on a phone"
+  ],
+  productionSetup: [
+    "Logged-in user: Sarah Mitchell, Managing Director, Owner/Manager.",
+    "Customer record: None. This walkthrough is settings configuration.",
+    "Existing data: A draft form with one standard page and one list page, both empty, so fields can be dragged in live. A mobile device or emulator paired for capture, because most of the value here is seeing what each field does on the phone.",
+    "Assets required: None."
+  ],
+  buildBySection: [
+    {section:"Start from what you want back", media:"Written text", note:"Article introduction, and the five families. No asset."},
+    {section:"Text and numbers", media:"Screen recording + gif", note:"Add input, text area, number and decimal to a page, then the mobile view of each. Gif the numeric keypad opening, and the compose screen on a text area."},
+    {section:"Reflection question, describing a fault", media:"Expanding section", note:"Knowledge check."},
+    {section:"Offering a set of choices", media:"Screen recording", note:"Add a toggle, show the preset toggle options, then radio, dropdown, checkbox, single checkbox and input with selection choices. Mobile view of a toggle beside a dropdown, so the screen-space difference is visible."},
+    {section:"Reflection question, eight fault codes", media:"Expanding section", note:"Knowledge check."},
+    {section:"Capturing dates, times, signatures and photos", media:"Screen recording", note:"Date field including the service date default option, time field, signature box on mobile, photo field with the maximum set to two and a third attempt refused."},
+    {section:"Fields that fill themselves in", media:"Screen recording", note:"Non-editable input showing the current user's name, the user dropdown, and a custom calculation being built and validated with realistic values. Mileage cannot be shown on a custom form; capture it on a vehicle check or use a screenshot."},
+    {section:"Reflection question, technician name", media:"Expanding section", note:"Knowledge check."},
+    {section:"Fields nobody answers", media:"Screen recording + screenshot", note:"A section heading added, then the mobile view showing the grouped screen. Screenshot of a plain text safety instruction as the technician sees it."},
+    {section:"A rule of thumb", media:"Written text", note:"Closing paragraph and the link to the Help Centre reference."}
+  ],
+  scenes: [
+    {type:"section", heading:"Start from what you want back", body:"Before choosing anything, decide what you want the answer to look like when it reaches you. A field type is not a style choice. It changes the keyboard that opens, whether an answer can be compared with last year's, and how long the form takes in the rain.\\n\\nThe types group into five families: text and numbers, choices, things you capture, things that fill themselves in, and things that are there to be read rather than answered. Work out which family you are in and the choice inside it is usually obvious."},
+    {type:"section", heading:"Text and numbers", body:"Four fields carry typed answers, and the difference between them matters more than it looks. An input is a single line and holds 255 characters on mobile, which sounds generous until someone describes a fault properly. A text area has no such limit and opens its own compose screen, so anything you genuinely want written up belongs there.\\n\\nNumber and decimal look similar and are not. Number takes whole numbers only, so a carbon monoxide reading in parts per million fits. Decimal accepts a decimal point, which you need for a pressure reading, and both switch the phone to a numeric keypad so letters cannot be typed by accident. Reach for decimal whenever a measurement might have a fraction, because a technician who cannot enter 2.5 will round it, and you will never know they did."},
+    {type:"reflection", question:"A technician needs to record why an appliance failed, in enough detail for the office to act on. Which field?", options:["Input, since a single line keeps the answer concise", "Text area, because an input is capped at 255 characters on mobile", "Plain text, so the reason is displayed on the certificate", "Non-editable input, so the reason is recorded automatically"], correct:"Text area, because an input is capped at 255 characters on mobile", feedback:"An input is one line and 255 characters on mobile. A proper description will hit that limit, and the technician will not be told why they cannot keep typing. Anything you want written up rather than noted belongs in a text area."},
+    {type:"section", heading:"Offering a set of choices", body:"Four fields offer choices, and the right one depends almost entirely on how many options there are. A toggle suits two or three: the options sit on screen and the technician taps one, which is the fastest thing on the form. Preset toggles save you typing the common sets: yes and no, yes no and not applicable, good fair poor and not applicable, pass fail and not applicable, and compliant non-compliant and not applicable.\\n\\nRadio buttons behave similarly but list the options one under another, which stays readable up to about four. Past four, use a dropdown, which holds a long list without filling the screen. Checkboxes are the odd one out because they allow several answers at once, which is what you want for observed site hazards. A single checkbox is different again: it has no options, just the question itself, and ticking it is the answer. Use it for a confirmation such as safe to use.\\n\\nWhere technicians mostly pick from a list but occasionally need something else, input with selection choices does both. The magnifying glass opens your list, and tapping into the field lets them type instead."},
+    {type:"reflection", question:"You need a technician to record which of eight possible fault codes applies. Only one can be correct. Which field?", options:["Toggle, so all eight options are visible at once", "Radio, so the options are listed one under another", "Dropdown, which holds a long list without filling the screen", "Checkbox, so the list can grow later without redesigning the field"], correct:"Dropdown, which holds a long list without filling the screen", feedback:"Toggles and radios stop being comfortable past three or four options, and eight of either fills a phone screen. A dropdown keeps a long list contained. Checkboxes would be wrong regardless, because they allow more than one answer."},
+    {type:"section", heading:"Capturing dates, times, signatures and photos", body:"Four fields capture something rather than asking for it. A date field opens a calendar, and it has an option worth knowing: it can default to the service date already held against the job, which saves a technician checking what today's service actually relates to. A time field opens a clock face.\\n\\nA signature field gives a box to sign in on the screen, and works for the technician, the customer, or anyone else present. A photo field takes or attaches images, up to three per field, and you set the maximum. Keep the total across the whole form to about ten. Every photo has to sync from a device that may be in a basement, and a form that will not upload is worse than a form with fewer pictures."},
+    {type:"section", heading:"Fields that fill themselves in", body:"Three fields need no answer at all, and they are the ones most often missed. Non-editable input pulls the name of whoever is completing the form, so a gas safety record does not need the engineer typing their own name on every visit. User gives a dropdown of everyone on your account, which suits a question like who was informed.\\n\\nMileage populates from vehicle data. That only makes sense on a fleet vehicle check, which is exactly why it is easy to overlook if you have only ever built custom forms. Custom calculation is the most useful of the three: give it an equation using your own number and decimal fields, from any page, and it works the answer out. A carbon monoxide to carbon dioxide ratio calculates itself rather than being worked out on a phone. Set the number of decimal places you expect, and test it with realistic values before you let anyone use it."},
+    {type:"reflection", question:"Your form needs the name of the technician completing it on every certificate. What is the best way to capture it?", options:["An input field, so they type their name", "A non-editable input, which pulls the name of the current user automatically", "A dropdown listing all technicians, so they select themselves", "A plain text field naming the technician who usually attends"], correct:"A non-editable input, which pulls the name of the current user automatically", feedback:"Non-editable input takes the name from the account completing the form. It cannot be mistyped, cannot be skipped, and costs the technician nothing. Asking someone to type their own name on every job is the kind of small friction that adds up across a year."},
+    {type:"section", heading:"Fields nobody answers", body:"Two things on the list are not questions. A section groups fields under a heading, and on a long form it is the difference between a wall of questions and something that reads in chunks. Further readings, defects, handover: three headings turn thirty fields into three short screens.\\n\\nPlain text displays an instruction and asks for nothing back. Use it for the things you would otherwise expect someone to remember, such as confirming equipment is isolated before a test begins. It is the only way to put a safety instruction in front of a technician at the moment it matters rather than in a handbook."},
+    {type:"section", heading:"A rule of thumb", body:"If you are unsure, ask what happens on the phone. Does the right keyboard open? Can the answer be entered with a tap rather than typing? Would this still be quick to complete in the cold, one handed, on a roof?\\n\\nThe fields that fill themselves in are always worth using where they fit, because the fastest question is the one nobody has to answer. The full list with every type is in the Help Centre, to look up rather than remember."}
+  ],
+  openItems: "1. [OPEN — the Help Centre form builder article says \"24+\" input types. This walkthrough covers twenty, which is what the previous course and the support recordings show. Reconcile against the product before recording, in case there are types neither source mentions.] 2. [OPEN — confirm the character limit on an input field applies only on mobile, or on the web as well. The Help Centre says 255 characters on mobile and is silent about the web.] 3. [OPEN — confirm the photo maximum. The Help Centre says up to three per field; the previous course said the same but also recommended no more than ten across a whole form. Confirm whether ten is a system limit or a recommendation.] 4. [OPEN — Mileage cannot be demonstrated inside a custom form, since it populates from vehicle data. Confirm whether the recording setup can reach a fleet vehicle check, or whether a screenshot is acceptable.]"
+};
 function esc(str) {
   return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
@@ -10149,42 +10199,42 @@ const COURSE_HC_LINKS = {
     {title: 'Using and managing Analytics dashboards', url: 'https://help.commusoft.com/en/articles/622602-using-and-managing-analytics-dashboards'},
     {title: 'Example custom tabular reports', url: 'https://help.commusoft.com/en/articles/625504-example-custom-tabular-reports'},
   ],
-  'reed-script-l0-01': [
+  'l0-01': [
     {title: 'Commusoft terminology', url: 'https://help.commusoft.com/en/articles/236422-commusoft-terminology'},
   ],
-  'reed-script-l0-02': [
+  'l0-02': [
     {title: 'Using the appointments tab', url: 'https://help.commusoft.com/en/articles/517998-using-the-appointments-tab'},
     {title: 'Diary and Appointments', url: 'https://help.commusoft.com/en/articles/267464-diary-and-appointments'},
   ],
-  'reed-script-l0-03': [
+  'l0-03': [
     {title: 'Set up and manage job description templates', url: 'https://help.commusoft.com/en/articles/217015-set-up-and-manage-job-description-templates'},
   ],
-  'reed-script-l0-04': [
+  'l0-04': [
     {title: 'Dynamic tagging for estimates', url: 'https://help.commusoft.com/en/articles/216552-dynamic-tagging-for-estimates'},
   ],
-  'reed-script-l0-05': [
+  'l0-05': [
     {title: 'Setting up service windows', url: 'https://help.commusoft.com/en/articles/217091-setting-up-service-windows'},
   ],
-  'reed-script-l0-06': [
+  'l0-06': [
     {title: 'Nominal codes', url: 'https://help.commusoft.com/en/articles/217171-nominal-codes'},
   ],
-  'reed-script-l0-07': [
+  'l0-07': [
     {title: 'Set up and manage job pipelines', url: 'https://help.commusoft.com/en/articles/243771-set-up-and-manage-job-pipelines'},
   ],
-  'reed-script-l0-08': [
+  'l0-08': [
     {title: 'Job status widget', url: 'https://help.commusoft.com/en/articles/216734-job-status-widget'},
     {title: 'Job stages', url: 'https://help.commusoft.com/en/articles/284442-job-stages'},
   ],
-  'reed-script-l0-09': [
+  'l0-09': [
     {title: 'Managing invoices', url: 'https://help.commusoft.com/en/articles/216679-managing-invoices'},
   ],
-  'reed-script-l0-10': [
+  'l0-10': [
     {title: 'Understanding licence types', url: 'https://help.commusoft.com/en/articles/543376-understanding-license-types'},
   ],
-  'reed-script-l0-11': [
+  'l0-11': [
     {title: 'Customer portal', url: 'https://help.commusoft.com/en/articles/216429-customer-portal'},
   ],
-  'reed-script-l0-12': [
+  'l0-12': [
     {title: 'User roles and permissions', url: 'https://help.commusoft.com/en/articles/543435-user-roles-and-permissions'},
   ],
   'reed-script-l3-contracts-c1': [
@@ -10217,6 +10267,13 @@ const COURSE_HC_LINKS = {
     {title: 'PPM job auto-creation', url: 'https://help.commusoft.com/en/articles/216942-ppm-job-auto-creation'},
     {title: 'SLA due to breach report and widget', url: 'https://help.commusoft.com/en/articles/216392-sla-due-to-breach-report-and-widget'},
   ],
+  'l0-13': [
+    {title: 'Using the form builder', url: 'https://help.commusoft.com/en/articles/217362-using-the-form-builder'},
+  ],
+  'l0-14': [
+    {title: 'Using the form builder', url: 'https://help.commusoft.com/en/articles/217362-using-the-form-builder'},
+  ],
+
 };
 
 function renderPanel(num) {
@@ -30376,6 +30433,173 @@ If you remove a field from the form, remove its tag from the document. If you ad
 3. [OPEN — confirm whether the greyed-out behaviour applies to standard fields as well as configured fields, or only to fields already placed in the current document.]
 4. [OPEN — Word Online will run the add-in but does not support tagging in headers and footers or repeating tags. This walkthrough assumes desktop Word throughout. Confirm whether a note about the online limitation belongs here or is adequately covered in the series prerequisites.]
 `;
+INBOX_FILES["l0-14"] = `# Reed — Script: Choosing the right field type
+
+**Layer:** 1 — Foundations
+**Series:** Shared Concept Library
+**Walkthrough:** 14 of 14
+**Format:** Walkthrough
+**Voice:** Archer (Clueso AI voiceover)
+**Date:** 2026-08-03
+
+---
+
+**Learning objectives**
+
+1. Choose between the text and number fields, and know the limit that decides it
+2. Choose between the four ways of offering a set of choices, based on how many options there are
+3. Use the capture fields for dates, times, signatures and photos, and set sensible limits
+4. Recognise the fields that fill themselves in, so you stop asking for information Commusoft already holds
+5. Use sections and plain text to make a long form readable on a phone
+
+**Target persona:** Office teams and decision makers
+
+**SunComfort characters:** Sarah Mitchell (Managing Director, Owner/Manager)
+
+**Scenario:** Sarah has the pages of her solar service record laid out and now has to decide, field by field, what each question should actually be.
+
+**Estimated length:** 8 minutes
+
+**Target audience:** Anyone configuring forms in Commusoft, in any of the features that use the form builder. They have reached the point of adding fields and need to choose between them. SunComfort Systems is the pedagogical vehicle, not the audience.
+
+**Assumed starting point:** Shared Concept Library 13, Using the form builder, complete. The learner has a form open with at least one page and understands how pages and dependencies work.
+
+**Main objective beyond the learning objectives:** The field type you pick decides what your technician's phone does when they tap into it. Get it right and a long inspection is a series of taps. Get it wrong and someone is typing a unit into a text box in the rain, which is how forms end up half completed.
+
+*Length note: eight minutes is above the five minute ideal. The alternative is splitting a single decision, which is what a person needs answered in one sitting, across two walkthroughs. The sections are grouped so a learner returning for one answer can skip to it.*
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** Sarah Mitchell, Managing Director, Owner/Manager.
+2. **Customer record:** None. This walkthrough is settings configuration.
+3. **Existing data:** A draft form with one standard page and one list page, both empty, so fields can be dragged in live. A mobile device or emulator paired for capture, because most of the value here is seeing what each field does on the phone.
+4. **Assets required:** None.
+
+---
+
+## Start from what you want back
+
+Before choosing anything, decide what you want the answer to look like when it reaches you. A field type is not a style choice. It changes the keyboard that opens, whether an answer can be compared with last year's, and how long the form takes in the rain.
+
+The types group into five families: text and numbers, choices, things you capture, things that fill themselves in, and things that are there to be read rather than answered. Work out which family you are in and the choice inside it is usually obvious.
+
+---
+
+## Text and numbers
+
+Four fields carry typed answers, and the difference between them matters more than it looks. An input is a single line and holds 255 characters on mobile, which sounds generous until someone describes a fault properly. A text area has no such limit and opens its own compose screen, so anything you genuinely want written up belongs there.
+
+Number and decimal look similar and are not. Number takes whole numbers only, so a carbon monoxide reading in parts per million fits. Decimal accepts a decimal point, which you need for a pressure reading, and both switch the phone to a numeric keypad so letters cannot be typed by accident. Reach for decimal whenever a measurement might have a fraction, because a technician who cannot enter 2.5 will round it, and you will never know they did.
+
+---
+
+**Reflection question**
+
+A technician needs to record why an appliance failed, in enough detail for the office to act on. Which field?
+
+- Input, since a single line keeps the answer concise
+- Text area, because an input is capped at 255 characters on mobile ✓
+- Plain text, so the reason is displayed on the certificate
+- Non-editable input, so the reason is recorded automatically
+
+*Feedback: An input is one line and 255 characters on mobile. A proper description will hit that limit, and the technician will not be told why they cannot keep typing. Anything you want written up rather than noted belongs in a text area.*
+
+---
+
+## Offering a set of choices
+
+Four fields offer choices, and the right one depends almost entirely on how many options there are. A toggle suits two or three: the options sit on screen and the technician taps one, which is the fastest thing on the form. Preset toggles save you typing the common sets: yes and no, yes no and not applicable, good fair poor and not applicable, pass fail and not applicable, and compliant non-compliant and not applicable.
+
+Radio buttons behave similarly but list the options one under another, which stays readable up to about four. Past four, use a dropdown, which holds a long list without filling the screen. Checkboxes are the odd one out because they allow several answers at once, which is what you want for observed site hazards. A single checkbox is different again: it has no options, just the question itself, and ticking it is the answer. Use it for a confirmation such as safe to use.
+
+Where technicians mostly pick from a list but occasionally need something else, input with selection choices does both. The magnifying glass opens your list, and tapping into the field lets them type instead.
+
+---
+
+**Reflection question**
+
+You need a technician to record which of eight possible fault codes applies. Only one can be correct. Which field?
+
+- Toggle, so all eight options are visible at once
+- Radio, so the options are listed one under another
+- Dropdown, which holds a long list without filling the screen ✓
+- Checkbox, so the list can grow later without redesigning the field
+
+*Feedback: Toggles and radios stop being comfortable past three or four options, and eight of either fills a phone screen. A dropdown keeps a long list contained. Checkboxes would be wrong regardless, because they allow more than one answer.*
+
+---
+
+## Capturing dates, times, signatures and photos
+
+Four fields capture something rather than asking for it. A date field opens a calendar, and it has an option worth knowing: it can default to the service date already held against the job, which saves a technician checking what today's service actually relates to. A time field opens a clock face.
+
+A signature field gives a box to sign in on the screen, and works for the technician, the customer, or anyone else present. A photo field takes or attaches images, up to three per field, and you set the maximum. Keep the total across the whole form to about ten. Every photo has to sync from a device that may be in a basement, and a form that will not upload is worse than a form with fewer pictures.
+
+---
+
+## Fields that fill themselves in
+
+Three fields need no answer at all, and they are the ones most often missed. Non-editable input pulls the name of whoever is completing the form, so a gas safety record does not need the engineer typing their own name on every visit. User gives a dropdown of everyone on your account, which suits a question like who was informed.
+
+Mileage populates from vehicle data. That only makes sense on a fleet vehicle check, which is exactly why it is easy to overlook if you have only ever built custom forms. Custom calculation is the most useful of the three: give it an equation using your own number and decimal fields, from any page, and it works the answer out. A carbon monoxide to carbon dioxide ratio calculates itself rather than being worked out on a phone. Set the number of decimal places you expect, and test it with realistic values before you let anyone use it.
+
+---
+
+**Reflection question**
+
+Your form needs the name of the technician completing it on every certificate. What is the best way to capture it?
+
+- An input field, so they type their name
+- A non-editable input, which pulls the name of the current user automatically ✓
+- A dropdown listing all technicians, so they select themselves
+- A plain text field naming the technician who usually attends
+
+*Feedback: Non-editable input takes the name from the account completing the form. It cannot be mistyped, cannot be skipped, and costs the technician nothing. Asking someone to type their own name on every job is the kind of small friction that adds up across a year.*
+
+---
+
+## Fields nobody answers
+
+Two things on the list are not questions. A section groups fields under a heading, and on a long form it is the difference between a wall of questions and something that reads in chunks. Further readings, defects, handover: three headings turn thirty fields into three short screens.
+
+Plain text displays an instruction and asks for nothing back. Use it for the things you would otherwise expect someone to remember, such as confirming equipment is isolated before a test begins. It is the only way to put a safety instruction in front of a technician at the moment it matters rather than in a handbook.
+
+---
+
+## A rule of thumb
+
+If you are unsure, ask what happens on the phone. Does the right keyboard open? Can the answer be entered with a tap rather than typing? Would this still be quick to complete in the cold, one handed, on a roof?
+
+The fields that fill themselves in are always worth using where they fit, because the fastest question is the one nobody has to answer. The full list with every type is in the Help Centre, to look up rather than remember.
+
+---
+
+## Build by section
+
+| Section | Media | Note |
+|---|---|---|
+| Start from what you want back | Written text | Article introduction, and the five families. No asset. |
+| Text and numbers | Screen recording + gif | Add input, text area, number and decimal to a page, then the mobile view of each. Gif the numeric keypad opening, and the compose screen on a text area. |
+| Reflection question, describing a fault | Expanding section | Knowledge check. |
+| Offering a set of choices | Screen recording | Add a toggle, show the preset toggle options, then radio, dropdown, checkbox, single checkbox and input with selection choices. Mobile view of a toggle beside a dropdown, so the screen-space difference is visible. |
+| Reflection question, eight fault codes | Expanding section | Knowledge check. |
+| Capturing dates, times, signatures and photos | Screen recording | Date field including the service date default option, time field, signature box on mobile, photo field with the maximum set to two and a third attempt refused. |
+| Fields that fill themselves in | Screen recording | Non-editable input showing the current user's name, the user dropdown, and a custom calculation being built and validated with realistic values. Mileage cannot be shown on a custom form; capture it on a vehicle check or use a screenshot. |
+| Reflection question, technician name | Expanding section | Knowledge check. |
+| Fields nobody answers | Screen recording + screenshot | A section heading added, then the mobile view showing the grouped screen. Screenshot of a plain text safety instruction as the technician sees it. |
+| A rule of thumb | Written text | Closing paragraph and the link to the Help Centre reference. |
+
+---
+
+**Open items**
+
+1. [OPEN — the Help Centre form builder article says "24+" input types. This walkthrough covers twenty, which is what the previous course and the support recordings show. Reconcile against the product before recording, in case there are types neither source mentions.]
+2. [OPEN — confirm the character limit on an input field applies only on mobile, or on the web as well. The Help Centre says 255 characters on mobile and is silent about the web.]
+3. [OPEN — confirm the photo maximum. The Help Centre says up to three per field; the previous course said the same but also recommended no more than ten across a whole form. Confirm whether ten is a system limit or a recommendation.]
+4. [OPEN — Mileage cannot be demonstrated inside a custom form, since it populates from vehicle data. Confirm whether the recording setup can reach a fleet vehicle check, or whether a screenshot is acceptable.]
+`;
 
 // ===== Dashboard Notes (Google Sheet backend) =====
 // Paste your Apps Script Web App URL between the quotes below to go live.
@@ -30488,18 +30712,18 @@ function openInboxFile(key) {
   var labels = {
     'overview': { num: 'SunComfort', title: 'SunComfort Overview' },
     'branding': { num: 'SunComfort', title: 'SunComfort Branding' },
-    'reed-script-l0-01': { num: 'Reed — Script', title: 'L0 Shared Concept Library — 01 The customer and site hierarchy' },
-    'reed-script-l0-02': { num: 'Reed — Script', title: 'L0 Shared Concept Library — 02 Appointment statuses explained' },
-    'reed-script-l0-03': { num: 'Reed — Script', title: 'L0 Shared Concept Library — 03 What are job description templates' },
-    'reed-script-l0-04': { num: 'Reed — Script', title: 'L0 Shared Concept Library — 04 Tagging in Commusoft' },
-    'reed-script-l0-05': { num: 'Reed — Script', title: 'L0 Shared Concept Library — 05 What are service windows' },
-    'reed-script-l0-06': { num: 'Reed — Script', title: 'L0 Shared Concept Library — 06 Nominal codes in plain English' },
-    'reed-script-l0-07': { num: 'Reed — Script', title: 'L0 Shared Concept Library — 07 What is a job pipeline' },
-    'reed-script-l0-08': { num: 'Reed — Script', title: 'L0 Shared Concept Library — 08 Job statuses, appointment statuses, and job stages' },
-    'reed-script-l0-09': { num: 'Reed — Script', title: 'L0 Shared Concept Library — 09 Invoice types in Commusoft' },
-    'reed-script-l0-10': { num: 'Reed — Script', title: 'L0 Shared Concept Library — 10 Licence types explained' },
-    'reed-script-l0-11': { num: 'Reed — Script', title: 'L0 Shared Concept Library — 11 The customer portal — what your customers can do online' },
-    'reed-script-l0-12': { num: 'Reed — Script', title: 'L0 Shared Concept Library — 12 User roles and permissions' },
+    'reed-script-l0-01': { num: 'Reed — Script', title: 'L1 Foundations — Shared Concept Library — 01 The customer and site hierarchy' },
+    'reed-script-l0-02': { num: 'Reed — Script', title: 'L1 Foundations — Shared Concept Library — 02 Appointment statuses explained' },
+    'reed-script-l0-03': { num: 'Reed — Script', title: 'L1 Foundations — Shared Concept Library — 03 What are job description templates' },
+    'reed-script-l0-04': { num: 'Reed — Script', title: 'L1 Foundations — Shared Concept Library — 04 Tagging in Commusoft' },
+    'reed-script-l0-05': { num: 'Reed — Script', title: 'L1 Foundations — Shared Concept Library — 05 What are service windows' },
+    'reed-script-l0-06': { num: 'Reed — Script', title: 'L1 Foundations — Shared Concept Library — 06 Nominal codes in plain English' },
+    'reed-script-l0-07': { num: 'Reed — Script', title: 'L1 Foundations — Shared Concept Library — 07 What is a job pipeline' },
+    'reed-script-l0-08': { num: 'Reed — Script', title: 'L1 Foundations — Shared Concept Library — 08 Job statuses, appointment statuses, and job stages' },
+    'reed-script-l0-09': { num: 'Reed — Script', title: 'L1 Foundations — Shared Concept Library — 09 Invoice types in Commusoft' },
+    'reed-script-l0-10': { num: 'Reed — Script', title: 'L1 Foundations — Shared Concept Library — 10 Licence types explained' },
+    'reed-script-l0-11': { num: 'Reed — Script', title: 'L1 Foundations — Shared Concept Library — 11 The customer portal — what your customers can do online' },
+    'reed-script-l0-12': { num: 'Reed — Script', title: 'L1 Foundations — Shared Concept Library — 12 User roles and permissions' },
     'reed-script-l1-series1': { num: 'Reed — Script', title: 'L2 Office teams Series 1 — Your first day in Commusoft' },
     'reed-script-l1-s3-c1': { num: 'Reed — Script', title: 'L2 Office teams Series 3 — Walkthrough 1: Add a customer' },
     'reed-script-l1-s3-c2': { num: 'Reed — Script', title: 'L2 Office teams Series 3 — Walkthrough 2: Add a site and work address' },

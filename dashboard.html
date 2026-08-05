@@ -546,7 +546,7 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l1-s5-c4')"><div class="walkthrough-num">Walkthrough 4</div><div class="walkthrough-title">Send a customer statement</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office teams</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="walkthrough-card" onclick="openPanel('reed-script-l1-s5-c5')"><div class="walkthrough-num">Walkthrough 5</div><div class="walkthrough-title">Sync an invoice to your accounting package</div><div class="walkthrough-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Office teams</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
           <div class="walkthrough-card" onclick="openPanel('reed-script-l1-s5-c6')"><div class="walkthrough-num">Walkthrough 6</div><div class="walkthrough-title">Raise a consolidated invoice</div><div class="walkthrough-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Office teams</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
-          <div class="walkthrough-card" onclick="openPanel('reed-script-l1-s5-challenge')"><div class="walkthrough-num">Challenge</div><div class="walkthrough-title">Invoice raised, paid, and synced</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office teams</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="walkthrough-card" onclick="openPanel('reed-script-l1-s5-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">Invoice raised, paid, and synced</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office teams</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
       <div id="l1-office-series6" class="series-block">
@@ -2425,44 +2425,43 @@ COURSES['reed-script-l1-s5-c6'] = {
 };
 
 COURSES['reed-script-l1-s5-challenge'] = {
-  contentType: "Walkthrough",
-  pathLabel: "L2 Office teams · Series 5: Getting paid · Challenge",
+  contentType: "Series assessment",
+  pathLabel: "L2 Office teams — Series 5: Getting paid — Series assessment",
   title: "Invoice raised, paid, and synced",
-  duration: "3 min",
+  duration: "6 questions",
   persona: "Office teams",
   characters: "Claire Hudson (Administrator / Financial office staff, referenced in scenario)",
-  scenario: "SunComfort is closing out the month. Claire has three financial decisions to work through: a multi-stage job invoice, a payment that covers several accounts, and a customer who has spotted a billing error. Each decision is surfaced in turn, then the right approach is worked through.",
+  scenario: "SunComfort is closing out the month. Claire is working through the invoicing queue and six decisions have landed — a commercial client billed in stages, a payment covering four accounts, a customer disputing a charge, a customer asking what they owe, and the reconciliation that follows.",
   objectives: [
     "Select the correct invoice type for a given billing scenario",
     "Identify the right tool when a payment covers multiple invoices",
-    "Apply the credit note and refund process when an invoice correction is needed"
+    "Apply the credit note process when an invoice correction is needed",
+    "Choose between a statement and an invoice when a customer asks what they owe",
+    "Read the Accounting Integration Dashboard correctly before reconciling"
   ],
   productionSetup: [
-    "*Logged-in user: None. Narration only, no product screens.",
-    "*Customer record: None. Customers are referred to in dialogue only.",
-    "*Existing data: None.",
-    "*Assets required: None",
-    "This is the one course in the series where narration-only is correct. It is a spoken decision review, not a walkthrough, and nothing is demonstrated on screen.*"
+    "*Delivered as a Google Form in quiz mode, with Certify'em for the certificate.",
+    "*Pass mark 5 of 6. Unlimited retakes. Email collected for the certificate.",
+    "*Archer narrates the opening and close only. The questions are answered in the form, not on screen.*"
   ],
   buildBySection: [
-    {section:"Challenge opening", media:"Written text", note:"On-screen text only — set up the end-of-month scenario with the three decisions."},
-    {section:"Dialogue: The decisions", media:"Screen recording", note:"Cut between the four decision points — Deposit invoice type, Cash Allocations from the customer record, Raise credit note via Quick Links, and the Accounting Integration Dashboard — showing the relevant screen for each as the dialogue lands on it."},
-    {section:"Knowledge check", media:"Screen recording + gif", note:"Gif the Final-invoice-type warning inside a consolidated invoice to reinforce the answer."},
-    {section:"Series close", media:"Written text", note:"Recap text only — no recording needed."}
+    {section:"What this is", media:"Written text", note:"Article copy introducing the assessment and the pass mark, with the link out to the form."},
+    {section:"Questions 1 to 6", media:"Expanding section", note:"Delivered in the Google Form, not in the article. Listed so the build sheet covers the whole assessment. A 'Google Form' value may need adding to the approved list — flagged for Sara."},
+    {section:"Series close", media:"Written text", note:"Used as the form's confirmation message."}
   ],
   productionNotes: [
-    "Record on the web app, logged in as Claire Hudson (Administrator / Financial office staff).",
-    "This challenge revisits four earlier workflows — prepare the same demo data the source walkthroughs used: a multi-stage job for the Deposit type, a customer with four unpaid invoices for Cash Allocations, an issued invoice for the credit note route, and a populated Accounting Integration Dashboard.",
-    "For the Cash Allocations beat, use a customer record with several unpaid invoices so a single payment can be shown allocated across them.",
-    "For the credit note beat, start from an issued invoice so Quick Links → Raise credit note pre-fills the line items.",
-    "For the dashboard beat, have a credit note sitting in the Waiting to Be Sent queue with automatic sync enabled, and show Send Data Now for the immediate-push option."
+    "No product recording needed. This is the one item in the series with no screens to capture.",
+    "The six questions come straight from the four decisions the challenge used to narrate, plus the consolidated-invoice knowledge check, plus one new question covering Walkthrough 4 (customer statements), which no assessment covered before."
   ],
-  openItems: "None — all content verified against Help Centre articles.",
   scenes: [
-    {type:"section", heading:"Challenge opening", body:"It is end of month at SunComfort. Claire is working through the invoicing queue and three decisions have landed. A commercial client invoiced in stages, a payment that covers four accounts, and a customer who has called about an overcharge. Each one has a right answer. Sarah has spotted all of them."},
-    {type:"section", heading:"Dialogue: The decisions", body:"A large commercial client is billed in two parts, thirty percent upfront and the rest at completion. Claire is about to raise the first invoice. Which type should she select? Interim. Interim is the type for billing in stages while the work is still running, with the Final invoice following at completion. Raising a Final invoice now would close the billing on a job that is not finished. The type sets the structure for the whole billing sequence, so it matters at the first step. A property management company has sent a single bank transfer covering four separate invoices across different jobs. Claire needs to allocate it. Should she record a payment on each invoice individually? No. That is a Cash Allocation. Navigate to the customer record and use Cash Allocations to assign the single payment across all four invoices at once. Recording it four times individually would create four separate payment entries against one bank transaction, which makes reconciliation harder, not easier. A customer has reviewed their final invoice and says they were charged for a part that was not used. The invoice has already been issued. Should Claire edit the invoice directly? No. Raise a credit note. Open the invoice, use Quick Links to select Raise credit note, and adjust the pre-filled items to reflect only the line being corrected. The original invoice stays on the record. The credit note documents the correction. Both are visible in the customer history and both will sync to the accounting package correctly. The correction is done. Claire checks the Accounting Integration Dashboard and the credit note is showing in the Waiting to Be Sent queue. Automatic sync is enabled. Does she need to do anything? Not urgently, no. With automatic sync enabled, the data will push within the next two hours. If she needs it in Xero now, she can select Send Data Now from the dashboard to push immediately. Either way, checking the dashboard confirms the record is queued rather than sitting in an error state."},
-    {type:"reflection", label:"Knowledge check", question:"Claire is raising a consolidated invoice for a client and selects Final as the invoice type for one of the included jobs. A warning appears. What is Commusoft telling her?", options:["A. The consolidated invoice cannot be saved until all jobs use the same invoice type","B. The customer has reached their credit limit and the invoice cannot be issued","C. Future diary events for that job will be cancelled if she proceeds with Final","D. The job has an outstanding credit note that must be resolved before invoicing"], correct:"C", feedback:"Right. Selecting Final within a consolidated invoice triggers a warning that future diary events for that job will be cancelled. Claire should confirm the job is genuinely complete before proceeding.", feedbackAlt:"The warning appears because Final as an invoice type signals that the job is done — and any future diary events for that job will be cancelled as a result. Claire should check whether any planned visits are still outstanding before confirming."},
-    {type:"section", heading:"Series close", body:"An Interim invoice to open the billing, a Cash Allocation to match a single payment to four invoices, a credit note to correct the charge without touching the original invoice, and a dashboard check to confirm the sync is queued. Four decisions, four clean outcomes. The billing cycle in Commusoft is a sequence, and getting each step right means the financial record looks after itself. Series 5 is complete."}
+    {type:"section", heading:"What this is", body:"You have worked through six walkthroughs on getting paid - raising an invoice, recording a payment, correcting a charge, sending a statement, syncing to your accounting package, and consolidating several jobs onto one invoice. Each of those covered one workflow on its own. This is where you choose between them. Six questions, drawn from one end-of-month scenario at SunComfort. Answer them in order - the billing cycle is a sequence, and each decision follows from the one before. You need five correct to pass, and you can retake it as many times as you like. Your certificate arrives by email."},
+    {type:"reflection", label:"Question 1", question:"Invoice type at the start of a staged job - A large commercial client is billed in two parts, thirty percent upfront and the rest at completion. Claire is about to raise the first invoice. Which type should she select?", options:["Final", "Interim", "Consolidated", "Deposit request"], correct:"Interim", feedback:"Interim is the type for billing in stages while the work is still running, with the Final invoice following at completion. The type sets the structure for the whole billing sequence, so it matters at the first step.", feedbackAlt:"Raising a Final invoice now would close the billing on a job that is not finished. Interim is the type for staged billing, with Final following at completion."},
+    {type:"reflection", label:"Question 2", question:"One payment across several invoices - A property management company has sent a single bank transfer covering four separate invoices across different jobs. What should Claire do?", options:["Record a payment against each of the four invoices individually", "Use Cash Allocations from the customer record to assign the payment across all four", "Raise a consolidated invoice, then record one payment against it", "Record the full amount against the oldest invoice and credit the difference"], correct:"Use Cash Allocations from the customer record to assign the payment across all four", feedback:"Cash Allocations is reached from the customer record rather than from an individual invoice, and assigns one payment across several invoices at once.", feedbackAlt:"Recording it four times would create four separate payment entries against one bank transaction, which makes reconciliation harder rather than easier. Cash Allocations handles it in one step, from the customer record."},
+    {type:"reflection", label:"Question 3", question:"Correcting an issued invoice - A customer has reviewed their final invoice and says they were charged for a part that was not used. The invoice has already been issued. What should Claire do?", options:["Edit the invoice and remove the line", "Delete the invoice and raise it again", "Raise a credit note from Quick Links and adjust it to the line being corrected", "Leave the invoice and apply a discount to the next one"], correct:"Raise a credit note from Quick Links and adjust it to the line being corrected", feedback:"The original invoice stays on the record and the credit note documents the correction. Both are visible in the customer history and both sync to the accounting package correctly.", feedbackAlt:"Editing or deleting an issued invoice breaks the audit trail and will not sync cleanly. A credit note corrects the charge while leaving the original record intact."},
+    {type:"reflection", label:"Question 4", question:"A customer chasing an overdue balance - A commercial customer has three unpaid invoices across two months and calls asking what they owe in total. What is the quickest way for Claire to give them a single view?", options:["Export the three invoices to PDF and send them together", "Send a customer statement from the customer record", "Raise a consolidated invoice covering the three", "Send the oldest invoice and explain the rest by email"], correct:"Send a customer statement from the customer record", feedback:"A statement gives the customer a single view of their outstanding account - unpaid invoices, unallocated credit notes, and the net balance owed - without changing any of the underlying invoices.", feedbackAlt:"A consolidated invoice creates a new invoice, which is not what is needed here - the three already exist. A statement summarises what is outstanding without altering the record."},
+    {type:"reflection", label:"Question 5", question:"After the correction, before reconciliation - Claire checks the Accounting Integration Dashboard. The credit note is in the Waiting to Be Sent queue and automatic sync is enabled. What does she need to do?", options:["Nothing - the queue clears itself and no check is needed", "Re-raise the credit note, because Waiting to Be Sent means it failed", "Nothing urgent - it will push within two hours, or use Send Data Now if it is needed in Xero immediately", "Switch off automatic sync and send the whole batch manually"], correct:"Nothing urgent - it will push within two hours, or use Send Data Now if it is needed in Xero immediately", feedback:"Waiting to Be Sent is the normal queued state, not an error. Checking the dashboard confirms the record is queued rather than sitting in an error state.", feedbackAlt:"Waiting to Be Sent is the normal queued state. With automatic sync on it pushes within two hours, and Send Data Now pushes it immediately if it is needed sooner."},
+    {type:"reflection", label:"Question 6", question:"The consolidated invoice warning - Claire is raising a consolidated invoice for a client and selects Final as the invoice type for one of the included jobs. A warning appears. What is Commusoft telling her?", options:["The consolidated invoice cannot be saved until all jobs use the same invoice type", "The customer has reached their credit limit and the invoice cannot be issued", "Future diary events for that job will be cancelled if she proceeds with Final", "The job has an outstanding credit note that must be resolved before invoicing"], correct:"Future diary events for that job will be cancelled if she proceeds with Final", feedback:"Selecting Final within a consolidated invoice triggers a warning that future diary events for that job will be cancelled. Claire should confirm the job is genuinely complete before proceeding.", feedbackAlt:"Final as an invoice type signals that the job is done, and any future diary events for it will be cancelled as a result. Claire should check whether any planned visits are still outstanding before confirming."},
+    {type:"section", heading:"Series close", body:"An Interim invoice to open the billing, a Cash Allocation to match a single payment to four invoices, a credit note to correct a charge without touching the original, a statement to show what is outstanding, and a dashboard check to confirm the sync is queued. The billing cycle in Commusoft is a sequence, and getting each step right means the financial record looks after itself. Series 5 is complete."}
   ]
 };
 
@@ -14941,132 +14940,177 @@ A consolidated invoice is raised from the customer record via Quick Links. Enter
 - Housekeeping 2026-07-28 (Flint pass): narration-only Production Setup replaced with a real one; em dashes removed from narration, reflection branches and feedback lines.
 `;
 
-INBOX_FILES["reed-script-l1-s5-challenge"] = `# Reed — Script: Series challenge — Invoice raised, paid, and synced
+INBOX_FILES["reed-script-l1-s5-challenge"] = `# Reed — Series assessment: Invoice raised, paid, and synced
 
 **Layer:** 1 — Office teams path
 **Series:** 5 of 9 — Getting paid
-**Walkthrough:** Series challenge
-**Format:** Walkthrough
-**Voice:** Archer (Clueso AI voiceover)
-**Date:** 2026-04-30
+**Walkthrough:** Series assessment
+**Format:** Series assessment
+**Delivery:** Google Form, quiz mode, with Certify'em for the certificate
+**Voice:** Archer (Clueso AI voiceover) — opening and close only
+**Date:** 2026-08-05
 
 ---
 
 **Learning objectives**
 1. Select the correct invoice type for a given billing scenario
 2. Identify the right tool when a payment covers multiple invoices
-3. Apply the credit note and refund process when an invoice correction is needed
+3. Apply the credit note process when an invoice correction is needed
+4. Choose between a statement and an invoice when a customer asks what they owe
+5. Read the Accounting Integration Dashboard correctly before reconciling
 
 **Target persona:** Office teams
 
-**SunComfort characters:** Claire Hudson (Administrator — Financial office staff — referenced in scenario)
+**SunComfort characters:** Claire Hudson (Administrator — Financial office staff, referenced in scenario)
 
-**Scenario:** SunComfort is closing out the month. Claire has three financial decisions to work through: a multi-stage job invoice, a payment that covers several accounts, and a customer who has spotted a billing error. Sarah surfaces each decision works through the correct approach.
+**Scenario:** SunComfort is closing out the month. Claire is working through the invoicing queue and six decisions have landed — a commercial client billed in stages, a payment covering four accounts, a customer disputing a charge, a customer asking what they owe, and the reconciliation that follows.
 
-**Estimated length:** 3 minutes
+**Estimated length:** 6 questions
 
-**Target audience:** Office teams at field service businesses using Commusoft who have completed Series 5 (Getting paid). This challenge tests the invoicing and payment decisions from all six walkthroughs against a single realistic scenario. SunComfort Systems is the pedagogical vehicle, not the audience.
+**Target audience:** Office teams at field service businesses using Commusoft who have completed Series 5 (Getting paid). SunComfort Systems is the pedagogical vehicle, not the audience.
 
 **Assumed starting point:** Series 5 Walkthroughs 1 to 6 complete.
 
-**Main objective beyond learning objectives:** Each walkthrough in this series covers one financial workflow in isolation. This challenge puts the decisions together in sequence — choosing invoice types, handling a payment across multiple invoices, correcting a charge, and confirming the sync has run — because that is how end-of-month invoicing actually works. A learner who can navigate these decisions in sequence has the foundation to manage the billing cycle correctly from first invoice to reconciled payment.
+**Why this is an assessment and not a walkthrough:** every walkthrough in this series covers one financial workflow in isolation, and each is followed by reflection prompts that personalise rather than test. This is the only place a learner has to **choose between** those workflows — which invoice type, when a payment spans several accounts, when to credit rather than edit. Previously that was narrated: Archer read the decisions and the answers appeared. Decisions the learner watches are not decisions. As a scored form they commit to an answer before seeing whether it was right, and the result is recorded.
+
+**Pass mark:** 5 of 6. Unlimited retakes. Email collected for the certificate.
 
 ---
 
-## Production Setup
+## What this is
 
-1. **Logged-in user:** None. Narration only, no product screens.
-2. **Customer record:** None. Customers are referred to in dialogue only.
-3. **Existing data:** None.
-4. **Assets required:** None
+You have worked through six walkthroughs on getting paid — raising an invoice, recording a payment, correcting a charge, sending a statement, syncing to your accounting package, and consolidating several jobs onto one invoice.
 
-*This is the one walkthrough in the series where narration-only is correct. It is a spoken decision review, not a walkthrough, and nothing is demonstrated on screen.*
+Each of those covered one workflow on its own. This is where you choose between them.
 
----
-
-## Challenge opening
-
-*[Narration — 30 seconds]*
-
-It is end of month at SunComfort. Claire is working through the invoicing queue and three decisions have landed. A commercial client invoiced in stages, a payment that covers four accounts, and a customer who has called about an overcharge. Each one has a right answer. Sarah has spotted all of them.
+Six questions, drawn from one end-of-month scenario at SunComfort. Answer them in order — the billing cycle is a sequence, and each decision follows from the one before. You need five correct to pass, and you can retake it as many times as you like. Your certificate arrives by email.
 
 ---
 
-## Dialogue: The decisions
-
-*[Question]*
+## Question 1 — Invoice type at the start of a staged job
 
 A large commercial client is billed in two parts, thirty percent upfront and the rest at completion. Claire is about to raise the first invoice. Which type should she select?
 
-*[Answer — reveal in an expanding section]*
+A) Final
+B) Interim
+C) Consolidated
+D) Deposit request
 
-Interim. Interim is the type for billing in stages while the work is still running, with the Final invoice following at completion. Raising a Final invoice now would close the billing on a job that is not finished. The type sets the structure for the whole billing sequence, so it matters at the first step.
+*Correct (B):* Interim is the type for billing in stages while the work is still running, with the Final invoice following at completion. The type sets the structure for the whole billing sequence, so it matters at the first step.
+*Incorrect:* Raising a Final invoice now would close the billing on a job that is not finished. Interim is the type for staged billing, with Final following at completion.
 
-*[Question]*
-
-A property management company has sent a single bank transfer covering four separate invoices across different jobs. Claire needs to allocate it. Should she record a payment on each invoice individually?
-
-*[Answer — reveal in an expanding section]*
-
-No. That is a Cash Allocation. Navigate to the customer record and use Cash Allocations to assign the single payment across all four invoices at once. Recording it four times individually would create four separate payment entries against one bank transaction, which makes reconciliation harder, not easier.
-
-*[Question]*
-
-A customer has reviewed their final invoice and says they were charged for a part that was not used. The invoice has already been issued. Should Claire edit the invoice directly?
-
-*[Answer — reveal in an expanding section]*
-
-No. Raise a credit note. Open the invoice, use Quick Links to select Raise credit note, and adjust the pre-filled items to reflect only the line being corrected. The original invoice stays on the record. The credit note documents the correction. Both are visible in the customer history and both will sync to the accounting package correctly.
-
-*[Question]*
-
-The correction is done. Claire checks the Accounting Integration Dashboard and the credit note is showing in the Waiting to Be Sent queue. Automatic sync is enabled. Does she need to do anything?
-
-*[Answer — reveal in an expanding section]*
-
-Not urgently, no. With automatic sync enabled, the data will push within the next two hours. If she needs it in Xero now, she can select Send Data Now from the dashboard to push immediately. Either way, checking the dashboard confirms the record is queued rather than sitting in an error state.
+*Covers Walkthrough 1 — Raise and send an invoice.*
 
 ---
 
-## Knowledge check
+## Question 2 — One payment across several invoices
 
-*[Knowledge check — 4 options]*
-**Claire is raising a consolidated invoice for a client and selects Final as the invoice type for one of the included jobs. A warning appears. What is Commusoft telling her?**
+A property management company has sent a single bank transfer covering four separate invoices across different jobs. What should Claire do?
+
+A) Record a payment against each of the four invoices individually
+B) Use Cash Allocations from the customer record to assign the payment across all four
+C) Raise a consolidated invoice, then record one payment against it
+D) Record the full amount against the oldest invoice and credit the difference
+
+*Correct (B):* Cash Allocations is reached from the customer record rather than from an individual invoice, and assigns one payment across several invoices at once.
+*Incorrect:* Recording it four times would create four separate payment entries against one bank transaction, which makes reconciliation harder rather than easier. Cash Allocations handles it in one step, from the customer record.
+
+*Covers Walkthrough 2 — Mark an invoice as paid.*
+
+---
+
+## Question 3 — Correcting an issued invoice
+
+A customer has reviewed their final invoice and says they were charged for a part that was not used. The invoice has already been issued. What should Claire do?
+
+A) Edit the invoice and remove the line
+B) Delete the invoice and raise it again
+C) Raise a credit note from Quick Links and adjust it to the line being corrected
+D) Leave the invoice and apply a discount to the next one
+
+*Correct (C):* The original invoice stays on the record and the credit note documents the correction. Both are visible in the customer history and both sync to the accounting package correctly.
+*Incorrect:* Editing or deleting an issued invoice breaks the audit trail and will not sync cleanly. A credit note corrects the charge while leaving the original record intact.
+
+*Covers Walkthrough 3 — Raise a credit note.*
+
+---
+
+## Question 4 — A customer chasing an overdue balance
+
+A commercial customer has three unpaid invoices across two months and calls asking what they owe in total. What is the quickest way for Claire to give them a single view?
+
+A) Export the three invoices to PDF and send them together
+B) Send a customer statement from the customer record
+C) Raise a consolidated invoice covering the three
+D) Send the oldest invoice and explain the rest by email
+
+*Correct (B):* A statement gives the customer a single view of their outstanding account — unpaid invoices, unallocated credit notes, and the net balance owed — without changing any of the underlying invoices.
+*Incorrect:* A consolidated invoice creates a new invoice, which is not what is needed here — the three already exist. A statement summarises what is outstanding without altering the record.
+
+*Covers Walkthrough 4 — Send a customer statement. This walkthrough was not assessed before.*
+
+---
+
+## Question 5 — After the correction, before reconciliation
+
+Claire checks the Accounting Integration Dashboard. The credit note is in the Waiting to Be Sent queue and automatic sync is enabled. What does she need to do?
+
+A) Nothing — the queue clears itself and no check is needed
+B) Re-raise the credit note, because Waiting to Be Sent means it failed
+C) Nothing urgent — it will push within two hours, or use Send Data Now if it is needed in Xero immediately
+D) Switch off automatic sync and send the whole batch manually
+
+*Correct (C):* Waiting to Be Sent is the normal queued state, not an error. Checking the dashboard confirms the record is queued rather than sitting in an error state.
+*Incorrect:* Waiting to Be Sent is the normal queued state. With automatic sync on it pushes within two hours, and Send Data Now pushes it immediately if it is needed sooner.
+
+*Covers Walkthrough 5 — Sync an invoice to your accounting package.*
+
+---
+
+## Question 6 — The consolidated invoice warning
+
+Claire is raising a consolidated invoice for a client and selects Final as the invoice type for one of the included jobs. A warning appears. What is Commusoft telling her?
 
 A) The consolidated invoice cannot be saved until all jobs use the same invoice type
 B) The customer has reached their credit limit and the invoice cannot be issued
 C) Future diary events for that job will be cancelled if she proceeds with Final
 D) The job has an outstanding credit note that must be resolved before invoicing
 
-*Correct (C):* Right. Selecting Final within a consolidated invoice triggers a warning that future diary events for that job will be cancelled. Claire should confirm the job is genuinely complete before proceeding.
-*Incorrect:* The warning appears because Final as an invoice type signals that the job is done, and any future diary events for that job will be cancelled as a result. Claire should check whether any planned visits are still outstanding before confirming.
+*Correct (C):* Selecting Final within a consolidated invoice triggers a warning that future diary events for that job will be cancelled. Claire should confirm the job is genuinely complete before proceeding.
+*Incorrect:* Final as an invoice type signals that the job is done, and any future diary events for it will be cancelled as a result. Claire should check whether any planned visits are still outstanding before confirming.
+
+*Covers Walkthrough 6 — Raise a consolidated invoice.*
 
 ---
 
 ## Series close
 
-*[Narration — 30 seconds]*
+An Interim invoice to open the billing, a Cash Allocation to match a single payment to four invoices, a credit note to correct a charge without touching the original, a statement to show what is outstanding, and a dashboard check to confirm the sync is queued.
 
-An Interim invoice to open the billing, a Cash Allocation to match a single payment to four invoices, a credit note to correct the charge without touching the original invoice, and a dashboard check to confirm the sync is queued. Four decisions, four clean outcomes. The billing cycle in Commusoft is a sequence, and getting each step right means the financial record looks after itself. Series 5 is complete.
+The billing cycle in Commusoft is a sequence, and getting each step right means the financial record looks after itself. Series 5 is complete.
 
 ---
 
-**Section count:** Challenge opening, 6 dialogue exchanges, 1 knowledge check, series close
-**Estimated length:** 3 minutes
-**Em dashes:** none
-**Line breaks within sections:** none
-**Second person present tense:** used throughout for learner address
-**First person (I/my):** not used
-**Characters from approved roster:** Claire Hudson (Administrator — Financial office staff, referenced in scenario)
-**Sources used:** Commusoft — Managing invoices (https://help.commusoft.com/en/articles/216679-managing-invoices); Send statement (https://help.commusoft.com/en/articles/216465-send-statement); Accounting Integration Overview (https://help.commusoft.com/en/articles/262303-accounting-integration-overview); How to set up your accounting integration (https://help.commusoft.com/en/articles/217412-how-to-set-up-your-accounting-integration)
-**Pre-submission checklist:** complete
-**Flint revisions:** Full SCL format pass 2026-07-28. Production Setup confirmed as genuinely narration-only and annotated to say why, since the other six in the series carried the same block as a placeholder. Challenge opening and Series close serve as the introduction and summary, so no separate sections were added. Em dashes removed from narration and feedback lines. Open items rewritten from "None" to the real outstanding list.
+## Build by section
+
+| Section | Media | Note |
+|---|---|---|
+| What this is | Written text | Article copy introducing the assessment and the pass mark, with the link out to the form. |
+| Questions 1 to 6 | Expanding section | Delivered in the Google Form, not in the article. Listed here so the build sheet covers the whole assessment. |
+| Series close | Written text | Used as the form's confirmation message. |
+
+**Open item — a new Build by section value may be needed.** The approved list has no value for an assessment hosted outside the article. \`Expanding section\` is the closest fit and is used above, but it means a knowledge check revealed on click *in the Help Centre*, which is not what happens here. If Google Forms becomes the standard route for series assessments, \`Google Form\` should be added to the list. Flagged for Sara, not assumed.
+
+---
 
 ## Open items
 
-- **Walkthrough length is 3 minutes, below the 4 minute floor in the writing standard.** For a series close that reviews three decisions this may be defensible, but it needs recording as a deliberate exception rather than left to look like an oversight.
-- **The first decision changed on 2026-07-27.** It previously answered Deposit; the answer is now Interim, because Deposit is not available on a job raised directly and only comes from a proposal. The scenario wording, a commercial client billed thirty percent upfront, works for either, so if that client would realistically come through a proposal the question could be rewritten to teach the distinction rather than avoid it. Sara's call.
-- Housekeeping 2026-07-28 (Flint pass): Production Setup confirmed as genuinely narration-only, with a note saying why, since the other six were placeholders and this one is not. Em dashes removed from narration and feedback lines.
+1. **Pass mark of 5 of 6** — proposed, not settled.
+2. **Certify'em holds learner names and email addresses** as a third-party Google Forms add-on. Worth checking against data policy before it holds real completion records.
+3. **Whether the remaining 27 series challenges follow this pattern**, and in what order.
+
+**Section count:** What this is, 6 questions, series close
+**Estimated length:** 6 questions
 `;
 
 INBOX_FILES["reed-script-l1-s6-c1"] = `# Reed — Script: Send a communication from a template

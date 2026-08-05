@@ -140,7 +140,7 @@ def build_courses_entry():
   ],
   buildBySection: [
     {{section:"What this is", media:"Written text", note:"Article copy introducing the assessment and the pass mark, with the link out to the form."}},
-    {{section:"Questions 1 to 6", media:"Expanding section", note:"Delivered in the Google Form, not in the article. Listed so the build sheet covers the whole assessment. A 'Google Form' value may need adding to the approved list \u2014 flagged for Sara."}},
+    {{section:"Questions 1 to 6", media:"Google Form", note:"Scored in the form, not revealed in the article. Quiz mode, pass mark 5 of 6, unlimited retakes, email collected for the certificate. 'Google Form' was added to the approved Build by section list on 2026-08-05."}},
     {{section:"Series close", media:"Written text", note:"Used as the form's confirmation message."}}
   ],
   productionNotes: [

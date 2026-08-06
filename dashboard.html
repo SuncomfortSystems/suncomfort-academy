@@ -502,6 +502,7 @@
           <div class="walkthrough-card" onclick="openPanel(8)"><div class="walkthrough-num">Walkthrough 8</div><div class="walkthrough-title">Sourcing and fulfilling job parts</div><div class="walkthrough-meta"><span class="meta-pill">5 min</span><span class="meta-pill">9 sections</span><span class="meta-pill">Office teams</span><span class="badge badge-approved">Approved</span></div></div>
           <div class="walkthrough-card" onclick="openPanel(9)"><div class="walkthrough-num">Walkthrough 9</div><div class="walkthrough-title">Sourcing and fulfilling job parts — stock control</div><div class="walkthrough-meta"><span class="meta-pill">4 min</span><span class="meta-pill">8 sections</span><span class="meta-pill">Office teams</span><span class="badge badge-approved">Approved</span></div></div>
           <div class="walkthrough-card" onclick="openPanel(10)"><div class="walkthrough-num">Walkthrough 10</div><div class="walkthrough-title">Tracking opportunities on jobs</div><div class="walkthrough-meta"><span class="meta-pill">4 min</span><span class="meta-pill">9 sections</span><span class="meta-pill">Decision makers</span><span class="badge badge-approved">Approved</span></div></div>
+          <div class="walkthrough-card" onclick="openPanel('l2-s2-assessment')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">The job record, end to end</div><div class="walkthrough-meta"><span class="meta-pill">6 questions</span><span class="meta-pill">Office teams</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
 
@@ -1544,6 +1545,47 @@ COURSES[10] = {
   ]
 };
 
+
+COURSES['l2-s2-assessment'] = {
+  contentType: "Series assessment",
+  pathLabel: "L2 Office teams \u2014 Series 2: The job record \u2014 Series assessment",
+  title: "The job record, end to end",
+  duration: "6 questions",
+  persona: "Office teams",
+  characters: "Emma Fletcher (Office manager), Claire Hudson (Administrator / Financial office staff), Jake Morrison and Luke Patterson (Technicians), referenced in scenario",
+  scenario: "A single heat pump job at Mrs. Thompson's property, followed from booking through to invoice. Six decisions land along the way, each one drawing on more than one part of the job record.",
+  objectives: [
+    "Trace a cost through the job record as work moves from booked to completed",
+    "Choose the right parts route depending on whether stock control is in use",
+    "Correct field data using the right mechanism for the record type",
+    "Read the sidebar and the timeline together to understand a job's current state",
+    "Recognise what the job record does automatically and what needs a person"
+  ],
+  productionSetup: [
+    "*Delivered as a Google Form in quiz mode, with Certify'em for the certificate.",
+    "*Pass mark 5 of 6. Unlimited retakes. Email collected for the certificate.",
+    "*Archer narrates the opening and close only. The questions are answered in the form, not on screen.*"
+  ],
+  buildBySection: [
+    {section:"What this is", media:"Written text", note:"Article copy introducing the assessment and the pass mark, with the link out to the form."},
+    {section:"Questions 1 to 6", media:"Google Form", note:"Scored in the form. Quiz mode, pass mark 5 of 6, unlimited retakes, email collected for the certificate."},
+    {section:"Series close", media:"Written text", note:"Used as the form's confirmation message."}
+  ],
+  productionNotes: [
+    "No product recording needed.",
+    "Series 2 had no challenge to convert, so these six questions are new. Each draws on two walkthroughs at once and none repeats a walkthrough's own knowledge check, which stay in the articles as single-answer recall."
+  ],
+  scenes: [
+    {type:"section", heading:"What this is", body:"You have worked through ten walkthroughs on the job record - the sidebar, the timeline, appointments, costs, invoices and WIP, files, forms, parts, stock control, and opportunities. Each of those covered one area on its own. This is where you put them together. Six questions following a single heat pump job at Mrs. Thompson's property from booking to invoice. Each one needs more than one part of the job record to answer. You need five correct to pass, and you can retake it as many times as you like. Your certificate arrives by email."},
+    {type:"reflection", label:"Question 1", question:"A cost moving through the job \u2014 A heat pump valve is ordered for Mrs. Thompson's job on Monday. It arrives Wednesday and Luke installs it on Thursday. Where has its cost been across those three days?", options:["Actual costs throughout, from the moment it was ordered", "Forecasted while it was on order, moving to actual once it was installed", "Forecasted throughout, until the invoice is raised", "It does not appear as a cost until the job is marked complete"], correct:"Forecasted while it was on order, moving to actual once it was installed", feedback:"A cost sits in Forecasted while the work or part is expected but not yet delivered, and moves to actual once it has actually happened. Ordering does not make a cost real; installing does. That is why a job's forecasted and actual figures rarely match until the work is finished.", feedbackAlt:"Forecasted covers what is expected, actual covers what has happened. The valve is forecasted while on order and becomes an actual cost when Luke installs it - not when it is ordered, and not when the invoice is raised."},
+    {type:"reflection", label:"Question 2", question:"Two businesses, two parts routes \u2014 SunComfort uses stock control. A second business on Commusoft does not. In each case, who marks a part as ready for the technician, and where?", options:["Both are marked by the office in the Parts tab - stock control changes only the reporting", "Without stock control the office marks the part available in the Parts tab; with stock control the stores team allocates it and the technician confirms installation from mobile", "With stock control the office does everything; without it the technician does everything", "Both are marked by the technician on site, at the point of installation"], correct:"Without stock control the office marks the part available in the Parts tab; with stock control the stores team allocates it and the technician confirms installation from mobile", feedback:"Without stock control, a part is marked available in the Parts tab by whoever is sourcing it. With stock control there is a chain - stock is allocated, picked up, and then confirmed as installed by the technician in the mobile app, which is what moves it to Installed on the job. The same tab shows both, but the number of hands involved is different.", feedbackAlt:"Stock control does not just change reporting. It introduces allocation and pick-up steps, and it is the technician confirming installation on mobile that moves a part to Installed - not the office."},
+    {type:"reflection", label:"Question 3", question:"Two corrections, two mechanisms \u2014 Jake uploads a photo to the wrong job, and on the same visit submits a commissioning form showing the wrong property address. Are these corrected the same way?", options:["Yes - both are deleted from the job record and re-added correctly", "Yes - both are edited in place, since the job record allows amendments", "No - the photo can be removed or moved, but the form must be voided and a new one created", "No - the photo must be voided, but the form can be edited in place"], correct:"No - the photo can be removed or moved, but the form must be voided and a new one created", feedback:"A file is a file: it can be removed from the job and added to the right one. A submitted form is a record with a signature and a timestamp behind it, so it cannot be edited or quietly deleted. It is voided, which leaves the void visible on the record, and a corrected form is created in its place. The audit trail is the reason for the difference.", feedbackAlt:"The two are not equivalent. A file can be removed or moved freely. A submitted form carries a signature and timestamp, so it is voided rather than edited or deleted, and a new one is created."},
+    {type:"reflection", label:"Question 4", question:"The sidebar and the timeline together \u2014 Emma opens Mrs. Thompson's job. The sidebar shows an on-hold badge. What will the timeline add that the sidebar does not?", options:["Nothing - the sidebar and the timeline show the same hold information", "The reminder date for taking the job off hold", "A record of who placed the job on hold and when, alongside everything else that has happened on the job", "The option to take the job off hold"], correct:"A record of who placed the job on hold and when, alongside everything else that has happened on the job", feedback:"The sidebar shows the job's current state - that it is on hold, why, the reminder date, and the control to release it. The timeline shows the history: who did it, when, and how it sits among everything else that has happened. Current state and history are different questions, and the job record answers them in different places.", feedbackAlt:"The reminder date and the release control are both in the sidebar. What the timeline adds is history - who placed the hold and when, in sequence with everything else on the job."},
+    {type:"reflection", label:"Question 5", question:"Changing an appointment mid-flight \u2014 Jake has tapped Travel for Mrs. Thompson's visit when she calls to move it to Thursday. Emma cancels the appointment and books a new one. What does the job record show afterwards?", options:["The original appointment disappears and only Thursday's remains", "Both the cancellation and the new booking appear on the timeline, with the new appointment in the appointments tab", "The appointments tab shows both, but the timeline records only the new booking", "The job returns to an unbooked state until Thursday's appointment is confirmed"], correct:"Both the cancellation and the new booking appear on the timeline, with the new appointment in the appointments tab", feedback:"Once a technician has started travelling, the appointment cannot be rescheduled in place - it is cancelled and a new one booked. Nothing is erased by that: the timeline keeps both events as history, while the appointments tab shows the appointment that now stands. The record of what was originally planned survives.", feedbackAlt:"Cancelling does not erase anything. The timeline holds both the cancellation and the new booking as history, and the appointments tab shows the appointment that now stands."},
+    {type:"reflection", label:"Question 6", question:"An opportunity that turns into work \u2014 Mrs. Thompson's proposal included an optional filter upgrade she did not take at the time. Three weeks later she calls and accepts it. What has to happen for that upgrade to show as revenue on the job?", options:["Nothing - the add-on was already counted when the proposal was sent", "It is counted once she accepts, and flows into the job's costs and invoice from there", "It stays an opportunity permanently and is invoiced separately", "Emma must raise a new job, because accepted add-ons cannot attach to an existing job"], correct:"It is counted once she accepts, and flows into the job's costs and invoice from there", feedback:"An optional add-on is not revenue while it is only offered - it is counted when the customer selects it. Once accepted it stops being a tracked opportunity and becomes work on the job like anything else, appearing in costs and flowing through to the invoice.", feedbackAlt:"An offered add-on is not counted until it is selected, and once it is accepted it does not stay an opportunity or need a separate job. It becomes work on the job and flows into costs and the invoice."},
+    {type:"section", heading:"Series close", body:"A cost that moved from forecasted to actual when the part went in. A parts chain that changes shape depending on whether stock control is switched on. A file you can move and a form you cannot. A sidebar that says what is true now and a timeline that says how it got there. The job record is not ten separate tabs. It is one record showing you the same job from ten angles, and reading it well means knowing which angle answers which question. Series 2 is complete."}
+  ]
+};
 COURSES['reed-script-compass'] = {
   title: "The Commusoft Compass",
   duration: "8 min", persona: "All staff",
@@ -11467,6 +11509,175 @@ The Opportunities tab makes visible what would otherwise be lost — technician 
 - **A defect and a recommendation added on the web do not create a draft opportunity — CONFIRMED (Nadia live test, 2026-07-24).** She added both to job 1013 in 20257: *"nothing populates in the oppo tab in the job."* The script does not claim they do, so **no body change is needed**, but nothing in this walkthrough should be allowed to imply the web route feeds the tab.
 - ~~The script's actual claim~~ **CONFIRMED by Sara, 2026-07-27:** recommendations do raise as a draft opportunity. The walkthrough's central chain — Luke logs a recommendation from his mobile app, Stephen sees it as a Draft in the Opportunities tab (Production Setup point 3, and the opening section) — stands as written. **Source is Sara's product knowledge, not an observed test**, so if the mobile flow is ever filmed and behaves differently, this is the line to revisit. It does not conflict with Nadia's finding above: hers was the web route, which produced nothing.
 - **Web creation of defects and recommendations is disputed.** Abbie H Knott, 2026-07-23: *"you do not create a defect or recommendation on the web. You can only create a variation on the web. I need to double check the article."* This conflicts with Nadia, who reports adding both on the web (they just produced no opportunity). One of the two is describing a different path. **Owner: Abbie**, pending his article check. Section "What the Opportunities tab tracks" describes recommendations and variations moving through the same pipeline, which is unaffected either way.
+`;
+
+INBOX_FILES["l2-s2-assessment"] = `# Reed — Series assessment: The job record, end to end
+
+**Layer:** 2 — Office teams path
+**Series:** 2 of 9 — The job record
+**Walkthrough:** Series assessment
+**Format:** Series assessment
+**Delivery:** Google Form, quiz mode, with Certify'em for the certificate
+**Voice:** Archer (Clueso AI voiceover) — opening and close only
+**Date:** 2026-08-06
+
+---
+
+**Learning objectives**
+1. Trace a cost through the job record as work moves from booked to completed
+2. Choose the right parts route depending on whether stock control is in use
+3. Correct field data using the right mechanism for the record type
+4. Read the sidebar and the timeline together to understand a job's current state
+5. Recognise what the job record does automatically and what needs a person
+
+**Target persona:** Office teams
+
+**SunComfort characters:** Emma Fletcher (Office manager), Claire Hudson (Administrator — Financial office staff), Jake Morrison and Luke Patterson (Technicians), Danny and Nathan (Stores and field), referenced in scenario
+
+**Scenario:** A single heat pump job at Mrs. Thompson's property, followed from booking through to invoice. Six decisions land along the way, each one drawing on more than one part of the job record.
+
+**Estimated length:** 6 questions
+
+**Assumed starting point:** Series 2 Walkthroughs 1 to 10 complete.
+
+**Why this is an assessment and not a walkthrough:** each of the ten walkthroughs covers one tab or one area of the job record on its own — the sidebar, the timeline, appointments, costs, WIP, files, forms, parts, stock, opportunities. Every one of them already carries its own knowledge check, and those checks stay in the articles as single-answer recall. **This is the only place a learner has to hold two areas in mind at once** — where a cost moves between forecasted and actual, whether a correction is a void or a delete, what the sidebar shows that the timeline does not. None of the six questions below repeats a walkthrough's own check.
+
+**Pass mark:** 5 of 6. Unlimited retakes. Email collected for the certificate.
+
+---
+
+## What this is
+
+You have worked through ten walkthroughs on the job record — the sidebar, the timeline, appointments, costs, invoices and WIP, files, forms, parts, stock control, and opportunities.
+
+Each of those covered one area on its own. This is where you put them together.
+
+Six questions following a single heat pump job at Mrs. Thompson's property from booking to invoice. Each one needs more than one part of the job record to answer. You need five correct to pass, and you can retake it as many times as you like. Your certificate arrives by email.
+
+---
+
+## Question 1 — A cost moving through the job
+
+A heat pump valve is ordered for Mrs. Thompson's job on Monday. It arrives Wednesday and Luke installs it on Thursday. Where has its cost been across those three days?
+
+A) Actual costs throughout, from the moment it was ordered
+B) Forecasted while it was on order, moving to actual once it was installed
+C) Forecasted throughout, until the invoice is raised
+D) It does not appear as a cost until the job is marked complete
+
+*Correct (B):* A cost sits in Forecasted while the work or part is expected but not yet delivered, and moves to actual once it has actually happened. Ordering does not make a cost real; installing does. That is why a job's forecasted and actual figures rarely match until the work is finished.
+*Incorrect:* Forecasted covers what is expected, actual covers what has happened. The valve is forecasted while on order and becomes an actual cost when Luke installs it — not when it is ordered, and not when the invoice is raised.
+
+*Draws on Walkthroughs 4 and 8.*
+
+---
+
+## Question 2 — Two businesses, two parts routes
+
+SunComfort uses stock control. A second business on Commusoft does not. In each case, who marks a part as ready for the technician, and where?
+
+A) Both are marked by the office in the Parts tab — stock control changes only the reporting
+B) Without stock control the office marks the part available in the Parts tab; with stock control the stores team allocates it and the technician confirms installation from mobile
+C) With stock control the office does everything; without it the technician does everything
+D) Both are marked by the technician on site, at the point of installation
+
+*Correct (B):* Without stock control, a part is marked available in the Parts tab by whoever is sourcing it. With stock control there is a chain — stock is allocated, picked up, and then confirmed as installed by the technician in the mobile app, which is what moves it to Installed on the job. The same tab shows both, but the number of hands involved is different.
+*Incorrect:* Stock control does not just change reporting. It introduces allocation and pick-up steps, and it is the technician confirming installation on mobile that moves a part to Installed — not the office.
+
+*Draws on Walkthroughs 8 and 9.*
+
+---
+
+## Question 3 — Two corrections, two mechanisms
+
+Jake uploads a photo to the wrong job, and on the same visit submits a commissioning form showing the wrong property address. Are these corrected the same way?
+
+A) Yes — both are deleted from the job record and re-added correctly
+B) Yes — both are edited in place, since the job record allows amendments
+C) No — the photo can be removed or moved, but the form must be voided and a new one created
+D) No — the photo must be voided, but the form can be edited in place
+
+*Correct (C):* A file is a file: it can be removed from the job and added to the right one. A submitted form is a record with a signature and a timestamp behind it, so it cannot be edited or quietly deleted. It is voided, which leaves the void visible on the record, and a corrected form is created in its place. The audit trail is the reason for the difference.
+*Incorrect:* The two are not equivalent. A file can be removed or moved freely. A submitted form carries a signature and timestamp, so it is voided rather than edited or deleted, and a new one is created.
+
+*Draws on Walkthroughs 6 and 7.*
+
+---
+
+## Question 4 — The sidebar and the timeline together
+
+Emma opens Mrs. Thompson's job. The sidebar shows an on-hold badge. What will the timeline add that the sidebar does not?
+
+A) Nothing — the sidebar and the timeline show the same hold information
+B) The reminder date for taking the job off hold
+C) A record of who placed the job on hold and when, alongside everything else that has happened on the job
+D) The option to take the job off hold
+
+*Correct (C):* The sidebar shows the job's current state — that it is on hold, why, the reminder date, and the control to release it. The timeline shows the history: who did it, when, and how it sits among everything else that has happened. Current state and history are different questions, and the job record answers them in different places.
+*Incorrect:* The reminder date and the release control are both in the sidebar. What the timeline adds is history — who placed the hold and when, in sequence with everything else on the job.
+
+*Draws on Walkthroughs 1 and 2.*
+
+---
+
+## Question 5 — Changing an appointment mid-flight
+
+Jake has tapped Travel for Mrs. Thompson's visit when she calls to move it to Thursday. Emma cancels the appointment and books a new one. What does the job record show afterwards?
+
+A) The original appointment disappears and only Thursday's remains
+B) Both the cancellation and the new booking appear on the timeline, with the new appointment in the appointments tab
+C) The appointments tab shows both, but the timeline records only the new booking
+D) The job returns to an unbooked state until Thursday's appointment is confirmed
+
+*Correct (B):* Once a technician has started travelling, the appointment cannot be rescheduled in place — it is cancelled and a new one booked. Nothing is erased by that: the timeline keeps both events as history, while the appointments tab shows the appointment that now stands. The record of what was originally planned survives.
+*Incorrect:* Cancelling does not erase anything. The timeline holds both the cancellation and the new booking as history, and the appointments tab shows the appointment that now stands.
+
+*Draws on Walkthroughs 2 and 3.*
+
+---
+
+## Question 6 — An opportunity that turns into work
+
+Mrs. Thompson's proposal included an optional filter upgrade she did not take at the time. Three weeks later she calls and accepts it. What has to happen for that upgrade to show as revenue on the job?
+
+A) Nothing — the add-on was already counted when the proposal was sent
+B) It is counted once she accepts, and flows into the job's costs and invoice from there
+C) It stays an opportunity permanently and is invoiced separately
+D) Emma must raise a new job, because accepted add-ons cannot attach to an existing job
+
+*Correct (B):* An optional add-on is not revenue while it is only offered — it is counted when the customer selects it. Once accepted it stops being a tracked opportunity and becomes work on the job like anything else, appearing in costs and flowing through to the invoice.
+*Incorrect:* An offered add-on is not counted until it is selected, and once it is accepted it does not stay an opportunity or need a separate job. It becomes work on the job and flows into costs and the invoice.
+
+*Draws on Walkthroughs 5 and 10.*
+
+---
+
+## Series close
+
+A cost that moved from forecasted to actual when the part went in. A parts chain that changes shape depending on whether stock control is switched on. A file you can move and a form you cannot. A sidebar that says what is true now and a timeline that says how it got there.
+
+The job record is not ten separate tabs. It is one record showing you the same job from ten angles, and reading it well means knowing which angle answers which question. Series 2 is complete.
+
+---
+
+## Build by section
+
+| Section | Media | Note |
+|---|---|---|
+| What this is | Written text | Article copy introducing the assessment and the pass mark, with the link out to the form. |
+| Questions 1 to 6 | Google Form | Scored in the form. Quiz mode, pass mark 5 of 6, unlimited retakes, email collected for the certificate. |
+| Series close | Written text | Used as the form's confirmation message. |
+
+---
+
+## Open items
+
+1. **Pass mark of 5 of 6** — matches Series 5, not separately settled.
+2. **This series had no challenge to convert.** The assessment is new, written across the ten walkthroughs rather than adapted from narrated decisions.
+3. **Certify'em holds learner names and email addresses** as a third-party Google Forms add-on.
+
+**Section count:** What this is, 6 questions, series close
+**Estimated length:** 6 questions
 `;
 INBOX_FILES["1"] = `# Learning — Walkthrough 1: The job record — overview and sidebar
 

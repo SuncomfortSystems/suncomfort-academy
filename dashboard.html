@@ -9640,7 +9640,7 @@ COURSES['aiden-plus-c1'] = {
   characters: "Emma Clarke (Office Administrator, SunComfort Systems)",
   scenario: "Emma starts her morning on the AI:den+ dashboard, reads what the agent did overnight, actions the two calls that need a person, checks how the agent introduces itself and who hears about its results, and stops it calling a customer who has asked not to be contacted automatically.",
   objectives: [
-    "Tell AI:den and AI:den+ apart, and say what an AI:den+ agent actually does",
+    "Say what an AI:den+ agent does on a call, and what it will not do without you",
     "Read an agent card on the AI:den+ dashboard — status, performance, and the controls that pause it",
     "Open a call in call history and judge what happened from the summary, recording and outcome",
     "Recognise the two call outcomes that create a scheduled activity, and action them",
@@ -9656,7 +9656,7 @@ COURSES['aiden-plus-c1'] = {
   ],
   buildBySection: [
     {section:"Title and introduction", media:"Written text", note:"Article copy above the first video. States the AI:den+ add-on requirement."},
-    {section:"AI:den and AI:den+ are not the same thing", media:"Animated slides", note:"Concept, nothing to record. Two panels side by side — AI:den answering a user's question, AI:den+ calling a customer. Captured as one Clueso video with the section that follows."},
+    {section:"What an AI:den+ agent does", media:"Animated slides", note:"Concept, nothing to record. Build the call visually — the agent dials, the customer answers, the conversation adapts, the appointment lands in the diary and the note lands on the record. Captured as one Clueso video with the section that follows."},
     {section:"The AI:den+ dashboard", media:"Screen recording", note:"Roughly 40 seconds. Open on the navbar, click **AI:den+**, land on the agent card. Hold on the status badge and the three 30-day metrics, then show **Edit** and **Disable agent** without clicking either."},
     {section:"Reading a call", media:"Screen recording", note:"Roughly 60 seconds. Click **Call history**, pan the colour-coded list, select one call, show summary, quoted price and outcome, then play a few seconds of the recording. Finish on the customer's **Communications** tab showing the coloured outline."},
     {section:"The two outcomes that need you", media:"Screen recording + written text", note:"Recording of the two scheduled activities being opened and actioned. The full outcome list is a reference table in article copy, not narrated."},
@@ -9667,7 +9667,7 @@ COURSES['aiden-plus-c1'] = {
     {section:"Summary", media:"Written text", note:"Closing copy, with a link forward to the first agent walkthrough."}
   ],
   scenes: [
-    {type:"section", heading:"AI:den and AI:den+ are not the same thing", body:"You have met AI:den already. It is the assistant inside Commusoft that answers your questions, the one the Compass told you to treat as a genuine help tool rather than a search box. It works for you.\\n\\nAI:den+ is a different product that happens to share the name. It is a paid add-on, and instead of answering your questions it speaks to your customers. It telephones them, holds a conversation, handles objections, and books work into your diary while your office is closed.\\n\\nThe plus is doing a lot of work in that name, and it is worth pausing on the difference before going further. One is a colleague you ask. The other is a colleague you send out. Everything in this walkthrough is about the second one.\\n\\nAn agent is not a recorded message and not a phone tree. It listens, it adapts what it says to the customer in front of it, and it writes what it learns back into Commusoft. What it cannot do is act outside the rules you give it, and the rest of this walkthrough is largely about where those rules live."},
+    {type:"section", heading:"What an AI:den+ agent does", body:"An AI:den+ agent telephones your customers. It holds a conversation, handles the questions and objections that come back, books work into your diary, and writes what it learns onto the customer's record — while your office is closed and without anyone touching a keyboard.\\n\\nIt is not a recorded message and not a phone tree. It listens to what the customer says and adapts, so the same agent will pitch one thing to a customer whose equipment is still under warranty and something else entirely to one whose warranty ran out years ago.\\n\\nWhat it will not do is act outside the rules you set. It calls the customers you tell it to, at the times you allow, and hands back to your team the moment a conversation needs a person. This walkthrough is about where those rules live and how you check what the agent has been doing.\\n\\nEvery agent works the same way once it is running. The dashboard, the call history, the notifications and the controls that stop it are shared, whichever agent you own — so what you learn here applies to all of them, and each agent's own walkthrough then covers only what it is for."},
     {type:"section", heading:"The AI:den+ dashboard", body:"Emma clicks **AI:den+** in the navbar. The dashboard opens on a card for each agent her business runs, and the card is the whole control surface — there is no separate settings area to hunt through.\\n\\nThe card carries a live status badge, so when an agent is mid-conversation it reads **On call**. Beneath that sit its last thirty days: how many calls it made, how much administrative time it saved, and how many services it booked. Those three numbers are the honest answer to whether the agent is earning its place.\\n\\nTwo controls sit alongside. **Edit** reopens the configuration wizard, and **Disable agent** stops all outbound calls without deleting anything — the agent moves to the disabled section and can be switched back on later.\\n\\nDisable is the one worth remembering. If a customer complains, or you simply want the phones quiet during a difficult week, that button stops it immediately and costs you nothing to reverse."},
     {type:"section", heading:"Reading a call", body:"From the agent's card, Emma clicks **Call history**. The left panel lists every call the agent has handled, colour-coded by outcome, so a week of activity can be scanned in a few seconds rather than read.\\n\\nShe selects one. The right side opens the whole interaction: a written summary of the conversation, the price the agent quoted, and the outcome it recorded. If the call needed a person, the scheduled activity it created appears here too.\\n\\nUnderneath sits the recording. Emma can play the call or download it, which matters more than it sounds — the first time an agent handles a difficult customer, listening to it is the only thing that settles whether it said what you would have said.\\n\\nThe same detail also appears on the customer's own record, in the **Communications** tab, alongside every other message that customer has had. Anything an agent did carries a coloured outline there, so it is always clear at a glance whether a person or an agent made contact."},
     {type:"section", heading:"The two outcomes that need you", body:"Most outcomes need nothing from anyone. The agent retries a call that did not connect, closes out a customer who declined, and stops contacting someone who has moved. Those are logged for reference and that is all.\\n\\nTwo are different, because the agent has recognised its own limit and handed over. When a customer asks to speak to a person, the agent explains it cannot transfer the call and creates a **Request for a human**, assigned to your team. When a customer asks to be called back at a particular time, it creates a **Request for a later callback**, assigned to AI:den.\\n\\nBoth appear as scheduled activities, and both sit there until somebody picks them up. Emma actions the two waiting from overnight before she does anything else.\\n\\nThat is the habit worth building. Check your scheduled activities at the start of each working day — it is the one place where the agent is genuinely waiting on a human, and a request for a callback that nobody sees is a customer who asked for help and got silence."},
@@ -30823,7 +30823,7 @@ INBOX_FILES["aiden-plus-c1"] = `# AI:den+ essentials
 
 **Learning objectives**
 
-1. Tell AI:den and AI:den+ apart, and say what an AI:den+ agent actually does
+1. Say what an AI:den+ agent does on a call, and what it will not do without you
 2. Read an agent card on the AI:den+ dashboard — status, performance, and the controls that pause it
 3. Open a call in call history and judge what happened from the summary, recording and outcome
 4. Recognise the two call outcomes that create a scheduled activity, and action them
@@ -30835,7 +30835,7 @@ INBOX_FILES["aiden-plus-c1"] = `# AI:den+ essentials
 
 **Target audience:** Owners, managers and office leads at Commusoft clients who have the AI:den+ add-on — the people who decide whether an agent runs, what it is called, and who hears about what it did. Not field teams. SunComfort Systems is the pedagogical vehicle; the audience is any Commusoft client running AI:den+.
 
-**Assumed starting point:** The Commusoft Compass, where AI:den was introduced as the place to get help. No prior experience of AI:den+.
+**Assumed starting point:** The Commusoft Compass. No prior experience of AI:den+, and no agent set up yet.
 
 **Main objective beyond the learning objectives:** To leave a manager comfortable letting software speak to their customers unsupervised — knowing what it will say, what it will never do without them, and where to look each morning to check.
 
@@ -30856,15 +30856,15 @@ INBOX_FILES["aiden-plus-c1"] = `# AI:den+ essentials
 
 ---
 
-## AI:den and AI:den+ are not the same thing
+## What an AI:den+ agent does
 
-You have met AI:den already. It is the assistant inside Commusoft that answers your questions, the one the Compass told you to treat as a genuine help tool rather than a search box. It works for you.
+An AI:den+ agent telephones your customers. It holds a conversation, handles the questions and objections that come back, books work into your diary, and writes what it learns onto the customer's record — while your office is closed and without anyone touching a keyboard.
 
-AI:den+ is a different product that happens to share the name. It is a paid add-on, and instead of answering your questions it speaks to your customers. It telephones them, holds a conversation, handles objections, and books work into your diary while your office is closed.
+It is not a recorded message and not a phone tree. It listens to what the customer says and adapts, so the same agent will pitch one thing to a customer whose equipment is still under warranty and something else entirely to one whose warranty ran out years ago.
 
-The plus is doing a lot of work in that name, and it is worth pausing on the difference before going further. One is a colleague you ask. The other is a colleague you send out. Everything in this walkthrough is about the second one.
+What it will not do is act outside the rules you set. It calls the customers you tell it to, at the times you allow, and hands back to your team the moment a conversation needs a person. This walkthrough is about where those rules live and how you check what the agent has been doing.
 
-An agent is not a recorded message and not a phone tree. It listens, it adapts what it says to the customer in front of it, and it writes what it learns back into Commusoft. What it cannot do is act outside the rules you give it, and the rest of this walkthrough is largely about where those rules live.
+Every agent works the same way once it is running. The dashboard, the call history, the notifications and the controls that stop it are shared, whichever agent you own — so what you learn here applies to all of them, and each agent's own walkthrough then covers only what it is for.
 
 ---
 
@@ -30963,7 +30963,7 @@ What changes between agents is what triggers them and what they talk about, and 
 | Section | Media | Note |
 |---|---|---|
 | Title and introduction | Written text | Article copy above the first video. States the AI:den+ add-on requirement. |
-| AI:den and AI:den+ are not the same thing | Animated slides | Concept, nothing to record. Two panels side by side — AI:den answering a user's question, AI:den+ calling a customer. Captured as one Clueso video with the section that follows. |
+| What an AI:den+ agent does | Animated slides | Concept, nothing to record. Build the call visually — the agent dials, the customer answers, the conversation adapts, the appointment lands in the diary and the note lands on the record. Captured as one Clueso video with the section that follows. |
 | The AI:den+ dashboard | Screen recording | Roughly 40 seconds. Open on the navbar, click **AI:den+**, land on the agent card. Hold on the status badge and the three 30-day metrics, then show **Edit** and **Disable agent** without clicking either. |
 | Reading a call | Screen recording | Roughly 60 seconds. Click **Call history**, pan the colour-coded list, select one call, show summary, quoted price and outcome, then play a few seconds of the recording. Finish on the customer's **Communications** tab showing the coloured outline. |
 | The two outcomes that need you | Screen recording + written text | Recording of the two scheduled activities being opened and actioned. The full outcome list is a reference table in article copy, not narrated. |

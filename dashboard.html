@@ -2119,15 +2119,15 @@ COURSES['l1-os-s5-c1'] = {
   ],
   productionSetup: [
     "Logged-in user: Claire Hudson, Administrator, Financial office staff",
-    "Customer record: Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA. Private customer, single property, from the standard 1,000-customer import. Existing active customer with a completed heat pump installation. This is the record Nadia recorded against — do not substitute another customer. The same record carries through walkthroughs 2 and 3, where this invoice is paid and then credited.",
-    "Existing data: One completed job against Dr Spencer, not yet invoiced, carrying billable labour and parts so the line item panel has something in it. Business units configured, since the field is required and the invoice will not save without one. The job's user group set, so the field populates on screen. Nominal codes and VAT rates configured. The job raised directly rather than from a proposal, so the type choice is a real one on screen.",
+    "Customer record: Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF — account no 1999. Private customer, bungalow, credit days 14. This is a purpose-built record for this series, not the Sean Spencer in the 1,000-customer import. The import holds a separate Mr Sean Spencer at 143-149 Lewisham High Street, SE13 6AA — searching \"Spencer\" returns both, so pick account 1999. The same record carries the whole series — Walkthroughs 2 and 3 pay and credit this invoice, and 4 and 6 were recorded against it too. The recording predates the address correction: Series 5 was filmed before the customer addresses were rebuilt on 2026-08-13, so the street on screen may differ from the one above. That is accepted and the series is not being re-recorded. It costs nothing, because the address appears only here as a build instruction and never in the narration, which says \"Dr Spencer\" and \"Lewisham\" and never states a street. The address above is what the account holds now, for anyone recording afresh.",
+    "Existing data: The job behind invoice 1003, \"Residential Heat Pump Installation\", £648.00, which is the invoice this walkthrough raises and Walkthroughs 2 and 3 then act on. It carries billable labour and parts so the line item panel has something in it. Business units configured, since the field is required and the invoice will not save without one. The job's user group set, so the field populates on screen. Nominal codes and VAT rates configured. The job raised directly rather than from a proposal, so the type choice is a real one on screen. The record also carries a later invoice 1004, \"Solar Emergency Callout\", £600.00, still outstanding, and a second job — both unrelated to this thread. Keep them out of shot where the take allows.",
     "Assets required: None"
   ],
   buildBySection: [
     {section:"Introduction", media:"Written text", note:"On-screen text only — no recording needed."},
     {section:"Choosing the right invoice type", media:"Screen recording", note:"Capture job search → open job → Invoices tab → Add new invoice → the invoice-type dropdown, ending on Claire selecting Final on Dr Spencer's job."},
     {section:"The types raised somewhere else", media:"Animated slides", note:"Nothing to screen-record — these are the types that cannot be picked from this dropdown. Animate the mapping: Deposit, Grant and Retention landing on Proposals; Consolidated on the customer record; Contract on the service contract schedule. Four types, three origins, which reads far better built up on screen than as a list in prose."},
-    {section:"If your business uses CIS", media:"Written text", note:"**Build as a callout block, not an expanding section.** Conditional guidance, not narration — title it plainly so the businesses that use CIS find it and the rest pass over it. Expanding sections are reserved for the knowledge check, settled 2026-08-17."},
+    {section:"If your business uses CIS", media:"Callout - written text", note:"Conditional guidance, not narration. Title it plainly so the businesses that use CIS find it and the rest pass over it."},
     {section:"Building the invoice", media:"Screen recording", note:"Capture the invoice details, choosing the breakdown style, and adding line items."},
     {section:"Saving and sending", media:"Screen recording", note:"Capture Save invoice → the send checkbox → email or print from the record, and open Advanced options on the way so the Draft toggle is seen in the same take. The separate gif this row used to call for has been dropped: the recording already shows the control, and a gif would be a second block on the page with nothing extra in it."},
     {section:"Knowledge check", media:"Expanding section", note:"Two questions at the foot of the article, each revealing its answer on click. Nothing is scored."},
@@ -2144,7 +2144,7 @@ COURSES['l1-os-s5-c1'] = {
     {type:"reflection", label:"Knowledge check", question:"Claire is raising an invoice for a job that is not yet finished. The customer has agreed to pay a percentage of the total now, with the remainder due on completion. Which invoice type should she select, and why?", options:[], correct:"", feedback:"She selects Interim. Interim is the staged-billing type on a job: what she raises now comes off the Final invoice when the work is completed, so the customer is never billed twice for the same value. Deposit sounds like the answer, but it is generated from a proposal rather than chosen from the job's invoice-type dropdown."},
     {type:"section", heading:"Summary", body:"To raise an invoice, open the job, go to the Invoices tab, and select Add new invoice. Choose the type from the four available on a job: Final for completed work, Interim for staged billing, Additional for ad hoc charges that sit outside the job value, and Pre-final where the work needs paying for before it happens. Set the required business unit, choose the breakdown style, add the line items on the web app, and save. The invoice can be emailed at the point of saving or sent from the invoice record afterwards. The type selected shapes how the record is treated in the financial system, so getting it right at the start matters."}
   ],
-  openItems: "(1) Confirm whether the recording shows Dr or Mr Sean Spencer, then align the customer file and the live account to whichever it is. The 1,000-customer import currently has this record as Mr Sean Spencer, same address and postcode. All six walkthroughs in this series are recorded against this person, so the title needs to be the same in all three places. (2) Confirm how the existing recording of \"Choosing the right invoice type\" is cut. That section was split into three on 2026-08-17 because it was carrying three different jobs on one Screen recording row. **No narration changed and nothing moved order** — only where the section boundaries fall. If Nadia recorded one clip per section, the existing clip now spans three sections and needs trimming at two points rather than re-recording. If she recorded continuously, nothing needs doing. (3) Confirm the route to email an invoice from the invoice record after it has been saved. The save-time checkbox is verified on screen, reading \"Send invoice to\" followed by the customer email address, but the after-the-fact route from the invoice record has never been checked live."
+  openItems: "(1) Two Sean Spencer records exist and the wrong one is easy to pick. The series runs on the purpose-built **Dr** Sean Spencer, 125 Riverside Drive, SE6 7TF, **account 1999**. The 1,000-customer import separately holds **Mr** Sean Spencer at 143-149 Lewisham High Street, SE13 6AA. Searching \"Spencer\" returns both. Either merge or rename one so the next person cannot record against the wrong record, or leave both and make the account number the instruction. (2) Confirm the route to email an invoice from the invoice record after it has been saved. The save-time checkbox is verified on screen, reading \"Send invoice to\" followed by the customer email address, but the after-the-fact route from the invoice record has never been checked live."
 };
 COURSES['reed-script-l1-s5-c2'] = {
   contentType: "Walkthrough",
@@ -2161,8 +2161,8 @@ COURSES['reed-script-l1-s5-c2'] = {
   ],
   productionSetup: [
     "Logged-in user: Claire Hudson, Administrator, Financial office staff",
-    "Customer record: Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA. The same record used in Walkthrough 1, carrying the invoice raised there. The whole of Series 5 is recorded against this person — do not substitute another customer.",
-    "Existing data: The Final invoice raised against Dr Spencer's heat pump installation in Walkthrough 1, £1,200, issued and unpaid, so the payment can be recorded on screen. Payment methods configured in settings including cash, cheque, bank transfer and card. Nominal accounts configured, so the nominal account field appears. A second customer holding two or more unpaid invoices, used only to show where Cash Allocations lives on the customer record.",
+    "Customer record: Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF, account no 1999. The same record used in Walkthrough 1, carrying the invoice raised there. The whole of Series 5 is recorded against this person — do not substitute another customer.",
+    "Existing data: The Final invoice raised against Dr Spencer's heat pump installation in Walkthrough 1 — invoice 1003, \"Residential Heat Pump Installation\", £648.00 — issued and unpaid, so the payment can be recorded on screen. In the account it now shows a zero balance, because this walkthrough is what pays it. Payment methods configured in settings including cash, cheque, bank transfer and card. Nominal accounts configured, so the nominal account field appears. A second customer holding two or more unpaid invoices, used only to show where Cash Allocations lives on the customer record.",
     "Assets required: None"
   ],
   buildBySection: [
@@ -2178,7 +2178,7 @@ COURSES['reed-script-l1-s5-c2'] = {
     {type:"reflection", label:"Knowledge check", question:"Claire records a payment of £800 against an invoice for £1,200. The customer has made a part payment and will pay the remainder later. What should she enter in the amount field, and what happens to the invoice?", options:[], correct:"", feedback:"She enters the amount actually received, £800, rather than the auto-filled total. The invoice stays partially outstanding, showing £400 still due, until that remainder is recorded as a second payment against the same invoice."},
     {type:"section", heading:"Summary", body:"To mark an invoice as paid, open it from the Invoices tab, scroll to Payment and allocation history, and select Add new payment. Confirm the amount, select the payment method, set the nominal account if required, and click Add payment. For a part payment, enter only the amount received. For a single payment covering multiple invoices, use Cash Allocations from the customer record. The invoice status and account balance update immediately once the payment is recorded."}
   ],
-  openItems: "(1) The payment route has never been checked live. Opening the Invoices tab, clicking View next to the invoice, scrolling to Payment and allocation history and selecting Add new payment all come from HC 216679 and nothing else. That is the same pattern that produced the credit note route error in Walkthrough 3, where the article's section heading was written up as a click. Confirm on screen before recording. (2) Confirm the customer title matches Walkthrough 1 and the rest of the series. The 1,000-customer import has this record as Mr Sean Spencer; the series is recorded as Dr. Whichever the recording shows, the customer file, the live account and all six scripts need the same one."
+  openItems: "(1) The payment route has never been checked live. Opening the Invoices tab, clicking View next to the invoice, scrolling to Payment and allocation history and selecting Add new payment all come from HC 216679 and nothing else. That is the same pattern that produced the credit note route error in Walkthrough 3, where the article's section heading was written up as a click. Confirm on screen before recording."
 };
 COURSES['reed-script-l1-s5-c3'] = {
   contentType: "Walkthrough",
@@ -2195,8 +2195,8 @@ COURSES['reed-script-l1-s5-c3'] = {
   ],
   productionSetup: [
     "Logged-in user: Claire Hudson, Administrator, Financial office staff",
-    "Customer record: Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA. The same record used in Walkthroughs 1 and 2. The whole of Series 5 is recorded against this person — do not substitute another customer.",
-    "Existing data: The Final invoice raised against Dr Spencer's heat pump installation in Walkthrough 1, overcharged, so a credit note can be raised against it and the line items pre-fill. The payment recorded against it in Walkthrough 2, which is what makes the refund route available and is why this walkthrough follows that one rather than standing alone. Payment methods configured in settings, so a refund method can be selected. His History section populated, since both the credit note and the refund are reached from there.",
+    "Customer record: Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF, account no 1999. The same record used in Walkthroughs 1 and 2. The whole of Series 5 is recorded against this person — do not substitute another customer.",
+    "Existing data: The Final invoice raised against Dr Spencer's heat pump installation in Walkthrough 1 — invoice 1003, \"Residential Heat Pump Installation\", £648.00 — overcharged by £48, so a credit note can be raised against it and the line items pre-fill. The payment recorded against it in Walkthrough 2, which is what makes the refund route available and is why this walkthrough follows that one rather than standing alone. The credit note this walkthrough produces is credit note 2, \"Credit for Overpayment\", −£48.00, which is already on the record. Payment methods configured in settings, so a refund method can be selected. His History section populated, since both the credit note and the refund are reached from there.",
     "Assets required: None"
   ],
   buildBySection: [
@@ -2216,7 +2216,7 @@ COURSES['reed-script-l1-s5-c3'] = {
     {type:"reflection", label:"Knowledge check", question:"Claire is crediting an overcharge on one specific invoice and wants the credit note to arrive with the invoice line items already filled in. Which route should she take, and what does the other one do?", options:[], correct:"", feedback:"She takes the invoice route: open the invoice or job, Quick Links, then Raise credit note under Financial. That pre-fills the items from the original invoice and she adjusts the ones being partly credited. The customer profile route, Quick Links then Add new credit note, starts empty and is for a general credit on the account that does not relate to a particular invoice."},
     {type:"section", heading:"Summary", body:"Credit notes in Commusoft have two routes. Use the invoice route, Quick Links then Raise credit note, when the credit relates to a specific invoice, because it pre-fills the items. Use the customer profile route, Quick Links then Add new credit note, for a general account credit. Either way the credit reduces the outstanding balance on the account. Where the customer has already paid and wants the money back, find the credit note in History, open Quick Links, and select Refund remaining credit to process the return."}
   ],
-  openItems: "(1) The invoice route has never been checked live. Opening the invoice or job, selecting Quick Links in the top right and choosing Raise credit note under the Financial section comes from the Help Centre only. The customer profile route was confirmed live on 2026-07-27; this one was not, because no invoice existed to test it against at the time. There is one now, so confirm on screen before recording. (2) Confirm the customer title matches Walkthroughs 1 and 2. The 1,000-customer import has this record as Mr Sean Spencer; the series is recorded as Dr. Whichever the recording shows, the customer file, the live account and all six scripts need the same one."
+  openItems: "(1) The invoice route has never been checked live. Opening the invoice or job, selecting Quick Links in the top right and choosing Raise credit note under the Financial section comes from the Help Centre only. The customer profile route was confirmed live on 2026-07-27; this one was not, because no invoice existed to test it against at the time. There is one now, so confirm on screen before recording."
 };
 COURSES['reed-script-l1-s5-c4'] = {
   contentType: "Walkthrough",
@@ -2225,7 +2225,7 @@ COURSES['reed-script-l1-s5-c4'] = {
   duration: "3 min",
   persona: "Office teams",
   characters: "Claire Hudson (Administrator — Financial office staff)",
-  scenario: "The Rose & Crown, a commercial account with several unpaid invoices across different jobs, has asked SunComfort what it currently owes. Claire generates a statement and sends it so the account can be reviewed and paid in one go.",
+  scenario: "Dr Sean Spencer has an outstanding balance with SunComfort — the Solar Emergency Callout invoice, still unpaid — and has asked what he currently owes. Claire generates a statement and sends it so he can see the position on one page and pay.",
   objectives: [
     "Generate and send a customer statement using the correct route",
     "Choose the appropriate delivery method for the customer's contact preferences",
@@ -2233,8 +2233,8 @@ COURSES['reed-script-l1-s5-c4'] = {
   ],
   productionSetup: [
     "Logged-in user: Claire Hudson, Administrator, Financial office staff",
-    "Customer record: The Rose & Crown, 16-20 London Road, Guildford, GU1 2AF. Commercial account with more than one contact, so the group by customer contact option has something to group. This walkthrough cannot run on Dr Sean Spencer, who carries the rest of the series: he is a private customer at a single property with one contact and one invoice, so there is nothing to group and nothing to total.",
-    "Existing data: Several unpaid invoices across different jobs on this customer, and at least one unallocated credit note, so the statement shows both. Two or more contacts on the customer record. The statement email template configured in settings, since the email option uses it.",
+    "Customer record: Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF — account no 1999. The same record as the rest of the series. Not the Mr Sean Spencer at 143-149 Lewisham High Street from the 1,000-customer import.",
+    "Existing data: The account as Walkthroughs 1 to 3 leave it: invoice 1003 \"Residential Heat Pump Installation\" £648.00 settled, credit note 2 \"Credit for Overpayment\" −£48.00 allocated, and invoice 1004 \"Solar Emergency Callout\" £600.00 still outstanding — which is the balance the statement reports. The statement email template configured in settings, since the email option uses it. Note that this record has a single contact, so the group by customer contact option appears but has nothing to split; the narration treats it as an option rather than demonstrating it.",
     "Assets required: None"
   ],
   buildBySection: [
@@ -2245,14 +2245,14 @@ COURSES['reed-script-l1-s5-c4'] = {
     {section:"Summary", media:"Written text", note:"Recap text only — no recording needed."}
   ],
   scenes: [
-    {type:"section", heading:"Introduction", body:"A statement answers the question a customer asks constantly: what do I actually owe you. Rather than sending them back through a stack of individual invoices, it puts every unpaid invoice and every unallocated credit note on one page with a single balance at the bottom. Used as a routine rather than only on request, it is one of the cheapest ways to shorten the time between finishing work and being paid for it. At SunComfort, The Rose & Crown has run up several unpaid invoices across different jobs, and Claire sends the account a statement."},
+    {type:"section", heading:"Introduction", body:"A statement answers the question a customer asks constantly: what do I actually owe you. Rather than sending them back through a stack of individual invoices, it puts every unpaid invoice and every unallocated credit note on one page with a single balance at the bottom. Used as a routine rather than only on request, it is one of the cheapest ways to shorten the time between finishing work and being paid for it. At SunComfort, Dr Spencer's account still carries the Solar Emergency Callout, and he has asked what is outstanding, so Claire sends him a statement."},
     {type:"section", heading:"What a statement contains", body:"A customer statement in Commusoft is a snapshot of the customer's financial position at the moment it is generated. It lists all unpaid invoices and any unallocated credit notes, and shows the total outstanding balance. Statements do not currently support date filtering, so a statement always reflects the full outstanding balance rather than a chosen period. That matters when a customer asks for one covering a particular range of dates, because what they will receive is everything currently outstanding."},
-    {type:"section", heading:"Sending the statement", body:"Claire opens the customer dashboard, selects Quick Links, and chooses Send statement. Before it goes anywhere she decides whether to group the statement by customer contact, which matters on an account like this one where different contacts handle different invoices. She reviews the generated PDF to confirm the details are right. Three delivery options are then available. Print opens the PDF in a new browser tab for printing or saving. Email lets her pick the recipient, adjust the message using the statement email template, and optionally attach the individual invoices, up to sixteen megabytes in total. Download saves the PDF straight to the device. Claire emails it, with the invoices attached, because the account wants to check the detail against its own records."},
-    {type:"reflection", label:"Knowledge check", question:"The Rose & Crown asks Claire for a statement covering only the invoices raised in the last three months. What can she send, and what should she tell them?", options:[], correct:"", feedback:"She can only send the full statement. Commusoft statements do not support date filtering, so what generates is every unpaid invoice and unallocated credit note currently on the account, whenever it was raised. She should say so when she sends it, rather than letting them assume the document is limited to the period they asked for and reconcile it against the wrong figure."},
-    {type:"reflection", label:"Knowledge check", question:"The Rose & Crown has three contacts, and different people there deal with different invoices. What should Claire do when generating the statement, and why?", options:[], correct:"", feedback:"She groups the statement by customer contact. That splits the outstanding items so each contact sees the invoices they are responsible for rather than the whole account, which means nobody has to work out which lines are theirs before they can act. On an account with a single contact the option makes no difference."},
+    {type:"section", heading:"Sending the statement", body:"Claire opens the customer dashboard, selects Quick Links, and chooses Send statement. Before it goes anywhere she decides whether to group the statement by customer contact. It makes no difference on Dr Spencer's account, which has a single contact, but on a commercial account where different people handle different invoices it splits the statement so each contact sees only their own. She reviews the generated PDF to confirm the details are right. Three delivery options are then available. Print opens the PDF in a new browser tab for printing or saving. Email lets her pick the recipient, adjust the message using the statement email template, and optionally attach the individual invoices, up to sixteen megabytes in total. Download saves the PDF straight to the device. Claire emails it, with the invoices attached, because the account wants to check the detail against its own records."},
+    {type:"reflection", label:"Knowledge check", question:"Dr Spencer asks Claire for a statement covering only the invoices raised in the last three months. What can she send, and what should she tell them?", options:[], correct:"", feedback:"She can only send the full statement. Commusoft statements do not support date filtering, so what generates is every unpaid invoice and unallocated credit note currently on the account, whenever it was raised. She should say so when she sends it, rather than letting them assume the document is limited to the period they asked for and reconcile it against the wrong figure."},
+    {type:"reflection", label:"Knowledge check", question:"A commercial account has three contacts, and different people there deal with different invoices. What should Claire do when generating the statement, and why?", options:[], correct:"", feedback:"She groups the statement by customer contact. That splits the outstanding items so each contact sees the invoices they are responsible for rather than the whole account, which means nobody has to work out which lines are theirs before they can act. On a single-contact record like Dr Spencer's the option is there but changes nothing."},
     {type:"section", heading:"Summary", body:"A customer statement lists all unpaid invoices and unallocated credit notes at the point it is generated, and date filtering is not currently available. To send one, open the customer dashboard, select Quick Links, and choose Send statement. Decide whether to group by customer contact, review the PDF, then print, email or download it. When emailing, the individual invoices can be attached alongside the summary. The statement is a prompt for payment, and used consistently it keeps outstanding balances visible and shortens the wait to be paid."}
   ],
-  openItems: "(1) Confirm which customer this walkthrough was recorded against. The rest of Series 5 uses Dr Sean Spencer, but a statement needs an account with several unpaid invoices and more than one contact, which a private customer at a single property does not have. The script assumes The Rose & Crown. If the recording used someone else, this needs to match it. (2) The route and the three delivery options are unverified. Opening the customer dashboard and selecting Quick Links then Send statement comes from the Help Centre. Quick Links on the customer record was seen live on 2026-07-27 and does carry Send statement under a Statements heading, which supports the route. The grouping option, the PDF review step and the sixteen megabyte attachment limit have not been seen on screen. Confirm before recording. (3) The no date filtering constraint is stated in the Help Centre article and has never been tested. If it has since changed, this walkthrough teaches a limitation that no longer exists, and both knowledge check Q1 and the Summary depend on it. Worth one check."
+  openItems: "(1) The route and the three delivery options are unverified. Opening the customer dashboard and selecting Quick Links then Send statement comes from the Help Centre. Quick Links on the customer record was seen live on 2026-07-27 and does carry Send statement under a Statements heading, which supports the route. The grouping option, the PDF review step and the sixteen megabyte attachment limit have not been seen on screen. Confirm before recording. (2) The no date filtering constraint is stated in the Help Centre article and has never been tested. If it has since changed, this walkthrough teaches a limitation that no longer exists, and both knowledge check Q1 and the Summary depend on it. Worth one check."
 };
 COURSES['reed-script-l1-s5-c5'] = {
   contentType: "Walkthrough",
@@ -2301,7 +2301,7 @@ COURSES['reed-script-l1-s5-c6'] = {
   duration: "4 min",
   persona: "Office teams",
   characters: "Claire Hudson (Administrator — Financial office staff)",
-  scenario: "SunComfort has completed six maintenance visits at The Rose & Crown over the past month. Rather than sending six separate invoices, Claire raises a single consolidated invoice covering all the work, which is the billing format the account prefers.",
+  scenario: "SunComfort has completed two maintenance jobs for Dr Sean Spencer on the same day — a solar maintenance and service visit, and a general maintenance visit. Rather than sending two separate invoices, Claire raises a single consolidated invoice covering both.",
   objectives: [
     "Identify when a consolidated invoice is appropriate and which plan tier enables it",
     "Build a consolidated invoice by selecting the correct jobs and verifying totals",
@@ -2309,26 +2309,26 @@ COURSES['reed-script-l1-s5-c6'] = {
   ],
   productionSetup: [
     "Logged-in user: Claire Hudson, Administrator, Financial office staff",
-    "Customer record: The Rose & Crown, 16-20 London Road, Guildford, GU1 2AF. Commercial account, the kind that asks for a single monthly bill. The same record used in Walkthrough 4. This walkthrough cannot run on Dr Sean Spencer, who carries the rest of the series: consolidating needs several completed jobs on one account, and he has one.",
-    "Existing data: Six completed maintenance jobs on this customer within the same month, so the filters have something to select. One of the six with no total price set, so the blank Total price column appears on screen and the fill-it-in step is real rather than described. At least one job carrying a future diary event, so selecting Final triggers the cancellation warning live. The account on Go Paperless or above, since the feature is gated.",
+    "Customer record: Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF — account no 1999. The same record as the rest of the series. Not the Mr Sean Spencer at 143-149 Lewisham High Street from the 1,000-customer import.",
+    "Existing data: Two completed jobs on this record, both dated the same day — job 1022 \"Solar Maintenance & Service\" and job 1023 \"General Maintenance\" — so the filters have something to select. One of the two with no total price set, so the blank Total price column appears on screen and the fill-it-in step is real rather than described. The account on Go Paperless or above, since the feature is gated. Neither job currently carries a future diary event, so the Final warning will not fire on its own — see open item 1.",
     "Assets required: None"
   ],
   buildBySection: [
     {section:"Introduction", media:"Written text", note:"On-screen text only — what a consolidated invoice is and the Go Paperless plan requirement."},
-    {section:"Building the consolidated invoice", media:"Screen recording", note:"Capture customer record → Quick Links → Add new consolidated invoice → description, dates, filters to select the six jobs, filling the blank Total price field, the grand total → save."},
+    {section:"Building the consolidated invoice", media:"Screen recording", note:"Capture customer record → Quick Links → Add new consolidated invoice → description, dates, filters to select jobs 1022 and 1023, filling the blank Total price field, the grand total → save."},
     {section:"The Final invoice type warning", media:"Screen recording", note:"Capture selecting Final against a job that has a future appointment, holding on the confirmation warning long enough to read its wording. The separate gif this row used to call for has been dropped: the warning appears in the recording, and a gif would be a second block on the page showing the same thing."},
     {section:"Knowledge check", media:"Expanding section", note:"Two questions at the foot of the article, each revealing its answer on click. Nothing is scored."},
     {section:"Summary", media:"Written text", note:"Recap text only — no recording needed."}
   ],
   scenes: [
-    {type:"section", heading:"Introduction", body:"A consolidated invoice combines multiple job invoices into a single document. Instead of one invoice per visit, the office sends one invoice covering all the work completed in a period. It is most common on commercial accounts, where the client's finance team expects a single monthly or quarterly bill rather than a stream of individual ones. At SunComfort, The Rose & Crown has had six maintenance visits this month and wants one bill for the lot. Consolidated invoicing is available on the Go Paperless plan and above, so the account tier decides whether the option is there at all."},
-    {type:"section", heading:"Building the consolidated invoice", body:"Claire opens the customer record and selects Quick Links, then Add new consolidated invoice, which sits under the Invoices heading in that panel. She enters a description; the invoice number is generated automatically. She checks the invoice date and payment due date, and adds a business unit, user group or invoice notes where the account needs them. She then uses the filters to select the jobs to include. Any job where the total price has not been set appears with a blank field in the Total price column, and those have to be filled in before she can go on — one of the six visits is sitting like that. She checks the invoice type set against each job, then reviews the calculated grand total before saving."},
+    {type:"section", heading:"Introduction", body:"A consolidated invoice combines multiple job invoices into a single document. Instead of one invoice per visit, the office sends one invoice covering all the work completed in a period. It is most common on commercial accounts, where the client's finance team expects a single monthly or quarterly bill rather than a stream of individual ones. At SunComfort, Dr Spencer has had two maintenance jobs completed on the same day, and rather than send two invoices Claire bills them together. Consolidated invoicing is available on the Go Paperless plan and above, so the account tier decides whether the option is there at all."},
+    {type:"section", heading:"Building the consolidated invoice", body:"Claire opens the customer record and selects Quick Links, then Add new consolidated invoice, which sits under the Invoices heading in that panel. She enters a description; the invoice number is generated automatically. She checks the invoice date and payment due date, and adds a business unit, user group or invoice notes where the account needs them. She then uses the filters to select the jobs to include. Any job where the total price has not been set appears with a blank field in the Total price column, and those have to be filled in before she can go on — one of the two jobs is sitting like that. She checks the invoice type set against each job, then reviews the calculated grand total before saving."},
     {type:"section", heading:"The Final invoice type warning", body:"Choosing Final as the invoice type for any job in the consolidation triggers a confirmation warning: finalising that job's invoice will cancel any future diary events booked against it. This matters where further visits are planned but have not yet been raised as separate jobs, because those appointments disappear with the confirmation. Claire checks each job's status before selecting Final, to be sure the work is genuinely finished and nothing is still booked in."},
-    {type:"reflection", label:"Knowledge check", question:"Why would a commercial account ask for a consolidated invoice instead of one invoice per visit, and what does SunComfort keep by using the feature rather than just totalling the jobs by hand?", options:[], correct:"", feedback:"The client's finance team wants one document to check and pay once, rather than six arriving separately through the month. Using the feature rather than adding the jobs up manually means SunComfort keeps the individual job records intact behind the single invoice number, so the detail of each visit is still there when anyone queries a line."},
+    {type:"reflection", label:"Knowledge check", question:"Why would a customer ask for a consolidated invoice instead of one invoice per job, and what does SunComfort keep by using the feature rather than just totalling the jobs by hand?", options:[], correct:"", feedback:"They want one document to check and pay once, rather than several arriving separately. Using the feature rather than adding the jobs up manually means SunComfort keeps the individual job records intact behind the single invoice number, so the detail of each visit is still there when anyone queries a line."},
     {type:"reflection", label:"Knowledge check", question:"Claire is building a consolidated invoice and one of the jobs has a follow-up appointment booked for next week. She selects Final as the invoice type for that job. What happens, and what should she do?", options:[], correct:"", feedback:"Commusoft shows a confirmation warning telling her that finalising the invoice will cancel any future diary events for that job. She should not confirm. Final means the job is finished, and this one is not — the follow-up visit would be removed from the diary and nobody would know until the customer asked where the technician was."},
     {type:"section", heading:"Summary", body:"A consolidated invoice is raised from the customer record through Quick Links. Enter the description, check the dates, select the jobs using the filters, fill in any missing totals, and check the invoice types before saving. The invoice number is generated automatically. Selecting Final for any included job triggers a warning that future diary events for that job will be cancelled, so check each job's status before confirming. Once saved, the consolidated invoice appears in the customer's History under a single invoice number that links back to all the jobs it covers."}
   ],
-  openItems: "(1) Everything after the first click is unverified. The filters, the blank Total price column, the per-job invoice type column and the Final warning all come from the Help Centre. Nobody has raised a consolidated invoice on screen. Confirm before recording. (2) Plan gating needs checking against the current plan names. This script says Go Paperless and above. Sara's invoice types reference gives it as Go Paperless or All-in-one and above. Confirm which is current before recording, because it is stated in the Introduction and a learner on the wrong tier will go looking for an option that is not there. (3) Confirm which customer this walkthrough was recorded against. The rest of Series 5 uses Dr Sean Spencer, but consolidating needs several completed jobs on one account, which a private customer with a single installation does not have. The script assumes The Rose & Crown, the same account as Walkthrough 4. If the recording used someone else, this needs to match it."
+  openItems: "(1) The Final invoice type warning cannot currently be shown. Both jobs on this record are marked with no future events, so choosing Final will not trigger the cancellation warning that this walkthrough teaches. Either book a future appointment against one of the two jobs before recording that section, or accept that the warning is described rather than demonstrated. It is the one part of this walkthrough with nothing on screen behind it. (2) Everything after the first click is unverified. The filters, the blank Total price column, the per-job invoice type column and the Final warning all come from the Help Centre. Nobody has raised a consolidated invoice on screen. Confirm before recording. (3) Plan gating needs checking against the current plan names. This script says Go Paperless and above. Sara's invoice types reference gives it as Go Paperless or All-in-one and above. Confirm which is current before recording, because it is stated in the Introduction and a learner on the wrong tier will go looking for an option that is not there."
 };
 COURSES['reed-script-l1-s5-challenge'] = {
   contentType: "Series assessment",
@@ -13601,8 +13601,8 @@ INBOX_FILES["l1-os-s5-c1"] = `# Reed — Script: Raise and send an invoice
 ## Production Setup
 
 1. **Logged-in user:** Claire Hudson, Administrator, Financial office staff
-2. **Customer record:** Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA. Private customer, single property, from the standard 1,000-customer import. Existing active customer with a completed heat pump installation. **This is the record Nadia recorded against — do not substitute another customer.** The same record carries through walkthroughs 2 and 3, where this invoice is paid and then credited.
-3. **Existing data:** One completed job against Dr Spencer, not yet invoiced, carrying billable labour and parts so the line item panel has something in it. **Business units configured**, since the field is required and the invoice will not save without one. The job's user group set, so the field populates on screen. Nominal codes and VAT rates configured. The job raised directly rather than from a proposal, so the type choice is a real one on screen.
+2. **Customer record:** **Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF — account no 1999.** Private customer, bungalow, credit days 14. **This is a purpose-built record for this series, not the Sean Spencer in the 1,000-customer import.** The import holds a separate **Mr** Sean Spencer at 143-149 Lewisham High Street, SE13 6AA — searching "Spencer" returns both, so pick account **1999**. The same record carries the whole series — Walkthroughs 2 and 3 pay and credit this invoice, and 4 and 6 were recorded against it too. **The recording predates the address correction:** Series 5 was filmed before the customer addresses were rebuilt on 2026-08-13, so the street on screen may differ from the one above. That is accepted and the series is not being re-recorded. It costs nothing, because the address appears only here as a build instruction and never in the narration, which says "Dr Spencer" and "Lewisham" and never states a street. The address above is what the account holds now, for anyone recording afresh.
+3. **Existing data:** The job behind **invoice 1003, "Residential Heat Pump Installation", £648.00**, which is the invoice this walkthrough raises and Walkthroughs 2 and 3 then act on. It carries billable labour and parts so the line item panel has something in it. **Business units configured**, since the field is required and the invoice will not save without one. The job's user group set, so the field populates on screen. Nominal codes and VAT rates configured. The job raised directly rather than from a proposal, so the type choice is a real one on screen. The record also carries a later **invoice 1004, "Solar Emergency Callout", £600.00, still outstanding**, and a second job — both unrelated to this thread. Keep them out of shot where the take allows.
 4. **Assets required:** None
 
 ---
@@ -13668,7 +13668,7 @@ To raise an invoice, open the job, go to the Invoices tab, and select Add new in
 | Introduction | Written text | On-screen text only — no recording needed. |
 | Choosing the right invoice type | Screen recording | Capture job search → open job → Invoices tab → Add new invoice → the invoice-type dropdown, ending on Claire selecting Final on Dr Spencer's job. |
 | The types raised somewhere else | Animated slides | Nothing to screen-record — these are the types that cannot be picked from this dropdown. Animate the mapping: Deposit, Grant and Retention landing on Proposals; Consolidated on the customer record; Contract on the service contract schedule. Four types, three origins, which reads far better built up on screen than as a list in prose. |
-| If your business uses CIS | Written text | **Build as a callout block, not an expanding section.** Conditional guidance, not narration — title it plainly so the businesses that use CIS find it and the rest pass over it. Expanding sections are reserved for the knowledge check, settled 2026-08-17. |
+| If your business uses CIS | Callout - written text | Conditional guidance, not narration. Title it plainly so the businesses that use CIS find it and the rest pass over it. |
 | Building the invoice | Screen recording | Capture the invoice details, choosing the breakdown style, and adding line items. |
 | Saving and sending | Screen recording | Capture Save invoice → the send checkbox → email or print from the record, and open Advanced options on the way so the Draft toggle is seen in the same take. The separate gif this row used to call for has been dropped: the recording already shows the control, and a gif would be a second block on the page with nothing extra in it. |
 | Knowledge check | Expanding section | Two questions at the foot of the article, each revealing its answer on click. Nothing is scored. |
@@ -13678,11 +13678,9 @@ To raise an invoice, open the job, go to the Invoices tab, and select Add new in
 
 ## Open items
 
-(1) Confirm whether the recording shows Dr or Mr Sean Spencer, then align the customer file and the live account to whichever it is. The 1,000-customer import currently has this record as Mr Sean Spencer, same address and postcode. All six walkthroughs in this series are recorded against this person, so the title needs to be the same in all three places.
+(1) Two Sean Spencer records exist and the wrong one is easy to pick. The series runs on the purpose-built **Dr** Sean Spencer, 125 Riverside Drive, SE6 7TF, **account 1999**. The 1,000-customer import separately holds **Mr** Sean Spencer at 143-149 Lewisham High Street, SE13 6AA. Searching "Spencer" returns both. Either merge or rename one so the next person cannot record against the wrong record, or leave both and make the account number the instruction.
 
-(2) Confirm how the existing recording of "Choosing the right invoice type" is cut. That section was split into three on 2026-08-17 because it was carrying three different jobs on one Screen recording row. **No narration changed and nothing moved order** — only where the section boundaries fall. If Nadia recorded one clip per section, the existing clip now spans three sections and needs trimming at two points rather than re-recording. If she recorded continuously, nothing needs doing.
-
-(3) Confirm the route to email an invoice from the invoice record after it has been saved. The save-time checkbox is verified on screen, reading "Send invoice to" followed by the customer email address, but the after-the-fact route from the invoice record has never been checked live.
+(2) Confirm the route to email an invoice from the invoice record after it has been saved. The save-time checkbox is verified on screen, reading "Send invoice to" followed by the customer email address, but the after-the-fact route from the invoice record has never been checked live.
 
 ---
 
@@ -13690,7 +13688,7 @@ To raise an invoice, open the job, go to the Invoices tab, and select Add new in
 
 Kept for provenance. Everything below is closed and is deliberately held under its own heading so it stays out of the dashboard's Open items panel, which flattens whatever sits under \`## Open items\` into a single block.
 
-[RESOLVED 2026-08-17 — narrative and customer. The script was written as instructions to the learner ("search for the job, open it, and navigate to the Invoices tab") with no customer on screen, against the three-voices standard settled 2026-08-11. Rewritten so Archer narrates and Claire Hudson carries out every on-screen action in the third person present, with "you" kept for guidance about the learner's own business. Customer set to **Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA**, the record Nadia recorded against. Section count, paragraph structure and length are unchanged so the existing recording still fits.]
+[RESOLVED 2026-08-17 — narrative and customer. The script was written as instructions to the learner ("search for the job, open it, and navigate to the Invoices tab") with no customer on screen, against the three-voices standard settled 2026-08-11. Rewritten so Archer narrates and Claire Hudson carries out every on-screen action in the third person present, with "you" kept for guidance about the learner's own business. Customer set to **Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF, account no 1999**, the record Nadia recorded against. Section count, paragraph structure and length are unchanged so the existing recording still fits.]
 
 [RESOLVED 2026-08-17 — knowledge check Q2 contradicted this script's own open items. The answer named Deposit, while the resolved item below records that Deposit is not a job invoice type and that the answer had been changed to Interim. It now reads Interim, and explains why Deposit is the wrong pick. Q1 was a retired yes/no prompt flagged OPEN; replaced with a product question that has an explained answer, per the 2026-08-11 rule that there are no yes/no prompts.]
 
@@ -13707,7 +13705,7 @@ Kept for provenance. Everything below is closed and is deliberately held under i
 **Line breaks within sections:** none
 **Voice:** Archer narrates; Claire Hudson carries out every on-screen action, third person present; "you" used only for guidance about the learner's own business
 **Characters from approved roster:** Claire Hudson (Administrator — Financial office staff)
-**Customer from the 1,000-customer import:** Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA
+**Customer from the 1,000-customer import:** Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF, account no 1999
 **Sources used:** Commusoft — Managing invoices (https://help.commusoft.com/en/articles/216679-managing-invoices)
 **Pre-submission checklist:** complete
 **Flint revisions:** Full SCL format pass 2026-07-28. Narrative and customer pass 2026-08-17: converted to the three-voices standard, customer set to the recorded record, knowledge check corrected.
@@ -13748,8 +13746,8 @@ INBOX_FILES["reed-script-l1-s5-c2"] = `# Reed — Script: Mark an invoice as pai
 ## Production Setup
 
 1. **Logged-in user:** Claire Hudson, Administrator, Financial office staff
-2. **Customer record:** Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA. The same record used in Walkthrough 1, carrying the invoice raised there. **The whole of Series 5 is recorded against this person — do not substitute another customer.**
-3. **Existing data:** The Final invoice raised against Dr Spencer's heat pump installation in Walkthrough 1, £1,200, issued and unpaid, so the payment can be recorded on screen. Payment methods configured in settings including cash, cheque, bank transfer and card. Nominal accounts configured, so the nominal account field appears. A second customer holding two or more unpaid invoices, used only to show where Cash Allocations lives on the customer record.
+2. **Customer record:** Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF, account no 1999. The same record used in Walkthrough 1, carrying the invoice raised there. **The whole of Series 5 is recorded against this person — do not substitute another customer.**
+3. **Existing data:** The Final invoice raised against Dr Spencer's heat pump installation in Walkthrough 1 — **invoice 1003, "Residential Heat Pump Installation", £648.00** — issued and unpaid, so the payment can be recorded on screen. In the account it now shows a zero balance, because this walkthrough is what pays it. Payment methods configured in settings including cash, cheque, bank transfer and card. Nominal accounts configured, so the nominal account field appears. A second customer holding two or more unpaid invoices, used only to show where Cash Allocations lives on the customer record.
 4. **Assets required:** None
 
 ---
@@ -13798,8 +13796,6 @@ To mark an invoice as paid, open it from the Invoices tab, scroll to Payment and
 
 (1) The payment route has never been checked live. Opening the Invoices tab, clicking View next to the invoice, scrolling to Payment and allocation history and selecting Add new payment all come from HC 216679 and nothing else. That is the same pattern that produced the credit note route error in Walkthrough 3, where the article's section heading was written up as a click. Confirm on screen before recording.
 
-(2) Confirm the customer title matches Walkthrough 1 and the rest of the series. The 1,000-customer import has this record as Mr Sean Spencer; the series is recorded as Dr. Whichever the recording shows, the customer file, the live account and all six scripts need the same one.
-
 ---
 
 ## Resolved history
@@ -13821,7 +13817,7 @@ Kept for provenance, and held under its own heading so it stays out of the dashb
 **Line breaks within sections:** none
 **Voice:** Archer narrates; Claire Hudson carries out every on-screen action, third person present; "you" used only for guidance about the learner's own business
 **Characters from approved roster:** Claire Hudson (Administrator — Financial office staff)
-**Customer from the 1,000-customer import:** Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA
+**Customer from the 1,000-customer import:** Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF, account no 1999
 **Sources used:** Commusoft — Managing invoices (https://help.commusoft.com/en/articles/216679-managing-invoices)
 **Pre-submission checklist:** complete
 **Flint revisions:** Full SCL format pass 2026-07-28. Narrative and customer pass 2026-08-17: converted to the three-voices standard, customer aligned to the series thread, knowledge check Q1 replaced, open items renumbered so they render as a checklist.
@@ -13862,8 +13858,8 @@ INBOX_FILES["reed-script-l1-s5-c3"] = `# Reed — Script: Raise a credit note
 ## Production Setup
 
 1. **Logged-in user:** Claire Hudson, Administrator, Financial office staff
-2. **Customer record:** Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA. The same record used in Walkthroughs 1 and 2. **The whole of Series 5 is recorded against this person — do not substitute another customer.**
-3. **Existing data:** The Final invoice raised against Dr Spencer's heat pump installation in Walkthrough 1, overcharged, so a credit note can be raised against it and the line items pre-fill. **The payment recorded against it in Walkthrough 2**, which is what makes the refund route available and is why this walkthrough follows that one rather than standing alone. Payment methods configured in settings, so a refund method can be selected. His History section populated, since both the credit note and the refund are reached from there.
+2. **Customer record:** Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF, account no 1999. The same record used in Walkthroughs 1 and 2. **The whole of Series 5 is recorded against this person — do not substitute another customer.**
+3. **Existing data:** The Final invoice raised against Dr Spencer's heat pump installation in Walkthrough 1 — **invoice 1003, "Residential Heat Pump Installation", £648.00** — overcharged by £48, so a credit note can be raised against it and the line items pre-fill. **The payment recorded against it in Walkthrough 2**, which is what makes the refund route available and is why this walkthrough follows that one rather than standing alone. The credit note this walkthrough produces is **credit note 2, "Credit for Overpayment", −£48.00**, which is already on the record. Payment methods configured in settings, so a refund method can be selected. His History section populated, since both the credit note and the refund are reached from there.
 4. **Assets required:** None
 
 ---
@@ -13925,8 +13921,6 @@ Credit notes in Commusoft have two routes. Use the invoice route, Quick Links th
 
 (1) The invoice route has never been checked live. Opening the invoice or job, selecting Quick Links in the top right and choosing Raise credit note under the Financial section comes from the Help Centre only. The customer profile route was confirmed live on 2026-07-27; this one was not, because no invoice existed to test it against at the time. There is one now, so confirm on screen before recording.
 
-(2) Confirm the customer title matches Walkthroughs 1 and 2. The 1,000-customer import has this record as Mr Sean Spencer; the series is recorded as Dr. Whichever the recording shows, the customer file, the live account and all six scripts need the same one.
-
 ---
 
 ## Resolved history
@@ -13949,7 +13943,7 @@ Kept for provenance, and held under its own heading so it stays out of the dashb
 **Voice:** Archer narrates; Claire Hudson carries out every on-screen action, third person present; "you" used only for guidance about the learner's own business
 **Media test:** applied 2026-08-17. No section needs splitting — both credit note routes are real screens, so "Two routes to a credit note" builds from one Screen recording row.
 **Characters from approved roster:** Claire Hudson (Administrator — Financial office staff)
-**Customer from the 1,000-customer import:** Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA
+**Customer from the 1,000-customer import:** Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF, account no 1999
 **Sources used:** Commusoft — Managing invoices (https://help.commusoft.com/en/articles/216679-managing-invoices)
 **Pre-submission checklist:** complete
 **Flint revisions:** Full SCL format pass 2026-07-28. Narrative and customer pass 2026-08-17: converted to the three-voices standard, customer aligned to the series thread, knowledge check Q1 replaced, open items renumbered so they render as a checklist.
@@ -13975,7 +13969,7 @@ INBOX_FILES["reed-script-l1-s5-c4"] = `# Reed — Script: Send a customer statem
 
 **SunComfort characters:** Claire Hudson (Administrator — Financial office staff)
 
-**Scenario:** The Rose & Crown, a commercial account with several unpaid invoices across different jobs, has asked SunComfort what it currently owes. Claire generates a statement and sends it so the account can be reviewed and paid in one go.
+**Scenario:** Dr Sean Spencer has an outstanding balance with SunComfort — the Solar Emergency Callout invoice, still unpaid — and has asked what he currently owes. Claire generates a statement and sends it so he can see the position on one page and pay.
 
 **Estimated length:** 3 minutes
 
@@ -13990,15 +13984,15 @@ INBOX_FILES["reed-script-l1-s5-c4"] = `# Reed — Script: Send a customer statem
 ## Production Setup
 
 1. **Logged-in user:** Claire Hudson, Administrator, Financial office staff
-2. **Customer record:** The Rose & Crown, **16-20 London Road, Guildford, GU1 2AF**. Commercial account with more than one contact, so the group by customer contact option has something to group. **This walkthrough cannot run on Dr Sean Spencer**, who carries the rest of the series: he is a private customer at a single property with one contact and one invoice, so there is nothing to group and nothing to total.
-3. **Existing data:** Several unpaid invoices across different jobs on this customer, and at least one unallocated credit note, so the statement shows both. Two or more contacts on the customer record. The statement email template configured in settings, since the email option uses it.
+2. **Customer record:** **Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF — account no 1999.** The same record as the rest of the series. Not the Mr Sean Spencer at 143-149 Lewisham High Street from the 1,000-customer import.
+3. **Existing data:** The account as Walkthroughs 1 to 3 leave it: **invoice 1003 "Residential Heat Pump Installation" £648.00 settled, credit note 2 "Credit for Overpayment" −£48.00 allocated, and invoice 1004 "Solar Emergency Callout" £600.00 still outstanding** — which is the balance the statement reports. The statement email template configured in settings, since the email option uses it. **Note that this record has a single contact**, so the group by customer contact option appears but has nothing to split; the narration treats it as an option rather than demonstrating it.
 4. **Assets required:** None
 
 ---
 
 ## Introduction
 
-A statement answers the question a customer asks constantly: what do I actually owe you. Rather than sending them back through a stack of individual invoices, it puts every unpaid invoice and every unallocated credit note on one page with a single balance at the bottom. Used as a routine rather than only on request, it is one of the cheapest ways to shorten the time between finishing work and being paid for it. At SunComfort, The Rose & Crown has run up several unpaid invoices across different jobs, and Claire sends the account a statement.
+A statement answers the question a customer asks constantly: what do I actually owe you. Rather than sending them back through a stack of individual invoices, it puts every unpaid invoice and every unallocated credit note on one page with a single balance at the bottom. Used as a routine rather than only on request, it is one of the cheapest ways to shorten the time between finishing work and being paid for it. At SunComfort, Dr Spencer's account still carries the Solar Emergency Callout, and he has asked what is outstanding, so Claire sends him a statement.
 
 ---
 
@@ -14010,18 +14004,18 @@ A customer statement in Commusoft is a snapshot of the customer's financial posi
 
 ## Sending the statement
 
-Claire opens the customer dashboard, selects Quick Links, and chooses Send statement. Before it goes anywhere she decides whether to group the statement by customer contact, which matters on an account like this one where different contacts handle different invoices. She reviews the generated PDF to confirm the details are right. Three delivery options are then available. Print opens the PDF in a new browser tab for printing or saving. Email lets her pick the recipient, adjust the message using the statement email template, and optionally attach the individual invoices, up to sixteen megabytes in total. Download saves the PDF straight to the device. Claire emails it, with the invoices attached, because the account wants to check the detail against its own records.
+Claire opens the customer dashboard, selects Quick Links, and chooses Send statement. Before it goes anywhere she decides whether to group the statement by customer contact. It makes no difference on Dr Spencer's account, which has a single contact, but on a commercial account where different people handle different invoices it splits the statement so each contact sees only their own. She reviews the generated PDF to confirm the details are right. Three delivery options are then available. Print opens the PDF in a new browser tab for printing or saving. Email lets her pick the recipient, adjust the message using the statement email template, and optionally attach the individual invoices, up to sixteen megabytes in total. Download saves the PDF straight to the device. Claire emails it, with the invoices attached, because the account wants to check the detail against its own records.
 
 ---
 **Knowledge check**
 
-**Q1.** The Rose & Crown asks Claire for a statement covering only the invoices raised in the last three months. What can she send, and what should she tell them?
+**Q1.** Dr Spencer asks Claire for a statement covering only the invoices raised in the last three months. What can she send, and what should she tell them?
 
 **A.** She can only send the full statement. Commusoft statements do not support date filtering, so what generates is every unpaid invoice and unallocated credit note currently on the account, whenever it was raised. She should say so when she sends it, rather than letting them assume the document is limited to the period they asked for and reconcile it against the wrong figure.
 
-**Q2.** The Rose & Crown has three contacts, and different people there deal with different invoices. What should Claire do when generating the statement, and why?
+**Q2.** A commercial account has three contacts, and different people there deal with different invoices. What should Claire do when generating the statement, and why?
 
-**A.** She groups the statement by customer contact. That splits the outstanding items so each contact sees the invoices they are responsible for rather than the whole account, which means nobody has to work out which lines are theirs before they can act. On an account with a single contact the option makes no difference.
+**A.** She groups the statement by customer contact. That splits the outstanding items so each contact sees the invoices they are responsible for rather than the whole account, which means nobody has to work out which lines are theirs before they can act. On a single-contact record like Dr Spencer's the option is there but changes nothing.
 
 
 ## Summary
@@ -14044,11 +14038,9 @@ A customer statement lists all unpaid invoices and unallocated credit notes at t
 
 ## Open items
 
-(1) Confirm which customer this walkthrough was recorded against. The rest of Series 5 uses Dr Sean Spencer, but a statement needs an account with several unpaid invoices and more than one contact, which a private customer at a single property does not have. The script assumes The Rose & Crown. If the recording used someone else, this needs to match it.
+(1) The route and the three delivery options are unverified. Opening the customer dashboard and selecting Quick Links then Send statement comes from the Help Centre. Quick Links on the customer record was seen live on 2026-07-27 and does carry Send statement under a Statements heading, which supports the route. The grouping option, the PDF review step and the sixteen megabyte attachment limit have not been seen on screen. Confirm before recording.
 
-(2) The route and the three delivery options are unverified. Opening the customer dashboard and selecting Quick Links then Send statement comes from the Help Centre. Quick Links on the customer record was seen live on 2026-07-27 and does carry Send statement under a Statements heading, which supports the route. The grouping option, the PDF review step and the sixteen megabyte attachment limit have not been seen on screen. Confirm before recording.
-
-(3) The no date filtering constraint is stated in the Help Centre article and has never been tested. If it has since changed, this walkthrough teaches a limitation that no longer exists, and both knowledge check Q1 and the Summary depend on it. Worth one check.
+(2) The no date filtering constraint is stated in the Help Centre article and has never been tested. If it has since changed, this walkthrough teaches a limitation that no longer exists, and both knowledge check Q1 and the Summary depend on it. Worth one check.
 
 ---
 
@@ -14056,7 +14048,7 @@ A customer statement lists all unpaid invoices and unallocated credit notes at t
 
 Kept for provenance, and held under its own heading so it stays out of the dashboard's Open items panel.
 
-[RESOLVED 2026-08-17 — the customer address was invented. The script had The Rose & Crown at "128 High Street, Guildford, Surrey, GU1 3HZ". That address appears nowhere in the 1,000-customer file and never existed in the live account either, so no recording can ever have shown it. The real record is **16-20 London Road, Guildford, GU1 2AF**, which is what the live account has held since the address rebuild on 2026-08-13.]
+[SUPERSEDED 2026-08-17 — this walkthrough moved to Dr Sean Spencer. Sara confirms the statement and the consolidated invoice were both recorded against him, so the whole series runs on one customer as the one-thread rule requires. The note below concerned The Rose & Crown, which this script no longer uses. Kept because the address error it describes is still live in 13 other scripts. ORIGINAL NOTE: the customer address was invented. The script had The Rose & Crown at "128 High Street, Guildford, Surrey, GU1 3HZ", which appears nowhere in the 1,000-customer file. The real record is **16-20 London Road, Guildford, GU1 2AF**, which is what the live account has held since the address rebuild on 2026-08-13. An earlier version of this note claimed no recording could ever have shown the old address because it never existed in the account. That did not follow, and it is moot in any case: **the account had no customers when Series 5 was first recorded, so the whole series is being re-recorded.** This script is written for that new recording.]
 
 [RESOLVED 2026-08-17 — narrative and voice. The script instructed the learner directly throughout. Archer now narrates and Claire carries out every on-screen action in the third person present.]
 
@@ -14074,7 +14066,7 @@ Kept for provenance, and held under its own heading so it stays out of the dashb
 **Voice:** Archer narrates; Claire Hudson carries out every on-screen action, third person present; "you" used only for guidance about the learner's own business
 **Media test:** applied 2026-08-17. No section needs splitting — "Sending the statement" is a single continuous screen path, and "What a statement contains" has no screen at all, which is why it is Written text rather than folded into the recording.
 **Characters from approved roster:** Claire Hudson (Administrator — Financial office staff)
-**Customer from the 1,000-customer import:** The Rose & Crown, 16-20 London Road, Guildford, GU1 2AF
+**Customer:** Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF, account no 1999 — a purpose-built record, not the Mr Sean Spencer in the 1,000-customer import
 **Sources used:** Commusoft — Send statement (https://help.commusoft.com/en/articles/216465-send-statement)
 **Pre-submission checklist:** complete
 **Flint revisions:** Full SCL format pass 2026-07-28. Narrative and customer pass 2026-08-17: converted to the three-voices standard, invented address corrected to the real record, both knowledge check questions rewritten, open items renumbered so they render as a checklist.
@@ -14246,7 +14238,7 @@ INBOX_FILES["reed-script-l1-s5-c6"] = `# Reed — Script: Raise a consolidated i
 
 **SunComfort characters:** Claire Hudson (Administrator — Financial office staff)
 
-**Scenario:** SunComfort has completed six maintenance visits at The Rose & Crown over the past month. Rather than sending six separate invoices, Claire raises a single consolidated invoice covering all the work, which is the billing format the account prefers.
+**Scenario:** SunComfort has completed two maintenance jobs for Dr Sean Spencer on the same day — a solar maintenance and service visit, and a general maintenance visit. Rather than sending two separate invoices, Claire raises a single consolidated invoice covering both.
 
 **Estimated length:** 4 minutes
 
@@ -14261,21 +14253,21 @@ INBOX_FILES["reed-script-l1-s5-c6"] = `# Reed — Script: Raise a consolidated i
 ## Production Setup
 
 1. **Logged-in user:** Claire Hudson, Administrator, Financial office staff
-2. **Customer record:** The Rose & Crown, **16-20 London Road, Guildford, GU1 2AF**. Commercial account, the kind that asks for a single monthly bill. The same record used in Walkthrough 4. **This walkthrough cannot run on Dr Sean Spencer**, who carries the rest of the series: consolidating needs several completed jobs on one account, and he has one.
-3. **Existing data:** Six completed maintenance jobs on this customer within the same month, so the filters have something to select. **One of the six with no total price set**, so the blank Total price column appears on screen and the fill-it-in step is real rather than described. **At least one job carrying a future diary event**, so selecting Final triggers the cancellation warning live. The account on Go Paperless or above, since the feature is gated.
+2. **Customer record:** **Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF — account no 1999.** The same record as the rest of the series. Not the Mr Sean Spencer at 143-149 Lewisham High Street from the 1,000-customer import.
+3. **Existing data:** Two completed jobs on this record, both dated the same day — **job 1022 "Solar Maintenance & Service" and job 1023 "General Maintenance"** — so the filters have something to select. **One of the two with no total price set**, so the blank Total price column appears on screen and the fill-it-in step is real rather than described. The account on Go Paperless or above, since the feature is gated. **Neither job currently carries a future diary event**, so the Final warning will not fire on its own — see open item 1.
 4. **Assets required:** None
 
 ---
 
 ## Introduction
 
-A consolidated invoice combines multiple job invoices into a single document. Instead of one invoice per visit, the office sends one invoice covering all the work completed in a period. It is most common on commercial accounts, where the client's finance team expects a single monthly or quarterly bill rather than a stream of individual ones. At SunComfort, The Rose & Crown has had six maintenance visits this month and wants one bill for the lot. Consolidated invoicing is available on the Go Paperless plan and above, so the account tier decides whether the option is there at all.
+A consolidated invoice combines multiple job invoices into a single document. Instead of one invoice per visit, the office sends one invoice covering all the work completed in a period. It is most common on commercial accounts, where the client's finance team expects a single monthly or quarterly bill rather than a stream of individual ones. At SunComfort, Dr Spencer has had two maintenance jobs completed on the same day, and rather than send two invoices Claire bills them together. Consolidated invoicing is available on the Go Paperless plan and above, so the account tier decides whether the option is there at all.
 
 ---
 
 ## Building the consolidated invoice
 
-Claire opens the customer record and selects Quick Links, then Add new consolidated invoice, which sits under the Invoices heading in that panel. She enters a description; the invoice number is generated automatically. She checks the invoice date and payment due date, and adds a business unit, user group or invoice notes where the account needs them. She then uses the filters to select the jobs to include. Any job where the total price has not been set appears with a blank field in the Total price column, and those have to be filled in before she can go on — one of the six visits is sitting like that. She checks the invoice type set against each job, then reviews the calculated grand total before saving.
+Claire opens the customer record and selects Quick Links, then Add new consolidated invoice, which sits under the Invoices heading in that panel. She enters a description; the invoice number is generated automatically. She checks the invoice date and payment due date, and adds a business unit, user group or invoice notes where the account needs them. She then uses the filters to select the jobs to include. Any job where the total price has not been set appears with a blank field in the Total price column, and those have to be filled in before she can go on — one of the two jobs is sitting like that. She checks the invoice type set against each job, then reviews the calculated grand total before saving.
 
 ---
 
@@ -14286,9 +14278,9 @@ Choosing Final as the invoice type for any job in the consolidation triggers a c
 ---
 **Knowledge check**
 
-**Q1.** Why would a commercial account ask for a consolidated invoice instead of one invoice per visit, and what does SunComfort keep by using the feature rather than just totalling the jobs by hand?
+**Q1.** Why would a customer ask for a consolidated invoice instead of one invoice per job, and what does SunComfort keep by using the feature rather than just totalling the jobs by hand?
 
-**A.** The client's finance team wants one document to check and pay once, rather than six arriving separately through the month. Using the feature rather than adding the jobs up manually means SunComfort keeps the individual job records intact behind the single invoice number, so the detail of each visit is still there when anyone queries a line.
+**A.** They want one document to check and pay once, rather than several arriving separately. Using the feature rather than adding the jobs up manually means SunComfort keeps the individual job records intact behind the single invoice number, so the detail of each visit is still there when anyone queries a line.
 
 **Q2.** Claire is building a consolidated invoice and one of the jobs has a follow-up appointment booked for next week. She selects Final as the invoice type for that job. What happens, and what should she do?
 
@@ -14306,7 +14298,7 @@ A consolidated invoice is raised from the customer record through Quick Links. E
 | Section | Media | Note |
 |---|---|---|
 | Introduction | Written text | On-screen text only — what a consolidated invoice is and the Go Paperless plan requirement. |
-| Building the consolidated invoice | Screen recording | Capture customer record → Quick Links → Add new consolidated invoice → description, dates, filters to select the six jobs, filling the blank Total price field, the grand total → save. |
+| Building the consolidated invoice | Screen recording | Capture customer record → Quick Links → Add new consolidated invoice → description, dates, filters to select jobs 1022 and 1023, filling the blank Total price field, the grand total → save. |
 | The Final invoice type warning | Screen recording | Capture selecting Final against a job that has a future appointment, holding on the confirmation warning long enough to read its wording. The separate gif this row used to call for has been dropped: the warning appears in the recording, and a gif would be a second block on the page showing the same thing. |
 | Knowledge check | Expanding section | Two questions at the foot of the article, each revealing its answer on click. Nothing is scored. |
 | Summary | Written text | Recap text only — no recording needed. |
@@ -14315,11 +14307,11 @@ A consolidated invoice is raised from the customer record through Quick Links. E
 
 ## Open items
 
-(1) Everything after the first click is unverified. The filters, the blank Total price column, the per-job invoice type column and the Final warning all come from the Help Centre. Nobody has raised a consolidated invoice on screen. Confirm before recording.
+(1) The Final invoice type warning cannot currently be shown. Both jobs on this record are marked with no future events, so choosing Final will not trigger the cancellation warning that this walkthrough teaches. Either book a future appointment against one of the two jobs before recording that section, or accept that the warning is described rather than demonstrated. It is the one part of this walkthrough with nothing on screen behind it.
 
-(2) Plan gating needs checking against the current plan names. This script says Go Paperless and above. Sara's invoice types reference gives it as Go Paperless or All-in-one and above. Confirm which is current before recording, because it is stated in the Introduction and a learner on the wrong tier will go looking for an option that is not there.
+(2) Everything after the first click is unverified. The filters, the blank Total price column, the per-job invoice type column and the Final warning all come from the Help Centre. Nobody has raised a consolidated invoice on screen. Confirm before recording.
 
-(3) Confirm which customer this walkthrough was recorded against. The rest of Series 5 uses Dr Sean Spencer, but consolidating needs several completed jobs on one account, which a private customer with a single installation does not have. The script assumes The Rose & Crown, the same account as Walkthrough 4. If the recording used someone else, this needs to match it.
+(3) Plan gating needs checking against the current plan names. This script says Go Paperless and above. Sara's invoice types reference gives it as Go Paperless or All-in-one and above. Confirm which is current before recording, because it is stated in the Introduction and a learner on the wrong tier will go looking for an option that is not there.
 
 ---
 
@@ -14327,7 +14319,7 @@ A consolidated invoice is raised from the customer record through Quick Links. E
 
 Kept for provenance, and held under its own heading so it stays out of the dashboard's Open items panel.
 
-[RESOLVED 2026-08-17 — the customer address was invented. The script had The Rose & Crown at "128 High Street, Guildford, Surrey, GU1 3HZ", an address that appears nowhere in the 1,000-customer file and never existed in the live account, so no recording can have shown it. The real record is **16-20 London Road, Guildford, GU1 2AF**. Same correction as Walkthrough 4, which uses the same account.]
+[SUPERSEDED 2026-08-17 — this walkthrough moved to Dr Sean Spencer, on Sara's confirmation that it was recorded against him. The note below concerned The Rose & Crown, which this script no longer uses. ORIGINAL NOTE: the customer address was invented. The script had The Rose & Crown at "128 High Street, Guildford, Surrey, GU1 3HZ", an address that appears nowhere in the 1,000-customer file and never existed in the live account, so no recording can have shown it. The real record is **16-20 London Road, Guildford, GU1 2AF**. Same correction as Walkthrough 4, which uses the same account.]
 
 [RESOLVED 2026-08-17 — narrative and voice. The script instructed the learner directly throughout. Archer now narrates and Claire carries out every on-screen action in the third person present. The scenario also described "a commercial property management client" while the Production Setup named a pub; both now say The Rose & Crown.]
 
@@ -14345,7 +14337,7 @@ Kept for provenance, and held under its own heading so it stays out of the dashb
 **Voice:** Archer narrates; Claire Hudson carries out every on-screen action, third person present; "you" used only for guidance about the learner's own business
 **Media test:** applied 2026-08-17. No section needs splitting, and the plus on "The Final invoice type warning" has been dropped — one row is one block on the page, and the warning is already in the recording.
 **Characters from approved roster:** Claire Hudson (Administrator — Financial office staff)
-**Customer from the 1,000-customer import:** The Rose & Crown, 16-20 London Road, Guildford, GU1 2AF
+**Customer:** Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF, account no 1999 — a purpose-built record, not the Mr Sean Spencer in the 1,000-customer import
 **Sources used:** Commusoft — Managing invoices (https://help.commusoft.com/en/articles/216679-managing-invoices)
 **Pre-submission checklist:** complete
 **Flint revisions:** Full SCL format pass 2026-07-28. Narrative and customer pass 2026-08-17: converted to the three-voices standard, invented address corrected to the real record, knowledge check Q1 replaced, open items renumbered so they render as a checklist.

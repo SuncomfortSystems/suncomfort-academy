@@ -2119,7 +2119,7 @@ COURSES['l1-os-s5-c1'] = {
   ],
   productionSetup: [
     "Logged-in user: Claire Hudson, Administrator, Financial office staff",
-    "Customer record: Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF — account no 1999. Private customer, bungalow, credit days 14. This is a purpose-built record for this series, not the Sean Spencer in the 1,000-customer import. The import holds a separate Mr Sean Spencer at 143-149 Lewisham High Street, SE13 6AA — searching \"Spencer\" returns both, so pick account 1999. The same record carries the whole series — Walkthroughs 2 and 3 pay and credit this invoice, and 4 and 6 were recorded against it too. The recording predates the address correction: Series 5 was filmed before the customer addresses were rebuilt on 2026-08-13, so the street on screen may differ from the one above. That is accepted and the series is not being re-recorded. It costs nothing, because the address appears only here as a build instruction and never in the narration, which says \"Dr Spencer\" and \"Lewisham\" and never states a street. The address above is what the account holds now, for anyone recording afresh.",
+    "Customer record: Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA — account no 1999. Private customer, bungalow, credit days 14. This is the record from the 1,000-customer import, account 1999. There are ten Spencers in the account, so go by the account number rather than the surname. The customer file briefly disagreed on his title and now agrees: account, file, scripts and recording all say Dr. The same record carries the whole series — Walkthroughs 2 and 3 pay and credit this invoice, and 4 and 6 were recorded against it too. The recording predates the address correction: Series 5 was filmed before the customer addresses were rebuilt on 2026-08-13, so the street on screen may differ from the one above. That is accepted and the series is not being re-recorded. It costs nothing, because the address appears only here as a build instruction and never in the narration, which says \"Dr Spencer\" and \"Lewisham\" and never states a street. The address above is what the account holds now, for anyone recording afresh.",
     "Existing data: The job behind invoice 1003, \"Residential Heat Pump Installation\", £648.00, which is the invoice this walkthrough raises and Walkthroughs 2 and 3 then act on. It carries billable labour and parts so the line item panel has something in it. Business units configured, since the field is required and the invoice will not save without one. The job's user group set, so the field populates on screen. Nominal codes and VAT rates configured. The job raised directly rather than from a proposal, so the type choice is a real one on screen. The record also carries a later invoice 1004, \"Solar Emergency Callout\", £600.00, still outstanding, and a second job — both unrelated to this thread. Keep them out of shot where the take allows.",
     "Assets required: None"
   ],
@@ -2144,7 +2144,7 @@ COURSES['l1-os-s5-c1'] = {
     {type:"reflection", label:"Knowledge check", question:"Claire is raising an invoice for a job that is not yet finished. The customer has agreed to pay a percentage of the total now, with the remainder due on completion. Which invoice type should she select, and why?", options:[], correct:"", feedback:"She selects Interim. Interim is the staged-billing type on a job: what she raises now comes off the Final invoice when the work is completed, so the customer is never billed twice for the same value. Deposit sounds like the answer, but it is generated from a proposal rather than chosen from the job's invoice-type dropdown."},
     {type:"section", heading:"Summary", body:"To raise an invoice, open the job, go to the Invoices tab, and select Add new invoice. Choose the type from the four available on a job: Final for completed work, Interim for staged billing, Additional for ad hoc charges that sit outside the job value, and Pre-final where the work needs paying for before it happens. Set the required business unit, choose the breakdown style, add the line items on the web app, and save. The invoice can be emailed at the point of saving or sent from the invoice record afterwards. The type selected shapes how the record is treated in the financial system, so getting it right at the start matters."}
   ],
-  openItems: "(1) Two Sean Spencer records exist and the wrong one is easy to pick. The series runs on the purpose-built **Dr** Sean Spencer, 125 Riverside Drive, SE6 7TF, **account 1999**. The 1,000-customer import separately holds **Mr** Sean Spencer at 143-149 Lewisham High Street, SE13 6AA. Searching \"Spencer\" returns both. Either merge or rename one so the next person cannot record against the wrong record, or leave both and make the account number the instruction. (2) Confirm the route to email an invoice from the invoice record after it has been saved. The save-time checkbox is verified on screen, reading \"Send invoice to\" followed by the customer email address, but the after-the-fact route from the invoice record has never been checked live."
+  openItems: "(1) **344 customer records have a different title in the live account than in the customer file, and that is not yet reconciled.** When Sara flagged that the generated data was 22 percent \"Dr\", the titles were redistributed in the file — down to 13 of 749 — but **the change was never applied to the live account**, which still holds the original 167. It is a title-only divergence; every address matches. Nothing in this series is blocked by it: Dr Sean Spencer has been set back to Dr in the file so the account, the file, the scripts and the recording all agree on him. The remaining 343 need either a pass over the live account or a decision to leave the file as the reference and the account as it is. **The Drive copy of the file is now one cell out of date.** (2) Confirm the route to email an invoice from the invoice record after it has been saved. The save-time checkbox is verified on screen, reading \"Send invoice to\" followed by the customer email address, but the after-the-fact route from the invoice record has never been checked live."
 };
 COURSES['reed-script-l1-s5-c2'] = {
   contentType: "Walkthrough",
@@ -2161,7 +2161,7 @@ COURSES['reed-script-l1-s5-c2'] = {
   ],
   productionSetup: [
     "Logged-in user: Claire Hudson, Administrator, Financial office staff",
-    "Customer record: Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF, account no 1999. The same record used in Walkthrough 1, carrying the invoice raised there. The whole of Series 5 is recorded against this person — do not substitute another customer.",
+    "Customer record: Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA, account no 1999. The same record used in Walkthrough 1, carrying the invoice raised there. The whole of Series 5 is recorded against this person — do not substitute another customer.",
     "Existing data: The Final invoice raised against Dr Spencer's heat pump installation in Walkthrough 1 — invoice 1003, \"Residential Heat Pump Installation\", £648.00 — issued and unpaid, so the payment can be recorded on screen. In the account it now shows a zero balance, because this walkthrough is what pays it. Payment methods configured in settings including cash, cheque, bank transfer and card. Nominal accounts configured, so the nominal account field appears. A second customer holding two or more unpaid invoices, used only to show where Cash Allocations lives on the customer record.",
     "Assets required: None"
   ],
@@ -2195,7 +2195,7 @@ COURSES['reed-script-l1-s5-c3'] = {
   ],
   productionSetup: [
     "Logged-in user: Claire Hudson, Administrator, Financial office staff",
-    "Customer record: Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF, account no 1999. The same record used in Walkthroughs 1 and 2. The whole of Series 5 is recorded against this person — do not substitute another customer.",
+    "Customer record: Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA, account no 1999. The same record used in Walkthroughs 1 and 2. The whole of Series 5 is recorded against this person — do not substitute another customer.",
     "Existing data: The Final invoice raised against Dr Spencer's heat pump installation in Walkthrough 1 — invoice 1003, \"Residential Heat Pump Installation\", £648.00 — overcharged by £48, so a credit note can be raised against it and the line items pre-fill. The payment recorded against it in Walkthrough 2, which is what makes the refund route available and is why this walkthrough follows that one rather than standing alone. The credit note this walkthrough produces is credit note 2, \"Credit for Overpayment\", −£48.00, which is already on the record. Payment methods configured in settings, so a refund method can be selected. His History section populated, since both the credit note and the refund are reached from there.",
     "Assets required: None"
   ],
@@ -2233,7 +2233,7 @@ COURSES['reed-script-l1-s5-c4'] = {
   ],
   productionSetup: [
     "Logged-in user: Claire Hudson, Administrator, Financial office staff",
-    "Customer record: Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF — account no 1999. The same record as the rest of the series. Not the Mr Sean Spencer at 143-149 Lewisham High Street from the 1,000-customer import.",
+    "Customer record: Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA — account no 1999. The same record as the rest of the series. Ten Spencers exist in the account, so go by the account number.",
     "Existing data: The account as Walkthroughs 1 to 3 leave it: invoice 1003 \"Residential Heat Pump Installation\" £648.00 settled, credit note 2 \"Credit for Overpayment\" −£48.00 allocated, and invoice 1004 \"Solar Emergency Callout\" £600.00 still outstanding — which is the balance the statement reports. The statement email template configured in settings, since the email option uses it. Note that this record has a single contact, so the group by customer contact option appears but has nothing to split; the narration treats it as an option rather than demonstrating it.",
     "Assets required: None"
   ],
@@ -2309,7 +2309,7 @@ COURSES['reed-script-l1-s5-c6'] = {
   ],
   productionSetup: [
     "Logged-in user: Claire Hudson, Administrator, Financial office staff",
-    "Customer record: Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF — account no 1999. The same record as the rest of the series. Not the Mr Sean Spencer at 143-149 Lewisham High Street from the 1,000-customer import.",
+    "Customer record: Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA — account no 1999. The same record as the rest of the series. Ten Spencers exist in the account, so go by the account number.",
     "Existing data: Two completed jobs on this record, both dated the same day — job 1022 \"Solar Maintenance & Service\" and job 1023 \"General Maintenance\" — so the filters have something to select. One of the two with no total price set, so the blank Total price column appears on screen and the fill-it-in step is real rather than described. The account on Go Paperless or above, since the feature is gated. Neither job currently carries a future diary event, so the Final warning will not fire on its own — see open item 1.",
     "Assets required: None"
   ],
@@ -13601,7 +13601,7 @@ INBOX_FILES["l1-os-s5-c1"] = `# Reed — Script: Raise and send an invoice
 ## Production Setup
 
 1. **Logged-in user:** Claire Hudson, Administrator, Financial office staff
-2. **Customer record:** **Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF — account no 1999.** Private customer, bungalow, credit days 14. **This is a purpose-built record for this series, not the Sean Spencer in the 1,000-customer import.** The import holds a separate **Mr** Sean Spencer at 143-149 Lewisham High Street, SE13 6AA — searching "Spencer" returns both, so pick account **1999**. The same record carries the whole series — Walkthroughs 2 and 3 pay and credit this invoice, and 4 and 6 were recorded against it too. **The recording predates the address correction:** Series 5 was filmed before the customer addresses were rebuilt on 2026-08-13, so the street on screen may differ from the one above. That is accepted and the series is not being re-recorded. It costs nothing, because the address appears only here as a build instruction and never in the narration, which says "Dr Spencer" and "Lewisham" and never states a street. The address above is what the account holds now, for anyone recording afresh.
+2. **Customer record:** **Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA — account no 1999.** Private customer, bungalow, credit days 14. This is the record from the 1,000-customer import, account **1999**. **There are ten Spencers in the account, so go by the account number rather than the surname.** The customer file briefly disagreed on his title and now agrees: account, file, scripts and recording all say Dr. The same record carries the whole series — Walkthroughs 2 and 3 pay and credit this invoice, and 4 and 6 were recorded against it too. **The recording predates the address correction:** Series 5 was filmed before the customer addresses were rebuilt on 2026-08-13, so the street on screen may differ from the one above. That is accepted and the series is not being re-recorded. It costs nothing, because the address appears only here as a build instruction and never in the narration, which says "Dr Spencer" and "Lewisham" and never states a street. The address above is what the account holds now, for anyone recording afresh.
 3. **Existing data:** The job behind **invoice 1003, "Residential Heat Pump Installation", £648.00**, which is the invoice this walkthrough raises and Walkthroughs 2 and 3 then act on. It carries billable labour and parts so the line item panel has something in it. **Business units configured**, since the field is required and the invoice will not save without one. The job's user group set, so the field populates on screen. Nominal codes and VAT rates configured. The job raised directly rather than from a proposal, so the type choice is a real one on screen. The record also carries a later **invoice 1004, "Solar Emergency Callout", £600.00, still outstanding**, and a second job — both unrelated to this thread. Keep them out of shot where the take allows.
 4. **Assets required:** None
 
@@ -13678,7 +13678,7 @@ To raise an invoice, open the job, go to the Invoices tab, and select Add new in
 
 ## Open items
 
-(1) Two Sean Spencer records exist and the wrong one is easy to pick. The series runs on the purpose-built **Dr** Sean Spencer, 125 Riverside Drive, SE6 7TF, **account 1999**. The 1,000-customer import separately holds **Mr** Sean Spencer at 143-149 Lewisham High Street, SE13 6AA. Searching "Spencer" returns both. Either merge or rename one so the next person cannot record against the wrong record, or leave both and make the account number the instruction.
+(1) **344 customer records have a different title in the live account than in the customer file, and that is not yet reconciled.** When Sara flagged that the generated data was 22 percent "Dr", the titles were redistributed in the file — down to 13 of 749 — but **the change was never applied to the live account**, which still holds the original 167. It is a title-only divergence; every address matches. Nothing in this series is blocked by it: Dr Sean Spencer has been set back to Dr in the file so the account, the file, the scripts and the recording all agree on him. The remaining 343 need either a pass over the live account or a decision to leave the file as the reference and the account as it is. **The Drive copy of the file is now one cell out of date.**
 
 (2) Confirm the route to email an invoice from the invoice record after it has been saved. The save-time checkbox is verified on screen, reading "Send invoice to" followed by the customer email address, but the after-the-fact route from the invoice record has never been checked live.
 
@@ -13688,7 +13688,7 @@ To raise an invoice, open the job, go to the Invoices tab, and select Add new in
 
 Kept for provenance. Everything below is closed and is deliberately held under its own heading so it stays out of the dashboard's Open items panel, which flattens whatever sits under \`## Open items\` into a single block.
 
-[RESOLVED 2026-08-17 — narrative and customer. The script was written as instructions to the learner ("search for the job, open it, and navigate to the Invoices tab") with no customer on screen, against the three-voices standard settled 2026-08-11. Rewritten so Archer narrates and Claire Hudson carries out every on-screen action in the third person present, with "you" kept for guidance about the learner's own business. Customer set to **Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF, account no 1999**, the record Nadia recorded against. Section count, paragraph structure and length are unchanged so the existing recording still fits.]
+[RESOLVED 2026-08-17 — narrative and customer. The script was written as instructions to the learner ("search for the job, open it, and navigate to the Invoices tab") with no customer on screen, against the three-voices standard settled 2026-08-11. Rewritten so Archer narrates and Claire Hudson carries out every on-screen action in the third person present, with "you" kept for guidance about the learner's own business. Customer set to **Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA, account no 1999**, the record Nadia recorded against. Section count, paragraph structure and length are unchanged so the existing recording still fits.]
 
 [RESOLVED 2026-08-17 — knowledge check Q2 contradicted this script's own open items. The answer named Deposit, while the resolved item below records that Deposit is not a job invoice type and that the answer had been changed to Interim. It now reads Interim, and explains why Deposit is the wrong pick. Q1 was a retired yes/no prompt flagged OPEN; replaced with a product question that has an explained answer, per the 2026-08-11 rule that there are no yes/no prompts.]
 
@@ -13705,7 +13705,7 @@ Kept for provenance. Everything below is closed and is deliberately held under i
 **Line breaks within sections:** none
 **Voice:** Archer narrates; Claire Hudson carries out every on-screen action, third person present; "you" used only for guidance about the learner's own business
 **Characters from approved roster:** Claire Hudson (Administrator — Financial office staff)
-**Customer from the 1,000-customer import:** Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF, account no 1999
+**Customer from the 1,000-customer import:** Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA, account no 1999
 **Sources used:** Commusoft — Managing invoices (https://help.commusoft.com/en/articles/216679-managing-invoices)
 **Pre-submission checklist:** complete
 **Flint revisions:** Full SCL format pass 2026-07-28. Narrative and customer pass 2026-08-17: converted to the three-voices standard, customer set to the recorded record, knowledge check corrected.
@@ -13746,7 +13746,7 @@ INBOX_FILES["reed-script-l1-s5-c2"] = `# Reed — Script: Mark an invoice as pai
 ## Production Setup
 
 1. **Logged-in user:** Claire Hudson, Administrator, Financial office staff
-2. **Customer record:** Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF, account no 1999. The same record used in Walkthrough 1, carrying the invoice raised there. **The whole of Series 5 is recorded against this person — do not substitute another customer.**
+2. **Customer record:** Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA, account no 1999. The same record used in Walkthrough 1, carrying the invoice raised there. **The whole of Series 5 is recorded against this person — do not substitute another customer.**
 3. **Existing data:** The Final invoice raised against Dr Spencer's heat pump installation in Walkthrough 1 — **invoice 1003, "Residential Heat Pump Installation", £648.00** — issued and unpaid, so the payment can be recorded on screen. In the account it now shows a zero balance, because this walkthrough is what pays it. Payment methods configured in settings including cash, cheque, bank transfer and card. Nominal accounts configured, so the nominal account field appears. A second customer holding two or more unpaid invoices, used only to show where Cash Allocations lives on the customer record.
 4. **Assets required:** None
 
@@ -13817,7 +13817,7 @@ Kept for provenance, and held under its own heading so it stays out of the dashb
 **Line breaks within sections:** none
 **Voice:** Archer narrates; Claire Hudson carries out every on-screen action, third person present; "you" used only for guidance about the learner's own business
 **Characters from approved roster:** Claire Hudson (Administrator — Financial office staff)
-**Customer from the 1,000-customer import:** Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF, account no 1999
+**Customer from the 1,000-customer import:** Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA, account no 1999
 **Sources used:** Commusoft — Managing invoices (https://help.commusoft.com/en/articles/216679-managing-invoices)
 **Pre-submission checklist:** complete
 **Flint revisions:** Full SCL format pass 2026-07-28. Narrative and customer pass 2026-08-17: converted to the three-voices standard, customer aligned to the series thread, knowledge check Q1 replaced, open items renumbered so they render as a checklist.
@@ -13858,7 +13858,7 @@ INBOX_FILES["reed-script-l1-s5-c3"] = `# Reed — Script: Raise a credit note
 ## Production Setup
 
 1. **Logged-in user:** Claire Hudson, Administrator, Financial office staff
-2. **Customer record:** Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF, account no 1999. The same record used in Walkthroughs 1 and 2. **The whole of Series 5 is recorded against this person — do not substitute another customer.**
+2. **Customer record:** Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA, account no 1999. The same record used in Walkthroughs 1 and 2. **The whole of Series 5 is recorded against this person — do not substitute another customer.**
 3. **Existing data:** The Final invoice raised against Dr Spencer's heat pump installation in Walkthrough 1 — **invoice 1003, "Residential Heat Pump Installation", £648.00** — overcharged by £48, so a credit note can be raised against it and the line items pre-fill. **The payment recorded against it in Walkthrough 2**, which is what makes the refund route available and is why this walkthrough follows that one rather than standing alone. The credit note this walkthrough produces is **credit note 2, "Credit for Overpayment", −£48.00**, which is already on the record. Payment methods configured in settings, so a refund method can be selected. His History section populated, since both the credit note and the refund are reached from there.
 4. **Assets required:** None
 
@@ -13943,7 +13943,7 @@ Kept for provenance, and held under its own heading so it stays out of the dashb
 **Voice:** Archer narrates; Claire Hudson carries out every on-screen action, third person present; "you" used only for guidance about the learner's own business
 **Media test:** applied 2026-08-17. No section needs splitting — both credit note routes are real screens, so "Two routes to a credit note" builds from one Screen recording row.
 **Characters from approved roster:** Claire Hudson (Administrator — Financial office staff)
-**Customer from the 1,000-customer import:** Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF, account no 1999
+**Customer from the 1,000-customer import:** Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA, account no 1999
 **Sources used:** Commusoft — Managing invoices (https://help.commusoft.com/en/articles/216679-managing-invoices)
 **Pre-submission checklist:** complete
 **Flint revisions:** Full SCL format pass 2026-07-28. Narrative and customer pass 2026-08-17: converted to the three-voices standard, customer aligned to the series thread, knowledge check Q1 replaced, open items renumbered so they render as a checklist.
@@ -13984,7 +13984,7 @@ INBOX_FILES["reed-script-l1-s5-c4"] = `# Reed — Script: Send a customer statem
 ## Production Setup
 
 1. **Logged-in user:** Claire Hudson, Administrator, Financial office staff
-2. **Customer record:** **Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF — account no 1999.** The same record as the rest of the series. Not the Mr Sean Spencer at 143-149 Lewisham High Street from the 1,000-customer import.
+2. **Customer record:** **Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA — account no 1999.** The same record as the rest of the series. Ten Spencers exist in the account, so go by the account number.
 3. **Existing data:** The account as Walkthroughs 1 to 3 leave it: **invoice 1003 "Residential Heat Pump Installation" £648.00 settled, credit note 2 "Credit for Overpayment" −£48.00 allocated, and invoice 1004 "Solar Emergency Callout" £600.00 still outstanding** — which is the balance the statement reports. The statement email template configured in settings, since the email option uses it. **Note that this record has a single contact**, so the group by customer contact option appears but has nothing to split; the narration treats it as an option rather than demonstrating it.
 4. **Assets required:** None
 
@@ -14066,7 +14066,7 @@ Kept for provenance, and held under its own heading so it stays out of the dashb
 **Voice:** Archer narrates; Claire Hudson carries out every on-screen action, third person present; "you" used only for guidance about the learner's own business
 **Media test:** applied 2026-08-17. No section needs splitting — "Sending the statement" is a single continuous screen path, and "What a statement contains" has no screen at all, which is why it is Written text rather than folded into the recording.
 **Characters from approved roster:** Claire Hudson (Administrator — Financial office staff)
-**Customer:** Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF, account no 1999 — a purpose-built record, not the Mr Sean Spencer in the 1,000-customer import
+**Customer:** Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA, account no 1999 — a purpose-built record, not the Mr Sean Spencer in the 1,000-customer import
 **Sources used:** Commusoft — Send statement (https://help.commusoft.com/en/articles/216465-send-statement)
 **Pre-submission checklist:** complete
 **Flint revisions:** Full SCL format pass 2026-07-28. Narrative and customer pass 2026-08-17: converted to the three-voices standard, invented address corrected to the real record, both knowledge check questions rewritten, open items renumbered so they render as a checklist.
@@ -14253,7 +14253,7 @@ INBOX_FILES["reed-script-l1-s5-c6"] = `# Reed — Script: Raise a consolidated i
 ## Production Setup
 
 1. **Logged-in user:** Claire Hudson, Administrator, Financial office staff
-2. **Customer record:** **Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF — account no 1999.** The same record as the rest of the series. Not the Mr Sean Spencer at 143-149 Lewisham High Street from the 1,000-customer import.
+2. **Customer record:** **Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA — account no 1999.** The same record as the rest of the series. Ten Spencers exist in the account, so go by the account number.
 3. **Existing data:** Two completed jobs on this record, both dated the same day — **job 1022 "Solar Maintenance & Service" and job 1023 "General Maintenance"** — so the filters have something to select. **One of the two with no total price set**, so the blank Total price column appears on screen and the fill-it-in step is real rather than described. The account on Go Paperless or above, since the feature is gated. **Neither job currently carries a future diary event**, so the Final warning will not fire on its own — see open item 1.
 4. **Assets required:** None
 
@@ -14337,7 +14337,7 @@ Kept for provenance, and held under its own heading so it stays out of the dashb
 **Voice:** Archer narrates; Claire Hudson carries out every on-screen action, third person present; "you" used only for guidance about the learner's own business
 **Media test:** applied 2026-08-17. No section needs splitting, and the plus on "The Final invoice type warning" has been dropped — one row is one block on the page, and the warning is already in the recording.
 **Characters from approved roster:** Claire Hudson (Administrator — Financial office staff)
-**Customer:** Dr Sean Spencer, 125 Riverside Drive, Lewisham, SE6 7TF, account no 1999 — a purpose-built record, not the Mr Sean Spencer in the 1,000-customer import
+**Customer:** Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA, account no 1999 — a purpose-built record, not the Mr Sean Spencer in the 1,000-customer import
 **Sources used:** Commusoft — Managing invoices (https://help.commusoft.com/en/articles/216679-managing-invoices)
 **Pre-submission checklist:** complete
 **Flint revisions:** Full SCL format pass 2026-07-28. Narrative and customer pass 2026-08-17: converted to the three-voices standard, invented address corrected to the real record, knowledge check Q1 replaced, open items renumbered so they render as a checklist.

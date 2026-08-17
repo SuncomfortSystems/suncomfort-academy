@@ -2140,7 +2140,7 @@ COURSES['l1-os-s5-c1'] = {
     {type:"reflection", label:"Knowledge check", question:"Claire is raising an invoice for a job that is not yet finished. The customer has agreed to pay a percentage of the total now, with the remainder due on completion. Which invoice type should she select, and why?", options:[], correct:"", feedback:"She selects Interim. Interim is the staged-billing type on a job: what she raises now comes off the Final invoice when the work is completed, so the customer is never billed twice for the same value. Deposit sounds like the answer, but it is generated from a proposal rather than chosen from the job's invoice-type dropdown."},
     {type:"section", heading:"Summary", body:"To raise an invoice, open the job, go to the Invoices tab, and select Add new invoice. Choose the type from the four available on a job: Final for completed work, Interim for staged billing, Additional for ad hoc charges that sit outside the job value, and Pre-final where the work needs paying for before it happens. Set the required business unit, choose the breakdown style, add the line items on the web app, and save. The invoice can be emailed at the point of saving or sent from the invoice record afterwards. The type selected shapes how the record is treated in the financial system, so getting it right at the start matters."}
   ],
-  openItems: "[RESOLVED 2026-08-17 — narrative and customer. The script was written as instructions to the learner (\"search for the job, open it, and navigate to the Invoices tab\") with no customer on screen, against the three-voices standard settled 2026-08-11. Rewritten so Archer narrates and Claire Hudson carries out every on-screen action in the third person present, with \"you\" kept for guidance about the learner's own business. Customer set to **Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA**, the record Nadia recorded against. Section count, paragraph structure and length are unchanged so the existing recording still fits.] [RESOLVED 2026-08-17 — knowledge check Q2 contradicted this script's own open items. The answer named Deposit, while the resolved item below records that Deposit is not a job invoice type and that the answer had been changed to Interim. It now reads Interim, and explains why Deposit is the wrong pick. Q1 was a retired yes/no prompt flagged OPEN; replaced with a product question that has an explained answer, per the 2026-08-11 rule that there are no yes/no prompts.] [OPEN — **the customer's title.** Sara confirms Nadia recorded against Dr Sean Spencer. The 1,000-customer import has this record as **Mr** Sean Spencer, same address and postcode. Either the live account was changed to Dr during setup and the CSV needs to match, or the title in the recording is Mr. Whichever it is, the CSV, the live account and this script need the same one before walkthroughs 2 and 3 are recorded against the same person. Check the recording, then align the other two.] [OPEN — **the rest of Series 5 is on invented addresses.** Walkthroughs 2 and 3 use \"Mrs Margaret Thompson, 42 Oakwood Drive, Sevenoaks, Kent, TN13 1PF\". That address is not in the customer file at all; the real Margaret Thompson is at 54 Holly Bush Lane. Walkthroughs 4 and 6 use \"The Rose & Crown, 128 High Street, Guildford, Surrey, GU1 3HZ\"; the real record is 16-20 London Road, Guildford, GU1 2AF. Walkthroughs 2 and 3 continue this walkthrough's invoice, so under the one-thread rule they should be on Dr Spencer, not a different customer. Not changed here because it is not known which of those are already recorded.] [PARTLY RESOLVED — live check 2026-07-27, account 20257, job 1013. The save-time email checkbox is confirmed present on a standard job invoice, not just consolidated: it reads **\"Send invoice to [customer email address]\"** and sits beside Cancel and Save invoice. Advanced options contains only **\"Save invoice as a draft\"**. Nadia's note that there is no option to email *as* a named user is correct, but the script never claimed that, so no change was needed. STILL OPEN: the route to email an invoice from the invoice record after saving.] [RESOLVED — invoice type definitions supplied by Sara, 2026-07-27, and banked in `Owners Inbox/Research/Invoice types — reference.md`. All four job types are now explained, with Pre-final given real weight on Sara's point that it goes unused because nobody knows it exists. The CIS caveat on the Final invoice came from the same source. **Terminology rule: cite proposals, never estimates** — estimates is legacy naming for the same feature.] [RESOLVED — the previous version listed Deposit, Interim, Final, Draft and Consolidated. Confirmed live 2026-07-27: none of Deposit, Draft or Consolidated is a job invoice type. Draft is a save state (\"Save invoice as a draft\"), Consolidated is raised at customer level (Walkthrough 6), and Deposit is generated from a proposal.]"
+  openItems: "(1) Confirm whether the recording shows Dr or Mr Sean Spencer, then align the customer file and the live account to whichever it is. The 1,000-customer import currently has this record as Mr Sean Spencer, same address and postcode. All six walkthroughs in this series are recorded against this person, so the title needs to be the same in all three places. (2) Confirm the route to email an invoice from the invoice record after it has been saved. The save-time checkbox is verified on screen, reading \"Send invoice to\" followed by the customer email address, but the after-the-fact route from the invoice record has never been checked live."
 };
 COURSES['reed-script-l1-s5-c2'] = {
   contentType: "Walkthrough",
@@ -2149,7 +2149,7 @@ COURSES['reed-script-l1-s5-c2'] = {
   duration: "3 min",
   persona: "Office teams",
   characters: "Claire Hudson (Administrator — Financial office staff)",
-  scenario: "A customer has paid their final invoice. Claire records the payment in Commusoft so the invoice is marked as paid and the account balance is updated immediately.",
+  scenario: "Dr Sean Spencer has paid the invoice Claire raised for his heat pump installation in Walkthrough 1. Claire records the payment in Commusoft so the invoice is marked as paid and his account balance updates immediately.",
   objectives: [
     "Record a payment against an invoice using the correct route",
     "Select the appropriate payment method and confirm the amount",
@@ -2157,24 +2157,24 @@ COURSES['reed-script-l1-s5-c2'] = {
   ],
   productionSetup: [
     "Logged-in user: Claire Hudson, Administrator, Financial office staff",
-    "Customer record: Mrs Margaret Thompson, 42 Oakwood Drive, Sevenoaks, Kent, TN13 1PF. Existing active customer with a completed job.",
-    "Existing data: One completed job carrying a Final invoice of £1,200, issued and unpaid, so the payment can be recorded on screen. Payment methods configured in settings including cash, cheque, bank transfer and card. Nominal accounts configured, so the nominal account field appears. A second customer holding two or more unpaid invoices, used only to show where Cash Allocations lives on the customer record.",
+    "Customer record: Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA. The same record used in Walkthrough 1, carrying the invoice raised there. The whole of Series 5 is recorded against this person — do not substitute another customer.",
+    "Existing data: The Final invoice raised against Dr Spencer's heat pump installation in Walkthrough 1, £1,200, issued and unpaid, so the payment can be recorded on screen. Payment methods configured in settings including cash, cheque, bank transfer and card. Nominal accounts configured, so the nominal account field appears. A second customer holding two or more unpaid invoices, used only to show where Cash Allocations lives on the customer record.",
     "Assets required: None"
   ],
   buildBySection: [
-    {section:"Introduction", media:"Written text", note:"Added 2026-07-30 because this section had no row. Media is a guess from the heading, confirm before building."},
-    {section:"Recording a payment", media:"Screen recording", note:"Capture job/invoice search → Invoices tab → View invoice → Payment and allocation history → Add new payment → amount, payment method, nominal account → Add payment, ending on the updated invoice status."},
+    {section:"Introduction", media:"Written text", note:"On-screen text only — no recording needed."},
+    {section:"Recording a payment", media:"Screen recording", note:"Capture job search → Invoices tab → View invoice → Payment and allocation history → Add new payment → amount, payment method, nominal account → Add payment, ending on the updated invoice status."},
     {section:"Knowledge check", media:"Expanding section", note:"Two questions at the foot of the article, each revealing its answer on click. Nothing is scored."},
     {section:"Summary", media:"Written text", note:"Recap text only — no recording needed."}
   ],
   scenes: [
-    {type:"section", heading:"Introduction", body:"An invoice that has been paid but never recorded still counts as outstanding. Debt reports overstate what the business is owed, statements chase customers who have already paid, and the accounting sync carries the error onward into the books. Recording the payment takes a few seconds and keeps every record downstream of it correct. By the end of this walkthrough, you can record a payment against an invoice, choose the right method and amount, and recognise when a single payment covering several invoices needs Cash Allocations instead."},
-    {type:"section", heading:"Recording a payment", body:"To record a payment, search for the job or invoice, open the Invoices tab, and click View next to the invoice. Scroll to Payment and allocation history and select Add new payment. Commusoft auto-fills the invoice total. Confirm this is correct, or adjust the amount if the customer has paid only part of it. Select the payment method: cash, cheque, bank transfer, card, or others configured in your account settings. Card payments require card details to be entered. If nominal accounts are configured for your business, set the nominal account for this payment. Click Add payment to confirm. The invoice status updates immediately and the payment is recorded against the job."},
-    {type:"reflection", label:"Knowledge check", question:"Before we continue: does your business sometimes receive a single payment that covers more than one invoice for the same customer?", options:[], correct:"", feedback:"[OPEN — retired yes/no prompt. Reword as an open question, or move this guidance into the section prose.] Cash Allocations handles this directly. Instead of recording the payment against a single invoice, Cash Allocations lets you assign one payment across multiple invoices simultaneously. Access it from the customer record rather than from an individual invoice."},
-    {type:"reflection", label:"Knowledge check", question:"Claire records a payment of £800 against an invoice for £1,200. The customer has paid a deposit and will pay the remainder later. What should she enter in the amount field?", options:[], correct:"", feedback:"Claire enters the amount actually received, £800. The invoice remains partially outstanding until the remaining £400 is recorded as a second payment."},
-    {type:"section", heading:"Summary", body:"To mark an invoice as paid, open it from the Invoices tab, scroll to Payment and allocation history, and select Add new payment. Confirm the amount, select the payment method, set the nominal account if required, and click Add payment. For partial payments, enter only the amount received. For a single payment covering multiple invoices, use Cash Allocations from the customer record. The invoice status and account balance update immediately once the payment is recorded."}
+    {type:"section", heading:"Introduction", body:"An invoice that has been paid but never recorded still counts as outstanding. Debt reports overstate what the business is owed, statements chase customers who have already paid, and the accounting sync carries the error onward into the books. At SunComfort, Dr Spencer has now paid the invoice Claire raised for his heat pump installation, and she records it against his account. It takes a few seconds, and it keeps every record downstream correct."},
+    {type:"section", heading:"Recording a payment", body:"Claire searches for the job, opens the Invoices tab, and clicks View next to Dr Spencer's invoice. She scrolls to Payment and allocation history and selects Add new payment. Commusoft auto-fills the invoice total, and she confirms it is right — where a customer has paid only part of an invoice, this is the field to adjust. She selects the payment method: cash, cheque, bank transfer, card, or any other method configured in your account settings. Card payments require card details to be entered. Where nominal accounts are configured for your business, she sets the nominal account for this payment. Claire clicks Add payment. The invoice status updates immediately and the payment is recorded against the job."},
+    {type:"reflection", label:"Knowledge check", question:"SunComfort receives a single payment from a customer that settles three separate invoices. Why can Claire not simply record it against one of them, and what does she use instead?", options:[], correct:"", feedback:"Recording it against one invoice would over-allocate that invoice and leave the other two still showing as outstanding, so the customer would be chased for money they have already paid. She uses Cash Allocations, which is reached from the customer record rather than from an individual invoice and lets her assign the one payment across all three at once."},
+    {type:"reflection", label:"Knowledge check", question:"Claire records a payment of £800 against an invoice for £1,200. The customer has made a part payment and will pay the remainder later. What should she enter in the amount field, and what happens to the invoice?", options:[], correct:"", feedback:"She enters the amount actually received, £800, rather than the auto-filled total. The invoice stays partially outstanding, showing £400 still due, until that remainder is recorded as a second payment against the same invoice."},
+    {type:"section", heading:"Summary", body:"To mark an invoice as paid, open it from the Invoices tab, scroll to Payment and allocation history, and select Add new payment. Confirm the amount, select the payment method, set the nominal account if required, and click Add payment. For a part payment, enter only the amount received. For a single payment covering multiple invoices, use Cash Allocations from the customer record. The invoice status and account balance update immediately once the payment is recorded."}
   ],
-  openItems: "- **The payment route has never been checked live.** \"Open the Invoices tab, click View next to the invoice, scroll to Payment and allocation history, select Add new payment\" comes from HC 216679 and nothing else. That is the same pattern that produced the credit note route error in Walkthrough 3, where the article's section heading was written up as a click. **Confirm on screen before recording.** - **Walkthrough length is 3 minutes, below the 4 minute floor in the writing standard.** The standard says a walkthrough that cannot fill 4 minutes without padding should be considered for combining with a related feature. The obvious candidate is Cash Allocations, currently only mentioned in the reflection branch. Sara to decide: extend, combine, or accept 3 minutes as a documented exception. - Housekeeping 2026-07-28 (Flint pass): narration-only Production Setup replaced with a real one; Introduction written; em dashes removed from narration and knowledge check options; \"deposit\" replaced with \"part payment\" in the knowledge check so it does not collide with the Deposit invoice type now taught in Walkthrough 1."
+  openItems: "(1) The payment route has never been checked live. Opening the Invoices tab, clicking View next to the invoice, scrolling to Payment and allocation history and selecting Add new payment all come from HC 216679 and nothing else. That is the same pattern that produced the credit note route error in Walkthrough 3, where the article's section heading was written up as a click. Confirm on screen before recording. (2) Confirm the customer title matches Walkthrough 1 and the rest of the series. The 1,000-customer import has this record as Mr Sean Spencer; the series is recorded as Dr. Whichever the recording shows, the customer file, the live account and all six scripts need the same one."
 };
 COURSES['reed-script-l1-s5-c3'] = {
   contentType: "Walkthrough",
@@ -13662,15 +13662,21 @@ To raise an invoice, open the job, go to the Invoices tab, and select Add new in
 
 ## Open items
 
+(1) Confirm whether the recording shows Dr or Mr Sean Spencer, then align the customer file and the live account to whichever it is. The 1,000-customer import currently has this record as Mr Sean Spencer, same address and postcode. All six walkthroughs in this series are recorded against this person, so the title needs to be the same in all three places.
+
+(2) Confirm the route to email an invoice from the invoice record after it has been saved. The save-time checkbox is verified on screen, reading "Send invoice to" followed by the customer email address, but the after-the-fact route from the invoice record has never been checked live.
+
+---
+
+## Resolved history
+
+Kept for provenance. Everything below is closed and is deliberately held under its own heading so it stays out of the dashboard's Open items panel, which flattens whatever sits under \`## Open items\` into a single block.
+
 [RESOLVED 2026-08-17 — narrative and customer. The script was written as instructions to the learner ("search for the job, open it, and navigate to the Invoices tab") with no customer on screen, against the three-voices standard settled 2026-08-11. Rewritten so Archer narrates and Claire Hudson carries out every on-screen action in the third person present, with "you" kept for guidance about the learner's own business. Customer set to **Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA**, the record Nadia recorded against. Section count, paragraph structure and length are unchanged so the existing recording still fits.]
 
 [RESOLVED 2026-08-17 — knowledge check Q2 contradicted this script's own open items. The answer named Deposit, while the resolved item below records that Deposit is not a job invoice type and that the answer had been changed to Interim. It now reads Interim, and explains why Deposit is the wrong pick. Q1 was a retired yes/no prompt flagged OPEN; replaced with a product question that has an explained answer, per the 2026-08-11 rule that there are no yes/no prompts.]
 
-[OPEN — **the customer's title.** Sara confirms Nadia recorded against Dr Sean Spencer. The 1,000-customer import has this record as **Mr** Sean Spencer, same address and postcode. Either the live account was changed to Dr during setup and the CSV needs to match, or the title in the recording is Mr. Whichever it is, the CSV, the live account and this script need the same one before walkthroughs 2 and 3 are recorded against the same person. Check the recording, then align the other two.]
-
-[OPEN — **the rest of Series 5 is on invented addresses.** Walkthroughs 2 and 3 use "Mrs Margaret Thompson, 42 Oakwood Drive, Sevenoaks, Kent, TN13 1PF". That address is not in the customer file at all; the real Margaret Thompson is at 54 Holly Bush Lane. Walkthroughs 4 and 6 use "The Rose & Crown, 128 High Street, Guildford, Surrey, GU1 3HZ"; the real record is 16-20 London Road, Guildford, GU1 2AF. Walkthroughs 2 and 3 continue this walkthrough's invoice, so under the one-thread rule they should be on Dr Spencer, not a different customer. Not changed here because it is not known which of those are already recorded.]
-
-[PARTLY RESOLVED — live check 2026-07-27, account 20257, job 1013. The save-time email checkbox is confirmed present on a standard job invoice, not just consolidated: it reads **"Send invoice to [customer email address]"** and sits beside Cancel and Save invoice. Advanced options contains only **"Save invoice as a draft"**. Nadia's note that there is no option to email *as* a named user is correct, but the script never claimed that, so no change was needed. STILL OPEN: the route to email an invoice from the invoice record after saving.]
+[PARTLY RESOLVED — live check 2026-07-27, account 20257, job 1013. The save-time email checkbox is confirmed present on a standard job invoice, not just consolidated: it reads **"Send invoice to [customer email address]"** and sits beside Cancel and Save invoice. Advanced options contains only **"Save invoice as a draft"**. Nadia's note that there is no option to email *as* a named user is correct, but the script never claimed that, so no change was needed. The remaining part is carried above as open item 2.]
 
 [RESOLVED — invoice type definitions supplied by Sara, 2026-07-27, and banked in \`Owners Inbox/Research/Invoice types — reference.md\`. All four job types are now explained, with Pre-final given real weight on Sara's point that it goes unused because nobody knows it exists. The CIS caveat on the Final invoice came from the same source. **Terminology rule: cite proposals, never estimates** — estimates is legacy naming for the same feature.]
 
@@ -13696,7 +13702,7 @@ INBOX_FILES["reed-script-l1-s5-c2"] = `# Reed — Script: Mark an invoice as pai
 **Walkthrough:** 2 of 6
 **Format:** Walkthrough
 **Voice:** Archer (Clueso AI voiceover)
-**Date:** 2026-04-30
+**Date:** 2026-08-17
 
 ---
 
@@ -13709,7 +13715,7 @@ INBOX_FILES["reed-script-l1-s5-c2"] = `# Reed — Script: Mark an invoice as pai
 
 **SunComfort characters:** Claire Hudson (Administrator — Financial office staff)
 
-**Scenario:** A customer has paid their final invoice. Claire records the payment in Commusoft so the invoice is marked as paid and the account balance is updated immediately.
+**Scenario:** Dr Sean Spencer has paid the invoice Claire raised for his heat pump installation in Walkthrough 1. Claire records the payment in Commusoft so the invoice is marked as paid and his account balance updates immediately.
 
 **Estimated length:** 3 minutes
 
@@ -13724,39 +13730,38 @@ INBOX_FILES["reed-script-l1-s5-c2"] = `# Reed — Script: Mark an invoice as pai
 ## Production Setup
 
 1. **Logged-in user:** Claire Hudson, Administrator, Financial office staff
-2. **Customer record:** Mrs Margaret Thompson, 42 Oakwood Drive, Sevenoaks, Kent, TN13 1PF. Existing active customer with a completed job.
-3. **Existing data:** One completed job carrying a Final invoice of £1,200, issued and unpaid, so the payment can be recorded on screen. Payment methods configured in settings including cash, cheque, bank transfer and card. Nominal accounts configured, so the nominal account field appears. A second customer holding two or more unpaid invoices, used only to show where Cash Allocations lives on the customer record.
+2. **Customer record:** Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA. The same record used in Walkthrough 1, carrying the invoice raised there. **The whole of Series 5 is recorded against this person — do not substitute another customer.**
+3. **Existing data:** The Final invoice raised against Dr Spencer's heat pump installation in Walkthrough 1, £1,200, issued and unpaid, so the payment can be recorded on screen. Payment methods configured in settings including cash, cheque, bank transfer and card. Nominal accounts configured, so the nominal account field appears. A second customer holding two or more unpaid invoices, used only to show where Cash Allocations lives on the customer record.
 4. **Assets required:** None
 
 ---
 
 ## Introduction
 
-An invoice that has been paid but never recorded still counts as outstanding. Debt reports overstate what the business is owed, statements chase customers who have already paid, and the accounting sync carries the error onward into the books. Recording the payment takes a few seconds and keeps every record downstream of it correct. By the end of this walkthrough, you can record a payment against an invoice, choose the right method and amount, and recognise when a single payment covering several invoices needs Cash Allocations instead.
+An invoice that has been paid but never recorded still counts as outstanding. Debt reports overstate what the business is owed, statements chase customers who have already paid, and the accounting sync carries the error onward into the books. At SunComfort, Dr Spencer has now paid the invoice Claire raised for his heat pump installation, and she records it against his account. It takes a few seconds, and it keeps every record downstream correct.
 
 ---
 
 ## Recording a payment
 
-To record a payment, search for the job or invoice, open the Invoices tab, and click View next to the invoice. Scroll to Payment and allocation history and select Add new payment. Commusoft auto-fills the invoice total. Confirm this is correct, or adjust the amount if the customer has paid only part of it. Select the payment method: cash, cheque, bank transfer, card, or others configured in your account settings. Card payments require card details to be entered. If nominal accounts are configured for your business, set the nominal account for this payment. Click Add payment to confirm. The invoice status updates immediately and the payment is recorded against the job.
-
+Claire searches for the job, opens the Invoices tab, and clicks View next to Dr Spencer's invoice. She scrolls to Payment and allocation history and selects Add new payment. Commusoft auto-fills the invoice total, and she confirms it is right — where a customer has paid only part of an invoice, this is the field to adjust. She selects the payment method: cash, cheque, bank transfer, card, or any other method configured in your account settings. Card payments require card details to be entered. Where nominal accounts are configured for your business, she sets the nominal account for this payment. Claire clicks Add payment. The invoice status updates immediately and the payment is recorded against the job.
 
 ---
 
 **Knowledge check**
 
-**Q1.** Before we continue: does your business sometimes receive a single payment that covers more than one invoice for the same customer?
+**Q1.** SunComfort receives a single payment from a customer that settles three separate invoices. Why can Claire not simply record it against one of them, and what does she use instead?
 
-**A.** [OPEN — retired yes/no prompt. Reword as an open question, or move this guidance into the section prose.] Cash Allocations handles this directly. Instead of recording the payment against a single invoice, Cash Allocations lets you assign one payment across multiple invoices simultaneously. Access it from the customer record rather than from an individual invoice.
+**A.** Recording it against one invoice would over-allocate that invoice and leave the other two still showing as outstanding, so the customer would be chased for money they have already paid. She uses Cash Allocations, which is reached from the customer record rather than from an individual invoice and lets her assign the one payment across all three at once.
 
-**Q2.** Claire records a payment of £800 against an invoice for £1,200. The customer has paid a deposit and will pay the remainder later. What should she enter in the amount field?
+**Q2.** Claire records a payment of £800 against an invoice for £1,200. The customer has made a part payment and will pay the remainder later. What should she enter in the amount field, and what happens to the invoice?
 
-**A.** Claire enters the amount actually received, £800. The invoice remains partially outstanding until the remaining £400 is recorded as a second payment.
+**A.** She enters the amount actually received, £800, rather than the auto-filled total. The invoice stays partially outstanding, showing £400 still due, until that remainder is recorded as a second payment against the same invoice.
 
 
 ## Summary
 
-To mark an invoice as paid, open it from the Invoices tab, scroll to Payment and allocation history, and select Add new payment. Confirm the amount, select the payment method, set the nominal account if required, and click Add payment. For partial payments, enter only the amount received. For a single payment covering multiple invoices, use Cash Allocations from the customer record. The invoice status and account balance update immediately once the payment is recorded.
+To mark an invoice as paid, open it from the Invoices tab, scroll to Payment and allocation history, and select Add new payment. Confirm the amount, select the payment method, set the nominal account if required, and click Add payment. For a part payment, enter only the amount received. For a single payment covering multiple invoices, use Cash Allocations from the customer record. The invoice status and account balance update immediately once the payment is recorded.
 
 ---
 
@@ -13764,29 +13769,44 @@ To mark an invoice as paid, open it from the Invoices tab, scroll to Payment and
 
 | Section | Media | Note |
 |---|---|---|
-| Introduction | Written text | Added 2026-07-30 because this section had no row. Media is a guess from the heading, confirm before building. |
-| Recording a payment | Screen recording | Capture job/invoice search → Invoices tab → View invoice → Payment and allocation history → Add new payment → amount, payment method, nominal account → Add payment, ending on the updated invoice status. |
+| Introduction | Written text | On-screen text only — no recording needed. |
+| Recording a payment | Screen recording | Capture job search → Invoices tab → View invoice → Payment and allocation history → Add new payment → amount, payment method, nominal account → Add payment, ending on the updated invoice status. |
 | Knowledge check | Expanding section | Two questions at the foot of the article, each revealing its answer on click. Nothing is scored. |
 | Summary | Written text | Recap text only — no recording needed. |
+
 ---
 
 ## Open items
 
-- **The payment route has never been checked live.** "Open the Invoices tab, click View next to the invoice, scroll to Payment and allocation history, select Add new payment" comes from HC 216679 and nothing else. That is the same pattern that produced the credit note route error in Walkthrough 3, where the article's section heading was written up as a click. **Confirm on screen before recording.**
-- **Walkthrough length is 3 minutes, below the 4 minute floor in the writing standard.** The standard says a walkthrough that cannot fill 4 minutes without padding should be considered for combining with a related feature. The obvious candidate is Cash Allocations, currently only mentioned in the reflection branch. Sara to decide: extend, combine, or accept 3 minutes as a documented exception.
-- Housekeeping 2026-07-28 (Flint pass): narration-only Production Setup replaced with a real one; Introduction written; em dashes removed from narration and knowledge check options; "deposit" replaced with "part payment" in the knowledge check so it does not collide with the Deposit invoice type now taught in Walkthrough 1.
+(1) The payment route has never been checked live. Opening the Invoices tab, clicking View next to the invoice, scrolling to Payment and allocation history and selecting Add new payment all come from HC 216679 and nothing else. That is the same pattern that produced the credit note route error in Walkthrough 3, where the article's section heading was written up as a click. Confirm on screen before recording.
+
+(2) Confirm the customer title matches Walkthrough 1 and the rest of the series. The 1,000-customer import has this record as Mr Sean Spencer; the series is recorded as Dr. Whichever the recording shows, the customer file, the live account and all six scripts need the same one.
 
 ---
-**Section count:** 3 sections plus 1 reflection prompt and 1 knowledge check
+
+## Resolved history
+
+Kept for provenance, and held under its own heading so it stays out of the dashboard's Open items panel.
+
+[RESOLVED 2026-08-17 — narrative and customer. The script instructed the learner directly and named Mrs Margaret Thompson at 42 Oakwood Drive, Sevenoaks, an address that does not exist anywhere in the 1,000-customer file. Rewritten so Archer narrates and Claire carries out the actions in the third person present, on Dr Sean Spencer, continuing the invoice raised in Walkthrough 1 rather than jumping to an unrelated customer.]
+
+[RESOLVED 2026-08-17 — knowledge check Q1 was a retired yes/no prompt flagged OPEN. Replaced with a product question about Cash Allocations that has an explained answer, per the 2026-08-11 rule that there are no yes/no prompts.]
+
+[WITHDRAWN 2026-08-17 — the open item asking whether to extend or combine this walkthrough because 3 minutes sits "below the 4 minute floor". There is no minimum length in the standard, and merging on length alone is explicitly ruled out. The 4 minute floor was never set by Sara.]
+
+[Housekeeping 2026-07-28, Flint pass: narration-only Production Setup replaced with a real one; Introduction written; em dashes removed from narration and knowledge check options; "deposit" replaced with "part payment" in the knowledge check so it does not collide with the Deposit invoice type taught in Walkthrough 1.]
+
+---
+**Section count:** 3 narrated sections plus a 2-question knowledge check
 **Estimated length:** 3 minutes
-**Em dashes:** none
+**Em dashes:** used sparingly
 **Line breaks within sections:** none
-**Second person present tense:** used throughout for learner address; SunComfort characters referenced as illustrative examples
-**First person (I/my):** not used
+**Voice:** Archer narrates; Claire Hudson carries out every on-screen action, third person present; "you" used only for guidance about the learner's own business
 **Characters from approved roster:** Claire Hudson (Administrator — Financial office staff)
+**Customer from the 1,000-customer import:** Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA
 **Sources used:** Commusoft — Managing invoices (https://help.commusoft.com/en/articles/216679-managing-invoices)
 **Pre-submission checklist:** complete
-**Flint revisions:** Full SCL format pass 2026-07-28. Placeholder narration-only Production Setup replaced with a real one; Introduction added where missing; em dashes removed from narration, reflection branches, knowledge check options and feedback lines; open items rewritten from "None" to the real outstanding list.
+**Flint revisions:** Full SCL format pass 2026-07-28. Narrative and customer pass 2026-08-17: converted to the three-voices standard, customer aligned to the series thread, knowledge check Q1 replaced, open items renumbered so they render as a checklist.
 `;
 
 INBOX_FILES["reed-script-l1-s5-c3"] = `# Reed — Script: Raise a credit note

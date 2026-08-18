@@ -2114,12 +2114,13 @@ COURSES['l1-os-s5-c1'] = {
   scenario: "A heat pump installation at Dr Sean Spencer's home in Lewisham is complete and ready to invoice. Claire raises the final invoice from the job record, chooses the breakdown, and sends it to him.",
   objectives: [
     "Navigate to the correct starting point to raise an invoice from a job",
-    "Select the right invoice type and breakdown style for the work completed",
+    "Select the right invoice type for the work completed, and recognise which types are raised elsewhere",
+    "Choose the breakdown style and complete the invoice details",
     "Save and send the invoice to the customer"
   ],
   productionSetup: [
     "Logged-in user: Claire Hudson, Administrator, Financial office staff",
-    "Customer record: Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA — account no 1999. Private customer, bungalow, credit days 14. This is the record from the 1,000-customer import, account 1999. There are ten Spencers in the account, so go by the account number rather than the surname. The customer file briefly disagreed on his title and now agrees: account, file, scripts and recording all say Dr. The same record carries the whole series — Walkthroughs 2 and 3 pay and credit this invoice, and 4 and 6 were recorded against it too. The recording predates the address correction: Series 5 was filmed before the customer addresses were rebuilt on 2026-08-13, so the street on screen may differ from the one above. That is accepted and the series is not being re-recorded. It costs nothing, because the address appears only here as a build instruction and never in the narration, which says \"Dr Spencer\" and \"Lewisham\" and never states a street. The address above is what the account holds now, for anyone recording afresh.",
+    "Customer record: Dr Sean Spencer, account no 1999 — 143-149 Lewisham High Street, Lewisham, SE13 6AA. Private customer, bungalow, credit days 14. Ten Spencers exist in the account, so go by the account number, not the surname. The same record carries the whole series: Walkthroughs 2 and 3 pay and credit this invoice, and 4 and 6 use it too. The footage predates the address rebuild of 2026-08-13, so the street on screen may differ from the one above. The series is not being re-recorded and nothing is lost by it, because the narration says only \"Dr Spencer\" and \"Lewisham\" and never states a street.",
     "Existing data: The job behind invoice 1003, \"Residential Heat Pump Installation\", £648.00, which is the invoice this walkthrough raises and Walkthroughs 2 and 3 then act on. It carries billable labour and parts so the line item panel has something in it. Business units configured, since the field is required and the invoice will not save without one. The job's user group set, so the field populates on screen. Nominal codes and VAT rates configured. The job raised directly rather than from a proposal, so the type choice is a real one on screen. The record also carries a later invoice 1004, \"Solar Emergency Callout\", £600.00, still outstanding, and a second job — both unrelated to this thread. Keep them out of shot where the take allows.",
     "Assets required: None"
   ],
@@ -2139,12 +2140,12 @@ COURSES['l1-os-s5-c1'] = {
     {type:"section", heading:"Building the invoice", body:"With Final selected, Claire completes the invoice details: description, date, and any additional information relevant to this job. Two of these are easy to miss. The business unit is required and the invoice will not save until one is chosen, and the user group sits beside it, filled in from the job. Both feed the reporting later, so neither is a formality. Next she chooses the breakdown style. No breakdown produces a single line item total. Breakdown by category separates labour and parts. Full breakdown lists every individual item. Full breakdown by category groups items by type. The right choice depends on what your customers expect to see and what your business standard is. Claire adds the line items in the breakdown section and reviews the totals before saving."},
     {type:"section", heading:"Saving and sending", body:"Two controls sit alongside the Save invoice button and are worth knowing before Claire uses it. Advanced options holds a Draft setting, which saves the invoice against the job without issuing it, so the figures can still be edited where someone else needs to check them first. Beside Save invoice is a checkbox that emails the invoice to the customer as it saves, taking sending out of a separate step. Dr Spencer's invoice is ready to issue and Claire leaves the checkbox alone, so one click on Save invoice finishes it. From the invoice record it can then be printed or emailed to him."},
     {type:"section", heading:"The types raised somewhere else", body:"Other invoice types exist in Commusoft, and they are raised from other places rather than from this dropdown: Deposit, Grant and Retention come from proposals, Consolidated is raised on the customer record, and Contract invoices follow a service contract schedule. Selecting the right type from the start ensures the invoice is treated correctly in the financial records."},
-    {type:"section", heading:"If your business uses CIS", body:"One trap worth knowing. Where a job carries interim or deposit invoices, apply the CIS deductions on the Final invoice only, not on each invoice as it goes out."},
+    {type:"section", heading:"If your business uses CIS", body:"One trap worth knowing. Where a job carries interim invoices, or a deposit raised from a proposal, apply the CIS deductions on the Final invoice only, not on each invoice as it goes out."},
     {type:"reflection", label:"Knowledge check", question:"Claire has built an invoice but wants a colleague to check the figures before it reaches the customer. What does she do, and what does it change?", options:[], correct:"", feedback:"She saves it using the Draft option under Advanced options. That stores the invoice against the job without issuing it, so the figures can still be edited while the review happens, and it is finalised once the check is done. Saving normally would issue it and put it in front of the customer before anyone had looked."},
     {type:"reflection", label:"Knowledge check", question:"Claire is raising an invoice for a job that is not yet finished. The customer has agreed to pay a percentage of the total now, with the remainder due on completion. Which invoice type should she select, and why?", options:[], correct:"", feedback:"She selects Interim. Interim is the staged-billing type on a job: what she raises now comes off the Final invoice when the work is completed, so the customer is never billed twice for the same value. Deposit sounds like the answer, but it is generated from a proposal rather than chosen from the job's invoice-type dropdown."},
     {type:"section", heading:"Summary", body:"Claire raised the invoice for Dr Spencer's heat pump installation straight from the job record, chose Final because the work was finished and nothing had been billed against it, and sent it to him from the invoice record once it was issued. The invoice type is the decision that carries furthest: it settles whether the value is deducted from the Final, added on top of it, or converts on its own once the job completes. Getting it wrong is not an edit afterwards, it is a credit note. In the next walkthrough Dr Spencer pays, and Claire records that payment against this invoice."}
   ],
-  openItems: "(1) **344 customer records have a different title in the live account than in the customer file, and that is not yet reconciled.** When Sara flagged that the generated data was 22 percent \"Dr\", the titles were redistributed in the file — down to 13 of 749 — but **the change was never applied to the live account**, which still holds the original 167. It is a title-only divergence; every address matches. Nothing in this series is blocked by it: Dr Sean Spencer has been set back to Dr in the file so the account, the file, the scripts and the recording all agree on him. The remaining 343 need either a pass over the live account or a decision to leave the file as the reference and the account as it is. **The Drive copy of the file is now one cell out of date.** (2) Confirm the route to email an invoice from the invoice record after it has been saved. The save-time checkbox is verified on screen, reading \"Send invoice to\" followed by the customer email address, but the after-the-fact route from the invoice record has never been checked live."
+  openItems: "(1) Confirm the route to email an invoice from the invoice record after it has been saved. The save-time checkbox is verified on screen, reading \"Send invoice to\" followed by the customer email address, but the after-the-fact route from the invoice record has never been checked live."
 };
 COURSES['reed-script-l1-s5-c2'] = {
   contentType: "Walkthrough",
@@ -13579,8 +13580,9 @@ INBOX_FILES["l1-os-s5-c1"] = `# Reed — Script: Raise and send an invoice
 
 **Learning objectives**
 1. Navigate to the correct starting point to raise an invoice from a job
-2. Select the right invoice type and breakdown style for the work completed
-3. Save and send the invoice to the customer
+2. Select the right invoice type for the work completed, and recognise which types are raised elsewhere
+3. Choose the breakdown style and complete the invoice details
+4. Save and send the invoice to the customer
 
 **Target persona:** Office teams
 
@@ -13601,7 +13603,7 @@ INBOX_FILES["l1-os-s5-c1"] = `# Reed — Script: Raise and send an invoice
 ## Production Setup
 
 1. **Logged-in user:** Claire Hudson, Administrator, Financial office staff
-2. **Customer record:** **Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA — account no 1999.** Private customer, bungalow, credit days 14. This is the record from the 1,000-customer import, account **1999**. **There are ten Spencers in the account, so go by the account number rather than the surname.** The customer file briefly disagreed on his title and now agrees: account, file, scripts and recording all say Dr. The same record carries the whole series — Walkthroughs 2 and 3 pay and credit this invoice, and 4 and 6 were recorded against it too. **The recording predates the address correction:** Series 5 was filmed before the customer addresses were rebuilt on 2026-08-13, so the street on screen may differ from the one above. That is accepted and the series is not being re-recorded. It costs nothing, because the address appears only here as a build instruction and never in the narration, which says "Dr Spencer" and "Lewisham" and never states a street. The address above is what the account holds now, for anyone recording afresh.
+2. **Customer record:** **Dr Sean Spencer, account no 1999** — 143-149 Lewisham High Street, Lewisham, SE13 6AA. Private customer, bungalow, credit days 14. **Ten Spencers exist in the account, so go by the account number, not the surname.** The same record carries the whole series: Walkthroughs 2 and 3 pay and credit this invoice, and 4 and 6 use it too. **The footage predates the address rebuild of 2026-08-13**, so the street on screen may differ from the one above. The series is not being re-recorded and nothing is lost by it, because the narration says only "Dr Spencer" and "Lewisham" and never states a street.
 3. **Existing data:** The job behind **invoice 1003, "Residential Heat Pump Installation", £648.00**, which is the invoice this walkthrough raises and Walkthroughs 2 and 3 then act on. It carries billable labour and parts so the line item panel has something in it. **Business units configured**, since the field is required and the invoice will not save without one. The job's user group set, so the field populates on screen. Nominal codes and VAT rates configured. The job raised directly rather than from a proposal, so the type choice is a real one on screen. The record also carries a later **invoice 1004, "Solar Emergency Callout", £600.00, still outstanding**, and a second job — both unrelated to this thread. Keep them out of shot where the take allows.
 4. **Assets required:** None
 
@@ -13641,7 +13643,7 @@ Other invoice types exist in Commusoft, and they are raised from other places ra
 
 ## If your business uses CIS
 
-One trap worth knowing. Where a job carries interim or deposit invoices, apply the CIS deductions on the Final invoice only, not on each invoice as it goes out.
+One trap worth knowing. Where a job carries interim invoices, or a deposit raised from a proposal, apply the CIS deductions on the Final invoice only, not on each invoice as it goes out.
 
 ---
 **Knowledge check**
@@ -13677,13 +13679,13 @@ Claire raised the invoice for Dr Spencer's heat pump installation straight from 
 
 ## Open items
 
-(1) **344 customer records have a different title in the live account than in the customer file, and that is not yet reconciled.** When Sara flagged that the generated data was 22 percent "Dr", the titles were redistributed in the file — down to 13 of 749 — but **the change was never applied to the live account**, which still holds the original 167. It is a title-only divergence; every address matches. Nothing in this series is blocked by it: Dr Sean Spencer has been set back to Dr in the file so the account, the file, the scripts and the recording all agree on him. The remaining 343 need either a pass over the live account or a decision to leave the file as the reference and the account as it is. **The Drive copy of the file is now one cell out of date.**
-
-(2) Confirm the route to email an invoice from the invoice record after it has been saved. The save-time checkbox is verified on screen, reading "Send invoice to" followed by the customer email address, but the after-the-fact route from the invoice record has never been checked live.
+(1) Confirm the route to email an invoice from the invoice record after it has been saved. The save-time checkbox is verified on screen, reading "Send invoice to" followed by the customer email address, but the after-the-fact route from the invoice record has never been checked live.
 
 ---
 
 ## Resolved history
+
+[RESOLVED 2026-08-18 — the customer title. The account and the recording hold him as Dr; the 1,000-customer file briefly said Mr after a title redistribution and has been set back to Dr. All four now agree.]
 
 Kept for provenance. Everything below is closed and is deliberately held under its own heading so it stays out of the dashboard's Open items panel, which flattens whatever sits under \`## Open items\` into a single block.
 

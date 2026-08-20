@@ -2190,7 +2190,7 @@ COURSES['reed-script-l1-s5-c3'] = {
   duration: "4 min",
   persona: "Office teams",
   characters: "Claire Hudson (Administrator — Financial office staff)",
-  scenario: "Dr Sean Spencer was overcharged on the heat pump installation invoice Claire raised in Walkthrough 1 and paid in full in Walkthrough 2. Claire raises a credit note against that invoice to correct the balance. Because he has already paid, the credit has to go back to him as a refund rather than sit on the account.",
+  scenario: "Dr Sean Spencer was overcharged on the heat pump installation invoice Claire raised, and he has already paid it in full. Claire raises a credit note against that invoice to correct the balance. Because the money is already in, the credit has to go back to him as a refund rather than sit on the account.",
   objectives: [
     "Distinguish the two routes to a credit note and select the appropriate one",
     "Raise a credit note against a specific invoice using Quick Links",
@@ -2198,28 +2198,29 @@ COURSES['reed-script-l1-s5-c3'] = {
   ],
   productionSetup: [
     "Logged-in user: Claire Hudson, Administrator, Financial office staff",
-    "Customer record: Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA, account no 1999. The same record used in Walkthroughs 1 and 2. The whole of Series 5 is recorded against this person — do not substitute another customer.",
-    "Existing data: The Final invoice raised against Dr Spencer's heat pump installation in Walkthrough 1 — invoice 1003, \"Residential Heat Pump Installation\", £648.00 — overcharged by £48, so a credit note can be raised against it and the line items pre-fill. The payment recorded against it in Walkthrough 2, which is what makes the refund route available and is why this walkthrough follows that one rather than standing alone. The credit note this walkthrough produces is credit note 2, \"Credit for Overpayment\", −£48.00, which is already on the record. Payment methods configured in settings, so a refund method can be selected. His History section populated, since both the credit note and the refund are reached from there.",
+    "Customer record: Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA, account no 1999. The whole of Series 5 is recorded against this person — do not substitute another customer.",
+    "Existing data: The Final invoice raised against Dr Spencer's heat pump installation — invoice 1003, \"Residential Heat Pump Installation\", £648.00 — overcharged by £48, so a credit note can be raised against it and the line items pre-fill. A payment must already be recorded against that invoice, since it is what makes the refund route available: with nothing paid there is no credit to return. The credit note this walkthrough produces is credit note 2, \"Credit for Overpayment\", −£48.00, which is already on the record. Payment methods configured in settings, so a refund method can be selected. His History section populated, since both the credit note and the refund are reached from there.",
     "Assets required: None"
   ],
   buildBySection: [
     {section:"Introduction", media:"Written text", note:"On-screen text only — no recording needed."},
     {section:"Two routes to a credit note", media:"Screen recording", note:"Capture both starting points: customer profile → Quick Links → Invoices → Add new credit note, and invoice/job → Quick Links → Raise credit note in the Financial section. Both are real screens, so this stays one row."},
     {section:"Raising the credit note", media:"Screen recording", note:"Capture the credit note form — description, date, breakdown style, line items pre-filled via the invoice route — through to save and the entry appearing in Dr Spencer's History."},
-    {section:"Processing a refund", media:"Screen recording", note:"Capture customer record → History → View credit note → Quick Links → Refund remaining credit → description, date, amount, payment method → Receive credit."},
+    {section:"Refunding the credit", media:"Screen recording", note:"Capture customer record → History → View credit note → Quick Links → Refund remaining credit → description, date, amount, payment method → Receive credit."},
     {section:"Knowledge check", media:"Expanding section", note:"Two questions at the foot of the article, each revealing its answer on click. Nothing is scored."},
     {section:"Summary", media:"Written text", note:"Recap text only — no recording needed."}
   ],
   scenes: [
     {type:"section", heading:"Introduction", body:"Correcting an invoice is not the same as changing it. Deleting or editing an issued invoice destroys the audit trail and leaves the customer holding a document the system no longer recognises. A credit note does the opposite: the original invoice stays exactly as it was charged, the credit note records the correction beside it, and the account balance reflects the net position of the two. At SunComfort, Dr Spencer has been overcharged on the installation invoice he has already paid, so Claire raises a credit note and returns the money rather than leaving a credit sitting on his account."},
-    {type:"section", heading:"Two routes to a credit note", body:"There are two ways to raise a credit note in Commusoft, and which one to use depends on whether the credit relates to a specific invoice. The first runs from the customer profile: open Quick Links and choose Add new credit note, which sits under the Invoices heading in that panel. That is the route for a general account credit not tied to a particular invoice. The second runs from the invoice itself: open the invoice or job, select Quick Links in the top right, and choose Raise credit note under the Financial section. This route pre-fills the credit note with the items from the original invoice, which saves time when crediting all or part of a specific charge, and the pre-filled items can still be adjusted before saving. Claire is crediting one line on a known invoice, so she takes the invoice route."},
-    {type:"section", heading:"Raising the credit note", body:"Whichever route is taken, the credit note form asks for a description and a date, and offers the same breakdown style options as a standard invoice. Coming in from the invoice, Claire's line items are already filled in, and she adjusts the one being credited so the amount matches the overcharge rather than the whole invoice. Had she come from the customer profile, she would add the line items herself. She reviews the total before saving. The credit note then appears in Dr Spencer's History and reduces the outstanding balance on his account."},
-    {type:"section", heading:"Processing a refund", body:"Dr Spencer has already paid in full, so the credit needs to go back to him rather than wait against a future invoice. Claire goes to his customer record, finds the credit note in the History section and clicks View. She opens Quick Links and selects Refund remaining credit, then enters a description, the date and the refund amount, which can be the full credit or part of it. She selects the payment method for the refund and clicks Receive credit to confirm. The credit note updates to show the amount refunded, and any credit still remaining stays on the account."},
-    {type:"reflection", label:"Knowledge check", question:"An invoice has gone out with the wrong amount on it. Why does Claire raise a credit note rather than editing or deleting the original invoice?", options:[], correct:"", feedback:"Because the original invoice is the record of what the customer was actually charged, and the customer is holding a copy of it. Editing or deleting it breaks the audit trail and leaves them with a document Commusoft no longer recognises. A credit note leaves the original untouched and records the correction alongside it, so both appear in the customer's History and the account balance shows the net of the two."},
+    {type:"section", heading:"Two routes to a credit note", body:"There are two ways to raise a credit note in your account, and which to use depends on whether the credit relates to a specific invoice. The first runs from the customer record: Claire opens Quick Links and chooses Add new credit note, which sits under the Invoices heading in that panel. That is the route for a general account credit not tied to a particular invoice, and it means adding the details by hand before saving.\n\nThe second runs from the invoice itself. Claire opens the invoice, selects Quick Links in the top right and chooses Raise credit note under the Financial section. This route pre-fills the credit note with the items from the original invoice, which saves time when crediting all or part of a specific charge. The pre-filled items can be adjusted, and the total is always worth reviewing before saving."},
+    {type:"section", heading:"Raising the credit note", body:"Whichever route is taken, the form asks for a description and a date, and offers the same breakdown style options as a standard invoice. The credit note then appears in the customer's History and reduces the outstanding balance on their account — or shows as in credit where there is no balance left to reduce."},
+    {type:"section", heading:"Refunding the credit", body:"Dr Spencer has already paid, so the credit goes back to him rather than waiting against a future invoice. Claire goes to his customer record, finds the credit note in the History section and clicks View. She opens Quick Links and selects Refund remaining credit, then enters a description, the date and the refund amount, which can be the full credit or part of it.\n\nShe selects the payment method for the refund and clicks Receive credit to confirm. The credit note updates to show the amount refunded, and any credit still remaining stays on the account."},
+    {type:"reflection", label:"Knowledge check", question:"An invoice has gone out with the wrong amount on it. Why does Claire raise a credit note rather than editing or deleting the original invoice?", options:[], correct:"", feedback:"Because the original invoice is the record of what the customer was actually charged, and the customer is holding a copy of it. Editing or deleting it breaks the audit trail and leaves them with a document your account no longer recognises. A credit note leaves the original untouched and records the correction alongside it, so both appear in the customer's History and the account balance shows the net of the two."},
     {type:"reflection", label:"Knowledge check", question:"Claire is crediting an overcharge on one specific invoice and wants the credit note to arrive with the invoice line items already filled in. Which route should she take, and what does the other one do?", options:[], correct:"", feedback:"She takes the invoice route: open the invoice or job, Quick Links, then Raise credit note under Financial. That pre-fills the items from the original invoice and she adjusts the ones being partly credited. The customer profile route, Quick Links then Add new credit note, starts empty and is for a general credit on the account that does not relate to a particular invoice."},
-    {type:"section", heading:"Summary", body:"Credit notes in Commusoft have two routes. Use the invoice route, Quick Links then Raise credit note, when the credit relates to a specific invoice, because it pre-fills the items. Use the customer profile route, Quick Links then Add new credit note, for a general account credit. Either way the credit reduces the outstanding balance on the account. Where the customer has already paid and wants the money back, find the credit note in History, open Quick Links, and select Refund remaining credit to process the return."}
+    {type:"section", heading:"Summary", body:"A credit note is raised either from the customer record for a general credit, or from the invoice itself, which pre-fills the original items and is quicker when crediting a specific charge. Either way the original invoice stays exactly as it was and the correction sits beside it, which is what keeps the audit trail intact. The credit reduces the outstanding balance, or shows as in credit where there is nothing left to reduce. Where the customer has already paid, Refund remaining credit returns the money rather than leaving it sitting on their account."}
   ],
-  openItems: "(1) The invoice route has never been checked live. Opening the invoice or job, selecting Quick Links in the top right and choosing Raise credit note under the Financial section comes from the Help Centre only. The customer profile route was confirmed live on 2026-07-27; this one was not, because no invoice existed to test it against at the time. There is one now, so confirm on screen before recording."
+  openItems: "(1) The invoice route has never been checked live. Opening the invoice or job, selecting Quick Links in the top right and choosing Raise credit note under the Financial section comes from the Help Centre only. The customer profile route was confirmed live on 2026-07-27; this one was not, because no invoice existed to test it against at the time. There is one now, so confirm on screen before recording.",
+  helpCentreIssues: ""
 };
 COURSES['reed-script-l1-s5-c4'] = {
   contentType: "Walkthrough",
@@ -14046,7 +14047,7 @@ INBOX_FILES["reed-script-l1-s5-c3"] = `# Reed — Script: Raise a credit note
 
 **SunComfort characters:** Claire Hudson (Administrator — Financial office staff)
 
-**Scenario:** Dr Sean Spencer was overcharged on the heat pump installation invoice Claire raised in Walkthrough 1 and paid in full in Walkthrough 2. Claire raises a credit note against that invoice to correct the balance. Because he has already paid, the credit has to go back to him as a refund rather than sit on the account.
+**Scenario:** Dr Sean Spencer was overcharged on the heat pump installation invoice Claire raised, and he has already paid it in full. Claire raises a credit note against that invoice to correct the balance. Because the money is already in, the credit has to go back to him as a refund rather than sit on the account.
 
 **Estimated length:** 4 minutes
 
@@ -14061,8 +14062,8 @@ INBOX_FILES["reed-script-l1-s5-c3"] = `# Reed — Script: Raise a credit note
 ## Production Setup
 
 1. **Logged-in user:** Claire Hudson, Administrator, Financial office staff
-2. **Customer record:** Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA, account no 1999. The same record used in Walkthroughs 1 and 2. **The whole of Series 5 is recorded against this person — do not substitute another customer.**
-3. **Existing data:** The Final invoice raised against Dr Spencer's heat pump installation in Walkthrough 1 — **invoice 1003, "Residential Heat Pump Installation", £648.00** — overcharged by £48, so a credit note can be raised against it and the line items pre-fill. **The payment recorded against it in Walkthrough 2**, which is what makes the refund route available and is why this walkthrough follows that one rather than standing alone. The credit note this walkthrough produces is **credit note 2, "Credit for Overpayment", −£48.00**, which is already on the record. Payment methods configured in settings, so a refund method can be selected. His History section populated, since both the credit note and the refund are reached from there.
+2. **Customer record:** Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA, account no 1999. **The whole of Series 5 is recorded against this person — do not substitute another customer.**
+3. **Existing data:** The Final invoice raised against Dr Spencer's heat pump installation — **invoice 1003, "Residential Heat Pump Installation", £648.00** — overcharged by £48, so a credit note can be raised against it and the line items pre-fill. **A payment must already be recorded against that invoice**, since it is what makes the refund route available: with nothing paid there is no credit to return. The credit note this walkthrough produces is **credit note 2, "Credit for Overpayment", −£48.00**, which is already on the record. Payment methods configured in settings, so a refund method can be selected. His History section populated, since both the credit note and the refund are reached from there.
 4. **Assets required:** None
 
 ---
@@ -14075,26 +14076,30 @@ Correcting an invoice is not the same as changing it. Deleting or editing an iss
 
 ## Two routes to a credit note
 
-There are two ways to raise a credit note in Commusoft, and which one to use depends on whether the credit relates to a specific invoice. The first runs from the customer profile: open Quick Links and choose Add new credit note, which sits under the Invoices heading in that panel. That is the route for a general account credit not tied to a particular invoice. The second runs from the invoice itself: open the invoice or job, select Quick Links in the top right, and choose Raise credit note under the Financial section. This route pre-fills the credit note with the items from the original invoice, which saves time when crediting all or part of a specific charge, and the pre-filled items can still be adjusted before saving. Claire is crediting one line on a known invoice, so she takes the invoice route.
+There are two ways to raise a credit note in your account, and which to use depends on whether the credit relates to a specific invoice. The first runs from the customer record: Claire opens Quick Links and chooses Add new credit note, which sits under the Invoices heading in that panel. That is the route for a general account credit not tied to a particular invoice, and it means adding the details by hand before saving.
+
+The second runs from the invoice itself. Claire opens the invoice, selects Quick Links in the top right and chooses Raise credit note under the Financial section. This route pre-fills the credit note with the items from the original invoice, which saves time when crediting all or part of a specific charge. The pre-filled items can be adjusted, and the total is always worth reviewing before saving.
 
 ---
 
 ## Raising the credit note
 
-Whichever route is taken, the credit note form asks for a description and a date, and offers the same breakdown style options as a standard invoice. Coming in from the invoice, Claire's line items are already filled in, and she adjusts the one being credited so the amount matches the overcharge rather than the whole invoice. Had she come from the customer profile, she would add the line items herself. She reviews the total before saving. The credit note then appears in Dr Spencer's History and reduces the outstanding balance on his account.
+Whichever route is taken, the form asks for a description and a date, and offers the same breakdown style options as a standard invoice. The credit note then appears in the customer's History and reduces the outstanding balance on their account — or shows as in credit where there is no balance left to reduce.
 
 ---
 
-## Processing a refund
+## Refunding the credit
 
-Dr Spencer has already paid in full, so the credit needs to go back to him rather than wait against a future invoice. Claire goes to his customer record, finds the credit note in the History section and clicks View. She opens Quick Links and selects Refund remaining credit, then enters a description, the date and the refund amount, which can be the full credit or part of it. She selects the payment method for the refund and clicks Receive credit to confirm. The credit note updates to show the amount refunded, and any credit still remaining stays on the account.
+Dr Spencer has already paid, so the credit goes back to him rather than waiting against a future invoice. Claire goes to his customer record, finds the credit note in the History section and clicks View. She opens Quick Links and selects Refund remaining credit, then enters a description, the date and the refund amount, which can be the full credit or part of it.
+
+She selects the payment method for the refund and clicks Receive credit to confirm. The credit note updates to show the amount refunded, and any credit still remaining stays on the account.
 
 ---
 **Knowledge check**
 
 **Q1.** An invoice has gone out with the wrong amount on it. Why does Claire raise a credit note rather than editing or deleting the original invoice?
 
-**A.** Because the original invoice is the record of what the customer was actually charged, and the customer is holding a copy of it. Editing or deleting it breaks the audit trail and leaves them with a document Commusoft no longer recognises. A credit note leaves the original untouched and records the correction alongside it, so both appear in the customer's History and the account balance shows the net of the two.
+**A.** Because the original invoice is the record of what the customer was actually charged, and the customer is holding a copy of it. Editing or deleting it breaks the audit trail and leaves them with a document your account no longer recognises. A credit note leaves the original untouched and records the correction alongside it, so both appear in the customer's History and the account balance shows the net of the two.
 
 **Q2.** Claire is crediting an overcharge on one specific invoice and wants the credit note to arrive with the invoice line items already filled in. Which route should she take, and what does the other one do?
 
@@ -14103,7 +14108,7 @@ Dr Spencer has already paid in full, so the credit needs to go back to him rathe
 
 ## Summary
 
-Credit notes in Commusoft have two routes. Use the invoice route, Quick Links then Raise credit note, when the credit relates to a specific invoice, because it pre-fills the items. Use the customer profile route, Quick Links then Add new credit note, for a general account credit. Either way the credit reduces the outstanding balance on the account. Where the customer has already paid and wants the money back, find the credit note in History, open Quick Links, and select Refund remaining credit to process the return.
+A credit note is raised either from the customer record for a general credit, or from the invoice itself, which pre-fills the original items and is quicker when crediting a specific charge. Either way the original invoice stays exactly as it was and the correction sits beside it, which is what keeps the audit trail intact. The credit reduces the outstanding balance, or shows as in credit where there is nothing left to reduce. Where the customer has already paid, Refund remaining credit returns the money rather than leaving it sitting on their account.
 
 ---
 
@@ -14114,7 +14119,7 @@ Credit notes in Commusoft have two routes. Use the invoice route, Quick Links th
 | Introduction | Written text | On-screen text only — no recording needed. |
 | Two routes to a credit note | Screen recording | Capture both starting points: customer profile → Quick Links → Invoices → Add new credit note, and invoice/job → Quick Links → Raise credit note in the Financial section. Both are real screens, so this stays one row. |
 | Raising the credit note | Screen recording | Capture the credit note form — description, date, breakdown style, line items pre-filled via the invoice route — through to save and the entry appearing in Dr Spencer's History. |
-| Processing a refund | Screen recording | Capture customer record → History → View credit note → Quick Links → Refund remaining credit → description, date, amount, payment method → Receive credit. |
+| Refunding the credit | Screen recording | Capture customer record → History → View credit note → Quick Links → Refund remaining credit → description, date, amount, payment method → Receive credit. |
 | Knowledge check | Expanding section | Two questions at the foot of the article, each revealing its answer on click. Nothing is scored. |
 | Summary | Written text | Recap text only — no recording needed. |
 

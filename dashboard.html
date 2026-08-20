@@ -2155,16 +2155,16 @@ COURSES['reed-script-l1-s5-c2'] = {
   duration: "3 min",
   persona: "Office teams",
   characters: "Claire Hudson (Administrator — Financial office staff)",
-  scenario: "Dr Sean Spencer has paid the invoice Claire raised for his heat pump installation in Walkthrough 1. Claire records the payment in Commusoft so the invoice is marked as paid and his account balance updates immediately.",
+  scenario: "Dr Sean Spencer has paid the invoice Claire raised for his heat pump installation. Claire records the payment so the invoice is marked as paid and his account balance updates immediately.",
   objectives: [
     "Record a payment against an invoice using the correct route",
-    "Select the appropriate payment method and confirm the amount",
-    "Identify when to use Cash Allocations instead of a standard payment"
+    "Confirm the amount received and select the payment method",
+    "Set the nominal account so the payment reports correctly"
   ],
   productionSetup: [
     "Logged-in user: Claire Hudson, Administrator, Financial office staff",
-    "Customer record: Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA, account no 1999. The same record used in Walkthrough 1, carrying the invoice raised there. The whole of Series 5 is recorded against this person — do not substitute another customer.",
-    "Existing data: The Final invoice raised against Dr Spencer's heat pump installation in Walkthrough 1 — invoice 1003, \"Residential Heat Pump Installation\", £648.00 — issued and unpaid, so the payment can be recorded on screen. In the account it now shows a zero balance, because this walkthrough is what pays it. Payment methods configured in settings including cash, cheque, bank transfer and card. Nominal accounts configured, so the nominal account field appears. A second customer holding two or more unpaid invoices, used only to show where Cash Allocations lives on the customer record.",
+    "Customer record: Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA, account no 1999, carrying the invoice being paid. The whole of Series 5 is recorded against this person — do not substitute another customer.",
+    "Existing data: The Final invoice raised against Dr Spencer's heat pump installation — invoice 1003, \"Residential Heat Pump Installation\", £648.00 — issued and unpaid, so the payment can be recorded on screen. In the account it now shows a zero balance, because this walkthrough is what pays it. Payment methods configured in settings including cash, cheque, bank transfer and card. Nominal accounts configured, since the narration has Claire selecting one — without them the field does not appear and that sentence describes a screen that is not there.",
     "Assets required: None"
   ],
   buildBySection: [
@@ -2175,12 +2175,13 @@ COURSES['reed-script-l1-s5-c2'] = {
   ],
   scenes: [
     {type:"section", heading:"Introduction", body:"An invoice that has been paid but never recorded still counts as outstanding. Debt reports overstate what the business is owed, statements chase customers who have already paid, and the accounting sync carries the error onward into the books. At SunComfort, Dr Spencer has now paid the invoice Claire raised for his heat pump installation, and she records it against his account. It takes a few seconds, and it keeps every record downstream correct."},
-    {type:"section", heading:"Recording a payment", body:"Claire searches for the job, opens the Invoices tab, and clicks View next to Dr Spencer's invoice. She scrolls to Payment and allocation history and selects Add new payment. Commusoft auto-fills the invoice total, and she confirms it is right — where a customer has paid only part of an invoice, this is the field to adjust. She selects the payment method: cash, cheque, bank transfer, card, or any other method configured in your account settings. Card payments require card details to be entered. Where nominal accounts are configured for your business, she sets the nominal account for this payment. Claire clicks Add payment. The invoice status updates immediately and the payment is recorded against the job."},
-    {type:"reflection", label:"Knowledge check", question:"SunComfort receives a single payment from a customer that settles three separate invoices. Why can Claire not simply record it against one of them, and what does she use instead?", options:[], correct:"", feedback:"Recording it against one invoice would over-allocate that invoice and leave the other two still showing as outstanding, so the customer would be chased for money they have already paid. She uses Cash Allocations, which is reached from the customer record rather than from an individual invoice and lets her assign the one payment across all three at once."},
-    {type:"reflection", label:"Knowledge check", question:"Claire records a payment of £800 against an invoice for £1,200. The customer has made a part payment and will pay the remainder later. What should she enter in the amount field, and what happens to the invoice?", options:[], correct:"", feedback:"She enters the amount actually received, £800, rather than the auto-filled total. The invoice stays partially outstanding, showing £400 still due, until that remainder is recorded as a second payment against the same invoice."},
-    {type:"section", heading:"Summary", body:"To mark an invoice as paid, open it from the Invoices tab, scroll to Payment and allocation history, and select Add new payment. Confirm the amount, select the payment method, set the nominal account if required, and click Add payment. For a part payment, enter only the amount received. For a single payment covering multiple invoices, use Cash Allocations from the customer record. The invoice status and account balance update immediately once the payment is recorded."}
+    {type:"section", heading:"Recording a payment", body:"Claire searches for Dr Spencer's job and opens the Invoices tab, where she clicks View next to the invoice. She scrolls to Payment and allocation history and selects Add new payment.\n\nThe invoice total is filled in automatically. Claire confirms it is right — where a customer has paid only part of an invoice, this is the field to adjust. She selects the payment method: cash, cheque, bank transfer, card, or any other method configured in your account settings. Card payments require card details to be entered.\n\nShe selects the nominal account configured for your business's payments, and clicks Add payment. The invoice status updates immediately and the payment is recorded against the invoice."},
+    {type:"reflection", label:"Knowledge check", question:"A customer has paid an invoice but nobody has recorded the payment. What goes wrong, and who tends to notice first?", options:[], correct:"", feedback:"Nothing looks wrong on the invoice — it simply stays outstanding. The debt report overstates what the business is owed, so the figure being chased is wrong. A statement sent to that customer then asks them for money they have already sent, which is usually who notices first, and it is the customer. The accounting sync carries the same error into the books, so the correction has to be made twice."},
+    {type:"reflection", label:"Knowledge check", question:"Dr Spencer pays £400 towards his £648.00 invoice and will settle the rest later. What should Claire enter in the amount field, and what happens to the invoice?", options:[], correct:"", feedback:"She enters £400, the amount that actually arrived, rather than the total already filled in. The invoice stays partly outstanding, showing £248.00 still due, until that remainder is recorded as a second payment against the same invoice. Accepting the pre-filled total would close the invoice and clear his balance while the money was still owed."},
+    {type:"section", heading:"Summary", body:"A payment is recorded from the invoice itself, under Payment and allocation history. The amount is pre-filled with the invoice total, which is the field to watch: where a customer has paid only part, entering the full amount closes the invoice and leaves the account disagreeing with the bank. The payment method and the nominal account both feed the reporting. Recorded as the money arrives rather than in a monthly catch-up, it is what keeps debt reports honest and stops statements chasing people who have already paid."}
   ],
-  openItems: "(1) The payment route has never been checked live. Opening the Invoices tab, clicking View next to the invoice, scrolling to Payment and allocation history and selecting Add new payment all come from HC 216679 and nothing else. That is the same pattern that produced the credit note route error in Walkthrough 3, where the article's section heading was written up as a click. Confirm on screen before recording."
+  openItems: "(1) The payment route has never been checked live. Opening the Invoices tab, clicking View next to the invoice, scrolling to Payment and allocation history and selecting Add new payment all come from HC 216679 and nothing else. That is the same pattern that produced the credit note route error in Walkthrough 3, where the article's section heading was written up as a click. Confirm on screen before recording.",
+  helpCentreIssues: ""
 };
 COURSES['reed-script-l1-s5-c3'] = {
   contentType: "Walkthrough",
@@ -13922,14 +13923,14 @@ INBOX_FILES["reed-script-l1-s5-c2"] = `# Reed — Script: Mark an invoice as pai
 
 **Learning objectives**
 1. Record a payment against an invoice using the correct route
-2. Select the appropriate payment method and confirm the amount
-3. Identify when to use Cash Allocations instead of a standard payment
+2. Confirm the amount received and select the payment method
+3. Set the nominal account so the payment reports correctly
 
 **Target persona:** Office teams
 
 **SunComfort characters:** Claire Hudson (Administrator — Financial office staff)
 
-**Scenario:** Dr Sean Spencer has paid the invoice Claire raised for his heat pump installation in Walkthrough 1. Claire records the payment in Commusoft so the invoice is marked as paid and his account balance updates immediately.
+**Scenario:** Dr Sean Spencer has paid the invoice Claire raised for his heat pump installation. Claire records the payment so the invoice is marked as paid and his account balance updates immediately.
 
 **Estimated length:** 3 minutes
 
@@ -13944,8 +13945,8 @@ INBOX_FILES["reed-script-l1-s5-c2"] = `# Reed — Script: Mark an invoice as pai
 ## Production Setup
 
 1. **Logged-in user:** Claire Hudson, Administrator, Financial office staff
-2. **Customer record:** Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA, account no 1999. The same record used in Walkthrough 1, carrying the invoice raised there. **The whole of Series 5 is recorded against this person — do not substitute another customer.**
-3. **Existing data:** The Final invoice raised against Dr Spencer's heat pump installation in Walkthrough 1 — **invoice 1003, "Residential Heat Pump Installation", £648.00** — issued and unpaid, so the payment can be recorded on screen. In the account it now shows a zero balance, because this walkthrough is what pays it. Payment methods configured in settings including cash, cheque, bank transfer and card. Nominal accounts configured, so the nominal account field appears. A second customer holding two or more unpaid invoices, used only to show where Cash Allocations lives on the customer record.
+2. **Customer record:** Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA, account no 1999, carrying the invoice being paid. **The whole of Series 5 is recorded against this person — do not substitute another customer.**
+3. **Existing data:** The Final invoice raised against Dr Spencer's heat pump installation — **invoice 1003, "Residential Heat Pump Installation", £648.00** — issued and unpaid, so the payment can be recorded on screen. In the account it now shows a zero balance, because this walkthrough is what pays it. Payment methods configured in settings including cash, cheque, bank transfer and card. **Nominal accounts configured**, since the narration has Claire selecting one — without them the field does not appear and that sentence describes a screen that is not there.
 4. **Assets required:** None
 
 ---
@@ -13958,24 +13959,28 @@ An invoice that has been paid but never recorded still counts as outstanding. De
 
 ## Recording a payment
 
-Claire searches for the job, opens the Invoices tab, and clicks View next to Dr Spencer's invoice. She scrolls to Payment and allocation history and selects Add new payment. Commusoft auto-fills the invoice total, and she confirms it is right — where a customer has paid only part of an invoice, this is the field to adjust. She selects the payment method: cash, cheque, bank transfer, card, or any other method configured in your account settings. Card payments require card details to be entered. Where nominal accounts are configured for your business, she sets the nominal account for this payment. Claire clicks Add payment. The invoice status updates immediately and the payment is recorded against the job.
+Claire searches for Dr Spencer's job and opens the Invoices tab, where she clicks View next to the invoice. She scrolls to Payment and allocation history and selects Add new payment.
+
+The invoice total is filled in automatically. Claire confirms it is right — where a customer has paid only part of an invoice, this is the field to adjust. She selects the payment method: cash, cheque, bank transfer, card, or any other method configured in your account settings. Card payments require card details to be entered.
+
+She selects the nominal account configured for your business's payments, and clicks Add payment. The invoice status updates immediately and the payment is recorded against the invoice.
 
 ---
 
 **Knowledge check**
 
-**Q1.** SunComfort receives a single payment from a customer that settles three separate invoices. Why can Claire not simply record it against one of them, and what does she use instead?
+**Q1.** A customer has paid an invoice but nobody has recorded the payment. What goes wrong, and who tends to notice first?
 
-**A.** Recording it against one invoice would over-allocate that invoice and leave the other two still showing as outstanding, so the customer would be chased for money they have already paid. She uses Cash Allocations, which is reached from the customer record rather than from an individual invoice and lets her assign the one payment across all three at once.
+**A.** Nothing looks wrong on the invoice — it simply stays outstanding. The debt report overstates what the business is owed, so the figure being chased is wrong. A statement sent to that customer then asks them for money they have already sent, which is usually who notices first, and it is the customer. The accounting sync carries the same error into the books, so the correction has to be made twice.
 
-**Q2.** Claire records a payment of £800 against an invoice for £1,200. The customer has made a part payment and will pay the remainder later. What should she enter in the amount field, and what happens to the invoice?
+**Q2.** Dr Spencer pays £400 towards his £648.00 invoice and will settle the rest later. What should Claire enter in the amount field, and what happens to the invoice?
 
-**A.** She enters the amount actually received, £800, rather than the auto-filled total. The invoice stays partially outstanding, showing £400 still due, until that remainder is recorded as a second payment against the same invoice.
+**A.** She enters £400, the amount that actually arrived, rather than the total already filled in. The invoice stays partly outstanding, showing £248.00 still due, until that remainder is recorded as a second payment against the same invoice. Accepting the pre-filled total would close the invoice and clear his balance while the money was still owed.
 
 
 ## Summary
 
-To mark an invoice as paid, open it from the Invoices tab, scroll to Payment and allocation history, and select Add new payment. Confirm the amount, select the payment method, set the nominal account if required, and click Add payment. For a part payment, enter only the amount received. For a single payment covering multiple invoices, use Cash Allocations from the customer record. The invoice status and account balance update immediately once the payment is recorded.
+A payment is recorded from the invoice itself, under Payment and allocation history. The amount is pre-filled with the invoice total, which is the field to watch: where a customer has paid only part, entering the full amount closes the invoice and leaves the account disagreeing with the bank. The payment method and the nominal account both feed the reporting. Recorded as the money arrives rather than in a monthly catch-up, it is what keeps debt reports honest and stops statements chasing people who have already paid.
 
 ---
 

@@ -115,8 +115,8 @@
   .open-items-list input[type=checkbox] { margin-top: 2px; flex-shrink: 0; cursor: pointer; }
   .open-items-list .oi-text.done { text-decoration: line-through; opacity: 0.5; }
 
-  .series-block { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-bottom: 0; }
-  .series-divider { height: 1px; background: var(--border); margin: 22px 40px; }
+  .series-block { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin-bottom: 28px; }
+  .group-divider { height: 2px; background: var(--border); margin: 44px 0 0; border-radius: 2px; }
   .series-header { background: var(--blue1); color: var(--white); padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; }
   .series-header h2 { font-size: 16px; font-weight: 700; }
   .series-header .series-meta { font-size: 12px; opacity: 0.85; margin-top: 2px; }
@@ -461,7 +461,6 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-compass')"><div class="walkthrough-num">Entry walkthrough</div><div class="walkthrough-title">The Commusoft Compass</div><div class="walkthrough-meta"><span class="meta-pill">8 min</span><span class="meta-pill">Walkthrough</span><span class="meta-pill">All staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
-      <div class="series-divider"></div>
 <div id="shared-concept-library" class="series-block">
         <div class="series-header" style="background:#c4682f">
           <div><h2>Start here — Shared Concept Library</h2><div class="series-meta">The core concepts every Commusoft user needs before anything role-specific</div><div class="hc-article"><span class="pill hc-todo">TIER 2</span> Understanding article: to be created</div></div>
@@ -486,7 +485,6 @@
 
         </div>
       </div>
-      <div class="series-divider"></div>
 <div id="l1-office-series1" class="series-block">
         <div class="series-header" style="background:#c4682f">
           <div><h2>Start here — Your first day in Commusoft</h2><div class="series-meta">Your first day in Commusoft — dashboard navigation, customer search, and job record orientation</div><div class="hc-article"><span class="pill hc-todo">TIER 2</span> Understanding article: to be created</div></div>
@@ -496,7 +494,6 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l1-series1')"><div class="walkthrough-num">Mini-walkthrough</div><div class="walkthrough-title">Your first day in Commusoft</div><div class="walkthrough-meta"><span class="meta-pill">12 min</span><span class="meta-pill">Mini-walkthrough</span><span class="meta-pill">Office teams</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
-      <div class="series-divider"></div>
 <div id="l1-dm-series1" class="series-block">
         <div class="series-header" style="background:#c4682f">
           <div><h2>Start here — Getting started</h2><div class="series-meta">Your bearings, what a job is made of, and a job running end to end</div><div class="hc-article"><span class="pill hc-todo">TIER 2</span> Understanding article: to be created</div></div>
@@ -510,6 +507,7 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l1-dm-s1-c3')"><div class="walkthrough-num">Walkthrough 3</div><div class="walkthrough-title">A service job, from booked to complete</div><div class="walkthrough-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
+      <div class="group-divider"></div>
       <div id="the-basics" class="section-heading" style="margin-top:40px">The basics</div>
       <div class="path-note">Help Centre tier 3 — learning path article <strong>The basics</strong>: to be created. Links the 9 understanding articles below, in order, and says what the learner can do once the path is finished. It carries no walkthrough content of its own.</div>
 <div id="job-record" class="series-block">
@@ -531,7 +529,6 @@
           <div class="walkthrough-card" onclick="openPanel('l2-s2-assessment')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">The job record, end to end</div><div class="walkthrough-meta"><span class="meta-pill">6 questions</span><span class="meta-pill">Office teams</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
-      <div class="series-divider"></div>
 <div id="l1-office-series3" class="series-block">
         <div class="series-header" style="background:#2d91c5">
           <div><h2>The basics — Series 2: Adding and managing customers</h2><div class="series-meta">Adding and managing customers — creating, maintaining, and cleaning customer records</div><div class="hc-article"><span class="pill hc-todo">TIER 2</span> Understanding article: to be created</div></div>
@@ -545,7 +542,6 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l1-s3-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">Customer base ready</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office teams</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
-      <div class="series-divider"></div>
 <div id="l1-office-series4" class="series-block">
         <div class="series-header" style="background:#2d91c5">
           <div><h2>The basics — Series 3: Booking and scheduling</h2><div class="series-meta">Booking and scheduling — raising jobs, scheduling engineers, sending confirmations, and managing follow-ups</div><div class="hc-article"><span class="pill hc-todo">TIER 2</span> Understanding article: to be created</div></div>
@@ -562,7 +558,6 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l1-s4-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">Job booked, engineer on the way, activities in place</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office teams</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
-      <div class="series-divider"></div>
 <div id="l1-office-series5" class="series-block">
         <div class="series-header" style="background:#2d91c5">
           <div><h2>The basics — Series 4: Getting paid</h2><div class="series-meta">Getting paid — invoicing, payments, credit notes, statements, accounting sync, and consolidated invoicing</div><div class="hc-article"><span class="pill hc-live">TIER 2</span> Understanding article: Understanding invoicing — live</div></div>
@@ -578,7 +573,6 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l1-s5-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">Invoice raised, paid, and synced</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office teams</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
-      <div class="series-divider"></div>
 <div id="l1-office-series6" class="series-block">
         <div class="series-header" style="background:#2d91c5">
           <div><h2>The basics — Series 5: Customer communications</h2><div class="series-meta">Customer communications — sending from templates, the invoice portal, and managing incoming emails</div><div class="hc-article"><span class="pill hc-todo">TIER 2</span> Understanding article: to be created</div></div>
@@ -591,7 +585,6 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l1-s6-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">Message sent and portal live</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office teams</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
-      <div class="series-divider"></div>
 <div id="l1-office-series7" class="series-block">
         <div class="series-header" style="background:#2d91c5">
           <div><h2>The basics — Series 6: Quick-start proposals</h2><div class="series-meta">Quick-start proposals — opportunities, building proposals, and getting the first one accepted</div><div class="hc-article"><span class="pill hc-todo">TIER 2</span> Understanding article: to be created</div></div>
@@ -603,7 +596,6 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l1-s7-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">First proposal sent and accepted</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office teams</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
-      <div class="series-divider"></div>
 <div id="l1-office-series8" class="series-block">
         <div class="series-header" style="background:#2d91c5">
           <div><h2>The basics — Series 7: Service reminders</h2><div class="series-meta">Service reminders — adding reminders, scheduling jobs, and keeping the recurring service cycle running</div><div class="hc-article"><span class="pill hc-live">TIER 2</span> Understanding article: Service reminders (Overview) — live, awaiting rename</div></div>
@@ -615,7 +607,6 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l1-s8-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">Reminder triggered, job booked</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office teams</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
-      <div class="series-divider"></div>
 <div id="l1-office-series9" class="series-block">
         <div class="series-header" style="background:#2d91c5">
           <div><h2>The basics — Series 8: Suppliers and purchasing</h2><div class="series-meta">Suppliers and purchasing — raising purchase orders, accepting deliveries, and making parts available for jobs</div><div class="hc-article"><span class="pill hc-todo">TIER 2</span> Understanding article: to be created</div></div>
@@ -627,7 +618,6 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l1-s9-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">Parts ordered, delivered, installed</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office teams</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
         </div>
       </div>
-      <div class="series-divider"></div>
 <div id="l1-dm-series3" class="series-block">
         <div class="series-header" style="background:#2d91c5">
           <div><h2>The basics — Series 9: Revenue and performance</h2><div class="series-meta">Revenue and performance — debt chasing, pipeline, analytics, service reminders, and business units</div><div class="hc-article"><span class="pill hc-todo">TIER 2</span> Understanding article: to be created</div></div>
@@ -642,6 +632,7 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l1-dm-s3-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">Revenue visible and chasing active</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
+      <div class="group-divider"></div>
       <div id="in-the-field" class="section-heading" style="margin-top:40px">In the field</div>
       <div class="path-note">Help Centre tier 3 — learning path article <strong>In the field</strong>: to be created. Links the 3 understanding articles below, in order, and says what the learner can do once the path is finished. It carries no walkthrough content of its own.</div>
 <div id="l1-ft-series1" class="series-block">
@@ -653,7 +644,6 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l1-ft-series1')"><div class="walkthrough-num">Mini-walkthrough</div><div class="walkthrough-title">Getting started on the app</div><div class="walkthrough-meta"><span class="meta-pill">13 min</span><span class="meta-pill">Mini-walkthrough</span><span class="meta-pill">Field teams</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
-      <div class="series-divider"></div>
 <div id="l1-ft-series2" class="series-block">
         <div class="series-header" style="background:#2e7d32">
           <div><h2>In the field — Series 2: On site: arrival to job complete</h2><div class="series-meta">On site: arrival to job complete — travel, forms, files, assets, job report, and access outcomes</div><div class="hc-article"><span class="pill hc-todo">TIER 2</span> Understanding article: to be created</div></div>
@@ -669,7 +659,6 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l1-ft-s2-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">Job complete, report sent</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Field teams</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
-      <div class="series-divider"></div>
 <div id="l1-ft-series3" class="series-block">
         <div class="series-header" style="background:#2e7d32">
           <div><h2>In the field — Series 3: Advanced mobile</h2><div class="series-meta">Advanced mobile — task checklists, parts, timecard, invoicing, and payments</div><div class="hc-article"><span class="pill hc-todo">TIER 2</span> Understanding article: to be created</div></div>
@@ -685,6 +674,7 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l1-ft-s3-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">On site — every tool used</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Field teams</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
+      <div class="group-divider"></div>
       <div id="setting-up" class="section-heading" style="margin-top:40px">Setting up your account</div>
       <div class="path-note">Help Centre tier 3 — learning path article <strong>Setting up your account</strong>: to be created. Links the 7 understanding articles below, in order, and says what the learner can do once the path is finished. It carries no walkthrough content of its own.</div>
 <div id="l2-s1" class="series-block">
@@ -702,7 +692,6 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l2-s1-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">Account ready to take customers</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
-      <div class="series-divider"></div>
 <div id="l2-s2" class="series-block">
         <div class="series-header" style="background:#546e7a">
           <div><h2>Setting up your account — Series 2: Configuring jobs and scheduling</h2><div class="series-meta">Configuring jobs and scheduling — job types, pipelines, diary settings, on-site tasks, workflows, and booking portals</div><div class="hc-article"><span class="pill hc-todo">TIER 2</span> Understanding article: to be created</div></div>
@@ -720,7 +709,6 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l2-s2-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">Jobs and scheduling configured</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
-      <div class="series-divider"></div>
 <div id="l2-s3" class="series-block">
         <div class="series-header" style="background:#546e7a">
           <div><h2>Setting up your account — Series 3: Assets and service reminders</h2><div class="series-meta">Assets and service reminders — asset groups, types, fields, service reminder templates, and the service reminder portal</div><div class="hc-article"><span class="pill hc-todo">TIER 2</span> Understanding article: to be created</div></div>
@@ -733,7 +721,6 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l2-s3-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">Assets tracked, reminders active</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
-      <div class="series-divider"></div>
 <div id="l2-s4" class="series-block">
         <div class="series-header" style="background:#546e7a">
           <div><h2>Setting up your account — Series 4: Invoicing and finance setup</h2><div class="series-meta">Invoicing and finance setup — invoice settings, labour rates, pricing items, price books, payment methods, nominal codes, VAT, CIS, portals, and payment integrations</div><div class="hc-article"><span class="pill hc-todo">TIER 2</span> Understanding article: to be created</div></div>
@@ -751,7 +738,6 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l2-s4-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">Ready to raise your first invoice</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
-      <div class="series-divider"></div>
 <div id="l2-s5" class="series-block">
         <div class="series-header" style="background:#546e7a">
           <div><h2>Setting up your account — Series 5: Proposals and sales setup</h2><div class="series-meta">Proposals and sales setup — opportunity pipelines, cover pages, option templates, finance and grant templates, communications, and proposal portal (Sales+ accounts)</div><div class="hc-article"><span class="pill hc-todo">TIER 2</span> Understanding article: to be created</div></div>
@@ -766,7 +752,6 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l2-s5-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">First proposal ready to send</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
-      <div class="series-divider"></div>
 <div id="l2-s6" class="series-block">
         <div class="series-header" style="background:#546e7a">
           <div><h2>Setting up your account — Series 6: Notifications and automation setup</h2><div class="series-meta">Notifications and automation setup — notification settings, after sales care, workflow automations, on our way portal, and after sales care portal</div><div class="hc-article"><span class="pill hc-todo">TIER 2</span> Understanding article: to be created</div></div>
@@ -781,7 +766,6 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l2-s6-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">System is talking, not silent</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
-      <div class="series-divider"></div>
 <div id="l1-dm-series2" class="series-block">
         <div class="series-header" style="background:#546e7a">
           <div><h2>Setting up your account — Series 7: Managing your team</h2><div class="series-meta">Managing your team — users, licences, roles, skills, timesheets, and offboarding</div><div class="hc-article"><span class="pill hc-todo">TIER 2</span> Understanding article: to be created</div></div>
@@ -796,6 +780,7 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l1-dm-s2-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">Team is set up and ready</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
+      <div class="group-divider"></div>
       <div id="going-further" class="section-heading" style="margin-top:40px">Going further</div>
       <div class="path-note">Help Centre tier 3 — learning path article <strong>Going further</strong>: to be created. Links the 9 understanding articles below, in order, and says what the learner can do once the path is finished. It carries no walkthrough content of its own.</div>
 <div id="l3-contracts-ppm" class="series-block">
@@ -812,7 +797,6 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l3-contracts-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">Contract running, PPM scheduled</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
         </div>
       </div>
-      <div class="series-divider"></div>
 <div id="l3-route-optimisation" class="series-block">
         <div class="series-header" style="background:#3949ab">
           <div><h2>Going further — Route Optimisation</h2><div class="series-meta">How the optimisation engine works, configuring settings, and using route optimisation in the diary</div><div class="hc-article"><span class="pill hc-todo">TIER 2</span> Understanding article: to be created</div></div>
@@ -825,7 +809,6 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l3-route-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">Route optimised, diary running efficiently</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
         </div>
       </div>
-      <div class="series-divider"></div>
 <div id="l3-stock" class="series-block">
         <div class="series-header" style="background:#3949ab">
           <div><h2>Going further — Advanced Stock Control</h2><div class="series-meta">Stock system setup, managing stock movements across locations, and reporting on stock levels and write-offs</div><div class="hc-article"><span class="pill hc-todo">TIER 2</span> Understanding article: to be created</div></div>
@@ -838,7 +821,6 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l3-stock-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">Stock ordered, received, and allocated</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">All staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
         </div>
       </div>
-      <div class="series-divider"></div>
 <div id="l3-analytics" class="series-block">
         <div class="series-header" style="background:#3949ab">
           <div><h2>Going further — Analytics</h2><div class="series-meta">Analytics dashboard, tabular reports, custom widgets, the analytics marketplace, and what Analytics+ unlocks</div><div class="hc-article"><span class="pill hc-live">TIER 2</span> Understanding article: Understanding Commusoft Analytics — live</div></div>
@@ -853,7 +835,6 @@
 
         </div>
       </div>
-      <div class="series-divider"></div>
 <div id="l1-dm-series4" class="series-block">
         <div class="series-header" style="background:#3949ab">
           <div><h2>Going further — Fleet</h2><div class="series-meta">Fleet — vehicle tracking, compliance checks, reminders and maintenance</div><div class="hc-article"><span class="pill hc-todo">TIER 2</span> Understanding article: to be created</div></div>
@@ -865,7 +846,6 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l1-dm-s4-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">Fleet visibility confirmed</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
-      <div class="series-divider"></div>
 <div id="l3-forms" class="series-block">
         <div class="series-header" style="background:#3949ab">
           <div><h2>Going further — Custom Forms</h2><div class="series-meta">Build forms from scratch or import from the marketplace, assign to job types, and complete and review on mobile and web</div><div class="hc-article"><span class="pill hc-todo">TIER 2</span> Understanding article: to be created</div></div>
@@ -882,7 +862,6 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l3-forms-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">Form built, assigned, and signed off</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">All staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
         </div>
       </div>
-      <div class="series-divider"></div>
 <div id="l3-variations" class="series-block">
         <div class="series-header" style="background:#3949ab">
           <div><h2>Going further — Variations</h2><div class="series-meta">Set up variation templates, raise variations in the field, and manage them from the office</div><div class="hc-article"><span class="pill hc-todo">TIER 2</span> Understanding article: to be created</div></div>
@@ -895,7 +874,6 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l3-variations-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">Variation raised, approved, and invoiced</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">All staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
         </div>
       </div>
-      <div class="series-divider"></div>
 <div id="l3-dr" class="series-block">
         <div class="series-header" style="background:#3949ab">
           <div><h2>Going further — Defects and Recommendations</h2><div class="series-meta">Strategy and setup for decision makers, field intelligence for technicians, and operational excellence for office teams</div><div class="hc-article"><span class="pill hc-todo">TIER 2</span> Understanding article: to be created</div></div>
@@ -908,7 +886,6 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l3-dr-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">Defect spotted, proposal sent, work won</div><div class="walkthrough-meta"><span class="meta-pill">6 min</span><span class="meta-pill">All staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
         </div>
       </div>
-      <div class="series-divider"></div>
 <div id="l1-dm-series5" class="series-block">
         <div class="series-header" style="background:#3949ab">
           <div><h2>Going further — Automation and efficiency</h2><div class="series-meta">Automation and efficiency — workflow marketplace, sequences, and prospect follow-up</div><div class="hc-article"><span class="pill hc-todo">TIER 2</span> Understanding article: to be created</div></div>
@@ -920,6 +897,7 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l1-dm-s5-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">Automation decisions made right</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
+      <div class="group-divider"></div>
       <div id="add-ons" class="section-heading" style="margin-top:40px">Add-ons</div>
       <div class="path-note">Help Centre tier 3 — learning path article <strong>Add-ons</strong>: to be created. Links the 4 understanding articles below, in order, and says what the learner can do once the path is finished. It carries no walkthrough content of its own.</div>
 <div id="l3-sales-plus" class="series-block">
@@ -938,7 +916,6 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l3-sales-plus-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">Lead to accepted proposal</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Sales teams</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
         </div>
       </div>
-      <div class="series-divider"></div>
 <div id="addon-analytics-plus" class="series-block">
         <div class="series-header" style="background:#ad1457">
           <div><h2>Add-ons — Analytics+</h2><div class="series-meta">What the upgrade unlocks — shared dashboards, advanced chart types, scheduled reports and granular data permissions</div><div class="hc-article"><span class="pill hc-todo">TIER 2</span> Understanding article: to be created</div></div>
@@ -948,7 +925,6 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l3-analytics-c5')"><div class="walkthrough-num">Walkthrough 5</div><div class="walkthrough-title">Analytics+ — what the upgrade unlocks</div><div class="walkthrough-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
         </div>
       </div>
-      <div class="series-divider"></div>
 <div id="l3-fleet" class="series-block">
         <div class="series-header" style="background:#ad1457">
           <div><h2>Add-ons — Fleet+</h2><div class="series-meta">Fleet dashboard, geo-fences and out-of-hours alerts, trip analytics and safe driver leaderboard, vehicle maintenance tracking and reminders</div><div class="hc-article"><span class="pill hc-todo">TIER 2</span> Understanding article: to be created</div></div>
@@ -962,7 +938,6 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l3-fleet-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">Fleet monitored and maintained</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
         </div>
       </div>
-      <div class="series-divider"></div>
 <div id="l3-aiden-plus" class="series-block">
         <div class="series-header" style="background:#ad1457">
           <div><h2>Add-ons — AI:den+</h2><div class="series-meta">The AI:den+ agents — the shared dashboard, call history and controls, then one walkthrough per agent</div><div class="hc-article"><span class="pill hc-todo">TIER 2</span> Understanding article: to be created</div></div>

@@ -808,14 +808,13 @@
 <div id="l3-analytics" class="series-block">
         <div class="series-header" style="background:#1565c0">
           <div><h2>Going further — Analytics</h2><div class="series-meta">Analytics dashboard, tabular reports, custom widgets, the analytics marketplace, and what Analytics+ unlocks</div></div>
-          <div class="series-count">5 walkthroughs + challenge</div>
+          <div class="series-count">4 walkthroughs + challenge</div>
         </div>
         <div class="walkthrough-grid">
           <div class="walkthrough-card" onclick="openPanel('reed-script-l3-analytics-c1')"><div class="walkthrough-num">Walkthrough 1</div><div class="walkthrough-title">Your analytics dashboard</div><div class="walkthrough-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
           <div class="walkthrough-card" onclick="openPanel('reed-script-l3-analytics-c2')"><div class="walkthrough-num">Walkthrough 2</div><div class="walkthrough-title">Build a tabular report</div><div class="walkthrough-meta"><span class="meta-pill">6 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
           <div class="walkthrough-card" onclick="openPanel('reed-script-l3-analytics-c3')"><div class="walkthrough-num">Walkthrough 3</div><div class="walkthrough-title">Build custom widgets to track performance</div><div class="walkthrough-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
           <div class="walkthrough-card" onclick="openPanel('reed-script-l3-analytics-c4')"><div class="walkthrough-num">Walkthrough 4</div><div class="walkthrough-title">The analytics marketplace</div><div class="walkthrough-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
-          <div class="walkthrough-card" onclick="openPanel('reed-script-l3-analytics-c5')"><div class="walkthrough-num">Walkthrough 5</div><div class="walkthrough-title">Analytics+ — what the upgrade unlocks</div><div class="walkthrough-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
           <div class="walkthrough-card" onclick="openPanel('reed-script-l3-analytics-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">The numbers behind the decision</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
 
         </div>
@@ -897,6 +896,15 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l3-sales-plus-c6')"><div class="walkthrough-num">Walkthrough 6</div><div class="walkthrough-title">Track a proposal through to acceptance</div><div class="walkthrough-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Sales teams</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
           <div class="walkthrough-card" onclick="openPanel('reed-script-l3-sales-plus-c7')"><div class="walkthrough-num">Walkthrough 7</div><div class="walkthrough-title">Use the media portal for site data</div><div class="walkthrough-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Sales teams</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
           <div class="walkthrough-card" onclick="openPanel('reed-script-l3-sales-plus-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">Lead to accepted proposal</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Sales teams</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
+        </div>
+      </div>
+<div id="addon-analytics-plus" class="series-block">
+        <div class="series-header" style="background:#1565c0">
+          <div><h2>Add-ons — Analytics+</h2><div class="series-meta">What the upgrade unlocks — shared dashboards, advanced chart types, scheduled reports and granular data permissions</div></div>
+          <div class="series-count">1 walkthrough</div>
+        </div>
+        <div class="walkthrough-grid">
+          <div class="walkthrough-card" onclick="openPanel('reed-script-l3-analytics-c5')"><div class="walkthrough-num">Walkthrough 5</div><div class="walkthrough-title">Analytics+ — what the upgrade unlocks</div><div class="walkthrough-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
         </div>
       </div>
 <div id="l3-fleet" class="series-block">
@@ -7934,7 +7942,7 @@ COURSES['reed-script-l3-analytics-c4'] = {
 };
 COURSES['reed-script-l3-analytics-c5'] = {
   contentType: "Walkthrough",
-  pathLabel: "Going further · Analytics",
+  pathLabel: "Add-ons · Analytics+",
   title: "Analytics+ — what the upgrade unlocks",
   duration: "5 min",
   persona: "Decision makers",
@@ -7971,7 +7979,8 @@ COURSES['reed-script-l3-analytics-c5'] = {
     {type:"reflection", label:"Knowledge check", question:"Sarah wants Logan to receive a weekly operations summary without needing access to the Analytics section himself. Which Analytics+ feature achieves this?", options:[], correct:"", feedback:"Scheduling the report for automated weekly delivery means Logan receives the data in his inbox without needing access to Analytics at all. Sarah sets it up once and the system handles every subsequent delivery."},
     {type:"section", heading:"Summary", body:"Analytics+ unlocks four capabilities over the standard Analytics tier. First, unlimited shared dashboards — create dashboards for specific roles, share with individual users or entire roles, assign Can view or Can view and edit permissions. Second, advanced chart types — dual-axis charts layer two metrics on one chart; drill-down charts let you click into segments for deeper data; advanced date grouping divides trends by Day, Week, Month, Quarter, or Year. Third, scheduled report delivery — configure any tabular report to email automatically on a daily, weekly, or monthly basis to specified recipients. Fourth, granular data permissions — control what each person can see within shared reports and dashboards. Analytics+ requires the Customer Journey plan as a minimum and is an add-on; confirm availability with your Commusoft account manager."}
   ],
-  openItems: "- [OPEN — confirm whether scheduled report delivery sends data as an attachment or a link to access the report online; HC article 622045 does not specify the email format.] - [OPEN — confirm the exact plan requirement for Analytics+; the product marketing page references the Customer Journey plan but the HC article 620931 does not confirm this explicitly. Needs verification before production.]"
+  openItems: "- [OPEN — confirm whether scheduled report delivery sends data as an attachment or a link to access the report online; HC article 622045 does not specify the email format.] - [OPEN — confirm the exact plan requirement for Analytics+; the product marketing page references the Customer Journey plan but the HC article 620931 does not confirm this explicitly. Needs verification before production.]",
+  helpCentreIssues: ""
 };
 COURSES['reed-script-l3-analytics-challenge'] = {
   contentType: "Series assessment",
@@ -8006,7 +8015,7 @@ COURSES['reed-script-l3-analytics-challenge'] = {
     "Incorrect (A — schedule):* Scheduling the report is a useful step — but not yet. Sarah does not know what is causing the gap. Scheduling the report without investigating it first just means she will see the same problem again next Monday without an answer. She needs to open the underlying jobs first.",
     "Incorrect (C — delegate):* Delegating is not wrong in principle, but Sarah is thirty minutes from her meeting and Logan may not have the context she already has. The tabular report has already pointed her at the right area — she can investigate the underlying jobs herself in five minutes and arrive at the meeting with a finding rather than a question.",
     "Sarah arrives at the 12 o'clock meeting with three things: the dashboard screenshot showing the revenue gap, the tabular report identifying General Maintenance as the underperforming category, and three specific job examples where a variation should have been raised and was not. She does not present a problem — she presents a pattern and a cause. Logan agrees to run a brief team reminder about variation logging. The finding took thirty minutes to surface and ten minutes to communicate. Analytics did not make the decision; it made the decision possible.",
-    "*Series complete. You have built a dashboard, created a tabular report, added custom widgets, explored the Marketplace, and stepped through what Analytics+ adds on top of the standard tier. The tools are ready. The next step is using them on your own data.",
+    "*Series complete. You have built a dashboard, created a tabular report, added custom widgets, and explored the Marketplace. The tools are ready. The next step is using them on your own data.",
     "*Open items",
     "None — challenge content is scenario-based and does not depend on specific Help Centre navigation paths. All report-building steps referenced are verified against HC articles 621391, 625504, and 622045.",
     "Sources: Example custom tabular reports (HC 625504); Building a tabular report (HC 621391); Managing tabular reports (HC 622045); Understanding Commusoft Analytics (HC 620931)*",
@@ -8039,7 +8048,7 @@ COURSES['reed-script-l3-analytics-challenge'] = {
     {type:"reflection", label:"Question 3", question:"Sarah needs invoice-level detail to find where the revenue gap is. Which data source and grouping does that?", options:["Jobs as the data source, grouped by technician", "Invoice/credits as the data source, grouped by job category with Grand total summed", "Customers as the data source, grouped by customer type", "Jobs as the data source, grouped by closed outcome"], correct:"Invoice/credits as the data source, grouped by job category with Grand total summed", feedback:"Invoice/credits gives the invoice-level rows. Grouping by job category with Grand total summed is what exposes one category earning less per job, filtered to Invoiced and the past four weeks.", feedbackAlt:"A jobs or customers data source cannot show invoice values per category. Invoice/credits grouped by job category, with Grand total summed, is what locates the gap."},
     {type:"reflection", label:"Question 4", question:"The report shows General Maintenance generating less revenue per job on similar volume. What has the analysis actually established?", options:["That General Maintenance jobs are being underpriced", "Where the gap is, but not yet why - that needs a sample of the jobs reviewed", "That variations are not being raised in the field", "That the job category needs its pricing structure rebuilt"], correct:"Where the gap is, but not yet why - that needs a sample of the jobs reviewed", feedback:"The dashboard said revenue was down; the report said which category. The cause comes from opening a sample of those jobs and seeing what was included. Analytics did not make the decision, it made the decision possible.", feedbackAlt:"The report narrows the question, it does not answer it. Underpricing or missed variations are hypotheses until a sample of the jobs is actually reviewed."},
     {type:"reflection", label:"Question 5", question:"Sarah takes three things to the meeting: the dashboard screenshot, the report identifying the category, and three jobs where a variation should have been raised. Why does the third matter most?", options:["It proves the report was built correctly", "It turns a pattern into a cause, so the meeting can agree an action rather than a further investigation", "It gives the team specific individuals to address", "It satisfies the requirement to evidence any reporting finding"], correct:"It turns a pattern into a cause, so the meeting can agree an action rather than a further investigation", feedback:"She does not present a problem, she presents a pattern and a cause - which is what lets the meeting agree a team reminder about variation logging rather than commissioning more analysis. The finding took thirty minutes to surface and ten to communicate.", feedbackAlt:"The examples are not there to validate the report or to single anybody out. They supply the cause, which is what makes an action possible in the meeting itself."},
-    {type:"section", heading:"The decision", body:"Sarah arrives at the 12 o'clock meeting with three things: the dashboard screenshot showing the revenue gap, the tabular report identifying General Maintenance as the underperforming category, and three specific job examples where a variation should have been raised and was not. She does not present a problem — she presents a pattern and a cause. Logan agrees to run a brief team reminder about variation logging. The finding took thirty minutes to surface and ten minutes to communicate. Analytics did not make the decision; it made the decision possible.\n\nSeries complete. You have built a dashboard, created a tabular report, added custom widgets, explored the Marketplace, and stepped through what Analytics+ adds on top of the standard tier. The tools are ready. The next step is using them on your own data."}
+    {type:"section", heading:"The decision", body:"Sarah arrives at the 12 o'clock meeting with three things: the dashboard screenshot showing the revenue gap, the tabular report identifying General Maintenance as the underperforming category, and three specific job examples where a variation should have been raised and was not. She does not present a problem — she presents a pattern and a cause. Logan agrees to run a brief team reminder about variation logging. The finding took thirty minutes to surface and ten minutes to communicate. Analytics did not make the decision; it made the decision possible.\n\nSeries complete. You have built a dashboard, created a tabular report, added custom widgets, and explored the Marketplace. The tools are ready. The next step is using them on your own data."}
   ]
 };
 
@@ -29729,7 +29738,7 @@ The Analytics Marketplace is a library of pre-configured widgets and tabular rep
 `;
 INBOX_FILES["reed-script-l3-analytics-c5"] = `# Analytics+ — what the upgrade unlocks
 
-**Series:** L3 Analytics | **Walkthrough:** 5 of 5 | **Duration:** 5 min | **Audience:** Decision Makers
+**Series:** Analytics+ | **Walkthrough:** 1 of 1 | **Duration:** 5 min | **Audience:** Decision makers
 
 ---
 
@@ -29856,7 +29865,7 @@ INBOX_FILES["reed-script-l3-analytics-challenge"] = `# The numbers behind the de
 
 **Target audience:** Business owners, managing directors, and operations managers at field service businesses — renewable energy installers, heating and plumbing contractors, electrical contractors — who have completed the full L3 Analytics series and are ready to apply the tools to a realistic business scenario. SunComfort Systems is the pedagogical vehicle; the audience is any Commusoft client in a decision-making role who needs to move from data to decision with confidence.
 
-**Assumed starting point:** L3 Analytics C1 to C5 complete. Learner is comfortable navigating the Analytics dashboard, building tabular reports, using the Marketplace, and understanding the difference between the standard tier and Analytics+.
+**Assumed starting point:** L3 Analytics C1 to C4 complete. Learner is comfortable navigating the Analytics dashboard, building tabular reports, adding custom widgets, and using the Marketplace.
 
 **Main objective beyond the learning objectives:** The value of Analytics is not the data it surfaces — it is the decisions it enables. A managing director who completes this challenge has practised the full workflow: notice a signal on the dashboard, investigate it in a tabular report, identify a root cause, and take a specific action as a result. That workflow — signal, investigation, decision — is the habit that separates businesses that use their data from businesses that own it but never act on it.
 
@@ -29915,7 +29924,7 @@ Sarah arrives at the 12 o'clock meeting with three things: the dashboard screens
 
 ---
 
-**Series complete.** You have built a dashboard, created a tabular report, added custom widgets, explored the Marketplace, and stepped through what Analytics+ adds on top of the standard tier. The tools are ready. The next step is using them on your own data.
+**Series complete.** You have built a dashboard, created a tabular report, added custom widgets, and explored the Marketplace. The tools are ready. The next step is using them on your own data.
 
 ---
 
@@ -29948,7 +29957,7 @@ The result is clear. Solar installation jobs are generating the same revenue as 
 
 ## The decision
 
-Sarah arrives at the 12 o'clock meeting with three things: the dashboard screenshot showing the revenue gap, the tabular report identifying General Maintenance as the underperforming category, and three specific job examples where a variation should have been raised and was not. She does not present a problem — she presents a pattern and a cause. Logan agrees to run a brief team reminder about variation logging. The finding took thirty minutes to surface and ten minutes to communicate. Analytics did not make the decision; it made the decision possible.\n\nSeries complete. You have built a dashboard, created a tabular report, added custom widgets, explored the Marketplace, and stepped through what Analytics+ adds on top of the standard tier. The tools are ready. The next step is using them on your own data.
+Sarah arrives at the 12 o'clock meeting with three things: the dashboard screenshot showing the revenue gap, the tabular report identifying General Maintenance as the underperforming category, and three specific job examples where a variation should have been raised and was not. She does not present a problem — she presents a pattern and a cause. Logan agrees to run a brief team reminder about variation logging. The finding took thirty minutes to surface and ten minutes to communicate. Analytics did not make the decision; it made the decision possible.\n\nSeries complete. You have built a dashboard, created a tabular report, added custom widgets, and explored the Marketplace. The tools are ready. The next step is using them on your own data.
 
 ---
 

@@ -7548,9 +7548,9 @@ COURSES['reed-script-l3-stock-challenge'] = {
   ],
   scenes: [
     {type:"section", heading:"Welcome to the challenge", body:"You have completed all three walkthroughs in the Advanced Stock Control series. Now it is time to test what you know. This challenge follows a single scenario end to end: a part runs low, a reorder fires, a delivery arrives, stock is allocated to a job, and a manager confirms everything is accurate. At each step, you will make a decision. The system will tell you immediately whether you got it right and why."},
-    {type:"section", heading:"Step one — the reorder trigger", body:"It is Monday morning at SunComfort. Danny checks his notifications and sees that the automated stock check has fired: DC Isolators at the HQ Stockroom have dropped to four units, below the minimum level of five. A purchase order has been automatically raised to Rexel for ten units. Logan asks Danny to confirm the reorder has gone out correctly.\n\n**Danny needs to confirm that the automated PO has been raised and sent to Rexel. Where should he look?**\n\nA) Go to Settings, then Part reorder templates, and check the template configuration B) Go to the Rexel supplier record and check the purchase orders list for a new PO raised today\n\n*Correct (B):* Right. The automated PO is raised against the supplier record. Navigating to Rexel's supplier record and opening the purchase orders list shows Danny the PO that was generated at 2pm, the line items, the quantity ordered, and the status. The template configuration tells Danny how the rule is set up — but the PO itself lives on the supplier record. *Incorrect (A):* The reorder template configuration shows Danny the rules — minimum levels, reorder quantities, supplier. But the purchase order that was actually raised is on the Rexel supplier record. That is where Danny can confirm the PO went out correctly, review the line items, and see the status."},
-    {type:"section", heading:"Step two — the delivery arrives", body:"Three days later, the Rexel delivery arrives: ten DC Isolators, as ordered. Danny checks the units against the PO — all ten are present and correct. He now needs to receipt the stock into the HQ Stockroom.\n\n**How does Danny receipt the delivery and update the HQ Stockroom stock level?**\n\nA) Open the DC Isolators part record, go to the Stock tab, and use the Stock due in section to enter the quantity received, select HQ Stockroom as the destination, and click Mark as arrived B) Go to the stock location record for the HQ Stockroom and use the Manual adjust stock option to add ten units\n\n*Correct (A):* Right. The stock due in section on the part record is the correct route when a delivery is linked to an existing purchase order. Danny enters the quantity received, selects the destination location, and clicks Mark as arrived. The stock level updates and the movement is recorded in the history as \"Purchased\" with the PO reference attached. The manual adjust option is for stock arriving outside a PO — using it here would add the units but lose the link to the purchase order. *Incorrect (B):* Manual adjust stock is for additions that are not linked to a purchase order. When a delivery can be matched to an existing PO, the stock due in section on the part record is the correct route — it links the receipt to the PO, updates the stock level, and records the action as \"Purchased\" in the history. Danny should use that route to keep the audit trail complete."},
-    {type:"section", heading:"Step three — allocating to the job", body:"The DC Isolators are now in stock at the HQ Stockroom. Luke Patterson's solar installation job is scheduled for Friday and needs six units. Danny needs to reserve them against that job so they cannot be assigned elsewhere.\n\n**Danny needs to allocate six DC Isolators from the HQ Stockroom to Luke's job. What is the correct action?**\n\nA) Open the job record and add the DC Isolators as a required part — the system reserves the stock against the job B) Use the stock transfer option on the part record to move six units from the HQ Stockroom to Luke's van location\n\n*Correct (A):* Right. Reserving stock against a job is done from the job record — the part is added to the job's parts section, and the system marks that quantity as reserved at the HQ Stockroom. The balance available at the stockroom decreases by six immediately, even though the parts have not physically moved yet. This prevents any other job from being given the same stock. A van transfer moves physical stock to the van — it does not link the parts to a specific job. *Incorrect (B):* Transferring stock to the van moves the physical quantity but does not link the parts to Luke's job. Reserving stock against the job — from the job record — is the action that commits those units to that work order and reduces the balance available at the stockroom. Danny should add the DC Isolators from the job record."},
+    {type:"section", heading:"Step one — the reorder trigger", body:"It is Monday morning at SunComfort. Danny checks his notifications and sees that the automated stock check has fired: DC Isolators at the HQ Stockroom have dropped to four units, below the minimum level of five. A purchase order has been automatically raised to Rexel for ten units. Logan asks Danny to confirm the reorder has gone out correctly."},
+    {type:"section", heading:"Step two — the delivery arrives", body:"Three days later, the Rexel delivery arrives: ten DC Isolators, as ordered. Danny checks the units against the PO — all ten are present and correct. He now needs to receipt the stock into the HQ Stockroom."},
+    {type:"section", heading:"Step three — allocating to the job", body:"The DC Isolators are now in stock at the HQ Stockroom. Luke Patterson's solar installation job is scheduled for Friday and needs six units. Danny needs to reserve them against that job so they cannot be assigned elsewhere."},
     {type:"section", heading:"Step four — the stock report confirms it", body:"With the delivery received, the stock allocated, and Friday approaching, Logan wants to confirm the stock position is accurate before the job goes ahead. He opens the HQ Stockroom location record and checks the DC Isolators row in the stock tab."},
     {type:"section", heading:"Challenge complete", body:"Every step in this chain matters. The reorder trigger fires when stock drops below the minimum — and the PO lands on the supplier record. The delivery is receipted against that PO using the stock due in section — and the history records it as purchased. The part is reserved against the job from the job record — and the balance available reflects the commitment. The stock report confirms the position is accurate — and the manager can proceed with confidence. This is what a working stock system looks like: every movement recorded, every decision traceable, and every person in the chain doing their part at the right moment."},
     {type:"reflection", label:"Knowledge check", question:"Danny needs to confirm that the automated PO has been raised and sent to Rexel. Where should he look?", options:["A. Go to Settings, then Part reorder templates, and check the template configuration", "B. Go to the Rexel supplier record and check the purchase orders list for a new PO raised today"], correct:"", feedback:"Option B is right. The automated PO is raised against the supplier record. Navigating to Rexel's supplier record and opening the purchase orders list shows Danny the PO that was generated at 2pm, the line items, the quantity ordered, and the status. The template configuration tells Danny how the rule is set up — but the PO itself lives on the supplier record."},
@@ -28982,41 +28982,17 @@ You have completed all three walkthroughs in the Advanced Stock Control series. 
 
 It is Monday morning at SunComfort. Danny checks his notifications and sees that the automated stock check has fired: DC Isolators at the HQ Stockroom have dropped to four units, below the minimum level of five. A purchase order has been automatically raised to Rexel for ten units. Logan asks Danny to confirm the reorder has gone out correctly.
 
-**Danny needs to confirm that the automated PO has been raised and sent to Rexel. Where should he look?**
-
-A) Go to Settings, then Part reorder templates, and check the template configuration
-B) Go to the Rexel supplier record and check the purchase orders list for a new PO raised today
-
-*Correct (B):* Right. The automated PO is raised against the supplier record. Navigating to Rexel's supplier record and opening the purchase orders list shows Danny the PO that was generated at 2pm, the line items, the quantity ordered, and the status. The template configuration tells Danny how the rule is set up — but the PO itself lives on the supplier record.
-*Incorrect (A):* The reorder template configuration shows Danny the rules — minimum levels, reorder quantities, supplier. But the purchase order that was actually raised is on the Rexel supplier record. That is where Danny can confirm the PO went out correctly, review the line items, and see the status.
-
 ---
 
 ## Step two — the delivery arrives
 
 Three days later, the Rexel delivery arrives: ten DC Isolators, as ordered. Danny checks the units against the PO — all ten are present and correct. He now needs to receipt the stock into the HQ Stockroom.
 
-**How does Danny receipt the delivery and update the HQ Stockroom stock level?**
-
-A) Open the DC Isolators part record, go to the Stock tab, and use the Stock due in section to enter the quantity received, select HQ Stockroom as the destination, and click Mark as arrived
-B) Go to the stock location record for the HQ Stockroom and use the Manual adjust stock option to add ten units
-
-*Correct (A):* Right. The stock due in section on the part record is the correct route when a delivery is linked to an existing purchase order. Danny enters the quantity received, selects the destination location, and clicks Mark as arrived. The stock level updates and the movement is recorded in the history as "Purchased" with the PO reference attached. The manual adjust option is for stock arriving outside a PO — using it here would add the units but lose the link to the purchase order.
-*Incorrect (B):* Manual adjust stock is for additions that are not linked to a purchase order. When a delivery can be matched to an existing PO, the stock due in section on the part record is the correct route — it links the receipt to the PO, updates the stock level, and records the action as "Purchased" in the history. Danny should use that route to keep the audit trail complete.
-
 ---
 
 ## Step three — allocating to the job
 
 The DC Isolators are now in stock at the HQ Stockroom. Luke Patterson's solar installation job is scheduled for Friday and needs six units. Danny needs to reserve them against that job so they cannot be assigned elsewhere.
-
-**Danny needs to allocate six DC Isolators from the HQ Stockroom to Luke's job. What is the correct action?**
-
-A) Open the job record and add the DC Isolators as a required part — the system reserves the stock against the job
-B) Use the stock transfer option on the part record to move six units from the HQ Stockroom to Luke's van location
-
-*Correct (A):* Right. Reserving stock against a job is done from the job record — the part is added to the job's parts section, and the system marks that quantity as reserved at the HQ Stockroom. The balance available at the stockroom decreases by six immediately, even though the parts have not physically moved yet. This prevents any other job from being given the same stock. A van transfer moves physical stock to the van — it does not link the parts to a specific job.
-*Incorrect (B):* Transferring stock to the van moves the physical quantity but does not link the parts to Luke's job. Reserving stock against the job — from the job record — is the action that commits those units to that work order and reduces the balance available at the stockroom. Danny should add the DC Isolators from the job record.
 
 ---
 
@@ -29033,6 +29009,7 @@ Every step in this chain matters. The reorder trigger fires when stock drops bel
 
 ---
 
+---
 **Knowledge check**
 
 Danny needs to confirm that the automated PO has been raised and sent to Rexel. Where should he look?

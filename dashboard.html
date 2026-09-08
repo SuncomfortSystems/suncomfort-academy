@@ -339,6 +339,8 @@
     <div class="nav-item" onclick="navLayer('setting-up', this)"><div class="nav-dot" style="background:#546e7a"></div>4. Setting up your account</div>
     <div class="nav-item" onclick="navLayer('going-further', this)"><div class="nav-dot" style="background:#3949ab"></div>5. Going further</div>
     <div class="nav-item" onclick="navLayer('add-ons', this)"><div class="nav-dot" style="background:#ad1457"></div>6. Add-ons</div>
+    <div class="nav-section" style="margin-top:16px">Standards</div>
+    <div class="nav-item" onclick="showView('standards', this)"><div class="nav-dot" style="background:#00695c"></div>How a walkthrough is structured</div>
   </nav>
 
   <main class="main">
@@ -1080,6 +1082,100 @@
       <div style="width:100%;height:calc(100vh - 100px);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-top:4px">
         <iframe src="suncomfort-website.html" style="width:100%;height:100%;border:none;" title="SunComfort Systems Website"></iframe>
       </div>
+    </div>
+
+    <!-- STANDARDS -->
+    <div id="view-standards" class="view">
+      <div class="page-heading"><h1>Standards</h1><p>How walkthroughs are written and built &mdash; the rules, not the debate</p></div>
+
+      <div class="section-heading">How a walkthrough is structured</div>
+      <p style="font-size:13px;color:var(--text-muted);line-height:1.6;margin:0 0 14px"><strong>Methodology:</strong> Mager's three-part objective, with a value proposition added. The article and walkthrough split follows Diataxis.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 18px">A walkthrough carries five things. Four are written, one is the recording.</p>
+
+      <table class="inbox-table" style="margin-bottom:10px">
+        <thead><tr><th style="width:180px">Block</th><th style="width:180px">Media value</th><th>Carries</th></tr></thead>
+        <tbody>
+          <tr><td>Introduction</td><td>Written text</td><td><strong>Conditions</strong> and the <strong>learning objective</strong></td></tr>
+          <tr><td>Body</td><td>Screen recording</td><td>The <strong>story walkthrough</strong></td></tr>
+          <tr><td>Knowledge check</td><td>Expanding section</td><td>Two questions, each with an explained answer</td></tr>
+          <tr><td>Summary</td><td>Written text</td><td>The <strong>value proposition</strong> and the <strong>criterion</strong></td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 24px">These are the blocks Build by section already uses. Written text sits at the top and bottom of almost every article; this says what goes in them.</p>
+
+      <div class="section-heading">The five parts</div>
+
+      <div style="border-left:3px solid var(--blue1);padding:2px 0 2px 16px;margin:0 0 20px">
+        <div style="font-weight:600;font-size:15px;margin-bottom:8px">Conditions</div>
+        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 10px"><strong>What it is.</strong> What must already exist in the learner's account for this walkthrough to make sense. Named things, in plain words.</p>
+        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 10px"><strong>Why we do it.</strong> So nobody starts something they cannot finish. A job description template is assembled out of skills, custom forms, arrive and leave workflows and labour rates. Someone without those needs to know before they begin, not four minutes in.</p>
+        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 6px"><strong>Rules.</strong></p>
+        <ul style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 10px;padding-left:20px">
+          <li>Name the things, never other walkthroughs. Readers arrive at a page, not at the site, so the page stands on its own.</li>
+          <li>A sentence or two. If it needs more, the walkthrough is in the wrong place in the order.</li>
+        </ul>
+        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0">The same sentence does three jobs: scene-setting in the video, "before you begin" on the article, and the prerequisite when Success check a gate.</p>
+      </div>
+
+      <div style="border-left:3px solid var(--blue1);padding:2px 0 2px 16px;margin:0 0 20px">
+        <div style="font-weight:600;font-size:15px;margin-bottom:8px">Learning objective</div>
+        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 10px"><strong>What it is.</strong> What the learner will be able to do afterwards, written so you could watch them do it.</p>
+        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 10px"><strong>Why we do it.</strong> It sets what the walkthrough owes the learner, which is what stops it drifting into a tour of a screen.</p>
+        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0"><strong>Rule.</strong> No <em>understand</em>, <em>know about</em>, <em>be familiar with</em> or <em>appreciate</em>. Nobody can observe understanding. If the verb has no visible outcome, the objective is not written yet.</p>
+      </div>
+
+      <div style="border-left:3px solid var(--blue1);padding:2px 0 2px 16px;margin:0 0 20px">
+        <div style="font-weight:600;font-size:15px;margin-bottom:8px">Story walkthrough</div>
+        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 10px"><strong>What it is.</strong> SunComfort's staff carrying out the work on screen, narrated by Archer in the third person present.</p>
+        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 10px"><strong>Why we do it.</strong> Watching a business do the job teaches the shape of it. Being told to click things teaches the screen, which the Help Centre article already covers better.</p>
+        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0"><strong>Rule.</strong> Never tell the learner to click something. The learner watches, SunComfort acts. Archer turns to the learner only for guidance about their own business.</p>
+      </div>
+
+      <div style="border-left:3px solid var(--blue1);padding:2px 0 2px 16px;margin:0 0 20px">
+        <div style="font-weight:600;font-size:15px;margin-bottom:8px">Value proposition</div>
+        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 10px"><strong>What it is.</strong> Why it is worth doing. What it saves, prevents, or stops going wrong.</p>
+        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 10px"><strong>Why we do it.</strong> Our learners choose whether to bother. Mager has no equivalent; we add it.</p>
+        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0"><strong>Rule.</strong> Describe the payoff, not the feature. "Templates hold a job's settings" is a description. "Every setting on this screen is one the office would otherwise choose job by job, on every job, and get wrong occasionally" is a payoff.</p>
+      </div>
+
+      <div style="border-left:3px solid var(--blue1);padding:2px 0 2px 16px;margin:0 0 24px">
+        <div style="font-weight:600;font-size:15px;margin-bottom:8px">Criterion</div>
+        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 10px"><strong>What it is.</strong> How the learner checks their own account is right. Something they go and look at.</p>
+        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 10px"><strong>Why we do it.</strong> It turns "I watched it" into "mine is right", which is also what a gate needs to see.</p>
+        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 6px"><strong>Rules.</strong></p>
+        <ul style="font-size:14px;color:var(--text);line-height:1.6;margin:0;padding-left:20px">
+          <li>It has to be able to come out wrong. If the answer is always yes, it is a restatement, not a check.</li>
+          <li>Ours are state checks, not tolerances. A textbook Mager criterion reads <em>zero defects, within fifteen minutes</em>, which suits a task with countable defects. Configuring an account is not that. Ours name a state: the workflow is already on the job, the total matches with no line added by hand. Never invent a time limit or an error count to make one look tighter.</li>
+        </ul>
+      </div>
+
+      <div class="section-heading">Worked example &mdash; job description templates</div>
+      <table class="inbox-table" style="margin-bottom:24px">
+        <tbody>
+          <tr><td style="width:200px;color:var(--text-muted);font-size:13px;vertical-align:top">Introduction<br><span style="font-size:12px">Written text</span></td><td style="line-height:1.6">Your skills, custom forms, arrive and leave workflows and labour rates need to be in place before this one, because a job description template is assembled out of them.<br><br>By the end you will be able to build a template that carries a job's settings, so the office picks a template rather than putting the job together by hand.</td></tr>
+          <tr><td style="color:var(--text-muted);font-size:13px;vertical-align:top">The video opens<br><span style="font-size:12px">Screen recording</span></td><td style="line-height:1.6">Sophie has already built SunComfort's skills, forms and workflows. She opens Settings and starts a new job description template for a boiler service.</td></tr>
+          <tr><td style="color:var(--text-muted);font-size:13px;vertical-align:top">Summary<br><span style="font-size:12px">Written text</span></td><td style="line-height:1.6">Every setting on this screen is one the office would otherwise choose job by job, on every job, and get wrong occasionally. Building it once into the template means a service job is right by default.<br><br>You will know yours is right when you raise a job from the template and the report form, the skill requirement and the labour rate are already on it, without anyone choosing them.</td></tr>
+        </tbody>
+      </table>
+
+      <div class="section-heading">Worked example &mdash; raising an invoice from a job</div>
+      <table class="inbox-table" style="margin-bottom:24px">
+        <tbody>
+          <tr><td style="width:200px;color:var(--text-muted);font-size:13px;vertical-align:top">Introduction</td><td style="line-height:1.6">This picks up with a completed job that has parts and labour recorded against it.<br><br>By the end you will be able to raise an invoice from a completed job and account for every line on its total.</td></tr>
+          <tr><td style="color:var(--text-muted);font-size:13px;vertical-align:top">The video opens</td><td style="line-height:1.6">Jake has finished at Mrs Thompson's and recorded the parts he used. Sophie opens the job and raises the invoice from it.</td></tr>
+          <tr><td style="color:var(--text-muted);font-size:13px;vertical-align:top">Summary</td><td style="line-height:1.6">Raising the invoice from the job rather than starting a blank one means the parts and labour are already on it. Nothing gets retyped, and nothing gets left off the bill.<br><br>You will know yours is right when the invoice total matches the job's parts and labour without anyone adding a line by hand.</td></tr>
+        </tbody>
+      </table>
+
+      <div class="section-heading">Three to watch</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>The criterion is not the knowledge check.</strong> The check tests whether they followed the walkthrough. The criterion sends them to their own account to look at something. Written as a second check question, the summary just repeats what the check asked.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>The conditions appear twice, in different words.</strong> The introduction states the prerequisite to the learner. The video states SunComfort's version of it as scene-setting, so the recording does not start mid-air. Two sentences, not one repeated.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 24px"><strong>Tours use recognition instead of a state check.</strong> A walkthrough that tours a finished account gives the learner nothing of their own to look at, so the criterion becomes <em>"you will know you have got this when you can open your own Service template and say what each field on it does to a job."</em> Anywhere the learner builds something, use the state check.</p>
+
+      <div class="section-heading">Where it comes from</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Mager's three-part objective</strong> &mdash; observable <strong>performance</strong>, the <strong>conditions</strong> it happens under, and the <strong>criterion</strong> for acceptable performance. Verbs like <em>understand</em> fail his test because no two people would agree on whether they had been met. <a href="https://www.acces.nysed.gov/bpss/writing-performance-objectives" target="_blank" rel="noopener" style="color:var(--blue1)">Source</a></p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Diataxis</strong> sets the article and walkthrough split. A how-to guide is action and only action for someone already competent, with no digression or teaching. A tutorial serves the user at study rather than at work. So the article carries the click-by-click and the walkthrough carries the learning objective. <a href="https://diataxis.fr/how-to-guides/" target="_blank" rel="noopener" style="color:var(--blue1)">How-to guides</a> &middot; <a href="https://diataxis.fr/tutorials-how-to/" target="_blank" rel="noopener" style="color:var(--blue1)">Tutorials and how-to</a></p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 8px">Diataxis also sets which settings keep a detailed walkthrough: a how-to cannot promise safety because it operates on real work, a tutorial can because it is a rehearsal. The settings that earn a walkthrough are the ones where being wrong is expensive &mdash; irreversible, ordered, or dependent on something built elsewhere.</p>
     </div>
 
   </main>

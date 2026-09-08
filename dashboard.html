@@ -455,12 +455,15 @@
       <div class="path-note">Help Centre tier 3 — pathway article <strong>Start here</strong>: to be created. Links the 4 understanding articles below, in order, and says what the learner can do once the path is finished. It carries no walkthrough content of its own.</div>
 <div id="find-your-way-around" class="series-block">
         <div class="series-header" style="background:#c4682f">
-          <div><h2>Start here — Find your way around</h2><div class="series-meta">What SunComfort is, how a job moves from customer to paid, the navigation bar, finding a customer and opening a job</div><div class="hc-article"><span class="pill hc-todo">TIER 2</span> Understanding article: to be created</div></div>
-          <div class="series-count">2 walkthroughs</div>
+          <div><h2>Start here — The Compass</h2><div class="series-meta">Five days of orientation: what things are called, finding customers, following jobs, your account, and finding invoices</div><div class="hc-article"><span class="pill hc-todo">TIER 2</span> Understanding article: to be created</div></div>
+          <div class="series-count">5 walkthroughs</div>
         </div>
         <div class="walkthrough-grid">
-<div class="walkthrough-card" onclick="openPanel('reed-script-compass')"><div class="walkthrough-num">Walkthrough 1</div><div class="walkthrough-title">The Commusoft Compass</div><div class="walkthrough-meta"><span class="meta-pill">8 min</span><span class="meta-pill">Walkthrough</span><span class="meta-pill">All staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
-<div class="walkthrough-card" onclick="openPanel('reed-script-l1-series1')"><div class="walkthrough-num">Walkthrough 2</div><div class="walkthrough-title">Your first day in Commusoft</div><div class="walkthrough-meta"><span class="meta-pill">12 min</span><span class="meta-pill">Mini-walkthrough</span><span class="meta-pill">Office teams</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="walkthrough-card" onclick="openPanel('reed-script-compass')"><div class="walkthrough-num">Day 1</div><div class="walkthrough-title">Day 1 — What things are called</div><div class="walkthrough-meta"><span class="meta-pill">8 min</span><span class="meta-pill">Walkthrough</span><span class="meta-pill">All staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="walkthrough-card" onclick="openPanel('reed-script-compass-day2')"><div class="walkthrough-num">Day 2</div><div class="walkthrough-title">Day 2 — Finding customers</div><div class="walkthrough-meta"><span class="meta-pill">6 min</span><span class="meta-pill">All staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="walkthrough-card" onclick="openPanel('reed-script-compass-day3')"><div class="walkthrough-num">Day 3</div><div class="walkthrough-title">Day 3 — Following jobs</div><div class="walkthrough-meta"><span class="meta-pill">6 min</span><span class="meta-pill">All staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="walkthrough-card" onclick="openPanel('reed-script-compass-day4')"><div class="walkthrough-num">Day 4</div><div class="walkthrough-title">Day 4 — Your account</div><div class="walkthrough-meta"><span class="meta-pill">4 min</span><span class="meta-pill">All staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+          <div class="walkthrough-card" onclick="openPanel('reed-script-compass-day5')"><div class="walkthrough-num">Day 5</div><div class="walkthrough-title">Day 5 — Finding invoices</div><div class="walkthrough-meta"><span class="meta-pill">4 min</span><span class="meta-pill">All staff</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
         </div>
       </div>
 <div id="shared-concept-library" class="series-block">
@@ -1643,18 +1646,17 @@ COURSES['l2-s2-assessment'] = {
 };
 COURSES['reed-script-compass'] = {
   contentType: "Walkthrough",
-  pathLabel: "Start here · The Commusoft Compass · Entry Walkthrough",
-  title: "The Commusoft Compass",
-  duration: "8 min",
+  pathLabel: "Start here · The Compass · Walkthrough 1 of 5",
+  title: "Day 1 — What things are called",
+  duration: "6 min",
   persona: "All staff",
   characters: "Sarah Mitchell (Managing Director, referenced as context); Emma Clarke (Office Administrator, logged-in user for the web app recording)",
   scenario: "A new member of staff at a field service business begins their Commusoft Learning journey. The Compass introduces SunComfort Systems, shows how a job moves through Commusoft from first contact to closed job, orients the learner to the web app, points them to where the terminology is defined, and shows them where to get help.",
   objectives: [
     "Explain who SunComfort Systems is and why it serves as the learning vehicle throughout Commusoft Learning",
-    "Trace the journey of a job from customer enquiry to paid invoice at a high level",
+    "Identify where to get help when using Commusoft",
     "Navigate to the main areas of the Commusoft web app",
-    "Know where the terms used across Commusoft Learning are defined",
-    "Identify where to get help when using Commusoft"
+    "Know where the terms used across Commusoft Learning are defined"
   ],
   productionSetup: [
     "Logged-in user: Emma Clarke, Office Administrator, Office staff role. Needed for the web app recording only.",
@@ -1665,19 +1667,17 @@ COURSES['reed-script-compass'] = {
   buildBySection: [
     {section:"Opening disclaimer", media:"Written text", note:"Article copy at the top, above the first video."},
     {section:"Meet SunComfort Systems", media:"Animated slides", note:"Nothing to record. Clueso slides carrying the narration: what they do, where they operate, team size. Captured as one Clueso video with the section that follows."},
-    {section:"How a job moves from customer to paid", media:"Animated slides", note:"Eight steps, one slide each, building the lifecycle in sequence. Same Clueso video as the section above."},
+    {section:"Where to get help", media:"Written text", note:"Article copy at the foot, below the last video. Link **Accessing AI:den our AI agent** (312486) and **Mastering conversations with AI:den** (325028) from the paragraph on asking properly."},
     {section:"Find your way around the web app", media:"Screen recording", note:"Roughly three minutes, logged in as Emma Clarke. Open on the navigation bar and pan across it, then take the items in turn: Customers, opening one record to show the customer at the top with work addresses beneath; Jobs, the list with statuses then one job record with its tabs; Diary, the schedule with status colours in use; then Suppliers, Inventory, Users, Fleet management and Analytics more briefly. Finish on the profile icon and open Settings from it. Record with the new reporting switched on, so the bar reads Analytics and carries Users and Inventory. The SunComfort account also shows Opportunities and AI:den+; the narration says those two are feature dependent, so do not cut them out. Roughly 30 seconds each on Customers, Jobs and Diary, 15 on the rest together."},
     {section:"Key terms in context", media:"Written text", note:"Article copy with the link to terminology article 236422."},
-    {section:"Where to get help", media:"Written text", note:"Article copy at the foot, below the last video. Link **Accessing AI:den our AI agent** (312486) and **Mastering conversations with AI:den** (325028) from the paragraph on asking properly."},
     {section:"Knowledge check", media:"Expanding section", note:"Two questions at the very foot of the article, each revealing its answer on click. Nothing is scored."}
   ],
   scenes: [
     {type:"section", heading:"Opening disclaimer", body:"Every walkthrough in Commusoft Learning is taught through SunComfort Systems, a fictional renewable energy company based in south London. The customers, jobs, and scenarios you will see are examples used to show how Commusoft works in practice. They are not real records or real events. SunComfort is the teaching vehicle. Your own business is where this learning lands."},
     {type:"section", heading:"Meet SunComfort Systems", body:"SunComfort Systems is an independent renewable energy company based in Elephant and Castle, south London. They install, service, and maintain solar panel systems, heat pumps, battery storage, and EV charging points for residential and commercial customers across London and Surrey.\n\nWith 35 employees and 18 field vans, SunComfort runs the same range of operations you will meet in your own business: routine annual services, complex multi-day installations, emergency callouts, and ongoing commercial maintenance contracts. They work across domestic properties, commercial buildings, and multi-site clients.\n\nEvery scenario across Commusoft Learning plays out at SunComfort because they are exactly the kind of business Commusoft is built for. When you see Sophie booking a job, Jake completing an appointment on site, or Sarah reviewing the month, you are seeing how Commusoft works in a business like yours."},
-    {type:"section", heading:"How a job moves from customer to paid", body:"In Commusoft, every piece of work follows the same journey. A customer makes contact, a job is raised, an appointment is scheduled, the technician completes the work on site, an invoice is sent, and the job closes when payment is received. That journey is the backbone of the system, and everything you learn across Commusoft Learning connects back to one step in it.\n\n**Step 1: Customer contact.** A customer calls, emails, or books online. The office team looks up or creates the customer record and notes what has been asked for.\n\n**Step 2: Job raised.** The office team raises a job against the customer's work address and selects a job description template, which fills in the standard details: duration, workflow, skill requirements, and pricing.\n\n**Step 3: Appointment booked.** The office team books an appointment and assigns it to a technician, who is notified on their mobile app.\n\n**Step 4: Technician on the way.** The technician accepts the appointment and marks it Travelling when they set off. The office sees the status change without calling anyone.\n\n**Step 5: Work completed on site.** The technician marks Arrived, completes their mobile workflow, records notes, photos, or defects, submits any forms or certificates, and marks Left when the work is done.\n\n**Step 6: Job record updated.** Everything recorded on site attaches to the job record automatically, so the office can review it without speaking to the technician.\n\n**Step 7: Invoice raised.** The office team raises an invoice from the job. Where automatic invoicing is configured on the job description template, Commusoft raises it as soon as the appointment is marked complete.\n\n**Step 8: Payment received and job closed.** The customer pays, the payment is recorded, and raising the Final invoice sets the job status to Closed. The full history stays attached to the record.\n\nWhether or not your business already works to a process like this one, Commusoft makes it systematic and visible at every stage. Each step you have just traced is tracked in the system, so the whole team can see where a job stands without ringing round to find out. Where you do not have a process today, the walkthroughs ahead show you how each step is handled and how to set it up."},
+    {type:"section", heading:"Where to get help", body:"You now have what you need to begin your role-specific training. Before you do, it is worth knowing where to go when you have a question.\n\nStart with AI:den. AI:den is Commusoft's AI agent and the fastest way to an answer, reached through the chat inside Commusoft or by emailing support@commusoft.com. It is not a search box and it is not a queue for the support team. It is a help tool in its own right, so treat it like one.\n\nThat means asking properly. Give it a full sentence with the context of who, what, and when, rather than a couple of words. Ask one thing at a time. Use the Commusoft term for what you mean, because it knows the system's vocabulary. \"How do I connect my Office 365 account with Commusoft?\" gets you a real answer. \"Office 365 integration\" makes it guess. If the first reply is not quite right, say so and ask again rather than giving up. It responds to being told what you actually meant.\n\nThe Help Centre sits behind it, covering every area of the system with step-by-step articles you can search by topic or browse by category, and there are two articles there on getting the most out of AI:den itself.\n\nCommusoft Learning is where you return to build on this foundation, with role-specific paths for decision makers, office teams, and field teams. Come back here after the Compass to begin yours.\n\nAnd when something needs a conversation about your business rather than about the software, your Commusoft account manager is the person to talk to. Their details are in your Commusoft welcome email."},
     {type:"section", heading:"Find your way around the web app", body:"Commusoft's web app is where your office team works. Across the top of every screen is the navigation bar, and knowing what sits behind each item means you can move around confidently from day one. You do not need to know any of them in depth yet.\n\nCustomers holds every customer and property record. The customer record is who you bill, the work address is where the work happens, and one customer can have many of them. Jobs is where every piece of work lives, and Diary is the schedule, where the office follows the field team through the day as appointment statuses change.\n\nSuppliers covers who you buy from and Inventory covers your parts and stock. Users is your team and what each of them can reach. Fleet management tracks your vehicles. Analytics is the view across the business, and you will go into that properly in your role-specific training.\n\nNot every account shows the same bar. Opportunities and AI:den+ appear only where the business has those features, so if something named here is not on your screen, that is how your account is set up rather than a fault.\n\nSettings is not on the bar. It sits behind the profile icon at the right-hand end, and what you can see inside it depends on your user role."},
     {type:"section", heading:"Key terms in context", body:"Commusoft has its own vocabulary, and a handful of terms carry most of the weight. A customer record is who you bill. A work address is where the work happens, and jobs, assets and service reminders all sit under the address rather than the customer. A job is the unit of work. An appointment is a scheduled visit against it. Get those four straight and the rest of the system reads easily.\n\nYou do not need to memorise anything now. Every term used across Commusoft Learning is defined in the Commusoft Terminology article in the Help Centre, with an example of how it works in practice. Keep it open the first few times you use the system, and come back to it whenever a word comes up that you want to pin down.\n\nhttps://help.commusoft.com/en/articles/236422-commusoft-terminology"},
-    {type:"section", heading:"Where to get help", body:"You now have what you need to begin your role-specific training. Before you do, it is worth knowing where to go when you have a question.\n\nStart with AI:den. AI:den is Commusoft's AI agent and the fastest way to an answer, reached through the chat inside Commusoft or by emailing support@commusoft.com. It is not a search box and it is not a queue for the support team. It is a help tool in its own right, so treat it like one.\n\nThat means asking properly. Give it a full sentence with the context of who, what, and when, rather than a couple of words. Ask one thing at a time. Use the Commusoft term for what you mean, because it knows the system's vocabulary. \"How do I connect my Office 365 account with Commusoft?\" gets you a real answer. \"Office 365 integration\" makes it guess. If the first reply is not quite right, say so and ask again rather than giving up. It responds to being told what you actually meant.\n\nThe Help Centre sits behind it, covering every area of the system with step-by-step articles you can search by topic or browse by category, and there are two articles there on getting the most out of AI:den itself.\n\nCommusoft Learning is where you return to build on this foundation, with role-specific paths for decision makers, office teams, and field teams. Come back here after the Compass to begin yours.\n\nAnd when something needs a conversation about your business rather than about the software, your Commusoft account manager is the person to talk to. Their details are in your Commusoft welcome email."},
     {type:"reflection", label:"Knowledge check", question:"A customer has three properties, and work is needed at one of them. Where does that job attach?", options:[], correct:"", feedback:"To the work address, not to the customer record. The customer record is who you bill. The work address is where the work happens, and jobs, assets and service reminders all sit underneath it. That is what lets one customer hold several sites without their histories running together."},
     {type:"reflection", label:"Knowledge check", question:"The invoice has been sent and the customer has paid. What actually moves the job to Closed?", options:[], correct:"", feedback:"Raising the Final invoice. Recording the payment does not close the job on its own — the status changes when the Final invoice is raised against it. The full history stays attached to the record afterwards, so nothing is lost by closing it."}
   ],
@@ -2390,7 +2390,7 @@ COURSES['reed-script-l1-series1'] = {
   title: "Your first day in Commusoft",
   duration: "12 min", persona: "Office teams",
   contentType: "Mini-walkthrough",
-  pathLabel: "Start here · Find your way around · Walkthrough 2 of 2",
+  pathLabel: "Retired 2026-09-08 — replaced by The Compass Day 2",
   characters: "Emma Clarke (Office Administrator — logged-in user for all screen recordings); David Okafor (customer — screen recording demonstrations in Lessons 2, 3, and 4)",
   scenario: "Emma Clarke has just started at SunComfort and is logging in to Commusoft for the first time. Before she can manage customers and jobs effectively, she needs to know where everything lives.",
   objectives: [
@@ -8564,6 +8564,163 @@ COURSES['reed-script-l1-dm-s1-c3'] = {
   openItems: "- **BLOCKER — what the technician sees on Leave Site is unsettled, and it decides three sections.** HC 284397, Managing jobs on the mobile app, says: \"This section only applies if the Job Dashboard feature is enabled on the web\"; \"when the engineer selects 'Leave Site', a confirmation prompt is displayed\"; \"the available job stages will be shown again\"; \"The job stage marked as Job Completed on the web is what determines if a job is finished\"; and \"If a required Job Completed stage is skipped, the job will remain incomplete.\" That reads as Jake being shown the stage list when he leaves and being able to end the job himself, where this script has him asked nothing and Sophie closing it. It would also explain Jira TRIAG-13135. If HC is right, the honest story is better than the written one — the job stays open because the stage Jake picked is not the closing one — and On site, Why the job is still open and the knowledge check all change. Sara or Abbie to confirm what Jake actually sees on the app. - **Also confirm:** whether the Job Dashboard feature that HC 284397 names as the prerequisite for stages appearing on the app is on in the recording account, since the on-site section depends on what Jake is shown. - Settled 2026-09-07 and no longer open: job stages and job pipelines are one concept under two plan-specific settings screens, Customer Journey configuring stages inside Job pipelines and Go Paperless using a standalone Job stages screen backed by one uneditable default pipeline. This walkthrough no longer visits either screen — it is the job running, not the configuration — so the difference only matters to the series that covers setup. - Mrs Thompson's heat pump asset and her Heat Pump Annual Service reminder must exist and the reminder must be showing as due. Nisha to confirm when SunComfort account access is granted. Needs human input. **Help Centre issues found** - **283660 — Uncomplete a job.** The article documents how to reverse job completion and names the \"This job is complete\" checkbox, but no Help Centre article states how a job first *becomes* complete, or that leaving an appointment normally raises that question. A reader looking for how completion works finds only the undo. - **No article covers what job stages do to completion.** With stages in use the technician is not asked whether the job is complete when they leave the appointment, and the decision moves to the office. Nothing in the Help Centre says so, including 284442 Job stages. A business that sets stages up finds its jobs silently stop closing, which is the most common confusion this walkthrough exists to fix. *The defects in the pipeline and job stage settings screens themselves — the plan-specific panels, the navigation paths and the three names for the automatic-completion control — are recorded on Configuring jobs and scheduling walkthrough 2, which is the walkthrough that covers those screens.*",
   helpCentreIssues: "- **283660 — Uncomplete a job.** The article documents how to reverse job completion and names the \"This job is complete\" checkbox, but no Help Centre article states how a job first *becomes* complete, or that leaving an appointment normally raises that question. A reader looking for how completion works finds only the undo. - **No article covers what job stages do to completion.** With stages in use the technician is not asked whether the job is complete when they leave the appointment, and the decision moves to the office. Nothing in the Help Centre says so, including 284442 Job stages. A business that sets stages up finds its jobs silently stop closing, which is the most common confusion this walkthrough exists to fix. *The defects in the pipeline and job stage settings screens themselves — the plan-specific panels, the navigation paths and the three names for the automatic-completion control — are recorded on Configuring jobs and scheduling walkthrough 2, which is the walkthrough that covers those screens.*"
 };
+
+COURSES['reed-script-compass-day2'] = {
+  contentType: "Walkthrough",
+  pathLabel: "Start here · The Compass · Walkthrough 2 of 5",
+  title: "Day 2 — Finding customers",
+  duration: "6 min",
+  persona: "All staff",
+  characters: "Emma Clarke (Office Administrator, SunComfort Systems)",
+  scenario: "Emma has just started at SunComfort. Before she can be useful on the phone, she needs to find people and read what is on their record.",
+  objectives: [
+    "Use global search to reach any record directly",
+    "Use the customer dashboard to browse and filter the customer list",
+    "Identify the key parts of a customer record and what each one holds",
+    "Explain the difference between a customer and a work address"
+  ],
+  productionSetup: [
+    "Logged-in user: Emma Clarke, Office Administrator, Office staff.",
+    "Customer record: David Okafor, a landlord with several work addresses under one customer record, so the customer and work address distinction is visible on screen rather than described. Jobs raised at more than one of his properties.",
+    "Existing data: Enough customers in the account that the customer dashboard list and its filters are worth showing. At least one job, one invoice and one logged communication against Okafor, so the customer record is not empty. Nothing is created or changed during recording.",
+    "Assets required: None."
+  ],
+  buildBySection: [
+    {section:"Getting to a record", media:"Written text", note:"Article opening. On-screen text only, no recording."},
+    {section:"Global search", media:"Screen recording", note:"Capture global search by customer name, then by job number, then by address. Show it landing directly on each record."},
+    {section:"The customer dashboard", media:"Screen recording", note:"Capture the customer dashboard, browsing the list and applying a filter. Contrast deliberately with the previous section."},
+    {section:"Reading a customer record", media:"Screen recording", note:"Open David Okafor's record. Capture contact details at the top, the work addresses listed, job history at one address, invoices, and the communication log."},
+    {section:"Customer and work address are not the same thing", media:"Screen recording", note:"Stay on Okafor. Show the customer record with several work addresses, then open one and show only that property's jobs. The whole point is seeing the two levels on screen."},
+    {section:"Knowledge check", media:"Expanding section", note:"Two questions at the foot of the article, each revealing its answer on click. Nothing is scored."},
+    {section:"Summary", media:"Written text", note:"Closing text only. No recording."}
+  ],
+  scenes: [
+    {type:"section", heading:"Getting to a record", body:"Commusoft is organised around dashboards, each giving a focused view of one area, and a global search that reaches any record without going through a section at all. Two routes, and the useful thing in week one is knowing which to reach for.\n\nThis walkthrough covers both, then what is actually on a customer record, and finishes on the distinction that trips up almost everyone in their first fortnight."},
+    {type:"section", heading:"Global search", body:"Global search sits at the left-hand end of the navigation bar and it is the fastest route to anything Emma can already name. It reaches customers, jobs, invoices and assets directly, so a job number, an address or a customer name typed into it opens the record without her navigating anywhere first.\n\nThis is the one to use when she knows what she is looking for, which on the phone is most of the time. A customer quoting a job number does not want to wait while somebody works out which customer it belongs to."},
+    {type:"section", heading:"The customer dashboard", body:"The other route is the customer dashboard, where the full customer list can be browsed and filtered rather than searched.\n\nThat is the difference worth holding on to. Global search answers \"take me to this one\". The dashboard answers \"show me the ones that match\" — every customer of a particular type, or in a particular area. Emma uses search when she has a name and the dashboard when she has a question."},
+    {type:"section", heading:"Reading a customer record", body:"The customer record is the central point for everything connected to that customer: their contact details, their work addresses, every job raised at each property, their invoices, and a full log of every communication the office has had with them.\n\nEmma opens David Okafor's record and works down it. The detail she needs is rarely at the top — it is usually a job from last year, an unpaid invoice, or a note from a previous visit, and knowing the layout is what makes those findable while somebody is waiting."},
+    {type:"section", heading:"Customer and work address are not the same thing", body:"This is the one that causes the most confusion in the first fortnight, and it is worth being deliberate about.\n\nThe customer is who you bill. The work address is where the work happens. One customer can have many work addresses, and David Okafor is the example — one account, several properties. Jobs, assets and service reminders all sit against the address, not against the customer, because they belong to a building rather than to a person.\n\nSo a customer ringing about work at one of their properties is asking about an address, and the answer is under that address. Going to the customer and expecting to see one property's history shows everything at once, which is the wrong answer to the question they asked. When your own business has landlords, managing agents or anyone with more than one site, this distinction is the difference between an answer and a hunt."},
+    {type:"reflection", label:"Knowledge check", question:"Emma has a customer on the phone quoting a job number and nothing else. What is the fastest way to that job?", options:[], correct:"", feedback:"Global search. It reaches customers, jobs, invoices and assets directly, so a job number typed into it opens the job without going through the customer record first. The customer dashboard is the better route when she is browsing or filtering a list rather than looking for one record she can already name."},
+    {type:"reflection", label:"Knowledge check", question:"David Okafor rings asking about work done at one of his four properties. Where does Emma look?", options:[], correct:"", feedback:"Under that work address on his customer record. He is the customer, the property is the work address, and jobs sit against the address rather than against him. Opening the right address shows only that property's history, which is what he is asking about; his customer record shows all four at once."},
+    {type:"section", heading:"Summary", body:"There are two routes to a record and they answer different questions. Global search reaches any customer, job, invoice or asset directly and is the one to use when you can already name what you want. The customer dashboard browses and filters the list, and is the one to use when you have a question rather than a name. The customer record itself holds contact details, work addresses, job history, invoices and every communication. The distinction to carry forward is that the customer is who you bill and the work address is where the work happens — jobs, assets and service reminders all belong to the address, so a question about one property is answered under that address rather than on the customer."}
+  ],
+  openItems: "- **Replaces `Reed - Script - L1 Office Staff Series 1 Your first day in Commusoft.md`**, which was in the pre-August format with no Production Setup fields and no build table, and could not be injected. Its Navigate the dashboard section is dropped — the navigation bar is covered on Day 1 and its own build note added the job and customer dashboards, which are now on Day 3. Find and open a job and the job dashboard have moved to Day 3. - **Customer and work address is also defined on Day 1**, in Key terms. Day 1 defines it in words, this shows it on screen against a customer with several properties. Confirm that split is deliberate before both are recorded. - The customer dashboard's filters are described generally — \"every customer of a particular type, or in a particular area\". Confirm the filters that actually exist before recording, or the narration promises more than the screen offers."
+};
+
+COURSES['reed-script-compass-day3'] = {
+  contentType: "Walkthrough",
+  pathLabel: "Start here · The Compass · Walkthrough 3 of 5",
+  title: "Day 3 — Following jobs",
+  duration: "6 min",
+  persona: "All staff",
+  characters: "Emma Clarke (Office Administrator, SunComfort Systems)",
+  scenario: "Emma has found her way around customers. Now she follows the work: opening a job, seeing where it sits in the wider flow, and reading the two screens the office watches all day.",
+  objectives: [
+    "Open a job from a customer record and from the job dashboard",
+    "Describe how a job moves from first contact through to payment",
+    "Read the job dashboard and the diary well enough to find work without searching"
+  ],
+  productionSetup: [
+    "Logged-in user: Emma Clarke, Office Administrator, Office staff.",
+    "Customer record: Any customer with at least one work address and more than one job against it, so the job list has something in it. David Okafor is used in the neighbouring walkthroughs and carries a portfolio, so he works here too.",
+    "Existing data: Several jobs across the account in different states, so the job dashboard views are not empty — at least one with no diary event, one in progress, one on hold and one completed. A diary with appointments booked across more than one technician for the week being shown, so the views and filters have something to show. No changes are made to any record during recording.",
+    "Assets required: None."
+  ],
+  buildBySection: [
+    {section:"Opening a job", media:"Screen recording", note:"Capture opening a job from the customer record via a work address, then the same job opened from the job dashboard list. Show that both land on the same record."},
+    {section:"How a job moves from customer to paid", media:"Animated slides", note:"No screen to record — this is the eight-step journey as a sequence. Build it as slides, one step at a time, ending on the whole flow visible at once."},
+    {section:"The job dashboard", media:"Screen recording", note:"Open on the dashboard already loaded, no navigation. Capture the job views panel down the left naming Without diary events, In progress, Needs attention, On hold and Completed; selecting a row to fill the overview panel; the timeline in the middle; filtering by period and technician; Take this job on an unassigned one; the Kanban view."},
+    {section:"The diary", media:"Screen recording", note:"Capture the diary on the current day, then switching Daily, Weekly, Two-Weekly and Monthly, then the Map view, then filtering by user, by user group and by skill. Do not book anything."},
+    {section:"Knowledge check", media:"Expanding section", note:"Two questions at the foot of the article, each revealing its answer on click. Nothing is scored."},
+    {section:"Summary", media:"Written text", note:"Closing text only. No recording."}
+  ],
+  scenes: [
+    {type:"section", heading:"Opening a job", body:"There are two routes to a job and Emma will use both. From a customer record she opens the work address and the jobs raised against it, which is the route when she knows whose job it is. From the job dashboard she opens it from the list, which is the route when she is working across everything at once rather than one customer.\n\nBoth arrive at the same job record. Knowing both means she is never stuck at the wrong starting point, which is most of what speed looks like in week one."},
+    {type:"section", heading:"How a job moves from customer to paid", body:"Every piece of work follows the same journey, and knowing the shape of it makes the screens make sense. A customer makes contact and the office finds or creates their record. A job is raised against the work address, and selecting a job description fills in the standard details. An appointment is booked and assigned to a technician, who sees it on their phone.\n\nThe technician travels, arrives, does the work and completes their mobile workflow. Everything they record attaches to the job, so the office can see what happened without ringing anyone. An invoice is raised from the job, the customer pays, and the payment is recorded against it.\n\nThat is eight steps, and every screen in Commusoft belongs to one of them. When something looks wrong later, it is almost always because one of those steps has not happened yet — which is a more useful instinct than knowing any single screen."},
+    {type:"section", heading:"The job dashboard", body:"The job dashboard is where the office watches work in progress, and Emma will have it open most of the day. It opens on the timeline view.\n\nDown the left is the job views panel, and it is the fastest way to answer most questions without searching for anything: Without diary events shows jobs nobody has booked yet, In progress shows what is live, Needs attention flags what is stuck, and On hold and Completed hold the rest. Beside it the job list is searchable and scrollable, and selecting any row fills the right-hand panel with that job's overview — the map, the customer, the job number and description, who it is assigned to, and the contact details. The middle of the screen carries the job's timeline, every appointment, invoice, note and status change in the order it happened.\n\nEmma filters by period, by technician or by status to narrow the list, and where a job has nobody assigned she can take it herself. On accounts with pipelines there is a second view, Kanban, which shows the same jobs as stage columns she can drag between."},
+    {type:"section", heading:"The diary", body:"The diary is the other screen the office lives in. It opens on the current day, and Emma switches between Daily, Weekly, Two-Weekly and Monthly depending on how far ahead she is looking. The Map view puts technician locations alongside the schedule, which matters when travel time is the thing being judged.\n\nShe filters by individual user, by user group, or by skill. Filtering by skill is the one worth remembering: it narrows the diary to the technicians actually qualified for a type of work, so she is not reading names she cannot use.\n\nReading the diary and booking on it are different skills, and this is the reading one. Knowing what is already there, who is where, and where the gaps are comes before putting anything into it."},
+    {type:"reflection", label:"Knowledge check", question:"Emma needs to find every job nobody has scheduled yet. What is the quickest route?", options:[], correct:"", feedback:"The job views panel on the job dashboard, which has a Without diary events view. It is a standing filter rather than something she builds, so it is one click rather than a search. The views panel answers most \"which jobs are in this state\" questions the same way — in progress, needs attention, on hold, completed."},
+    {type:"reflection", label:"Knowledge check", question:"Emma is looking at the diary and only wants to see the technicians who could actually do a heat pump service. What does she filter by?", options:[], correct:"", feedback:"Skill. The diary filters by user, by user group, or by skill, and skill is the one that narrows it to people qualified for the work. Filtering by user assumes she already knows who is qualified, which in week one she does not."},
+    {type:"section", heading:"Summary", body:"A job is reached either from its customer's work address or from the job dashboard, and both routes land on the same record. Behind every screen is the same eight-step journey — contact, job raised, appointment booked, technician travels and arrives, work completed, invoice raised, payment recorded — so when something looks wrong the question is usually which step has not happened. The job dashboard is where the office watches that journey, with a views panel that answers most questions without a search, and the diary is where the same work appears as a schedule, filterable by user, group or skill. Both are read here rather than changed; putting work into them comes later."}
+  ],
+  openItems: "- The eight-step journey is carried over from the Compass, where it sat before this series was split into days. Confirm it should live here rather than in Day 1, since the argument for moving it was that it is the heaviest thing in the series and belongs after the learner has seen a screen. Sara. - The job dashboard section is written against Help Centre 243775, verified 2026-09-07. The diary section is written against the Navigating the diary section of *Schedule an engineer*, which is a library source rather than a Help Centre one — confirm the view names Daily, Weekly, Two-Weekly and Monthly against the live screen before recording. - Kanban is described as appearing on accounts with pipelines. HC 243775 says Customer Journey plan and above. Confirm which is the right way to say it for a learner."
+};
+
+COURSES['reed-script-compass-day4'] = {
+  contentType: "Walkthrough",
+  pathLabel: "Start here · The Compass · Walkthrough 4 of 5",
+  title: "Day 4 — Your account",
+  duration: "4 min",
+  persona: "All staff",
+  characters: "Emma Clarke (Office Administrator, SunComfort Systems)",
+  scenario: "Emma has learnt the screens the business works in. This is the corner of the screen that is hers: what has been announced, what needs her attention, and her own details.",
+  objectives: [
+    "Identify what each icon at the right-hand end of the navigation bar is for",
+    "Find and update your own profile details and password",
+    "Know where to look when Commusoft itself appears to be the problem"
+  ],
+  productionSetup: [
+    "Logged-in user: Emma Clarke, Office Administrator, Office staff.",
+    "Customer record: None. This walkthrough does not touch a customer.",
+    "Existing data: At least one unread announcement so the megaphone has content, at least one scheduled activity due so that icon shows something, and at least one notification so the bell is not empty. Emma's own profile completed with a name and contact details so the Edit profile screen is not blank. Nothing is saved or changed during recording — the password screen is opened and closed without submitting.",
+    "Assets required: None."
+  ],
+  buildBySection: [
+    {section:"The icons you have been ignoring", media:"Screen recording", note:"Hold on the right-hand end of the navigation bar and take the four icons in turn: megaphone with an announcement open, the tray showing a scheduled activity, the bell showing a notification, then the avatar. Do not open the profile menu yet, that is the next section."},
+    {section:"Your own details", media:"Screen recording", note:"Open the profile menu and hold on it so the whole thing is readable: name, client ID, Edit profile, Change password, Help, Settings, Integrations, Logout. Open Edit profile, then Change password without submitting. Do not open Settings — it is covered on Day 1."},
+    {section:"When Commusoft looks like the problem", media:"Written text", note:"No product screen. On-screen text with the status.commusoft.com address, and what it tells you."},
+    {section:"Knowledge check", media:"Expanding section", note:"Two questions at the foot of the article, each revealing its answer on click. Nothing is scored."},
+    {section:"Summary", media:"Written text", note:"Closing text only. No recording."}
+  ],
+  scenes: [
+    {type:"section", heading:"The icons you have been ignoring", body:"At the right-hand end of the navigation bar, past everything to do with customers and jobs, are four small icons. Most people work for weeks without touching them, and then discover they have missed something.\n\nThe megaphone is announcements: what has changed in Commusoft, new features and updates. The tray beside it is scheduled activities, the follow-ups someone has set for a date rather than for now. The bell is notifications, things that have happened and want you to know. The last one is Emma, and everything behind it belongs to her rather than to the business.\n\nNone of these is urgent on your first morning. All of them matter by your second week, which is exactly why they get missed."},
+    {type:"section", heading:"Your own details", body:"Emma selects her avatar and the menu opens with her name and the account's client ID at the top. Two links sit under it: Edit profile, where her own name, contact details and preferences live, and Change password.\n\nBelow those are Help, Settings, Integrations and Logout. Settings is the account's configuration and what she can see inside it depends on her role. Integrations is what Commusoft is connected to. Help is the way into the Help Centre from inside the product.\n\nThe client ID at the top is worth knowing about before you need it. It identifies the account, and it is the first thing you will be asked for if you ever contact support."},
+    {type:"section", heading:"When Commusoft looks like the problem", body:"Occasionally something will be slow, or a screen will not load, and the question is whether it is you or the system. There is a page that answers it: status.commusoft.com, which reports whether Commusoft is running normally.\n\nChecking it takes ten seconds and it is the difference between raising a ticket and knowing to wait. If the status page says everything is fine, the problem is local — a browser, a connection, a permission — and that is a different conversation to have with your own team first."},
+    {type:"reflection", label:"Knowledge check", question:"Emma has not noticed anything new in Commusoft for a month, though she knows features have been released. What has she been missing?", options:[], correct:"", feedback:"The megaphone at the right-hand end of the navigation bar. That is where announcements land — new features and changes to existing ones. It sits away from everything to do with customers and jobs, so it is easy to work past it for weeks without ever opening it."},
+    {type:"reflection", label:"Knowledge check", question:"A screen will not load and Emma is not sure whether it is her or Commusoft. Where does she look first?", options:[], correct:"", feedback:"status.commusoft.com, which reports whether Commusoft is running normally. It takes seconds and it decides what to do next: if the status page is clear the problem is at her end, which is a question for her own team before it is a support ticket."},
+    {type:"section", heading:"Summary", body:"The right-hand end of the navigation bar holds four things that are easy to work past: announcements behind the megaphone, scheduled activities in the tray, notifications on the bell, and your own account behind your avatar. That last menu holds Edit profile and Change password, along with Help, Settings, Integrations and Logout, and the client ID at the top of it is what support will ask you for. When Commusoft itself looks like the problem, status.commusoft.com answers it in ten seconds. None of this is urgent on day one and all of it matters by the second week, which is why it is worth a few minutes now."}
+  ],
+  openItems: "- **The four icons are described from a screenshot, not from the product.** Megaphone as announcements, tray as scheduled activities, bell as notifications, avatar as the profile menu. Sara identified scheduled activities; the other two are inferred from the icons. Confirm all four before recording, and confirm whether the tray is scheduled activities or a general inbox. - **What is inside Edit profile is not verified.** The script says name, contact details and preferences. Confirm what the screen actually holds, or the narration promises something that is not there. - **Integrations is named but not explained.** It sits in the profile menu, and Day 4 only points at it. Confirm that is the right depth, or whether it should be left out entirely as account configuration. - **The client ID** is described as the first thing support will ask for. Confirm that is true before it is said to every new customer."
+};
+
+COURSES['reed-script-compass-day5'] = {
+  contentType: "Walkthrough",
+  pathLabel: "Start here · The Compass · Walkthrough 5 of 5",
+  title: "Day 5 — Finding invoices",
+  duration: "4 min",
+  persona: "All staff",
+  characters: "Emma Clarke (Office Administrator, SunComfort Systems)",
+  scenario: "A customer rings asking about a bill. Emma has never raised an invoice and does not need to — she needs to find one.",
+  objectives: [
+    "Explain why there is no Invoices section in the navigation bar and where invoices live instead",
+    "Find an invoice from a job record and from a customer record",
+    "Recognise a credit note and what it is for"
+  ],
+  productionSetup: [
+    "Logged-in user: Emma Clarke, Office Administrator, Office staff.",
+    "Customer record: A customer with more than one work address and invoices raised against more than one of them, so the customer-level view shows something the job-level view does not. David Okafor is used across this series and carries a portfolio.",
+    "Existing data: At least one job with a paid invoice, one with an invoice sent and unpaid, and one with a draft, so the states are visible on screen. At least one credit note raised against an invoice on that customer. Nothing is raised, edited or paid during recording.",
+    "Assets required: None."
+  ],
+  buildBySection: [
+    {section:"There is no Invoices section", media:"Written text", note:"No screen. On-screen text only, making the point that the missing menu item is deliberate. A still of the navigation bar with nothing highlighted would work if one is wanted."},
+    {section:"On the job", media:"Screen recording", note:"Open a job, select the Invoices tab, hold on it long enough to read the states: draft, sent, paid, and a credit note if one is on this job. Do not open the invoice for editing."},
+    {section:"On the customer", media:"Screen recording", note:"Open the customer record and show the invoices across all their work addresses. Contrast with the previous section by using the same customer."},
+    {section:"Credit notes", media:"Written text", note:"No screen of its own — a credit note is visible in the two recordings above. This section explains what one is and why the invoice is not simply edited."},
+    {section:"Knowledge check", media:"Expanding section", note:"Two questions at the foot of the article, each revealing its answer on click. Nothing is scored."},
+    {section:"Summary", media:"Written text", note:"Closing text only. No recording."}
+  ],
+  scenes: [
+    {type:"section", heading:"There is no Invoices section", body:"The first thing to know is that you will look for an Invoices item in the navigation bar and there is not one. That is not a permission you are missing or a feature that is switched off.\n\nInvoices belong to the thing they are for. An invoice is raised against a job, so it lives on that job. It is billed to a customer, so it also appears on that customer's record. There is no separate list of every invoice in the business sitting in the menu, because an invoice on its own tells you very little — it is the job and the customer around it that make it mean anything.\n\nOnce you stop looking for a section, the two places become obvious."},
+    {type:"section", heading:"On the job", body:"Emma opens a job and selects its Invoices tab. Everything financial attached to that job is here: invoices still in draft, invoices that have been sent, what has been paid, and any credit note raised against them.\n\nThis is the view when the question is about a piece of work. Someone asking why a bill is what it is, or whether the parts made it on, is asking about the job, and the answer is on the job."},
+    {type:"section", heading:"On the customer", body:"The customer record holds the same invoices from the other direction — everything billed to that customer, across every property they have.\n\nThat is the view when the question is about the account rather than a visit. A landlord with four properties ringing about a payment is not asking about one job, and going job by job to answer them is slow. The customer record shows the lot.\n\nBetween the two, the rule is simple enough to remember: a question about work goes to the job, a question about money goes to the customer."},
+    {type:"section", heading:"Credit notes", body:"At some point Emma will see a credit note and wonder what it is. A credit note reduces or cancels an invoice that has already been raised — the invoice is not deleted and not edited, because a document that has gone to a customer has to stay as it was. The credit note sits alongside it and adjusts it.\n\nShe will see them where invoices are, on both the job and the customer, and the reason to recognise one now is so that a record showing an invoice and a credit note does not read as a mistake. It is the correct way to undo a bill, not evidence that something went wrong."},
+    {type:"reflection", label:"Knowledge check", question:"Emma cannot find an Invoices section in the navigation bar. What has gone wrong?", options:[], correct:"", feedback:"Nothing. There is no Invoices section, and that is deliberate rather than a permission she is missing. Invoices live on the job they were raised against and on the customer they were billed to, because an invoice on its own carries no context — the job and the customer are what make it readable."},
+    {type:"reflection", label:"Knowledge check", question:"A customer with four properties rings asking whether a payment has landed. Job record or customer record?", options:[], correct:"", feedback:"The customer record. It shows everything billed to that customer across all their properties, so she can answer without knowing which job the payment relates to. The job's Invoices tab is the right place for a question about a specific piece of work, not for a question about an account."},
+    {type:"section", heading:"Summary", body:"There is no Invoices section in the navigation bar, and looking for one is the first thing a new user does. Invoices live on the job they were raised against, under the job's Invoices tab, and on the customer record they were billed to. A question about a piece of work goes to the job; a question about an account goes to the customer. A credit note reduces or cancels an invoice that has already been sent, without deleting or editing it, and sits alongside the invoice in both places. None of this is raising, editing or chasing an invoice — that comes later. This is being able to answer \"has that been paid?\" without putting anyone on hold."}
+  ],
+  openItems: "- **Where invoices appear on the customer record is not verified.** The script says the customer record shows everything billed to that customer across all their work addresses. Confirm the tab or section name on the live screen before recording, since the narration depends on it being one place rather than per address. - **Credit notes are described from *Raise a credit note*, which teaches raising rather than reading.** Nothing in the library defines what a credit note is — Concept 09, Invoice types in Commusoft, does not mention them. The definition written here needs confirming, and it may be worth adding credit notes to Concept 09. - **The Sales report is deliberately not in this walkthrough.** It is the only place to see every invoice at once, but reaching it means Analytics and it is a decision-maker route today. Sara's call, 2026-09-08, to leave it out of week one."
+};
 function esc(str) {
   return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
@@ -12123,21 +12280,19 @@ Every user in Commusoft is assigned a role that determines what they can access,
 **Flint revisions:** Production Setup added; footer metadata added; Open items added; Commusoft role labels restored throughout (Engineer, Engineer with diary, Engineer with invoicing, Senior engineer — previously written as Technician variants); "technician diaries" corrected to "technician schedules" in role capability description; knowledge check option D updated to match corrected role label.
 `;
 
-INBOX_FILES["reed-script-compass"] = `# Reed — Script: The Commusoft Compass
+INBOX_FILES["reed-script-compass"] = `# Day 1 — What things are called
 
-**Layer:** 0 — Entry walkthrough
-**Format:** Walkthrough
+**Series:** The Compass | **Walkthrough:** 1 of 5 | **Duration:** 6 min | **Audience:** All staff
+
 **Voice:** Archer (Clueso AI voiceover)
-**Date:** 2026-07-30
 
 ---
 
 **Learning objectives**
 1. Explain who SunComfort Systems is and why it serves as the learning vehicle throughout Commusoft Learning
-2. Trace the journey of a job from customer enquiry to paid invoice at a high level
+2. Identify where to get help when using Commusoft
 3. Navigate to the main areas of the Commusoft web app
 4. Know where the terms used across Commusoft Learning are defined
-5. Identify where to get help when using Commusoft
 
 **Target persona:** All staff
 
@@ -12170,10 +12325,9 @@ INBOX_FILES["reed-script-compass"] = `# Reed — Script: The Commusoft Compass
 |---|---|---|
 | Opening disclaimer | Written text | Article copy at the top, above the first video. |
 | Meet SunComfort Systems | Animated slides | Nothing to record. Clueso slides carrying the narration: what they do, where they operate, team size. Captured as one Clueso video with the section that follows. |
-| How a job moves from customer to paid | Animated slides | Eight steps, one slide each, building the lifecycle in sequence. Same Clueso video as the section above. |
+| Where to get help | Written text | Article copy at the foot, below the last video. Link **Accessing AI:den our AI agent** (312486) and **Mastering conversations with AI:den** (325028) from the paragraph on asking properly. |
 | Find your way around the web app | Screen recording | Roughly three minutes, logged in as Emma Clarke. Open on the navigation bar and pan across it, then take the items in turn: Customers, opening one record to show the customer at the top with work addresses beneath; Jobs, the list with statuses then one job record with its tabs; Diary, the schedule with status colours in use; then Suppliers, Inventory, Users, Fleet management and Analytics more briefly. Finish on the profile icon and open Settings from it. Record with the new reporting switched on, so the bar reads Analytics and carries Users and Inventory. The SunComfort account also shows Opportunities and AI:den+; the narration says those two are feature dependent, so do not cut them out. Roughly 30 seconds each on Customers, Jobs and Diary, 15 on the rest together. |
 | Key terms in context | Written text | Article copy with the link to terminology article 236422. |
-| Where to get help | Written text | Article copy at the foot, below the last video. Link **Accessing AI:den our AI agent** (312486) and **Mastering conversations with AI:den** (325028) from the paragraph on asking properly. |
 | Knowledge check | Expanding section | Two questions at the very foot of the article, each revealing its answer on click. Nothing is scored. |
 
 ---
@@ -12194,27 +12348,21 @@ Every scenario across Commusoft Learning plays out at SunComfort because they ar
 
 ---
 
-## How a job moves from customer to paid
+## Where to get help
 
-In Commusoft, every piece of work follows the same journey. A customer makes contact, a job is raised, an appointment is scheduled, the technician completes the work on site, an invoice is sent, and the job closes when payment is received. That journey is the backbone of the system, and everything you learn across Commusoft Learning connects back to one step in it.
+You now have what you need to begin your role-specific training. Before you do, it is worth knowing where to go when you have a question.
 
-**Step 1: Customer contact.** A customer calls, emails, or books online. The office team looks up or creates the customer record and notes what has been asked for.
+Start with AI:den. AI:den is Commusoft's AI agent and the fastest way to an answer, reached through the chat inside Commusoft or by emailing support@commusoft.com. It is not a search box and it is not a queue for the support team. It is a help tool in its own right, so treat it like one.
 
-**Step 2: Job raised.** The office team raises a job against the customer's work address and selects a job description template, which fills in the standard details: duration, workflow, skill requirements, and pricing.
+That means asking properly. Give it a full sentence with the context of who, what, and when, rather than a couple of words. Ask one thing at a time. Use the Commusoft term for what you mean, because it knows the system's vocabulary. "How do I connect my Office 365 account with Commusoft?" gets you a real answer. "Office 365 integration" makes it guess. If the first reply is not quite right, say so and ask again rather than giving up. It responds to being told what you actually meant.
 
-**Step 3: Appointment booked.** The office team books an appointment and assigns it to a technician, who is notified on their mobile app.
+The Help Centre sits behind it, covering every area of the system with step-by-step articles you can search by topic or browse by category, and there are two articles there on getting the most out of AI:den itself.
 
-**Step 4: Technician on the way.** The technician accepts the appointment and marks it Travelling when they set off. The office sees the status change without calling anyone.
+Commusoft Learning is where you return to build on this foundation, with role-specific paths for decision makers, office teams, and field teams. Come back here after the Compass to begin yours.
 
-**Step 5: Work completed on site.** The technician marks Arrived, completes their mobile workflow, records notes, photos, or defects, submits any forms or certificates, and marks Left when the work is done.
+And when something needs a conversation about your business rather than about the software, your Commusoft account manager is the person to talk to. Their details are in your Commusoft welcome email.
 
-**Step 6: Job record updated.** Everything recorded on site attaches to the job record automatically, so the office can review it without speaking to the technician.
-
-**Step 7: Invoice raised.** The office team raises an invoice from the job. Where automatic invoicing is configured on the job description template, Commusoft raises it as soon as the appointment is marked complete.
-
-**Step 8: Payment received and job closed.** The customer pays, the payment is recorded, and raising the Final invoice sets the job status to Closed. The full history stays attached to the record.
-
-Whether or not your business already works to a process like this one, Commusoft makes it systematic and visible at every stage. Each step you have just traced is tracked in the system, so the whole team can see where a job stands without ringing round to find out. Where you do not have a process today, the walkthroughs ahead show you how each step is handled and how to set it up.
+---
 
 ---
 
@@ -12239,22 +12387,6 @@ Commusoft has its own vocabulary, and a handful of terms carry most of the weigh
 You do not need to memorise anything now. Every term used across Commusoft Learning is defined in the Commusoft Terminology article in the Help Centre, with an example of how it works in practice. Keep it open the first few times you use the system, and come back to it whenever a word comes up that you want to pin down.
 
 https://help.commusoft.com/en/articles/236422-commusoft-terminology
-
----
-
-## Where to get help
-
-You now have what you need to begin your role-specific training. Before you do, it is worth knowing where to go when you have a question.
-
-Start with AI:den. AI:den is Commusoft's AI agent and the fastest way to an answer, reached through the chat inside Commusoft or by emailing support@commusoft.com. It is not a search box and it is not a queue for the support team. It is a help tool in its own right, so treat it like one.
-
-That means asking properly. Give it a full sentence with the context of who, what, and when, rather than a couple of words. Ask one thing at a time. Use the Commusoft term for what you mean, because it knows the system's vocabulary. "How do I connect my Office 365 account with Commusoft?" gets you a real answer. "Office 365 integration" makes it guess. If the first reply is not quite right, say so and ask again rather than giving up. It responds to being told what you actually meant.
-
-The Help Centre sits behind it, covering every area of the system with step-by-step articles you can search by topic or browse by category, and there are two articles there on getting the most out of AI:den itself.
-
-Commusoft Learning is where you return to build on this foundation, with role-specific paths for decision makers, office teams, and field teams. Come back here after the Compass to begin yours.
-
-And when something needs a conversation about your business rather than about the software, your Commusoft account manager is the person to talk to. Their details are in your Commusoft welcome email.
 
 ---
 
@@ -31833,6 +31965,456 @@ A service job runs from the office raising it against a customer, through the di
 - **No article covers what job stages do to completion.** With stages in use the technician is not asked whether the job is complete when they leave the appointment, and the decision moves to the office. Nothing in the Help Centre says so, including 284442 Job stages. A business that sets stages up finds its jobs silently stop closing, which is the most common confusion this walkthrough exists to fix.
 
 *The defects in the pipeline and job stage settings screens themselves — the plan-specific panels, the navigation paths and the three names for the automatic-completion control — are recorded on Configuring jobs and scheduling walkthrough 2, which is the walkthrough that covers those screens.*
+`;
+INBOX_FILES["reed-script-compass-day2"] = `# Day 2 — Finding customers
+
+**Series:** The Compass | **Walkthrough:** 2 of 5 | **Duration:** 6 min | **Audience:** All staff
+
+**Voice:** Archer (Clueso AI voiceover)
+
+---
+
+**Learning objectives**
+
+1. Use global search to reach any record directly
+2. Use the customer dashboard to browse and filter the customer list
+3. Identify the key parts of a customer record and what each one holds
+4. Explain the difference between a customer and a work address
+
+---
+
+**Target audience:** Anyone in their first week with a Commusoft account, whatever their role. They know their way around the screen by this point and now need to get to a specific record quickly. SunComfort Systems is the demonstration business, not the audience.
+
+**Assumed starting point:** The learner can find their way around the navigation bar.
+
+**Main objective beyond the learning objectives:** Someone on the phone in week one needs to reach the right record while the customer is still talking. Everything else in the office path assumes they can.
+
+---
+
+**Characters:** Emma Clarke (Office Administrator, SunComfort Systems)
+
+**Scenario:** Emma has just started at SunComfort. Before she can be useful on the phone, she needs to find people and read what is on their record.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** Emma Clarke, Office Administrator, Office staff.
+2. **Customer record:** David Okafor, a landlord with several work addresses under one customer record, so the customer and work address distinction is visible on screen rather than described. Jobs raised at more than one of his properties.
+3. **Existing data:** Enough customers in the account that the customer dashboard list and its filters are worth showing. At least one job, one invoice and one logged communication against Okafor, so the customer record is not empty. Nothing is created or changed during recording.
+4. **Assets required:** None.
+
+---
+
+## Getting to a record
+
+Commusoft is organised around dashboards, each giving a focused view of one area, and a global search that reaches any record without going through a section at all. Two routes, and the useful thing in week one is knowing which to reach for.
+
+This walkthrough covers both, then what is actually on a customer record, and finishes on the distinction that trips up almost everyone in their first fortnight.
+
+---
+
+## Global search
+
+Global search sits at the left-hand end of the navigation bar and it is the fastest route to anything Emma can already name. It reaches customers, jobs, invoices and assets directly, so a job number, an address or a customer name typed into it opens the record without her navigating anywhere first.
+
+This is the one to use when she knows what she is looking for, which on the phone is most of the time. A customer quoting a job number does not want to wait while somebody works out which customer it belongs to.
+
+---
+
+## The customer dashboard
+
+The other route is the customer dashboard, where the full customer list can be browsed and filtered rather than searched.
+
+That is the difference worth holding on to. Global search answers "take me to this one". The dashboard answers "show me the ones that match" — every customer of a particular type, or in a particular area. Emma uses search when she has a name and the dashboard when she has a question.
+
+---
+
+## Reading a customer record
+
+The customer record is the central point for everything connected to that customer: their contact details, their work addresses, every job raised at each property, their invoices, and a full log of every communication the office has had with them.
+
+Emma opens David Okafor's record and works down it. The detail she needs is rarely at the top — it is usually a job from last year, an unpaid invoice, or a note from a previous visit, and knowing the layout is what makes those findable while somebody is waiting.
+
+---
+
+## Customer and work address are not the same thing
+
+This is the one that causes the most confusion in the first fortnight, and it is worth being deliberate about.
+
+The customer is who you bill. The work address is where the work happens. One customer can have many work addresses, and David Okafor is the example — one account, several properties. Jobs, assets and service reminders all sit against the address, not against the customer, because they belong to a building rather than to a person.
+
+So a customer ringing about work at one of their properties is asking about an address, and the answer is under that address. Going to the customer and expecting to see one property's history shows everything at once, which is the wrong answer to the question they asked. When your own business has landlords, managing agents or anyone with more than one site, this distinction is the difference between an answer and a hunt.
+
+---
+
+**Knowledge check**
+
+**Q1.** Emma has a customer on the phone quoting a job number and nothing else. What is the fastest way to that job?
+
+**A.** Global search. It reaches customers, jobs, invoices and assets directly, so a job number typed into it opens the job without going through the customer record first. The customer dashboard is the better route when she is browsing or filtering a list rather than looking for one record she can already name.
+
+**Q2.** David Okafor rings asking about work done at one of his four properties. Where does Emma look?
+
+**A.** Under that work address on his customer record. He is the customer, the property is the work address, and jobs sit against the address rather than against him. Opening the right address shows only that property's history, which is what he is asking about; his customer record shows all four at once.
+
+---
+
+## Summary
+
+There are two routes to a record and they answer different questions. Global search reaches any customer, job, invoice or asset directly and is the one to use when you can already name what you want. The customer dashboard browses and filters the list, and is the one to use when you have a question rather than a name. The customer record itself holds contact details, work addresses, job history, invoices and every communication. The distinction to carry forward is that the customer is who you bill and the work address is where the work happens — jobs, assets and service reminders all belong to the address, so a question about one property is answered under that address rather than on the customer.
+
+---
+
+## Build by section
+
+| Section | Media | Note |
+|---|---|---|
+| Getting to a record | Written text | Article opening. On-screen text only, no recording. |
+| Global search | Screen recording | Capture global search by customer name, then by job number, then by address. Show it landing directly on each record. |
+| The customer dashboard | Screen recording | Capture the customer dashboard, browsing the list and applying a filter. Contrast deliberately with the previous section. |
+| Reading a customer record | Screen recording | Open David Okafor's record. Capture contact details at the top, the work addresses listed, job history at one address, invoices, and the communication log. |
+| Customer and work address are not the same thing | Screen recording | Stay on Okafor. Show the customer record with several work addresses, then open one and show only that property's jobs. The whole point is seeing the two levels on screen. |
+| Knowledge check | Expanding section | Two questions at the foot of the article, each revealing its answer on click. Nothing is scored. |
+| Summary | Written text | Closing text only. No recording. |
+
+---
+
+**Open items**
+
+- **Replaces \`Reed - Script - L1 Office Staff Series 1 Your first day in Commusoft.md\`**, which was in the pre-August format with no Production Setup fields and no build table, and could not be injected. Its Navigate the dashboard section is dropped — the navigation bar is covered on Day 1 and its own build note added the job and customer dashboards, which are now on Day 3. Find and open a job and the job dashboard have moved to Day 3.
+- **Customer and work address is also defined on Day 1**, in Key terms. Day 1 defines it in words, this shows it on screen against a customer with several properties. Confirm that split is deliberate before both are recorded.
+- The customer dashboard's filters are described generally — "every customer of a particular type, or in a particular area". Confirm the filters that actually exist before recording, or the narration promises more than the screen offers.
+`;
+INBOX_FILES["reed-script-compass-day3"] = `# Day 3 — Following jobs
+
+**Series:** The Compass | **Walkthrough:** 3 of 5 | **Duration:** 6 min | **Audience:** All staff
+
+**Voice:** Archer (Clueso AI voiceover)
+
+---
+
+**Learning objectives**
+
+1. Open a job from a customer record and from the job dashboard
+2. Describe how a job moves from first contact through to payment
+3. Read the job dashboard and the diary well enough to find work without searching
+
+---
+
+**Target audience:** Anyone in their first week with a Commusoft account, whatever their role. They can find a customer and read a record by this point, and now need to follow the work itself. SunComfort Systems is the demonstration business, not the audience.
+
+**Assumed starting point:** The learner can find a customer and open a customer record.
+
+**Main objective beyond the learning objectives:** By the end the learner should be able to answer "where is that job up to" without asking anyone. Nothing here asks them to change a job — this is reading, not doing, and the confidence to look is what week one is short of.
+
+---
+
+**Characters:** Emma Clarke (Office Administrator, SunComfort Systems)
+
+**Scenario:** Emma has found her way around customers. Now she follows the work: opening a job, seeing where it sits in the wider flow, and reading the two screens the office watches all day.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** Emma Clarke, Office Administrator, Office staff.
+2. **Customer record:** Any customer with at least one work address and more than one job against it, so the job list has something in it. David Okafor is used in the neighbouring walkthroughs and carries a portfolio, so he works here too.
+3. **Existing data:** Several jobs across the account in different states, so the job dashboard views are not empty — at least one with no diary event, one in progress, one on hold and one completed. A diary with appointments booked across more than one technician for the week being shown, so the views and filters have something to show. No changes are made to any record during recording.
+4. **Assets required:** None.
+
+---
+
+## Opening a job
+
+There are two routes to a job and Emma will use both. From a customer record she opens the work address and the jobs raised against it, which is the route when she knows whose job it is. From the job dashboard she opens it from the list, which is the route when she is working across everything at once rather than one customer.
+
+Both arrive at the same job record. Knowing both means she is never stuck at the wrong starting point, which is most of what speed looks like in week one.
+
+---
+
+## How a job moves from customer to paid
+
+Every piece of work follows the same journey, and knowing the shape of it makes the screens make sense. A customer makes contact and the office finds or creates their record. A job is raised against the work address, and selecting a job description fills in the standard details. An appointment is booked and assigned to a technician, who sees it on their phone.
+
+The technician travels, arrives, does the work and completes their mobile workflow. Everything they record attaches to the job, so the office can see what happened without ringing anyone. An invoice is raised from the job, the customer pays, and the payment is recorded against it.
+
+That is eight steps, and every screen in Commusoft belongs to one of them. When something looks wrong later, it is almost always because one of those steps has not happened yet — which is a more useful instinct than knowing any single screen.
+
+---
+
+## The job dashboard
+
+The job dashboard is where the office watches work in progress, and Emma will have it open most of the day. It opens on the timeline view.
+
+Down the left is the job views panel, and it is the fastest way to answer most questions without searching for anything: Without diary events shows jobs nobody has booked yet, In progress shows what is live, Needs attention flags what is stuck, and On hold and Completed hold the rest. Beside it the job list is searchable and scrollable, and selecting any row fills the right-hand panel with that job's overview — the map, the customer, the job number and description, who it is assigned to, and the contact details. The middle of the screen carries the job's timeline, every appointment, invoice, note and status change in the order it happened.
+
+Emma filters by period, by technician or by status to narrow the list, and where a job has nobody assigned she can take it herself. On accounts with pipelines there is a second view, Kanban, which shows the same jobs as stage columns she can drag between.
+
+---
+
+## The diary
+
+The diary is the other screen the office lives in. It opens on the current day, and Emma switches between Daily, Weekly, Two-Weekly and Monthly depending on how far ahead she is looking. The Map view puts technician locations alongside the schedule, which matters when travel time is the thing being judged.
+
+She filters by individual user, by user group, or by skill. Filtering by skill is the one worth remembering: it narrows the diary to the technicians actually qualified for a type of work, so she is not reading names she cannot use.
+
+Reading the diary and booking on it are different skills, and this is the reading one. Knowing what is already there, who is where, and where the gaps are comes before putting anything into it.
+
+---
+
+**Knowledge check**
+
+**Q1.** Emma needs to find every job nobody has scheduled yet. What is the quickest route?
+
+**A.** The job views panel on the job dashboard, which has a Without diary events view. It is a standing filter rather than something she builds, so it is one click rather than a search. The views panel answers most "which jobs are in this state" questions the same way — in progress, needs attention, on hold, completed.
+
+**Q2.** Emma is looking at the diary and only wants to see the technicians who could actually do a heat pump service. What does she filter by?
+
+**A.** Skill. The diary filters by user, by user group, or by skill, and skill is the one that narrows it to people qualified for the work. Filtering by user assumes she already knows who is qualified, which in week one she does not.
+
+---
+
+## Summary
+
+A job is reached either from its customer's work address or from the job dashboard, and both routes land on the same record. Behind every screen is the same eight-step journey — contact, job raised, appointment booked, technician travels and arrives, work completed, invoice raised, payment recorded — so when something looks wrong the question is usually which step has not happened. The job dashboard is where the office watches that journey, with a views panel that answers most questions without a search, and the diary is where the same work appears as a schedule, filterable by user, group or skill. Both are read here rather than changed; putting work into them comes later.
+
+---
+
+## Build by section
+
+| Section | Media | Note |
+|---|---|---|
+| Opening a job | Screen recording | Capture opening a job from the customer record via a work address, then the same job opened from the job dashboard list. Show that both land on the same record. |
+| How a job moves from customer to paid | Animated slides | No screen to record — this is the eight-step journey as a sequence. Build it as slides, one step at a time, ending on the whole flow visible at once. |
+| The job dashboard | Screen recording | Open on the dashboard already loaded, no navigation. Capture the job views panel down the left naming Without diary events, In progress, Needs attention, On hold and Completed; selecting a row to fill the overview panel; the timeline in the middle; filtering by period and technician; Take this job on an unassigned one; the Kanban view. |
+| The diary | Screen recording | Capture the diary on the current day, then switching Daily, Weekly, Two-Weekly and Monthly, then the Map view, then filtering by user, by user group and by skill. Do not book anything. |
+| Knowledge check | Expanding section | Two questions at the foot of the article, each revealing its answer on click. Nothing is scored. |
+| Summary | Written text | Closing text only. No recording. |
+
+---
+
+**Open items**
+
+- The eight-step journey is carried over from the Compass, where it sat before this series was split into days. Confirm it should live here rather than in Day 1, since the argument for moving it was that it is the heaviest thing in the series and belongs after the learner has seen a screen. Sara.
+- The job dashboard section is written against Help Centre 243775, verified 2026-09-07. The diary section is written against the Navigating the diary section of *Schedule an engineer*, which is a library source rather than a Help Centre one — confirm the view names Daily, Weekly, Two-Weekly and Monthly against the live screen before recording.
+- Kanban is described as appearing on accounts with pipelines. HC 243775 says Customer Journey plan and above. Confirm which is the right way to say it for a learner.
+`;
+INBOX_FILES["reed-script-compass-day4"] = `# Day 4 — Your account
+
+**Series:** The Compass | **Walkthrough:** 4 of 5 | **Duration:** 4 min | **Audience:** All staff
+
+**Voice:** Archer (Clueso AI voiceover)
+
+---
+
+**Learning objectives**
+
+1. Identify what each icon at the right-hand end of the navigation bar is for
+2. Find and update your own profile details and password
+3. Know where to look when Commusoft itself appears to be the problem
+
+---
+
+**Target audience:** Anyone in their first week with a Commusoft account, whatever their role. They can now find their way around the work; this is the part of the screen that belongs to them rather than to the business. SunComfort Systems is the demonstration business, not the audience.
+
+**Assumed starting point:** The learner can navigate the app and open records.
+
+**Main objective beyond the learning objectives:** Two things this prevents. Someone missing a release note or a scheduled activity for weeks because they never noticed the icons, and someone raising a ticket for a problem that a status page would have answered in ten seconds.
+
+---
+
+**Characters:** Emma Clarke (Office Administrator, SunComfort Systems)
+
+**Scenario:** Emma has learnt the screens the business works in. This is the corner of the screen that is hers: what has been announced, what needs her attention, and her own details.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** Emma Clarke, Office Administrator, Office staff.
+2. **Customer record:** None. This walkthrough does not touch a customer.
+3. **Existing data:** At least one unread announcement so the megaphone has content, at least one scheduled activity due so that icon shows something, and at least one notification so the bell is not empty. Emma's own profile completed with a name and contact details so the Edit profile screen is not blank. Nothing is saved or changed during recording — the password screen is opened and closed without submitting.
+4. **Assets required:** None.
+
+---
+
+## The icons you have been ignoring
+
+At the right-hand end of the navigation bar, past everything to do with customers and jobs, are four small icons. Most people work for weeks without touching them, and then discover they have missed something.
+
+The megaphone is announcements: what has changed in Commusoft, new features and updates. The tray beside it is scheduled activities, the follow-ups someone has set for a date rather than for now. The bell is notifications, things that have happened and want you to know. The last one is Emma, and everything behind it belongs to her rather than to the business.
+
+None of these is urgent on your first morning. All of them matter by your second week, which is exactly why they get missed.
+
+---
+
+## Your own details
+
+Emma selects her avatar and the menu opens with her name and the account's client ID at the top. Two links sit under it: Edit profile, where her own name, contact details and preferences live, and Change password.
+
+Below those are Help, Settings, Integrations and Logout. Settings is the account's configuration and what she can see inside it depends on her role. Integrations is what Commusoft is connected to. Help is the way into the Help Centre from inside the product.
+
+The client ID at the top is worth knowing about before you need it. It identifies the account, and it is the first thing you will be asked for if you ever contact support.
+
+---
+
+## When Commusoft looks like the problem
+
+Occasionally something will be slow, or a screen will not load, and the question is whether it is you or the system. There is a page that answers it: status.commusoft.com, which reports whether Commusoft is running normally.
+
+Checking it takes ten seconds and it is the difference between raising a ticket and knowing to wait. If the status page says everything is fine, the problem is local — a browser, a connection, a permission — and that is a different conversation to have with your own team first.
+
+---
+
+**Knowledge check**
+
+**Q1.** Emma has not noticed anything new in Commusoft for a month, though she knows features have been released. What has she been missing?
+
+**A.** The megaphone at the right-hand end of the navigation bar. That is where announcements land — new features and changes to existing ones. It sits away from everything to do with customers and jobs, so it is easy to work past it for weeks without ever opening it.
+
+**Q2.** A screen will not load and Emma is not sure whether it is her or Commusoft. Where does she look first?
+
+**A.** status.commusoft.com, which reports whether Commusoft is running normally. It takes seconds and it decides what to do next: if the status page is clear the problem is at her end, which is a question for her own team before it is a support ticket.
+
+---
+
+## Summary
+
+The right-hand end of the navigation bar holds four things that are easy to work past: announcements behind the megaphone, scheduled activities in the tray, notifications on the bell, and your own account behind your avatar. That last menu holds Edit profile and Change password, along with Help, Settings, Integrations and Logout, and the client ID at the top of it is what support will ask you for. When Commusoft itself looks like the problem, status.commusoft.com answers it in ten seconds. None of this is urgent on day one and all of it matters by the second week, which is why it is worth a few minutes now.
+
+---
+
+## Build by section
+
+| Section | Media | Note |
+|---|---|---|
+| The icons you have been ignoring | Screen recording | Hold on the right-hand end of the navigation bar and take the four icons in turn: megaphone with an announcement open, the tray showing a scheduled activity, the bell showing a notification, then the avatar. Do not open the profile menu yet, that is the next section. |
+| Your own details | Screen recording | Open the profile menu and hold on it so the whole thing is readable: name, client ID, Edit profile, Change password, Help, Settings, Integrations, Logout. Open Edit profile, then Change password without submitting. Do not open Settings — it is covered on Day 1. |
+| When Commusoft looks like the problem | Written text | No product screen. On-screen text with the status.commusoft.com address, and what it tells you. |
+| Knowledge check | Expanding section | Two questions at the foot of the article, each revealing its answer on click. Nothing is scored. |
+| Summary | Written text | Closing text only. No recording. |
+
+---
+
+**Open items**
+
+- **The four icons are described from a screenshot, not from the product.** Megaphone as announcements, tray as scheduled activities, bell as notifications, avatar as the profile menu. Sara identified scheduled activities; the other two are inferred from the icons. Confirm all four before recording, and confirm whether the tray is scheduled activities or a general inbox.
+- **What is inside Edit profile is not verified.** The script says name, contact details and preferences. Confirm what the screen actually holds, or the narration promises something that is not there.
+- **Integrations is named but not explained.** It sits in the profile menu, and Day 4 only points at it. Confirm that is the right depth, or whether it should be left out entirely as account configuration.
+- **The client ID** is described as the first thing support will ask for. Confirm that is true before it is said to every new customer.
+`;
+INBOX_FILES["reed-script-compass-day5"] = `# Day 5 — Finding invoices
+
+**Series:** The Compass | **Walkthrough:** 5 of 5 | **Duration:** 4 min | **Audience:** All staff
+
+**Voice:** Archer (Clueso AI voiceover)
+
+---
+
+**Learning objectives**
+
+1. Explain why there is no Invoices section in the navigation bar and where invoices live instead
+2. Find an invoice from a job record and from a customer record
+3. Recognise a credit note and what it is for
+
+---
+
+**Target audience:** Anyone in their first week with a Commusoft account, whatever their role. They can follow a job by this point; this is the end of that chain, and the question they will be asked on the phone soonest. SunComfort Systems is the demonstration business, not the audience.
+
+**Assumed starting point:** The learner can open a customer record and a job record.
+
+**Main objective beyond the learning objectives:** Someone asked "has that invoice been paid?" in their first fortnight should be able to answer it. Nothing here raises, edits or chases an invoice — this is where to look.
+
+---
+
+**Characters:** Emma Clarke (Office Administrator, SunComfort Systems)
+
+**Scenario:** A customer rings asking about a bill. Emma has never raised an invoice and does not need to — she needs to find one.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** Emma Clarke, Office Administrator, Office staff.
+2. **Customer record:** A customer with more than one work address and invoices raised against more than one of them, so the customer-level view shows something the job-level view does not. David Okafor is used across this series and carries a portfolio.
+3. **Existing data:** At least one job with a paid invoice, one with an invoice sent and unpaid, and one with a draft, so the states are visible on screen. At least one credit note raised against an invoice on that customer. Nothing is raised, edited or paid during recording.
+4. **Assets required:** None.
+
+---
+
+## There is no Invoices section
+
+The first thing to know is that you will look for an Invoices item in the navigation bar and there is not one. That is not a permission you are missing or a feature that is switched off.
+
+Invoices belong to the thing they are for. An invoice is raised against a job, so it lives on that job. It is billed to a customer, so it also appears on that customer's record. There is no separate list of every invoice in the business sitting in the menu, because an invoice on its own tells you very little — it is the job and the customer around it that make it mean anything.
+
+Once you stop looking for a section, the two places become obvious.
+
+---
+
+## On the job
+
+Emma opens a job and selects its Invoices tab. Everything financial attached to that job is here: invoices still in draft, invoices that have been sent, what has been paid, and any credit note raised against them.
+
+This is the view when the question is about a piece of work. Someone asking why a bill is what it is, or whether the parts made it on, is asking about the job, and the answer is on the job.
+
+---
+
+## On the customer
+
+The customer record holds the same invoices from the other direction — everything billed to that customer, across every property they have.
+
+That is the view when the question is about the account rather than a visit. A landlord with four properties ringing about a payment is not asking about one job, and going job by job to answer them is slow. The customer record shows the lot.
+
+Between the two, the rule is simple enough to remember: a question about work goes to the job, a question about money goes to the customer.
+
+---
+
+## Credit notes
+
+At some point Emma will see a credit note and wonder what it is. A credit note reduces or cancels an invoice that has already been raised — the invoice is not deleted and not edited, because a document that has gone to a customer has to stay as it was. The credit note sits alongside it and adjusts it.
+
+She will see them where invoices are, on both the job and the customer, and the reason to recognise one now is so that a record showing an invoice and a credit note does not read as a mistake. It is the correct way to undo a bill, not evidence that something went wrong.
+
+---
+
+**Knowledge check**
+
+**Q1.** Emma cannot find an Invoices section in the navigation bar. What has gone wrong?
+
+**A.** Nothing. There is no Invoices section, and that is deliberate rather than a permission she is missing. Invoices live on the job they were raised against and on the customer they were billed to, because an invoice on its own carries no context — the job and the customer are what make it readable.
+
+**Q2.** A customer with four properties rings asking whether a payment has landed. Job record or customer record?
+
+**A.** The customer record. It shows everything billed to that customer across all their properties, so she can answer without knowing which job the payment relates to. The job's Invoices tab is the right place for a question about a specific piece of work, not for a question about an account.
+
+---
+
+## Summary
+
+There is no Invoices section in the navigation bar, and looking for one is the first thing a new user does. Invoices live on the job they were raised against, under the job's Invoices tab, and on the customer record they were billed to. A question about a piece of work goes to the job; a question about an account goes to the customer. A credit note reduces or cancels an invoice that has already been sent, without deleting or editing it, and sits alongside the invoice in both places. None of this is raising, editing or chasing an invoice — that comes later. This is being able to answer "has that been paid?" without putting anyone on hold.
+
+---
+
+## Build by section
+
+| Section | Media | Note |
+|---|---|---|
+| There is no Invoices section | Written text | No screen. On-screen text only, making the point that the missing menu item is deliberate. A still of the navigation bar with nothing highlighted would work if one is wanted. |
+| On the job | Screen recording | Open a job, select the Invoices tab, hold on it long enough to read the states: draft, sent, paid, and a credit note if one is on this job. Do not open the invoice for editing. |
+| On the customer | Screen recording | Open the customer record and show the invoices across all their work addresses. Contrast with the previous section by using the same customer. |
+| Credit notes | Written text | No screen of its own — a credit note is visible in the two recordings above. This section explains what one is and why the invoice is not simply edited. |
+| Knowledge check | Expanding section | Two questions at the foot of the article, each revealing its answer on click. Nothing is scored. |
+| Summary | Written text | Closing text only. No recording. |
+
+---
+
+**Open items**
+
+- **Where invoices appear on the customer record is not verified.** The script says the customer record shows everything billed to that customer across all their work addresses. Confirm the tab or section name on the live screen before recording, since the narration depends on it being one place rather than per address.
+- **Credit notes are described from *Raise a credit note*, which teaches raising rather than reading.** Nothing in the library defines what a credit note is — Concept 09, Invoice types in Commusoft, does not mention them. The definition written here needs confirming, and it may be worth adding credit notes to Concept 09.
+- **The Sales report is deliberately not in this walkthrough.** It is the only place to see every invoice at once, but reaching it means Analytics and it is a decision-maker route today. Sara's call, 2026-09-08, to leave it out of week one.
 `;
 
 // ===== Dashboard Notes (Google Sheet backend) =====

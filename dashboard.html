@@ -1446,124 +1446,113 @@ COURSES[2] = {
   contentType: "Walkthrough",
   pathLabel: "The basics · Series 1: The job record · Walkthrough 4 of 12",
   title: "The timeline — reading history and taking action",
-  duration: "5 min", persona: "Office teams",
-  characters: "Emma Clarke, Jake Harris, Sophie Bennett",
-  scenario: "Mrs. Thompson has called to query why she was not told before Jake’s visit that parts might be required and that a second visit could be needed. Emma opens the timeline to piece together the full picture, responds to the customer, and puts the job on hold while the part is sourced.",
-  objectives: ["Read and interpret timeline entries by event type","Search and filter the timeline to find specific events","Send communications, log notes, and update job status from the Actions menu"],
+  duration: "5 min",
+  persona: "Office teams",
+  characters: "Emma Clarke (Office Administrator), Jake Harris (Senior Heat Pump Technician), Sophie Bennett (Scheduler)",
+  scenario: "Mrs. Thompson has called with a query about Jake's heat pump service visit. Emma opens the timeline to piece together the full picture, responds to the customer, and puts the job on hold while the part is sourced.",
+  objectives: [
+    "Read and interpret timeline entries by event type",
+    "Search and filter the timeline to find specific events",
+    "Send communications, log notes, and update job status from the Actions menu"
+  ],
   productionSetup: [
     "Logged-in user (web, office scenes): Emma Clarke — Office Administrator — Office staff (primary recording user). Sophie Bennett — Scheduler — Office staff (action taken prior to recording). Jake Harris — Heat Pump Technician — Senior engineer (mobile action taken prior to recording).",
     "Customer record: Mrs. Margaret Thompson — 54 Holly Bush Lane, Sevenoaks, Kent, TN13 3TL — existing active customer with air source heat pump (installed March 2021).",
     "Existing data: One in-progress heat pump service job on Mrs. Thompson's record. The following actions must have been taken before recording begins:",
-    "Sophie Bennett sent a communication to Mrs. Thompson from the web app explaining that the technician will visit to assess whether materials are required, which may result in a second visit.",
-    "Jake Harris attended the appointment on mobile, completed the job report (report must state: \"heat pump assessed and part needs ordering\"), and added one part to the job — it appears as Requested on the web.",
-    "The job is not on hold. The timeline shows a mix of: Sophie's communication, Jake's visit completion, the part request, and system status updates.",
-    "Recording note: Emma needs to send an ad-hoc email and make a call to Mrs. Thompson during the recording. Pre-write the email text in a separate notepad so the recorder can copy-paste it without silence. The email should be written in Emma's voice, acknowledging Mrs. Thompson's query and confirming next steps.",
     "Assets required: Pre-written email text (outside the system, ready to paste)."
   ],
   buildBySection: [
-    {section:"Introduction", media:"Written text", note:"On-screen text only — no recording needed."},
+    {section:"Introduction", media:"Written text", note:"Article copy only — no recording needed."},
     {section:"What the timeline records", media:"Screen recording", note:"Show the timeline with the three event types visible: communications, job records (appointments, files, parts, invoices), and system updates."},
     {section:"Reading timeline entries", media:"Screen recording", note:"Expand an entry with See more / See details; show the inline Reply link on Jake's and Sophie's cards."},
     {section:"Searching and filtering", media:"Screen recording", note:"Demonstrate the search bar, the date and user dropdowns used together, and the advanced filter panel toggles."},
-    {section:"Communicating from the Actions menu", media:"Screen recording", note:"Open the Actions menu and show Send email (template) and Send SMS, each logging to the timeline."},
+    {section:"Communicating from the Actions menu", media:"Screen recording", note:"Open the Actions menu and show Send email (template) and Send SMS, each logging to the timeline. Emma needs to send an ad-hoc email and make a call to Mrs. Thompson during the recording. Pre-write the email text in a separate notepad so the recorder can copy-paste it without silence. The email should be written in Emma's voice, acknowledging Mrs. Thompson's query and confirming next steps."},
     {section:"Notes, mentions, and call logging", media:"Screen recording", note:"Add a note with an @ mention, the Share on mobile and Important toggles, and log a call with a follow-up activity."},
     {section:"Putting a job on hold", media:"Screen recording", note:"From the Actions menu, put the job on hold with a reason, note, and reminder date; show the hold badge appearing in the sidebar."},
     {section:"Closing the job — abort and free of charge", media:"Screen recording", note:"Show the Abort and Free of charge actions in the menu without committing them (both irreversible)."},
-    {section:"Summary", media:"Written text", note:"Recap text only — no recording needed."},
-    {section:"Reflection prompt", media:"Expanding section", note:"Knowledge check, revealed on click in the article."},
-    {section:"Knowledge check", media:"Expanding section", note:"Knowledge check, revealed on click in the article."}
+    {section:"Knowledge check", media:"Expanding section", note:"Two questions at the foot of the article, each revealing its answer on click. Nothing is scored."},
+    {section:"Summary", media:"Written text", note:"Recap text only — no recording needed."}
   ],
-  productionNotes: [
-    "Record on the web app, logged in as Emma Clarke (Office Administrator — Office staff) as the primary recording user.",
-    "Set up prior to recording: Sophie Bennett (Scheduler) sent a communication to Mrs. Thompson explaining the technician will assess whether materials are required and a second visit may be needed; Jake Harris (Heat Pump Technician) attended on mobile, completed the job report stating 'heat pump assessed and part needs ordering', and added one part that shows as Requested on the web.",
-    "Customer record: Mrs. Margaret Thompson (54 Holly Bush Lane, Sevenoaks, Kent, TN13 3TL) with an air source heat pump installed March 2021.",
-    "The job is not on hold at the start; the timeline shows a mix of Sophie's communication, Jake's visit completion, the part request, and system status updates.",
-    "Asset: pre-written email text prepared outside the system, ready to paste during recording (Emma's voice, acknowledging Mrs. Thompson's query and confirming next steps)."
-  ],
-  openItems: "None — all content verified across two Help Centre articles and Commusoft Terminology reference.",
   scenes: [
     {type:"section", heading:"Introduction", body:"Mrs. Thompson has called with a query about Jake's heat pump service visit. Jake attended yesterday, but she says something was not explained to her. Emma opens the timeline on the job record and everything she needs is there — what Jake logged on site, what Sophie sent to the customer, every status change from the moment the job was created. No call to Jake needed. The Timeline is the complete audit trail of every job, and by the end of this walkthrough, you can read it to piece together the full history of any job, find specific events quickly, and communicate and take action without leaving the record."},
     {type:"section", heading:"What the timeline records", body:"The timeline captures every significant action on the job automatically. Three types of events appear. Communications — emails, SMS messages, and logged calls — show the sender, recipient, and a preview of the message. Job records — appointments, files, parts requests, invoices — appear as cards showing key summary details. System updates appear as shorter entries: automated actions, status changes, and stage transitions. Every entry carries a timestamp and the name of whoever or whatever triggered it."},
     {type:"section", heading:"Reading timeline entries", body:"Entries appear grouped by date, with the most recent at the top. Emma can expand any entry using See more or See details to read the full content. On email cards she sees the sender, recipient, subject, and a preview of the message, and expands the card to read it in full. To reply, she sends a new email from the Actions menu, covered later in this walkthrough. Jake's visit notes from yesterday are right there. Emma has everything she needs to answer the customer's question without making a single call."},
-    {type:"section", heading:"Searching and filtering", body:"When Emma needs to find a specific event rather than scroll the full history, the search bar is the fastest route. She types a keyword and the timeline narrows immediately. The date dropdown lets her filter by Today, Yesterday, This Week, or a custom range. The user dropdown narrows the view to actions taken by a specific team member. Both filters work together, so she can isolate exactly what Sophie sent to this customer last Tuesday without scrolling through weeks of activity. For more control, the Filter activity dropdown opens the advanced category panel. Emma can toggle specific event categories on and off: Communications, Scheduled Activities, Automation, Objects, and Updates. On a busy job with a long history, showing only Communications cuts the noise immediately. The funnel icon beside it is a separate Add filter control, which builds filters by field and condition rather than by category."},
-    {type:"reflection", label:"Reflection prompt", question:"Emma needs to find an email Sophie sent to this customer two weeks ago. Can she use the date filter and the user filter at the same time?", options:["Yes","No"], correct:"Yes", feedback:"Both filters work together. Emma sets the date range to the relevant period and selects Sophie from the user dropdown. The timeline shows only Sophie’s activity in that window."},
+    {type:"section", heading:"Searching and filtering", body:"When Emma needs to find a specific event rather than scroll the full history, the search bar is the fastest route. She types a keyword and the timeline narrows immediately. The date dropdown lets her filter by Today, Yesterday, This Week, or a custom range. The user dropdown narrows the view to actions taken by a specific team member. Both filters work together, so she can isolate exactly what Sophie sent to this customer last Tuesday without scrolling through weeks of activity.\n\nFor more control, the Filter activity dropdown opens the advanced category panel. Emma can toggle specific event categories on and off: Communications, Scheduled Activities, Automation, Objects, and Updates. On a busy job with a long history, showing only Communications cuts the noise immediately. The funnel icon beside it is a separate Add filter control, which builds filters by field and condition rather than by category."},
     {type:"section", heading:"Communicating from the Actions menu", body:"The Actions menu is where Emma takes action without leaving the job. She selects Send email, chooses a template, adds any recipients, and composes her message in a panel that sits alongside the record. Send SMS works the same way, using a saved template and sending immediately. Both communications log on the timeline automatically the moment they are sent — there is no separate step to record what was sent or to whom."},
-    {type:"section", heading:"Notes, mentions, and call logging", body:"When Emma needs to leave an internal message on the job, she adds a note. She types @ to tag a colleague and they receive an alert immediately. Toggling Share on mobile makes the note visible to Jake in the field. If a note needs to stay visible as she moves between tabs, she toggles Important and it pins permanently to the timeline bar. When Emma takes a call from the customer, she logs it straight away. The call log captures the summary and lets her @mention anyone who needs to know about the conversation. She can also schedule a follow-up activity directly after logging — assigning it to a team member with a due date, so nothing falls through after a customer call."},
+    {type:"section", heading:"Notes, mentions, and call logging", body:"When Emma needs to leave an internal message on the job, she adds a note. She types @ to tag a colleague and they receive an alert immediately. Toggling Share on mobile makes the note visible to Jake in the field. If a note needs to stay visible as she moves between tabs, she toggles Important and it pins permanently to the timeline bar.\n\nWhen Emma takes a call from the customer, she logs it straight away. The call log captures the summary and lets her @mention anyone who needs to know about the conversation. She can also schedule a follow-up activity directly after logging — assigning it to a team member with a due date, so nothing falls through after a customer call."},
     {type:"section", heading:"Putting a job on hold", body:"The query is resolved, but the part Jake needs is on backorder. Emma puts the job on hold from the Actions menu. She selects a reason from the list, adds a note for context, and sets a reminder date so the job surfaces again at the right time. The hold status appears in the sidebar immediately — anyone opening this record can see why it is paused without having to ask. To take the job off hold, she selects the link in the sidebar or books a new appointment."},
     {type:"section", heading:"Closing the job — abort and free of charge", body:"The Actions menu also surfaces two irreversible actions: Abort and Free of charge. Abort closes a job permanently with a required reason and cannot be undone — it is reserved for genuine cancellations, not jobs that need to pause. Free of charge marks the job so no customer invoice is raised, and is equally irreversible. Both actions close the job, so everything on the record should be accurate before either is selected."},
-    {type:"reflection", label:"Knowledge check", question:"Jake has completed a heat pump service visit but a part is on backorder. The job needs to wait two weeks before it can be finished. What does Emma select from the Actions menu?", options:["On hold"], correct:"On hold", feedback:"On hold is the right choice. It pauses the job with a documented reason and a reminder date, and it can be reversed when the part arrives. Abort is permanent and only for cancellations. Free of charge removes the customer invoice, which is not what is needed here."},
+    {type:"reflection", label:"Knowledge check", question:"Emma needs to find an email Sophie sent to this customer two weeks ago. Can she use the date filter and the user filter at the same time?", options:[], correct:"", feedback:"[OPEN — retired yes/no prompt. Reword as an open question, or move this guidance into the section prose.] Both filters work together. Emma sets the date range to the relevant period and selects Sophie from the user dropdown. The timeline shows only Sophie’s activity in that window."},
+    {type:"reflection", label:"Knowledge check", question:"Jake has completed a heat pump service visit but a part is on backorder. The job needs to wait two weeks before it can be finished. What does Emma select from the Actions menu?", options:[], correct:"", feedback:"On hold is the right choice. It pauses the job with a documented reason and a reminder date, and it can be reversed when the part arrives. Abort is permanent and only for cancellations. Free of charge removes the customer invoice, which is not what is needed here."},
     {type:"section", heading:"Summary", body:"Emma found everything she needed in the timeline without making a single phone call — Jake's visit notes, Sophie's communications, and the full history of the job from creation to today. The timeline holds the complete picture, the search and filter tools surface it in seconds, and the Actions menu lets her respond, log, and update status without switching screens. In the next walkthrough, you will move to the Appointments tab and learn how to book, monitor, and manage technician appointments from the job record."}
-  ]
+  ],
+  openItems: "**QA corrections applied (live check, 2026-07-23):** - **Inline Reply link — REMOVED.** Confirmed live: timeline email cards have no inline Reply link, expanded or collapsed. Replies are sent via Actions → Send email (the card carries no action links at all, unlike appointment cards). Script corrected. **HC 630198 needs the same correction.** - **Filter control — CORRECTED.** The five categories (Communications, Scheduled Activities, Automation, Objects, Updates) are correct, but they open from the **\"Filter activity\" labelled dropdown**, not the filter icon. The funnel \"Add filter\" is a separate field/condition builder. Script corrected to name the right control. **HC 630198 also frames this as the filter icon.**",
+  helpCentreIssues: ""
 };
-
 COURSES[3] = {
   contentType: "Walkthrough",
   pathLabel: "The basics · Series 1: The job record · Walkthrough 5 of 12",
   title: "The appointments tab",
-  duration: "4 min", persona: "Office teams",
-  characters: "Sophie Bennett, Jake Harris",
+  duration: "5 min",
+  persona: "Office teams",
+  characters: "Sophie Bennett (Scheduler), Jake Harris (Senior Heat Pump Technician)",
   scenario: "A residential heat pump service job has come in and needs a technician assigned. Sophie books the appointment, monitors it through the day as Jake travels to site, and reschedules when the customer calls to change the time.",
-  objectives: ["Book a new appointment from the job record","Monitor appointment status in real time and review completed appointment feedback","Edit, reschedule, and cancel appointments and understand when each option applies"],
+  objectives: [
+    "Book a new appointment from the job record",
+    "Monitor appointment status in real time and review completed appointment feedback",
+    "Edit, reschedule, and cancel appointments and understand when each option applies"
+  ],
   productionSetup: [
-    "Logged-in user (web, office scenes): Sophie Bennett — Scheduler — Office staff",
-    "Logged-in user (mobile, appointment action): Jake Harris — Heat Pump Technician — Senior engineer (Jake must be logged in to action the appointment during recording)",
+    "Logged-in user: Sophie Bennett — Scheduler — Office staff, for the web scenes. Jake Harris — Heat Pump Technician — Senior engineer, on the app, and he must be logged in to action the appointment during recording.",
     "Customer record: Mrs. Margaret Thompson — 54 Holly Bush Lane, Sevenoaks, Kent, TN13 3TL — existing active customer with air source heat pump (installed March 2021). Active maintenance contract.",
-    "Existing data: One open heat pump service job on Mrs. Thompson's record. Job is created but has no appointments booked — this is the job Sophie will schedule during the course. One completed heat pump service job also on Mrs. Thompson's record (to populate the appointment history in the list).",
+    "Existing data: One open heat pump service job on Mrs. Thompson's record. Job is created but has no appointments booked — this is the job Sophie will schedule during the walkthrough. One completed heat pump service job also on Mrs. Thompson's record (to populate the appointment history in the list).",
     "Assets required: None"
   ],
   buildBySection: [
-    {section:"Introduction", media:"Written text", note:"On-screen text only \— no recording needed."},
+    {section:"Introduction", media:"Written text", note:"Article copy only \\u2014 no recording needed."},
     {section:"The appointments tab", media:"Screen recording", note:"Open the Appointments tab and show the Upcoming and Past sections; Past already carries Mrs. Thompson's previous service history."},
     {section:"Booking an appointment", media:"Screen recording", note:"Use Add new appointment, pick a slot, assign Jake, add description and access notes, and save; note the second-technician repeat for the same slot."},
     {section:"Monitoring appointment status", media:"Screen recording", note:"Show the status moving through Accepted, Travelling, Arrived, and Left, plus the feedback, timestamps, and location map in the detail panel."},
     {section:"Appointment details", media:"Screen recording", note:"Open the detail panel: logistics, linked arrive/report workflows, and the red/green communication dots with manual trigger."},
     {section:"Managing changes", media:"Screen recording", note:"Show Reschedule, Reassign, and Change details available in Accepted status and locking after Travelling; contrast Cancel with Delete."},
-    {section:"Summary", media:"Written text", note:"Recap text only \— no recording needed."},
-    {section:"Reflection prompt", media:"Expanding section", note:"Knowledge check, revealed on click in the article."},
-    {section:"Knowledge check \\\— 4 options", media:"Expanding section", note:"Knowledge check, revealed on click in the article."},
-    {section:"Knowledge check", media:"Expanding section", note:"Knowledge check, revealed on click in the article."}
+    {section:"Knowledge check", media:"Expanding section", note:"Two questions at the foot of the article, each revealing its answer on click. Nothing is scored."},
+    {section:"Summary", media:"Written text", note:"Recap text only \\u2014 no recording needed."}
   ],
-  productionNotes: [
-    "Record on the web app, logged in as Sophie Bennett (Scheduler — Office staff).",
-    "Customer record: Mrs. Margaret Thompson (54 Holly Bush Lane, Sevenoaks, TN13 3TL) with an annual heat pump maintenance contract.",
-    "Have one completed heat pump service job on the record (to populate the Past section) and one new open heat pump service job with no appointments yet booked.",
-    "No assets required."
-  ],
-  openItems: "None — all content verified against Help Centre article (Using the appointments tab) and Enablement Manager clarification 2026-04-28.",
   scenes: [
     {type:"section", heading:"Introduction", body:"Mrs. Thompson's heat pump service job is open on Sophie's screen — job created, customer confirmed, but no appointment booked yet. The Appointments tab is where that changes. It is where Sophie turns a job into a scheduled appointment, tracks Jake's progress through the day, and handles any changes that come in. By the end of this walkthrough, you can book an appointment, read the status as it updates in real time, and manage changes confidently when plans shift."},
     {type:"section", heading:"The appointments tab", body:"Sophie opens the Appointments tab on the job record. It shows every appointment on this job in a single list — technician, date, time, and status visible at a glance, so Sophie can see the full picture without leaving the job. Mrs. Thompson's previous service appointment is already listed, so Sophie can see at a glance this customer has been here before. The new service job has no appointment yet — there is work to do."},
-    {type:"section", heading:"Booking an appointment", body:"Sophie selects Add new appointment. The schedule opens and prompts her to pick a slot. She finds a time that suits Jake's route for the day and clicks it — the booking panel opens alongside. She assigns Jake, adds a description of the work, and notes any access details for the property. She saves, and the appointment appears in the list immediately. If two technicians are needed at the same date and time — for a larger installation, for example — each requires a separate appointment. Sophie repeats the process for the same slot, assigns the second technician, and saves. Both entries appear in the list and are tracked independently, so travel and working time are recorded separately for each person."},
-    {type:"reflection", label:"Reflection prompt", question:"Sophie is booking an appointment on a job that is currently on hold. Does booking the appointment automatically remove the hold?", options:["Yes","No"], correct:"Yes", feedback:"Booking a new appointment removes an on hold status automatically. If a job was paused waiting for the right slot, the new booking signals that work is moving again."},
-    {type:"section", heading:"Monitoring appointment status", body:"Once the appointment is booked, the status updates in real time as Jake works through his day. The status moves to Accepted when Jake confirms on his mobile that he can attend. It moves to Travelling when he marks himself on the way — at this point an automated SMS goes to the customer if SunComfort has that configured. It moves to Arrived when Jake reaches the property and gains access. When Jake finishes and marks himself leaving, the status moves to Left. His feedback becomes available in the detail panel immediately: answers to the arrive and report workflow questions, timestamps for each stage, and a location map showing where he was at each step. Sophie has the full picture of what happened on site without waiting for a call. If Jake could not get into the property, he marks No Access instead — the job stays open and Sophie can follow up and rebook from there."},
+    {type:"section", heading:"Booking an appointment", body:"Sophie selects Add new appointment. The schedule opens and prompts her to pick a slot. She finds a time that suits Jake's route for the day and clicks it — the booking panel opens alongside. She assigns Jake, adds a description of the work, and notes any access details for the property. She saves, and the appointment appears in the list immediately.\n\nIf two technicians are needed at the same date and time — for a larger installation, for example — each requires a separate appointment. Sophie repeats the process for the same slot, assigns the second technician, and saves. Both entries appear in the list and are tracked independently, so travel and working time are recorded separately for each person."},
+    {type:"section", heading:"Monitoring appointment status", body:"Once the appointment is booked, the status updates in real time as Jake works through his day. The status moves to Accepted when Jake confirms on his mobile that he can attend. It moves to Travelling when he marks himself on the way — at this point an automated SMS goes to the customer if SunComfort has that configured. It moves to Arrived when Jake reaches the property and gains access.\n\nWhen Jake finishes and marks himself leaving, the status moves to Left. His feedback becomes available in the detail panel immediately: answers to the arrive and report workflow questions, timestamps for each stage, and a location map showing where he was at each step. Sophie has the full picture of what happened on site without waiting for a call. If Jake could not get into the property, he marks No Access instead — the job stays open and Sophie can follow up and rebook from there."},
     {type:"section", heading:"Appointment details", body:"Sophie clicks the appointment to open the detail panel. The core logistics are there — date, time, Jake's name, and who created the booking — alongside any arrive and report workflows linked to this appointment. Communication status is shown as coloured dots: red means a message has not yet gone out, green means it was sent successfully with a timestamp. Sophie can also trigger confirmations and reminders manually from this panel if needed."},
-    {type:"section", heading:"Managing changes", body:"While an appointment is in Accepted status, Sophie has full flexibility. Reschedule moves the date or time. Reassign switches to a different technician. Change details updates the description or notes. Once Jake has marked Travelling, those options lock — the appointment is in progress and the system protects it from being changed underneath him. If a change is needed at that point — Mrs. Thompson calls to push the appointment back, for example — Sophie cancels the current appointment and books a new one. Cancel keeps a record that the original appointment was booked. Delete is reserved for appointments created in error where no travel or labour time has been logged — it removes the appointment permanently."},
-    {type:"reflection", label:"Knowledge check", question:"Jake has marked himself as Travelling to Mrs. Thompson’s heat pump service. She calls to push the appointment back to next week. What is Sophie’s correct action?", options:["Cancel the appointment and book a new one"], correct:"Cancel the appointment and book a new one", feedback:"Once an appointment has moved past Accepted, Reschedule is no longer available. Sophie cancels the current appointment — keeping the record — and books a new one for next week. It is worth checking the Costs tab afterwards to confirm whether any travel time was logged and needs to be reviewed."},
+    {type:"section", heading:"Managing changes", body:"While an appointment is in Accepted status, Sophie has full flexibility. Reschedule moves the date or time. Reassign switches to a different technician. Change details updates the description or notes. Once Jake has marked Travelling, those options lock — the appointment is in progress and the system protects it from being changed underneath him.\n\nIf a change is needed at that point — Mrs. Thompson calls to push the appointment back, for example — Sophie cancels the current appointment and books a new one. Cancel keeps a record that the original appointment was booked. Delete is reserved for appointments created in error where no travel or labour time has been logged — it removes the appointment permanently."},
+    {type:"reflection", label:"Knowledge check", question:"Sophie is booking an appointment on a job that is currently on hold. Does booking the appointment automatically remove the hold?", options:[], correct:"", feedback:"[OPEN — retired yes/no prompt. Reword as an open question, or move this guidance into the section prose.] Booking a new appointment removes an on hold status automatically. If a job was paused waiting for the right slot, the new booking signals that work is moving again."},
+    {type:"reflection", label:"Knowledge check", question:"Jake has marked himself as Travelling to Mrs. Thompson’s heat pump service. She calls to push the appointment back to next week. What is Sophie’s correct action?", options:[], correct:"", feedback:"Once an appointment has moved past Accepted, Reschedule is no longer available. Sophie cancels the current appointment — keeping the record — and books a new one for next week. It is worth checking the Costs tab afterwards to confirm whether any travel time was logged and needs to be reviewed."},
     {type:"section", heading:"Summary", body:"The Appointments tab gives Sophie a live picture of every appointment from the moment it is booked to the moment Jake leaves site. Status moves from Accepted through Travelling, Arrived, and Left in real time — no calls needed to know where the job stands. Once Jake marks Left, everything he submitted on site is there to review. In the next walkthrough, you will move to the Costs tab and see how spend builds up across a job as appointments are completed and parts are used."}
-  ]
+  ],
+  openItems: "- Appointments tab layout corrected 2026-07-22: the tab does not split into separate Upcoming and Past sections. Live QA (Nadia) confirms a single list, the Help Centre (517998) describes one chronological list of diary events, and prior Forest research (2026-04-27) found no Upcoming/Past split documented. The section was rewritten to a single list. - Appointment detail panel and comms: live QA (Nadia, 2026-07-22) reports the appointment details are already visible in the timeline and sidebar without opening the event, and that communication status dots appear only in the diary-event side panel, not the timeline. The Help Centre (517998) still describes opening the event to see the side panel. Needs a live-product tie-break before the booking and monitoring sections are changed further.",
+  helpCentreIssues: ""
 };
-
 COURSES[4] = {
   contentType: "Walkthrough",
   pathLabel: "The basics · Series 1: The job record · Walkthrough 6 of 12",
   title: "Understanding job costs",
-  duration: "5 min", persona: "Office teams",
-  characters: "Claire Hudson, Luke Patterson, Logan Chance",
-  scenario: "Luke has just completed a residential solar service at Mrs. Thompson's property in Sevenoaks. His mobile app logged an extra hour due to a sync error. Claire opens the Costs tab to check the job’s financial position and corrects the labour entry.",
-  objectives: ["Identify the difference between forecasted and actual cost categories","Explain how appointments and parts generate cost records automatically","Manually add and edit labour and travel entries when technicians miss a step"],
+  duration: "5 min",
+  persona: "Office teams",
+  characters: "Claire Hudson (Administrator, finance), Luke Patterson (Senior Solar Technician), Logan Chance (Operations Manager)",
+  scenario: "Luke has just completed a residential solar service at Mrs. Thompson's property in Sevenoaks. His mobile app logged an extra hour due to a sync error. Claire opens the Costs tab to check the job's financial position and corrects the labour entry.",
+  objectives: [
+    "Identify the difference between forecasted and actual cost categories",
+    "Explain how appointments and parts generate cost records automatically",
+    "Manually add and edit labour and travel entries when technicians miss a step"
+  ],
   productionSetup: [
-    "Logged-in user (web): Claire Hudson — Administrator (finance) — Office staff",
-    "Logged-in user (mobile): Luke Patterson — Senior Solar Technician — Senior engineer",
+    "Logged-in user: Claire Hudson — Administrator (finance) — Office staff, on the web. Luke Patterson — Senior Solar Technician — Senior engineer, on the app.",
     "Customer record: Mrs. Margaret Thompson — 54 Holly Bush Lane, Sevenoaks, Kent, TN13 3TL — existing active customer with solar PV 6kW system (installed June 2023).",
     "Existing data: One open solar service job on Mrs. Thompson's record. The following must be true before recording begins:",
-    "The job has one appointment remaining — it has not been completed.",
-    "Luke has added 3 parts on mobile during the job. Important: allow real time to pass between appointment actions (accept, travel, arrive, leave) so the timestamps look realistic. Do NOT complete the job.",
-    "Parts status across the 3 parts: (1) one part left as Requested, (2) one part ordered with PO raised, (3) one part ordered with PO completed and supplier invoice raised.",
-    "One future appointment is scheduled on the job.",
     "Assets required: None"
   ],
   buildBySection: [
-    {section:"Introduction", media:"Written text", note:"On-screen text only — no recording needed."},
+    {section:"Introduction", media:"Written text", note:"Article copy only — no recording needed."},
     {section:"Forecasted and actual — the split", media:"Screen recording", note:"Open the Costs tab and show the Forecasted and Actual sections side by side, with the job sitting in both states at once."},
     {section:"Forecasted costs in detail", media:"Screen recording", note:"Show scheduled labour, requested parts, and raised purchase orders under Forecasted; note that scheduled labour is edited in the Appointments tab, not here."},
     {section:"Actual costs in detail", media:"Screen recording", note:"Show labour, installed parts, and reconciled supplier invoices moving into Actual as work is confirmed."},
@@ -1574,34 +1563,27 @@ COURSES[4] = {
     {section:"Adding line items to the invoice", media:"Screen recording", note:"Use Add line items to invoice; only parts marked Installed appear as options."},
     {section:"Saving and converting a draft invoice", media:"Screen recording", note:"Show Advanced options / Save invoice as draft, then Draft Invoices → View → Convert draft to invoice; contrast with saving directly."},
     {section:"Raising a credit note", media:"Screen recording", note:"From the invoice, Quick Links → Raise credit note (pre-filled), edit line items, save; note the customer-profile route for non-invoice credits."},
-    {section:"Summary", media:"Written text", note:"Recap text only — no recording needed."},
-    {section:"Reflection question", media:"Expanding section", note:"Knowledge check, revealed on click in the article."}
+    {section:"Knowledge check", media:"Expanding section", note:"Two questions at the foot of the article, each revealing its answer on click. Nothing is scored."},
+    {section:"Summary", media:"Written text", note:"Recap text only — no recording needed."}
   ],
-  productionNotes: [
-    "Record the web-app steps logged in as Claire Hudson (Administrator, finance — Office staff); Luke Patterson (Senior Solar Technician) is the mobile actor for actions taken before recording.",
-    "Customer record: Mrs. Margaret Thompson (54 Holly Bush Lane, Sevenoaks, Kent, TN13 3TL) with a solar PV 6kW system installed June 2023.",
-    "Have one open solar service job on the record with one appointment remaining and not yet completed, and one future appointment scheduled. Do NOT complete the job.",
-    "Luke has added 3 parts on mobile during the job, with realistic time between actions: one left as Requested, one ordered with PO raised, and one ordered with PO completed and supplier invoice raised.",
-    "No assets required."
-  ],
-  openItems: "Two open items: (1) Confirm which invoice type is most commonly used for a standard residential solar service job at SunComfort: Final or Additional. (2) Confirm whether labour entries from the Costs tab are automatically pulled through to the invoice line items panel, or whether Claire selects them manually from a list.",
   scenes: [
     {type:"section", heading:"Introduction", body:"Luke has just completed a residential solar service at Mrs. Thompson's property in Sevenoaks. Claire opens the Costs tab and finds the job's financial position waiting for her — what was forecast before Luke attended, what is now confirmed as actual spend, and one entry that needs correcting before the job reaches invoice. The Costs tab separates what SunComfort expected to spend from what was actually spent, so the financial position of any job is visible at any point in the workflow. By the end of this walkthrough, you can read the Costs tab accurately, understand how costs move between categories as work progresses, and manually add or correct entries when needed."},
     {type:"section", heading:"Forecasted and actual — the split", body:"The Costs tab divides into two sections. Forecasted shows planned expenses that have not yet been confirmed: the labour time scheduled for upcoming appointments, parts that have been requested but not yet ordered, purchase orders raised with suppliers but not yet invoiced. Actual shows confirmed expenditure: time logged by technicians after completing visits, parts marked as installed on site, and supplier invoices that have been reconciled.\n\nThe division matters because a job can sit in both states at once. Luke has completed his visit, but a part ordered for the next visit is still on order. The forecasted side shows what is coming; the actual side shows what has already happened. Both together give Claire the real financial position of the job."},
-    {type:"section", heading:"Forecasted costs in detail", body:"Scheduled labour appears as a forecasted cost the moment an appointment is booked, calculated from the appointment duration and Luke's hourly rate. Parts appear as forecasted when they are requested but not yet fulfilled. Purchase orders sit in forecasted because they represent expected spend with a supplier, not a confirmed bill. One important rule: scheduled labour costs cannot be edited directly in the Costs tab. If the duration or the assigned technician needs to change, that happens in the Appointments tab. The Costs tab reflects whatever the appointment record says — it does not override it."},
-    {type:"section", heading:"Actual costs in detail", body:"Actual costs appear when work is confirmed. Labour and travel move from forecasted to actual when Luke marks his appointment complete on his mobile and submits his time. Parts move to actual when they are marked as installed on site. Supplier invoices become actual costs when they are matched and reconciled against the original purchase order. Once a cost is actual, it reflects real spend and feeds directly into the job’s profitability calculation."},
-    {type:"reflection", label:"Knowledge check", question:"Luke has been booked for an appointment at Mrs. Thompson's property next Thursday. His scheduled labour time appears in the Costs tab. Where does it appear, and why?", options:["In Forecasted costs, because the appointment has been booked but the work has not yet been carried out"], correct:"In Forecasted costs, because the appointment has been booked but the work has not yet been carried out", feedback:"Scheduled labour appears in Forecasted costs the moment an appointment is booked, calculated from the appointment duration and Luke's hourly rate. It moves to Actual costs only when Luke marks the appointment complete and submits his time on mobile. Until then, it represents planned spend, not confirmed spend."},
+    {type:"section", heading:"Forecasted costs in detail", body:"Scheduled labour appears as a forecasted cost the moment an appointment is booked, calculated from the appointment duration and Luke's hourly rate. Parts appear as forecasted when they are requested but not yet fulfilled. Purchase orders sit in forecasted because they represent expected spend with a supplier, not a confirmed bill.\n\nOne important rule: scheduled labour costs cannot be edited directly in the Costs tab. If the duration or the assigned technician needs to change, that happens in the Appointments tab. The Costs tab reflects whatever the appointment record says — it does not override it."},
+    {type:"section", heading:"Actual costs in detail", body:"Actual costs appear when work is confirmed. Labour and travel move from forecasted to actual when Luke marks his appointment complete on his mobile and submits his time. Parts move to actual when they are marked as installed on site. Supplier invoices become actual costs when they are matched and reconciled against the original purchase order. Once a cost is actual, it reflects real spend and feeds directly into the job's profitability calculation."},
     {type:"section", heading:"Adding manual labour", body:"Luke logged an extra hour due to a sync error. Claire corrects it manually. She opens Labour under Actual costs and selects Add labour. The panel prompts her for the technician, the date, and the labour type. She then chooses her entry method: Date and Time, where she enters exact start and end times and the system calculates the cost — applying any configured advanced rate rules — or Total Time, where she enters the total hours worked as a single figure. Claire enters the correct start and end time, reviews the calculated cost, and saves."},
-    {type:"section", heading:"Editing records and the disconnection rule", body:"When Claire edits an existing labour record, she selects Edit next to the entry. Labour and travel records are created as a linked pair when a technician completes an appointment — travel time ends exactly when labour time begins, and the two are connected chronologically to the appointment. If Claire switches a paired record from Date and Time to Total Time, that record disconnects from the appointment it was linked to. When one record in a pair disconnects, its partner disconnects too. A disconnected record is not broken — the cost figure is preserved as entered — but it will no longer update automatically if the appointment changes. The system displays a warning before the disconnection happens. Claire reads it before saving, because once disconnected, future appointment changes will not update those cost records. If the record needs to stay connected to the appointment, she cancels and uses the Date and Time method instead."},
+    {type:"section", heading:"Editing records and the disconnection rule", body:"When Claire edits an existing labour record, she selects Edit next to the entry. Labour and travel records are created as a linked pair when a technician completes an appointment — travel time ends exactly when labour time begins, and the two are connected chronologically to the appointment.\n\nIf Claire switches a paired record from Date and Time to Total Time, that record disconnects from the appointment it was linked to. When one record in a pair disconnects, its partner disconnects too. A disconnected record is not broken — the cost figure is preserved as entered — but it will no longer update automatically if the appointment changes. The system displays a warning before the disconnection happens. Claire reads it before saving, because once disconnected, future appointment changes will not update those cost records. If the record needs to stay connected to the appointment, she cancels and uses the Date and Time method instead."},
     {type:"section", heading:"The financial performance widget", body:"Logan checks the financial performance widget in the sidebar for a quick view of where this job stands: total invoiced, actual costs, and an estimated profit margin. For the moment, Claire needs precision before raising the invoice, so she stays in the Costs tab. The widget draws from the reporting database, which updates near real-time rather than instantly. For exact current figures — whether a specific labour entry is correct, whether a supplier invoice has been reconciled — the Costs tab is the right place to be.\n\nEvery figure Logan sees in the widget started with Luke completing a visit on mobile, a parts request being fulfilled, and Claire reconciling a supplier invoice. The Costs tab only reflects reality if every step upstream was completed correctly."},
-    {type:"section", heading:"Raising an invoice from the job", body:"Once Claire is satisfied that the costs on Mrs. Thompson's solar service job are correct, she moves to the Invoices tab on the job record. She clicks Add new invoice and selects the appropriate invoice type: in most cases a Final invoice, which closes the job and brings together all costs, deducting any deposit, interim, or retention invoices that were raised earlier in the process. [OPEN — confirm which invoice type is most commonly used for a standard residential solar service job at SunComfort: Final or Additional] The invoice form opens and Claire works through it from top to bottom. She can type a description manually or click Copy from job to pull the job description through automatically. She sets the invoice date, which defaults to today, and selects a breakdown style: No breakdown shows a single total line, Breakdown by category separates labour from parts, Full breakdown lists every item individually, and Full breakdown by category groups individual items under their respective headings."},
+    {type:"section", heading:"Raising an invoice from the job", body:"Once Claire is satisfied that the costs on Mrs. Thompson's solar service job are correct, she moves to the Invoices tab on the job record. She clicks Add new invoice and selects the appropriate invoice type: in most cases a Final invoice, which closes the job and brings together all costs, deducting any deposit, interim, or retention invoices that were raised earlier in the process. [OPEN — confirm which invoice type is most commonly used for a standard residential solar service job at SunComfort: Final or Additional]\n\nThe invoice form opens and Claire works through it from top to bottom. She can type a description manually or click Copy from job to pull the job description through automatically. She sets the invoice date, which defaults to today, and selects a breakdown style: No breakdown shows a single total line, Breakdown by category separates labour from parts, Full breakdown lists every item individually, and Full breakdown by category groups individual items under their respective headings."},
     {type:"section", heading:"Adding line items to the invoice", body:"With a breakdown style selected, Claire clicks Add line items to invoice to open the side panel. From here she selects the labour and parts entries she wants to include. Only parts that have been marked as Installed on the job will appear as options; parts still showing as Requested or on order are not available to include at this stage. [OPEN — confirm whether labour entries from the Costs tab are automatically pulled through to the invoice line items panel, or whether Claire selects them manually from a list] She reviews the populated lines, adjusts any quantities or prices where needed, and confirms her selections before returning to the main invoice form."},
     {type:"section", heading:"Saving and converting a draft invoice", body:"If Claire wants to review the invoice before it is finalised and visible to the customer, she can save it as a draft. She scrolls to the bottom of the form, clicks Advanced options, and ticks Save invoice as draft before clicking Save Invoice. Draft invoices do not send to the accounting package and are not visible to Mrs. Thompson until they are converted. When Claire is ready to finalise, she returns to the Invoices tab, clicks Draft Invoices, selects View next to the relevant draft, and clicks Convert draft to invoice. The invoice is then active and can be sent to the customer.\n\nIf Claire is satisfied with the invoice immediately, she skips the draft step and clicks Save Invoice directly. The invoice is created, assigned an invoice number automatically, and added to Mrs. Thompson's record."},
-    {type:"section", heading:"Raising a credit note", body:"If Claire needs to issue a credit against an invoice, for example because a part was not used and should not have been charged or because a pricing error was identified after the invoice was sent, she navigates to the invoice and clicks Quick Links in the top-right corner. Under the Financial section she selects Raise credit note. The credit note form opens pre-filled with the items from the original invoice, which saves time when crediting the full amount. Claire adjusts the description, the date, and the breakdown style, then edits the line items to reflect only the amount being credited. She clicks Save to issue the credit note, which is then listed against the invoice record and can be downloaded or emailed to Mrs. Thompson. Credit notes can also be raised directly from a customer profile via Quick Links for credits not tied to a specific invoice, for example a goodwill adjustment. In either case, the credit note reduces the outstanding balance on Mrs. Thompson's account."},
+    {type:"section", heading:"Raising a credit note", body:"If Claire needs to issue a credit against an invoice, for example because a part was not used and should not have been charged or because a pricing error was identified after the invoice was sent, she navigates to the invoice and clicks Quick Links in the top-right corner. Under the Financial section she selects Raise credit note. The credit note form opens pre-filled with the items from the original invoice, which saves time when crediting the full amount. Claire adjusts the description, the date, and the breakdown style, then edits the line items to reflect only the amount being credited. She clicks Save to issue the credit note, which is then listed against the invoice record and can be downloaded or emailed to Mrs. Thompson.\n\nCredit notes can also be raised directly from a customer profile via Quick Links for credits not tied to a specific invoice, for example a goodwill adjustment. In either case, the credit note reduces the outstanding balance on Mrs. Thompson's account."},
+    {type:"reflection", label:"Knowledge check", question:"Luke has been booked for an appointment at Mrs. Thompson's property next Thursday. His scheduled labour time appears in the Costs tab. Where does it appear, and why?", options:[], correct:"", feedback:"Scheduled labour appears in Forecasted costs the moment an appointment is booked, calculated from the appointment duration and Luke's hourly rate. It moves to Actual costs only when Luke marks the appointment complete and submits his time on mobile. Until then, it represents planned spend, not confirmed spend."},
     {type:"section", heading:"Summary", body:"Claire can now read the Costs tab accurately, understand why costs sit in forecasted or actual categories, correct labour records when errors occur, raise an invoice from the job record, and issue a credit note when an adjustment is needed. The forecasted-versus-actual distinction gives SunComfort a live financial view at every stage of a job, and the Invoices tab is where that financial picture is translated into a document for the customer."}
-  ]
+  ],
+  openItems: "1. [OPEN — confirm which invoice type is most commonly used for a standard residential solar service job at SunComfort: Final or Additional] 2. [OPEN — confirm whether labour entries from the Costs tab are automatically pulled through to the invoice line items panel, or whether Claire selects them manually from a list]",
+  helpCentreIssues: ""
 };
-
 COURSES[5] = {
   contentType: "Walkthrough",
   pathLabel: "The basics · Series 1: The job record · Walkthrough 7 of 12",
@@ -1650,47 +1632,42 @@ COURSES[6] = {
   contentType: "Walkthrough",
   pathLabel: "The basics · Series 1: The job record · Walkthrough 8 of 12",
   title: "Managing job files",
-  duration: "3 min", persona: "Office teams",
-  characters: "Emma Clarke, Luke Patterson",
-  scenario: "Mrs. Thompson's solar installation is complete. Luke has uploaded site photos from his mobile app. Emma adds a signed survey document, organises the files, and confirms sharing before the customer invoice is raised.",
-  objectives: ["Upload files from the office and configure sharing settings for field technicians","Organise, filter, and retrieve files using tags and sort options","Manage photos returned from the field and download files in bulk"],
+  duration: "3 min",
+  persona: "Office teams",
+  characters: "Emma Clarke (Office Administrator), Luke Patterson (Senior Solar Technician)",
+  scenario: "Mrs. Thompson's solar installation is complete. Luke has uploaded site photos from his mobile app. Emma needs to add a signed survey document, organise everything that has come back from the job, and confirm files are correctly shared before the customer invoice is raised.",
+  objectives: [
+    "Upload files from the office and configure sharing settings for field technicians",
+    "Organise, filter, and retrieve files using tags and sort options",
+    "Manage photos returned from the field and download files in bulk"
+  ],
   productionSetup: [
-    "*Logged-in user: Emma Clarke — Office Administrator — Office staff",
-    "*Customer record: Mrs. Margaret Thompson — 54 Holly Bush Lane, Sevenoaks, Kent, TN13 3TL — existing active customer with annual maintenance contract. Solar PV 6kW system installed June 2023.",
-    "*Existing data: One completed solar installation job. Luke Patterson has uploaded installation photos via the mobile app — these are already in the Files tab, shared by default, with mobile device icons visible. No office-uploaded files yet on this job.",
-    "*Assets required: One signed site survey document (PDF, under 10 MB) for Emma to upload during the course",
-    "File tags are deliberately not in this walkthrough. The feature is off on the recording account, so rather than hold a finished walkthrough for three sentences, tagging has been removed. The draft wording to reinstate it, and the settings work needed first, are kept in the script.",
-    "What was checked (20257, 2026-07-27): Settings search returns nothing for \"tag\" or \"file\"; the Jobs and Global settings categories carry no file-tag entry; and the Attach file panel, before a file is selected, has no tag field in the page at all, only the drop zone, a Share on mobile checkbox, Discard and Save.",
-    "Earlier, in 19213: an \"Add tags\" field was visible but returned \"No matches found\" with no way to create a tag inline. Consistent with the feature being present but unconfigured there and absent here.",
-    "When tech confirms it is on: verify the field appears in the Attach file dialog, create Site Survey and Customer Sign-Off, and confirm both are selectable before saving. Only then is this scene recordable as written."
+    "Logged-in user: Emma Clarke — Office Administrator — Office staff",
+    "Customer record: Mrs. Margaret Thompson — 54 Holly Bush Lane, Sevenoaks, Kent, TN13 3TL — existing active customer with annual maintenance contract. Solar PV 6kW system installed June 2023.",
+    "Existing data: One completed solar installation job. Luke Patterson has uploaded installation photos via the mobile app — these are already in the Files tab, shared by default, with mobile device icons visible. No office-uploaded files yet on this job.",
+    "Assets required: One signed site survey document (PDF, under 10 MB) for Emma to upload during the walkthrough"
   ],
   buildBySection: [
-    {section:"Introduction", media:"Written text", note:"On-screen text only — no recording needed."},
+    {section:"Introduction", media:"Written text", note:"Article copy only — no recording needed."},
     {section:"Uploading and sharing files", media:"Screen recording", note:"Drag the signed survey PDF into the upload area, toggle Share on mobile, and save; show the mobile device icon appearing."},
     {section:"Photos from the field", media:"Screen recording", note:"Show Luke's mobile-uploaded photos already present and shared by default, with the mobile icon already showing."},
     {section:"Viewing and organising files", media:"Screen recording", note:"Open a photo in the side-panel preview, navigate between images, and rename a file (extension preserved automatically)."},
     {section:"Filtering and downloading", media:"Screen recording", note:"Narrow by file type and upload date in the filter panel, select files, and bulk Download as a zip; note the uploader, date, and file-type filters."},
-    {section:"Summary", media:"Written text", note:"Recap text only — no recording needed."},
-    {section:"Reflection prompt", media:"Expanding section", note:"Knowledge check, revealed on click in the article."}
+    {section:"Knowledge check", media:"Expanding section", note:"Two questions at the foot of the article, each revealing its answer on click. Nothing is scored."},
+    {section:"Summary", media:"Written text", note:"Recap text only — no recording needed."}
   ],
-  productionNotes: [
-    "Record on the web app, logged in as Emma Clarke (Office Administrator — Office staff).",
-    "Customer record: Mrs. Margaret Thompson (54 Holly Bush Lane, Sevenoaks, Kent, TN13 3TL) with an annual maintenance contract and a solar PV 6kW system installed June 2023.",
-    "Have one completed solar installation job with Luke Patterson's installation photos already uploaded via the mobile app (in the Files tab, shared by default, mobile icons visible) and no office-uploaded files yet.",
-    "Asset: one signed site survey document (PDF, under 10 MB) for Emma to upload during the walkthrough."
-  ],
-  openItems: "None — all content verified against Help Centre article and Commusoft Terminology reference.",
   scenes: [
     {type:"section", heading:"Introduction", body:"Mrs. Thompson's solar installation is complete and the job record needs to hold everything: the site survey, the installation photos Luke took on site, the signed customer documents. Emma opens the Files tab and finds Luke's photos already waiting. The Files tab is where every document, photo, and certificate connected to a job lives, accessible to the whole team without email chains or shared folders. By the end of this walkthrough, you can upload and share files from the office, manage photos as they arrive from the field, and retrieve anything you need in seconds."},
-    {type:"section", heading:"Uploading and sharing files", body:"Emma clicks Add new files at the top of the tab to open the upload panel, then drags the signed survey document into the upload area. The system supports multiple files at once, up to 10 MB each — anything larger or in an unsupported format is blocked before it uploads. She toggles Share on mobile so that Luke can access it if needed on a return visit. The sharing toggle is the key point: files uploaded from the office do not share automatically. Emma must turn it on before saving. Once shared, a mobile device icon appears next to the file in the grid — a clear visual indicator of what the field team can access."},
-    {type:"section", heading:"Photos from the field", body:"Luke's installation photos are already in the Files tab because they arrived through a different route. Photos uploaded by technicians via the mobile app appear automatically and are shared by default. Emma does not need to do anything for them to be visible in the grid. The mobile icon is already there. The difference matters: office uploads require sharing to be turned on manually; field uploads are shared from the moment they arrive."},
-    {type:"reflection", label:"Reflection prompt", question:"Luke uploads a site photo from his mobile app during the installation. Does it automatically appear in the Files tab as a shared file?", options:["Yes","No"], correct:"Yes", feedback:"Photos uploaded by technicians via the mobile app appear in the Files tab automatically and are shared by default. Emma does not need to do anything for them to be visible. This is different from files uploaded from the office, which require the sharing toggle to be turned on manually."},
+    {type:"section", heading:"Uploading and sharing files", body:"Emma clicks Add new files at the top of the tab to open the upload panel, then drags the signed survey document into the upload area. The system supports multiple files at once, up to 10 MB each — anything larger or in an unsupported format is blocked before it uploads. She toggles Share on mobile so that Luke can access it if needed on a return visit.\n\nThe sharing toggle is the key point: files uploaded from the office do not share automatically. Emma must turn it on before saving. Once shared, a mobile device icon appears next to the file in the grid — a clear visual indicator of what the field team can access."},
+    {type:"section", heading:"Photos from the field", body:"Luke's installation photos are already in the Files tab because they arrived through a different route. Photos uploaded by technicians via the mobile app appear automatically and are shared by default. Emma does not need to do anything for them to be visible in the grid. The mobile icon is already there.\n\nThe difference matters: office uploads require sharing to be turned on manually; field uploads are shared from the moment they arrive."},
     {type:"section", heading:"Viewing and organising files", body:"Emma clicks one of Luke's photos to open a preview in the side panel. She uses the navigation arrows to move through all the installation images without returning to the main grid. A file named with a default camera label is not useful to anyone looking for it three months from now, so she renames it. She selects the rename option, types a clear descriptive name, and saves. The original file extension is preserved automatically — she does not need to type it."},
-    {type:"section", heading:"Filtering and downloading", body:"When the invoice team needs the site survey files for this job, Emma opens the filter panel and narrows by file type and upload date. The relevant files surface immediately. She selects them using the checkboxes and clicks Download. The system packages them into a zip archive ready to save to her computer. The filter panel also lets Emma narrow by who uploaded a file, when it was created, and the file type — useful on large jobs where the file list has grown across many visits."},
+    {type:"section", heading:"Filtering and downloading", body:"When the invoice team needs the site survey files for this job, Emma opens the filter panel and narrows by file type and upload date. The relevant files surface immediately. She selects them using the checkboxes and clicks Download. The system packages them into a zip archive ready to save to her computer.\n\nThe filter panel also lets Emma narrow by who uploaded a file, when it was created, and the file type — useful on large jobs where the file list has grown across many visits."},
+    {type:"reflection", label:"Knowledge check", question:"Luke uploads a site photo from his mobile app during the installation. Does it automatically appear in the Files tab as a shared file?", options:[], correct:"", feedback:"[OPEN — retired yes/no prompt. Reword as an open question, or move this guidance into the section prose.] Photos uploaded by technicians via the mobile app appear in the Files tab automatically and are shared by default. Emma does not need to do anything for them to be visible. This is different from files uploaded from the office, which require the sharing toggle to be turned on manually."},
     {type:"section", heading:"Summary", body:"Well-organised job files protect SunComfort if a customer disputes the work and speed up invoicing by keeping evidence close to the billing process. Emma can now upload and share files from the office, manage photos as they arrive from the field, organise files by renaming them clearly, and retrieve anything she needs using filters and bulk download. In the next walkthrough, you will move to the Forms tab and learn how to manage compliance certificates and checklists on a job."}
-  ]
+  ],
+  openItems: "- **File tags are deliberately not in this walkthrough.** The feature is off on the recording account and the engineer who owns it is away until 17 August. Rather than hold a finished walkthrough for three sentences, tagging has been removed and is kept as a draft below. Moved here from Production Setup 2026-09-09 — it is a scope decision, not a setup field. - Upload step corrected 2026-07-22: files cannot be dragged in until the upload panel is open. Live QA (Nadia) and the Help Centre (521049) agree the user must open the panel first; the step was added. - ~~Button label discrepancy~~ **RESOLVED (live check, 2026-07-27, account 20257, job 1012):** the on-screen label is **\"Add new files\"**. Nadia was right that it is not \"Add files\"; the Help Centre (521049) is wrong. Sentence case, not title case, so her \"Add New Files\" is not exact either. Script must use **Add new files**. **HC 521049 needs correcting.** - ~~Tagging on upload~~ **RESOLVED (live check, 2026-07-23):** the script and the Help Centre are right and the line stands unchanged. The \"Add tags\" field is in the Attach file dialog, below the drop zone and above Save, exactly where the script puts it. Nadia saw nothing because the account has **no tags configured**, so the typeahead returns \"No matches found\" and the field looks inert. This is a configuration gap, not a product gap. The fix is a build requirement, now logged as Production Setup point 5 — configure **Site Survey** and **Customer Sign-Off** before recording.",
+  helpCentreIssues: ""
 };
-
 COURSES[7] = {
   contentType: "Walkthrough",
   pathLabel: "The basics · Series 1: The job record · Walkthrough 9 of 12",
@@ -10254,7 +10231,7 @@ Compliance documentation is one of the most important parts of a heat pump or so
 **Pre-submission checklist:** complete
 **Flint revisions:** Full rewrite to SCL section format — disclaimer removed; numbered scenes replaced with descriptive section headings; voice shifted from second person instruction to Clint narrating through Emma; "engineer" replaced with "technician" throughout; editing attribution caveat clarified from HC article; Production Setup added; Open items block added. Post-review fix: Production Setup "draft form" corrected to "completed form" — voiding is the correct approach for completed forms (editing changes attribution); a draft form can be edited freely and does not require voiding
 `;
-INBOX_FILES["6"] = `# Learning — Walkthrough 6: Managing job files
+INBOX_FILES["6"] = `# Managing job files
 
 **Learning objectives:**
 1. Upload files from the office and configure sharing settings for field technicians
@@ -10278,7 +10255,6 @@ INBOX_FILES["6"] = `# Learning — Walkthrough 6: Managing job files
 2. **Customer record:** Mrs. Margaret Thompson — 54 Holly Bush Lane, Sevenoaks, Kent, TN13 3TL — existing active customer with annual maintenance contract. Solar PV 6kW system installed June 2023.
 3. **Existing data:** One completed solar installation job. Luke Patterson has uploaded installation photos via the mobile app — these are already in the Files tab, shared by default, with mobile device icons visible. No office-uploaded files yet on this job.
 4. **Assets required:** One signed site survey document (PDF, under 10 MB) for Emma to upload during the walkthrough
-5. **File tags are deliberately not in this walkthrough.** The feature is off on the recording account and the engineer who owns it is away until 17 August. Rather than hold a finished walkthrough for three sentences, tagging has been removed and is kept as a draft below.
 
    **To reinstate when tags are enabled:**
    - Uploading and sharing files, after the file size sentence: *"Before saving, she adds a tag from the predefined list, such as Site Survey or Customer Sign-Off, so the file is easy to find later."*
@@ -10309,11 +10285,6 @@ Luke's installation photos are already in the Files tab because they arrived thr
 
 The difference matters: office uploads require sharing to be turned on manually; field uploads are shared from the moment they arrive.
 
-*[Reflection prompt — Yes/No]*
-**Luke uploads a site photo from his mobile app during the installation. Does it automatically appear in the Files tab as a shared file?**
-
-*Yes:* Correct. Photos uploaded by technicians via the mobile app appear in the Files tab automatically and are shared by default. Emma does not need to do anything for them to be visible. This is different from files uploaded from the office, which require the sharing toggle to be turned on manually.
-*No:* It does. Photos uploaded by technicians via the mobile app appear automatically and are shared by default. Only files uploaded from the office require the sharing toggle to be turned on manually.
 
 ---
 
@@ -10329,7 +10300,15 @@ When the invoice team needs the site survey files for this job, Emma opens the f
 
 The filter panel also lets Emma narrow by who uploaded a file, when it was created, and the file type — useful on large jobs where the file list has grown across many visits.
 
+
+
 ---
+**Knowledge check**
+
+**Q1.** Luke uploads a site photo from his mobile app during the installation. Does it automatically appear in the Files tab as a shared file?
+
+**A.** [OPEN — retired yes/no prompt. Reword as an open question, or move this guidance into the section prose.] Photos uploaded by technicians via the mobile app appear in the Files tab automatically and are shared by default. Emma does not need to do anything for them to be visible. This is different from files uploaded from the office, which require the sharing toggle to be turned on manually.
+
 
 ## Summary
 
@@ -10337,6 +10316,28 @@ Well-organised job files protect SunComfort if a customer disputes the work and 
 
 ---
 
+## Build by section
+
+| Section | Media | Note |
+|---|---|---|
+| Introduction | Written text | Article copy only — no recording needed. |
+| Uploading and sharing files | Screen recording | Drag the signed survey PDF into the upload area, toggle Share on mobile, and save; show the mobile device icon appearing. |
+| Photos from the field | Screen recording | Show Luke's mobile-uploaded photos already present and shared by default, with the mobile icon already showing. |
+| Viewing and organising files | Screen recording | Open a photo in the side-panel preview, navigate between images, and rename a file (extension preserved automatically). |
+| Filtering and downloading | Screen recording | Narrow by file type and upload date in the filter panel, select files, and bulk Download as a zip; note the uploader, date, and file-type filters. |
+| Knowledge check | Expanding section | Two questions at the foot of the article, each revealing its answer on click. Nothing is scored. |
+| Summary | Written text | Recap text only — no recording needed. |
+---
+
+## Open items
+
+- **File tags are deliberately not in this walkthrough.** The feature is off on the recording account and the engineer who owns it is away until 17 August. Rather than hold a finished walkthrough for three sentences, tagging has been removed and is kept as a draft below. Moved here from Production Setup 2026-09-09 — it is a scope decision, not a setup field.
+
+- Upload step corrected 2026-07-22: files cannot be dragged in until the upload panel is open. Live QA (Nadia) and the Help Centre (521049) agree the user must open the panel first; the step was added.
+- ~~Button label discrepancy~~ **RESOLVED (live check, 2026-07-27, account 20257, job 1012):** the on-screen label is **"Add new files"**. Nadia was right that it is not "Add files"; the Help Centre (521049) is wrong. Sentence case, not title case, so her "Add New Files" is not exact either. Script must use **Add new files**. **HC 521049 needs correcting.**
+- ~~Tagging on upload~~ **RESOLVED (live check, 2026-07-23):** the script and the Help Centre are right and the line stands unchanged. The "Add tags" field is in the Attach file dialog, below the drop zone and above Save, exactly where the script puts it. Nadia saw nothing because the account has **no tags configured**, so the typeahead returns "No matches found" and the field looks inert. This is a configuration gap, not a product gap. The fix is a build requirement, now logged as Production Setup point 5 — configure **Site Survey** and **Customer Sign-Off** before recording.
+
+---
 **Section count:** 5 sections plus 1 reflection prompt
 **Estimated length:** 3 minutes
 **Em dashes:** none
@@ -10347,12 +10348,6 @@ Well-organised job files protect SunComfort if a customer disputes the work and 
 **Sources used:** Help Centre — Managing job files (https://help.commusoft.com/en/articles/521049-managing-job-files); Commusoft Terminology (https://help.commusoft.com/en/articles/236422-commusoft-terminology)
 **Pre-submission checklist:** complete
 **Flint revisions:** Full rewrite to SCL section format — disclaimer removed; numbered scenes replaced with descriptive section headings; voice shifted from second person instruction to Clint narrating through Emma; "engineer" replaced with "technician" throughout; Production Setup added; Open items block added
-
-## Open items
-
-- Upload step corrected 2026-07-22: files cannot be dragged in until the upload panel is open. Live QA (Nadia) and the Help Centre (521049) agree the user must open the panel first; the step was added.
-- ~~Button label discrepancy~~ **RESOLVED (live check, 2026-07-27, account 20257, job 1012):** the on-screen label is **"Add new files"**. Nadia was right that it is not "Add files"; the Help Centre (521049) is wrong. Sentence case, not title case, so her "Add New Files" is not exact either. Script must use **Add new files**. **HC 521049 needs correcting.**
-- ~~Tagging on upload~~ **RESOLVED (live check, 2026-07-23):** the script and the Help Centre are right and the line stands unchanged. The "Add tags" field is in the Attach file dialog, below the drop zone and above Save, exactly where the script puts it. Nadia saw nothing because the account has **no tags configured**, so the typeahead returns "No matches found" and the field looks inert. This is a configuration gap, not a product gap. The fix is a build requirement, now logged as Production Setup point 5 — configure **Site Survey** and **Customer Sign-Off** before recording.
 `;
 INBOX_FILES["5"] = `# Invoices and WIP
 
@@ -10489,14 +10484,14 @@ Two distinct behaviours, only one automatic:
 **Pre-submission checklist:** complete
 **Flint revisions:** Full rewrite to SCL section format — disclaimer removed; numbered scenes replaced with descriptive section headings; voice shifted from second person instruction to Clint narrating through Claire; data chain moment woven into invoice generation section; Production Setup added; Open items block added
 `;
-INBOX_FILES["4"] = `# Learning — Walkthrough 4: Understanding job costs
+INBOX_FILES["4"] = `# Understanding job costs
 
 **Learning objectives:**
 1. Identify the difference between forecasted and actual cost categories
 2. Explain how appointments and parts generate cost records automatically
 3. Manually add and edit labour and travel entries when technicians miss a step
 
-**Target persona:** Office teams / finance staff
+**Target persona:** Office teams
 **SunComfort characters:** Claire Hudson (Administrator, finance), Luke Patterson (Senior Solar Technician), Logan Chance (Operations Manager)
 **Scenario:** Luke has just completed a residential solar service at Mrs. Thompson's property in Sevenoaks. His mobile app logged an extra hour due to a sync error. Claire opens the Costs tab to check the job's financial position and corrects the labour entry.
 **Estimated length:** 5 minutes
@@ -10509,8 +10504,7 @@ INBOX_FILES["4"] = `# Learning — Walkthrough 4: Understanding job costs
 
 ## Production Setup
 
-- **Logged-in user (web):** Claire Hudson — Administrator (finance) — Office staff
-- **Logged-in user (mobile):** Luke Patterson — Senior Solar Technician — Senior engineer
+- **Logged-in user:** Claire Hudson — Administrator (finance) — Office staff, on the web. Luke Patterson — Senior Solar Technician — Senior engineer, on the app.
 - **Customer record:** Mrs. Margaret Thompson — 54 Holly Bush Lane, Sevenoaks, Kent, TN13 3TL — existing active customer with solar PV 6kW system (installed June 2023).
 - **Existing data:** One open solar service job on Mrs. Thompson's record. The following must be true before recording begins:
  - The job has one appointment remaining — it has not been completed.
@@ -10547,16 +10541,6 @@ One important rule: scheduled labour costs cannot be edited directly in the Cost
 
 Actual costs appear when work is confirmed. Labour and travel move from forecasted to actual when Luke marks his appointment complete on his mobile and submits his time. Parts move to actual when they are marked as installed on site. Supplier invoices become actual costs when they are matched and reconciled against the original purchase order. Once a cost is actual, it reflects real spend and feeds directly into the job's profitability calculation.
 
-*[Reflection question — 4 options]*
-**Luke has been booked for an appointment at Mrs. Thompson's property next Thursday. His scheduled labour time appears in the Costs tab. Where does it appear, and why?**
-
-A. In Forecasted costs, because the appointment has been booked but the work has not yet been carried out
-B. In Actual costs, because Luke has been assigned to the job
-C. In Actual costs, because the appointment has a confirmed date and time
-D. It does not appear in the Costs tab until Luke marks the appointment complete on mobile
-
-*Correct (A):* Scheduled labour appears in Forecasted costs the moment an appointment is booked, calculated from the appointment duration and Luke's hourly rate. It moves to Actual costs only when Luke marks the appointment complete and submits his time on mobile. Until then, it represents planned spend, not confirmed spend.
-*Incorrect:* Scheduled labour appears in Forecasted costs as soon as an appointment is booked — not in Actual costs, and not only after completion. Being assigned to a job or having a confirmed date does not make a cost actual. It becomes actual only when Luke marks the appointment complete on mobile and submits his time.
 
 ---
 
@@ -10610,7 +10594,15 @@ If Claire needs to issue a credit against an invoice, for example because a part
 
 Credit notes can also be raised directly from a customer profile via Quick Links for credits not tied to a specific invoice, for example a goodwill adjustment. In either case, the credit note reduces the outstanding balance on Mrs. Thompson's account.
 
+
+
 ---
+**Knowledge check**
+
+**Q1.** Luke has been booked for an appointment at Mrs. Thompson's property next Thursday. His scheduled labour time appears in the Costs tab. Where does it appear, and why?
+
+**A.** Scheduled labour appears in Forecasted costs the moment an appointment is booked, calculated from the appointment duration and Luke's hourly rate. It moves to Actual costs only when Luke marks the appointment complete and submits his time on mobile. Until then, it represents planned spend, not confirmed spend.
+
 
 ## Summary
 
@@ -10618,6 +10610,31 @@ Claire can now read the Costs tab accurately, understand why costs sit in foreca
 
 ---
 
+## Build by section
+
+| Section | Media | Note |
+|---|---|---|
+| Introduction | Written text | Article copy only — no recording needed. |
+| Forecasted and actual — the split | Screen recording | Open the Costs tab and show the Forecasted and Actual sections side by side, with the job sitting in both states at once. |
+| Forecasted costs in detail | Screen recording | Show scheduled labour, requested parts, and raised purchase orders under Forecasted; note that scheduled labour is edited in the Appointments tab, not here. |
+| Actual costs in detail | Screen recording | Show labour, installed parts, and reconciled supplier invoices moving into Actual as work is confirmed. |
+| Adding manual labour | Screen recording | Under Actual costs, use Add labour and show the Date and Time versus Total Time entry methods. |
+| Editing records and the disconnection rule | Screen recording | Edit a paired labour/travel record and show the disconnection warning when switching a linked record to Total Time. |
+| The financial performance widget | Screen recording | Show the sidebar widget (total invoiced, actual costs, estimated margin) and note it draws from the near real-time reporting database. |
+| Raising an invoice from the job | Screen recording | Move to the Invoices tab, Add new invoice, select Final, use Copy from job, set the date, and choose a breakdown style. |
+| Adding line items to the invoice | Screen recording | Use Add line items to invoice; only parts marked Installed appear as options. |
+| Saving and converting a draft invoice | Screen recording | Show Advanced options / Save invoice as draft, then Draft Invoices → View → Convert draft to invoice; contrast with saving directly. |
+| Raising a credit note | Screen recording | From the invoice, Quick Links → Raise credit note (pre-filled), edit line items, save; note the customer-profile route for non-invoice credits. |
+| Knowledge check | Expanding section | Two questions at the foot of the article, each revealing its answer on click. Nothing is scored. |
+| Summary | Written text | Recap text only — no recording needed. |
+---
+
+## Open items
+
+1. [OPEN — confirm which invoice type is most commonly used for a standard residential solar service job at SunComfort: Final or Additional]
+2. [OPEN — confirm whether labour entries from the Costs tab are automatically pulled through to the invoice line items panel, or whether Claire selects them manually from a list]
+
+---
 **Section count:** 12 sections plus 1 reflection question
 **Estimated length:** 7–8 minutes
 **Em dashes:** none
@@ -10628,13 +10645,8 @@ Claire can now read the Costs tab accurately, understand why costs sit in foreca
 **Sources used:** Help Centre — Understanding forecasted and actual job costs (https://help.commusoft.com/en/articles/523437-understanding-forecasted-and-actual-job-costs); Help Centre — How to add and edit labour and travel costs (https://help.commusoft.com/en/articles/629828-how-to-add-and-edit-labor-and-travel-costs); Help Centre — Managing invoices (https://help.commusoft.com/en/articles/216679-managing-invoices); Commusoft Terminology (https://help.commusoft.com/en/articles/236422-commusoft-terminology)
 **Pre-submission checklist:** complete
 **Flint revisions:** Full rewrite to SCL section format — disclaimer removed; numbered scenes replaced with descriptive section headings; voice shifted from second person instruction to Clint narrating through Claire; "diary" replaced with "appointment" throughout; advanced rate rule note added from second HC article; Production Setup added; Open items block added. Reed update 2026-05-15: Production Setup replaced per brief; mid-lesson quiz rewritten; invoice and credit note scenes added (Scenes 14–18); two open items flagged.
-
-## Open items
-
-1. [OPEN — confirm which invoice type is most commonly used for a standard residential solar service job at SunComfort: Final or Additional]
-2. [OPEN — confirm whether labour entries from the Costs tab are automatically pulled through to the invoice line items panel, or whether Claire selects them manually from a list]
 `;
-INBOX_FILES["3"] = `# Learning — Walkthrough 3: The appointments tab
+INBOX_FILES["3"] = `# The appointments tab
 
 **Learning objectives:**
 1. Book a new appointment from the job record
@@ -10654,8 +10666,7 @@ INBOX_FILES["3"] = `# Learning — Walkthrough 3: The appointments tab
 
 ## Production Setup
 
-- **Logged-in user (web, office scenes):** Sophie Bennett — Scheduler — Office staff
-- **Logged-in user (mobile, appointment action):** Jake Harris — Heat Pump Technician — Senior engineer (Jake must be logged in to action the appointment during recording)
+- **Logged-in user:** Sophie Bennett — Scheduler — Office staff, for the web scenes. Jake Harris — Heat Pump Technician — Senior engineer, on the app, and he must be logged in to action the appointment during recording.
 - **Customer record:** Mrs. Margaret Thompson — 54 Holly Bush Lane, Sevenoaks, Kent, TN13 3TL — existing active customer with air source heat pump (installed March 2021). Active maintenance contract.
 - **Existing data:** One open heat pump service job on Mrs. Thompson's record. Job is created but has no appointments booked — this is the job Sophie will schedule during the walkthrough. One completed heat pump service job also on Mrs. Thompson's record (to populate the appointment history in the list).
 - **Assets required:** None
@@ -10680,11 +10691,6 @@ Sophie selects Add new appointment. The schedule opens and prompts her to pick a
 
 If two technicians are needed at the same date and time — for a larger installation, for example — each requires a separate appointment. Sophie repeats the process for the same slot, assigns the second technician, and saves. Both entries appear in the list and are tracked independently, so travel and working time are recorded separately for each person.
 
-*[Reflection prompt — Yes/No]*
-**Sophie is booking an appointment on a job that is currently on hold. Does booking the appointment automatically remove the hold?**
-
-*Yes:* Correct. Booking a new appointment removes an on hold status automatically. If a job was paused waiting for the right slot, the new booking signals that work is moving again.
-*No:* It does. Booking a new appointment removes an on hold status automatically. If a job was paused waiting for the right slot, the new booking signals that work is moving again.
 
 ---
 
@@ -10708,18 +10714,18 @@ While an appointment is in Accepted status, Sophie has full flexibility. Resched
 
 If a change is needed at that point — Mrs. Thompson calls to push the appointment back, for example — Sophie cancels the current appointment and books a new one. Cancel keeps a record that the original appointment was booked. Delete is reserved for appointments created in error where no travel or labour time has been logged — it removes the appointment permanently.
 
-*[Knowledge check — 4 options]*
-**Jake has marked himself as Travelling to Mrs. Thompson's heat pump service. She calls to push the appointment back to next week. What is Sophie's correct action?**
-
-A. Use Reschedule to move the appointment to next week
-B. Cancel the appointment and book a new one
-C. Delete the appointment and start again
-D. Put the job on hold and wait
-
-*Correct (B):* Once an appointment has moved past Accepted, Reschedule is no longer available. Sophie cancels the current appointment — keeping the record — and books a new one for next week. It is worth checking the Costs tab afterwards to confirm whether any travel time was logged and needs to be reviewed.
-*Incorrect:* Once an appointment has moved past Accepted, the edit options lock. Reschedule is unavailable. Delete is only valid when no travel or labour has been logged. Putting the job on hold does not cancel the appointment. The correct action is to cancel and book a new one.
 
 ---
+**Knowledge check**
+
+**Q1.** Sophie is booking an appointment on a job that is currently on hold. Does booking the appointment automatically remove the hold?
+
+**A.** [OPEN — retired yes/no prompt. Reword as an open question, or move this guidance into the section prose.] Booking a new appointment removes an on hold status automatically. If a job was paused waiting for the right slot, the new booking signals that work is moving again.
+
+**Q2.** Jake has marked himself as Travelling to Mrs. Thompson’s heat pump service. She calls to push the appointment back to next week. What is Sophie’s correct action?
+
+**A.** Once an appointment has moved past Accepted, Reschedule is no longer available. Sophie cancels the current appointment — keeping the record — and books a new one for next week. It is worth checking the Costs tab afterwards to confirm whether any travel time was logged and needs to be reviewed.
+
 
 ## Summary
 
@@ -10727,6 +10733,26 @@ The Appointments tab gives Sophie a live picture of every appointment from the m
 
 ---
 
+## Build by section
+
+| Section | Media | Note |
+|---|---|---|
+| Introduction | Written text | Article copy only \\u2014 no recording needed. |
+| The appointments tab | Screen recording | Open the Appointments tab and show the Upcoming and Past sections; Past already carries Mrs. Thompson's previous service history. |
+| Booking an appointment | Screen recording | Use Add new appointment, pick a slot, assign Jake, add description and access notes, and save; note the second-technician repeat for the same slot. |
+| Monitoring appointment status | Screen recording | Show the status moving through Accepted, Travelling, Arrived, and Left, plus the feedback, timestamps, and location map in the detail panel. |
+| Appointment details | Screen recording | Open the detail panel: logistics, linked arrive/report workflows, and the red/green communication dots with manual trigger. |
+| Managing changes | Screen recording | Show Reschedule, Reassign, and Change details available in Accepted status and locking after Travelling; contrast Cancel with Delete. |
+| Knowledge check | Expanding section | Two questions at the foot of the article, each revealing its answer on click. Nothing is scored. |
+| Summary | Written text | Recap text only \\u2014 no recording needed. |
+---
+
+## Open items
+
+- Appointments tab layout corrected 2026-07-22: the tab does not split into separate Upcoming and Past sections. Live QA (Nadia) confirms a single list, the Help Centre (517998) describes one chronological list of diary events, and prior Forest research (2026-04-27) found no Upcoming/Past split documented. The section was rewritten to a single list.
+- Appointment detail panel and comms: live QA (Nadia, 2026-07-22) reports the appointment details are already visible in the timeline and sidebar without opening the event, and that communication status dots appear only in the diary-event side panel, not the timeline. The Help Centre (517998) still describes opening the event to see the side panel. Needs a live-product tie-break before the booking and monitoring sections are changed further.
+
+---
 **Section count:** 6 sections plus 2 interactivity moments
 **Estimated length:** 5 minutes
 **Em dashes:** none
@@ -10737,13 +10763,8 @@ The Appointments tab gives Sophie a live picture of every appointment from the m
 **Sources used:** Help Centre — Using the appointments tab (https://help.commusoft.com/en/articles/517998-using-the-appointments-tab); Help Centre — Appointment statuses (https://help.commusoft.com/en/articles/216882-appointment-statuses); Help Centre — Diary and appointments (https://help.commusoft.com/en/articles/267464-diary-and-appointments); Commusoft Terminology (https://help.commusoft.com/en/articles/236422-commusoft-terminology); Enablement Manager clarification 2026-04-28
 **Pre-submission checklist:** complete
 **Flint revisions:** Full rewrite to SCL section format with correct narrative voice — Clint narrates through Sophie and Jake throughout; no click-by-click instruction; disclaimer removed; No Access status added; SMS trigger at Travelling noted; all status labels, edit options, and lock point verified across multiple Help Centre articles. Post-review fixes: must-fix (Past section not empty per Production Setup — corrected); suggestion 1 ("no one booked" → "no appointment booked"); suggestion 2 (status verb consistency — "appears/updates" → "moves to" throughout); suggestion 3 ("shows as" → "is shown as" for Communication status)
-
-## Open items
-
-- Appointments tab layout corrected 2026-07-22: the tab does not split into separate Upcoming and Past sections. Live QA (Nadia) confirms a single list, the Help Centre (517998) describes one chronological list of diary events, and prior Forest research (2026-04-27) found no Upcoming/Past split documented. The section was rewritten to a single list.
-- Appointment detail panel and comms: live QA (Nadia, 2026-07-22) reports the appointment details are already visible in the timeline and sidebar without opening the event, and that communication status dots appear only in the diary-event side panel, not the timeline. The Help Centre (517998) still describes opening the event to see the side panel. Needs a live-product tie-break before the booking and monitoring sections are changed further.
 `;
-INBOX_FILES["2"] = `# Learning — Walkthrough 2: The timeline — reading history and taking action
+INBOX_FILES["2"] = `# The timeline — reading history and taking action
 
 **Learning objectives:**
 1. Read and interpret timeline entries by event type
@@ -10769,7 +10790,6 @@ INBOX_FILES["2"] = `# Learning — Walkthrough 2: The timeline — reading histo
  - Sophie Bennett sent a communication to Mrs. Thompson from the web app explaining that the technician will visit to assess whether materials are required, which may result in a second visit.
  - Jake Harris attended the appointment on mobile, completed the job report (report must state: "heat pump assessed and part needs ordering"), and added one part to the job — it appears as Requested on the web.
  - The job is not on hold. The timeline shows a mix of: Sophie's communication, Jake's visit completion, the part request, and system status updates.
-- **Recording note:** Emma needs to send an ad-hoc email and make a call to Mrs. Thompson during the recording. Pre-write the email text in a separate notepad so the recorder can copy-paste it without silence. The email should be written in Emma's voice, acknowledging Mrs. Thompson's query and confirming next steps.
 - **Assets required:** Pre-written email text (outside the system, ready to paste).
 
 ---
@@ -10798,11 +10818,6 @@ When Emma needs to find a specific event rather than scroll the full history, th
 
 For more control, the Filter activity dropdown opens the advanced category panel. Emma can toggle specific event categories on and off: Communications, Scheduled Activities, Automation, Objects, and Updates. On a busy job with a long history, showing only Communications cuts the noise immediately. The funnel icon beside it is a separate Add filter control, which builds filters by field and condition rather than by category.
 
-*[Reflection prompt — Yes/No]*
-**Emma needs to find an email Sophie sent to this customer two weeks ago. Can she use the date filter and the user filter at the same time?**
-
-*Yes:* Correct. Both filters work together. Emma sets the date range to the relevant period and selects Sophie from the user dropdown. The timeline shows only Sophie's activity in that window.
-*No:* Both filters work together. Emma sets the date range and selects Sophie from the user dropdown — the timeline shows only her activity in that window.
 
 ---
 
@@ -10830,18 +10845,18 @@ The query is resolved, but the part Jake needs is on backorder. Emma puts the jo
 
 The Actions menu also surfaces two irreversible actions: Abort and Free of charge. Abort closes a job permanently with a required reason and cannot be undone — it is reserved for genuine cancellations, not jobs that need to pause. Free of charge marks the job so no customer invoice is raised, and is equally irreversible. Both actions close the job, so everything on the record should be accurate before either is selected.
 
-*[Knowledge check — 4 options]*
-**Jake has completed a heat pump service visit but a part is on backorder. The job needs to wait two weeks before it can be finished. What does Emma select from the Actions menu?**
-
-A. Abort
-B. Free of charge
-C. On hold
-D. Nothing — the job stays open automatically
-
-*Correct (C):* On hold is the right choice. It pauses the job with a documented reason and a reminder date, and it can be reversed when the part arrives. Abort is permanent and only for cancellations. Free of charge removes the customer invoice, which is not what is needed here.
-*Incorrect:* Abort is permanent and cannot be undone — it is reserved for genuine cancellations. Free of charge removes the customer invoice. The job does not stay open automatically without action. The correct choice is On hold: it pauses the job with a documented reason and a reminder date, and can be reversed when the part arrives.
 
 ---
+**Knowledge check**
+
+**Q1.** Emma needs to find an email Sophie sent to this customer two weeks ago. Can she use the date filter and the user filter at the same time?
+
+**A.** [OPEN — retired yes/no prompt. Reword as an open question, or move this guidance into the section prose.] Both filters work together. Emma sets the date range to the relevant period and selects Sophie from the user dropdown. The timeline shows only Sophie’s activity in that window.
+
+**Q2.** Jake has completed a heat pump service visit but a part is on backorder. The job needs to wait two weeks before it can be finished. What does Emma select from the Actions menu?
+
+**A.** On hold is the right choice. It pauses the job with a documented reason and a reminder date, and it can be reversed when the part arrives. Abort is permanent and only for cancellations. Free of charge removes the customer invoice, which is not what is needed here.
+
 
 ## Summary
 
@@ -10849,6 +10864,29 @@ Emma found everything she needed in the timeline without making a single phone c
 
 ---
 
+## Build by section
+
+| Section | Media | Note |
+|---|---|---|
+| Introduction | Written text | Article copy only — no recording needed. |
+| What the timeline records | Screen recording | Show the timeline with the three event types visible: communications, job records (appointments, files, parts, invoices), and system updates. |
+| Reading timeline entries | Screen recording | Expand an entry with See more / See details; show the inline Reply link on Jake's and Sophie's cards. |
+| Searching and filtering | Screen recording | Demonstrate the search bar, the date and user dropdowns used together, and the advanced filter panel toggles. |
+| Communicating from the Actions menu | Screen recording | Open the Actions menu and show Send email (template) and Send SMS, each logging to the timeline. Emma needs to send an ad-hoc email and make a call to Mrs. Thompson during the recording. Pre-write the email text in a separate notepad so the recorder can copy-paste it without silence. The email should be written in Emma's voice, acknowledging Mrs. Thompson's query and confirming next steps. |
+| Notes, mentions, and call logging | Screen recording | Add a note with an @ mention, the Share on mobile and Important toggles, and log a call with a follow-up activity. |
+| Putting a job on hold | Screen recording | From the Actions menu, put the job on hold with a reason, note, and reminder date; show the hold badge appearing in the sidebar. |
+| Closing the job — abort and free of charge | Screen recording | Show the Abort and Free of charge actions in the menu without committing them (both irreversible). |
+| Knowledge check | Expanding section | Two questions at the foot of the article, each revealing its answer on click. Nothing is scored. |
+| Summary | Written text | Recap text only — no recording needed. |
+---
+
+## Open items
+
+**QA corrections applied (live check, 2026-07-23):**
+- **Inline Reply link — REMOVED.** Confirmed live: timeline email cards have no inline Reply link, expanded or collapsed. Replies are sent via Actions → Send email (the card carries no action links at all, unlike appointment cards). Script corrected. **HC 630198 needs the same correction.**
+- **Filter control — CORRECTED.** The five categories (Communications, Scheduled Activities, Automation, Objects, Updates) are correct, but they open from the **"Filter activity" labelled dropdown**, not the filter icon. The funnel "Add filter" is a separate field/condition builder. Script corrected to name the right control. **HC 630198 also frames this as the filter icon.**
+
+---
 **Section count:** 8 sections plus 2 interactivity moments
 **Estimated length:** 5 minutes
 **Em dashes:** none
@@ -10859,12 +10897,6 @@ Emma found everything she needed in the timeline without making a single phone c
 **Sources used:** Help Centre — Tracking job history with the timeline (https://help.commusoft.com/en/articles/630198-tracking-job-history-with-the-timeline); Help Centre — Using timeline actions and updating job statuses (https://help.commusoft.com/en/articles/517348-using-timeline-actions-and-updating-job-statuses); Commusoft Terminology (https://help.commusoft.com/en/articles/236422-commusoft-terminology)
 **Pre-submission checklist:** complete
 **Flint revisions:** Full rewrite to SCL section format — disclaimer removed; numbered scenes replaced with descriptive section headings; voice shifted from second person instruction to Clint narrating through Emma; Production Setup added; Open items block added. Post-review fix: "Sophie puts the job on hold" corrected to "Emma puts the job on hold" — Emma is the logged-in user; Sophie's role in this walkthrough is as sender of the timeline SMS only
-
-## Open items
-
-**QA corrections applied (live check, 2026-07-23):**
-- **Inline Reply link — REMOVED.** Confirmed live: timeline email cards have no inline Reply link, expanded or collapsed. Replies are sent via Actions → Send email (the card carries no action links at all, unlike appointment cards). Script corrected. **HC 630198 needs the same correction.**
-- **Filter control — CORRECTED.** The five categories (Communications, Scheduled Activities, Automation, Objects, Updates) are correct, but they open from the **"Filter activity" labelled dropdown**, not the filter icon. The funnel "Add filter" is a separate field/condition builder. Script corrected to name the right control. **HC 630198 also frames this as the filter icon.**
 `;
 INBOX_FILES["10"] = `# Tracking opportunities on jobs
 

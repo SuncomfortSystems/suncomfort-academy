@@ -340,7 +340,12 @@
     <div class="nav-item" onclick="navLayer('going-further', this)"><div class="nav-dot" style="background:#3949ab"></div>5. Going further</div>
     <div class="nav-item" onclick="navLayer('add-ons', this)"><div class="nav-dot" style="background:#ad1457"></div>6. Add-ons</div>
     <div class="nav-section" style="margin-top:16px">Standards</div>
-    <div class="nav-item" onclick="showView('standards', this)"><div class="nav-dot" style="background:#00695c"></div>How a walkthrough is structured</div>
+<!-- STANDARDS-NAV:START -->
+    <div class="nav-item" onclick="showView('std-how-a-walkthrough-is-structured', this)"><div class="nav-dot" style="background:#00695c"></div>How a walkthrough is structured</div>
+    <div class="nav-item" onclick="showView('std-watch-do-check', this)"><div class="nav-dot" style="background:#00695c"></div>Watch, do, check</div>
+    <div class="nav-item" onclick="showView('std-the-narrative-triangle', this)"><div class="nav-dot" style="background:#00695c"></div>The narrative triangle</div>
+    <div class="nav-item" onclick="showView('std-the-help-centre-schema', this)"><div class="nav-dot" style="background:#00695c"></div>The Help Centre schema</div>
+<!-- STANDARDS-NAV:END -->
   </nav>
 
   <main class="main">
@@ -1084,99 +1089,157 @@
       </div>
     </div>
 
-    <!-- STANDARDS -->
-    <div id="view-standards" class="view">
-      <div class="page-heading"><h1>Standards</h1><p>How walkthroughs are written and built &mdash; the rules, not the debate</p></div>
-
-      <div class="section-heading">How a walkthrough is structured</div>
-      <p style="font-size:13px;color:var(--text-muted);line-height:1.6;margin:0 0 14px"><strong>Methodology:</strong> Mager's three-part objective, with a value proposition added. The article and walkthrough split follows Diataxis.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 18px">A walkthrough carries five things. Four are written, one is the recording.</p>
-
-      <table class="inbox-table" style="margin-bottom:10px">
-        <thead><tr><th style="width:180px">Block</th><th style="width:180px">Media value</th><th>Carries</th></tr></thead>
-        <tbody>
-          <tr><td>Introduction</td><td>Written text</td><td><strong>Conditions</strong> and the <strong>learning objective</strong></td></tr>
-          <tr><td>Body</td><td>Screen recording</td><td>The <strong>story walkthrough</strong></td></tr>
-          <tr><td>Knowledge check</td><td>Expanding section</td><td>Two questions, each with an explained answer</td></tr>
-          <tr><td>Summary</td><td>Written text</td><td>The <strong>value proposition</strong> and the <strong>criterion</strong></td></tr>
-        </tbody>
-      </table>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 24px">These are the blocks Build by section already uses. Written text sits at the top and bottom of almost every article; this says what goes in them.</p>
-
+<!-- STANDARDS-VIEWS:START -->
+    <div id="view-std-how-a-walkthrough-is-structured" class="view">
+      <div class="page-heading"><h1>How a walkthrough is structured</h1><p><strong>Date:</strong> 2026-09-08 &middot; <strong>Methodology:</strong> Mager's three-part objective, with a value proposition added. The article and walkthrough split follows Diataxis.</p></div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">A walkthrough carries five things. Four are written, one is the recording.</p>
+      <div class="section-heading">The shape</div>
+      <table class="inbox-table" style="margin-bottom:16px"><thead><tr><th>Block</th><th>Media value</th><th>Carries</th></tr></thead><tbody><tr><td style="line-height:1.6;vertical-align:top">Introduction</td><td style="line-height:1.6;vertical-align:top">Written text</td><td style="line-height:1.6;vertical-align:top"><strong>Conditions</strong> and the <strong>learning objective</strong></td></tr><tr><td style="line-height:1.6;vertical-align:top">Body</td><td style="line-height:1.6;vertical-align:top">Screen recording</td><td style="line-height:1.6;vertical-align:top">The <strong>story walkthrough</strong></td></tr><tr><td style="line-height:1.6;vertical-align:top">Knowledge check</td><td style="line-height:1.6;vertical-align:top">Expanding section</td><td style="line-height:1.6;vertical-align:top">Two questions, each with an explained answer</td></tr><tr><td style="line-height:1.6;vertical-align:top">Summary</td><td style="line-height:1.6;vertical-align:top">Written text</td><td style="line-height:1.6;vertical-align:top">The <strong>value proposition</strong> and the <strong>criterion</strong></td></tr></tbody></table>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">These are the blocks Build by section already uses. Written text sits at the top and bottom of almost every article; this says what goes in them.</p>
       <div class="section-heading">The five parts</div>
-
-      <div style="border-left:3px solid var(--blue1);padding:2px 0 2px 16px;margin:0 0 20px">
-        <div style="font-weight:600;font-size:15px;margin-bottom:8px">Conditions</div>
-        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 10px"><strong>What it is.</strong> What must already exist in the learner's account for this walkthrough to make sense. Named things, in plain words.</p>
-        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 10px"><strong>Why we do it.</strong> So nobody starts something they cannot finish. A job description template is assembled out of skills, custom forms, arrive and leave workflows and labour rates. Someone without those needs to know before they begin, not four minutes in.</p>
-        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 6px"><strong>Rules.</strong></p>
-        <ul style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 10px;padding-left:20px">
-          <li>Name the things, never other walkthroughs. Readers arrive at a page, not at the site, so the page stands on its own.</li>
-          <li>A sentence or two. If it needs more, the walkthrough is in the wrong place in the order.</li>
-        </ul>
-        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0">The same sentence does three jobs: scene-setting in the video, "before you begin" on the article, and the prerequisite when Success check a gate.</p>
-      </div>
-
-      <div style="border-left:3px solid var(--blue1);padding:2px 0 2px 16px;margin:0 0 20px">
-        <div style="font-weight:600;font-size:15px;margin-bottom:8px">Learning objective</div>
-        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 10px"><strong>What it is.</strong> What the learner will be able to do afterwards, written so you could watch them do it.</p>
-        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 10px"><strong>Why we do it.</strong> It sets what the walkthrough owes the learner, which is what stops it drifting into a tour of a screen.</p>
-        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0"><strong>Rule.</strong> No <em>understand</em>, <em>know about</em>, <em>be familiar with</em> or <em>appreciate</em>. Nobody can observe understanding. If the verb has no visible outcome, the objective is not written yet.</p>
-      </div>
-
-      <div style="border-left:3px solid var(--blue1);padding:2px 0 2px 16px;margin:0 0 20px">
-        <div style="font-weight:600;font-size:15px;margin-bottom:8px">Story walkthrough</div>
-        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 10px"><strong>What it is.</strong> SunComfort's staff carrying out the work on screen, narrated by Archer in the third person present.</p>
-        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 10px"><strong>Why we do it.</strong> Watching a business do the job teaches the shape of it. Being told to click things teaches the screen, which the Help Centre article already covers better.</p>
-        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0"><strong>Rule.</strong> Never tell the learner to click something. The learner watches, SunComfort acts. Archer turns to the learner only for guidance about their own business.</p>
-      </div>
-
-      <div style="border-left:3px solid var(--blue1);padding:2px 0 2px 16px;margin:0 0 20px">
-        <div style="font-weight:600;font-size:15px;margin-bottom:8px">Value proposition</div>
-        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 10px"><strong>What it is.</strong> Why it is worth doing. What it saves, prevents, or stops going wrong.</p>
-        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 10px"><strong>Why we do it.</strong> Our learners choose whether to bother. Mager has no equivalent; we add it.</p>
-        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0"><strong>Rule.</strong> Describe the payoff, not the feature. "Templates hold a job's settings" is a description. "Every setting on this screen is one the office would otherwise choose job by job, on every job, and get wrong occasionally" is a payoff.</p>
-      </div>
-
-      <div style="border-left:3px solid var(--blue1);padding:2px 0 2px 16px;margin:0 0 24px">
-        <div style="font-weight:600;font-size:15px;margin-bottom:8px">Criterion</div>
-        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 10px"><strong>What it is.</strong> How the learner checks their own account is right. Something they go and look at.</p>
-        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 10px"><strong>Why we do it.</strong> It turns "I watched it" into "mine is right", which is also what a gate needs to see.</p>
-        <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 6px"><strong>Rules.</strong></p>
-        <ul style="font-size:14px;color:var(--text);line-height:1.6;margin:0;padding-left:20px">
-          <li>It has to be able to come out wrong. If the answer is always yes, it is a restatement, not a check.</li>
-          <li>Ours are state checks, not tolerances. A textbook Mager criterion reads <em>zero defects, within fifteen minutes</em>, which suits a task with countable defects. Configuring an account is not that. Ours name a state: the workflow is already on the job, the total matches with no line added by hand. Never invent a time limit or an error count to make one look tighter.</li>
-        </ul>
-      </div>
-
-      <div class="section-heading">Worked example &mdash; job description templates</div>
-      <table class="inbox-table" style="margin-bottom:24px">
-        <tbody>
-          <tr><td style="width:200px;color:var(--text-muted);font-size:13px;vertical-align:top">Introduction<br><span style="font-size:12px">Written text</span></td><td style="line-height:1.6">Your skills, custom forms, arrive and leave workflows and labour rates need to be in place before this one, because a job description template is assembled out of them.<br><br>By the end you will be able to build a template that carries a job's settings, so the office picks a template rather than putting the job together by hand.</td></tr>
-          <tr><td style="color:var(--text-muted);font-size:13px;vertical-align:top">The video opens<br><span style="font-size:12px">Screen recording</span></td><td style="line-height:1.6">Sophie has already built SunComfort's skills, forms and workflows. She opens Settings and starts a new job description template for a boiler service.</td></tr>
-          <tr><td style="color:var(--text-muted);font-size:13px;vertical-align:top">Summary<br><span style="font-size:12px">Written text</span></td><td style="line-height:1.6">Every setting on this screen is one the office would otherwise choose job by job, on every job, and get wrong occasionally. Building it once into the template means a service job is right by default.<br><br>You will know yours is right when you raise a job from the template and the report form, the skill requirement and the labour rate are already on it, without anyone choosing them.</td></tr>
-        </tbody>
-      </table>
-
-      <div class="section-heading">Worked example &mdash; raising an invoice from a job</div>
-      <table class="inbox-table" style="margin-bottom:24px">
-        <tbody>
-          <tr><td style="width:200px;color:var(--text-muted);font-size:13px;vertical-align:top">Introduction</td><td style="line-height:1.6">This picks up with a completed job that has parts and labour recorded against it.<br><br>By the end you will be able to raise an invoice from a completed job and account for every line on its total.</td></tr>
-          <tr><td style="color:var(--text-muted);font-size:13px;vertical-align:top">The video opens</td><td style="line-height:1.6">Jake has finished at Mrs Thompson's and recorded the parts he used. Sophie opens the job and raises the invoice from it.</td></tr>
-          <tr><td style="color:var(--text-muted);font-size:13px;vertical-align:top">Summary</td><td style="line-height:1.6">Raising the invoice from the job rather than starting a blank one means the parts and labour are already on it. Nothing gets retyped, and nothing gets left off the bill.<br><br>You will know yours is right when the invoice total matches the job's parts and labour without anyone adding a line by hand.</td></tr>
-        </tbody>
-      </table>
-
+      <div style="font-weight:600;font-size:15px;margin:18px 0 8px">Conditions</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>What it is.</strong> What must already exist in the learner's account for this walkthrough to make sense. Named things, in plain words.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Why we do it.</strong> So nobody starts something they cannot finish. A job description template is assembled out of skills, custom forms, arrive and leave workflows and labour rates. Someone without those needs to know before they begin, not four minutes in.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Rules.</strong></p>
+      <ul style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px;padding-left:20px"><li>Name the things, never other walkthroughs. Readers arrive at a page, not at the site, so the page stands on its own.</li><li>A sentence or two. If it needs more, the walkthrough is in the wrong place in the order.</li></ul>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">The same sentence does three jobs: scene-setting in the video, "before you begin" on the article, and the prerequisite when Success check a gate.</p>
+      <div style="font-weight:600;font-size:15px;margin:18px 0 8px">Learning objective</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>What it is.</strong> What the learner will be able to do afterwards, written so you could watch them do it.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Why we do it.</strong> It sets what the walkthrough owes the learner, which is what stops it drifting into a tour of a screen.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Rule.</strong> No <em>understand</em>, <em>know about</em>, <em>be familiar with</em> or <em>appreciate</em>. Nobody can observe understanding. If the verb has no visible outcome, the objective is not written yet.</p>
+      <div style="font-weight:600;font-size:15px;margin:18px 0 8px">Story walkthrough</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>What it is.</strong> SunComfort's staff carrying out the work on screen, narrated by Archer in the third person present.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Why we do it.</strong> Watching a business do the job teaches the shape of it. Being told to click things teaches the screen, which the Help Centre article already covers better.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Rule.</strong> Never tell the learner to click something. The learner watches, SunComfort acts. Archer turns to the learner only for guidance about their own business.</p>
+      <div style="font-weight:600;font-size:15px;margin:18px 0 8px">Value proposition</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>What it is.</strong> Why it is worth doing. What it saves, prevents, or stops going wrong.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Why we do it.</strong> Our learners choose whether to bother. Mager has no equivalent; we add it.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Rule.</strong> Describe the payoff, not the feature. "Templates hold a job's settings" is a description. "Every setting on this screen is one the office would otherwise choose job by job, on every job, and get wrong occasionally" is a payoff.</p>
+      <div style="font-weight:600;font-size:15px;margin:18px 0 8px">Criterion</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>What it is.</strong> How the learner checks their own account is right. Something they go and look at.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Why we do it.</strong> It turns "I watched it" into "mine is right", which is also what a gate needs to see.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Rules.</strong></p>
+      <ul style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px;padding-left:20px"><li>It has to be able to come out wrong. If the answer is always yes, it is a restatement, not a check.</li><li>Ours are state checks, not tolerances. A textbook Mager criterion reads <em>zero defects, within fifteen minutes</em>, which suits a task with countable defects. Configuring an account is not that. Ours name a state: the workflow is already on the job, the total matches with no line added by hand. Never invent a time limit or an error count to make one look tighter.</li></ul>
+      <div class="section-heading">Worked example — job description templates</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Introduction</strong> · Written text</p>
+      <div style="border-left:3px solid var(--blue1);padding:2px 0 2px 16px;margin:0 0 14px;font-size:14px;color:var(--text);line-height:1.6">Your skills, custom forms, arrive and leave workflows and labour rates need to be in place before this one, because a job description template is assembled out of them.<br><br>By the end you will be able to build a template that carries a job's settings, so the office picks a template rather than putting the job together by hand.</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>The video opens</strong> · Screen recording</p>
+      <div style="border-left:3px solid var(--blue1);padding:2px 0 2px 16px;margin:0 0 14px;font-size:14px;color:var(--text);line-height:1.6">Sophie has already built SunComfort's skills, forms and workflows. She opens Settings and starts a new job description template for a boiler service.</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Summary</strong> · Written text</p>
+      <div style="border-left:3px solid var(--blue1);padding:2px 0 2px 16px;margin:0 0 14px;font-size:14px;color:var(--text);line-height:1.6">Every setting on this screen is one the office would otherwise choose job by job, on every job, and get wrong occasionally. Building it once into the template means a service job is right by default.<br><br>You will know yours is right when you raise a job from the template and the report form, the skill requirement and the labour rate are already on it, without anyone choosing them.</div>
+      <div class="section-heading">Worked example — raising an invoice from a job</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Introduction</strong></p>
+      <div style="border-left:3px solid var(--blue1);padding:2px 0 2px 16px;margin:0 0 14px;font-size:14px;color:var(--text);line-height:1.6">This picks up with a completed job that has parts and labour recorded against it.<br><br>By the end you will be able to raise an invoice from a completed job and account for every line on its total.</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>The video opens</strong></p>
+      <div style="border-left:3px solid var(--blue1);padding:2px 0 2px 16px;margin:0 0 14px;font-size:14px;color:var(--text);line-height:1.6">Jake has finished at Mrs Thompson's and recorded the parts he used. Sophie opens the job and raises the invoice from it.</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Summary</strong></p>
+      <div style="border-left:3px solid var(--blue1);padding:2px 0 2px 16px;margin:0 0 14px;font-size:14px;color:var(--text);line-height:1.6">Raising the invoice from the job rather than starting a blank one means the parts and labour are already on it. Nothing gets retyped, and nothing gets left off the bill.<br><br>You will know yours is right when the invoice total matches the job's parts and labour without anyone adding a line by hand.</div>
       <div class="section-heading">Three to watch</div>
       <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>The criterion is not the knowledge check.</strong> The check tests whether they followed the walkthrough. The criterion sends them to their own account to look at something. Written as a second check question, the summary just repeats what the check asked.</p>
       <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>The conditions appear twice, in different words.</strong> The introduction states the prerequisite to the learner. The video states SunComfort's version of it as scene-setting, so the recording does not start mid-air. Two sentences, not one repeated.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 24px"><strong>Tours use recognition instead of a state check.</strong> A walkthrough that tours a finished account gives the learner nothing of their own to look at, so the criterion becomes <em>"you will know you have got this when you can open your own Service template and say what each field on it does to a job."</em> Anywhere the learner builds something, use the state check.</p>
-
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Tours use recognition instead of a state check.</strong> A walkthrough that tours a finished account gives the learner nothing of their own to look at, so the criterion becomes <em>"you will know you have got this when you can open your own Service template and say what each field on it does to a job."</em> Anywhere the learner builds something, use the state check.</p>
       <div class="section-heading">Where it comes from</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Mager's three-part objective</strong> &mdash; observable <strong>performance</strong>, the <strong>conditions</strong> it happens under, and the <strong>criterion</strong> for acceptable performance. Verbs like <em>understand</em> fail his test because no two people would agree on whether they had been met. <a href="https://www.acces.nysed.gov/bpss/writing-performance-objectives" target="_blank" rel="noopener" style="color:var(--blue1)">Source</a></p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Diataxis</strong> sets the article and walkthrough split. A how-to guide is action and only action for someone already competent, with no digression or teaching. A tutorial serves the user at study rather than at work. So the article carries the click-by-click and the walkthrough carries the learning objective. <a href="https://diataxis.fr/how-to-guides/" target="_blank" rel="noopener" style="color:var(--blue1)">How-to guides</a> &middot; <a href="https://diataxis.fr/tutorials-how-to/" target="_blank" rel="noopener" style="color:var(--blue1)">Tutorials and how-to</a></p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 8px">Diataxis also sets which settings keep a detailed walkthrough: a how-to cannot promise safety because it operates on real work, a tutorial can because it is a rehearsal. The settings that earn a walkthrough are the ones where being wrong is expensive &mdash; irreversible, ordered, or dependent on something built elsewhere.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Mager's three-part objective</strong> — observable <strong>performance</strong>, the <strong>conditions</strong> it happens under, and the <strong>criterion</strong> for acceptable performance. Verbs like <em>understand</em> fail his test because no two people would agree on whether they had been met. <a href="https://www.acces.nysed.gov/bpss/writing-performance-objectives" target="_blank" rel="noopener" style="color:var(--blue1)">https://www.acces.nysed.gov/bpss/writing-performance-objectives</a></p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Diataxis</strong> sets the article and walkthrough split. A how-to guide is action and only action for someone already competent, with no digression or teaching. A tutorial serves the user at study rather than at work. So the article carries the click-by-click and the walkthrough carries the learning objective. <a href="https://diataxis.fr/how-to-guides/" target="_blank" rel="noopener" style="color:var(--blue1)">https://diataxis.fr/how-to-guides/</a> · <a href="https://diataxis.fr/tutorials-how-to/" target="_blank" rel="noopener" style="color:var(--blue1)">https://diataxis.fr/tutorials-how-to/</a></p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">Diataxis also sets which settings keep a detailed walkthrough: a how-to cannot promise safety because it operates on real work, a tutorial can because it is a rehearsal. The settings that earn a walkthrough are the ones where being wrong is expensive — irreversible, ordered, or dependent on something built elsewhere.</p>
     </div>
+
+    <div id="view-std-watch-do-check" class="view">
+      <div class="page-heading"><h1>Watch, do, check</h1><p><strong>Date:</strong> 2026-09-09 &middot; <strong>Methodology:</strong> the learning chain. What a learner does with a walkthrough, in order.</p></div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">A learner meets a feature four times, and each pass does a different job. The chain is <strong>watch → read → check → certify</strong>.</p>
+      <div class="section-heading">The four passes</div>
+      <div style="font-weight:600;font-size:15px;margin:18px 0 8px">Watch</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>What it is.</strong> The recording. SunComfort's staff carrying out the work, narrated by Archer.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Why we do it.</strong> Seeing a business do the job teaches the shape of it — what comes before, what comes after, what it is for. Steps alone teach the screen.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Built with:</strong> Screen recording. <strong>566 rows across the library.</strong></p>
+      <div style="font-weight:600;font-size:15px;margin:18px 0 8px">Read</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>What it is.</strong> The written blocks around the recording: the introduction, the summary, and any callout carrying conditional guidance.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Why we do it.</strong> Reading is what someone does when they are at work rather than at study. It is also the only pass that survives being surfaced in chat or skimmed in thirty seconds.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Built with:</strong> Written text, and Callout - written text for conditional guidance. <strong>345 and 2 rows.</strong></p>
+      <div style="font-weight:600;font-size:15px;margin:18px 0 8px">Do</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>What it is.</strong> A guided attempt in the product — a Userflow tour that walks the learner through the real screen in their own account.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Why we do it.</strong> Watching and reading both leave the learner one step short of having done it. The tour closes that gap without the risk of turning them loose on live data.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Built with:</strong> Tour.</p>
+      <div style="border-left:3px solid var(--blue1);padding:2px 0 2px 16px;margin:0 0 14px;font-size:14px;color:var(--text);line-height:1.6"><strong>This pass does not exist.</strong> Tour is an approved build value and has <strong>0 rows across 193 scripts</strong>. It has never been used once. Until it is built, the chain is watch → read → check, and describing it as watch → do → check claims something the library does not do.</div>
+      <div style="font-weight:600;font-size:15px;margin:18px 0 8px">Check</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>What it is.</strong> Two questions at the foot of the article, each with an explained answer. The learner clicks to reveal.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Why we do it.</strong> Recall with the answer a click away is low-stakes and self-marked, which is what suits an article. It tells the learner whether they followed, and costs them nothing to get wrong.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Built with:</strong> Expanding section. <strong>179 rows</strong> — reserved for the knowledge check and nothing else.</p>
+      <div class="section-heading">And then certify</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>What it is.</strong> The series assessment. Four options, scored, a pass mark, completion recorded, certificate issued via Certify'em.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Why we do it.</strong> An Intercom article cannot score, gate or record completion. Certification needs something that can, and it is the only summative step in the chain.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Built with:</strong> Google Form. <strong>32 rows reference one.</strong></p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Rules.</strong></p>
+      <ul style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px;padding-left:20px"><li><strong>Expanding section reveals, Google Form scores.</strong> They are not interchangeable. Never label form-delivered questions as Expanding section — it tells the builder to build the wrong thing.</li><li><strong>Multiple choice lives only in the form.</strong> An expanding section cannot mark anything, so A/B/C/D in an article is decoration.</li><li><strong>Neither knowledge check question may be one the form asks</strong>, or the form is testing something the article already gave away.</li></ul>
+      <div class="section-heading">Where each pass lives on the page</div>
+      <table class="inbox-table" style="margin-bottom:16px"><thead><tr><th>Pass</th><th>Where</th></tr></thead><tbody><tr><td style="line-height:1.6;vertical-align:top">Read</td><td style="line-height:1.6;vertical-align:top">Introduction, at the top</td></tr><tr><td style="line-height:1.6;vertical-align:top">Watch</td><td style="line-height:1.6;vertical-align:top">"Practise this", at the foot</td></tr><tr><td style="line-height:1.6;vertical-align:top">Do</td><td style="line-height:1.6;vertical-align:top">"Practise this", at the foot</td></tr><tr><td style="line-height:1.6;vertical-align:top">Read</td><td style="line-height:1.6;vertical-align:top">Summary, at the bottom</td></tr><tr><td style="line-height:1.6;vertical-align:top">Check</td><td style="line-height:1.6;vertical-align:top">"Practise this", at the foot</td></tr><tr><td style="line-height:1.6;vertical-align:top">Certify</td><td style="line-height:1.6;vertical-align:top">The series assessment, outside the article</td></tr></tbody></table>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">The article body itself — the click-by-click — is not a pass in this chain. That is the Help Centre doing its own job, and the walkthrough does not repeat it.</p>
+      <div class="section-heading">The honest state</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">Three of the four passes are built and live. <strong>Do is specified and empty.</strong> Certify has 32 scripts naming a form, but the forms and the Certify'em wiring are a separate build.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Rule.</strong> Do not describe the model as <strong>watch → do → check</strong> in anything Sara, Nadia or a customer reads until Tour rows exist. Either build the tours or drop "do" from the name. Flagged 2026-08-05, still undecided.</p>
+    </div>
+
+    <div id="view-std-the-narrative-triangle" class="view">
+      <div class="page-heading"><h1>The narrative triangle</h1><p><strong>Date:</strong> 2026-09-09 &middot; <strong>Methodology:</strong> three voices, one script. Settled 2026-08-11.</p></div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">Every script has three voices in it and each has a job. Keeping them straight is the difference between a script that tells a story and one that reads as a manual.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>The operational source is <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-size:13px">Team/Academy/script-writer-skill/SKILL.md</code>, "The three voices".</strong> This is the readable version of the same rules. If the two ever disagree, SKILL.md is right and this needs correcting.</p>
+      <div class="section-heading">The three corners</div>
+      <div style="font-weight:600;font-size:15px;margin:18px 0 8px">Archer — the presenter</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>What he is.</strong> An industry and Commusoft expert acting as a business consultant. The Clueso AI voiceover, and the only voice the learner hears.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Why we do it.</strong> A single expert voice lets the script explain <em>why</em> something is done, which a demonstration on its own cannot. Archer is who makes it advice rather than a tour.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Rules.</strong></p>
+      <ul style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px;padding-left:20px"><li>He is never in the scenario and never appears on screen. Retired with Synthesia, along with the Presenter Framework.</li><li>Scripts carry <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-size:13px"><strong>Voice:</strong> Archer (Clueso AI voiceover)</code>. Never a Presenter line.</li><li>He may speak in the first person where he has a genuine expert insight. No cap on it and no banned phrasing — use it where it earns its place.</li><li><strong>He does not keep saying "Commusoft".</strong> He works here, so the natural voice is <em>we</em> or <em>your account</em>. Name the product only where it would otherwise be unclear which system is meant, usually when an external one is in play.</li></ul>
+      <div style="font-weight:600;font-size:15px;margin:18px 0 8px">SunComfort — the story</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>What it is.</strong> The demonstration business. Its staff carry out every on-screen action.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Why we do it.</strong> Watching a business do the job teaches the shape of the work. It also keeps the learner's own account out of it, so nothing in the script depends on how they have set theirs up.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Rules.</strong></p>
+      <ul style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px;padding-left:20px"><li>Narrated by Archer in the <strong>third person present</strong>: <em>"Emma opens the job record and clicks Add invoice."</em></li><li>SunComfort characters <strong>never speak</strong> and <strong>never address the learner</strong>.</li><li>They are who the learner is watching, not who the learner is.</li></ul>
+      <div style="font-weight:600;font-size:15px;margin:18px 0 8px">The learner — the audience</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>What it is.</strong> The person watching, addressed as <strong>"you"</strong>.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Why we do it.</strong> The learner's own business is the only subject the script cannot demonstrate, so it is the only thing worth turning to them for.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Rules.</strong></p>
+      <ul style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px;padding-left:20px"><li>Addressed <strong>only</strong> where Archer turns to them with guidance about their own business: <em>"You might take a different route here, depending on how your business invoices."</em></li><li><strong>The learner never performs the on-screen steps.</strong> <em>"You open the job record"</em> is wrong — Emma opens it, and the learner is watching.</li></ul>
+      <div class="section-heading">How a section moves between them</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">A section normally moves between two of the three corners: Archer narrating a SunComfort character doing the work, then turning to the learner for what it means in their own business.</p>
+      <div style="border-left:3px solid var(--blue1);padding:2px 0 2px 16px;margin:0 0 14px;font-size:14px;color:var(--text);line-height:1.6">Emma opens the job and raises the invoice from it, so the parts and labour Jake recorded on site come across without anyone retyping them.<br><br>You might invoice at a different point — some businesses raise it before the technician has left.</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">The third corner, Archer's own expert aside, comes in where he has something to add that neither the demonstration nor the learner's situation supplies.</p>
+      <div class="section-heading">What this replaces</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">An earlier version written on 2026-08-11 had <strong>the learner performing the on-screen actions</strong>, which is what v5 of the script skill said. It is wrong and was replaced the same day.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">The old "twice per walkthrough, never say <em>in my experience</em>" limit on Archer's first-person asides came from the Gemini LMS era and was removed on 2026-08-11. It goes back only if over-use shows up.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>349 uses of "Commusoft" across 127 scripts</strong> were counted when the naming rule was settled on 2026-08-19. They are fixed as each script is next opened, not in a sweep.</p>
+    </div>
+
+    <div id="view-std-the-help-centre-schema" class="view">
+      <div class="page-heading"><h1>The Help Centre schema</h1><p><strong>Date:</strong> 2026-09-09 &middot; <strong>Methodology:</strong> three tiers, one canonical copy. Settled with Sara 2026-09-07.</p></div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">Client-facing Learning is published as Help Centre articles. The Help Centre is organised <strong>by feature</strong>, and Learning publishes into it in three tiers.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">There is no plan to build a client-facing learning platform. It would need customer authentication, authoring, progress tracking, hosting and GDPR obligations, and it would move the content out of reach of AI:den, which surfaces Help Centre articles in chat.</p>
+      <div class="section-heading">The three tiers</div>
+      <div style="font-weight:600;font-size:15px;margin:18px 0 8px">Tier 1 — the feature article</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>What it is.</strong> The existing Help Centre article for a feature. It carries the click-by-click, and the walkthrough sits in its <strong>"Practise this"</strong> section at the foot.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Why we do it.</strong> It puts the walkthrough where someone already searching for the feature will find it, and where AI:den can surface it.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Rule.</strong> This is <strong>the only copy of the walkthrough</strong>. Nothing above it holds a second one.</p>
+      <div style="font-weight:600;font-size:15px;margin:18px 0 8px">Tier 2 — Understanding <em>feature</em></div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>What it is.</strong> One article per series, holding that series' feature articles in order, with an overview of the area.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Why we do it.</strong> A feature article answers one question. The understanding article is what turns eight of them into a subject someone can work through.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Rules.</strong></p>
+      <ul style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px;padding-left:20px"><li>One per series. <strong>36 needed, 6 existed as of 2026-09-07</strong> — and that 6 is a floor, because both Intercom searches were relevance-ranked rather than full listings.</li><li>**Older ones are called "<em>feature</em> Overview" and are being renamed to "Understanding <em>feature</em>".** Search both when checking coverage or you will conclude something is missing when it is not.</li></ul>
+      <div style="font-weight:600;font-size:15px;margin:18px 0 8px">Tier 3 — the pathway article</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>What it is.</strong> One article per pathway, linking the understanding articles beneath it. Named for the pathway: Start here, The basics, In the field, Setting up your account, Going further, Add-ons.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Why we do it.</strong> The understanding articles are the series. The pathway article is what makes a pathway visible as a thing you can complete.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Rules.</strong></p>
+      <ul style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px;padding-left:20px"><li>Six in total. <strong>None exist yet.</strong></li><li><strong>Links to articles, not videos.</strong> The feature article owns the video; a second route to it goes stale when one is re-recorded.</li></ul>
+      <div class="section-heading">The rule that makes it work</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>The walkthrough is never duplicated into a Learning section.</strong> Tiers 2 and 3 link only.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">Two copies drift, and AI:den would surface both — so a reader gets whichever version ranked higher that day, with no way to tell it is the stale one.</p>
+      <div class="section-heading">The failure mode to watch</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>A link-only pathway article ranks poorly in AI:den, and can surface instead of the article that actually answers the question.</strong></p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">So tier 3 needs enough prose to earn its place — what this pathway is for, who it suits, what someone will be able to do at the end of it. A page of bare links is worse than no page, because it competes with the articles it points at.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">This has not been tested. It is one of two research angles that never ran, and it is the one that decides whether the tier 3 plan works at all.</p>
+      <div class="section-heading">What sits outside this</div>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Playbook is internal staff onboarding only.</strong> It is never the destination for client-facing content.</p>
+      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>The series assessment</strong> is a Google Form with Certify'em, not an article. An Intercom article cannot score, gate or record completion, which is why certification lives outside the schema entirely.</p>
+    </div>
+<!-- STANDARDS-VIEWS:END -->
 
   </main>
 </div>

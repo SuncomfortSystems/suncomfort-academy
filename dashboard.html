@@ -2461,7 +2461,7 @@ COURSES['reed-script-l1-s5-c3'] = {
   contentType: "Walkthrough",
   pathLabel: "The basics · Series 4: Getting paid · Walkthrough 3 of 6",
   title: "Raise a credit note",
-  duration: "4 min",
+  duration: "2 min",
   persona: "Office teams",
   characters: "Claire Hudson (Administrator — Financial office staff)",
   scenario: "Dr Sean Spencer was overcharged on the heat pump installation invoice Claire raised, and he has already paid it in full. Claire raises a credit note against that invoice to correct the balance. Because the money is already in, the credit has to go back to him as a refund rather than sit on the account.",
@@ -2472,7 +2472,7 @@ COURSES['reed-script-l1-s5-c3'] = {
   ],
   productionSetup: [
     "Logged-in user: Claire Hudson, Administrator, Financial office staff",
-    "Customer record: Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA, account no 1999. The whole of Series 5 is recorded against this person — do not substitute another customer.",
+    "Customer record: Dr Sean Spencer, account no 1999. The whole of Series 5 is recorded against this person — do not substitute another customer.",
     "Existing data: The Final invoice raised against Dr Spencer's heat pump installation — invoice 1003, \"Residential Heat Pump Installation\", £648.00 — overcharged by £48, so a credit note can be raised against it and the line items pre-fill. A payment must already be recorded against that invoice, since it is what makes the refund route available: with nothing paid there is no credit to return. The credit note this walkthrough produces is credit note 2, \"Credit for Overpayment\", −£48.00, which is already on the record. Payment methods configured in settings, so a refund method can be selected. His History section populated, since both the credit note and the refund are reached from there.",
     "Assets required: None"
   ],
@@ -2481,17 +2481,19 @@ COURSES['reed-script-l1-s5-c3'] = {
     {section:"Two routes to a credit note", media:"Screen recording", note:"Capture both starting points: customer profile → Quick Links → Invoices → Add new credit note, and invoice/job → Quick Links → Raise credit note in the Financial section. Both are real screens, so this stays one row."},
     {section:"Raising the credit note", media:"Screen recording", note:"Capture the credit note form — description, date, breakdown style, line items pre-filled via the invoice route — through to save and the entry appearing in Dr Spencer's History."},
     {section:"Refunding the credit", media:"Screen recording", note:"Capture customer record → History → View credit note → Quick Links → Refund remaining credit → description, date, amount, payment method → Receive credit."},
-    {section:"Knowledge check", media:"Expanding section", note:"Two questions at the foot of the article, each revealing its answer on click. Nothing is scored."},
+    {section:"Practise this", media:"Written text", note:"Article copy above the check. Nothing to record."},
+    {section:"Check what you know", media:"Expanding section", note:"Two questions at the foot of the article, each revealing its answer on click. Nothing is scored."},
     {section:"Summary", media:"Written text", note:"Recap text only — no recording needed."}
   ],
   scenes: [
-    {type:"section", heading:"Introduction", body:"Correcting an invoice is not the same as changing it. Deleting or editing an issued invoice destroys the audit trail and leaves the customer holding a document the system no longer recognises. A credit note does the opposite: the original invoice stays exactly as it was charged, the credit note records the correction beside it, and the account balance reflects the net position of the two. At SunComfort, Dr Spencer has been overcharged on the installation invoice he has already paid, so Claire raises a credit note and returns the money rather than leaving a credit sitting on his account."},
+    {type:"section", heading:"Introduction", body:"Correcting an invoice is not the same as changing it. Deleting or editing an issued invoice destroys the audit trail and leaves the customer holding a document the system no longer recognises. A credit note does the opposite: the original invoice stays exactly as it was charged, the credit note records the correction beside it, and the account balance reflects the net position of the two. At SunComfort, Dr Spencer has been overcharged on the installation invoice he has already paid, so Claire raises a credit note and returns the money rather than leaving a credit sitting on his account.\n\nA credit note starts from an invoice that has already been issued and needs correcting. Where you intend to return the money rather than leave a credit sitting on the account, a payment has to be recorded against that invoice too, because with nothing paid there is nothing to return. By the end you will be able to raise a credit note against an invoice, take the route that pre-fills the original items, and refund the credit rather than leaving it on the account."},
     {type:"section", heading:"Two routes to a credit note", body:"There are two ways to raise a credit note in your account, and which to use depends on whether the credit relates to a specific invoice. The first runs from the customer record: Claire opens Quick Links and chooses Add new credit note, which sits under the Invoices heading in that panel. That is the route for a general account credit not tied to a particular invoice, and it means adding the details by hand before saving.\n\nThe second runs from the invoice itself. Claire opens the invoice, selects Quick Links in the top right and chooses Raise credit note under the Financial section. This route pre-fills the credit note with the items from the original invoice, which saves time when crediting all or part of a specific charge. The pre-filled items can be adjusted, and the total is always worth reviewing before saving."},
     {type:"section", heading:"Raising the credit note", body:"Whichever route is taken, the form asks for a description and a date, and offers the same breakdown style options as a standard invoice. The credit note then appears in the customer's History and reduces the outstanding balance on their account — or shows as in credit where there is no balance left to reduce."},
     {type:"section", heading:"Refunding the credit", body:"Dr Spencer has already paid, so the credit goes back to him rather than waiting against a future invoice. Claire goes to his customer record, finds the credit note in the History section and clicks View. She opens Quick Links and selects Refund remaining credit, then enters a description, the date and the refund amount, which can be the full credit or part of it.\n\nShe selects the payment method for the refund and clicks Receive credit to confirm. The credit note updates to show the amount refunded, and any credit still remaining stays on the account."},
-    {type:"reflection", label:"Check what you know", question:"An invoice has gone out with the wrong amount on it. Why does Claire raise a credit note rather than editing or deleting the original invoice?", options:[], correct:"", feedback:"Because the original invoice is the record of what the customer was actually charged, and the customer is holding a copy of it. Editing or deleting it breaks the audit trail and leaves them with a document your account no longer recognises. A credit note leaves the original untouched and records the correction alongside it, so both appear in the customer's History and the account balance shows the net of the two."},
-    {type:"reflection", label:"Check what you know", question:"Claire is crediting an overcharge on one specific invoice and wants the credit note to arrive with the invoice line items already filled in. Which route should she take, and what does the other one do?", options:[], correct:"", feedback:"She takes the invoice route: open the invoice or job, Quick Links, then Raise credit note under Financial. That pre-fills the items from the original invoice and she adjusts the ones being partly credited. The customer profile route, Quick Links then Add new credit note, starts empty and is for a general credit on the account that does not relate to a particular invoice."},
-    {type:"section", heading:"Summary", body:"A credit note is raised either from the customer record for a general credit, or from the invoice itself, which pre-fills the original items and is quicker when crediting a specific charge. Either way the original invoice stays exactly as it was and the correction sits beside it, which is what keeps the audit trail intact. The credit reduces the outstanding balance, or shows as in credit where there is nothing left to reduce. Where the customer has already paid, Refund remaining credit returns the money rather than leaving it sitting on their account."}
+    {type:"section", heading:"Practise this", body:"Before you open the screen, write down what you would expect to happen to a customer's balance when a credit note is raised against an invoice they have already paid in full — where the money sits, and what has to happen for it to reach them again. Then open a paid invoice in your own account and look at what the Quick Links menu offers, without raising anything."},
+    {type:"reflection", label:"Knowledge check", question:"An invoice has gone out with the wrong amount on it. Why does Claire raise a credit note rather than editing or deleting the original invoice?", options:[], correct:"", feedback:"Because the original invoice is the record of what the customer was actually charged, and the customer is holding a copy of it. Editing or deleting it breaks the audit trail and leaves them with a document your account no longer recognises. A credit note leaves the original untouched and records the correction alongside it, so both appear in the customer's History and the account balance shows the net of the two."},
+    {type:"reflection", label:"Knowledge check", question:"Claire is crediting an overcharge on one specific invoice and wants the credit note to arrive with the invoice line items already filled in. Which route should she take, and what does the other one do?", options:[], correct:"", feedback:"She takes the invoice route: open the invoice or job, Quick Links, then Raise credit note under Financial. That pre-fills the items from the original invoice and she adjusts the ones being partly credited. The customer profile route, Quick Links then Add new credit note, starts empty and is for a general credit on the account that does not relate to a particular invoice."},
+    {type:"section", heading:"Summary", body:"A credit note is raised either from the customer record for a general credit, or from the invoice itself, which pre-fills the original items and is quicker when crediting a specific charge. Either way the original invoice stays exactly as it was and the correction sits beside it, which is what keeps the audit trail intact. The credit reduces the outstanding balance, or shows as in credit where there is nothing left to reduce. Where the customer has already paid, Refund remaining credit returns the money rather than leaving it sitting on their account.\n\nYou will know you have got this when the customer's History shows both documents — the original invoice unchanged and the credit note beside it — and the balance reads the net of the two rather than either figure on its own."}
   ],
   openItems: "(1) The invoice route has never been checked live. Opening the invoice or job, selecting Quick Links in the top right and choosing Raise credit note under the Financial section comes from the Help Centre only. The customer profile route was confirmed live on 2026-07-27; this one was not, because no invoice existed to test it against at the time. There is one now, so confirm on screen before recording.",
   helpCentreIssues: ""
@@ -2500,7 +2502,7 @@ COURSES['reed-script-l1-s5-c4'] = {
   contentType: "Walkthrough",
   pathLabel: "The basics · Series 4: Getting paid · Walkthrough 4 of 6",
   title: "Send a customer statement",
-  duration: "3 min",
+  duration: "1 min",
   persona: "Office teams",
   characters: "Claire Hudson (Administrator — Financial office staff)",
   scenario: "Dr Sean Spencer has an outstanding balance with SunComfort — the Solar Emergency Callout invoice, still unpaid — and has asked what he currently owes. Claire generates a statement and sends it so he can see the position on one page and pay.",
@@ -2511,7 +2513,7 @@ COURSES['reed-script-l1-s5-c4'] = {
   ],
   productionSetup: [
     "Logged-in user: Claire Hudson, Administrator, Financial office staff",
-    "Customer record: Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA — account no 1999. The same record as the rest of the series. Ten Spencers exist in the account, so go by the account number.",
+    "Customer record: Dr Sean Spencer, account no 1999. The same record as the rest of the series. Ten Spencers exist in the account, so go by the account number.",
     "Existing data: The account as Walkthroughs 1 to 3 leave it: invoice 1003 \"Residential Heat Pump Installation\" £648.00 settled, credit note 2 \"Credit for Overpayment\" −£48.00 allocated, and invoice 1004 \"Solar Emergency Callout\" £600.00 still outstanding — which is the balance the statement reports. The statement email template configured in settings, since the email option uses it. Note that this record has a single contact, so the group by customer contact option appears but has nothing to split; the narration treats it as an option rather than demonstrating it.",
     "Assets required: None"
   ],
@@ -2519,16 +2521,18 @@ COURSES['reed-script-l1-s5-c4'] = {
     {section:"Introduction", media:"Written text", note:"Article copy only — no recording needed."},
     {section:"What a statement contains", media:"Written text", note:"Article copy only — the snapshot of outstanding invoices and credit notes, and the no-date-filtering constraint. Nothing to record: this is what the document contains, not a screen."},
     {section:"Sending the statement", media:"Screen recording", note:"Capture customer dashboard → Quick Links → Send statement → the group-by-contact option → the PDF review → the three delivery options, ending on the email being sent with invoices attached."},
-    {section:"Knowledge check", media:"Expanding section", note:"Two questions at the foot of the article, each revealing its answer on click. Nothing is scored."},
+    {section:"Practise this", media:"Written text", note:"Article copy above the check. Nothing to record."},
+    {section:"Check what you know", media:"Expanding section", note:"Two questions at the foot of the article, each revealing its answer on click. Nothing is scored."},
     {section:"Summary", media:"Written text", note:"Recap text only — no recording needed."}
   ],
   scenes: [
-    {type:"section", heading:"Introduction", body:"A statement answers the question a customer asks constantly: what do I actually owe you. Rather than sending them back through a stack of individual invoices, it puts every unpaid invoice and every unallocated credit note on one page with a single balance at the bottom. Used as a routine rather than only on request, it is one of the cheapest ways to shorten the time between finishing work and being paid for it. At SunComfort, Dr Spencer's account still carries the Solar Emergency Callout, and he has asked what is outstanding, so Claire sends him a statement."},
+    {type:"section", heading:"Introduction", body:"A statement answers the question a customer asks constantly: what do I actually owe you. Rather than sending them back through a stack of individual invoices, it puts every unpaid invoice and every unallocated credit note on one page with a single balance at the bottom. Used as a routine rather than only on request, it is one of the cheapest ways to shorten the time between finishing work and being paid for it. At SunComfort, Dr Spencer's account still carries the Solar Emergency Callout, and he has asked what is outstanding, so Claire sends him a statement.\n\nYou need a customer with something open on their account: an unpaid invoice, or a credit note that has not been allocated. A statement is built from whatever is outstanding at the moment it is generated, so on a settled account there is nothing to send. By the end you will be able to generate a statement for a customer, decide whether to group it by contact, and send it in the form they need."},
     {type:"section", heading:"What a statement contains", body:"A customer statement in Commusoft is a snapshot of the customer's financial position at the moment it is generated. It lists all unpaid invoices and any unallocated credit notes, and shows the total outstanding balance. Statements do not currently support date filtering, so a statement always reflects the full outstanding balance rather than a chosen period. That matters when a customer asks for one covering a particular range of dates, because what they will receive is everything currently outstanding."},
     {type:"section", heading:"Sending the statement", body:"Claire opens the customer dashboard, selects Quick Links, and chooses Send statement. Before it goes anywhere she decides whether to group the statement by customer contact. It makes no difference on Dr Spencer's account, which has a single contact, but on a commercial account where different people handle different invoices it splits the statement so each contact sees only their own. She reviews the generated PDF to confirm the details are right. Three delivery options are then available. Print opens the PDF in a new browser tab for printing or saving. Email lets her pick the recipient, adjust the message using the statement email template, and optionally attach the individual invoices, up to sixteen megabytes in total. Download saves the PDF straight to the device. Claire emails it, with the invoices attached, because the account wants to check the detail against its own records."},
-    {type:"reflection", label:"Check what you know", question:"Dr Spencer asks Claire for a statement covering only the invoices raised in the last three months. What can she send, and what should she tell them?", options:[], correct:"", feedback:"She can only send the full statement. Commusoft statements do not support date filtering, so what generates is every unpaid invoice and unallocated credit note currently on the account, whenever it was raised. She should say so when she sends it, rather than letting them assume the document is limited to the period they asked for and reconcile it against the wrong figure."},
-    {type:"reflection", label:"Check what you know", question:"A commercial account has three contacts, and different people there deal with different invoices. What should Claire do when generating the statement, and why?", options:[], correct:"", feedback:"She groups the statement by customer contact. That splits the outstanding items so each contact sees the invoices they are responsible for rather than the whole account, which means nobody has to work out which lines are theirs before they can act. On a single-contact record like Dr Spencer's the option is there but changes nothing."},
-    {type:"section", heading:"Summary", body:"A customer statement lists all unpaid invoices and unallocated credit notes at the point it is generated, and date filtering is not currently available. To send one, open the customer dashboard, select Quick Links, and choose Send statement. Decide whether to group by customer contact, review the PDF, then print, email or download it. When emailing, the individual invoices can be attached alongside the summary. The statement is a prompt for payment, and used consistently it keeps outstanding balances visible and shortens the wait to be paid."}
+    {type:"section", heading:"Practise this", body:"Open a customer in your own account who has something outstanding, generate a statement and read the PDF without sending it. Check the closing balance against what you believe that customer owes. Nothing goes out until you choose to send it, so this is safe to try on a live account — and if the balance surprises you, that is the walkthrough earning its place."},
+    {type:"reflection", label:"Knowledge check", question:"Dr Spencer asks Claire for a statement covering only the invoices raised in the last three months. What can she send, and what should she tell them?", options:[], correct:"", feedback:"She can only send the full statement. Commusoft statements do not support date filtering, so what generates is every unpaid invoice and unallocated credit note currently on the account, whenever it was raised. She should say so when she sends it, rather than letting them assume the document is limited to the period they asked for and reconcile it against the wrong figure."},
+    {type:"reflection", label:"Knowledge check", question:"A commercial account has three contacts, and different people there deal with different invoices. What should Claire do when generating the statement, and why?", options:[], correct:"", feedback:"She groups the statement by customer contact. That splits the outstanding items so each contact sees the invoices they are responsible for rather than the whole account, which means nobody has to work out which lines are theirs before they can act. On a single-contact record like Dr Spencer's the option is there but changes nothing."},
+    {type:"section", heading:"Summary", body:"A customer statement lists all unpaid invoices and unallocated credit notes at the point it is generated, and date filtering is not currently available. To send one, open the customer dashboard, select Quick Links, and choose Send statement. Decide whether to group by customer contact, review the PDF, then print, email or download it. When emailing, the individual invoices can be attached alongside the summary. The statement is a prompt for payment, and used consistently it keeps outstanding balances visible and shortens the wait to be paid.\n\nYou will know you have got this when the statement you generate lists every unpaid invoice on that account, nothing that has already been settled, and a closing balance that matches what your own records say the customer owes."}
   ],
   openItems: "(1) The route and the three delivery options are unverified. Opening the customer dashboard and selecting Quick Links then Send statement comes from the Help Centre. Quick Links on the customer record was seen live on 2026-07-27 and does carry Send statement under a Statements heading, which supports the route. The grouping option, the PDF review step and the sixteen megabyte attachment limit have not been seen on screen. Confirm before recording.\n(2) The no date filtering constraint is stated in the Help Centre article and has never been tested. If it has since changed, this walkthrough teaches a limitation that no longer exists, and both knowledge check Q1 and the Summary depend on it. Worth one check.",
   helpCentreIssues: ""
@@ -2537,10 +2541,10 @@ COURSES['reed-script-l1-s5-c5'] = {
   contentType: "Walkthrough",
   pathLabel: "The basics · Series 4: Getting paid · Walkthrough 5 of 6",
   title: "Sync an invoice to your accounting package",
-  duration: "4 min",
+  duration: "2 min",
   persona: "Office teams",
   characters: "Claire Hudson (Administrator — Financial office staff)",
-  scenario: "SunComfort uses Xero. The invoice Claire raised for Dr Sean Spencer's heat pump installation, and marked as paid in Walkthrough 2, now needs to reach the accounting package. Claire checks what is queued, chooses when data is sent, and confirms it has gone across.",
+  scenario: "SunComfort uses Xero. The invoice Claire raised for Dr Sean Spencer's heat pump installation, now paid, needs to reach the accounting package. Claire checks what is queued, chooses when data is sent, and confirms it has gone across.",
   objectives: [
     "Identify which accounting packages Commusoft integrates with",
     "Distinguish between automatic and manual sync and select the appropriate mode",
@@ -2558,18 +2562,20 @@ COURSES['reed-script-l1-s5-c5'] = {
     {section:"Choosing when data is sent", media:"Animated slides", note:"One narrated sequence built from assets 02, 03 and 04: Quick links opening to show every option, then the two send modes, then the confirmation step. No screen recording — no package is connected."},
     {section:"What the other settings control", media:"Animated slides", note:"One narrated sequence from assets 05 and 06: the Edit customer/supplier and Import payment toggles, then the cut off date choice. Asset 05 carries the tooltip explaining that a customer edit travels to the package — keep it legible at full size."},
     {section:"Using the dashboard", media:"Animated slides", note:"One narrated sequence from assets 01 and 07: the pipeline first, then the drill-down showing the record types and Mark as do not send."},
-    {section:"Knowledge check", media:"Expanding section", note:"Two questions at the foot of the article, each revealing its answer on click. Nothing is scored."},
+    {section:"Practise this", media:"Written text", note:"Article copy above the check. Nothing to record."},
+    {section:"Check what you know", media:"Expanding section", note:"Two questions at the foot of the article, each revealing its answer on click. Nothing is scored."},
     {section:"Summary", media:"Written text", note:"Recap text only — no recording needed."}
   ],
   scenes: [
-    {type:"section", heading:"Introduction", body:"The point of an accounting integration is that nobody types anything twice. Invoices, credit notes and payments raised in Commusoft flow through to the accounting package on their own, which removes both the work and the transcription errors that come with it. Setting the integration up is an administrator job and happens once. The part that repeats belongs to the office team: watching the queue, pushing data when it needs pushing, and noticing when something has not gone across. At SunComfort, the invoice Claire raised for Dr Spencer and marked as paid now needs to reach Xero."},
+    {type:"section", heading:"Introduction", body:"The point of an accounting integration is that nobody types anything twice. Invoices, credit notes and payments raised in Commusoft flow through to the accounting package on their own, which removes both the work and the transcription errors that come with it. Setting the integration up is an administrator job and happens once. The part that repeats belongs to the office team: watching the queue, pushing data when it needs pushing, and noticing when something has not gone across. At SunComfort, the invoice Claire raised for Dr Spencer and marked as paid now needs to reach Xero.\n\nThis one assumes your accounting package is already connected, which is an administrator job done once, and that there are invoices, credit notes or payments waiting to travel. By the end you will be able to read the integration dashboard, tell whether a given record has reached the accounting package, and push data when it needs pushing."},
     {type:"section", heading:"Supported packages", body:"Commusoft integrates with a range of accounting packages: Xero, QuickBooks Online, FreeAgent, Sage 200, Sage Business Cloud, Sage 50 in the UK only, Kashflow, and QuickBooks Desktop Enterprise in the US only. An account administrator sets the integration up once, and from then on invoices, credit notes and payments created in Commusoft flow through without being re-entered. Whichever package a business uses, the screen the office team works from is the same, because the Accounting Integration Dashboard is part of Commusoft rather than part of the package."},
     {type:"section", heading:"Choosing when data is sent", body:"Every setting for the integration sits behind Quick links on the dashboard: change settings, change data transfer settings, change the cut off date, reconnect the package, link customers and suppliers, and delete the integration. Claire opens Change data transfer settings, where Commusoft offers two modes. Automatically sends records every two hours with no action from anyone. The alternative sends them only when someone presses the Send data button on the dashboard. She confirms on the next step, where the choice is repeated back and she ticks to confirm the details are correct. While an integration is new, manual is the safer choice, because it stops incomplete or incorrect data reaching the accounting package before the mappings have been checked. Once an administrator is satisfied everything maps correctly, automatic can be turned on, and the setting can be changed back at any time."},
     {type:"section", heading:"What the other settings control", body:"Two more settings shape what actually moves. Edit customer and supplier decides whether changes made in Commusoft are pushed onward, so with it switched on, changing a customer's address in Commusoft changes it in the accounting package too. Import payment governs whether payments come back the other way. Separately, the cut off date decides how far back to reach: everything ever entered into Commusoft, or only records dated from a chosen day onward. Whichever date is chosen, every customer is sent regardless — the date restricts the financial records, not the customer list."},
     {type:"section", heading:"Using the dashboard", body:"The dashboard reads left to right: Waiting to be sent, then Processing, then Failed and Successful. Claire checks what is sitting in Waiting to be sent before pushing anything, and selecting View opens that queue broken down by record type — customers, invoices, payments, credit notes, and the supplier equivalents — each carrying its own count. Anything that should not go across at all can be marked as do not send, and those records collect on their own tab. Claire selects Send data now, then confirms the records have moved into Successful. Where something lands in Failed, the reason sits against the record, and two causes account for most of them: a customer that has never been linked between the two systems, and a missing nominal code mapping. Commusoft is not responsible for the quality of the data going across, so what is right in Commusoft before the sync is what is right in the accounting package after it."},
-    {type:"reflection", label:"Check what you know", question:"SunComfort has just connected its accounting package and Claire is asked whether data should send automatically every two hours or only when she presses Send data. Which should she choose while the integration is new, and why?", options:[], correct:"", feedback:"She chooses the manual option, sending only when she presses Send data. Until the mappings between Commusoft and the accounting package have been checked, an automatic push every two hours sends whatever happens to be queued, mistakes included, and those records then have to be corrected in the accounting package rather than in Commusoft. Once an administrator has confirmed everything maps correctly, automatic can be switched on, and the setting can be changed back at any point."},
-    {type:"reflection", label:"Check what you know", question:"An invoice Claire raised this morning has not appeared in the accounting package, even though data is set to send automatically. Where does she look, and what are the likely causes?", options:[], correct:"", feedback:"The Accounting Integration Dashboard. The invoice will be sitting in one of four places — waiting to be sent, processing, failed, or successful — and which one tells her immediately whether it is queued, stuck or rejected. If it is in Failed, the reason shows against the record itself. The two most common are a customer that has never been linked between the two systems and a missing nominal code mapping."},
-    {type:"section", heading:"Summary", body:"Commusoft integrates with Xero, QuickBooks Online, FreeAgent, Sage, Kashflow and others. Records send either automatically every two hours or only when someone presses Send data, and that choice, along with the cut off date and whether customer edits and payments travel, sits behind Quick links on the dashboard. The dashboard itself shows what is waiting, what is processing, what succeeded and what failed, broken down by record type. Check the queue before pushing, confirm records reach Successful afterwards, and read the reason against anything that fails. What is accurate in Commusoft before the sync is what is accurate in the accounting package after it."}
+    {type:"section", heading:"Practise this", body:"Open your own Accounting Integration Dashboard and read the queue. Note how many records are waiting to be sent and whether anything is sitting in Failed — reading it changes nothing, so this is safe on a live account. If something has failed, the reason shown against the record is the most useful thing on the screen. If your account has no accounting package connected, write down instead which records you would expect to travel across and which you would not."},
+    {type:"reflection", label:"Knowledge check", question:"SunComfort has just connected its accounting package and Claire is asked whether data should send automatically every two hours or only when she presses Send data. Which should she choose while the integration is new, and why?", options:[], correct:"", feedback:"She chooses the manual option, sending only when she presses Send data. Until the mappings between Commusoft and the accounting package have been checked, an automatic push every two hours sends whatever happens to be queued, mistakes included, and those records then have to be corrected in the accounting package rather than in Commusoft. Once an administrator has confirmed everything maps correctly, automatic can be switched on, and the setting can be changed back at any point."},
+    {type:"reflection", label:"Knowledge check", question:"An invoice Claire raised this morning has not appeared in the accounting package, even though data is set to send automatically. Where does she look, and what are the likely causes?", options:[], correct:"", feedback:"The Accounting Integration Dashboard. The invoice will be sitting in one of four places — waiting to be sent, processing, failed, or successful — and which one tells her immediately whether it is queued, stuck or rejected. If it is in Failed, the reason shows against the record itself. The two most common are a customer that has never been linked between the two systems and a missing nominal code mapping."},
+    {type:"section", heading:"Summary", body:"Commusoft integrates with Xero, QuickBooks Online, FreeAgent, Sage, Kashflow and others. Records send either automatically every two hours or only when someone presses Send data, and that choice, along with the cut off date and whether customer edits and payments travel, sits behind Quick links on the dashboard. The dashboard itself shows what is waiting, what is processing, what succeeded and what failed, broken down by record type. Check the queue before pushing, confirm records reach Successful afterwards, and read the reason against anything that fails. What is accurate in Commusoft before the sync is what is accurate in the accounting package after it.\n\nYou will know you have got this when you can open the dashboard and say, for an invoice raised today, whether it has reached your accounting package or is still waiting to go."}
   ],
   openItems: "(1) The assets come from two different accounting packages. Assets 01 to 04 show Xero and assets 05 to 07 show QuickBook, because neither source recording covers the whole journey on its own. Decide whether to accept the mix, mask the package name field so none of them names one, or capture a single clean set once a package is connected.\n(2) Assets 01 to 04 carry a warning banner reading that the Xero account details are no longer valid and need reconnecting. It sits directly behind the Quick links menu and both modals, so it cannot be cut out without clipping the interface. Decide whether it is acceptable or whether it needs recapturing.\n(3) The assets carry visible dates from 2021 and 2022 in the Data last sent on and Financial cut-off date fields. Nothing in them is wrong, but they will read as old to anyone who looks closely.\n(4) The supported package list needs a date check before publishing. It came from the Help Centre in July and integration lists change.\n(5) Correct the one-way claim at source. Sara confirms it is not correct that the integrations run one way with only Xero and QuickBooks Online reconciling payments back. That claim was banked in the Accounting Integrations blog work on 2026-07-13 and carried into this script's open items labelled \"do not lose this in editing\", which is why it survived several reviews. It is out of this script now, but it is still sitting in the blog source and will be picked up again by whoever writes from it next.",
   helpCentreIssues: ""
@@ -2578,7 +2584,7 @@ COURSES['reed-script-l1-s5-c6'] = {
   contentType: "Walkthrough",
   pathLabel: "The basics · Series 4: Getting paid · Walkthrough 6 of 6",
   title: "Raise a consolidated invoice",
-  duration: "4 min",
+  duration: "1 min",
   persona: "Office teams",
   characters: "Claire Hudson (Administrator — Financial office staff)",
   scenario: "SunComfort has completed two maintenance jobs for Dr Sean Spencer on the same day — a solar maintenance and service visit, and a general maintenance visit. Rather than sending two separate invoices, Claire raises a single consolidated invoice covering both.",
@@ -2589,7 +2595,7 @@ COURSES['reed-script-l1-s5-c6'] = {
   ],
   productionSetup: [
     "Logged-in user: Claire Hudson, Administrator, Financial office staff",
-    "Customer record: Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA — account no 1999. The same record as the rest of the series. Ten Spencers exist in the account, so go by the account number.",
+    "Customer record: Dr Sean Spencer, account no 1999. The same record as the rest of the series. Ten Spencers exist in the account, so go by the account number.",
     "Existing data: Two completed jobs on this record, both dated the same day — job 1022 \"Solar Maintenance & Service\" and job 1023 \"General Maintenance\" — so the filters have something to select. One of the two with no total price set, so the blank Total price column appears on screen and the fill-it-in step is real rather than described. The account on Go Paperless or above, since the feature is gated. Neither job currently carries a future diary event, so the Final warning will not fire on its own — see open item 1.",
     "Assets required: None"
   ],
@@ -2597,16 +2603,18 @@ COURSES['reed-script-l1-s5-c6'] = {
     {section:"Introduction", media:"Written text", note:"Article copy only — what a consolidated invoice is and the Go Paperless plan requirement."},
     {section:"Building the consolidated invoice", media:"Screen recording", note:"Capture customer record → Quick Links → Add new consolidated invoice → description, dates, filters to select jobs 1022 and 1023, filling the blank Total price field, the grand total → save."},
     {section:"The Final invoice type warning", media:"Screen recording", note:"Capture selecting Final against a job that has a future appointment, holding on the confirmation warning long enough to read its wording. The separate gif this row used to call for has been dropped: the warning appears in the recording, and a gif would be a second block on the page showing the same thing."},
-    {section:"Knowledge check", media:"Expanding section", note:"Two questions at the foot of the article, each revealing its answer on click. Nothing is scored."},
+    {section:"Practise this", media:"Written text", note:"Article copy above the check. Nothing to record."},
+    {section:"Check what you know", media:"Expanding section", note:"Two questions at the foot of the article, each revealing its answer on click. Nothing is scored."},
     {section:"Summary", media:"Written text", note:"Recap text only — no recording needed."}
   ],
   scenes: [
-    {type:"section", heading:"Introduction", body:"A consolidated invoice combines multiple job invoices into a single document. Instead of one invoice per visit, the office sends one invoice covering all the work completed in a period. It is most common on commercial accounts, where the client's finance team expects a single monthly or quarterly bill rather than a stream of individual ones. At SunComfort, Dr Spencer has had two maintenance jobs completed on the same day, and rather than send two invoices Claire bills them together. Consolidated invoicing is available on the Go Paperless plan and above, so the account tier decides whether the option is there at all."},
+    {type:"section", heading:"Introduction", body:"A consolidated invoice combines multiple job invoices into a single document. Instead of one invoice per visit, the office sends one invoice covering all the work completed in a period. It is most common on commercial accounts, where the client's finance team expects a single monthly or quarterly bill rather than a stream of individual ones. At SunComfort, Dr Spencer has had two maintenance jobs completed on the same day, and rather than send two invoices Claire bills them together. Consolidated invoicing is available on the Go Paperless plan and above, so the account tier decides whether the option is there at all.\n\nConsolidated invoicing needs more than one completed job on the same customer, each ready to be invoiced, and an account on a plan that offers the feature. By the end you will be able to combine several jobs onto one invoice and check each job's invoice type before it is committed."},
     {type:"section", heading:"Building the consolidated invoice", body:"Claire opens the customer record and selects Quick Links, then Add new consolidated invoice, which sits under the Invoices heading in that panel. She enters a description; the invoice number is generated automatically. She checks the invoice date and payment due date, and adds a business unit, user group or invoice notes where the account needs them. She then uses the filters to select the jobs to include. Any job where the total price has not been set appears with a blank field in the Total price column, and those have to be filled in before she can go on — one of the two jobs is sitting like that. She checks the invoice type set against each job, then reviews the calculated grand total before saving."},
     {type:"section", heading:"The Final invoice type warning", body:"Choosing Final as the invoice type for any job in the consolidation triggers a confirmation warning: finalising that job's invoice will cancel any future diary events booked against it. This matters where further visits are planned but have not yet been raised as separate jobs, because those appointments disappear with the confirmation. Claire checks each job's status before selecting Final, to be sure the work is genuinely finished and nothing is still booked in."},
-    {type:"reflection", label:"Check what you know", question:"Why would a customer ask for a consolidated invoice instead of one invoice per job, and what does SunComfort keep by using the feature rather than just totalling the jobs by hand?", options:[], correct:"", feedback:"They want one document to check and pay once, rather than several arriving separately. Using the feature rather than adding the jobs up manually means SunComfort keeps the individual job records intact behind the single invoice number, so the detail of each visit is still there when anyone queries a line."},
-    {type:"reflection", label:"Check what you know", question:"Claire is building a consolidated invoice and one of the jobs has a follow-up appointment booked for next week. She selects Final as the invoice type for that job. What happens, and what should she do?", options:[], correct:"", feedback:"Commusoft shows a confirmation warning telling her that finalising the invoice will cancel any future diary events for that job. She should not confirm. Final means the job is finished, and this one is not — the follow-up visit would be removed from the diary and nobody would know until the customer asked where the technician was."},
-    {type:"section", heading:"Summary", body:"A consolidated invoice is raised from the customer record through Quick Links. Enter the description, check the dates, select the jobs using the filters, fill in any missing totals, and check the invoice types before saving. The invoice number is generated automatically. Selecting Final for any included job triggers a warning that future diary events for that job will be cancelled, so check each job's status before confirming. Once saved, the consolidated invoice appears in the customer's History under a single invoice number that links back to all the jobs it covers."}
+    {type:"section", heading:"Practise this", body:"Look at a customer of your own with more than one completed job in the last month, and decide whether they would rather have a single bill or one per visit. Then write down what it would take to bill them that way as a routine rather than on request — when you would run it, and who would notice if you stopped. That decision is the customer's, not the software's."},
+    {type:"reflection", label:"Knowledge check", question:"Why would a customer ask for a consolidated invoice instead of one invoice per job, and what does SunComfort keep by using the feature rather than just totalling the jobs by hand?", options:[], correct:"", feedback:"They want one document to check and pay once, rather than several arriving separately. Using the feature rather than adding the jobs up manually means SunComfort keeps the individual job records intact behind the single invoice number, so the detail of each visit is still there when anyone queries a line."},
+    {type:"reflection", label:"Knowledge check", question:"Claire is building a consolidated invoice and one of the jobs has a follow-up appointment booked for next week. She selects Final as the invoice type for that job. What happens, and what should she do?", options:[], correct:"", feedback:"Commusoft shows a confirmation warning telling her that finalising the invoice will cancel any future diary events for that job. She should not confirm. Final means the job is finished, and this one is not — the follow-up visit would be removed from the diary and nobody would know until the customer asked where the technician was."},
+    {type:"section", heading:"Summary", body:"A consolidated invoice is raised from the customer record through Quick Links. Enter the description, check the dates, select the jobs using the filters, fill in any missing totals, and check the invoice types before saving. The invoice number is generated automatically. Selecting Final for any included job triggers a warning that future diary events for that job will be cancelled, so check each job's status before confirming. Once saved, it appears in the customer's History under a single invoice number that links back to every job it covers. That is the part worth having: the client gets one bill to approve and pay, and the business keeps each visit's detail intact behind it for when someone queries a line.\n\nYou will know you have got this when the consolidated invoice sits in the customer's History under a single number, and its total equals the jobs you selected with nothing typed in by hand."}
   ],
   openItems: "(1) The Final invoice type warning cannot currently be shown. Both jobs on this record are marked with no future events, so choosing Final will not trigger the cancellation warning that this walkthrough teaches. Either book a future appointment against one of the two jobs before recording that section, or accept that the warning is described rather than demonstrated. It is the one part of this walkthrough with nothing on screen behind it.\n(2) Everything after the first click is unverified. The filters, the blank Total price column, the per-job invoice type column and the Final warning all come from the Help Centre. Nobody has raised a consolidated invoice on screen. Confirm before recording.\n(3) Plan gating needs checking against the current plan names. This script says Go Paperless and above. Sara's invoice types reference gives it as Go Paperless or All-in-one and above. Confirm which is current before recording, because it is stated in the Introduction and a learner on the wrong tier will go looking for an option that is not there.",
   helpCentreIssues: ""
@@ -14780,12 +14788,11 @@ Kept for provenance, and held under its own heading so it stays out of the dashb
 
 INBOX_FILES["reed-script-l1-s5-c3"] = `# Reed — Script: Raise a credit note
 
-**Layer:** 1 — Office teams path
-**Series:** 5 of 9 — Getting paid
-**Walkthrough:** 3 of 6
-**Format:** Walkthrough
+**Series:** The basics · Series 4: Getting paid | **Walkthrough:** 3 of 6 | **Duration:** 2 min | **Audience:** Office teams
+
 **Voice:** Archer (Clueso AI voiceover)
-**Date:** 2026-08-17
+
+**Date:** 2026-09-09
 
 ---
 
@@ -14800,8 +14807,6 @@ INBOX_FILES["reed-script-l1-s5-c3"] = `# Reed — Script: Raise a credit note
 
 **Scenario:** Dr Sean Spencer was overcharged on the heat pump installation invoice Claire raised, and he has already paid it in full. Claire raises a credit note against that invoice to correct the balance. Because the money is already in, the credit has to go back to him as a refund rather than sit on the account.
 
-**Estimated length:** 4 minutes
-
 **Target audience:** Office teams at field service businesses using Commusoft — finance staff and administrators responsible for managing invoice corrections. Assumes Commusoft Compass (Layer 1), Office teams Series 1, Series 3, Series 4, and Series 5 Walkthroughs 1 and 2 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
 
 **Assumed starting point:** Commusoft Compass (Layer 1), Office teams Series 1, Series 3, Series 4, and Series 5 Walkthroughs 1 and 2 complete.
@@ -14813,7 +14818,7 @@ INBOX_FILES["reed-script-l1-s5-c3"] = `# Reed — Script: Raise a credit note
 ## Production Setup
 
 1. **Logged-in user:** Claire Hudson, Administrator, Financial office staff
-2. **Customer record:** Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA, account no 1999. **The whole of Series 5 is recorded against this person — do not substitute another customer.**
+2. **Customer record:** Dr Sean Spencer, account no 1999. **The whole of Series 5 is recorded against this person — do not substitute another customer.**
 3. **Existing data:** The Final invoice raised against Dr Spencer's heat pump installation — **invoice 1003, "Residential Heat Pump Installation", £648.00** — overcharged by £48, so a credit note can be raised against it and the line items pre-fill. **A payment must already be recorded against that invoice**, since it is what makes the refund route available: with nothing paid there is no credit to return. The credit note this walkthrough produces is **credit note 2, "Credit for Overpayment", −£48.00**, which is already on the record. Payment methods configured in settings, so a refund method can be selected. His History section populated, since both the credit note and the refund are reached from there.
 4. **Assets required:** None
 
@@ -14822,6 +14827,8 @@ INBOX_FILES["reed-script-l1-s5-c3"] = `# Reed — Script: Raise a credit note
 ## Introduction
 
 Correcting an invoice is not the same as changing it. Deleting or editing an issued invoice destroys the audit trail and leaves the customer holding a document the system no longer recognises. A credit note does the opposite: the original invoice stays exactly as it was charged, the credit note records the correction beside it, and the account balance reflects the net position of the two. At SunComfort, Dr Spencer has been overcharged on the installation invoice he has already paid, so Claire raises a credit note and returns the money rather than leaving a credit sitting on his account.
+
+A credit note starts from an invoice that has already been issued and needs correcting. Where you intend to return the money rather than leave a credit sitting on the account, a payment has to be recorded against that invoice too, because with nothing paid there is nothing to return. By the end you will be able to raise a credit note against an invoice, take the route that pre-fills the original items, and refund the credit rather than leaving it on the account.
 
 ---
 
@@ -14846,6 +14853,12 @@ Dr Spencer has already paid, so the credit goes back to him rather than waiting 
 She selects the payment method for the refund and clicks Receive credit to confirm. The credit note updates to show the amount refunded, and any credit still remaining stays on the account.
 
 ---
+## Practise this
+
+Before you open the screen, write down what you would expect to happen to a customer's balance when a credit note is raised against an invoice they have already paid in full — where the money sits, and what has to happen for it to reach them again. Then open a paid invoice in your own account and look at what the Quick Links menu offers, without raising anything.
+
+---
+
 **Check what you know**
 
 **Q1.** An invoice has gone out with the wrong amount on it. Why does Claire raise a credit note rather than editing or deleting the original invoice?
@@ -14857,9 +14870,13 @@ She selects the payment method for the refund and clicks Receive credit to confi
 **A.** She takes the invoice route: open the invoice or job, Quick Links, then Raise credit note under Financial. That pre-fills the items from the original invoice and she adjusts the ones being partly credited. The customer profile route, Quick Links then Add new credit note, starts empty and is for a general credit on the account that does not relate to a particular invoice.
 
 
+---
+
 ## Summary
 
 A credit note is raised either from the customer record for a general credit, or from the invoice itself, which pre-fills the original items and is quicker when crediting a specific charge. Either way the original invoice stays exactly as it was and the correction sits beside it, which is what keeps the audit trail intact. The credit reduces the outstanding balance, or shows as in credit where there is nothing left to reduce. Where the customer has already paid, Refund remaining credit returns the money rather than leaving it sitting on their account.
+
+You will know you have got this when the customer's History shows both documents — the original invoice unchanged and the credit note beside it — and the balance reads the net of the two rather than either figure on its own.
 
 ---
 
@@ -14871,6 +14888,7 @@ A credit note is raised either from the customer record for a general credit, or
 | Two routes to a credit note | Screen recording | Capture both starting points: customer profile → Quick Links → Invoices → Add new credit note, and invoice/job → Quick Links → Raise credit note in the Financial section. Both are real screens, so this stays one row. |
 | Raising the credit note | Screen recording | Capture the credit note form — description, date, breakdown style, line items pre-filled via the invoice route — through to save and the entry appearing in Dr Spencer's History. |
 | Refunding the credit | Screen recording | Capture customer record → History → View credit note → Quick Links → Refund remaining credit → description, date, amount, payment method → Receive credit. |
+| Practise this | Written text | Article copy above the check. Nothing to record. |
 | Check what you know | Expanding section | Two questions at the foot of the article, each revealing its answer on click. Nothing is scored. |
 | Summary | Written text | Recap text only — no recording needed. |
 
@@ -14885,6 +14903,8 @@ A credit note is raised either from the customer record for a general credit, or
 ## Resolved history
 
 Kept for provenance, and held under its own heading so it stays out of the dashboard's Open items panel.
+
+[REVISED 2026-09-09 — **brought to the five-block standard**, per The Mager objective and Watch, do, check. Practise this added, a criterion added to the Summary, and the conditions and learning objective written into the Introduction. Header converted to the pipe format: the old form said "Series 5 of 9", wrong twice over, since this is Series 4 of The basics. The \`---\` before the Summary was missing, which let the injector's check parser run past it and swallow the Summary into the second answer. Duration reset to the video only at 180 words a minute, confirmed by Sara 2026-09-09; the old figure was whole-page reading time. Nothing was padded. Address dropped from Production Setup in favour of the account number, since this walkthrough does not turn on one.]
 
 [RESOLVED 2026-08-17 — narrative and customer. The script instructed the learner directly and named Mrs Margaret Thompson at 42 Oakwood Drive, Sevenoaks, an address that does not exist anywhere in the 1,000-customer file. Rewritten so Archer narrates and Claire carries out the actions in the third person present, on Dr Sean Spencer. **The thread now earns the refund**: he paid in full in Walkthrough 2, so the credit cannot simply offset a future invoice and has to be returned, which is why that section exists at all.]
 
@@ -14902,7 +14922,7 @@ Kept for provenance, and held under its own heading so it stays out of the dashb
 **Voice:** Archer narrates; Claire Hudson carries out every on-screen action, third person present; "you" used only for guidance about the learner's own business
 **Media test:** applied 2026-08-17. No section needs splitting — both credit note routes are real screens, so "Two routes to a credit note" builds from one Screen recording row.
 **Characters from approved roster:** Claire Hudson (Administrator — Financial office staff)
-**Customer from the 1,000-customer import:** Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA, account no 1999
+**Customer from the 1,000-customer import:** Dr Sean Spencer, account no 1999
 **Sources used:** Commusoft — Managing invoices (https://help.commusoft.com/en/articles/216679-managing-invoices)
 **Pre-submission checklist:** complete
 **Flint revisions:** Full SCL format pass 2026-07-28. Narrative and customer pass 2026-08-17: converted to the three-voices standard, customer aligned to the series thread, knowledge check Q1 replaced, open items renumbered so they render as a checklist.
@@ -14910,12 +14930,11 @@ Kept for provenance, and held under its own heading so it stays out of the dashb
 
 INBOX_FILES["reed-script-l1-s5-c4"] = `# Reed — Script: Send a customer statement
 
-**Layer:** 1 — Office teams path
-**Series:** 5 of 9 — Getting paid
-**Walkthrough:** 4 of 6
-**Format:** Walkthrough
+**Series:** The basics · Series 4: Getting paid | **Walkthrough:** 4 of 6 | **Duration:** 1 min | **Audience:** Office teams
+
 **Voice:** Archer (Clueso AI voiceover)
-**Date:** 2026-08-17
+
+**Date:** 2026-09-09
 
 ---
 
@@ -14930,8 +14949,6 @@ INBOX_FILES["reed-script-l1-s5-c4"] = `# Reed — Script: Send a customer statem
 
 **Scenario:** Dr Sean Spencer has an outstanding balance with SunComfort — the Solar Emergency Callout invoice, still unpaid — and has asked what he currently owes. Claire generates a statement and sends it so he can see the position on one page and pay.
 
-**Estimated length:** 3 minutes
-
 **Target audience:** Office teams at field service businesses using Commusoft — finance staff and administrators responsible for managing customer account communications. Assumes Commusoft Compass (Layer 1), Office teams Series 1, Series 3, Series 4, and Series 5 Walkthroughs 1 to 3 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
 
 **Assumed starting point:** Commusoft Compass (Layer 1), Office teams Series 1, Series 3, Series 4, and Series 5 Walkthroughs 1 to 3 complete.
@@ -14943,7 +14960,7 @@ INBOX_FILES["reed-script-l1-s5-c4"] = `# Reed — Script: Send a customer statem
 ## Production Setup
 
 1. **Logged-in user:** Claire Hudson, Administrator, Financial office staff
-2. **Customer record:** **Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA — account no 1999.** The same record as the rest of the series. Ten Spencers exist in the account, so go by the account number.
+2. **Customer record:** **Dr Sean Spencer, account no 1999.** The same record as the rest of the series. Ten Spencers exist in the account, so go by the account number.
 3. **Existing data:** The account as Walkthroughs 1 to 3 leave it: **invoice 1003 "Residential Heat Pump Installation" £648.00 settled, credit note 2 "Credit for Overpayment" −£48.00 allocated, and invoice 1004 "Solar Emergency Callout" £600.00 still outstanding** — which is the balance the statement reports. The statement email template configured in settings, since the email option uses it. **Note that this record has a single contact**, so the group by customer contact option appears but has nothing to split; the narration treats it as an option rather than demonstrating it.
 4. **Assets required:** None
 
@@ -14952,6 +14969,8 @@ INBOX_FILES["reed-script-l1-s5-c4"] = `# Reed — Script: Send a customer statem
 ## Introduction
 
 A statement answers the question a customer asks constantly: what do I actually owe you. Rather than sending them back through a stack of individual invoices, it puts every unpaid invoice and every unallocated credit note on one page with a single balance at the bottom. Used as a routine rather than only on request, it is one of the cheapest ways to shorten the time between finishing work and being paid for it. At SunComfort, Dr Spencer's account still carries the Solar Emergency Callout, and he has asked what is outstanding, so Claire sends him a statement.
+
+You need a customer with something open on their account: an unpaid invoice, or a credit note that has not been allocated. A statement is built from whatever is outstanding at the moment it is generated, so on a settled account there is nothing to send. By the end you will be able to generate a statement for a customer, decide whether to group it by contact, and send it in the form they need.
 
 ---
 
@@ -14966,6 +14985,12 @@ A customer statement in Commusoft is a snapshot of the customer's financial posi
 Claire opens the customer dashboard, selects Quick Links, and chooses Send statement. Before it goes anywhere she decides whether to group the statement by customer contact. It makes no difference on Dr Spencer's account, which has a single contact, but on a commercial account where different people handle different invoices it splits the statement so each contact sees only their own. She reviews the generated PDF to confirm the details are right. Three delivery options are then available. Print opens the PDF in a new browser tab for printing or saving. Email lets her pick the recipient, adjust the message using the statement email template, and optionally attach the individual invoices, up to sixteen megabytes in total. Download saves the PDF straight to the device. Claire emails it, with the invoices attached, because the account wants to check the detail against its own records.
 
 ---
+## Practise this
+
+Open a customer in your own account who has something outstanding, generate a statement and read the PDF without sending it. Check the closing balance against what you believe that customer owes. Nothing goes out until you choose to send it, so this is safe to try on a live account — and if the balance surprises you, that is the walkthrough earning its place.
+
+---
+
 **Check what you know**
 
 **Q1.** Dr Spencer asks Claire for a statement covering only the invoices raised in the last three months. What can she send, and what should she tell them?
@@ -14977,9 +15002,13 @@ Claire opens the customer dashboard, selects Quick Links, and chooses Send state
 **A.** She groups the statement by customer contact. That splits the outstanding items so each contact sees the invoices they are responsible for rather than the whole account, which means nobody has to work out which lines are theirs before they can act. On a single-contact record like Dr Spencer's the option is there but changes nothing.
 
 
+---
+
 ## Summary
 
 A customer statement lists all unpaid invoices and unallocated credit notes at the point it is generated, and date filtering is not currently available. To send one, open the customer dashboard, select Quick Links, and choose Send statement. Decide whether to group by customer contact, review the PDF, then print, email or download it. When emailing, the individual invoices can be attached alongside the summary. The statement is a prompt for payment, and used consistently it keeps outstanding balances visible and shortens the wait to be paid.
+
+You will know you have got this when the statement you generate lists every unpaid invoice on that account, nothing that has already been settled, and a closing balance that matches what your own records say the customer owes.
 
 ---
 
@@ -14990,6 +15019,7 @@ A customer statement lists all unpaid invoices and unallocated credit notes at t
 | Introduction | Written text | Article copy only — no recording needed. |
 | What a statement contains | Written text | Article copy only — the snapshot of outstanding invoices and credit notes, and the no-date-filtering constraint. Nothing to record: this is what the document contains, not a screen. |
 | Sending the statement | Screen recording | Capture customer dashboard → Quick Links → Send statement → the group-by-contact option → the PDF review → the three delivery options, ending on the email being sent with invoices attached. |
+| Practise this | Written text | Article copy above the check. Nothing to record. |
 | Check what you know | Expanding section | Two questions at the foot of the article, each revealing its answer on click. Nothing is scored. |
 | Summary | Written text | Recap text only — no recording needed. |
 
@@ -15006,6 +15036,8 @@ A customer statement lists all unpaid invoices and unallocated credit notes at t
 ## Resolved history
 
 Kept for provenance, and held under its own heading so it stays out of the dashboard's Open items panel.
+
+[REVISED 2026-09-09 — **brought to the five-block standard**, per The Mager objective and Watch, do, check. Practise this added, a criterion added to the Summary, and the conditions and learning objective written into the Introduction. Header converted to the pipe format: the old form said "Series 5 of 9", wrong twice over, since this is Series 4 of The basics. The \`---\` before the Summary was missing, which let the injector's check parser run past it and swallow the Summary into the second answer. Duration reset to the video only at 180 words a minute, confirmed by Sara 2026-09-09; the old figure was whole-page reading time. Nothing was padded. Address dropped from Production Setup in favour of the account number, since this walkthrough does not turn on one.]
 
 [SUPERSEDED 2026-08-17 — this walkthrough moved to Dr Sean Spencer. Sara confirms the statement and the consolidated invoice were both recorded against him, so the whole series runs on one customer as the one-thread rule requires. The note below concerned The Rose & Crown, which this script no longer uses. Kept because the address error it describes is still live in 13 other scripts. ORIGINAL NOTE: the customer address was invented. The script had The Rose & Crown at "128 High Street, Guildford, Surrey, GU1 3HZ", which appears nowhere in the 1,000-customer file. The real record is **16-20 London Road, Guildford, GU1 2AF**, which is what the live account has held since the address rebuild on 2026-08-13. An earlier version of this note claimed no recording could ever have shown the old address because it never existed in the account. That did not follow, and it is moot in any case: **the account had no customers when Series 5 was first recorded, so the whole series is being re-recorded.** This script is written for that new recording.]
 
@@ -15025,7 +15057,7 @@ Kept for provenance, and held under its own heading so it stays out of the dashb
 **Voice:** Archer narrates; Claire Hudson carries out every on-screen action, third person present; "you" used only for guidance about the learner's own business
 **Media test:** applied 2026-08-17. No section needs splitting — "Sending the statement" is a single continuous screen path, and "What a statement contains" has no screen at all, which is why it is Written text rather than folded into the recording.
 **Characters from approved roster:** Claire Hudson (Administrator — Financial office staff)
-**Customer:** Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA, account no 1999 — a purpose-built record, not the Mr Sean Spencer in the 1,000-customer import
+**Customer:** Dr Sean Spencer, account no 1999 — a purpose-built record, not the Mr Sean Spencer in the 1,000-customer import
 **Sources used:** Commusoft — Send statement (https://help.commusoft.com/en/articles/216465-send-statement)
 **Pre-submission checklist:** complete
 **Flint revisions:** Full SCL format pass 2026-07-28. Narrative and customer pass 2026-08-17: converted to the three-voices standard, invented address corrected to the real record, both knowledge check questions rewritten, open items renumbered so they render as a checklist.
@@ -15033,12 +15065,11 @@ Kept for provenance, and held under its own heading so it stays out of the dashb
 
 INBOX_FILES["reed-script-l1-s5-c5"] = `# Reed — Script: Sync an invoice to your accounting package
 
-**Layer:** 1 — Office teams path
-**Series:** 5 of 9 — Getting paid
-**Walkthrough:** 5 of 6
-**Format:** Walkthrough
+**Series:** The basics · Series 4: Getting paid | **Walkthrough:** 5 of 6 | **Duration:** 2 min | **Audience:** Office teams
+
 **Voice:** Archer (Clueso AI voiceover)
-**Date:** 2026-08-17
+
+**Date:** 2026-09-09
 
 ---
 
@@ -15051,9 +15082,7 @@ INBOX_FILES["reed-script-l1-s5-c5"] = `# Reed — Script: Sync an invoice to you
 
 **SunComfort characters:** Claire Hudson (Administrator — Financial office staff)
 
-**Scenario:** SunComfort uses Xero. The invoice Claire raised for Dr Sean Spencer's heat pump installation, and marked as paid in Walkthrough 2, now needs to reach the accounting package. Claire checks what is queued, chooses when data is sent, and confirms it has gone across.
-
-**Estimated length:** 4 minutes
+**Scenario:** SunComfort uses Xero. The invoice Claire raised for Dr Sean Spencer's heat pump installation, now paid, needs to reach the accounting package. Claire checks what is queued, chooses when data is sent, and confirms it has gone across.
 
 **Target audience:** Office teams at field service businesses using Commusoft — finance staff and administrators responsible for keeping Commusoft and an external accounting package in sync. Assumes Commusoft Compass (Layer 1), Office teams Series 1, Series 3, Series 4, and Series 5 Walkthroughs 1 to 4 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
 
@@ -15083,6 +15112,8 @@ INBOX_FILES["reed-script-l1-s5-c5"] = `# Reed — Script: Sync an invoice to you
 
 The point of an accounting integration is that nobody types anything twice. Invoices, credit notes and payments raised in Commusoft flow through to the accounting package on their own, which removes both the work and the transcription errors that come with it. Setting the integration up is an administrator job and happens once. The part that repeats belongs to the office team: watching the queue, pushing data when it needs pushing, and noticing when something has not gone across. At SunComfort, the invoice Claire raised for Dr Spencer and marked as paid now needs to reach Xero.
 
+This one assumes your accounting package is already connected, which is an administrator job done once, and that there are invoices, credit notes or payments waiting to travel. By the end you will be able to read the integration dashboard, tell whether a given record has reached the accounting package, and push data when it needs pushing.
+
 ---
 
 ## Supported packages
@@ -15108,6 +15139,12 @@ Two more settings shape what actually moves. Edit customer and supplier decides 
 The dashboard reads left to right: Waiting to be sent, then Processing, then Failed and Successful. Claire checks what is sitting in Waiting to be sent before pushing anything, and selecting View opens that queue broken down by record type — customers, invoices, payments, credit notes, and the supplier equivalents — each carrying its own count. Anything that should not go across at all can be marked as do not send, and those records collect on their own tab. Claire selects Send data now, then confirms the records have moved into Successful. Where something lands in Failed, the reason sits against the record, and two causes account for most of them: a customer that has never been linked between the two systems, and a missing nominal code mapping. Commusoft is not responsible for the quality of the data going across, so what is right in Commusoft before the sync is what is right in the accounting package after it.
 
 ---
+## Practise this
+
+Open your own Accounting Integration Dashboard and read the queue. Note how many records are waiting to be sent and whether anything is sitting in Failed — reading it changes nothing, so this is safe on a live account. If something has failed, the reason shown against the record is the most useful thing on the screen. If your account has no accounting package connected, write down instead which records you would expect to travel across and which you would not.
+
+---
+
 **Check what you know**
 
 **Q1.** SunComfort has just connected its accounting package and Claire is asked whether data should send automatically every two hours or only when she presses Send data. Which should she choose while the integration is new, and why?
@@ -15119,9 +15156,13 @@ The dashboard reads left to right: Waiting to be sent, then Processing, then Fai
 **A.** The Accounting Integration Dashboard. The invoice will be sitting in one of four places — waiting to be sent, processing, failed, or successful — and which one tells her immediately whether it is queued, stuck or rejected. If it is in Failed, the reason shows against the record itself. The two most common are a customer that has never been linked between the two systems and a missing nominal code mapping.
 
 
+---
+
 ## Summary
 
 Commusoft integrates with Xero, QuickBooks Online, FreeAgent, Sage, Kashflow and others. Records send either automatically every two hours or only when someone presses Send data, and that choice, along with the cut off date and whether customer edits and payments travel, sits behind Quick links on the dashboard. The dashboard itself shows what is waiting, what is processing, what succeeded and what failed, broken down by record type. Check the queue before pushing, confirm records reach Successful afterwards, and read the reason against anything that fails. What is accurate in Commusoft before the sync is what is accurate in the accounting package after it.
+
+You will know you have got this when you can open the dashboard and say, for an invoice raised today, whether it has reached your accounting package or is still waiting to go.
 
 ---
 
@@ -15134,6 +15175,7 @@ Commusoft integrates with Xero, QuickBooks Online, FreeAgent, Sage, Kashflow and
 | Choosing when data is sent | Animated slides | One narrated sequence built from assets 02, 03 and 04: Quick links opening to show every option, then the two send modes, then the confirmation step. No screen recording — no package is connected. |
 | What the other settings control | Animated slides | One narrated sequence from assets 05 and 06: the Edit customer/supplier and Import payment toggles, then the cut off date choice. Asset 05 carries the tooltip explaining that a customer edit travels to the package — keep it legible at full size. |
 | Using the dashboard | Animated slides | One narrated sequence from assets 01 and 07: the pipeline first, then the drill-down showing the record types and Mark as do not send. |
+| Practise this | Written text | Article copy above the check. Nothing to record. |
 | Check what you know | Expanding section | Two questions at the foot of the article, each revealing its answer on click. Nothing is scored. |
 | Summary | Written text | Recap text only — no recording needed. |
 
@@ -15157,6 +15199,8 @@ Commusoft integrates with Xero, QuickBooks Online, FreeAgent, Sage, Kashflow and
 
 Kept for provenance, and held under its own heading so it stays out of the dashboard's Open items panel.
 
+[REVISED 2026-09-09 — **brought to the five-block standard**, per The Mager objective and Watch, do, check. Practise this added, a criterion added to the Summary, and the conditions and learning objective written into the Introduction. Header converted to the pipe format: the old form said "Series 5 of 9", wrong twice over, since this is Series 4 of The basics. The \`---\` before the Summary was missing, which let the injector's check parser run past it and swallow the Summary into the second answer. Duration reset to the video only at 180 words a minute, confirmed by Sara 2026-09-09; the old figure was whole-page reading time. Nothing was padded. Address dropped from Production Setup in favour of the account number, since this walkthrough does not turn on one.]
+
 [RESOLVED 2026-08-17 — the walkthrough no longer needs a live integration. It was blocked on the fact that no SunComfort account has a package connected, and connecting one purely to demonstrate a send was judged not worth doing. Rebuilt from seven assets cut from three existing recordings, so every screen is real and nothing has to be linked. Sara confirmed this walkthrough had not been recorded, so the shape was free to change.]
 
 [REMOVED 2026-08-17 — the "accuracy guardrail" that had been carried as an open item since 2026-07-28, claiming the integrations run one way and that only Xero and QuickBooks Online reconcile payments back into Commusoft. It was added to the script and then taken out the same day: **Sara confirms the claim is not correct**, and separately that it does not belong here. This walkthrough teaches getting a record across to the package, not comparing what each package can do. The old open item was labelled "do not lose this in editing", which is why it kept surviving reviews — see open item 5 for correcting it at source.]
@@ -15179,12 +15223,11 @@ Kept for provenance, and held under its own heading so it stays out of the dashb
 
 INBOX_FILES["reed-script-l1-s5-c6"] = `# Reed — Script: Raise a consolidated invoice
 
-**Layer:** 1 — Office teams path
-**Series:** 5 of 9 — Getting paid
-**Walkthrough:** 6 of 6
-**Format:** Walkthrough
+**Series:** The basics · Series 4: Getting paid | **Walkthrough:** 6 of 6 | **Duration:** 1 min | **Audience:** Office teams
+
 **Voice:** Archer (Clueso AI voiceover)
-**Date:** 2026-08-17
+
+**Date:** 2026-09-09
 
 ---
 
@@ -15199,8 +15242,6 @@ INBOX_FILES["reed-script-l1-s5-c6"] = `# Reed — Script: Raise a consolidated i
 
 **Scenario:** SunComfort has completed two maintenance jobs for Dr Sean Spencer on the same day — a solar maintenance and service visit, and a general maintenance visit. Rather than sending two separate invoices, Claire raises a single consolidated invoice covering both.
 
-**Estimated length:** 4 minutes
-
 **Target audience:** Office teams at field service businesses using Commusoft — finance staff and administrators responsible for invoicing commercial clients. Assumes Commusoft Compass (Layer 1), Office teams Series 1, Series 3, Series 4, and Series 5 Walkthroughs 1 to 5 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
 
 **Assumed starting point:** Commusoft Compass (Layer 1), Office teams Series 1, Series 3, Series 4, and Series 5 Walkthroughs 1 to 5 complete.
@@ -15212,7 +15253,7 @@ INBOX_FILES["reed-script-l1-s5-c6"] = `# Reed — Script: Raise a consolidated i
 ## Production Setup
 
 1. **Logged-in user:** Claire Hudson, Administrator, Financial office staff
-2. **Customer record:** **Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA — account no 1999.** The same record as the rest of the series. Ten Spencers exist in the account, so go by the account number.
+2. **Customer record:** **Dr Sean Spencer, account no 1999.** The same record as the rest of the series. Ten Spencers exist in the account, so go by the account number.
 3. **Existing data:** Two completed jobs on this record, both dated the same day — **job 1022 "Solar Maintenance & Service" and job 1023 "General Maintenance"** — so the filters have something to select. **One of the two with no total price set**, so the blank Total price column appears on screen and the fill-it-in step is real rather than described. The account on Go Paperless or above, since the feature is gated. **Neither job currently carries a future diary event**, so the Final warning will not fire on its own — see open item 1.
 4. **Assets required:** None
 
@@ -15221,6 +15262,8 @@ INBOX_FILES["reed-script-l1-s5-c6"] = `# Reed — Script: Raise a consolidated i
 ## Introduction
 
 A consolidated invoice combines multiple job invoices into a single document. Instead of one invoice per visit, the office sends one invoice covering all the work completed in a period. It is most common on commercial accounts, where the client's finance team expects a single monthly or quarterly bill rather than a stream of individual ones. At SunComfort, Dr Spencer has had two maintenance jobs completed on the same day, and rather than send two invoices Claire bills them together. Consolidated invoicing is available on the Go Paperless plan and above, so the account tier decides whether the option is there at all.
+
+Consolidated invoicing needs more than one completed job on the same customer, each ready to be invoiced, and an account on a plan that offers the feature. By the end you will be able to combine several jobs onto one invoice and check each job's invoice type before it is committed.
 
 ---
 
@@ -15235,6 +15278,12 @@ Claire opens the customer record and selects Quick Links, then Add new consolida
 Choosing Final as the invoice type for any job in the consolidation triggers a confirmation warning: finalising that job's invoice will cancel any future diary events booked against it. This matters where further visits are planned but have not yet been raised as separate jobs, because those appointments disappear with the confirmation. Claire checks each job's status before selecting Final, to be sure the work is genuinely finished and nothing is still booked in.
 
 ---
+## Practise this
+
+Look at a customer of your own with more than one completed job in the last month, and decide whether they would rather have a single bill or one per visit. Then write down what it would take to bill them that way as a routine rather than on request — when you would run it, and who would notice if you stopped. That decision is the customer's, not the software's.
+
+---
+
 **Check what you know**
 
 **Q1.** Why would a customer ask for a consolidated invoice instead of one invoice per job, and what does SunComfort keep by using the feature rather than just totalling the jobs by hand?
@@ -15246,9 +15295,13 @@ Choosing Final as the invoice type for any job in the consolidation triggers a c
 **A.** Commusoft shows a confirmation warning telling her that finalising the invoice will cancel any future diary events for that job. She should not confirm. Final means the job is finished, and this one is not — the follow-up visit would be removed from the diary and nobody would know until the customer asked where the technician was.
 
 
+---
+
 ## Summary
 
-A consolidated invoice is raised from the customer record through Quick Links. Enter the description, check the dates, select the jobs using the filters, fill in any missing totals, and check the invoice types before saving. The invoice number is generated automatically. Selecting Final for any included job triggers a warning that future diary events for that job will be cancelled, so check each job's status before confirming. Once saved, the consolidated invoice appears in the customer's History under a single invoice number that links back to all the jobs it covers.
+A consolidated invoice is raised from the customer record through Quick Links. Enter the description, check the dates, select the jobs using the filters, fill in any missing totals, and check the invoice types before saving. The invoice number is generated automatically. Selecting Final for any included job triggers a warning that future diary events for that job will be cancelled, so check each job's status before confirming. Once saved, it appears in the customer's History under a single invoice number that links back to every job it covers. That is the part worth having: the client gets one bill to approve and pay, and the business keeps each visit's detail intact behind it for when someone queries a line.
+
+You will know you have got this when the consolidated invoice sits in the customer's History under a single number, and its total equals the jobs you selected with nothing typed in by hand.
 
 ---
 
@@ -15259,6 +15312,7 @@ A consolidated invoice is raised from the customer record through Quick Links. E
 | Introduction | Written text | Article copy only — what a consolidated invoice is and the Go Paperless plan requirement. |
 | Building the consolidated invoice | Screen recording | Capture customer record → Quick Links → Add new consolidated invoice → description, dates, filters to select jobs 1022 and 1023, filling the blank Total price field, the grand total → save. |
 | The Final invoice type warning | Screen recording | Capture selecting Final against a job that has a future appointment, holding on the confirmation warning long enough to read its wording. The separate gif this row used to call for has been dropped: the warning appears in the recording, and a gif would be a second block on the page showing the same thing. |
+| Practise this | Written text | Article copy above the check. Nothing to record. |
 | Check what you know | Expanding section | Two questions at the foot of the article, each revealing its answer on click. Nothing is scored. |
 | Summary | Written text | Recap text only — no recording needed. |
 
@@ -15278,6 +15332,8 @@ A consolidated invoice is raised from the customer record through Quick Links. E
 
 Kept for provenance, and held under its own heading so it stays out of the dashboard's Open items panel.
 
+[REVISED 2026-09-09 — **brought to the five-block standard**, per The Mager objective and Watch, do, check. Practise this added, a criterion added to the Summary, and the conditions and learning objective written into the Introduction. Header converted to the pipe format: the old form said "Series 5 of 9", wrong twice over, since this is Series 4 of The basics. The \`---\` before the Summary was missing, which let the injector's check parser run past it and swallow the Summary into the second answer. Duration reset to the video only at 180 words a minute, confirmed by Sara 2026-09-09; the old figure was whole-page reading time. Nothing was padded. Address dropped from Production Setup in favour of the account number, since this walkthrough does not turn on one.]
+
 [SUPERSEDED 2026-08-17 — this walkthrough moved to Dr Sean Spencer, on Sara's confirmation that it was recorded against him. The note below concerned The Rose & Crown, which this script no longer uses. ORIGINAL NOTE: the customer address was invented. The script had The Rose & Crown at "128 High Street, Guildford, Surrey, GU1 3HZ", an address that appears nowhere in the 1,000-customer file and never existed in the live account, so no recording can have shown it. The real record is **16-20 London Road, Guildford, GU1 2AF**. Same correction as Walkthrough 4, which uses the same account.]
 
 [RESOLVED 2026-08-17 — narrative and voice. The script instructed the learner directly throughout. Archer now narrates and Claire carries out every on-screen action in the third person present. The scenario also described "a commercial property management client" while the Production Setup named a pub; both now say The Rose & Crown.]
@@ -15296,7 +15352,7 @@ Kept for provenance, and held under its own heading so it stays out of the dashb
 **Voice:** Archer narrates; Claire Hudson carries out every on-screen action, third person present; "you" used only for guidance about the learner's own business
 **Media test:** applied 2026-08-17. No section needs splitting, and the plus on "The Final invoice type warning" has been dropped — one row is one block on the page, and the warning is already in the recording.
 **Characters from approved roster:** Claire Hudson (Administrator — Financial office staff)
-**Customer:** Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA, account no 1999 — a purpose-built record, not the Mr Sean Spencer in the 1,000-customer import
+**Customer:** Dr Sean Spencer, account no 1999 — a purpose-built record, not the Mr Sean Spencer in the 1,000-customer import
 **Sources used:** Commusoft — Managing invoices (https://help.commusoft.com/en/articles/216679-managing-invoices)
 **Pre-submission checklist:** complete
 **Flint revisions:** Full SCL format pass 2026-07-28. Narrative and customer pass 2026-08-17: converted to the three-voices standard, invented address corrected to the real record, knowledge check Q1 replaced, open items renumbered so they render as a checklist.

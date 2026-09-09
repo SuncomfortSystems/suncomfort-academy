@@ -1090,160 +1090,273 @@
     </div>
 
 <!-- STANDARDS-VIEWS:START -->
+<style>
+  [id^="view-std-"] { max-width: 900px; }
+  [id^="view-std-"] .section-heading {
+    font-size: 13px; font-weight: 600; color: var(--text-muted);
+    margin: 34px 0 14px; padding-bottom: 8px; border-bottom: 1px solid var(--border);
+    text-transform: uppercase; letter-spacing: 0.8px;
+  }
+  [id^="view-std-"] strong { font-weight: 600; color: var(--grey); }
+  [id^="view-std-"] p, [id^="view-std-"] li {
+    font-size: 14px; line-height: 1.65; color: var(--text);
+  }
+  [id^="view-std-"] p { margin: 0 0 12px; }
+  [id^="view-std-"] ul { margin: 0 0 12px; padding-left: 20px; }
+  [id^="view-std-"] li { margin-bottom: 5px; }
+  [id^="view-std-"] .std-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-left: 3px solid #00695c; border-radius: 6px;
+    padding: 16px 18px 6px; margin: 0 0 14px;
+  }
+  [id^="view-std-"] .std-card-title {
+    font-size: 15px; font-weight: 600; color: var(--grey); margin-bottom: 10px;
+  }
+  [id^="view-std-"] .std-quote {
+    border-left: 3px solid var(--blue1); background: var(--bg);
+    padding: 12px 16px; margin: 0 0 14px; border-radius: 0 4px 4px 0;
+    font-size: 14px; line-height: 1.65; color: var(--text);
+  }
+  [id^="view-std-"] .std-hr {
+    border: 0; border-top: 1px solid var(--border); margin: 26px 0;
+  }
+  [id^="view-std-"] table {
+    width: 100%; border-collapse: collapse; margin: 0 0 16px; font-size: 14px;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 6px; overflow: hidden;
+  }
+  [id^="view-std-"] th {
+    text-align: left; font-weight: 600; font-size: 12px; text-transform: uppercase;
+    letter-spacing: 0.5px; color: var(--text-muted); background: var(--bg);
+    padding: 9px 14px; border-bottom: 1px solid var(--border);
+  }
+  [id^="view-std-"] td {
+    padding: 10px 14px; line-height: 1.6; vertical-align: top;
+    border-bottom: 1px solid var(--border);
+  }
+  [id^="view-std-"] tr:last-child td { border-bottom: 0; }
+  [id^="view-std-"] tbody tr:nth-child(even) td { background: rgba(0,0,0,0.015); }
+  [id^="view-std-"] .std-flow {
+    display: flex; align-items: stretch; flex-wrap: wrap; margin: 4px 0 20px;
+  }
+  [id^="view-std-"] .std-flow-box {
+    flex: 1 1 0; min-width: 120px; background: var(--surface);
+    border: 1px solid var(--border); border-top: 3px solid #00695c;
+    border-radius: 6px; padding: 12px 14px; font-size: 14px; font-weight: 600;
+    color: var(--grey); text-align: center; display: flex; align-items: center;
+    justify-content: center;
+  }
+  [id^="view-std-"] .std-flow-arrow {
+    display: flex; align-items: center; padding: 0 10px;
+    color: var(--text-muted); font-size: 18px;
+  }
+  [id^="view-std-"] code {
+    background: var(--bg); padding: 1px 5px; border-radius: 3px; font-size: 13px;
+  }
+</style>
+
     <div id="view-std-the-mager-objective" class="view">
       <div class="page-heading"><h1>The Mager objective</h1><p><strong>Date:</strong> 2026-09-08 &middot; <strong>Methodology:</strong> Mager's three-part objective, with a value proposition added. This is the objective content inside a walkthrough - what the introduction and the summary have to say - not the whole structure. The article and walkthrough split follows Diataxis.</p></div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">A walkthrough carries five things. Four are written, one is the recording.</p>
+      <p>A walkthrough carries five things. Four are written, one is the recording.</p>
+      <div class="std-flow"><div class="std-flow-box">Introduction</div><div class="std-flow-arrow">&rarr;</div><div class="std-flow-box">Walkthrough</div><div class="std-flow-arrow">&rarr;</div><div class="std-flow-box">Practise this</div><div class="std-flow-arrow">&rarr;</div><div class="std-flow-box">Summary</div></div>
+      <hr class="std-hr">
       <div class="section-heading">The shape</div>
-      <table class="inbox-table" style="margin-bottom:16px"><thead><tr><th>Block</th><th>Media value</th><th>Carries</th></tr></thead><tbody><tr><td style="line-height:1.6;vertical-align:top">Introduction</td><td style="line-height:1.6;vertical-align:top">Written text</td><td style="line-height:1.6;vertical-align:top"><strong>Conditions</strong> and the <strong>learning objective</strong></td></tr><tr><td style="line-height:1.6;vertical-align:top">Body</td><td style="line-height:1.6;vertical-align:top">Screen recording</td><td style="line-height:1.6;vertical-align:top">The <strong>story walkthrough</strong></td></tr><tr><td style="line-height:1.6;vertical-align:top">Knowledge check</td><td style="line-height:1.6;vertical-align:top">Expanding section</td><td style="line-height:1.6;vertical-align:top">Two questions, each with an explained answer</td></tr><tr><td style="line-height:1.6;vertical-align:top">Summary</td><td style="line-height:1.6;vertical-align:top">Written text</td><td style="line-height:1.6;vertical-align:top">The <strong>value proposition</strong> and the <strong>criterion</strong></td></tr></tbody></table>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">These are the blocks Build by section already uses. Written text sits at the top and bottom of almost every article; this says what goes in them.</p>
+      <table><thead><tr><th>Block</th><th>Media value</th><th>Carries</th></tr></thead><tbody><tr><td>Introduction</td><td>Written text</td><td><strong>Conditions</strong> and the <strong>learning objective</strong></td></tr><tr><td>Body</td><td>Screen recording</td><td>The <strong>story walkthrough</strong></td></tr><tr><td>Knowledge check</td><td>Expanding section</td><td>Two questions, each with an explained answer</td></tr><tr><td>Summary</td><td>Written text</td><td>The <strong>value proposition</strong> and the <strong>criterion</strong></td></tr></tbody></table>
+      <p>These are the blocks Build by section already uses. Written text sits at the top and bottom of almost every article; this says what goes in them.</p>
+      <hr class="std-hr">
       <div class="section-heading">The five parts</div>
-      <div style="font-weight:600;font-size:15px;margin:18px 0 8px">Conditions</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>What it is.</strong> What must already exist in the learner's account for this walkthrough to make sense. Named things, in plain words.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Why we do it.</strong> So nobody starts something they cannot finish. A job description template is assembled out of skills, custom forms, arrive and leave workflows and labour rates. Someone without those needs to know before they begin, not four minutes in.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Rules.</strong></p>
-      <ul style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px;padding-left:20px"><li>Name the things, never other walkthroughs. Readers arrive at a page, not at the site, so the page stands on its own.</li><li>A sentence or two. If it needs more, the walkthrough is in the wrong place in the order.</li></ul>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">The same sentence does three jobs: scene-setting in the video, "before you begin" on the article, and the prerequisite when Success check a gate.</p>
-      <div style="font-weight:600;font-size:15px;margin:18px 0 8px">Learning objective</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>What it is.</strong> What the learner will be able to do afterwards, written so you could watch them do it.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Why we do it.</strong> It sets what the walkthrough owes the learner, which is what stops it drifting into a tour of a screen.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Rule.</strong> No <em>understand</em>, <em>know about</em>, <em>be familiar with</em> or <em>appreciate</em>. Nobody can observe understanding. If the verb has no visible outcome, the objective is not written yet.</p>
-      <div style="font-weight:600;font-size:15px;margin:18px 0 8px">Story walkthrough</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>What it is.</strong> SunComfort's staff carrying out the work on screen, narrated by Archer in the third person present.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Why we do it.</strong> Watching a business do the job teaches the shape of it. Being told to click things teaches the screen, which the Help Centre article already covers better.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Rule.</strong> Never tell the learner to click something. The learner watches, SunComfort acts. Archer turns to the learner only for guidance about their own business.</p>
-      <div style="font-weight:600;font-size:15px;margin:18px 0 8px">Value proposition</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>What it is.</strong> Why it is worth doing. What it saves, prevents, or stops going wrong.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Why we do it.</strong> Our learners choose whether to bother. Mager has no equivalent; we add it.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Rule.</strong> Describe the payoff, not the feature. "Templates hold a job's settings" is a description. "Every setting on this screen is one the office would otherwise choose job by job, on every job, and get wrong occasionally" is a payoff.</p>
-      <div style="font-weight:600;font-size:15px;margin:18px 0 8px">Criterion</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>What it is.</strong> How the learner checks their own account is right. Something they go and look at.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Why we do it.</strong> It turns "I watched it" into "mine is right", which is also what a gate needs to see.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Rules.</strong></p>
-      <ul style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px;padding-left:20px"><li>It has to be able to come out wrong. If the answer is always yes, it is a restatement, not a check.</li><li>Ours are state checks, not tolerances. A textbook Mager criterion reads <em>zero defects, within fifteen minutes</em>, which suits a task with countable defects. Configuring an account is not that. Ours name a state: the workflow is already on the job, the total matches with no line added by hand. Never invent a time limit or an error count to make one look tighter.</li></ul>
+      <div class="std-card"><div class="std-card-title">Conditions</div>
+      <p><strong>What it is.</strong> What must already exist in the learner's account for this walkthrough to make sense. Named things, in plain words.</p>
+      <p><strong>Why we do it.</strong> So nobody starts something they cannot finish. A job description template is assembled out of skills, custom forms, arrive and leave workflows and labour rates. Someone without those needs to know before they begin, not four minutes in.</p>
+      <p><strong>Rules.</strong></p>
+      <ul><li>Name the things, never other walkthroughs. Readers arrive at a page, not at the site, so the page stands on its own.</li><li>A sentence or two. If it needs more, the walkthrough is in the wrong place in the order.</li></ul>
+      <p>The same sentence does three jobs: scene-setting in the video, "before you begin" on the article, and the prerequisite when Success check a gate.</p>
+      </div>
+      <div class="std-card"><div class="std-card-title">Learning objective</div>
+      <p><strong>What it is.</strong> What the learner will be able to do afterwards, written so you could watch them do it.</p>
+      <p><strong>Why we do it.</strong> It sets what the walkthrough owes the learner, which is what stops it drifting into a tour of a screen.</p>
+      <p><strong>Rule.</strong> No <em>understand</em>, <em>know about</em>, <em>be familiar with</em> or <em>appreciate</em>. Nobody can observe understanding. If the verb has no visible outcome, the objective is not written yet.</p>
+      </div>
+      <div class="std-card"><div class="std-card-title">Story walkthrough</div>
+      <p><strong>What it is.</strong> SunComfort's staff carrying out the work on screen, narrated by Archer in the third person present.</p>
+      <p><strong>Why we do it.</strong> Watching a business do the job teaches the shape of it. Being told to click things teaches the screen, which the Help Centre article already covers better.</p>
+      <p><strong>Rule.</strong> Never tell the learner to click something. The learner watches, SunComfort acts. Archer turns to the learner only for guidance about their own business.</p>
+      </div>
+      <div class="std-card"><div class="std-card-title">Value proposition</div>
+      <p><strong>What it is.</strong> Why it is worth doing. What it saves, prevents, or stops going wrong.</p>
+      <p><strong>Why we do it.</strong> Our learners choose whether to bother. Mager has no equivalent; we add it.</p>
+      <p><strong>Rule.</strong> Describe the payoff, not the feature. "Templates hold a job's settings" is a description. "Every setting on this screen is one the office would otherwise choose job by job, on every job, and get wrong occasionally" is a payoff.</p>
+      </div>
+      <div class="std-card"><div class="std-card-title">Criterion</div>
+      <p><strong>What it is.</strong> How the learner checks their own account is right. Something they go and look at.</p>
+      <p><strong>Why we do it.</strong> It turns "I watched it" into "mine is right", which is also what a gate needs to see.</p>
+      <p><strong>Rules.</strong></p>
+      <ul><li>It has to be able to come out wrong. If the answer is always yes, it is a restatement, not a check.</li><li>Ours are state checks, not tolerances. A textbook Mager criterion reads <em>zero defects, within fifteen minutes</em>, which suits a task with countable defects. Configuring an account is not that. Ours name a state: the workflow is already on the job, the total matches with no line added by hand. Never invent a time limit or an error count to make one look tighter.</li></ul>
+      </div>
+      <hr class="std-hr">
       <div class="section-heading">Worked example — job description templates</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Introduction</strong> · Written text</p>
-      <div style="border-left:3px solid var(--blue1);padding:2px 0 2px 16px;margin:0 0 14px;font-size:14px;color:var(--text);line-height:1.6">Your skills, custom forms, arrive and leave workflows and labour rates need to be in place before this one, because a job description template is assembled out of them.<br><br>By the end you will be able to build a template that carries a job's settings, so the office picks a template rather than putting the job together by hand.</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>The video opens</strong> · Screen recording</p>
-      <div style="border-left:3px solid var(--blue1);padding:2px 0 2px 16px;margin:0 0 14px;font-size:14px;color:var(--text);line-height:1.6">Sophie has already built SunComfort's skills, forms and workflows. She opens Settings and starts a new job description template for a boiler service.</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Summary</strong> · Written text</p>
-      <div style="border-left:3px solid var(--blue1);padding:2px 0 2px 16px;margin:0 0 14px;font-size:14px;color:var(--text);line-height:1.6">Every setting on this screen is one the office would otherwise choose job by job, on every job, and get wrong occasionally. Building it once into the template means a service job is right by default.<br><br>You will know yours is right when you raise a job from the template and the report form, the skill requirement and the labour rate are already on it, without anyone choosing them.</div>
+      <p><strong>Introduction</strong> · Written text</p>
+      <div class="std-quote">Your skills, custom forms, arrive and leave workflows and labour rates need to be in place before this one, because a job description template is assembled out of them.<br><br>By the end you will be able to build a template that carries a job's settings, so the office picks a template rather than putting the job together by hand.</div>
+      <p><strong>The video opens</strong> · Screen recording</p>
+      <div class="std-quote">Sophie has already built SunComfort's skills, forms and workflows. She opens Settings and starts a new job description template for a boiler service.</div>
+      <p><strong>Summary</strong> · Written text</p>
+      <div class="std-quote">Every setting on this screen is one the office would otherwise choose job by job, on every job, and get wrong occasionally. Building it once into the template means a service job is right by default.<br><br>You will know yours is right when you raise a job from the template and the report form, the skill requirement and the labour rate are already on it, without anyone choosing them.</div>
+      <hr class="std-hr">
       <div class="section-heading">Worked example — raising an invoice from a job</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Introduction</strong></p>
-      <div style="border-left:3px solid var(--blue1);padding:2px 0 2px 16px;margin:0 0 14px;font-size:14px;color:var(--text);line-height:1.6">This picks up with a completed job that has parts and labour recorded against it.<br><br>By the end you will be able to raise an invoice from a completed job and account for every line on its total.</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>The video opens</strong></p>
-      <div style="border-left:3px solid var(--blue1);padding:2px 0 2px 16px;margin:0 0 14px;font-size:14px;color:var(--text);line-height:1.6">Jake has finished at Mrs Thompson's and recorded the parts he used. Sophie opens the job and raises the invoice from it.</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Summary</strong></p>
-      <div style="border-left:3px solid var(--blue1);padding:2px 0 2px 16px;margin:0 0 14px;font-size:14px;color:var(--text);line-height:1.6">Raising the invoice from the job rather than starting a blank one means the parts and labour are already on it. Nothing gets retyped, and nothing gets left off the bill.<br><br>You will know yours is right when the invoice total matches the job's parts and labour without anyone adding a line by hand.</div>
+      <p><strong>Introduction</strong></p>
+      <div class="std-quote">This picks up with a completed job that has parts and labour recorded against it.<br><br>By the end you will be able to raise an invoice from a completed job and account for every line on its total.</div>
+      <p><strong>The video opens</strong></p>
+      <div class="std-quote">Jake has finished at Mrs Thompson's and recorded the parts he used. Sophie opens the job and raises the invoice from it.</div>
+      <p><strong>Summary</strong></p>
+      <div class="std-quote">Raising the invoice from the job rather than starting a blank one means the parts and labour are already on it. Nothing gets retyped, and nothing gets left off the bill.<br><br>You will know yours is right when the invoice total matches the job's parts and labour without anyone adding a line by hand.</div>
+      <hr class="std-hr">
       <div class="section-heading">Three to watch</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>The criterion is not the knowledge check.</strong> The check tests whether they followed the walkthrough. The criterion sends them to their own account to look at something. Written as a second check question, the summary just repeats what the check asked.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>The conditions appear twice, in different words.</strong> The introduction states the prerequisite to the learner. The video states SunComfort's version of it as scene-setting, so the recording does not start mid-air. Two sentences, not one repeated.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Tours use recognition instead of a state check.</strong> A walkthrough that tours a finished account gives the learner nothing of their own to look at, so the criterion becomes <em>"you will know you have got this when you can open your own Service template and say what each field on it does to a job."</em> Anywhere the learner builds something, use the state check.</p>
+      <p><strong>The criterion is not the knowledge check.</strong> The check tests whether they followed the walkthrough. The criterion sends them to their own account to look at something. Written as a second check question, the summary just repeats what the check asked.</p>
+      <p><strong>The conditions appear twice, in different words.</strong> The introduction states the prerequisite to the learner. The video states SunComfort's version of it as scene-setting, so the recording does not start mid-air. Two sentences, not one repeated.</p>
+      <p><strong>Tours use recognition instead of a state check.</strong> A walkthrough that tours a finished account gives the learner nothing of their own to look at, so the criterion becomes <em>"you will know you have got this when you can open your own Service template and say what each field on it does to a job."</em> Anywhere the learner builds something, use the state check.</p>
+      <hr class="std-hr">
       <div class="section-heading">Where it comes from</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Mager's three-part objective</strong> — observable <strong>performance</strong>, the <strong>conditions</strong> it happens under, and the <strong>criterion</strong> for acceptable performance. Verbs like <em>understand</em> fail his test because no two people would agree on whether they had been met. <a href="https://www.acces.nysed.gov/bpss/writing-performance-objectives" target="_blank" rel="noopener" style="color:var(--blue1)">https://www.acces.nysed.gov/bpss/writing-performance-objectives</a></p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Diataxis</strong> sets the article and walkthrough split. A how-to guide is action and only action for someone already competent, with no digression or teaching. A tutorial serves the user at study rather than at work. So the article carries the click-by-click and the walkthrough carries the learning objective. <a href="https://diataxis.fr/how-to-guides/" target="_blank" rel="noopener" style="color:var(--blue1)">https://diataxis.fr/how-to-guides/</a> · <a href="https://diataxis.fr/tutorials-how-to/" target="_blank" rel="noopener" style="color:var(--blue1)">https://diataxis.fr/tutorials-how-to/</a></p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">Diataxis also sets which settings keep a detailed walkthrough: a how-to cannot promise safety because it operates on real work, a tutorial can because it is a rehearsal. The settings that earn a walkthrough are the ones where being wrong is expensive — irreversible, ordered, or dependent on something built elsewhere.</p>
+      <p><strong>Mager's three-part objective</strong> — observable <strong>performance</strong>, the <strong>conditions</strong> it happens under, and the <strong>criterion</strong> for acceptable performance. Verbs like <em>understand</em> fail his test because no two people would agree on whether they had been met. <a href="https://www.acces.nysed.gov/bpss/writing-performance-objectives" target="_blank" rel="noopener" style="color:var(--blue1)">https://www.acces.nysed.gov/bpss/writing-performance-objectives</a></p>
+      <p><strong>Diataxis</strong> sets the article and walkthrough split. A how-to guide is action and only action for someone already competent, with no digression or teaching. A tutorial serves the user at study rather than at work. So the article carries the click-by-click and the walkthrough carries the learning objective. <a href="https://diataxis.fr/how-to-guides/" target="_blank" rel="noopener" style="color:var(--blue1)">https://diataxis.fr/how-to-guides/</a> · <a href="https://diataxis.fr/tutorials-how-to/" target="_blank" rel="noopener" style="color:var(--blue1)">https://diataxis.fr/tutorials-how-to/</a></p>
+      <p>Diataxis also sets which settings keep a detailed walkthrough: a how-to cannot promise safety because it operates on real work, a tutorial can because it is a rehearsal. The settings that earn a walkthrough are the ones where being wrong is expensive — irreversible, ordered, or dependent on something built elsewhere.</p>
     </div>
 
     <div id="view-std-watch-do-check" class="view">
       <div class="page-heading"><h1>Watch, do, check</h1><p><strong>Date:</strong> 2026-09-09 &middot; <strong>Methodology:</strong> the learning pattern. What the learner does with a walkthrough, and why that order holds.</p></div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">The learner <strong>watches or reads</strong> something, <strong>does</strong> the thing, and then it is <strong>checked</strong>. Three stages, in that order, every time.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">It is a pattern for the learner, not a structure for the page. Where the content goes is <strong>The Mager objective</strong>; this is what the learner is doing while they are there.</p>
+      <p>The learner <strong>watches or reads</strong> something, <strong>does</strong> the thing, and then it is <strong>checked</strong>. Three stages, in that order, every time.</p>
+      <div class="std-flow"><div class="std-flow-box">Watch or read</div><div class="std-flow-arrow">&rarr;</div><div class="std-flow-box">Do</div><div class="std-flow-arrow">&rarr;</div><div class="std-flow-box">Check</div></div>
+      <p>It is a pattern for the learner, not a structure for the page. Where the content goes is <strong>The Mager objective</strong>; this is what the learner is doing while they are there.</p>
+      <hr class="std-hr">
       <div class="section-heading">The three stages</div>
-      <div style="font-weight:600;font-size:15px;margin:18px 0 8px">1. Watch or read</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">The recording, or the written blocks around it. SunComfort's staff carry out the work and Archer narrates.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>What it does.</strong> It supplies a worked example — the whole job done correctly, start to finish, before the learner attempts anything.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Why that helps.</strong> Novices learn more from studying a worked example than from being turned loose on the problem, and they get there with less time and less mental effort. Working memory is limited, and a learner who is simultaneously trying to work out <em>what</em> to do and <em>how</em> to do it spends most of it on the first question. The example removes that cost.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Its limit, which is the reason stage 2 exists.</strong> Watching produces a <strong>fluency illusion</strong>: repeated exposure feels like understanding, but familiarity and retrievability are different things. Recognising a screen when you see it again is not the same as being able to work it when you need to.</p>
-      <div style="font-weight:600;font-size:15px;margin:18px 0 8px">2. Do</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">A guided attempt at the real thing.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>What it does.</strong> It makes the learner produce the steps rather than receive them.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Why that helps.</strong> This is the <strong>generation effect</strong> — one of the most reliably replicated findings in the field, across ages, languages and material types, with a medium-to-large effect size across 86 studies. Producing something yourself beats consuming the same content, because generation forces connections to what you already know rather than letting the material wash past. The harder the retrieval, the stronger what is left behind.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">It is also the stage that breaks the fluency illusion, because it is the first point at which the learner finds out whether they can actually do it.</p>
-      <div style="font-weight:600;font-size:15px;margin:18px 0 8px">3. Check</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">Questions with an explained answer, at the foot of the article.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>What it does.</strong> It makes the learner retrieve what they learned instead of re-reading it.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Why that helps.</strong> The <strong>testing effect</strong>: retrieval strengthens retention more than further study does, even without feedback.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>The timing detail that matters here.</strong> On an immediate test, restudying beats being tested. On a delayed test, prior testing produces substantially better retention. So a knowledge check feels redundant to someone who has just watched the video — and that feeling is exactly why it gets cut. Its value shows up a week later, which is when the learner actually needs the knowledge.</p>
+      <div class="std-card"><div class="std-card-title">1. Watch or read</div>
+      <p>The recording, or the written blocks around it. SunComfort's staff carry out the work and Archer narrates.</p>
+      <p><strong>What it does.</strong> It supplies a worked example — the whole job done correctly, start to finish, before the learner attempts anything.</p>
+      <p><strong>Why that helps.</strong> Novices learn more from studying a worked example than from being turned loose on the problem, and they get there with less time and less mental effort. Working memory is limited, and a learner who is simultaneously trying to work out <em>what</em> to do and <em>how</em> to do it spends most of it on the first question. The example removes that cost.</p>
+      <p><strong>Its limit, which is the reason stage 2 exists.</strong> Watching produces a <strong>fluency illusion</strong>: repeated exposure feels like understanding, but familiarity and retrievability are different things. Recognising a screen when you see it again is not the same as being able to work it when you need to.</p>
+      </div>
+      <div class="std-card"><div class="std-card-title">2. Do</div>
+      <p>The learner produces the thing rather than receiving it.</p>
+      <p><strong>What it does.</strong> It makes the learner generate the steps instead of watching them.</p>
+      <p><strong>Why that helps.</strong> This is the <strong>generation effect</strong> — one of the most reliably replicated findings in the field, across ages, languages and material types, with a medium-to-large effect size across 86 studies. Producing something yourself beats consuming the same content, because generation forces connections to what you already know rather than letting the material wash past. The harder the retrieval, the stronger what is left behind.</p>
+      <p>It is also the stage that breaks the fluency illusion, because it is the first point at which the learner finds out whether they can actually do it.</p>
+      <p><strong>Three grades, cheapest first. A tour is not the default.</strong></p>
+      <p><strong>Grade 1 — generate before you look.</strong> <em>"Before you open the screen, write down which three settings you would expect on a Service template."</em> No product access, no live data, no build cost, and it still gets the generation effect because the learner produces rather than receives. Works on every walkthrough, including tours of a finished account where the learner has nothing of their own.</p>
+      <p><strong>Grade 2 — an exercise in their own account.</strong> <em>"Raise a job from your Service template. The report form and labour rate should already be on it."</em> Real doing, article prose, low cost. <strong>Only where it is reversible</strong>, because this is live work rather than a rehearsal, and a how-to cannot promise safety.</p>
+      <p><strong>Grade 3 — a Userflow tour.</strong> Reserved for the same cases that earn a detailed walkthrough: irreversible, ordered, or dependent on something built elsewhere.</p>
+      <p><strong>The grade 2 exercise is the criterion inverted.</strong> Same sentence, different mood — one is a check, one is a task:</p>
+      <div class="std-quote"><strong>Criterion.</strong> You will know yours is right when you raise a job from the template and the report form and labour rate are already on it.<br><br><strong>Exercise.</strong> Raise a job from your Service template. The report form and labour rate should already be on it.</div>
+      <p>So on most walkthroughs the do stage is not new content. It is the criterion turned round and moved above the knowledge check.</p>
+      <p><strong>Rule.</strong> An exercise only works if the learner has the conditions. Where they do not, grade 1 is the honest option.</p>
+      </div>
+      <div class="std-card"><div class="std-card-title">3. Check</div>
+      <p>Questions with an explained answer, at the foot of the article.</p>
+      <p><strong>What it does.</strong> It makes the learner retrieve what they learned instead of re-reading it.</p>
+      <p><strong>Why that helps.</strong> The <strong>testing effect</strong>: retrieval strengthens retention more than further study does, even without feedback.</p>
+      <p><strong>The timing detail that matters here.</strong> On an immediate test, restudying beats being tested. On a delayed test, prior testing produces substantially better retention. So a knowledge check feels redundant to someone who has just watched the video — and that feeling is exactly why it gets cut. Its value shows up a week later, which is when the learner actually needs the knowledge.</p>
+      </div>
+      <hr class="std-hr">
+      <div class="section-heading">Where each stage sits</div>
+      <table><thead><tr><th>Block</th><th>Stage</th></tr></thead><tbody><tr><td>Introduction</td><td>read — conditions and the learning objective</td></tr><tr><td>Walkthrough</td><td><strong>watch / read</strong></td></tr><tr><td>Practise this</td><td><strong>do</strong>, then <strong>check</strong></td></tr><tr><td>Summary</td><td>read — value proposition and criterion</td></tr></tbody></table>
+      <p>The knowledge check has its own section and 179 rows behind it. <strong>Do is the only stage with no home on the page.</strong></p>
+      <p><strong>The check goes before the summary.</strong> Not for layout reasons — for retrieval. A summary sitting first restates the key points and the learner then answers from short-term memory, which is the fluency illusion built into the page. Check first means the retrieval happens against the walkthrough, and the summary lands as feedback after it. That is the alternating study-and-test pattern, ending on consolidation.</p>
+      <hr class="std-hr">
       <div class="section-heading">Why the order, and why all three</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">Repeated testing beats repeated studying, but <strong>alternating study and test produced the best retention of all</strong> in the same research. That alternation is what this pattern is: take it in, produce it, retrieve it.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">Each stage also covers the one before it. Watching is efficient but produces false confidence. Doing corrects the confidence but is slow and needs the example first. Checking is what makes it stick past the week it was learned.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">Drop any one and a predictable thing goes wrong:</p>
-      <table class="inbox-table" style="margin-bottom:16px"><thead><tr><th>Dropped</th><th>What happens</th></tr></thead><tbody><tr><td style="line-height:1.6;vertical-align:top">Watch</td><td style="line-height:1.6;vertical-align:top">The learner works out <em>what</em> and <em>how</em> at once, and most of the effort goes on the wrong one</td></tr><tr><td style="line-height:1.6;vertical-align:top">Do</td><td style="line-height:1.6;vertical-align:top">Familiarity is mistaken for competence — the fluency illusion, undetected</td></tr><tr><td style="line-height:1.6;vertical-align:top">Check</td><td style="line-height:1.6;vertical-align:top">It is understood on the day and gone by the time it is needed</td></tr></tbody></table>
+      <p>Repeated testing beats repeated studying, but <strong>alternating study and test produced the best retention of all</strong> in the same research. That alternation is what this pattern is: take it in, produce it, retrieve it.</p>
+      <p>Each stage also covers the one before it. Watching is efficient but produces false confidence. Doing corrects the confidence but is slow and needs the example first. Checking is what makes it stick past the week it was learned.</p>
+      <p>Drop any one and a predictable thing goes wrong:</p>
+      <table><thead><tr><th>Dropped</th><th>What happens</th></tr></thead><tbody><tr><td>Watch</td><td>The learner works out <em>what</em> and <em>how</em> at once, and most of the effort goes on the wrong one</td></tr><tr><td>Do</td><td>Familiarity is mistaken for competence — the fluency illusion, undetected</td></tr><tr><td>Check</td><td>It is understood on the day and gone by the time it is needed</td></tr></tbody></table>
+      <hr class="std-hr">
       <div class="section-heading">Does it clash with the Mager standard?</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>No. They describe different things.</strong></p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">Mager's three parts — performance, conditions, criterion — are how you write <strong>one objective</strong>: the target the walkthrough owes the learner. Watch, do, check is the <strong>route</strong> to that target. One is the specification, the other is the delivery.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">They interlock at three points:</p>
-      <table class="inbox-table" style="margin-bottom:16px"><thead><tr><th>Mager</th><th>Watch, do, check</th></tr></thead><tbody><tr><td style="line-height:1.6;vertical-align:top"><strong>Conditions</strong> — what must already be true</td><td style="line-height:1.6;vertical-align:top">The entry state for <strong>watch</strong></td></tr><tr><td style="line-height:1.6;vertical-align:top"><strong>Performance</strong> — what they will do</td><td style="line-height:1.6;vertical-align:top">What <strong>do</strong> rehearses</td></tr><tr><td style="line-height:1.6;vertical-align:top"><strong>Criterion</strong> — to what standard</td><td style="line-height:1.6;vertical-align:top">What the learner verifies after <strong>check</strong></td></tr></tbody></table>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>One trap worth naming.</strong> The <strong>check</strong> and the <strong>criterion</strong> are not the same thing, though both sound like checking. The check is the knowledge check in the article — recall, self-marked, nothing recorded. The criterion is the standard in the objective, and the learner verifies it against their own account. Writing the criterion as a third knowledge check question collapses the two and loses the criterion.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>And one genuine gap the pairing exposes.</strong> A Mager objective states a performance and a criterion, which assumes the learner performs. Our <strong>do</strong> stage is not built: Tour is an approved build value with <strong>0 rows across 193 scripts</strong>. So the objectives promise doing and the delivery supplies watching and checking. That is not a conflict between the two models — both agree the stage should be there. It is our build falling short of both.</p>
+      <p><strong>No. They describe different things.</strong></p>
+      <p>Mager's three parts — performance, conditions, criterion — are how you write <strong>one objective</strong>: the target the walkthrough owes the learner. Watch, do, check is the <strong>route</strong> to that target. One is the specification, the other is the delivery.</p>
+      <p>They interlock at three points:</p>
+      <table><thead><tr><th>Mager</th><th>Watch, do, check</th></tr></thead><tbody><tr><td><strong>Conditions</strong> — what must already be true</td><td>The entry state for <strong>watch</strong></td></tr><tr><td><strong>Performance</strong> — what they will do</td><td>What <strong>do</strong> rehearses</td></tr><tr><td><strong>Criterion</strong> — to what standard</td><td>What the learner verifies after <strong>check</strong></td></tr></tbody></table>
+      <p><strong>One trap worth naming.</strong> The <strong>check</strong> and the <strong>criterion</strong> are not the same thing, though both sound like checking. The check is the knowledge check in the article — recall, self-marked, nothing recorded. The criterion is the standard in the objective, and the learner verifies it against their own account. Writing the criterion as a third knowledge check question collapses the two and loses the criterion.</p>
+      <p><strong>And one genuine gap the pairing exposes.</strong> A Mager objective states a performance and a criterion, which assumes the learner performs. Our <strong>do</strong> stage is not built: Tour is an approved build value with <strong>0 rows across 193 scripts</strong>. So the objectives promise doing and the delivery supplies watching and checking. That is not a conflict between the two models — both agree the stage should be there. It is our build falling short of both.</p>
+      <hr class="std-hr">
       <div class="section-heading">What each stage is built with</div>
-      <table class="inbox-table" style="margin-bottom:16px"><thead><tr><th>Stage</th><th>Build value</th><th>Rows today</th></tr></thead><tbody><tr><td style="line-height:1.6;vertical-align:top">Watch or read</td><td style="line-height:1.6;vertical-align:top">Screen recording · Written text · Callout - written text</td><td style="line-height:1.6;vertical-align:top">566 · 345 · 2</td></tr><tr><td style="line-height:1.6;vertical-align:top">Do</td><td style="line-height:1.6;vertical-align:top">Tour</td><td style="line-height:1.6;vertical-align:top"><strong>0</strong></td></tr><tr><td style="line-height:1.6;vertical-align:top">Check</td><td style="line-height:1.6;vertical-align:top">Expanding section</td><td style="line-height:1.6;vertical-align:top">179</td></tr></tbody></table>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">Beyond the three, the series assessment is a <strong>Google Form</strong> with Certify'em — scored, recorded, certificate issued. <strong>Expanding section reveals, Google Form scores</strong>, and they are never interchangeable: an expanding section cannot mark anything, so multiple choice in an article is decoration. 32 scripts name a form.</p>
+      <table><thead><tr><th>Stage</th><th>Build value</th><th>Rows today</th></tr></thead><tbody><tr><td>Watch or read</td><td>Screen recording · Written text · Callout - written text</td><td>566 · 345 · 2</td></tr><tr><td>Do — grades 1 and 2</td><td>Written text</td><td>not yet written</td></tr><tr><td>Do — grade 3</td><td>Tour</td><td><strong>0</strong></td></tr><tr><td>Check</td><td>Expanding section</td><td>179</td></tr></tbody></table>
+      <p>Beyond the three, the series assessment is a <strong>Google Form</strong> with Certify'em — scored, recorded, certificate issued. <strong>Expanding section reveals, Google Form scores</strong>, and they are never interchangeable: an expanding section cannot mark anything, so multiple choice in an article is decoration. 32 scripts name a form.</p>
+      <hr class="std-hr">
       <div class="section-heading">Where it comes from</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>The worked example effect</strong> — novices learn more from studying worked examples than from problem solving, with less time and mental effort, because working memory is limited. <a href="https://assess.ucr.edu/sites/default/files/2019-02/atkinsonderryrenklwortham_2000.pdf" target="_blank" rel="noopener" style="color:var(--blue1)">Atkinson, Derry, Renkl &amp; Wortham</a> · <a href="https://www.sciencedirect.com/science/article/abs/pii/S0361476X1000055X" target="_blank" rel="noopener" style="color:var(--blue1)">Van Gog &amp; Kester, on example-problem pairs</a></p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>The generation effect</strong> — generating beats reading, replicated across ages, languages and materials; medium-to-large effect across 86 studies. <a href="https://link.springer.com/article/10.3758/BF03193441" target="_blank" rel="noopener" style="color:var(--blue1)">Bertsch et al., meta-analytic review</a></p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>The testing effect</strong> — retrieval enhances later retention more than restudying, even without feedback; restudying wins at five minutes, testing wins substantially at a delay; alternating study and test is best of all. <a href="https://journals.sagepub.com/doi/10.1111/j.1467-9280.2006.01693.x" target="_blank" rel="noopener" style="color:var(--blue1)">Roediger &amp; Karpicke, <em>Test-Enhanced Learning</em></a> · <a href="https://learninglab.psych.purdue.edu/downloads/2007/2007_Karpicke_Roediger_JML.pdf" target="_blank" rel="noopener" style="color:var(--blue1)">Karpicke &amp; Roediger, <em>Repeated retrieval</em></a> · <a href="https://pdf.retrievalpractice.org/guide/Roediger_Agarwal_etal_2011_JEPA.pdf" target="_blank" rel="noopener" style="color:var(--blue1)">Roediger, Agarwal et al., classroom quizzing</a></p>
+      <p><strong>The worked example effect</strong> — novices learn more from studying worked examples than from problem solving, with less time and mental effort, because working memory is limited. <a href="https://assess.ucr.edu/sites/default/files/2019-02/atkinsonderryrenklwortham_2000.pdf" target="_blank" rel="noopener" style="color:var(--blue1)">Atkinson, Derry, Renkl &amp; Wortham</a> · <a href="https://www.sciencedirect.com/science/article/abs/pii/S0361476X1000055X" target="_blank" rel="noopener" style="color:var(--blue1)">Van Gog &amp; Kester, on example-problem pairs</a></p>
+      <p><strong>The generation effect</strong> — generating beats reading, replicated across ages, languages and materials; medium-to-large effect across 86 studies. <a href="https://link.springer.com/article/10.3758/BF03193441" target="_blank" rel="noopener" style="color:var(--blue1)">Bertsch et al., meta-analytic review</a></p>
+      <p><strong>The testing effect</strong> — retrieval enhances later retention more than restudying, even without feedback; restudying wins at five minutes, testing wins substantially at a delay; alternating study and test is best of all. <a href="https://journals.sagepub.com/doi/10.1111/j.1467-9280.2006.01693.x" target="_blank" rel="noopener" style="color:var(--blue1)">Roediger &amp; Karpicke, <em>Test-Enhanced Learning</em></a> · <a href="https://learninglab.psych.purdue.edu/downloads/2007/2007_Karpicke_Roediger_JML.pdf" target="_blank" rel="noopener" style="color:var(--blue1)">Karpicke &amp; Roediger, <em>Repeated retrieval</em></a> · <a href="https://pdf.retrievalpractice.org/guide/Roediger_Agarwal_etal_2011_JEPA.pdf" target="_blank" rel="noopener" style="color:var(--blue1)">Roediger, Agarwal et al., classroom quizzing</a></p>
     </div>
 
     <div id="view-std-the-narrative-triangle" class="view">
       <div class="page-heading"><h1>The narrative triangle</h1><p><strong>Date:</strong> 2026-09-09 &middot; <strong>Methodology:</strong> three voices, one script. Settled 2026-08-11.</p></div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">Every script has three voices in it and each has a job. Keeping them straight is the difference between a script that tells a story and one that reads as a manual.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>The operational source is <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-size:13px">Team/Academy/script-writer-skill/SKILL.md</code>, "The three voices".</strong> This is the readable version of the same rules. If the two ever disagree, SKILL.md is right and this needs correcting.</p>
+      <p>Every script has three voices in it and each has a job. Keeping them straight is the difference between a script that tells a story and one that reads as a manual.</p>
+      <p><strong>The operational source is <code>Team/Academy/script-writer-skill/SKILL.md</code>, "The three voices".</strong> This is the readable version of the same rules. If the two ever disagree, SKILL.md is right and this needs correcting.</p>
+      <hr class="std-hr">
       <div class="section-heading">The three corners</div>
-      <div style="font-weight:600;font-size:15px;margin:18px 0 8px">Archer — the presenter</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>What he is.</strong> An industry and Commusoft expert acting as a business consultant. The Clueso AI voiceover, and the only voice the learner hears.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Why we do it.</strong> A single expert voice lets the script explain <em>why</em> something is done, which a demonstration on its own cannot. Archer is who makes it advice rather than a tour.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Rules.</strong></p>
-      <ul style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px;padding-left:20px"><li>He is never in the scenario and never appears on screen. Retired with Synthesia, along with the Presenter Framework.</li><li>Scripts carry <code style="background:var(--bg);padding:1px 5px;border-radius:3px;font-size:13px"><strong>Voice:</strong> Archer (Clueso AI voiceover)</code>. Never a Presenter line.</li><li>He may speak in the first person where he has a genuine expert insight. No cap on it and no banned phrasing — use it where it earns its place.</li><li><strong>He does not keep saying "Commusoft".</strong> He works here, so the natural voice is <em>we</em> or <em>your account</em>. Name the product only where it would otherwise be unclear which system is meant, usually when an external one is in play.</li></ul>
-      <div style="font-weight:600;font-size:15px;margin:18px 0 8px">SunComfort — the story</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>What it is.</strong> The demonstration business. Its staff carry out every on-screen action.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Why we do it.</strong> Watching a business do the job teaches the shape of the work. It also keeps the learner's own account out of it, so nothing in the script depends on how they have set theirs up.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Rules.</strong></p>
-      <ul style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px;padding-left:20px"><li>Narrated by Archer in the <strong>third person present</strong>: <em>"Emma opens the job record and clicks Add invoice."</em></li><li>SunComfort characters <strong>never speak</strong> and <strong>never address the learner</strong>.</li><li>They are who the learner is watching, not who the learner is.</li></ul>
-      <div style="font-weight:600;font-size:15px;margin:18px 0 8px">The learner — the audience</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>What it is.</strong> The person watching, addressed as <strong>"you"</strong>.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Why we do it.</strong> The learner's own business is the only subject the script cannot demonstrate, so it is the only thing worth turning to them for.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Rules.</strong></p>
-      <ul style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px;padding-left:20px"><li>Addressed <strong>only</strong> where Archer turns to them with guidance about their own business: <em>"You might take a different route here, depending on how your business invoices."</em></li><li><strong>The learner never performs the on-screen steps.</strong> <em>"You open the job record"</em> is wrong — Emma opens it, and the learner is watching.</li></ul>
+      <div class="std-card"><div class="std-card-title">Archer — the presenter</div>
+      <p><strong>What he is.</strong> An industry and Commusoft expert acting as a business consultant. The Clueso AI voiceover, and the only voice the learner hears.</p>
+      <p><strong>Why we do it.</strong> A single expert voice lets the script explain <em>why</em> something is done, which a demonstration on its own cannot. Archer is who makes it advice rather than a tour.</p>
+      <p><strong>Rules.</strong></p>
+      <ul><li>He is never in the scenario and never appears on screen. Retired with Synthesia, along with the Presenter Framework.</li><li>Scripts carry <code><strong>Voice:</strong> Archer (Clueso AI voiceover)</code>. Never a Presenter line.</li><li>He may speak in the first person where he has a genuine expert insight. No cap on it and no banned phrasing — use it where it earns its place.</li><li><strong>He does not keep saying "Commusoft".</strong> He works here, so the natural voice is <em>we</em> or <em>your account</em>. Name the product only where it would otherwise be unclear which system is meant, usually when an external one is in play.</li></ul>
+      </div>
+      <div class="std-card"><div class="std-card-title">SunComfort — the story</div>
+      <p><strong>What it is.</strong> The demonstration business. Its staff carry out every on-screen action.</p>
+      <p><strong>Why we do it.</strong> Watching a business do the job teaches the shape of the work. It also keeps the learner's own account out of it, so nothing in the script depends on how they have set theirs up.</p>
+      <p><strong>Rules.</strong></p>
+      <ul><li>Narrated by Archer in the <strong>third person present</strong>: <em>"Emma opens the job record and clicks Add invoice."</em></li><li>SunComfort characters <strong>never speak</strong> and <strong>never address the learner</strong>.</li><li>They are who the learner is watching, not who the learner is.</li></ul>
+      </div>
+      <div class="std-card"><div class="std-card-title">The learner — the audience</div>
+      <p><strong>What it is.</strong> The person watching, addressed as <strong>"you"</strong>.</p>
+      <p><strong>Why we do it.</strong> The learner's own business is the only subject the script cannot demonstrate, so it is the only thing worth turning to them for.</p>
+      <p><strong>Rules.</strong></p>
+      <ul><li>Addressed <strong>only</strong> where Archer turns to them with guidance about their own business: <em>"You might take a different route here, depending on how your business invoices."</em></li><li><strong>The learner never performs the on-screen steps.</strong> <em>"You open the job record"</em> is wrong — Emma opens it, and the learner is watching.</li></ul>
+      </div>
+      <hr class="std-hr">
       <div class="section-heading">How a section moves between them</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">A section normally moves between two of the three corners: Archer narrating a SunComfort character doing the work, then turning to the learner for what it means in their own business.</p>
-      <div style="border-left:3px solid var(--blue1);padding:2px 0 2px 16px;margin:0 0 14px;font-size:14px;color:var(--text);line-height:1.6">Emma opens the job and raises the invoice from it, so the parts and labour Jake recorded on site come across without anyone retyping them.<br><br>You might invoice at a different point — some businesses raise it before the technician has left.</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">The third corner, Archer's own expert aside, comes in where he has something to add that neither the demonstration nor the learner's situation supplies.</p>
+      <p>A section normally moves between two of the three corners: Archer narrating a SunComfort character doing the work, then turning to the learner for what it means in their own business.</p>
+      <div class="std-quote">Emma opens the job and raises the invoice from it, so the parts and labour Jake recorded on site come across without anyone retyping them.<br><br>You might invoice at a different point — some businesses raise it before the technician has left.</div>
+      <p>The third corner, Archer's own expert aside, comes in where he has something to add that neither the demonstration nor the learner's situation supplies.</p>
+      <hr class="std-hr">
       <div class="section-heading">What this replaces</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">An earlier version written on 2026-08-11 had <strong>the learner performing the on-screen actions</strong>, which is what v5 of the script skill said. It is wrong and was replaced the same day.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">The old "twice per walkthrough, never say <em>in my experience</em>" limit on Archer's first-person asides came from the Gemini LMS era and was removed on 2026-08-11. It goes back only if over-use shows up.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>349 uses of "Commusoft" across 127 scripts</strong> were counted when the naming rule was settled on 2026-08-19. They are fixed as each script is next opened, not in a sweep.</p>
+      <p>An earlier version written on 2026-08-11 had <strong>the learner performing the on-screen actions</strong>, which is what v5 of the script skill said. It is wrong and was replaced the same day.</p>
+      <p>The old "twice per walkthrough, never say <em>in my experience</em>" limit on Archer's first-person asides came from the Gemini LMS era and was removed on 2026-08-11. It goes back only if over-use shows up.</p>
+      <p><strong>349 uses of "Commusoft" across 127 scripts</strong> were counted when the naming rule was settled on 2026-08-19. They are fixed as each script is next opened, not in a sweep.</p>
     </div>
 
     <div id="view-std-the-learning-schema" class="view">
       <div class="page-heading"><h1>The Learning schema</h1><p><strong>Date:</strong> 2026-09-09 &middot; <strong>Methodology:</strong> how Learning publishes. Three tiers, one canonical copy. Settled with Sara 2026-09-07.</p></div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">Client-facing Learning is published as Help Centre articles. The Help Centre is organised <strong>by feature</strong>, and Learning publishes into it in three tiers.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">There is no plan to build a client-facing learning platform. It would need customer authentication, authoring, progress tracking, hosting and GDPR obligations, and it would move the content out of reach of AI:den, which surfaces Help Centre articles in chat.</p>
+      <p>Client-facing Learning is published as Help Centre articles. The Help Centre is organised <strong>by feature</strong>, and Learning publishes into it in three tiers.</p>
+      <div class="std-flow"><div class="std-flow-box">Pathway article</div><div class="std-flow-arrow">&rarr;</div><div class="std-flow-box">Understanding [feature]</div><div class="std-flow-arrow">&rarr;</div><div class="std-flow-box">Feature article, holding the walkthrough</div></div>
+      <p>There is no plan to build a client-facing learning platform. It would need customer authentication, authoring, progress tracking, hosting and GDPR obligations, and it would move the content out of reach of AI:den, which surfaces Help Centre articles in chat.</p>
+      <hr class="std-hr">
       <div class="section-heading">The three tiers</div>
-      <div style="font-weight:600;font-size:15px;margin:18px 0 8px">Tier 1 — the feature article</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>What it is.</strong> The existing Help Centre article for a feature. It carries the click-by-click, and the walkthrough sits in its <strong>"Practise this"</strong> section at the foot.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Why we do it.</strong> It puts the walkthrough where someone already searching for the feature will find it, and where AI:den can surface it.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Rule.</strong> This is <strong>the only copy of the walkthrough</strong>. Nothing above it holds a second one.</p>
-      <div style="font-weight:600;font-size:15px;margin:18px 0 8px">Tier 2 — Understanding <em>feature</em></div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>What it is.</strong> One article per series, holding that series' feature articles in order, with an overview of the area.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Why we do it.</strong> A feature article answers one question. The understanding article is what turns eight of them into a subject someone can work through.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Rules.</strong></p>
-      <ul style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px;padding-left:20px"><li>One per series. <strong>36 needed, 6 existed as of 2026-09-07</strong> — and that 6 is a floor, because both Intercom searches were relevance-ranked rather than full listings.</li><li>**Older ones are called "<em>feature</em> Overview" and are being renamed to "Understanding <em>feature</em>".** Search both when checking coverage or you will conclude something is missing when it is not.</li></ul>
-      <div style="font-weight:600;font-size:15px;margin:18px 0 8px">Tier 3 — the pathway article</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>What it is.</strong> One article per pathway, linking the understanding articles beneath it. Named for the pathway: Start here, The basics, In the field, Setting up your account, Going further, Add-ons.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Why we do it.</strong> The understanding articles are the series. The pathway article is what makes a pathway visible as a thing you can complete.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Rules.</strong></p>
-      <ul style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px;padding-left:20px"><li>Six in total. <strong>None exist yet.</strong></li><li><strong>Links to articles, not videos.</strong> The feature article owns the video; a second route to it goes stale when one is re-recorded.</li></ul>
+      <div class="std-card"><div class="std-card-title">Tier 1 — the feature article</div>
+      <p><strong>What it is.</strong> The existing Help Centre article for a feature. It carries the click-by-click, and the walkthrough sits in its <strong>"Practise this"</strong> section at the foot.</p>
+      <p><strong>Why we do it.</strong> It puts the walkthrough where someone already searching for the feature will find it, and where AI:den can surface it.</p>
+      <p><strong>Rule.</strong> This is <strong>the only copy of the walkthrough</strong>. Nothing above it holds a second one.</p>
+      </div>
+      <div class="std-card"><div class="std-card-title">Tier 2 — Understanding <em>feature</em></div>
+      <p><strong>What it is.</strong> One article per series, holding that series' feature articles in order, with an overview of the area.</p>
+      <p><strong>Why we do it.</strong> A feature article answers one question. The understanding article is what turns eight of them into a subject someone can work through.</p>
+      <p><strong>Rules.</strong></p>
+      <ul><li>One per series. <strong>36 needed, 6 existed as of 2026-09-07</strong> — and that 6 is a floor, because both Intercom searches were relevance-ranked rather than full listings.</li><li>**Older ones are called "<em>feature</em> Overview" and are being renamed to "Understanding <em>feature</em>".** Search both when checking coverage or you will conclude something is missing when it is not.</li></ul>
+      </div>
+      <div class="std-card"><div class="std-card-title">Tier 3 — the pathway article</div>
+      <p><strong>What it is.</strong> One article per pathway, linking the understanding articles beneath it. Named for the pathway: Start here, The basics, In the field, Setting up your account, Going further, Add-ons.</p>
+      <p><strong>Why we do it.</strong> The understanding articles are the series. The pathway article is what makes a pathway visible as a thing you can complete.</p>
+      <p><strong>Rules.</strong></p>
+      <ul><li>Six in total. <strong>None exist yet.</strong></li><li><strong>Links to articles, not videos.</strong> The feature article owns the video; a second route to it goes stale when one is re-recorded.</li></ul>
+      </div>
+      <hr class="std-hr">
       <div class="section-heading">The rule that makes it work</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>The walkthrough is never duplicated into a Learning section.</strong> Tiers 2 and 3 link only.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">Two copies drift, and AI:den would surface both — so a reader gets whichever version ranked higher that day, with no way to tell it is the stale one.</p>
+      <p><strong>The walkthrough is never duplicated into a Learning section.</strong> Tiers 2 and 3 link only.</p>
+      <p>Two copies drift, and AI:den would surface both — so a reader gets whichever version ranked higher that day, with no way to tell it is the stale one.</p>
+      <hr class="std-hr">
       <div class="section-heading">The failure mode to watch</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>A link-only pathway article ranks poorly in AI:den, and can surface instead of the article that actually answers the question.</strong></p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">So tier 3 needs enough prose to earn its place — what this pathway is for, who it suits, what someone will be able to do at the end of it. A page of bare links is worse than no page, because it competes with the articles it points at.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px">This has not been tested. It is one of two research angles that never ran, and it is the one that decides whether the tier 3 plan works at all.</p>
+      <p><strong>A link-only pathway article ranks poorly in AI:den, and can surface instead of the article that actually answers the question.</strong></p>
+      <p>So tier 3 needs enough prose to earn its place — what this pathway is for, who it suits, what someone will be able to do at the end of it. A page of bare links is worse than no page, because it competes with the articles it points at.</p>
+      <p>This has not been tested. It is one of two research angles that never ran, and it is the one that decides whether the tier 3 plan works at all.</p>
+      <hr class="std-hr">
       <div class="section-heading">What sits outside this</div>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>Playbook is internal staff onboarding only.</strong> It is never the destination for client-facing content.</p>
-      <p style="font-size:14px;color:var(--text);line-height:1.6;margin:0 0 12px"><strong>The series assessment</strong> is a Google Form with Certify'em, not an article. An Intercom article cannot score, gate or record completion, which is why certification lives outside the schema entirely.</p>
+      <p><strong>Playbook is internal staff onboarding only.</strong> It is never the destination for client-facing content.</p>
+      <p><strong>The series assessment</strong> is a Google Form with Certify'em, not an article. An Intercom article cannot score, gate or record completion, which is why certification lives outside the schema entirely.</p>
     </div>
 <!-- STANDARDS-VIEWS:END -->
 

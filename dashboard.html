@@ -2378,7 +2378,7 @@ COURSES['l1-os-s5-c1'] = {
   contentType: "Walkthrough",
   pathLabel: "The basics · Series 4: Getting paid · Walkthrough 1 of 6",
   title: "Raise and send an invoice",
-  duration: "4 min",
+  duration: "3 min",
   persona: "Office teams",
   characters: "Claire Hudson (Administrator — Financial office staff)",
   scenario: "A heat pump installation at Dr Sean Spencer's home in Lewisham is complete and ready to invoice. Claire raises the invoice from the job record, chooses the breakdown, and saves it.",
@@ -2401,19 +2401,21 @@ COURSES['l1-os-s5-c1'] = {
     {section:"Line items, totals and saving", media:"Screen recording", note:"The line item rows and the totals panel, then Advanced options open at the foot of the form, then the send checkbox beside Save invoice showing the customer's address and left unticked, then the Save invoice click. The take ends on that click."},
     {section:"Other invoice types", media:"Written text", note:"Article copy. Link out to the Help Centre article Managing invoices, 216679."},
     {section:"If your business uses CIS", media:"Callout - written text", note:"A titled callout in the prose. Nothing to record."},
+    {section:"Practise this", media:"Written text", note:"Article copy above the knowledge check. Nothing to record."},
     {section:"Knowledge check", media:"Expanding section", note:"Two questions at the foot of the article, each revealing its answer on click."},
     {section:"Summary", media:"Written text", note:"Closing recap at the bottom of the page. Nothing to record."}
   ],
   scenes: [
-    {type:"section", heading:"Introduction", body:"The invoice is the financial record of every job. It is what turns a finished visit into money owed. At SunComfort, Claire Hudson is invoicing a heat pump installation at Dr Sean Spencer's home in Lewisham, and the choices she makes on the form decide what he sees and how the finance team reconciles it later."},
-    {type:"section", heading:"Adding an invoice", body:"To raise the invoice, Claire searches for the job, opens it and moves to the Invoices tab. She selects Add new invoice. The first decision is the invoice type.\n\nWe support multiple invoice types, and four of them can be raised from a job.\n\nFinal is the last invoice for the job. Raising one completes the job if it has not already been marked complete, and locks some of the actions available on it afterwards. Interim is for billing in stages while longer work is still running, and every interim raised is deducted from the Final when it comes. Additional covers ad hoc charges that sit outside the agreed job value, and it is the one type that is not deducted — it adds to what the customer owes rather than drawing down from it. Pre-final is raised at the start of a job for the full expected cost, so the work is paid for before it is carried out; it stays a pre-final while the job runs and becomes the job's Final once the job completes.\n\nDr Spencer's installation is finished, so Final is what Claire sets here. Selecting the right invoice type from the start ensures the invoice is treated correctly in the financial records.\n\nWith the invoice type selected, Claire completes the invoice details: the description, the date, and any additional information relevant to this job. Business unit is required, so she sets that too — the invoice will not save without one. User group sits beside it and is chosen in the same way, rather than inherited from the job.\n\nNext she chooses the breakdown type from the following options."},
+    {type:"section", heading:"Introduction", body:"The invoice is the financial record of every job. It is what turns a finished visit into money owed, and the choices made on the form decide what the customer sees and how the finance team reconciles it later.\n\nThis one needs a completed job to invoice, and your business units, nominal codes and VAT rates already set up, because the form asks for them and will not save without a business unit. If you are still setting your account up, those are what this depends on; if you are already running jobs, they are in place. By the end you will be able to raise an invoice from a job, pick the type and breakdown that suit the work, and hold it back as a draft when the figures are not settled."},
+    {type:"section", heading:"Adding an invoice", body:"Dr Spencer's heat pump installation is finished and the job carries no invoice yet. Claire searches for it, opens it and moves to the Invoices tab, then selects Add new invoice. The first decision is the invoice type.\n\nWe support multiple invoice types, and four of them can be raised from a job.\n\nFinal is the last invoice for the job. Raising one completes the job if it has not already been marked complete, and locks some of the actions available on it afterwards. Interim is for billing in stages while longer work is still running, and every interim raised is deducted from the Final when it comes. Additional covers ad hoc charges that sit outside the agreed job value, and it is the one type that is not deducted — it adds to what the customer owes rather than drawing down from it. Pre-final is raised at the start of a job for the full expected cost, so the work is paid for before it is carried out; it stays a pre-final while the job runs and becomes the job's Final once the job completes.\n\nDr Spencer's installation is finished, so Final is what Claire sets here. Selecting the right invoice type from the start ensures the invoice is treated correctly in the financial records.\n\nWith the invoice type selected, Claire completes the invoice details: the description, the date, and any additional information relevant to this job. Business unit is required, so she sets that too — the invoice will not save without one. User group sits beside it and is chosen in the same way, rather than inherited from the job.\n\nNext she chooses the breakdown type from the following options."},
     {type:"section", heading:"Choosing the breakdown style", body:"No breakdown produces a single line item total. Breakdown by category separates labour and parts. Full breakdown lists every individual item, and full breakdown by category groups items by type.\n\nThe right choice depends on what your customers expect to see and what your business standard is."},
     {type:"section", heading:"Line items, totals and saving", body:"Claire chooses full breakdown by category and adds the line items in the breakdown section, and reviews the totals before saving.\n\nIf an invoice is not finalised, the Draft invoice in advanced options allows it to be saved without an invoice number. Once an invoice number is generated, it becomes a permanent part of your financial history. It creates a strict digital paper trail that you cannot easily erase.\n\nThe other choice at this point sits beside Save invoice: a checkbox reading Send invoice to, followed by the address held on the customer record. Ticking it emails the invoice to the customer as it saves, which takes sending out of a separate step. Claire leaves it clear, so this invoice is issued without an email going out.\n\nWhen the invoice is complete, she clicks Save invoice."},
     {type:"section", heading:"Other invoice types", body:"Not every invoice type your account supports can be raised from a job. Deposit comes from a proposal, as do grant and retention. Contract invoices come from a service contract schedule, and consolidated from the customer record.\n\nKnowing that saves hunting the job's dropdown for a type that was never going to be on it. The Help Centre article on managing invoices covers each one in full."},
     {type:"section", heading:"If your business uses CIS", body:"One trap worth knowing. Where a job carries interim invoices, or a deposit raised from a proposal, apply the CIS deductions on the final invoice only, not on each invoice as it goes out."},
+    {type:"section", heading:"Practise this", body:"Build an invoice on a completed job in your own account and save it as a draft rather than issuing it. A draft carries no invoice number, stays outside your financial record and does not reach your accounting package, so nothing is committed by trying it. Before you save, switch between the breakdown styles and look at what your customer would actually receive from each one. If you have no completed jobs yet, write down instead which breakdown style you would set as your business standard, and what it would cost you to get that choice wrong."},
     {type:"reflection", label:"Knowledge check", question:"Claire has built an invoice but the figures are not final yet. What does she do, and what does it change?", options:[], correct:"", feedback:"She uses the Draft invoice option in advanced options rather than saving the invoice outright. The difference is the invoice number: a draft is stored against the job without one, so it stays outside the financial record while the figures are settled. Once a number is generated the invoice becomes a permanent part of that record and a paper trail that cannot easily be erased, which is why anything still being agreed is better held as a draft than issued and unpicked afterwards."},
     {type:"reflection", label:"Knowledge check", question:"Dr Spencer queries his bill because he cannot tell what he has been charged for. Which breakdown styles would have shown him, and what does that choice actually settle?", options:[], correct:"", feedback:"Full breakdown lists every individual item, and full breakdown by category does the same with the items grouped by type — either would have shown him line by line where the money went. Breakdown by category is the middle ground: it separates labour from parts without itemising each one. No breakdown gives a single total, which is the style that produces this kind of query. The choice settles what the customer reads on the page, so it is worth deciding once as a business standard rather than invoice by invoice."},
-    {type:"section", heading:"Summary", body:"Claire raised the invoice for Dr Spencer's heat pump installation straight from the job record. She chose the invoice type, completed the details, set the breakdown style, added the line items and saved it.\n\nTwo of those choices carry beyond the screen. The type settles how the invoice is treated in the financial records. The breakdown style settles what the customer actually reads, which is often the difference between an invoice that is paid and one that comes back as a query.\n\nIn the next walkthrough Dr Spencer pays, and Claire records that payment against this invoice."}
+    {type:"section", heading:"Summary", body:"Claire raised the invoice for Dr Spencer's heat pump installation straight from the job record. She chose the invoice type, completed the details, set the breakdown style, added the line items and saved it.\n\nTwo of those choices carry beyond the screen. The type settles how the invoice is treated in the financial records. The breakdown style settles what the customer actually reads, which is often the difference between an invoice that is paid and one that comes back as a query. Held as a draft instead, it carries no number and stays out of the financial record until the figures are agreed.\n\nYou will know yours is right when someone who was not on the job can open the invoice and tell, from the breakdown alone, what each part of the total is for."}
   ],
   openItems: "None — all content verified against source.",
   helpCentreIssues: "- **216679 — Managing invoices.** Lists **Draft** as an invoice type, then later describes it correctly as a checkbox under Advanced options. Draft is a save state, not a type. A reader looking for it in the invoice-type dropdown will not find it. - **216679 — Managing invoices.** Presents ten invoice types as one flat list with no indication of which are selectable on a job and which are generated elsewhere. A reader cannot tell that deposit, grant and retention come from proposals, consolidated from the customer record and contract from a service contract schedule. - **216679 — Managing invoices.** Never says which invoice type the Add invoice form opens on. The frame read of this take shows it opens on **Additional invoice**, which means a reader who follows the article on a completed job and does not think about the type field bills the whole job as an ad hoc extra. The mistake cannot be edited afterwards — it needs a credit note. - **216679 — Managing invoices.** Never mentions the completed-job banner or its **Raise final invoice** link, although that is the faster route to a final invoice and the only one that pre-selects the correct type. A reader is sent the long way round every time. - **216679 — Managing invoices.** The job-invoice steps omit the business unit, the user group and the \"Send invoice to [email]\" checkbox entirely, although all three are on screen. They appear only in the Consolidated section. A reader following the job steps hits a required field the article never mentions and cannot save. - **216679 — Managing invoices.** Never tells the reader how to send an invoice after saving it. That route is documented only in 217139, which is filed as a settings and templates topic, and neither article links to the other. A reader finishes the article with an invoice saved and no way to issue it. - **216679 — Managing invoices.** Gives three labels for what it treats as one control: \"Save invoice as draft\", \"Save as draft\", and \"Save invoice as a draft\". The form actually carries **two** controls inside Advanced options — a checkbox reading **\"Save invoice as a draft\"** and a button reading **\"Save as draft invoice\"** — and the article names neither pair consistently nor distinguishes between them. A reader searching the page for an on-screen label may not match it, and cannot tell the two apart. Confirmed from a screenshot of the form, 2026-08-19. - **216679 — Managing invoices.** Misspellings: \"differernt\" in a section heading, and \"Consolated\" twice for Consolidated. Both are searchable text, so the article is harder to find on those terms. - **216463 — Invoice settings.** Covers only the invoice address format, not the settings the title promises. A reader sent here for invoice settings finds one of them. - **217419 — CIS Percentage.** Documents where the CIS rate is set but not the rule that deductions apply on the final invoice only, not on each interim or deposit invoice as it goes out. That rule exists only inside 216679, so a reader who lands on the CIS article deducts twice. - **216679 — Managing invoices.** Defines the Final type as \"It closes the job and pulls pricing from the estimate if applicable.\" Estimates is legacy naming for what is now Proposals, and there is no Estimates module for a reader to go to. It should read \"pulls pricing from the proposal where one applies\". - **217139 — Emailing and texting an invoice.** Step 4 is concatenated into step 3 under Advanced Options, so the two actions read as one and a reader is likely to miss the second."
@@ -14295,12 +14297,11 @@ None — all content verified against Help Centre articles.
 
 INBOX_FILES["l1-os-s5-c1"] = `# Reed — Script: Raise and send an invoice
 
-**Layer:** 1 — Office teams path
-**Series:** 5 of 9 — Getting paid
-**Walkthrough:** 1 of 6
-**Format:** Walkthrough
+**Series:** The basics · Series 4: Getting paid | **Walkthrough:** 1 of 6 | **Duration:** 3 min | **Audience:** Office teams
+
 **Voice:** Archer (Clueso AI voiceover)
-**Date:** 2026-08-19
+
+**Date:** 2026-09-09
 
 ---
 
@@ -14316,9 +14317,7 @@ INBOX_FILES["l1-os-s5-c1"] = `# Reed — Script: Raise and send an invoice
 
 **Scenario:** A heat pump installation at Dr Sean Spencer's home in Lewisham is complete and ready to invoice. Claire raises the invoice from the job record, chooses the breakdown, and saves it.
 
-**Estimated length:** 4 min — the video runs 2 minutes 44 seconds; the written, callout and animated blocks take the article to roughly four minutes
-
-**Target audience:** Office teams at field service businesses using Commusoft — administrators and finance staff responsible for raising invoices. Assumes Commusoft Compass (Layer 1), Office teams Series 1, Series 3 and Series 4 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+**Target audience:** Office teams at field service businesses using Commusoft — administrators and finance staff responsible for raising invoices. SunComfort Systems is the pedagogical vehicle, not the audience.
 
 **Assumed starting point:** Commusoft Compass (Layer 1), Office teams Series 1, Series 3 and Series 4 (Booking and scheduling) complete.
 
@@ -14337,13 +14336,15 @@ INBOX_FILES["l1-os-s5-c1"] = `# Reed — Script: Raise and send an invoice
 
 ## Introduction
 
-The invoice is the financial record of every job. It is what turns a finished visit into money owed. At SunComfort, Claire Hudson is invoicing a heat pump installation at Dr Sean Spencer's home in Lewisham, and the choices she makes on the form decide what he sees and how the finance team reconciles it later.
+The invoice is the financial record of every job. It is what turns a finished visit into money owed, and the choices made on the form decide what the customer sees and how the finance team reconciles it later.
+
+This one needs a completed job to invoice, and your business units, nominal codes and VAT rates already set up, because the form asks for them and will not save without a business unit. If you are still setting your account up, those are what this depends on; if you are already running jobs, they are in place. By the end you will be able to raise an invoice from a job, pick the type and breakdown that suit the work, and hold it back as a draft when the figures are not settled.
 
 ---
 
 ## Adding an invoice
 
-To raise the invoice, Claire searches for the job, opens it and moves to the Invoices tab. She selects Add new invoice. The first decision is the invoice type.
+Dr Spencer's heat pump installation is finished and the job carries no invoice yet. Claire searches for it, opens it and moves to the Invoices tab, then selects Add new invoice. The first decision is the invoice type.
 
 We support multiple invoice types, and four of them can be raised from a job.
 
@@ -14391,6 +14392,12 @@ One trap worth knowing. Where a job carries interim invoices, or a deposit raise
 
 ---
 
+## Practise this
+
+Build an invoice on a completed job in your own account and save it as a draft rather than issuing it. A draft carries no invoice number, stays outside your financial record and does not reach your accounting package, so nothing is committed by trying it. Before you save, switch between the breakdown styles and look at what your customer would actually receive from each one. If you have no completed jobs yet, write down instead which breakdown style you would set as your business standard, and what it would cost you to get that choice wrong.
+
+---
+
 **Knowledge check**
 
 **Q1.** Claire has built an invoice but the figures are not final yet. What does she do, and what does it change?
@@ -14407,9 +14414,9 @@ One trap worth knowing. Where a job carries interim invoices, or a deposit raise
 
 Claire raised the invoice for Dr Spencer's heat pump installation straight from the job record. She chose the invoice type, completed the details, set the breakdown style, added the line items and saved it.
 
-Two of those choices carry beyond the screen. The type settles how the invoice is treated in the financial records. The breakdown style settles what the customer actually reads, which is often the difference between an invoice that is paid and one that comes back as a query.
+Two of those choices carry beyond the screen. The type settles how the invoice is treated in the financial records. The breakdown style settles what the customer actually reads, which is often the difference between an invoice that is paid and one that comes back as a query. Held as a draft instead, it carries no number and stays out of the financial record until the figures are agreed.
 
-In the next walkthrough Dr Spencer pays, and Claire records that payment against this invoice.
+You will know yours is right when someone who was not on the job can open the invoice and tell, from the breakdown alone, what each part of the total is for.
 
 ---
 
@@ -14423,6 +14430,7 @@ In the next walkthrough Dr Spencer pays, and Claire records that payment against
 | Line items, totals and saving | Screen recording | The line item rows and the totals panel, then Advanced options open at the foot of the form, then the send checkbox beside Save invoice showing the customer's address and left unticked, then the Save invoice click. The take ends on that click. |
 | Other invoice types | Written text | Article copy. Link out to the Help Centre article Managing invoices, 216679. |
 | If your business uses CIS | Callout - written text | A titled callout in the prose. Nothing to record. |
+| Practise this | Written text | Article copy above the knowledge check. Nothing to record. |
 | Knowledge check | Expanding section | Two questions at the foot of the article, each revealing its answer on click. |
 | Summary | Written text | Closing recap at the bottom of the page. Nothing to record. |
 

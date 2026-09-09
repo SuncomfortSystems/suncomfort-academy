@@ -2396,7 +2396,7 @@ COURSES['l1-os-s5-c1'] = {
   ],
   buildBySection: [
     {section:"Introduction", media:"Written text", note:"Article copy at the top of the page. Nothing to record."},
-    {section:"Adding an invoice", media:"Screen recording", note:"Cut from the 163-second source clip `da5dd7bd…`. Job search, open the job, Invoices tab reading \"No data found\", Add new invoice, hold on the invoice type field, then the description, date, business unit and user group fields being filled."},
+    {section:"Adding an invoice", media:"Screen recording", note:"Job search, open the job, Invoices tab reading \"No data found\", Add new invoice, hold on the invoice type field, then the description, date, business unit and user group fields being filled."},
     {section:"Choosing the breakdown style", media:"Animated slides", note:"Not filmed. The slide shows the four breakdown styles and what each one produces: no breakdown, breakdown by category, full breakdown, full breakdown by category."},
     {section:"Line items, totals and saving", media:"Screen recording", note:"The line item rows and the totals panel, then Advanced options open at the foot of the form, then the send checkbox beside Save invoice showing the customer's address and left unticked, then the Save invoice click. The take ends on that click."},
     {section:"Other invoice types", media:"Written text", note:"Article copy. Link out to the Help Centre article Managing invoices, 216679."},
@@ -2422,7 +2422,7 @@ COURSES['reed-script-l1-s5-c2'] = {
   contentType: "Walkthrough",
   pathLabel: "The basics · Series 4: Getting paid · Walkthrough 2 of 6",
   title: "Mark an invoice as paid",
-  duration: "3 min",
+  duration: "1 min",
   persona: "Office teams",
   characters: "Claire Hudson (Administrator — Financial office staff)",
   scenario: "Dr Sean Spencer has paid the invoice Claire raised for his heat pump installation. Claire records the payment so the invoice is marked as paid and his account balance updates immediately.",
@@ -2433,24 +2433,26 @@ COURSES['reed-script-l1-s5-c2'] = {
   ],
   productionSetup: [
     "Logged-in user: Claire Hudson, Administrator, Financial office staff",
-    "Customer record: Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA, account no 1999, carrying the invoice being paid. The whole of Series 5 is recorded against this person — do not substitute another customer.",
+    "Customer record: Dr Sean Spencer, account no 1999, carrying the invoice being paid. The whole of this series is recorded against this person — do not substitute another customer.",
     "Existing data: The Final invoice raised against Dr Spencer's heat pump installation — invoice 1003, \"Residential Heat Pump Installation\", £648.00 — issued and unpaid, so the payment can be recorded on screen. In the account it now shows a zero balance, because this walkthrough is what pays it. Payment methods configured in settings including cash, cheque, bank transfer and card. Nominal accounts configured, since the narration has Claire selecting one — without them the field does not appear and that sentence describes a screen that is not there.",
     "Assets required: None"
   ],
   buildBySection: [
     {section:"Introduction", media:"Written text", note:"Article copy only — no recording needed."},
     {section:"Recording a payment", media:"Screen recording", note:"Capture job search → Invoices tab → View invoice → Payment and allocation history → Add new payment → amount, payment method, nominal account → Add payment, ending on the updated invoice status."},
+    {section:"Practise this", media:"Written text", note:"Article copy at the foot of the walkthrough, above the knowledge check. Nothing to record."},
     {section:"Knowledge check", media:"Expanding section", note:"Two questions at the foot of the article, each revealing its answer on click. Nothing is scored."},
     {section:"Summary", media:"Written text", note:"Recap text only — no recording needed."}
   ],
   scenes: [
-    {type:"section", heading:"Introduction", body:"An invoice that has been paid but never recorded still counts as outstanding. Debt reports overstate what the business is owed, statements chase customers who have already paid, and the accounting sync carries the error onward into the books. At SunComfort, Dr Spencer has now paid the invoice Claire raised for his heat pump installation, and she records it against his account. It takes a few seconds, and it keeps every record downstream correct."},
-    {type:"section", heading:"Recording a payment", body:"Claire searches for Dr Spencer's job and opens the Invoices tab, where she clicks View next to the invoice. She scrolls to Payment and allocation history and selects Add new payment.\n\nThe invoice total is filled in automatically. Claire confirms it is right — where a customer has paid only part of an invoice, this is the field to adjust. She selects the payment method: cash, cheque, bank transfer, card, or any other method configured in your account settings. Card payments require card details to be entered.\n\nShe selects the nominal account configured for your business's payments, and clicks Add payment. The invoice status updates immediately and the payment is recorded against the invoice."},
+    {type:"section", heading:"Introduction", body:"An invoice that has been paid but never recorded still counts as outstanding. Debt reports overstate what the business is owed, statements chase customers who have already paid, and the accounting sync carries the error onward into the books.\n\nRecording a payment needs an issued, unpaid invoice, and your payment methods and nominal accounts already set up, because the form asks for both every time. If you are still setting your account up, those two lists are what this depends on; if you are already invoicing, they are in place. By the end you will be able to record a payment against an invoice, in full or in part, so the invoice and the customer's balance show what has actually arrived."},
+    {type:"section", heading:"Recording a payment", body:"Claire raised the invoice for Dr Spencer's heat pump installation and it has been sitting unpaid on his account. The money has now arrived, so she opens the job and records it.\n\nShe goes to the Invoices tab and clicks View next to the invoice. She scrolls to Payment and allocation history and selects Add new payment.\n\nThe invoice total is filled in automatically. Claire confirms it is right — where a customer has paid only part of an invoice, this is the field to adjust. She selects the payment method: cash, cheque, bank transfer, card, or any other method configured in your account settings. Card payments require card details to be entered.\n\nShe selects the nominal account configured for your business's payments, and clicks Add payment. The invoice status updates immediately and the payment is recorded against the invoice."},
+    {type:"section", heading:"Practise this", body:"Before you open a payment form in your own account, write down what you would expect it to ask you for, and what you would expect it to have filled in already. Then open one against any invoice and compare, without saving it. The gap between what you predicted and what is actually on the screen is the part worth remembering."},
     {type:"reflection", label:"Knowledge check", question:"A customer has paid an invoice but nobody has recorded the payment. What goes wrong, and who tends to notice first?", options:[], correct:"", feedback:"Nothing looks wrong on the invoice — it simply stays outstanding. The debt report overstates what the business is owed, so the figure being chased is wrong. A statement sent to that customer then asks them for money they have already sent, which is usually who notices first, and it is the customer. The accounting sync carries the same error into the books, so the correction has to be made twice."},
     {type:"reflection", label:"Knowledge check", question:"Dr Spencer pays £400 towards his £648.00 invoice and will settle the rest later. What should Claire enter in the amount field, and what happens to the invoice?", options:[], correct:"", feedback:"She enters £400, the amount that actually arrived, rather than the total already filled in. The invoice stays partly outstanding, showing £248.00 still due, until that remainder is recorded as a second payment against the same invoice. Accepting the pre-filled total would close the invoice and clear his balance while the money was still owed."},
-    {type:"section", heading:"Summary", body:"A payment is recorded from the invoice itself, under Payment and allocation history. The amount is pre-filled with the invoice total, which is the field to watch: where a customer has paid only part, entering the full amount closes the invoice and leaves the account disagreeing with the bank. The payment method and the nominal account both feed the reporting. Recorded as the money arrives rather than in a monthly catch-up, it is what keeps debt reports honest and stops statements chasing people who have already paid."}
+    {type:"section", heading:"Summary", body:"A payment is recorded from the invoice itself, under Payment and allocation history. The amount is pre-filled with the invoice total, which is the field to watch: where a customer has paid only part, entering the full amount closes the invoice and leaves the account disagreeing with the bank. The payment method and the nominal account both feed the reporting. Recorded as the money arrives rather than in a monthly catch-up, it is what keeps debt reports honest and stops statements chasing people who have already paid.\n\nYou will know you have got this when the next payment you record leaves the invoice showing exactly what is still outstanding — the full amount closing it, a part payment leaving the remainder visible — and the customer's balance agrees with what has reached the bank."}
   ],
-  openItems: "(1) The payment route has never been checked live. Opening the Invoices tab, clicking View next to the invoice, scrolling to Payment and allocation history and selecting Add new payment all come from HC 216679 and nothing else. That is the same pattern that produced the credit note route error in Walkthrough 3, where the article's section heading was written up as a click. Confirm on screen before recording.",
+  openItems: "(1) **Needs human input — Sara or Abbie.** The payment route has never been checked live. Opening the Invoices tab, clicking View next to the invoice, scrolling to Payment and allocation history and selecting Add new payment all come from HC 216679 and nothing else. That is the same pattern that produced the credit note route error in Walkthrough 3, where the article's section heading was written up as a click. Nadia reviewed this walkthrough on 21 July 2026 and had nothing to add, which supports it but is not a live route confirmation. Confirm on screen before recording.",
   helpCentreIssues: ""
 };
 COURSES['reed-script-l1-s5-c3'] = {
@@ -8757,7 +8759,7 @@ COURSES['reed-script-l1-dm-s1-c2'] = {
     {section:"Three templates, not fourteen", media:"Screen recording", note:"Capture profile icon, Settings, Jobs, Job description templates. Hold on the list showing exactly three entries with their colours, while the blueprint point is narrated over it. Do not open one yet."},
     {section:"The essentials", media:"Screen recording", note:"Open the Service template. Show job description name, appointment colour, Time to complete, Appear in website integration, Appear in customer login, Online portal price. Scroll slowly, edit nothing."},
     {section:"What fills in on every job", media:"Screen recording", note:"Scroll to Default job values. Show job notes, Skills, Priority, Pipeline, Service reminder 1, and pass over Business unit, Quoted amount and Schedule appointment."},
-    {section:"What the technician gets", media:"Screen recording", note:"Scroll to Mobile experience. Show the arrive workflow and job report workflow selections, then open the report workflow so the on-site tasks and the custom form inside it are visible. Return to the template."},
+    {section:"What the technician gets", media:"Screen recording", note:"Scroll to Mobile experience. Show the arrive workflow and job report workflow selections, then open the report workflow to Step 2, on-site tasks, so the Form task and the Allow this task to be skipped checkbox are both visible. Return to the template."},
     {section:"Invoicing and portals", media:"Screen recording", note:"Open Invoicing and show Pricing items and Labour rates selected on the template. Do not open Automatically invoice - it is a setup of its own and is covered in the invoicing setup series. Then Portals > Booking portal, showing the days-ahead field and the Engineers to be used for scheduling option. Edit nothing."},
     {section:"Practise this", media:"Written text", note:"Article copy only, no recording. The do exercise at grade 1: the learner lists their own three job types before opening Settings, so it works with nothing configured."},
     {section:"Knowledge check", media:"Expanding section", note:"Two questions at the foot of the article, each revealing its answer on click. Nothing is scored."},
@@ -8768,15 +8770,15 @@ COURSES['reed-script-l1-dm-s1-c2'] = {
     {type:"section", heading:"Three templates, not fourteen", body:"Sarah opens the profile icon, then Settings, then Jobs, then Job description templates. The list holds three entries, Installation, Service and Repair/Breakdown, each with its own colour so the office can read the diary by job type without opening anything. Every job SunComfort raises starts from one of them.\n\nA template is the blueprint for a kind of work: how long the appointment should be, who is qualified to attend, what the technician is asked to do once they are there, and where the job shows up for the office afterwards. Set it once and every job created from it is consistent. Skip it and someone fills those fields in by hand, differently, on every job.\n\nThree is enough to start with, and the temptation to build one for every product line is worth resisting until the three are working, because every template added is another to keep current. You may well name yours differently. A plumbing business might call the middle one a callout, a lift company a routine visit. What matters is that there is one template for work that puts something in, one for work that fixes something, and one for work that cannot wait."},
     {type:"section", heading:"The essentials", body:"Sarah opens the Service template. The top of the screen holds the things that decide how the job looks and how long it takes: the job description name, the appointment colour that puts it on the diary in a shade the office recognises, and Time to complete, which is set to one hour so the scheduler is not sizing every service visit by hand.\n\nTwo checkboxes sit alongside them. Appear in website integration puts this job type on the booking form on the company's own website, and Appear in customer login puts it in the portal an existing customer signs into. Both are ticked here, and the Online portal price beneath them is what a customer sees quoted when they book that way.\n\nThose two checkboxes are the ones worth pausing on for your own business. A service visit is usually safe to let customers book themselves. A repair or breakdown often is not, because the response depends on who is free, and an installation almost never is, because it needs a survey first."},
     {type:"section", heading:"What fills in on every job", body:"Below the essentials is the section marked Default job values, and this is the part that does the work. Sarah scrolls through it: a standing job note that appears on every service job, the Skills entry that limits scheduling to technicians who actually hold the qualification, Priority set to Normal, and the pipeline the job will travel along.\n\nService reminder 1 is set here too, which is what turns a completed service into next year's service without anyone remembering to do it. Further down, Business unit and Quoted amount sit empty for now, and Schedule appointment controls whether raising the job takes the office straight into the diary.\n\nEvery one of these is a decision the office would otherwise make individually, on every job, from memory. The skill is the clearest example: setting it here means an unqualified technician cannot be scheduled on a service visit by accident, and nobody has to remember to check."},
-    {type:"section", heading:"What the technician gets", body:"The Mobile experience section is where the template reaches the field. Sarah opens it to show two selections: an arrive workflow, which is what the technician completes when they get to site, and a job report workflow, which is what they complete before they leave. Both are built elsewhere in Settings and simply chosen here.\n\nSarah opens the report workflow to show what is inside it, the on-site tasks the technician works through and the custom form that produces the paperwork at the end. This is the answer to a question new accounts ask constantly, which is where forms and tasks are attached. They are not attached to the job. They sit inside the workflow, and the workflow is attached to the template, so every service job carries them automatically.\n\nThat single connection is the reason the template is worth the effort. One selection on this screen decides what a technician is asked to do on every service visit from that point on."},
+    {type:"section", heading:"What the technician gets", body:"The Mobile experience section is where the template reaches the field. Sarah opens it to show two selections: an arrive workflow, which is what the technician completes when they get to site, and a job report workflow, which is what they complete before they leave. Both are built elsewhere in Settings and simply chosen here.\n\nSarah opens the report workflow to show what is inside it. On-site tasks are the things the technician has to work through before they can leave the appointment, and one of them points at the custom form that produces the paperwork.\n\nEvery active form is already available on every job, and a technician can open one whenever they like. What the task adds is that they are asked for it and cannot leave the appointment until it is done, because tasks are mandatory unless someone ticks Allow this task to be skipped. That is the difference between a form that exists and a certificate that always comes back.\n\nOne selection on this screen decides what a technician is asked to do on every service visit from that point on."},
     {type:"section", heading:"Invoicing and portals", body:"Sarah opens Invoicing. Pricing items and Labour rates are what a service visit costs, and they are what the template reaches for when a job is raised from it. Neither is set here, they are chosen here, which is why a template cannot price anything until the rates exist in the account.\n\nPortals holds a single screen, Booking portal, and it decides what a customer is offered when they book online. The first field asks how many days after today appointments should start being shown. Setting it above zero pushes routine work into the future and keeps the next few slots free for emergencies, which matters more to some businesses than others.\n\nBeneath it, Engineers to be used for scheduling is set to all engineers with the given skills. That is the skill from Default job values doing a second job: it limits who the office can schedule onto a service visit, and it limits who a customer can book."},
     {type:"section", heading:"Practise this", body:"Before you open Settings on your own account, write down the three job types your business actually does. Three, not fourteen. Most businesses find the list is shorter than they expect once they stop counting variations.\n\nThen write, next to each one, the single thing a technician always needs to have with them on that kind of visit.\n\nThe first column is your three templates. The second is what belongs in the report workflow."},
-    {type:"reflection", label:"Knowledge check", question:"SunComfort attaches a custom form and a set of on-site tasks to every service visit. Where are they actually attached?", options:[], correct:"", feedback:"Not to the job, and not to the template directly. They sit inside the job report workflow, and that workflow is selected on the template under Mobile experience. So the chain runs template to workflow to tasks and form, which is why every job raised from the Service template carries them without anyone adding them. It also means changing the workflow changes what every future service job asks for."},
+    {type:"reflection", label:"Knowledge check", question:"Every active custom form is already available on every job. So what does adding one as an on-site task actually achieve?", options:[], correct:"", feedback:"It makes it compulsory. On-site tasks are mandatory unless someone ticks Allow this task to be skipped, so the technician cannot leave the appointment until the form is done. Without the task the form is still there, and whether it gets filled in depends on someone remembering."},
     {type:"reflection", label:"Knowledge check", question:"The Service template has a Skills entry set under Default job values. What does that actually prevent?", options:[], correct:"", feedback:"It stops an unqualified technician being scheduled on the job. The skill carries onto every service job automatically, and the diary will only offer technicians who hold it, so the check happens at the point of scheduling rather than depending on whoever is booking to remember who is qualified."},
     {type:"section", heading:"Summary", body:"A job description template is where the decisions about a type of work get made once instead of on every job. It carries the appointment length and colour, whether customers can book it themselves, the default notes, skills, priority, pipeline and service reminder that fill in automatically, and the arrive and report workflows that tell the technician what to do on site, with the on-site tasks and forms sitting inside those workflows rather than on the job itself. Invoicing and portals sit last because they depend on labour rates and pricing existing elsewhere in the account, and a template raises jobs correctly while they are still empty. Three templates covering installation, service and repair will run a field service business properly; the fourteenth is what you build when the first three are no longer enough.\n\nYou will know you have got this when you can open a job description template and say, for each section in it, whether it changes what the office sees, what the technician does on site, or what the customer is shown."}
   ],
-  openItems: "- ~~Invoicing and Portals field labels~~ **RESOLVED (Sara, screenshots, 2026-09-09).** Invoicing holds Pricing items, Labour rates and Automatically invoice; Portals holds Booking portal. Section rewritten to the labels on screen. Two things to note for the take: the booking portal help text credits the **route optimisation engine**, which is plan dependent rather than an add-on, so do not imply every account behaves this way; and the account screenshotted had zero days, which Production Setup now requires setting. **Automatically invoice was removed from this walkthrough on Sara's instruction, 2026-09-09** - a single rule needs a customer type, trigger, breakdown, email and nominal code, so it assumes the accounting side is already configured. Logged as a new walkthrough for the invoicing setup series.\n- The three foundation templates must be named Installation, Service and Repair/Breakdown in the recording account, and the list must hold only those three. The names come from the onboarding gates document, which lists them as Repair, Service and Installation; Sara chose Repair/Breakdown on 2026-09-07 so the template reads for businesses that use either word. Nisha to confirm the account, since it may already carry the full set. Needs human input.\n- Time to complete is stated as one hour for a service visit. Confirm this matches the recording account before the take, or amend the narration to whatever is set there.\n- **The pipeline shown here is the Customer Journey name for it.** SunComfort is on Customer Journey, where the setting is called Job pipelines and stages are configured inside it. On Go Paperless there is no pipeline and the equivalent is a standalone Job stages screen. The narration says only \"the pipeline the job will travel along\", which is correct for the recording account but will not match what a Go Paperless learner sees in their own settings. Decide before recording whether this walkthrough should name both, as walkthrough 3 of this series now does, or stay silent because the template field itself is what is on screen. Sara.\n- Template field names and section order verified against Help Centre 217015, Set up and manage Job description templates, on 2026-09-07.",
-  helpCentreIssues: ""
+  openItems: "- ~~Where forms and tasks attach~~ **CORRECTED 2026-09-09 against HC 561197, Configuring on-site tasks.** The section previously said forms are attached to the template via the workflow and so reach every service job automatically. That is wrong: **every active custom form is already available on every job**, and there is no way to link a form to a job description. An on-site task of type Form makes it **mandatory** - tasks block the technician leaving the appointment unless Allow this task to be skipped is ticked. Section and Q1 rewritten to the compliance point.\n- ~~Invoicing and Portals field labels~~ **RESOLVED (Sara, screenshots, 2026-09-09).** Invoicing holds Pricing items, Labour rates and Automatically invoice; Portals holds Booking portal. Section rewritten to the labels on screen. Two things to note for the take: the booking portal help text credits the **route optimisation engine**, which is plan dependent rather than an add-on, so do not imply every account behaves this way; and the account screenshotted had zero days, which Production Setup now requires setting. **Automatically invoice was removed from this walkthrough on Sara's instruction, 2026-09-09** - a single rule needs a customer type, trigger, breakdown, email and nominal code, so it assumes the accounting side is already configured. Logged as a new walkthrough for the invoicing setup series.\n- The three foundation templates must be named Installation, Service and Repair/Breakdown in the recording account, and the list must hold only those three. The names come from the onboarding gates document, which lists them as Repair, Service and Installation; Sara chose Repair/Breakdown on 2026-09-07 so the template reads for businesses that use either word. Nisha to confirm the account, since it may already carry the full set. Needs human input.\n- Time to complete is stated as one hour for a service visit. Confirm this matches the recording account before the take, or amend the narration to whatever is set there.\n- **The pipeline shown here is the Customer Journey name for it.** SunComfort is on Customer Journey, where the setting is called Job pipelines and stages are configured inside it. On Go Paperless there is no pipeline and the equivalent is a standalone Job stages screen. The narration says only \"the pipeline the job will travel along\", which is correct for the recording account but will not match what a Go Paperless learner sees in their own settings. Decide before recording whether this walkthrough should name both, as walkthrough 3 of this series now does, or stay silent because the template field itself is what is on screen. Sara.\n- Template field names and section order verified against Help Centre 217015, Set up and manage Job description templates, on 2026-09-07.",
+  helpCentreIssues: "- **561197 - Configuring on-site tasks.** The support callout at the foot spells the AI agent **Al:den** with a lower-case L, twice. It is **AI:den**. A reader searching that name finds nothing."
 };
 COURSES['reed-script-l1-dm-s1-c3'] = {
   contentType: "Walkthrough",
@@ -14416,7 +14418,7 @@ In the next walkthrough Dr Spencer pays, and Claire records that payment against
 | Section | Media | Note |
 |---|---|---|
 | Introduction | Written text | Article copy at the top of the page. Nothing to record. |
-| Adding an invoice | Screen recording | Cut from the 163-second source clip \`da5dd7bd…\`. Job search, open the job, Invoices tab reading "No data found", Add new invoice, hold on the invoice type field, then the description, date, business unit and user group fields being filled. |
+| Adding an invoice | Screen recording | Job search, open the job, Invoices tab reading "No data found", Add new invoice, hold on the invoice type field, then the description, date, business unit and user group fields being filled. |
 | Choosing the breakdown style | Animated slides | Not filmed. The slide shows the four breakdown styles and what each one produces: no breakdown, breakdown by category, full breakdown, full breakdown by category. |
 | Line items, totals and saving | Screen recording | The line item rows and the totals panel, then Advanced options open at the foot of the form, then the send checkbox beside Save invoice showing the customer's address and left unticked, then the Save invoice click. The take ends on that click. |
 | Other invoice types | Written text | Article copy. Link out to the Help Centre article Managing invoices, 216679. |
@@ -14615,12 +14617,11 @@ Kept for provenance. Everything below is closed and is deliberately held under i
 
 INBOX_FILES["reed-script-l1-s5-c2"] = `# Reed — Script: Mark an invoice as paid
 
-**Layer:** 1 — Office teams path
-**Series:** 5 of 9 — Getting paid
-**Walkthrough:** 2 of 6
-**Format:** Walkthrough
+**Series:** The basics · Series 4: Getting paid | **Walkthrough:** 2 of 6 | **Duration:** 1 min | **Audience:** Office teams
+
 **Voice:** Archer (Clueso AI voiceover)
-**Date:** 2026-08-17
+
+**Date:** 2026-09-09
 
 ---
 
@@ -14635,20 +14636,18 @@ INBOX_FILES["reed-script-l1-s5-c2"] = `# Reed — Script: Mark an invoice as pai
 
 **Scenario:** Dr Sean Spencer has paid the invoice Claire raised for his heat pump installation. Claire records the payment so the invoice is marked as paid and his account balance updates immediately.
 
-**Estimated length:** 3 minutes
-
-**Target audience:** Office teams at field service businesses using Commusoft — finance staff and administrators responsible for recording payments. Assumes Commusoft Compass (Layer 1), Office teams Series 1, Series 3, Series 4, and Series 5 Walkthrough 1 complete. SunComfort Systems is the pedagogical vehicle, not the audience.
+**Target audience:** Office teams at field service businesses using Commusoft — finance staff and administrators responsible for recording payments. SunComfort Systems is the pedagogical vehicle, not the audience.
 
 **Assumed starting point:** Commusoft Compass (Layer 1), Office teams Series 1, Series 3, Series 4, and Series 5 Walkthrough 1 complete.
 
-**Main objective beyond learning objectives:** An invoice that has been paid but not recorded in Commusoft shows as outstanding — which means debt reports are wrong, statements show unpaid balances, and the accounting sync sends incorrect data. Recording payments promptly and accurately keeps every financial record downstream correct without any additional work.
+**Main objective beyond learning objectives:** An invoice that has been paid but not recorded shows as outstanding — which means debt reports are wrong, statements show unpaid balances, and the accounting sync sends incorrect data. Recording payments promptly and accurately keeps every financial record downstream correct without any additional work.
 
 ---
 
 ## Production Setup
 
 1. **Logged-in user:** Claire Hudson, Administrator, Financial office staff
-2. **Customer record:** Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA, account no 1999, carrying the invoice being paid. **The whole of Series 5 is recorded against this person — do not substitute another customer.**
+2. **Customer record:** **Dr Sean Spencer, account no 1999**, carrying the invoice being paid. **The whole of this series is recorded against this person — do not substitute another customer.**
 3. **Existing data:** The Final invoice raised against Dr Spencer's heat pump installation — **invoice 1003, "Residential Heat Pump Installation", £648.00** — issued and unpaid, so the payment can be recorded on screen. In the account it now shows a zero balance, because this walkthrough is what pays it. Payment methods configured in settings including cash, cheque, bank transfer and card. **Nominal accounts configured**, since the narration has Claire selecting one — without them the field does not appear and that sentence describes a screen that is not there.
 4. **Assets required:** None
 
@@ -14656,17 +14655,27 @@ INBOX_FILES["reed-script-l1-s5-c2"] = `# Reed — Script: Mark an invoice as pai
 
 ## Introduction
 
-An invoice that has been paid but never recorded still counts as outstanding. Debt reports overstate what the business is owed, statements chase customers who have already paid, and the accounting sync carries the error onward into the books. At SunComfort, Dr Spencer has now paid the invoice Claire raised for his heat pump installation, and she records it against his account. It takes a few seconds, and it keeps every record downstream correct.
+An invoice that has been paid but never recorded still counts as outstanding. Debt reports overstate what the business is owed, statements chase customers who have already paid, and the accounting sync carries the error onward into the books.
+
+Recording a payment needs an issued, unpaid invoice, and your payment methods and nominal accounts already set up, because the form asks for both every time. If you are still setting your account up, those two lists are what this depends on; if you are already invoicing, they are in place. By the end you will be able to record a payment against an invoice, in full or in part, so the invoice and the customer's balance show what has actually arrived.
 
 ---
 
 ## Recording a payment
 
-Claire searches for Dr Spencer's job and opens the Invoices tab, where she clicks View next to the invoice. She scrolls to Payment and allocation history and selects Add new payment.
+Claire raised the invoice for Dr Spencer's heat pump installation and it has been sitting unpaid on his account. The money has now arrived, so she opens the job and records it.
+
+She goes to the Invoices tab and clicks View next to the invoice. She scrolls to Payment and allocation history and selects Add new payment.
 
 The invoice total is filled in automatically. Claire confirms it is right — where a customer has paid only part of an invoice, this is the field to adjust. She selects the payment method: cash, cheque, bank transfer, card, or any other method configured in your account settings. Card payments require card details to be entered.
 
 She selects the nominal account configured for your business's payments, and clicks Add payment. The invoice status updates immediately and the payment is recorded against the invoice.
+
+---
+
+## Practise this
+
+Before you open a payment form in your own account, write down what you would expect it to ask you for, and what you would expect it to have filled in already. Then open one against any invoice and compare, without saving it. The gap between what you predicted and what is actually on the screen is the part worth remembering.
 
 ---
 
@@ -14680,10 +14689,13 @@ She selects the nominal account configured for your business's payments, and cli
 
 **A.** She enters £400, the amount that actually arrived, rather than the total already filled in. The invoice stays partly outstanding, showing £248.00 still due, until that remainder is recorded as a second payment against the same invoice. Accepting the pre-filled total would close the invoice and clear his balance while the money was still owed.
 
+---
 
 ## Summary
 
 A payment is recorded from the invoice itself, under Payment and allocation history. The amount is pre-filled with the invoice total, which is the field to watch: where a customer has paid only part, entering the full amount closes the invoice and leaves the account disagreeing with the bank. The payment method and the nominal account both feed the reporting. Recorded as the money arrives rather than in a monthly catch-up, it is what keeps debt reports honest and stops statements chasing people who have already paid.
+
+You will know you have got this when the next payment you record leaves the invoice showing exactly what is still outstanding — the full amount closing it, a part payment leaving the remainder visible — and the customer's balance agrees with what has reached the bank.
 
 ---
 
@@ -14693,6 +14705,7 @@ A payment is recorded from the invoice itself, under Payment and allocation hist
 |---|---|---|
 | Introduction | Written text | Article copy only — no recording needed. |
 | Recording a payment | Screen recording | Capture job search → Invoices tab → View invoice → Payment and allocation history → Add new payment → amount, payment method, nominal account → Add payment, ending on the updated invoice status. |
+| Practise this | Written text | Article copy at the foot of the walkthrough, above the knowledge check. Nothing to record. |
 | Knowledge check | Expanding section | Two questions at the foot of the article, each revealing its answer on click. Nothing is scored. |
 | Summary | Written text | Recap text only — no recording needed. |
 
@@ -14700,7 +14713,7 @@ A payment is recorded from the invoice itself, under Payment and allocation hist
 
 ## Open items
 
-(1) The payment route has never been checked live. Opening the Invoices tab, clicking View next to the invoice, scrolling to Payment and allocation history and selecting Add new payment all come from HC 216679 and nothing else. That is the same pattern that produced the credit note route error in Walkthrough 3, where the article's section heading was written up as a click. Confirm on screen before recording.
+(1) **Needs human input — Sara or Abbie.** The payment route has never been checked live. Opening the Invoices tab, clicking View next to the invoice, scrolling to Payment and allocation history and selecting Add new payment all come from HC 216679 and nothing else. That is the same pattern that produced the credit note route error in Walkthrough 3, where the article's section heading was written up as a click. Nadia reviewed this walkthrough on 21 July 2026 and had nothing to add, which supports it but is not a live route confirmation. Confirm on screen before recording.
 
 ---
 
@@ -14708,25 +14721,37 @@ A payment is recorded from the invoice itself, under Payment and allocation hist
 
 Kept for provenance, and held under its own heading so it stays out of the dashboard's Open items panel.
 
+[REVISED 2026-09-09 — **the five-block standard.** This walkthrough had no Practise this, no criterion in the Summary, and an Introduction that carried neither the conditions nor the learning objective. All three added, per The Mager objective and Watch, do, check. Practise this is written at **grade 1, generate before you look**, not grade 2: recording a payment is live financial data that feeds the accounting sync, so an exercise asking the learner to record a real one is not reversible in the sense the standard requires. The exercise has them predict the form and then open it without saving.]
+
+[REVISED 2026-09-09 — **the conditions now appear twice in different words**, as the standard requires. The learner's prerequisite is in the Introduction; SunComfort's version is the new opening beat of "Recording a payment", which previously started mid-air on "Claire searches for Dr Spencer's job".]
+
+[CORRECTED 2026-09-09 — **Duration was 3 min and is now 1 min.** Duration is the video only, at 180 words a minute, confirmed by Sara 2026-09-09. The recorded row runs about 139 words, which is roughly 46 seconds. The old 3 min figure was whole-page reading time — video plus the written blocks — which is not what the field means. Nothing was padded to fill it.]
+
+[CORRECTED 2026-09-09 — **the missing \`---\` between the knowledge check and the Summary.** Without it the injector's knowledge check regex runs to the next \`---\`, which sat below the Summary, so the Summary text was being swallowed into the second answer. Present on Walkthrough 1 and missing on the other five in this series.]
+
+[CORRECTED 2026-09-09 — **header converted to the current pipe format** with Series, Walkthrough, Duration and Audience on one line. The old multi-line form carried "Series: 5 of 9", which is wrong twice over: this series is now Series 4 of the The basics pathway, not 5 of 9.]
+
+[CORRECTED 2026-09-09 — **the address dropped from Production Setup.** A customer is identified by name plus account number; the address is a pointer that goes stale and this walkthrough does not turn on it. Settled 2026-09-09.]
+
 [RESOLVED 2026-08-17 — narrative and customer. The script instructed the learner directly and named Mrs Margaret Thompson at 42 Oakwood Drive, Sevenoaks, an address that does not exist anywhere in the 1,000-customer file. Rewritten so Archer narrates and Claire carries out the actions in the third person present, on Dr Sean Spencer, continuing the invoice raised in Walkthrough 1 rather than jumping to an unrelated customer.]
 
 [RESOLVED 2026-08-17 — knowledge check Q1 was a retired yes/no prompt flagged OPEN. Replaced with a product question about Cash Allocations that has an explained answer, per the 2026-08-11 rule that there are no yes/no prompts.]
 
-[WITHDRAWN 2026-08-17 — the open item asking whether to extend or combine this walkthrough because 3 minutes sits "below the 4 minute floor". There is no minimum length in the standard, and merging on length alone is explicitly ruled out. The 4 minute floor was never set by Sara.]
+[WITHDRAWN 2026-08-17 — the open item asking whether to extend or combine this walkthrough because 3 minutes sits "below the 4 minute floor". There is no minimum length in the standard, and merging on length alone is explicitly ruled out. The 4 minute floor was never set by Sara. **Still withdrawn after the 2026-09-09 duration correction** — the video is shorter than the old figure suggested, and that is not a defect.]
 
 [Housekeeping 2026-07-28, Flint pass: narration-only Production Setup replaced with a real one; Introduction written; em dashes removed from narration and knowledge check options; "deposit" replaced with "part payment" in the knowledge check so it does not collide with the Deposit invoice type taught in Walkthrough 1.]
 
 ---
-**Section count:** 3 narrated sections plus a 2-question knowledge check
-**Estimated length:** 3 minutes
+**Section count:** 2 narrated sections plus Practise this and a 2-question knowledge check
+**Duration:** 1 min — the recorded row carries about 139 words, roughly 46 seconds at 180 wpm
 **Em dashes:** used sparingly
 **Line breaks within sections:** none
 **Voice:** Archer narrates; Claire Hudson carries out every on-screen action, third person present; "you" used only for guidance about the learner's own business
 **Characters from approved roster:** Claire Hudson (Administrator — Financial office staff)
-**Customer from the 1,000-customer import:** Dr Sean Spencer, 143-149 Lewisham High Street, Lewisham, SE13 6AA, account no 1999
-**Sources used:** Commusoft — Managing invoices (https://help.commusoft.com/en/articles/216679-managing-invoices)
+**Customer:** Dr Sean Spencer, account no 1999
+**Sources used:** Commusoft — Managing invoices (https://help.commusoft.com/en/articles/216679-managing-invoices); The Mager objective and Watch, do, check, Owners Inbox/Standards/
 **Pre-submission checklist:** complete
-**Flint revisions:** Full SCL format pass 2026-07-28. Narrative and customer pass 2026-08-17: converted to the three-voices standard, customer aligned to the series thread, knowledge check Q1 replaced, open items renumbered so they render as a checklist.
+**Flint revisions:** Full SCL format pass 2026-07-28. Narrative and customer pass 2026-08-17. Five-block standard pass 2026-09-09: Practise this added, criterion added to the Summary, conditions and learning objective written into the Introduction, duration corrected to video-only, header and Production Setup brought up to date.
 `;
 
 INBOX_FILES["reed-script-l1-s5-c3"] = `# Reed — Script: Raise a credit note
@@ -32524,9 +32549,11 @@ Every one of these is a decision the office would otherwise make individually, o
 
 The Mobile experience section is where the template reaches the field. Sarah opens it to show two selections: an arrive workflow, which is what the technician completes when they get to site, and a job report workflow, which is what they complete before they leave. Both are built elsewhere in Settings and simply chosen here.
 
-Sarah opens the report workflow to show what is inside it, the on-site tasks the technician works through and the custom form that produces the paperwork at the end. This is the answer to a question new accounts ask constantly, which is where forms and tasks are attached. They are not attached to the job. They sit inside the workflow, and the workflow is attached to the template, so every service job carries them automatically.
+Sarah opens the report workflow to show what is inside it. On-site tasks are the things the technician has to work through before they can leave the appointment, and one of them points at the custom form that produces the paperwork.
 
-That single connection is the reason the template is worth the effort. One selection on this screen decides what a technician is asked to do on every service visit from that point on.
+Every active form is already available on every job, and a technician can open one whenever they like. What the task adds is that they are asked for it and cannot leave the appointment until it is done, because tasks are mandatory unless someone ticks Allow this task to be skipped. That is the difference between a form that exists and a certificate that always comes back.
+
+One selection on this screen decides what a technician is asked to do on every service visit from that point on.
 
 ---
 
@@ -32552,9 +32579,9 @@ The first column is your three templates. The second is what belongs in the repo
 
 **Knowledge check**
 
-**Q1.** SunComfort attaches a custom form and a set of on-site tasks to every service visit. Where are they actually attached?
+**Q1.** Every active custom form is already available on every job. So what does adding one as an on-site task actually achieve?
 
-**A.** Not to the job, and not to the template directly. They sit inside the job report workflow, and that workflow is selected on the template under Mobile experience. So the chain runs template to workflow to tasks and form, which is why every job raised from the Service template carries them without anyone adding them. It also means changing the workflow changes what every future service job asks for.
+**A.** It makes it compulsory. On-site tasks are mandatory unless someone ticks Allow this task to be skipped, so the technician cannot leave the appointment until the form is done. Without the task the form is still there, and whether it gets filled in depends on someone remembering.
 
 **Q2.** The Service template has a Skills entry set under Default job values. What does that actually prevent?
 
@@ -32578,7 +32605,7 @@ You will know you have got this when you can open a job description template and
 | Three templates, not fourteen | Screen recording | Capture profile icon, Settings, Jobs, Job description templates. Hold on the list showing exactly three entries with their colours, while the blueprint point is narrated over it. Do not open one yet. |
 | The essentials | Screen recording | Open the Service template. Show job description name, appointment colour, Time to complete, Appear in website integration, Appear in customer login, Online portal price. Scroll slowly, edit nothing. |
 | What fills in on every job | Screen recording | Scroll to Default job values. Show job notes, Skills, Priority, Pipeline, Service reminder 1, and pass over Business unit, Quoted amount and Schedule appointment. |
-| What the technician gets | Screen recording | Scroll to Mobile experience. Show the arrive workflow and job report workflow selections, then open the report workflow so the on-site tasks and the custom form inside it are visible. Return to the template. |
+| What the technician gets | Screen recording | Scroll to Mobile experience. Show the arrive workflow and job report workflow selections, then open the report workflow to Step 2, on-site tasks, so the Form task and the Allow this task to be skipped checkbox are both visible. Return to the template. |
 | Invoicing and portals | Screen recording | Open Invoicing and show Pricing items and Labour rates selected on the template. Do not open Automatically invoice - it is a setup of its own and is covered in the invoicing setup series. Then Portals > Booking portal, showing the days-ahead field and the Engineers to be used for scheduling option. Edit nothing. |
 | Practise this | Written text | Article copy only, no recording. The do exercise at grade 1: the learner lists their own three job types before opening Settings, so it works with nothing configured. |
 | Knowledge check | Expanding section | Two questions at the foot of the article, each revealing its answer on click. Nothing is scored. |
@@ -32586,7 +32613,15 @@ You will know you have got this when you can open a job description template and
 
 ---
 
+**Help Centre issues found**
+
+- **561197 - Configuring on-site tasks.** The support callout at the foot spells the AI agent **Al:den** with a lower-case L, twice. It is **AI:den**. A reader searching that name finds nothing.
+
+---
+
 **Open items**
+
+- ~~Where forms and tasks attach~~ **CORRECTED 2026-09-09 against HC 561197, Configuring on-site tasks.** The section previously said forms are attached to the template via the workflow and so reach every service job automatically. That is wrong: **every active custom form is already available on every job**, and there is no way to link a form to a job description. An on-site task of type Form makes it **mandatory** - tasks block the technician leaving the appointment unless Allow this task to be skipped is ticked. Section and Q1 rewritten to the compliance point.
 
 - ~~Invoicing and Portals field labels~~ **RESOLVED (Sara, screenshots, 2026-09-09).** Invoicing holds Pricing items, Labour rates and Automatically invoice; Portals holds Booking portal. Section rewritten to the labels on screen. Two things to note for the take: the booking portal help text credits the **route optimisation engine**, which is plan dependent rather than an add-on, so do not imply every account behaves this way; and the account screenshotted had zero days, which Production Setup now requires setting. **Automatically invoice was removed from this walkthrough on Sara's instruction, 2026-09-09** - a single rule needs a customer type, trigger, breakdown, email and nominal code, so it assumes the accounting side is already configured. Logged as a new walkthrough for the invoicing setup series.
 - The three foundation templates must be named Installation, Service and Repair/Breakdown in the recording account, and the list must hold only those three. The names come from the onboarding gates document, which lists them as Repair, Service and Installation; Sara chose Repair/Breakdown on 2026-09-07 so the template reads for businesses that use either word. Nisha to confirm the account, since it may already carry the full set. Needs human input.

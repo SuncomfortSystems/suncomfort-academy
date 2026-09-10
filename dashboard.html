@@ -2509,7 +2509,7 @@ COURSES['reed-script-l1-s5-c4'] = {
   objectives: [
     "Generate and send a customer statement using the correct route",
     "Choose the appropriate delivery method for the customer's contact preferences",
-    "Understand what a statement includes and its constraint around date filtering"
+    "Group a statement by contact where an account has several, and attach the underlying invoices when emailing it"
   ],
   productionSetup: [
     "Logged-in user: Claire Hudson, Administrator, Financial office staff",
@@ -2527,14 +2527,14 @@ COURSES['reed-script-l1-s5-c4'] = {
   ],
   scenes: [
     {type:"section", heading:"Introduction", body:"A statement answers the question a customer asks constantly: what do I actually owe you. Rather than sending them back through a stack of individual invoices, it puts every unpaid invoice and every unallocated credit note on one page with a single balance at the bottom. Used as a routine rather than only on request, it is one of the cheapest ways to shorten the time between finishing work and being paid for it. At SunComfort, Dr Spencer's account still carries the Solar Emergency Callout, and he has asked what is outstanding, so Claire sends him a statement.\n\nYou need a customer with something open on their account: an unpaid invoice, or a credit note that has not been allocated. A statement is built from whatever is outstanding at the moment it is generated, so on a settled account there is nothing to send. By the end you will be able to generate a statement for a customer, decide whether to group it by contact, and send it in the form they need."},
-    {type:"section", heading:"What a statement contains", body:"A customer statement in Commusoft is a snapshot of the customer's financial position at the moment it is generated. It lists all unpaid invoices and any unallocated credit notes, and shows the total outstanding balance. Statements do not currently support date filtering, so a statement always reflects the full outstanding balance rather than a chosen period. That matters when a customer asks for one covering a particular range of dates, because what they will receive is everything currently outstanding."},
+    {type:"section", heading:"What a statement contains", body:"A customer statement is a snapshot of the customer's financial position at the moment it is generated. It lists all unpaid invoices and any unallocated credit notes, and shows the total outstanding balance. Because it is a snapshot, the figure moves as the account does: anything invoiced, paid or credited after it goes out will not be on the copy the customer is holding."},
     {type:"section", heading:"Sending the statement", body:"Claire opens the customer dashboard, selects Quick Links, and chooses Send statement. Before it goes anywhere she decides whether to group the statement by customer contact. It makes no difference on Dr Spencer's account, which has a single contact, but on a commercial account where different people handle different invoices it splits the statement so each contact sees only their own. She reviews the generated PDF to confirm the details are right. Three delivery options are then available. Print opens the PDF in a new browser tab for printing or saving. Email lets her pick the recipient, adjust the message using the statement email template, and optionally attach the individual invoices, up to sixteen megabytes in total. Download saves the PDF straight to the device. Claire emails it, with the invoices attached, because the account wants to check the detail against its own records."},
     {type:"section", heading:"Practise this", body:"Open a customer in your own account who has something outstanding, generate a statement and read the PDF without sending it. Check the closing balance against what you believe that customer owes. Nothing goes out until you choose to send it, so this is safe to try on a live account — and if the balance surprises you, that is the walkthrough earning its place."},
-    {type:"reflection", label:"Knowledge check", question:"Dr Spencer asks Claire for a statement covering only the invoices raised in the last three months. What can she send, and what should she tell them?", options:[], correct:"", feedback:"She can only send the full statement. Commusoft statements do not support date filtering, so what generates is every unpaid invoice and unallocated credit note currently on the account, whenever it was raised. She should say so when she sends it, rather than letting them assume the document is limited to the period they asked for and reconcile it against the wrong figure."},
+    {type:"reflection", label:"Knowledge check", question:"A customer says the statement Claire sent does not match the balance they were quoted a week ago. What has probably happened?", options:[], correct:"", feedback:"Nothing has gone wrong with either figure. A statement is a snapshot of the account at the moment it was generated, listing every unpaid invoice and unallocated credit note on it at that point. Anything invoiced, paid or credited since will not appear on the copy they are holding, so two statements a week apart can legitimately disagree. The date it was produced is what settles which figure is current."},
     {type:"reflection", label:"Knowledge check", question:"A commercial account has three contacts, and different people there deal with different invoices. What should Claire do when generating the statement, and why?", options:[], correct:"", feedback:"She groups the statement by customer contact. That splits the outstanding items so each contact sees the invoices they are responsible for rather than the whole account, which means nobody has to work out which lines are theirs before they can act. On a single-contact record like Dr Spencer's the option is there but changes nothing."},
-    {type:"section", heading:"Summary", body:"A customer statement lists all unpaid invoices and unallocated credit notes at the point it is generated, and date filtering is not currently available. To send one, open the customer dashboard, select Quick Links, and choose Send statement. Decide whether to group by customer contact, review the PDF, then print, email or download it. When emailing, the individual invoices can be attached alongside the summary. The statement is a prompt for payment, and used consistently it keeps outstanding balances visible and shortens the wait to be paid.\n\nYou will know you have got this when the statement you generate lists every unpaid invoice on that account, nothing that has already been settled, and a closing balance that matches what your own records say the customer owes."}
+    {type:"section", heading:"Summary", body:"A statement is a snapshot of everything outstanding on an account — unpaid invoices and unallocated credit notes — raised from the customer record and delivered by print, email or download. Because it is a snapshot, the figure moves as the account does, so the date it was produced is part of what it says. Emailing it with the individual invoices attached, within a sixteen megabyte limit, saves the customer asking for them separately. Sent as a routine rather than only on request, it is one of the cheapest ways to shorten the gap between finishing work and being paid for it.\n\nYou will know you have got this when the statement you generate lists every unpaid invoice on that account, nothing that has already been settled, and a closing balance that matches what your own records say the customer owes."}
   ],
-  openItems: "(1) **Needs human input — Sara or Abbie.** The \"no date filtering\" constraint is stated in the Help Centre article and has never been tested. It is not covered by the recording either. Both check question Q1 and the Summary depend on it, so if it has since changed this walkthrough teaches a limitation that no longer exists. Worth one check.",
+  openItems: "None — the route and delivery options are confirmed against the recording, and the unverified date filtering claim has been removed rather than tested, because nothing in the walkthrough now depends on it. See Resolved history.",
   helpCentreIssues: ""
 };
 COURSES['reed-script-l1-s5-c5'] = {
@@ -14945,7 +14945,7 @@ INBOX_FILES["reed-script-l1-s5-c4"] = `# Reed — Script: Send a customer statem
 **Learning objectives**
 1. Generate and send a customer statement using the correct route
 2. Choose the appropriate delivery method for the customer's contact preferences
-3. Understand what a statement includes and its constraint around date filtering
+3. Group a statement by contact where an account has several, and attach the underlying invoices when emailing it
 
 **Target persona:** Office teams
 
@@ -14980,7 +14980,7 @@ You need a customer with something open on their account: an unpaid invoice, or 
 
 ## What a statement contains
 
-A customer statement in Commusoft is a snapshot of the customer's financial position at the moment it is generated. It lists all unpaid invoices and any unallocated credit notes, and shows the total outstanding balance. Statements do not currently support date filtering, so a statement always reflects the full outstanding balance rather than a chosen period. That matters when a customer asks for one covering a particular range of dates, because what they will receive is everything currently outstanding.
+A customer statement is a snapshot of the customer's financial position at the moment it is generated. It lists all unpaid invoices and any unallocated credit notes, and shows the total outstanding balance. Because it is a snapshot, the figure moves as the account does: anything invoiced, paid or credited after it goes out will not be on the copy the customer is holding.
 
 ---
 
@@ -14997,9 +14997,9 @@ Open a customer in your own account who has something outstanding, generate a st
 
 **Check what you know**
 
-**Q1.** Dr Spencer asks Claire for a statement covering only the invoices raised in the last three months. What can she send, and what should she tell them?
+**Q1.** A customer says the statement Claire sent does not match the balance they were quoted a week ago. What has probably happened?
 
-**A.** She can only send the full statement. Commusoft statements do not support date filtering, so what generates is every unpaid invoice and unallocated credit note currently on the account, whenever it was raised. She should say so when she sends it, rather than letting them assume the document is limited to the period they asked for and reconcile it against the wrong figure.
+**A.** Nothing has gone wrong with either figure. A statement is a snapshot of the account at the moment it was generated, listing every unpaid invoice and unallocated credit note on it at that point. Anything invoiced, paid or credited since will not appear on the copy they are holding, so two statements a week apart can legitimately disagree. The date it was produced is what settles which figure is current.
 
 **Q2.** A commercial account has three contacts, and different people there deal with different invoices. What should Claire do when generating the statement, and why?
 
@@ -15010,7 +15010,7 @@ Open a customer in your own account who has something outstanding, generate a st
 
 ## Summary
 
-A customer statement lists all unpaid invoices and unallocated credit notes at the point it is generated, and date filtering is not currently available. To send one, open the customer dashboard, select Quick Links, and choose Send statement. Decide whether to group by customer contact, review the PDF, then print, email or download it. When emailing, the individual invoices can be attached alongside the summary. The statement is a prompt for payment, and used consistently it keeps outstanding balances visible and shortens the wait to be paid.
+A statement is a snapshot of everything outstanding on an account — unpaid invoices and unallocated credit notes — raised from the customer record and delivered by print, email or download. Because it is a snapshot, the figure moves as the account does, so the date it was produced is part of what it says. Emailing it with the individual invoices attached, within a sixteen megabyte limit, saves the customer asking for them separately. Sent as a routine rather than only on request, it is one of the cheapest ways to shorten the gap between finishing work and being paid for it.
 
 You will know you have got this when the statement you generate lists every unpaid invoice on that account, nothing that has already been settled, and a closing balance that matches what your own records say the customer owes.
 
@@ -15031,11 +15031,13 @@ You will know you have got this when the statement you generate lists every unpa
 
 ## Open items
 
-(1) **Needs human input — Sara or Abbie.** The "no date filtering" constraint is stated in the Help Centre article and has never been tested. It is not covered by the recording either. Both check question Q1 and the Summary depend on it, so if it has since changed this walkthrough teaches a limitation that no longer exists. Worth one check.
+None — the route and delivery options are confirmed against the recording, and the unverified date filtering claim has been removed rather than tested, because nothing in the walkthrough now depends on it. See Resolved history.
 
 ---
 
 ## Resolved history
+
+[REVISED 2026-09-09 — **the date filtering theme is out, on Sara's challenge.** The script taught, in four places, that statements cannot be filtered to a date range: learning objective 3, the "What a statement contains" section, the whole of Check what you know Q1, and the opening clause of the Summary. **None of it is in the video** — the recorded voiceover covers the route, the grouping decision, the PDF review and the three delivery options, and never mentions dates. So a written theme had been built around a feature the walkthrough does not teach and the product may not have. Sara's point: we should not spend a learning objective and one of only two check questions on something the software does not do, particularly when the screen's single real decision is grouping by contact and Q2 already covers it. **The claim was never verified and now does not need to be, because nothing depends on it.** Objective 3 is replaced with an observable one about grouping and attaching; the section keeps the snapshot idea and drops the absence; Q1 is replaced with a question about why two statements days apart can disagree, which the video does teach and which does not collide with assessment question 4; the Summary loses the clause and, in the same pass, stops being the walkthrough repeated in the imperative — a fault Flint raised on 2026-09-09 and left unfixed because only the must-fixes were approved.]
 
 [RESOLVED 2026-09-09 — **the route and the three delivery options, from the recording.** The open item said the grouping option, the PDF review step and the sixteen megabyte attachment limit had not been seen on screen. All three are in the footage: Clueso project "Send a customer statement" (\`151b499a-94a1-45a9-bdee-713ba7b384a5\`), clip 2 — "Claire opens the customer dashboard, selects Quick Links, and chooses Send statement... whether to group the statement by customer contact... She reviews the generated PDF... Print... Email lets her pick the recipient... and optionally attach the individual invoices, up to sixteen megabytes in total. Download saves the PDF straight to the device." The clip carries an auto spotlight on the "Group statements by customer contact" field, so it is visibly on screen and not merely narrated. **The date filtering constraint is not covered by the recording and stays open.**]
 

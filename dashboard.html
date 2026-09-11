@@ -1419,6 +1419,30 @@
   }
   #view-coverage .cov-empty { text-align: center; color: var(--text-muted); padding: 26px; }
   #view-coverage .cov-foot { font-size: 12px; color: var(--text-muted); margin: 14px 0 0; }
+  #view-coverage .cov-links { display: block; font-size: 11px; margin-top: 3px; }
+  #view-coverage .cov-nolink { color: #b45309; font-size: 11px; }
+  #view-coverage .cov-next { max-width: 260px; font-size: 12px; color: var(--text); }
+  #view-coverage .cov-diff {
+    display: inline-block; width: 22px; height: 22px; line-height: 22px; text-align: center;
+    border-radius: 50%; font-size: 11px; font-weight: 700;
+  }
+  #view-coverage .cov-d1 { background: #d7efdc; color: #1b5e20; }
+  #view-coverage .cov-d2 { background: #e3e7fa; color: #283593; }
+  #view-coverage .cov-d3 { background: #feedaf; color: #8a6100; }
+  #view-coverage .cov-d4 { background: #fed9db; color: #a11726; }
+  #view-coverage .cov-key {
+    margin: 16px 0 0; padding: 13px 15px; border: 1px solid var(--border);
+    border-radius: 8px; background: var(--surface);
+  }
+  #view-coverage .cov-key-title {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px;
+    color: var(--text-muted); font-weight: 600; margin-bottom: 9px;
+  }
+  #view-coverage .cov-key-row {
+    display: flex; gap: 9px; align-items: baseline;
+    font-size: 12px; color: var(--text-muted); margin-bottom: 6px;
+  }
+  #view-coverage .cov-key-row:last-child { margin-bottom: 0; }
 </style>
 <div id="view-coverage" class="view">
   <div class="page-heading">
@@ -1436,13 +1460,22 @@
 
   <div class="cov-filters" id="cov-filters"></div>
   <div class="cov-tablewrap"><table class="cov-table" id="cov-table"></table></div>
-  <p class="cov-foot">Pathway and Series are deliberately empty. The structure is what this map is being built to decide, so nothing is mapped onto the current pathways.</p>
+
+  <div class="cov-key">
+    <div class="cov-key-title">Difficulty</div>
+    <div class="cov-key-row"><span class="cov-diff cov-d1">1</span><span>Anyone, first week - one right answer, result visible on the screen</span></div>
+    <div class="cov-key-row"><span class="cov-diff cov-d2">2</span><span>Needs the basics - a choice about your business, but the effect stays on this screen</span></div>
+    <div class="cov-key-row"><span class="cov-diff cov-d3">3</span><span>Needs to see connections - the effect lands on another screen, or later</span></div>
+    <div class="cov-key-row"><span class="cov-diff cov-d4">4</span><span>Specialist - several moving parts, and getting it wrong is expensive or hard to undo</span></div>
+  </div>
+
+  <p class="cov-foot">Pathway and Series are deliberately empty. The structure is what this map is being built to decide, so nothing is mapped onto the current pathways &mdash; the difficulty grade is the evidence those decisions get made from.</p>
 </div>
 <script>
 (function () {
-  var FALLBACK = [{"Topic": "Customers", "Setting": "Communication rules", "Help Centre article": "216910", "Verdict": "Walkthrough", "Why": "Fails silently across several features — no error, no bounce, nothing in the timeline. A contact with nothing ticked makes job creation fail outright.", "Client goal it serves": "Reach customers the way they asked, without paying to post things nobody reads", "Pathway": "", "Series": "", "Status": "Ready to write", "Blocked by": ""}, {"Topic": "Customers", "Setting": "Service reminders", "Help Centre article": "216920", "Verdict": "Walkthrough", "Why": "Silent and surfaces a year late. A reminder created inside its own lead window is skipped by the 8am cycle — documented nowhere. Around 670 tickets, the highest volume of the ten.", "Client goal it serves": "Turn one-off jobs into recurring revenue that runs itself", "Pathway": "", "Series": "", "Status": "Blocked", "Blocked by": "Send-window behaviour needs Abbie to confirm"}, {"Topic": "Customers", "Setting": "Customer types", "Help Centre article": "216908", "Verdict": "Walkthrough", "Why": "Merging, debt chasing, after sales targeting and reporting all gate on it silently. The redesigned screen explains what a type is and none of what it gates. Company name required still locks at creation.", "Client goal it serves": "Keep one clean customer record per customer", "Pathway": "", "Series": "", "Status": "Blocked", "Blocked by": "LUNA-31 to 35 redesign"}, {"Topic": "Customers", "Setting": "Creditor days", "Help Centre article": "216912", "Verdict": "Walkthrough", "Why": "Due date is stamped at invoice creation and frozen — absent from the new screen copy too. The redesign also removes the double-confirmation on changing the default.", "Client goal it serves": "Get invoices paid on the terms I set", "Pathway": "", "Series": "", "Status": "Blocked", "Blocked by": "LUNA-36 to 42 and 50 redesign"}, {"Topic": "Customers", "Setting": "Customer account number", "Help Centre article": "216906", "Verdict": "Paragraph", "Why": "One choice, one-way — it can only ever go up. Drifts out of step with the accounting package's own numbering and surfaces at reconciliation.", "Client goal it serves": "Keep Commusoft and my accounts package in step", "Pathway": "", "Series": "", "Status": "To write", "Blocked by": ""}, {"Topic": "Customers", "Setting": "Advertising sources", "Help Centre article": "216918", "Verdict": "Paragraph", "Why": "The field is optional so staff skip it, and the data cannot be reconstructed later. Three clients independently asked for it to be made mandatory. The teaching belongs in a reporting walkthrough, not on the list screen.", "Client goal it serves": "Know which marketing actually brings work in", "Pathway": "", "Series": "", "Status": "To write", "Blocked by": ""}, {"Topic": "Customers", "Setting": "Technical references", "Help Centre article": "216914", "Verdict": "Paragraph + warning callout", "Why": "LUNA-48 confirms these can be deleted while in use and removes type-to-confirm. Two clicks wipes site data across every property with no guard, while customer types and creditor days both get one.", "Client goal it serves": "Give technicians the site details they need before they arrive", "Pathway": "", "Series": "", "Status": "To write", "Blocked by": ""}, {"Topic": "Customers", "Setting": "After sales care defaults", "Help Centre article": "216922", "Verdict": "Paragraph", "Why": "Written 2026-09-10 — trigger, the three send conditions, the portal, and where feedback lands.", "Client goal it serves": "Know what customers think of the work", "Pathway": "", "Series": "", "Status": "Done", "Blocked by": ""}, {"Topic": "Customers", "Setting": "Types of buildings", "Help Centre article": "216916", "Verdict": "Paragraph", "Why": "Pure classification, gates nothing found in any source. But the new drag-to-reorder is not in any article.", "Client goal it serves": "", "Pathway": "", "Series": "", "Status": "To write", "Blocked by": ""}, {"Topic": "Customers", "Setting": "Service plans", "Help Centre article": "216427", "Verdict": "Nothing", "Why": "Legacy, superseded by Contracts. Empty in the demo account. Confirmed by Sara 2026-09-11.", "Client goal it serves": "", "Pathway": "", "Series": "", "Status": "Closed", "Blocked by": ""}];
+  var FALLBACK = [{"Topic": "Customers", "Setting": "Communication rules", "Help Centre article": "216910", "Understanding article": "", "Verdict": "Walkthrough", "Difficulty": "3", "Why": "Fails silently across several features — no error, no bounce, nothing in the timeline. A contact with nothing ticked makes job creation fail outright.", "Client goal it serves": "Reach customers the way they asked, without paying to post things nobody reads", "Pathway": "", "Series": "", "Status": "Ready to write", "Blocked by": "", "Next action": "Record it — nothing is blocking this one"}, {"Topic": "Customers", "Setting": "Service reminders", "Help Centre article": "216920", "Understanding article": "", "Verdict": "Walkthrough", "Difficulty": "4", "Why": "Silent and surfaces a year late. A reminder created inside its own lead window is skipped by the 8am cycle — documented nowhere. Around 670 tickets, the highest volume of the ten.", "Client goal it serves": "Turn one-off jobs into recurring revenue that runs itself", "Pathway": "", "Series": "", "Status": "Blocked", "Blocked by": "Send-window behaviour is sourced from one escalated ticket (TRIAG-12342) and no documentation", "Next action": "Ask Abbie to confirm the send-window behaviour — a reminder created inside its own lead window is skipped by the 8am cycle. Then write."}, {"Topic": "Customers", "Setting": "Customer types", "Help Centre article": "216908", "Understanding article": "", "Verdict": "Walkthrough", "Difficulty": "4", "Why": "Merging, debt chasing, after sales targeting and reporting all gate on it silently. The redesigned screen explains what a type is and none of what it gates. Company name required still locks at creation.", "Client goal it serves": "Keep one clean customer record per customer", "Pathway": "", "Series": "", "Status": "Blocked", "Blocked by": "LUNA-31 to 35 rebuild the screen — table and side panel replace form-left/list-right", "Next action": "Ask Mageswari Annamalai or Balasubramanyan Murugan when LUNA ships (no fix version in Jira; Sara's estimate is 2-3 weeks from 2026-09-10). Record to the new UI once live."}, {"Topic": "Customers", "Setting": "Creditor days", "Help Centre article": "216912", "Understanding article": "", "Verdict": "Walkthrough", "Difficulty": "3", "Why": "Due date is stamped at invoice creation and frozen — absent from the new screen copy too. The redesign also removes the double-confirmation on changing the default.", "Client goal it serves": "Get invoices paid on the terms I set", "Pathway": "", "Series": "", "Status": "Blocked", "Blocked by": "LUNA-36 to 42 and 50 — and the batch screen (42 and 50) is still In Progress rather than Waiting for QA", "Next action": "Same LUNA owners. This one is furthest out because the batch screen is still In Progress. Record after release."}, {"Topic": "Customers", "Setting": "Customer account number", "Help Centre article": "216906", "Understanding article": "", "Verdict": "Paragraph", "Difficulty": "3", "Why": "One choice, one-way — it can only ever go up. Drifts out of step with the accounting package's own numbering and surfaces at reconciliation.", "Client goal it serves": "Keep Commusoft and my accounts package in step", "Pathway": "", "Series": "", "Status": "To write", "Blocked by": "", "Next action": "Add a paragraph to 216906 saying the number is what accounting packages sync on, and that the starting point can only ever go up."}, {"Topic": "Customers", "Setting": "Advertising sources", "Help Centre article": "216918", "Understanding article": "", "Verdict": "Paragraph", "Difficulty": "2", "Why": "The field is optional so staff skip it, and the data cannot be reconstructed later. Three clients independently asked for it to be made mandatory. The teaching belongs in a reporting walkthrough, not on the list screen.", "Client goal it serves": "Know which marketing actually brings work in", "Pathway": "", "Series": "", "Status": "To write", "Blocked by": "", "Next action": "Add the consequence to 216918, and carry the real teaching into a reporting walkthrough when that topic is mapped."}, {"Topic": "Customers", "Setting": "Technical references", "Help Centre article": "216914", "Understanding article": "", "Verdict": "Paragraph + warning callout", "Difficulty": "2", "Why": "LUNA-48 confirms these can be deleted while in use and removes type-to-confirm. Two clicks wipes site data across every property with no guard, while customer types and creditor days both get one.", "Client goal it serves": "Give technicians the site details they need before they arrive", "Pathway": "", "Series": "", "Status": "To write", "Blocked by": "", "Next action": "Rewrite 216914 — it says engineers, says Office Task rather than Scheduled activity, and omits ordering entirely. Add the delete warning."}, {"Topic": "Customers", "Setting": "After sales care defaults", "Help Centre article": "216922", "Understanding article": "", "Verdict": "Paragraph", "Difficulty": "3", "Why": "Written 2026-09-10 — trigger, the three send conditions, the portal, and where feedback lands.", "Client goal it serves": "Know what customers think of the work", "Pathway": "", "Series": "", "Status": "Done", "Blocked by": "", "Next action": "Two open items remain: confirm whether JOBS-2103 has shipped (recipient becomes the site contact), and verify that a negative review really cannot be edited or deleted."}, {"Topic": "Customers", "Setting": "Types of buildings", "Help Centre article": "216916", "Understanding article": "", "Verdict": "Paragraph", "Difficulty": "1", "Why": "Pure classification, gates nothing found in any source. But the new drag-to-reorder is not in any article.", "Client goal it serves": "", "Pathway": "", "Series": "", "Status": "To write", "Blocked by": "", "Next action": "Add the drag-to-reorder line to 216916 after LUNA-53 to 57 ship. Nothing else needed."}, {"Topic": "Customers", "Setting": "Service plans", "Help Centre article": "216427", "Understanding article": "", "Verdict": "Nothing", "Difficulty": "", "Why": "Legacy, superseded by Contracts. Empty in the demo account. Confirmed by Sara 2026-09-11.", "Client goal it serves": "", "Pathway": "", "Series": "", "Status": "Closed", "Blocked by": "", "Next action": "No content. Consider marking 216427 as legacy so it stops reading as an uncovered setting — nothing in the app or the Help Centre says so today."}];
   var CSV_URL = "https://docs.google.com/spreadsheets/d/1-RLBFNDsbz-FLyPVp65XiKi0_GGUbpt3DEQlzLW9AhU/gviz/tq?tqx=out:csv";
-  var rows = FALLBACK, filt = { Topic: "", Verdict: "", Status: "" };
+  var rows = FALLBACK, filt = { Topic: "", Verdict: "", Difficulty: "", Status: "" };
 
   function parseCSV(t) {
     var out = [], row = [], cur = "", q = false, i;
@@ -1493,6 +1526,7 @@
     var shown = rows.filter(function (r) {
       return (!filt.Topic || r.Topic === filt.Topic)
         && (!filt.Verdict || r.Verdict === filt.Verdict)
+        && (!filt.Difficulty || r.Difficulty === filt.Difficulty)
         && (!filt.Status || r.Status === filt.Status);
     });
 
@@ -1508,7 +1542,8 @@
         }).join("");
 
     var f = "";
-    [["Topic", "All topics"], ["Verdict", "All verdicts"], ["Status", "All statuses"]].forEach(function (p) {
+    [["Topic", "All topics"], ["Verdict", "All verdicts"], ["Difficulty", "All difficulties"],
+     ["Status", "All statuses"]].forEach(function (p) {
       var key = p[0];
       f += '<select data-k="' + key + '"><option value="">' + p[1] + "</option>"
         + uniq(key).map(function (v) {
@@ -1522,31 +1557,44 @@
     });
 
     var h = "<thead><tr>"
-      + ["Setting", "Verdict", "Why", "Client goal", "Pathway", "Series", "Status"]
+      + ["Setting", "Verdict", "Diff", "Why", "Client goal", "Pathway", "Series", "Status", "Next action"]
         .map(function (c) { return "<th>" + c + "</th>"; }).join("")
       + "</tr></thead><tbody>";
 
     if (!shown.length) {
-      h += '<tr><td colspan="7" class="cov-empty">Nothing matches those filters.</td></tr>';
+      h += '<tr><td colspan="9" class="cov-empty">Nothing matches those filters.</td></tr>';
+    }
+
+    function hc(n, label) {
+      n = (n || "").trim();
+      if (!n) { return ""; }
+      return ' <a class="cov-art" href="https://help.commusoft.com/en/articles/' + esc(n)
+        + '" target="_blank" rel="noopener">' + label + " " + esc(n) + "</a>";
     }
 
     shown.forEach(function (r) {
-      var art = (r["Help Centre article"] || "").trim();
       var blocked = (r["Blocked by"] || "").trim();
+      var next = (r["Next action"] || "").trim();
+      var diff = (r.Difficulty || "").trim();
+      var und = (r["Understanding article"] || "").trim();
       h += "<tr>"
         + '<td class="cov-name"><strong>' + esc(r.Setting) + "</strong>"
         + '<span class="cov-topic">' + esc(r.Topic) + "</span>"
-        + (art ? ' <a class="cov-art" href="https://help.commusoft.com/en/articles/' + esc(art)
-                 + '" target="_blank" rel="noopener">HC ' + esc(art) + "</a>" : "")
+        + '<span class="cov-links">' + hc(r["Help Centre article"], "HC")
+        + (und ? hc(und, "Understanding")
+               : ' <span class="cov-nolink">Understanding article not mapped yet</span>') + "</span>"
         + "</td>"
         + '<td><span class="cov-badge ' + vclass(r.Verdict) + '">' + esc(r.Verdict || "—") + "</span></td>"
+        + "<td>" + (diff ? '<span class="cov-diff cov-d' + esc(diff) + '">' + esc(diff) + "</span>" : "—") + "</td>"
         + '<td class="cov-why">' + esc(r.Why) + "</td>"
         + "<td>" + esc(r["Client goal it serves"] || "—") + "</td>"
         + '<td class="cov-open">' + esc(r.Pathway || "—") + "</td>"
         + '<td class="cov-open">' + esc(r.Series || "—") + "</td>"
         + "<td>" + esc(r.Status || "—")
         + (blocked ? '<span class="cov-blocked">' + esc(blocked) + "</span>" : "")
-        + "</td></tr>";
+        + "</td>"
+        + '<td class="cov-next">' + (next ? esc(next) : "—") + "</td>"
+        + "</tr>";
     });
     document.getElementById("cov-table").innerHTML = h + "</tbody>";
   }

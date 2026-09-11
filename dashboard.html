@@ -346,6 +346,10 @@
     <div class="nav-item" onclick="showView('std-the-narrative-triangle', this)"><div class="nav-dot" style="background:#00695c"></div>The narrative triangle</div>
     <div class="nav-item" onclick="showView('std-the-learning-schema', this)"><div class="nav-dot" style="background:#00695c"></div>The Learning schema</div>
 <!-- STANDARDS-NAV:END -->
+<!-- COVERAGE-NAV:START -->
+    <div class="nav-section" style="margin-top:16px">Coverage</div>
+    <div class="nav-item" onclick="showView('coverage', this)"><div class="nav-dot" style="background:#7b4397"></div>Settings coverage map</div>
+<!-- COVERAGE-NAV:END -->
   </nav>
 
   <main class="main">
@@ -1359,6 +1363,220 @@
       <p><strong>The series assessment</strong> is a Google Form with Certify'em, not an article. An Intercom article cannot score, gate or record completion, which is why certification lives outside the schema entirely.</p>
     </div>
 <!-- STANDARDS-VIEWS:END -->
+
+<!-- COVERAGE-VIEWS:START -->
+<style>
+  #view-coverage { max-width: 1180px; }
+  #view-coverage .cov-bar {
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 16px; flex-wrap: wrap; margin: 0 0 18px;
+  }
+  #view-coverage .cov-source { font-size: 12px; display: flex; gap: 12px; align-items: center; }
+  #view-coverage .cov-live { color: #2e7d32; }
+  #view-coverage .cov-stale { color: #b45309; }
+  #view-coverage .cov-source a { color: #7b4397; text-decoration: none; font-weight: 600; }
+  #view-coverage .cov-source a:hover { text-decoration: underline; }
+  #view-coverage .cov-counts { display: flex; gap: 7px; align-items: center; flex-wrap: wrap; }
+  #view-coverage .cov-total { font-size: 12px; color: var(--text-muted); margin-right: 3px; }
+  #view-coverage .cov-chip {
+    font-size: 11px; font-weight: 600; padding: 3px 9px;
+    border-radius: 11px; background: rgba(0,0,0,0.05); color: var(--text);
+  }
+  #view-coverage .cov-filters { display: flex; gap: 9px; margin: 0 0 14px; flex-wrap: wrap; }
+  #view-coverage .cov-filters select {
+    font: inherit; font-size: 12px; padding: 6px 10px; border-radius: 6px;
+    border: 1px solid var(--border); background: var(--surface); color: var(--text);
+  }
+  #view-coverage .cov-tablewrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; }
+  #view-coverage .cov-table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 900px; }
+  #view-coverage .cov-table th {
+    text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px;
+    color: var(--text-muted); font-weight: 600; padding: 10px 12px;
+    border-bottom: 1px solid var(--border); background: rgba(0,0,0,0.02); white-space: nowrap;
+  }
+  #view-coverage .cov-table td {
+    padding: 12px; border-bottom: 1px solid var(--border);
+    vertical-align: top; line-height: 1.5; color: var(--text);
+  }
+  #view-coverage .cov-table tr:last-child td { border-bottom: 0; }
+  #view-coverage .cov-name { white-space: nowrap; }
+  #view-coverage .cov-name strong { display: block; font-weight: 600; color: var(--grey); }
+  #view-coverage .cov-topic { font-size: 11px; color: var(--text-muted); }
+  #view-coverage .cov-art { font-size: 11px; color: #7b4397; text-decoration: none; }
+  #view-coverage .cov-art:hover { text-decoration: underline; }
+  #view-coverage .cov-why { max-width: 380px; color: var(--text-muted); font-size: 12.5px; }
+  #view-coverage .cov-open { color: var(--text-muted); }
+  #view-coverage .cov-badge {
+    display: inline-block; font-size: 11px; font-weight: 600; white-space: nowrap;
+    padding: 3px 9px; border-radius: 11px; background: rgba(0,0,0,0.05);
+  }
+  #view-coverage .cov-v-walk { background: #e3e7fa; color: #283593; }
+  #view-coverage .cov-v-para { background: #d7efdc; color: #1b5e20; }
+  #view-coverage .cov-v-none { background: rgba(0,0,0,0.05); color: var(--text-muted); }
+  #view-coverage .cov-blocked {
+    display: block; font-size: 11px; color: #b45309; margin-top: 4px;
+    max-width: 180px; line-height: 1.4;
+  }
+  #view-coverage .cov-empty { text-align: center; color: var(--text-muted); padding: 26px; }
+  #view-coverage .cov-foot { font-size: 12px; color: var(--text-muted); margin: 14px 0 0; }
+</style>
+<div id="view-coverage" class="view">
+  <div class="page-heading">
+    <h1>Settings coverage map</h1>
+    <p>Every setting in the app, and what Learning content it needs. The app is the inventory; the verdict decides what gets built.</p>
+  </div>
+
+  <div class="cov-bar">
+    <div class="cov-source">
+      <span id="cov-state">Loading&hellip;</span>
+      <a href="https://docs.google.com/spreadsheets/d/1-RLBFNDsbz-FLyPVp65XiKi0_GGUbpt3DEQlzLW9AhU/edit" target="_blank" rel="noopener">Open the sheet</a>
+    </div>
+    <div class="cov-counts" id="cov-counts"></div>
+  </div>
+
+  <div class="cov-filters" id="cov-filters"></div>
+  <div class="cov-tablewrap"><table class="cov-table" id="cov-table"></table></div>
+  <p class="cov-foot">Pathway and Series are deliberately empty. The structure is what this map is being built to decide, so nothing is mapped onto the current pathways.</p>
+</div>
+<script>
+(function () {
+  var FALLBACK = [{"Topic": "Customers", "Setting": "Communication rules", "Help Centre article": "216910", "Verdict": "Walkthrough", "Why": "Fails silently across several features — no error, no bounce, nothing in the timeline. A contact with nothing ticked makes job creation fail outright.", "Client goal it serves": "Reach customers the way they asked, without paying to post things nobody reads", "Pathway": "", "Series": "", "Status": "Ready to write", "Blocked by": ""}, {"Topic": "Customers", "Setting": "Service reminders", "Help Centre article": "216920", "Verdict": "Walkthrough", "Why": "Silent and surfaces a year late. A reminder created inside its own lead window is skipped by the 8am cycle — documented nowhere. Around 670 tickets, the highest volume of the ten.", "Client goal it serves": "Turn one-off jobs into recurring revenue that runs itself", "Pathway": "", "Series": "", "Status": "Blocked", "Blocked by": "Send-window behaviour needs Abbie to confirm"}, {"Topic": "Customers", "Setting": "Customer types", "Help Centre article": "216908", "Verdict": "Walkthrough", "Why": "Merging, debt chasing, after sales targeting and reporting all gate on it silently. The redesigned screen explains what a type is and none of what it gates. Company name required still locks at creation.", "Client goal it serves": "Keep one clean customer record per customer", "Pathway": "", "Series": "", "Status": "Blocked", "Blocked by": "LUNA-31 to 35 redesign"}, {"Topic": "Customers", "Setting": "Creditor days", "Help Centre article": "216912", "Verdict": "Walkthrough", "Why": "Due date is stamped at invoice creation and frozen — absent from the new screen copy too. The redesign also removes the double-confirmation on changing the default.", "Client goal it serves": "Get invoices paid on the terms I set", "Pathway": "", "Series": "", "Status": "Blocked", "Blocked by": "LUNA-36 to 42 and 50 redesign"}, {"Topic": "Customers", "Setting": "Customer account number", "Help Centre article": "216906", "Verdict": "Paragraph", "Why": "One choice, one-way — it can only ever go up. Drifts out of step with the accounting package's own numbering and surfaces at reconciliation.", "Client goal it serves": "Keep Commusoft and my accounts package in step", "Pathway": "", "Series": "", "Status": "To write", "Blocked by": ""}, {"Topic": "Customers", "Setting": "Advertising sources", "Help Centre article": "216918", "Verdict": "Paragraph", "Why": "The field is optional so staff skip it, and the data cannot be reconstructed later. Three clients independently asked for it to be made mandatory. The teaching belongs in a reporting walkthrough, not on the list screen.", "Client goal it serves": "Know which marketing actually brings work in", "Pathway": "", "Series": "", "Status": "To write", "Blocked by": ""}, {"Topic": "Customers", "Setting": "Technical references", "Help Centre article": "216914", "Verdict": "Paragraph + warning callout", "Why": "LUNA-48 confirms these can be deleted while in use and removes type-to-confirm. Two clicks wipes site data across every property with no guard, while customer types and creditor days both get one.", "Client goal it serves": "Give technicians the site details they need before they arrive", "Pathway": "", "Series": "", "Status": "To write", "Blocked by": ""}, {"Topic": "Customers", "Setting": "After sales care defaults", "Help Centre article": "216922", "Verdict": "Paragraph", "Why": "Written 2026-09-10 — trigger, the three send conditions, the portal, and where feedback lands.", "Client goal it serves": "Know what customers think of the work", "Pathway": "", "Series": "", "Status": "Done", "Blocked by": ""}, {"Topic": "Customers", "Setting": "Types of buildings", "Help Centre article": "216916", "Verdict": "Paragraph", "Why": "Pure classification, gates nothing found in any source. But the new drag-to-reorder is not in any article.", "Client goal it serves": "", "Pathway": "", "Series": "", "Status": "To write", "Blocked by": ""}, {"Topic": "Customers", "Setting": "Service plans", "Help Centre article": "216427", "Verdict": "Nothing", "Why": "Legacy, superseded by Contracts. Empty in the demo account. Confirmed by Sara 2026-09-11.", "Client goal it serves": "", "Pathway": "", "Series": "", "Status": "Closed", "Blocked by": ""}];
+  var CSV_URL = "https://docs.google.com/spreadsheets/d/1-RLBFNDsbz-FLyPVp65XiKi0_GGUbpt3DEQlzLW9AhU/gviz/tq?tqx=out:csv";
+  var rows = FALLBACK, filt = { Topic: "", Verdict: "", Status: "" };
+
+  function parseCSV(t) {
+    var out = [], row = [], cur = "", q = false, i;
+    for (i = 0; i < t.length; i++) {
+      var c = t[i];
+      if (q) {
+        if (c === '"' && t[i + 1] === '"') { cur += '"'; i++; }
+        else if (c === '"') { q = false; }
+        else { cur += c; }
+      } else if (c === '"') { q = true; }
+      else if (c === ",") { row.push(cur); cur = ""; }
+      else if (c === "\n") { row.push(cur); out.push(row); row = []; cur = ""; }
+      else if (c !== "\r") { cur += c; }
+    }
+    if (cur.length || row.length) { row.push(cur); out.push(row); }
+    if (!out.length) return [];
+    var head = out.shift().map(function (h) { return h.trim(); });
+    return out.filter(function (r) { return r.join("").trim(); }).map(function (r) {
+      var o = {};
+      head.forEach(function (h, n) { o[h] = (r[n] || "").trim(); });
+      return o;
+    });
+  }
+
+  function esc(s) {
+    return String(s == null ? "" : s)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+
+  function vclass(v) {
+    var s = (v || "").toLowerCase();
+    if (s.indexOf("walkthrough") === 0) return "cov-v-walk";
+    if (s.indexOf("paragraph") === 0) return "cov-v-para";
+    if (s.indexOf("nothing") === 0) return "cov-v-none";
+    return "";
+  }
+
+  function uniq(key) {
+    var seen = [];
+    rows.forEach(function (r) {
+      var v = (r[key] || "").trim();
+      if (v && seen.indexOf(v) < 0) seen.push(v);
+    });
+    return seen;
+  }
+
+  function render() {
+    var shown = rows.filter(function (r) {
+      return (!filt.Topic || r.Topic === filt.Topic)
+        && (!filt.Verdict || r.Verdict === filt.Verdict)
+        && (!filt.Status || r.Status === filt.Status);
+    });
+
+    var counts = {};
+    rows.forEach(function (r) {
+      var k = (r.Verdict || "").split(" ")[0] || "Unset";
+      counts[k] = (counts[k] || 0) + 1;
+    });
+    document.getElementById("cov-counts").innerHTML =
+      '<span class="cov-total">' + rows.length + " settings</span>"
+      + Object.keys(counts).map(function (k) {
+          return '<span class="cov-chip ' + vclass(k) + '">' + counts[k] + " " + esc(k) + "</span>";
+        }).join("");
+
+    var f = "";
+    [["Topic", "All topics"], ["Verdict", "All verdicts"], ["Status", "All statuses"]].forEach(function (p) {
+      var key = p[0];
+      f += '<select data-k="' + key + '"><option value="">' + p[1] + "</option>"
+        + uniq(key).map(function (v) {
+            return '<option value="' + esc(v) + '"' + (filt[key] === v ? " selected" : "") + ">" + esc(v) + "</option>";
+          }).join("") + "</select>";
+    });
+    var fw = document.getElementById("cov-filters");
+    fw.innerHTML = f;
+    Array.prototype.forEach.call(fw.querySelectorAll("select"), function (s) {
+      s.onchange = function () { filt[s.getAttribute("data-k")] = s.value; render(); };
+    });
+
+    var h = "<thead><tr>"
+      + ["Setting", "Verdict", "Why", "Client goal", "Pathway", "Series", "Status"]
+        .map(function (c) { return "<th>" + c + "</th>"; }).join("")
+      + "</tr></thead><tbody>";
+
+    if (!shown.length) {
+      h += '<tr><td colspan="7" class="cov-empty">Nothing matches those filters.</td></tr>';
+    }
+
+    shown.forEach(function (r) {
+      var art = (r["Help Centre article"] || "").trim();
+      var blocked = (r["Blocked by"] || "").trim();
+      h += "<tr>"
+        + '<td class="cov-name"><strong>' + esc(r.Setting) + "</strong>"
+        + '<span class="cov-topic">' + esc(r.Topic) + "</span>"
+        + (art ? ' <a class="cov-art" href="https://help.commusoft.com/en/articles/' + esc(art)
+                 + '" target="_blank" rel="noopener">HC ' + esc(art) + "</a>" : "")
+        + "</td>"
+        + '<td><span class="cov-badge ' + vclass(r.Verdict) + '">' + esc(r.Verdict || "—") + "</span></td>"
+        + '<td class="cov-why">' + esc(r.Why) + "</td>"
+        + "<td>" + esc(r["Client goal it serves"] || "—") + "</td>"
+        + '<td class="cov-open">' + esc(r.Pathway || "—") + "</td>"
+        + '<td class="cov-open">' + esc(r.Series || "—") + "</td>"
+        + "<td>" + esc(r.Status || "—")
+        + (blocked ? '<span class="cov-blocked">' + esc(blocked) + "</span>" : "")
+        + "</td></tr>";
+    });
+    document.getElementById("cov-table").innerHTML = h + "</tbody>";
+  }
+
+  function state(msg, ok) {
+    var el = document.getElementById("cov-state");
+    if (!el) { return; }
+    el.textContent = msg;
+    el.className = ok ? "cov-live" : "cov-stale";
+  }
+
+  render();
+  state("Loading the live sheet…", true);
+
+  fetch(CSV_URL).then(function (r) {
+    if (!r.ok) { throw new Error(r.status); }
+    return r.text();
+  }).then(function (t) {
+    var parsed = parseCSV(t);
+    if (!parsed.length || !parsed[0].Setting) { throw new Error("unexpected shape"); }
+    rows = parsed;
+    render();
+    state("Live from the sheet", true);
+  })["catch"](function () {
+    state("Showing the built-in copy — share the sheet as anyone-with-the-link-can-view to go live", false);
+  });
+})();
+</script>
+
+<!-- COVERAGE-VIEWS:END -->
 
   </main>
 </div>

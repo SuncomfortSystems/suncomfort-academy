@@ -1366,7 +1366,7 @@
 
 <!-- COVERAGE-VIEWS:START -->
 <style>
-  #view-coverage { max-width: 1180px; }
+  /* No max-width: this view fills the page like the pathway views do. */
   #view-coverage .cov-bar {
     display: flex; justify-content: space-between; align-items: center;
     gap: 16px; flex-wrap: wrap; margin: 0 0 18px;
@@ -1404,8 +1404,8 @@
   #view-coverage .cov-topic { display: block; font-size: 11px; color: var(--text-muted); }
   #view-coverage .cov-art { font-size: 11px; color: #7b4397; text-decoration: none; }
   #view-coverage .cov-art:hover { text-decoration: underline; }
-  #view-coverage .cov-why { max-width: 380px; color: var(--text-muted); font-size: 12.5px; }
-  #view-coverage .cov-open { color: var(--text-muted); }
+  #view-coverage .cov-why { color: var(--text-muted); font-size: 12.5px; }
+  #view-coverage .cov-open { color: var(--text-muted); white-space: nowrap; }
   #view-coverage .cov-badge {
     display: inline-block; font-size: 11px; font-weight: 600; white-space: nowrap;
     padding: 3px 9px; border-radius: 11px; background: rgba(0,0,0,0.05);
@@ -1427,7 +1427,7 @@
   #view-coverage .cov-unchecked {
     display: block; color: var(--text-muted); font-size: 11px; line-height: 1.35;
   }
-  #view-coverage .cov-next { max-width: 260px; font-size: 12px; color: var(--text); }
+  #view-coverage .cov-next { font-size: 12px; color: var(--text); }
   #view-coverage .cov-diff {
     display: inline-block; width: 22px; height: 22px; line-height: 22px; text-align: center;
     border-radius: 50%; font-size: 11px; font-weight: 700;
@@ -1563,7 +1563,7 @@
     });
 
     var h = "<thead><tr>"
-      + ["Setting", "Verdict", "Diff", "Why", "Client goal", "Pathway", "Series", "Status", "Next action"]
+      + ["Setting", "Verdict", "Difficulty", "Why", "Client goal", "Pathway", "Series", "Status", "Next action"]
         .map(function (c) { return "<th>" + c + "</th>"; }).join("")
       + "</tr></thead><tbody>";
 

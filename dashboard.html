@@ -1399,9 +1399,9 @@
     vertical-align: top; line-height: 1.5; color: var(--text);
   }
   #view-coverage .cov-table tr:last-child td { border-bottom: 0; }
-  #view-coverage .cov-name { white-space: nowrap; }
+  #view-coverage .cov-name { max-width: 180px; }
   #view-coverage .cov-name strong { display: block; font-weight: 600; color: var(--grey); }
-  #view-coverage .cov-topic { font-size: 11px; color: var(--text-muted); }
+  #view-coverage .cov-topic { display: block; font-size: 11px; color: var(--text-muted); }
   #view-coverage .cov-art { font-size: 11px; color: #7b4397; text-decoration: none; }
   #view-coverage .cov-art:hover { text-decoration: underline; }
   #view-coverage .cov-why { max-width: 380px; color: var(--text-muted); font-size: 12.5px; }
@@ -1419,8 +1419,11 @@
   }
   #view-coverage .cov-empty { text-align: center; color: var(--text-muted); padding: 26px; }
   #view-coverage .cov-foot { font-size: 12px; color: var(--text-muted); margin: 14px 0 0; }
-  #view-coverage .cov-links { display: block; font-size: 11px; margin-top: 3px; }
-  #view-coverage .cov-nolink { color: #b45309; font-size: 11px; }
+  #view-coverage .cov-links { display: block; font-size: 11px; margin-top: 5px; }
+  #view-coverage .cov-links .cov-art { display: block; margin-bottom: 2px; }
+  #view-coverage .cov-nolink {
+    display: block; color: #b45309; font-size: 11px; line-height: 1.35;
+  }
   #view-coverage .cov-next { max-width: 260px; font-size: 12px; color: var(--text); }
   #view-coverage .cov-diff {
     display: inline-block; width: 22px; height: 22px; line-height: 22px; text-align: center;
@@ -1568,7 +1571,7 @@
     function hc(n, label) {
       n = (n || "").trim();
       if (!n) { return ""; }
-      return ' <a class="cov-art" href="https://help.commusoft.com/en/articles/' + esc(n)
+      return '<a class="cov-art" href="https://help.commusoft.com/en/articles/' + esc(n)
         + '" target="_blank" rel="noopener">' + label + " " + esc(n) + "</a>";
     }
 

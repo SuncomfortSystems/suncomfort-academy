@@ -350,6 +350,9 @@
     <div class="nav-section" style="margin-top:16px">Coverage</div>
     <div class="nav-item" onclick="showView('coverage', this)"><div class="nav-dot" style="background:#7b4397"></div>Settings coverage map</div>
 <!-- COVERAGE-NAV:END -->
+<!-- PATHWAYS-NAV:START -->
+    <div class="nav-item" onclick="showView('pathways', this)"><div class="nav-dot" style="background:#7b4397"></div>Pathways</div>
+<!-- PATHWAYS-NAV:END -->
   </nav>
 
   <main class="main">
@@ -1652,6 +1655,48 @@
 </script>
 
 <!-- COVERAGE-VIEWS:END -->
+<!-- PATHWAYS-VIEWS:START -->
+<style>
+  #view-pathways .pw-lead { font-size: 14px; line-height: 1.65; color: var(--text); max-width: 820px; margin: 0 0 18px; }
+  #view-pathways .pw-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; }
+  #view-pathways table.pw { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 900px; }
+  #view-pathways table.pw th {
+    text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px;
+    color: var(--text-muted); font-weight: 600; padding: 10px 12px;
+    border-bottom: 1px solid var(--border); background: rgba(0,0,0,0.02); white-space: nowrap;
+  }
+  #view-pathways table.pw td {
+    padding: 12px; border-bottom: 1px solid var(--border); vertical-align: top;
+    line-height: 1.5; color: var(--text);
+  }
+  #view-pathways table.pw tr:last-child td { border-bottom: 0; }
+  #view-pathways .pw-name { font-weight: 600; color: var(--grey); white-space: nowrap; }
+  #view-pathways .pw-grade {
+    display: inline-block; width: 22px; height: 22px; line-height: 22px; text-align: center;
+    border-radius: 50%; font-size: 11px; font-weight: 700; background: rgba(0,0,0,0.06); color: var(--text);
+  }
+  #view-pathways .pw-blank { color: #b45309; font-size: 12px; }
+  #view-pathways .pw-note { color: var(--text-muted); font-size: 12px; }
+  #view-pathways .pw-ev {
+    margin: 22px 0 0; padding: 15px 17px; border: 1px solid var(--border);
+    border-radius: 8px; background: var(--surface); max-width: 820px;
+  }
+  #view-pathways .pw-ev-t {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.6px;
+    color: var(--text-muted); font-weight: 600; margin-bottom: 10px;
+  }
+  #view-pathways .pw-ev-p { font-size: 13px; line-height: 1.6; color: var(--text); margin: 0 0 11px; }
+  #view-pathways table.pw-eq { border-collapse: collapse; margin: 0 0 13px; font-size: 12px; }
+  #view-pathways table.pw-eq th, #view-pathways table.pw-eq td {
+    border: 1px solid var(--border); padding: 5px 13px; text-align: center; color: var(--text);
+  }
+  #view-pathways table.pw-eq td:first-child, #view-pathways table.pw-eq th:first-child {
+    text-align: left; color: var(--text-muted); white-space: nowrap;
+  }
+  #view-pathways .pw-foot { font-size: 12px; color: var(--text-muted); margin: 16px 0 0; max-width: 820px; }
+</style>
+<div id="view-pathways" class="view"><div class="page-heading"><h1>Pathways</h1><p>The rungs, what each is for, and how you would know someone had got it. Working table &mdash; nothing here is settled.</p></div><p class="pw-lead">A <b>pathway</b> is a rung of difficulty. A <b>series</b> sits inside one and carries a client goal. The <b>Understanding article</b> is a series&rsquo; home &mdash; it is where the walkthrough lives, permanently, and higher pathways borrow the same walkthroughs into different goals rather than copying them. So a pathway is decided first: it sets which rung an article sits on and what it has to deliver.</p><div class="pw-wrap"><table class="pw"><thead><tr><th>Pathway</th><th>Grade</th><th>Who it is for</th><th>Outcome</th><th>How you know they have it</th><th>Series today</th><th>Notes</th></tr></thead><tbody><tr><td class="pw-name">Start here</td><td><span class="pw-grade">0</span></td><td>Anyone in their first week</td><td><span class="pw-blank">to decide</span></td><td><span class="pw-blank">to decide</span></td><td>The Compass, Shared Concept Library</td><td class="pw-note">Not a difficulty rung - orientation. Sits outside the 1-4 grades.</td></tr><tr><td class="pw-name">The basics</td><td><span class="pw-grade">1</span></td><td><span class="pw-blank">to decide</span></td><td><span class="pw-blank">to decide</span></td><td><span class="pw-blank">to decide</span></td><td><span class="pw-note">&mdash;</span></td><td class="pw-note">Currently 9 series. Using what is there.</td></tr><tr><td class="pw-name">Building on it</td><td><span class="pw-grade">2</span></td><td><span class="pw-blank">to decide</span></td><td><span class="pw-blank">to decide</span></td><td><span class="pw-blank">to decide</span></td><td><span class="pw-note">&mdash;</span></td><td class="pw-note">Currently 7 series. Deciding what is there. Renamed from Setting up your account 2026-09-09.</td></tr><tr><td class="pw-name">Going further</td><td><span class="pw-grade">3</span></td><td><span class="pw-blank">to decide</span></td><td><span class="pw-blank">to decide</span></td><td><span class="pw-blank">to decide</span></td><td><span class="pw-note">&mdash;</span></td><td class="pw-note">Currently 9 series. Extending it.</td></tr><tr><td class="pw-name">In the field</td><td><span class="pw-note">&mdash;</span></td><td><span class="pw-blank">to decide</span></td><td><span class="pw-blank">to decide</span></td><td><span class="pw-blank">to decide</span></td><td><span class="pw-note">&mdash;</span></td><td class="pw-note">Currently 3 series. Sits third by Sara's instruction. Separate because it is the only content shot on a phone - a production fact, not a difficulty.</td></tr><tr><td class="pw-name">Add-ons</td><td><span class="pw-note">&mdash;</span></td><td><span class="pw-blank">to decide</span></td><td><span class="pw-blank">to decide</span></td><td><span class="pw-blank">to decide</span></td><td><span class="pw-note">&mdash;</span></td><td class="pw-note">A plus means bought separately - Sales+, Analytics+, Fleet+, Phones+, Postcode lookup+, AI:den+. Not a difficulty rung.</td></tr></tbody></table></div><div class="pw-ev"><div class="pw-ev-t">Evidence from the settings coverage map</div><p class="pw-ev-p">Difficulty across 188 settings in 28 areas. Grade 4 is the smallest group and grade 3 the largest, so a four-rung split is not an even one.</p><table class="pw-eq"><tbody><tr><th></th><th>1</th><th>2</th><th>3</th><th>4</th></tr><tr><td>Settings</td><td>40</td><td>59</td><td>64</td><td>25</td></tr><tr><td>Of those, walkthroughs</td><td>0</td><td>12</td><td>46</td><td>21</td></tr></tbody></table><p class="pw-ev-p"><b>15 of 28 areas have an Understanding article reaching at least one of their settings.</b> The 13 that do not: Automation, Fleet management, Forms, Global, Imports and backups, Mobile, Opportunities, Proposals, Purchase orders, Security, Suppliers, Vehicle trackers, Your business details.</p></div><p class="pw-foot">Start here and Add-ons carry no grade on purpose &mdash; one is orientation, the other is what you buy separately. In the field is ungraded too: it is separate because it is the only content shot on a phone, which is a production fact rather than a difficulty.</p></div>
+<!-- PATHWAYS-VIEWS:END -->
 
   </main>
 </div>

@@ -6,7 +6,7 @@ dashboard_path = r"C:\Users\sarab\Desktop\Commusoft\github\suncomfort-academy\da
 files = [
     ("reed-script-l3-sales-plus-c1", "Academy - L3 Sales+ C1 - The opportunities dashboard.md"),
     ("reed-script-l3-sales-plus-c2", "Academy - L3 Sales+ C2 - Add and manage an opportunity.md"),
-    ("reed-script-l3-sales-plus-c3", "Academy - L3 Sales+ C3 - Complete a survey on the app.md"),
+    ("reed-script-l3-sales-plus-c3", "Academy - L3 Sales+ C3 - Survey visits on the app.md"),
     ("reed-script-l3-sales-plus-c4", "Academy - L3 Sales+ C4 - Build a full proposal with the template builder.md"),
     ("reed-script-l3-sales-plus-c5", "Academy - L3 Sales+ C5 - Present finance options to a customer.md"),
     ("reed-script-l3-sales-plus-c6", "Academy - L3 Sales+ C6 - Track a proposal through to acceptance.md"),

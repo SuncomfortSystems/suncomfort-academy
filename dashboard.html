@@ -768,6 +768,8 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l3-route-c3')"><div class="walkthrough-num">Walkthrough 3</div><div class="walkthrough-title">Use route optimisation in the diary</div><div class="walkthrough-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
           <div class="walkthrough-card" onclick="openPanel('reed-script-l3-route-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">Route optimised, diary running efficiently</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
 <div class="walkthrough-card" onclick="openPanel('sd-shift-patterns')"><div class="walkthrough-num">Walkthrough 1</div><div class="walkthrough-title">How to set up shift patterns</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+<div class="walkthrough-card" onclick="openPanel('sd-public-holidays')"><div class="walkthrough-num">Walkthrough 2</div><div class="walkthrough-title">How to set up public holidays</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+
 
         </div>
       </div>
@@ -9411,6 +9413,48 @@ COURSES['sd-shift-patterns'] = {
   ],
   openItems: "- Resolved 2026-10-27 — Placement. The walkthrough goes at the foot of HC 217093 *Set up and manage shift patterns* (Schedule and dispatch settings), under the Walkthrough heading, per the three-tier plan. Not 369751, which is tagged Collicutt. Series: Schedule and dispatch settings, 1 of 4 with public holidays, route optimisation and job confirmation. The dashboard card stays in the Route Optimisation group until the pathways are settled.\n- Resolved 2026-10-27: overtime asks for confirmation and grey is a hard block. Source is the diary as it behaves in the app today: Abbie's Clueso video *Creating Shift Patterns Guide*, recorded in the diary, and HC 217093. The SCHED Jira board is the new Schedule, which is not out yet, so SCHED-247, 265 and 408 do not apply (Sara). Confirm on the take.\n- All-day, morning and afternoon events needing a specific time for anyone on a pattern: Intercom 215560854321062, support confirming it in the live app. Confirm on the take.\n- Resolved 2026-10-27: customer is Dr Kate White, account no 1141 on 20257 (property list export).\n- Resolved 2026-10-27: the raw setup take recorded as SarahM is usable; no name shows on screen (Sara).\n- Resolved 2026-10-27 on the take: overtime is yellow, outside the shift is grey; the overtime banner reads \"This event falls outside of the working hours and into overtime. Please confirm\" with Yes/No; outside the shift the dialog reads \"The shift associated with this engineer doesn't have any pattern for the selected time\" with Close.\n- Resolved 2026-10-27 (Sara: \"what makes the most sense\") — the refusal is no longer near-quoted. The narration said \"the shift associated with this technician does not have any pattern\", which reads as the screen's words with one changed, while the dialog says \"engineer\". It now paraphrases in Archer's own words (\"Jake's shift has no pattern covering that time\"), so it neither misquotes the screen nor says engineer.\n- Changed 2026-10-27: the Schedule section uses Jake Harris, not Luke. The booking view filters by the job's skill (Heat Pump) and Luke's profile skill is Solar PV only, so he does not appear. Jake is on the same pattern.\n- Resolved 2026-10-27: Sophie's empty diary was her own User groups filter, with nothing ticked. Ticked the four technician groups and re-recorded the Schedule take as her (Sara: more realistic).\n- Note: technicians with no shift on a day show white, not grey, in the daily view. The narration only describes Jake's column.",
   helpCentreIssues: "- **217093 vs 234987 — manual booking.** 217093 says manual appointments cannot be booked outside working hours; 234987 says office staff can still book manually in overtime. Both can be true, since overtime is inside the pattern, but neither article draws the line, so a reader concludes one of them is wrong."
+};
+
+COURSES['sd-public-holidays'] = {
+  contentType: "Walkthrough",
+  pathLabel: "Schedule and dispatch settings · Walkthrough 2 of 4",
+  title: "How to set up public holidays",
+  duration: "3 min",
+  persona: "Decision makers",
+  characters: "Logan Chance (Operations Manager, SunComfort Systems) | Sophie Bennett (Scheduler, SunComfort Systems) | Gavin Stubbs (Maintenance Technician, SunComfort Systems)",
+  scenario: "With the year nearly over, Logan sets up SunComfort's 2027 bank holidays and gives them to the team, and Sophie checks New Year's Day on the Schedule.",
+  objectives: [
+    "Create a public holiday group for a year, add its dates, and assign it to the people it applies to.",
+    "Check a bank holiday on the Schedule and say why a technician's day is open or blocked."
+  ],
+  productionSetup: [
+    "Logged-in user: Logan Chance, Operations Manager, Owner/Manager, for the group and user sections. Sophie Bennett, Scheduler, Office staff, for the Schedule section.",
+    "Customer record: None. No customer or job is involved.",
+    "Existing data: The groups *UK Bank Holidays 2026* and *UK Bank Holidays 2027*, with the dates on the Learning dashboard under Public Holiday Templates, assigned to all 36 users. The group and user sections are cut from the raw setup takes `setup-public-holidays-20257.mp4` (the 2027 group is created and configured on film, from about 2:55) and `setup-user-holidays-20257.mp4` (Gavin Stubbs is the first user). Both were recorded as SarahM, which is fine: the navbar shows an avatar, not a name. The Schedule section needs a new take as Sophie, on Friday 1 January 2027.",
+    "Assets required: The two raw setup takes above."
+  ],
+  buildBySection: [
+    {section:"Introduction", media:"Written text", note:"Opens the Walkthrough block. Checklist as written."},
+    {section:"Creating next year's group", media:"Screen recording", note:"Cut from `setup-public-holidays-20257.mp4`, from about 2:55: name, year 2027, Add public holiday name. The take opens on the page, so the Settings path is narrated over it. Captured as one Clueso video with the two sections that follow."},
+    {section:"Adding the dates", media:"Screen recording", note:"Same take: Configure on UK Bank Holidays 2027, then the eight dates through the calendar. Long stretches of month-clicking can be sped up in Clueso. Same Clueso video."},
+    {section:"Giving the group to the team", media:"Screen recording", note:"Cut from `setup-user-holidays-20257.mp4`, Gavin Stubbs only: Users, Edit business details, Public holiday groups, both years, Save. Same Clueso video."},
+    {section:"What it does on the Schedule", media:"Screen recording", note:"New take as Sophie: the Schedule's mini calendar to January 2027, click 1, hold on the columns. Separate Clueso video."},
+    {section:"Practise this", media:"Written text", note:"Yellow callout."},
+    {section:"Check what you know", media:"Expanding section", note:"Two questions, green callout."},
+    {section:"Summary", media:"Written text", note:"Grey Key takeaways callout, then the criterion."}
+  ],
+  scenes: [
+    {type:"section", heading:"Introduction", body:"A public holiday group is a list of dates your team does not work, kept in one place. Give it to a user and every date becomes an event on their Schedule, so nobody books them, and neither do suggested appointments or your booking portals.\n\n📋 Before you start, you need: a user for everyone who takes the holidays, and the dates for the year you are setting up. If you already have groups, this is also how to check next year's is there before the old one runs out.\n\nBy the end you will be able to build a year's group, give it to your team, and check a holiday day on the Schedule."},
+    {type:"section", heading:"Creating next year's group", body:"Logan Chance runs operations at SunComfort, and with the year nearly over he wants 2027 blocked out before anyone starts booking into it. He opens Public holiday templates from Schedule and dispatch in Settings. This year's group is already on the list.\n\nHe types the name, UK Bank Holidays 2027, sets the year to 2027, and clicks Add public holiday name. The new group joins the list beside this year's, ready for its dates."},
+    {type:"section", heading:"Adding the dates", body:"Logan clicks Configure on the new group. He picks the first of January from the calendar and clicks Add public holiday date, and it appears in the list beside the calendar.\n\nHe does the same for each bank holiday in 2027: Good Friday, Easter Monday, the two May bank holidays, the August bank holiday, and the twenty-seventh and twenty-eighth of December, because Christmas and Boxing Day fall on a weekend that year.\n\nA date cannot be edited once it is added. If one goes in wrong, delete it and add the right one."},
+    {type:"section", heading:"Giving the group to the team", body:"A group does nothing until it is on a person. Logan opens Users, picks Gavin Stubbs and clicks Edit business details. In the Public holiday groups box he adds both years, since the box takes more than one group, and saves. He does the same for everyone else at SunComfort.\n\nAnyone left out keeps an open day, and that is the day the scheduling engine will fill. If your office and your technicians take different days, build a group for each and give each person the one that is theirs."},
+    {type:"section", heading:"What it does on the Schedule", body:"Sophie Bennett moves the Schedule to Friday the first of January 2027. Every technician's column is filled from start to finish with a single event: Holiday, UK Bank Holidays 2027.\n\nIt is an ordinary event, put there for each person who holds the group. The scheduling engine treats the day as taken, so it will not suggest it and a booking portal will not offer it.\n\nOne thing to know before you tidy a group up. Deleting a single date from it does not take the event off anyone's Schedule, so you remove those by hand. Deleting the whole group removes every event it made."},
+    {type:"section", heading:"Practise this", body:"Open Public holiday templates in your Settings and check there is a group for next year, with the right dates in it. Then open the profile of one technician you schedule often and look at their Public holiday groups. If next year's group is missing from either place, their bank holidays are open for booking."},
+    {type:"reflection", label:"Knowledge check", question:"On New Year's Day 2027, every column on Sophie's Schedule is blocked except Liam Doyle's. What has gone wrong?", options:[], correct:"", feedback:"The group is not on Liam's profile. The date is in the group, otherwise every column would be open, so the fault is with the person rather than the list. Logan opens Liam's business details, adds UK Bank Holidays 2027 to his Public holiday groups and saves, and the holiday appears on his Schedule. Adding a holiday event to his day by hand would cover that one date but leave every other bank holiday open."},
+    {type:"reflection", label:"Knowledge check", question:"Logan finds a date in the 2027 group that should not be there and deletes it. Is the job done?", options:[], correct:"", feedback:"Not yet. Deleting a date from the group does not touch the event it already put on each person's Schedule, so those still have to be removed by hand, one person at a time. It is the opposite with the whole group: delete that and every event it made goes with it, which is why a group is not something to delete as a clean-up."},
+    {type:"section", heading:"Summary", body:"Logan built **UK Bank Holidays 2027**, added its **dates** under Configure, and **assigned** it on each person's profile. Sophie then saw New Year's Day blocked on the Schedule.\n\n💡 Key takeaways\n\n- **One list, everyone covered:** a group blocks the day for every person who holds it, so nothing is booked on it by the office, the engine or a portal. - **The person is the switch:** a date only blocks the Schedules of the people the group is assigned to. - **A year ahead:** set up next year's group before this one ends, so the first bookings into it already work around the holidays.\n\nYou'll know it's right when you move the Schedule to next year's first bank holiday and every technician's column carries the holiday event."}
+  ],
+  openItems: "- Placement proposed 2026-11-01: the foot of HC 217123 *Setting up public holiday templates*, under the Walkthrough heading, per the three-tier plan. Series: Schedule and dispatch settings, 2 of 4, after shift patterns. Not tagged Collicutt. Confirm before publishing.\n- Not confirmed, so the script does not claim it: whether a date added to a group that is already assigned creates the event for its users straight away. HC 217123 covers adding dates before assigning, and deleting after, but not adding after.\n- Resolved 2026-11-01 on 20257: the event reads \"Holiday: UK Bank Holidays 2027\" and fills the whole day, 12:00 to 11:59, in every column on Sophie's Schedule.\n- Resolved 2026-11-01: the 2027 substitute days. Christmas Day 2027 is a Saturday and Boxing Day a Sunday, so the bank holidays move to Monday 27 and Tuesday 28 December, which is what the group holds.\n- Note for the take: Sophie's Users filter currently shows 7 of 22, the heat pump team. The narration says \"every technician's column\", which holds whichever columns are shown."
 };
 function esc(str) {
   return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
@@ -33942,6 +33986,152 @@ You'll know it's right when each technician's column on the daily Schedule match
 **Help Centre issues found**
 
 - **217093 vs 234987 — manual booking.** 217093 says manual appointments cannot be booked outside working hours; 234987 says office staff can still book manually in overtime. Both can be true, since overtime is inside the pattern, but neither article draws the line, so a reader concludes one of them is wrong.
+`;
+INBOX_FILES["sd-public-holidays"] = `# How to set up public holidays
+
+**Series:** Schedule and dispatch settings | **Walkthrough:** 2 of 4 | **Duration:** 3 min | **Audience:** Decision makers
+
+**Voice:** Archer (Clueso AI voiceover)
+
+---
+
+**Learning objectives**
+
+1. Create a public holiday group for a year, add its dates, and assign it to the people it applies to.
+2. Check a bank holiday on the Schedule and say why a technician's day is open or blocked.
+
+---
+
+**Target audience:** Owners and operations managers at field service businesses who decide which days their team is not working, and the office staff who book around those days. SunComfort Systems is the vehicle, not the audience.
+
+**Assumed starting point:** Users exist for every member of staff. The account is on Go Paperless or above in the UK, All-in-One or above in the US. SunComfort's 2026 and 2027 groups are already on 20257 and assigned to all 36 users, built in the raw setup takes of 2026-10-26/27.
+
+**Main objective beyond the learning objectives:** A bank holiday is blocked for everyone in one place, a year ahead, so suggested appointments and booking portals never offer a day nobody is working and the office is not cancelling bookings in the new year.
+
+---
+
+**Characters:** Logan Chance (Operations Manager, SunComfort Systems) | Sophie Bennett (Scheduler, SunComfort Systems) | Gavin Stubbs (Maintenance Technician, SunComfort Systems)
+
+**Scenario:** With the year nearly over, Logan sets up SunComfort's 2027 bank holidays and gives them to the team, and Sophie checks New Year's Day on the Schedule.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** Logan Chance, Operations Manager, Owner/Manager, for the group and user sections. Sophie Bennett, Scheduler, Office staff, for the Schedule section.
+2. **Customer record:** None. No customer or job is involved.
+3. **Existing data:** The groups *UK Bank Holidays 2026* and *UK Bank Holidays 2027*, with the dates on the Learning dashboard under Public Holiday Templates, assigned to all 36 users. The group and user sections are cut from the raw setup takes \`setup-public-holidays-20257.mp4\` (the 2027 group is created and configured on film, from about 2:55) and \`setup-user-holidays-20257.mp4\` (Gavin Stubbs is the first user). Both were recorded as SarahM, which is fine: the navbar shows an avatar, not a name. The Schedule section needs a new take as Sophie, on Friday 1 January 2027.
+4. **Assets required:** The two raw setup takes above.
+
+---
+
+## Introduction
+
+A public holiday group is a list of dates your team does not work, kept in one place. Give it to a user and every date becomes an event on their Schedule, so nobody books them, and neither do suggested appointments or your booking portals.
+
+📋 Before you start, you need: a user for everyone who takes the holidays, and the dates for the year you are setting up. If you already have groups, this is also how to check next year's is there before the old one runs out.
+
+By the end you will be able to build a year's group, give it to your team, and check a holiday day on the Schedule.
+
+---
+
+## Creating next year's group
+
+Logan Chance runs operations at SunComfort, and with the year nearly over he wants 2027 blocked out before anyone starts booking into it. He opens Public holiday templates from Schedule and dispatch in Settings. This year's group is already on the list.
+
+He types the name, UK Bank Holidays 2027, sets the year to 2027, and clicks Add public holiday name. The new group joins the list beside this year's, ready for its dates.
+
+---
+
+## Adding the dates
+
+Logan clicks Configure on the new group. He picks the first of January from the calendar and clicks Add public holiday date, and it appears in the list beside the calendar.
+
+He does the same for each bank holiday in 2027: Good Friday, Easter Monday, the two May bank holidays, the August bank holiday, and the twenty-seventh and twenty-eighth of December, because Christmas and Boxing Day fall on a weekend that year.
+
+A date cannot be edited once it is added. If one goes in wrong, delete it and add the right one.
+
+---
+
+## Giving the group to the team
+
+A group does nothing until it is on a person. Logan opens Users, picks Gavin Stubbs and clicks Edit business details. In the Public holiday groups box he adds both years, since the box takes more than one group, and saves. He does the same for everyone else at SunComfort.
+
+Anyone left out keeps an open day, and that is the day the scheduling engine will fill. If your office and your technicians take different days, build a group for each and give each person the one that is theirs.
+
+---
+
+## What it does on the Schedule
+
+Sophie Bennett moves the Schedule to Friday the first of January 2027. Every technician's column is filled from start to finish with a single event: Holiday, UK Bank Holidays 2027.
+
+It is an ordinary event, put there for each person who holds the group. The scheduling engine treats the day as taken, so it will not suggest it and a booking portal will not offer it.
+
+One thing to know before you tidy a group up. Deleting a single date from it does not take the event off anyone's Schedule, so you remove those by hand. Deleting the whole group removes every event it made.
+
+---
+
+## Practise this
+
+Open Public holiday templates in your Settings and check there is a group for next year, with the right dates in it. Then open the profile of one technician you schedule often and look at their Public holiday groups. If next year's group is missing from either place, their bank holidays are open for booking.
+
+---
+
+**Check what you know**
+
+**Q1.** On New Year's Day 2027, every column on Sophie's Schedule is blocked except Liam Doyle's. What has gone wrong?
+
+**A.** The group is not on Liam's profile. The date is in the group, otherwise every column would be open, so the fault is with the person rather than the list. Logan opens Liam's business details, adds UK Bank Holidays 2027 to his Public holiday groups and saves, and the holiday appears on his Schedule. Adding a holiday event to his day by hand would cover that one date but leave every other bank holiday open.
+
+**Q2.** Logan finds a date in the 2027 group that should not be there and deletes it. Is the job done?
+
+**A.** Not yet. Deleting a date from the group does not touch the event it already put on each person's Schedule, so those still have to be removed by hand, one person at a time. It is the opposite with the whole group: delete that and every event it made goes with it, which is why a group is not something to delete as a clean-up.
+
+---
+
+## Summary
+
+Logan built **UK Bank Holidays 2027**, added its **dates** under Configure, and **assigned** it on each person's profile. Sophie then saw New Year's Day blocked on the Schedule.
+
+💡 Key takeaways
+
+- **One list, everyone covered:** a group blocks the day for every person who holds it, so nothing is booked on it by the office, the engine or a portal.
+- **The person is the switch:** a date only blocks the Schedules of the people the group is assigned to.
+- **A year ahead:** set up next year's group before this one ends, so the first bookings into it already work around the holidays.
+
+You'll know it's right when you move the Schedule to next year's first bank holiday and every technician's column carries the holiday event.
+
+---
+
+## Build by section
+
+| Section | Media | Note |
+|---|---|---|
+| Introduction | Written text | Opens the Walkthrough block. Checklist as written. |
+| Creating next year's group | Screen recording | Cut from \`setup-public-holidays-20257.mp4\`, from about 2:55: name, year 2027, Add public holiday name. The take opens on the page, so the Settings path is narrated over it. Captured as one Clueso video with the two sections that follow. |
+| Adding the dates | Screen recording | Same take: Configure on UK Bank Holidays 2027, then the eight dates through the calendar. Long stretches of month-clicking can be sped up in Clueso. Same Clueso video. |
+| Giving the group to the team | Screen recording | Cut from \`setup-user-holidays-20257.mp4\`, Gavin Stubbs only: Users, Edit business details, Public holiday groups, both years, Save. Same Clueso video. |
+| What it does on the Schedule | Screen recording | New take as Sophie: the Schedule's mini calendar to January 2027, click 1, hold on the columns. Separate Clueso video. |
+| Practise this | Written text | Yellow callout. |
+| Check what you know | Expanding section | Two questions, green callout. |
+| Summary | Written text | Grey Key takeaways callout, then the criterion. |
+
+---
+
+**Open items**
+
+- Placement proposed 2026-11-01: the foot of HC 217123 *Setting up public holiday templates*, under the Walkthrough heading, per the three-tier plan. Series: Schedule and dispatch settings, 2 of 4, after shift patterns. Not tagged Collicutt. Confirm before publishing.
+- Not confirmed, so the script does not claim it: whether a date added to a group that is already assigned creates the event for its users straight away. HC 217123 covers adding dates before assigning, and deleting after, but not adding after.
+- Resolved 2026-11-01 on 20257: the event reads "Holiday: UK Bank Holidays 2027" and fills the whole day, 12:00 to 11:59, in every column on Sophie's Schedule.
+- Resolved 2026-11-01: the 2027 substitute days. Christmas Day 2027 is a Saturday and Boxing Day a Sunday, so the bank holidays move to Monday 27 and Tuesday 28 December, which is what the group holds.
+- Note for the take: Sophie's Users filter currently shows 7 of 22, the heat pump team. The narration says "every technician's column", which holds whichever columns are shown.
+
+---
+
+**Help Centre issues found**
+
+- **217123 — Setting up public holiday templates.** Step 1 says to click **Add public holiday template**. The button reads **Add public holiday name**, the page is headed *Set up public holiday groups*, and the user profile field is *Public holiday groups*. The settings list calls it Public holiday templates. A reader looking for the button named in the article will not find it.
+- **217123 — Common questions.** Says the event appears with the name "Holidays:" and the template name. On screen it reads "Holiday:", singular.
 `;
 
 // ===== Dashboard Notes (Google Sheet backend) =====

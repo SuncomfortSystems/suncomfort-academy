@@ -764,7 +764,7 @@
         </div>
         <div class="walkthrough-grid">
           <div class="walkthrough-card" onclick="openPanel('reed-script-l3-route-c1')"><div class="walkthrough-num">Walkthrough 1</div><div class="walkthrough-title">How route optimisation works — the logic and the limits</div><div class="walkthrough-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
-          <div class="walkthrough-card" onclick="openPanel('reed-script-l3-route-c2')"><div class="walkthrough-num">Walkthrough 2</div><div class="walkthrough-title">Configure route optimisation settings</div><div class="walkthrough-meta"><span class="meta-pill">5 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
+          <div class="walkthrough-card" onclick="openPanel('reed-script-l3-route-c2')"><div class="walkthrough-num">Walkthrough 2</div><div class="walkthrough-title">How to set up route optimisation</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
           <div class="walkthrough-card" onclick="openPanel('reed-script-l3-route-c3')"><div class="walkthrough-num">Walkthrough 3</div><div class="walkthrough-title">Use route optimisation in the diary</div><div class="walkthrough-meta"><span class="meta-pill">4 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
           <div class="walkthrough-card" onclick="openPanel('reed-script-l3-route-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">Route optimised, diary running efficiently</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
 <div class="walkthrough-card" onclick="openPanel('sd-shift-patterns')"><div class="walkthrough-num">Walkthrough 1</div><div class="walkthrough-title">How to set up shift patterns</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
@@ -7608,42 +7608,41 @@ COURSES['reed-script-l3-route-c1'] = {
 };
 COURSES['reed-script-l3-route-c2'] = {
   contentType: "Walkthrough",
-  pathLabel: "Going further · Route Optimisation",
-  title: "Configure route optimisation settings",
-  duration: "5 min",
+  pathLabel: "Schedule and dispatch settings · Walkthrough 4 of 4",
+  title: "How to set up route optimisation",
+  duration: "3 min",
   persona: "Decision makers",
-  characters: "Logan Chance (Operations Manager, SunComfort Systems)",
-  scenario: "Logan configures SunComfort's route optimisation settings to match the company's 50-mile operating radius and shift pattern constraints before handing daily diary management to the scheduling team.",
+  characters: "Logan Chance (Operations Manager, SunComfort Systems) | Jake Harris (Senior Heat Pump Technician, SunComfort Systems)",
+  scenario: "Logan sets how far SunComfort's portal bookings may send a technician and keeps overtime off the portal, then works out why a customer could not book Jake on a day that looked half empty.",
   objectives: [
-    "Locate the route optimisation settings in Commusoft",
-    "Configure the overtime slots toggle and understand what it controls",
-    "Set the maximum travel distance and choose whether it applies to the portal only or to both web and portal",
-    "Understand what distance and overtime settings do and do not enforce"
+    "Choose whether suggested appointments and booking portals offer overtime, and whether they limit travel distance, and set a maximum distance.",
+    "Explain why a customer sees no slots on a booking portal when a technician's day looks free."
   ],
   productionSetup: [
-    "Logged-in user: Logan Chance, Operations Manager, Owner/Manager. DRAFT, needs confirming before recording.",
-    "Customer record: None. This walkthrough is settings configuration rather than work on a customer record.",
-    "Existing data: Whatever the scenario needs on screen: Logan configures SunComfort's route optimisation settings to match the company's 50-mile operating radius and shift pattern constraints before handing daily diary management to the scheduling team. DRAFT, needs confirming before recording.",
-    "Assets required: None unless the script names one. DRAFT, needs confirming before recording."
+    "Logged-in user: Logan Chance, Operations Manager, Owner/Manager. The settings take was recorded as SarahM, which is fine: the navbar shows an avatar, not a name.",
+    "Customer record: None on screen. The no-slots example is told over an animated slide, not recorded.",
+    "Existing data: Route optimisation settings on 20257 as specified on the Learning dashboard: overtime off, Consider distance for portals alone, maximum distance 40 miles. Set and recorded raw on 2026-10-23 in `setup-route-optimisation-20257.mp4`, and confirmed still set on 2026-11-12. The screen is headed Scheduling options.",
+    "Assets required: The raw setup take above, and one animated slide for the distance example."
   ],
   buildBySection: [
-    {section:"Finding route optimisation settings", media:"Screen recording", note:"Capture profile icon (top right) → Schedule and dispatch category → Route optimisation settings; land on the page showing the overtime and distance sections."},
-    {section:"Configuring overtime slots", media:"Screen recording", note:"Show toggling overtime slots on; overlay text noting the toggle applies to both web and portal."},
-    {section:"Configuring distance limits", media:"Screen recording", note:"Show the three distance options, selecting apply to web and portal, entering 50, and saving."},
-    {section:"What distance limits do and do not enforce", media:"Written text", note:"On-screen text or gif — reinforce that limits guide suggestions and the portal but never block a manual booking. Media was the ambiguous value Text; set to Written text 2026-07-30, confirm if this section is actually animated slides."},
-    {section:"Knowledge check", media:"Expanding section", note:"Two questions at the foot of the article, each revealing its answer on click. Nothing is scored."},
-    {section:"Summary", media:"Written text", note:"Recap text only — no recording needed."}
+    {section:"Introduction", media:"Written text", note:"Opens the Walkthrough block. Checklist as written."},
+    {section:"Setting the rules", media:"Screen recording", note:"Cut from `setup-route-optimisation-20257.mp4`: Settings, Schedule and dispatch, Route optimisation settings, the overtime box left unticked, Consider distance for portals alone, 40 in Maximum distance, Save. Hold on the help text under Maximum distance before Save."},
+    {section:"How the distance is measured", media:"Animated slides", note:"One slide: Jake's morning visit, the customer, his afternoon visit, the two legs drawn in and added up past 40 miles, the slot greyed out. No real addresses."},
+    {section:"Practise this", media:"Written text", note:"Yellow callout."},
+    {section:"Check what you know", media:"Expanding section", note:"Two questions, green callout."},
+    {section:"Summary", media:"Written text", note:"Grey Key takeaways callout, then the criterion."}
   ],
   scenes: [
-    {type:"section", heading:"Finding route optimisation settings", body:"All route optimisation configuration lives in Settings. Select the profile icon in the top right of Commusoft, then go to the Schedule and dispatch category, and select Route optimisation settings. Logan opens this page for the first time and finds two sections: one for overtime slots and one for distance. Both are straightforward, but both need to reflect how SunComfort actually operates rather than being left at their defaults."},
-    {type:"section", heading:"Configuring overtime slots", body:"The overtime slots toggle controls whether the scheduling engine and the customer portal surface appointment slots outside an engineer's standard shift. When the toggle is on, both office staff using the suggested appointment tool and customers booking through the portal will see available slots that fall within overtime hours, provided an engineer is available. When it is off, the system restricts suggestions to defined working hours only. Logan turns overtime slots on, because SunComfort runs an on-call rotation for emergency callout jobs and those out-of-hours slots need to be bookable without requiring a manual entry every time.\n\nThere is an important limit to understand here: enabling overtime slots does not prevent office staff from manually booking outside standard hours regardless of the toggle. The setting shapes what the engine suggests and what the portal offers — it does not lock the diary. Logan notes this and plans to brief Sophie and Ryan that manual bookings outside on-call hours still need a conversation before they go in."},
-    {type:"reflection", label:"Check what you know", question:"SunComfort does not want customers to be able to self-book emergency callout slots through the portal — those should remain office-managed. But the scheduling team needs to see out-of-hours suggestions when they are managing emergency jobs internally. Should Logan turn overtime slots on or off?", options:["On — office staff will see overtime suggestions, and portal customers will too", "Off — neither office staff nor portal customers will see overtime suggestions", "On, and then remove portal access separately"], correct:"On, and then remove portal access separately", feedback:"The overtime toggle applies to both the web and portal simultaneously, so turning it on does open those slots in the portal as well. If Logan wants office staff to see overtime suggestions but does not want customers to self-book them, the right approach is to turn overtime on and then ensure the relevant job types are not exposed through the customer portal at all — controlled through the portal job type configuration set up in L2 Series 2. The overtime toggle alone cannot distinguish between office and portal visibility."},
-    {type:"section", heading:"Configuring distance limits", body:"The distance section gives Logan three options. The first — do not consider distance — removes all location-based restrictions from the scheduling engine, meaning the system will suggest any available engineer regardless of where the job is. The second — apply distance limits to the portal only — sets a maximum travel distance in miles that applies exclusively to customer self-bookings through the portal; office staff using the suggested appointment tool are not restricted. The third — apply distance limits to web and portal — enforces the same maximum distance across both office-facing suggestions and portal bookings.\n\nLogan selects the third option and sets the distance to 50 miles, which matches SunComfort's operating radius. With 18 engineers starting from Elephant and Castle and covering clients across south and central London and into the surrounding counties, a 50-mile cap prevents the engine from ever suggesting a job pairing that would put a technician an impractical distance from their next appointment. Logan enters 50 in the distance field and saves."},
-    {type:"section", heading:"What distance limits do and do not enforce", body:"Setting a maximum distance filters what the engine suggests to office staff and, where portal limits are active, what customers can book. It does not prevent a manual booking beyond that distance — an office user can still drag any engineer into any slot in the diary regardless of location. The distance constraint is a guide rail for the suggestion engine and the portal, not a hard lock on the diary. Logan adds a note in SunComfort's internal scheduling guide that manual overrides beyond 50 miles require sign-off from him, since the system will not block these automatically."},
-    {type:"section", heading:"Summary", body:"SunComfort's route optimisation settings are now configured: overtime slots are on to support the on-call rotation, and a 50-mile maximum distance applies to both the web and portal channels. The scheduling engine will now only suggest engineers whose shift patterns, skills, and locations make them a realistic fit for each job. In the next walkthrough, Sophie will take over and use route optimisation in the diary to book a job using the suggested appointment feature."}
+    {type:"section", heading:"Introduction", body:"Route optimisation settings decide what the scheduling engine offers: the slots in suggested appointments, and the slots customers see on your booking portals. They never stop your office booking a visit by hand.\n\n📋 Before you start, you need: shift patterns for your technicians, because overtime is whatever falls outside them. If customers already book through a portal, this is also where to look first when they say there is no availability.\n\nBy the end you will be able to set overtime and a distance limit, and say why a portal shows no slots on a day that looks free."},
+    {type:"section", heading:"Setting the rules", body:"Logan Chance opens Route optimisation settings from Schedule and dispatch in Settings. The screen is headed Scheduling options, and it holds two things.\n\nThe first is a box: Allow overtime slots in suggested appointments or portals. SunComfort's technicians do some Saturday mornings as overtime, but Logan wants those booked by the office, not offered to customers. He leaves it unticked.\n\nThe second is distance. Don't consider any distance offers any free slot, wherever it is. Consider distance for portals alone limits what customers can book, and leaves the office's suggestions open. Consider distance for web and portals limits both. Logan picks portals alone, sets the maximum distance to 40 miles, and saves. The office can still book a customer further out when it is worth the drive."},
+    {type:"section", heading:"How the distance is measured", body:"The maximum distance is not a radius around your office, and it is not a daily mileage cap. The screen says what it is: the distance from the previous event to the suggested one, plus the distance from the suggested one to the next.\n\nSo a customer near SunComfort's office can still see nothing. Jake has a visit in the morning on one side of town and another in the afternoon on the far side. Fitting a third visit between them means a drive out and a drive on, and together those come to more than 40 miles. The slot is free, but the portal will not offer it. When nothing is booked before or after, the engine measures from Jake's home address, or from the company address if he has none."},
+    {type:"section", heading:"Practise this", body:"Open Route optimisation settings in your own account and note which distance option is chosen and the maximum. Then pick a technician's busiest day this week and, from the map, estimate the drive from one visit to the next. If those legs together come close to your maximum, a customer between them will see no slots."},
+    {type:"reflection", label:"Knowledge check", question:"A customer says your booking portal shows no slots next Tuesday, but Jake's Schedule has a two-hour gap in the middle of the day. What is the most likely reason?", options:[], correct:"", feedback:"The distance limit. The engine adds the drive from Jake's visit before the gap to the customer, and from the customer to his visit after it. If that comes to more than the maximum, the slot is not offered, however close the customer is to the office. Raising the limit, or moving one of Jake's visits, changes it. Checking the overtime box would not help, because the gap is inside his shift."},
+    {type:"reflection", label:"Knowledge check", question:"Logan has overtime unticked. Can Sophie still book Jake on a Saturday morning, which is his overtime?", options:[], correct:"", feedback:"Yes. The setting only decides what suggested appointments and portals offer. A visit the office books by hand on the Schedule can still go into overtime; it asks for confirmation first, because the time is outside working hours. What unticking it stops is a customer booking that Saturday for themselves, or the engine suggesting it."},
+    {type:"section", heading:"Summary", body:"Logan left **overtime** off the portal, chose **Consider distance for portals alone** and set **40 miles**, and saw why a free gap can still show no slots.\n\n💡 Key takeaways\n\n- **Offers, not bookings:** these settings shape suggested appointments and portals. The office can always book by hand. - **Two legs, one limit:** the maximum is the drive in from the previous event plus the drive on to the next. - **First place to look:** when a customer says there is no availability, check the distance limit against that technician's day.\n\nYou'll know it's right when a portal or suggested appointment never offers a slot your technicians could not reasonably reach, and you can say why one was left out."}
   ],
-  openItems: "None — all content verified against Help Centre article 234987 (Set up and manage Route optimisation settings). The three distance mode options, overtime slot behaviour, and the distinction between suggestions and manual overrides are all drawn directly from the HC source.",
-  helpCentreIssues: ""
+  openItems: "- Placement proposed 2026-11-12: the foot of HC 234987 *Set up and manage Route optimisation settings*, under the Walkthrough heading. Series: Schedule and dispatch settings, 4 of 4. Not tagged Collicutt. Confirm before publishing.\n- Rework of *Configure route optimisation settings*, 2026-11-12. The old version had overtime on, web and portals and 50 miles, against the spec's overtime off, portals alone and 40 miles. This follows the spec, which is what 20257 is set to and what the raw take shows. It drops the old multiple-choice check and the cross-references to neighbouring walkthroughs.\n- Resolved 2026-10-26: the maximum is the extra travel for one job, previous event to the suggested job plus the suggested job to the next. From the screen's own help text (read again 2026-11-12) and Rajagopal's comments on Sara's document, 18 September 2025. Home, then the company address, is used when there is no event either side (TRIAG-11983, TRIAG-11596).\n- Not used, because the slide would need it explained: the web offers only the first available service window per technician per day, while a portal offers every slot (same source). A candidate for the Help Centre article rather than the walkthrough.\n- Flint passed 2026-11-12 after three fixes: Sophie named in narration but not in Characters (now \"the office\"); a wrong Help Centre issue line about the article's heading corrected; Q2 pronoun to match.\n- The manual booking into overtime in Q2 asks to confirm first, as recorded on 20257 for the shift patterns walkthrough (2026-10-27).",
+  helpCentreIssues: "- **234987 — Set up and manage Route optimisation settings.** Says what the maximum distance is for but never how it is measured. The screen's help text says previous event to suggested event plus suggested event to the next; the article does not, so a reader who sets a small limit sees no availability and assumes a fault. AI:den has answered that it is measured from home (Intercom 105667). - **234987 — the screen's name.** The settings list says Route optimisation settings, but the screen it opens is headed Scheduling options, and the article never mentions that heading, so a reader can think they are on the wrong page. - **714479** (walkthrough article) says \"Scheduling Rules decide travel limits for engineers\". Scheduling rules is a Self Service setting (HC 217193); the travel limit is this screen."
 };
 COURSES['reed-script-l3-route-c3'] = {
   contentType: "Walkthrough",
@@ -28147,93 +28146,101 @@ Route optimisation is a tool for reducing travel time and improving engineer uti
 
 - [OPEN — The Help Centre article on route optimisation settings confirms the four-factor logic indirectly through the suggested appointments and settings articles; direct algorithm documentation was not available. Content is consistent with verified HC articles 234987 and 216744. Recommend Sara confirms the fallback behaviour (home address to office address) is accurately described before production.]
 `;
-INBOX_FILES["reed-script-l3-route-c2"] = `# Configure route optimisation settings
+INBOX_FILES["reed-script-l3-route-c2"] = `# How to set up route optimisation
 
-**Series:** L3 Route Optimisation | **Walkthrough:** 2 of 3 | **Duration:** 5 min | **Audience:** Decision makers
+**Series:** Schedule and dispatch settings | **Walkthrough:** 4 of 4 | **Duration:** 3 min | **Audience:** Decision makers
+
+**Voice:** Archer (Clueso AI voiceover)
 
 ---
 
 **Learning objectives**
 
-1. Locate the route optimisation settings in Commusoft
-2. Configure the overtime slots toggle and understand what it controls
-3. Set the maximum travel distance and choose whether it applies to the portal only or to both web and portal
-4. Understand what distance and overtime settings do and do not enforce
+1. Choose whether suggested appointments and booking portals offer overtime, and whether they limit travel distance, and set a maximum distance.
+2. Explain why a customer sees no slots on a booking portal when a technician's day looks free.
 
 ---
 
-**Target audience:** Business owners, operations managers, or administrators at small to mid-size field service companies configuring Commusoft for the first time or auditing their scheduling setup. SunComfort Systems is the pedagogical vehicle. The learner is configuring their own Commusoft account.
+**Target audience:** Owners and operations managers at field service businesses who decide how far their technicians travel between jobs and what customers can book for themselves. SunComfort Systems is the vehicle, not the audience.
 
-**Assumed starting point:** Walkthrough 1 of this series complete. Shift patterns, engineer skills, and job description templates are all configured. Owner/Manager access to Commusoft settings.
+**Assumed starting point:** Shift patterns are set up for the technicians, since overtime is defined by them. The account is on Customer Journey or above, in the UK or the US. A booking portal is optional: without one, the settings act on suggested appointments only.
 
-**Main objective beyond the learning objectives:** The two settings in route optimisation — overtime slots and distance — have a direct impact on what customers can self-book through the portal and what schedulers see when they look for suggested appointments. Configuring them thoughtfully now prevents unfeasible bookings reaching the diary and reduces the number of manual corrections Sophie and Ryan need to make each day.
-
----
-
-**Characters:** Logan Chance (Operations Manager, SunComfort Systems)
-
-**Scenario:** Logan configures SunComfort's route optimisation settings to match the company's 50-mile operating radius and shift pattern constraints before handing daily diary management to the scheduling team.
+**Main objective beyond the learning objectives:** Suggested appointments and booking portals only offer slots the business can really reach, and when a customer says there is no availability, the owner knows which setting to look at first.
 
 ---
 
-**Production setup**
+**Characters:** Logan Chance (Operations Manager, SunComfort Systems) | Jake Harris (Senior Heat Pump Technician, SunComfort Systems)
 
-- **Logged-in user:** Logan Chance — Operations Manager — Owner/Manager
-- **Customer record:** None
-- **Existing data:** Shift patterns configured; engineer skills assigned; job description templates with skills tagged
-- **Assets required:** None
-
----
+**Scenario:** Logan sets how far SunComfort's portal bookings may send a technician and keeps overtime off the portal, then works out why a customer could not book Jake on a day that looked half empty.
 
 ---
 
 ## Production Setup
 
-1. **Logged-in user:** Logan Chance, Operations Manager, Owner/Manager. DRAFT, needs confirming before recording.
-2. **Customer record:** None. This walkthrough is settings configuration rather than work on a customer record.
-3. **Existing data:** Whatever the scenario needs on screen: Logan configures SunComfort's route optimisation settings to match the company's 50-mile operating radius and shift pattern constraints before handing daily diary management to the scheduling team. DRAFT, needs confirming before recording.
-4. **Assets required:** None unless the script names one. DRAFT, needs confirming before recording.
-
-*Drafted 2026-07-31 from this script's own scenario, because no Production Setup existed. Every line needs confirming against the recording account before use.*
-
-## Finding route optimisation settings
-
-All route optimisation configuration lives in Settings. Select the profile icon in the top right of Commusoft, then go to the Schedule and dispatch category, and select Route optimisation settings. Logan opens this page for the first time and finds two sections: one for overtime slots and one for distance. Both are straightforward, but both need to reflect how SunComfort actually operates rather than being left at their defaults.
-
-## Configuring overtime slots
-
-The overtime slots toggle controls whether the scheduling engine and the customer portal surface appointment slots outside an engineer's standard shift. When the toggle is on, both office staff using the suggested appointment tool and customers booking through the portal will see available slots that fall within overtime hours, provided an engineer is available. When it is off, the system restricts suggestions to defined working hours only. Logan turns overtime slots on, because SunComfort runs an on-call rotation for emergency callout jobs and those out-of-hours slots need to be bookable without requiring a manual entry every time.
-
-There is an important limit to understand here: enabling overtime slots does not prevent office staff from manually booking outside standard hours regardless of the toggle. The setting shapes what the engine suggests and what the portal offers — it does not lock the diary. Logan notes this and plans to brief Sophie and Ryan that manual bookings outside on-call hours still need a conversation before they go in.
+1. **Logged-in user:** Logan Chance, Operations Manager, Owner/Manager. The settings take was recorded as SarahM, which is fine: the navbar shows an avatar, not a name.
+2. **Customer record:** None on screen. The no-slots example is told over an animated slide, not recorded.
+3. **Existing data:** Route optimisation settings on 20257 as specified on the Learning dashboard: overtime off, Consider distance for portals alone, maximum distance 40 miles. Set and recorded raw on 2026-10-23 in \`setup-route-optimisation-20257.mp4\`, and confirmed still set on 2026-11-12. The screen is headed Scheduling options.
+4. **Assets required:** The raw setup take above, and one animated slide for the distance example.
 
 ---
 
-**Reflection**
+## Introduction
 
-SunComfort does not want customers to be able to self-book emergency callout slots through the portal — those should remain office-managed. But the scheduling team needs to see out-of-hours suggestions when they are managing emergency jobs internally. Should Logan turn overtime slots on or off?
+Route optimisation settings decide what the scheduling engine offers: the slots in suggested appointments, and the slots customers see on your booking portals. They never stop your office booking a visit by hand.
 
-- On — office staff will see overtime suggestions, and portal customers will too
-- Off — neither office staff nor portal customers will see overtime suggestions
-- On, and then remove portal access separately ✓
+📋 Before you start, you need: shift patterns for your technicians, because overtime is whatever falls outside them. If customers already book through a portal, this is also where to look first when they say there is no availability.
 
-*Feedback: The overtime toggle applies to both the web and portal simultaneously, so turning it on does open those slots in the portal as well. If Logan wants office staff to see overtime suggestions but does not want customers to self-book them, the right approach is to turn overtime on and then ensure the relevant job types are not exposed through the customer portal at all — controlled through the portal job type configuration set up in L2 Series 2. The overtime toggle alone cannot distinguish between office and portal visibility.*
+By the end you will be able to set overtime and a distance limit, and say why a portal shows no slots on a day that looks free.
 
 ---
 
-## Configuring distance limits
+## Setting the rules
 
-The distance section gives Logan three options. The first — do not consider distance — removes all location-based restrictions from the scheduling engine, meaning the system will suggest any available engineer regardless of where the job is. The second — apply distance limits to the portal only — sets a maximum travel distance in miles that applies exclusively to customer self-bookings through the portal; office staff using the suggested appointment tool are not restricted. The third — apply distance limits to web and portal — enforces the same maximum distance across both office-facing suggestions and portal bookings.
+Logan Chance opens Route optimisation settings from Schedule and dispatch in Settings. The screen is headed Scheduling options, and it holds two things.
 
-Logan selects the third option and sets the distance to 50 miles, which matches SunComfort's operating radius. With 18 engineers starting from Elephant and Castle and covering clients across south and central London and into the surrounding counties, a 50-mile cap prevents the engine from ever suggesting a job pairing that would put a technician an impractical distance from their next appointment. Logan enters 50 in the distance field and saves.
+The first is a box: Allow overtime slots in suggested appointments or portals. SunComfort's technicians do some Saturday mornings as overtime, but Logan wants those booked by the office, not offered to customers. He leaves it unticked.
 
-## What distance limits do and do not enforce
+The second is distance. Don't consider any distance offers any free slot, wherever it is. Consider distance for portals alone limits what customers can book, and leaves the office's suggestions open. Consider distance for web and portals limits both. Logan picks portals alone, sets the maximum distance to 40 miles, and saves. The office can still book a customer further out when it is worth the drive.
 
-Setting a maximum distance filters what the engine suggests to office staff and, where portal limits are active, what customers can book. It does not prevent a manual booking beyond that distance — an office user can still drag any engineer into any slot in the diary regardless of location. The distance constraint is a guide rail for the suggestion engine and the portal, not a hard lock on the diary. Logan adds a note in SunComfort's internal scheduling guide that manual overrides beyond 50 miles require sign-off from him, since the system will not block these automatically.
+---
 
+## How the distance is measured
+
+The maximum distance is not a radius around your office, and it is not a daily mileage cap. The screen says what it is: the distance from the previous event to the suggested one, plus the distance from the suggested one to the next.
+
+So a customer near SunComfort's office can still see nothing. Jake has a visit in the morning on one side of town and another in the afternoon on the far side. Fitting a third visit between them means a drive out and a drive on, and together those come to more than 40 miles. The slot is free, but the portal will not offer it. When nothing is booked before or after, the engine measures from Jake's home address, or from the company address if he has none.
+
+---
+
+## Practise this
+
+Open Route optimisation settings in your own account and note which distance option is chosen and the maximum. Then pick a technician's busiest day this week and, from the map, estimate the drive from one visit to the next. If those legs together come close to your maximum, a customer between them will see no slots.
+
+---
+
+**Check what you know**
+
+**Q1.** A customer says your booking portal shows no slots next Tuesday, but Jake's Schedule has a two-hour gap in the middle of the day. What is the most likely reason?
+
+**A.** The distance limit. The engine adds the drive from Jake's visit before the gap to the customer, and from the customer to his visit after it. If that comes to more than the maximum, the slot is not offered, however close the customer is to the office. Raising the limit, or moving one of Jake's visits, changes it. Checking the overtime box would not help, because the gap is inside his shift.
+
+**Q2.** Logan has overtime unticked. Can Sophie still book Jake on a Saturday morning, which is his overtime?
+
+**A.** Yes. The setting only decides what suggested appointments and portals offer. A visit the office books by hand on the Schedule can still go into overtime; it asks for confirmation first, because the time is outside working hours. What unticking it stops is a customer booking that Saturday for themselves, or the engine suggesting it.
+
+---
 
 ## Summary
 
-SunComfort's route optimisation settings are now configured: overtime slots are on to support the on-call rotation, and a 50-mile maximum distance applies to both the web and portal channels. The scheduling engine will now only suggest engineers whose shift patterns, skills, and locations make them a realistic fit for each job. In the next walkthrough, Sophie will take over and use route optimisation in the diary to book a job using the suggested appointment feature.
+Logan left **overtime** off the portal, chose **Consider distance for portals alone** and set **40 miles**, and saw why a free gap can still show no slots.
+
+💡 Key takeaways
+
+- **Offers, not bookings:** these settings shape suggested appointments and portals. The office can always book by hand.
+- **Two legs, one limit:** the maximum is the drive in from the previous event plus the drive on to the next.
+- **First place to look:** when a customer says there is no availability, check the distance limit against that technician's day.
+
+You'll know it's right when a portal or suggested appointment never offers a slot your technicians could not reasonably reach, and you can say why one was left out.
 
 ---
 
@@ -28241,17 +28248,31 @@ SunComfort's route optimisation settings are now configured: overtime slots are 
 
 | Section | Media | Note |
 |---|---|---|
-| Finding route optimisation settings | Screen recording | Capture profile icon (top right) → Schedule and dispatch category → Route optimisation settings; land on the page showing the overtime and distance sections. |
-| Configuring overtime slots | Screen recording | Show toggling overtime slots on; overlay text noting the toggle applies to both web and portal. |
-| Configuring distance limits | Screen recording | Show the three distance options, selecting apply to web and portal, entering 50, and saving. |
-| What distance limits do and do not enforce | Written text | On-screen text or gif — reinforce that limits guide suggestions and the portal but never block a manual booking. Media was the ambiguous value Text; set to Written text 2026-07-30, confirm if this section is actually animated slides. |
-| Check what you know | Expanding section | Two questions at the foot of the article, each revealing its answer on click. Nothing is scored. |
-| Summary | Written text | Recap text only — no recording needed. |
+| Introduction | Written text | Opens the Walkthrough block. Checklist as written. |
+| Setting the rules | Screen recording | Cut from \`setup-route-optimisation-20257.mp4\`: Settings, Schedule and dispatch, Route optimisation settings, the overtime box left unticked, Consider distance for portals alone, 40 in Maximum distance, Save. Hold on the help text under Maximum distance before Save. |
+| How the distance is measured | Animated slides | One slide: Jake's morning visit, the customer, his afternoon visit, the two legs drawn in and added up past 40 miles, the slot greyed out. No real addresses. |
+| Practise this | Written text | Yellow callout. |
+| Check what you know | Expanding section | Two questions, green callout. |
+| Summary | Written text | Grey Key takeaways callout, then the criterion. |
+
 ---
 
 **Open items**
 
-None — all content verified against Help Centre article 234987 (Set up and manage Route optimisation settings). The three distance mode options, overtime slot behaviour, and the distinction between suggestions and manual overrides are all drawn directly from the HC source.
+- Placement proposed 2026-11-12: the foot of HC 234987 *Set up and manage Route optimisation settings*, under the Walkthrough heading. Series: Schedule and dispatch settings, 4 of 4. Not tagged Collicutt. Confirm before publishing.
+- Rework of *Configure route optimisation settings*, 2026-11-12. The old version had overtime on, web and portals and 50 miles, against the spec's overtime off, portals alone and 40 miles. This follows the spec, which is what 20257 is set to and what the raw take shows. It drops the old multiple-choice check and the cross-references to neighbouring walkthroughs.
+- Resolved 2026-10-26: the maximum is the extra travel for one job, previous event to the suggested job plus the suggested job to the next. From the screen's own help text (read again 2026-11-12) and Rajagopal's comments on Sara's document, 18 September 2025. Home, then the company address, is used when there is no event either side (TRIAG-11983, TRIAG-11596).
+- Not used, because the slide would need it explained: the web offers only the first available service window per technician per day, while a portal offers every slot (same source). A candidate for the Help Centre article rather than the walkthrough.
+- Flint passed 2026-11-12 after three fixes: Sophie named in narration but not in Characters (now "the office"); a wrong Help Centre issue line about the article's heading corrected; Q2 pronoun to match.
+- The manual booking into overtime in Q2 asks to confirm first, as recorded on 20257 for the shift patterns walkthrough (2026-10-27).
+
+---
+
+**Help Centre issues found**
+
+- **234987 — Set up and manage Route optimisation settings.** Says what the maximum distance is for but never how it is measured. The screen's help text says previous event to suggested event plus suggested event to the next; the article does not, so a reader who sets a small limit sees no availability and assumes a fault. AI:den has answered that it is measured from home (Intercom 105667).
+- **234987 — the screen's name.** The settings list says Route optimisation settings, but the screen it opens is headed Scheduling options, and the article never mentions that heading, so a reader can think they are on the wrong page.
+- **714479** (walkthrough article) says "Scheduling Rules decide travel limits for engineers". Scheduling rules is a Self Service setting (HC 217193); the travel limit is this screen.
 `;
 INBOX_FILES["reed-script-l3-route-c3"] = `# Use route optimisation in the diary
 

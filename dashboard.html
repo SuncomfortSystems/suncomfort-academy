@@ -769,6 +769,8 @@
           <div class="walkthrough-card" onclick="openPanel('reed-script-l3-route-challenge')"><div class="walkthrough-num">Series assessment</div><div class="walkthrough-title">Route optimised, diary running efficiently</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Walkthrough</span></div></div>
 <div class="walkthrough-card" onclick="openPanel('sd-shift-patterns')"><div class="walkthrough-num">Walkthrough 1</div><div class="walkthrough-title">How to set up shift patterns</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
 <div class="walkthrough-card" onclick="openPanel('sd-public-holidays')"><div class="walkthrough-num">Walkthrough 2</div><div class="walkthrough-title">How to set up public holidays</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Decision makers</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+<div class="walkthrough-card" onclick="openPanel('sd-job-confirmation')"><div class="walkthrough-num">Walkthrough 3</div><div class="walkthrough-title">How to send a job confirmation</div><div class="walkthrough-meta"><span class="meta-pill">3 min</span><span class="meta-pill">Office teams</span><span class="badge" style="background:#fff3ee;color:#fa6932">Draft</span></div></div>
+
 
 
         </div>
@@ -9455,6 +9457,50 @@ COURSES['sd-public-holidays'] = {
   ],
   openItems: "- Placement proposed 2026-11-01: the foot of HC 217123 *Setting up public holiday templates*, under the Walkthrough heading, per the three-tier plan. Series: Schedule and dispatch settings, 2 of 4, after shift patterns. Not tagged Collicutt. Confirm before publishing.\n- Not confirmed, so the script does not claim it: whether a date added to a group that is already assigned creates the event for its users straight away. HC 217123 covers adding dates before assigning, and deleting after, but not adding after.\n- Resolved 2026-11-01 on 20257: the event reads \"Holiday: UK Bank Holidays 2027\" and fills the whole day, 12:00 to 11:59, in every column on Sophie's Schedule.\n- Resolved 2026-11-01: the 2027 substitute days. Christmas Day 2027 is a Saturday and Boxing Day a Sunday, so the bank holidays move to Monday 27 and Tuesday 28 December, which is what the group holds.\n- Added 2026-11-04 (Sara: yes), text only, the videos unchanged. Introduction: leave versus public holiday, from Intercom 97630, where support's answer is that there is no individual leave feature and to use a Normal event. Q1 answer: the Appear on diary condition, from Forest's research (COM-20060). Both were client sticking points the videos did not cover; they go in the text because AI:den reads the article, not the video.\n- Note for the take: Sophie's Users filter currently shows 7 of 22, the heat pump team. The narration says \"every technician's column\", which holds whichever columns are shown.",
   helpCentreIssues: "- **217123 — Setting up public holiday templates.** Step 1 says to click **Add public holiday template**. The button reads **Add public holiday name**, the page is headed *Set up public holiday groups*, and the user profile field is *Public holiday groups*. The settings list calls it Public holiday templates. A reader looking for the button named in the article will not find it. - **217123 — Common questions.** Says the event appears with the name \"Holidays:\" and the template name. On screen it reads \"Holiday:\", singular."
+};
+
+COURSES['sd-job-confirmation'] = {
+  contentType: "Walkthrough",
+  pathLabel: "Schedule and dispatch settings · Walkthrough 3 of 4",
+  title: "How to send a job confirmation",
+  duration: "3 min",
+  persona: "Office teams",
+  characters: "Logan Chance (Operations Manager, SunComfort Systems) | Sophie Bennett (Scheduler, SunComfort Systems) | Jake Harris (Senior Heat Pump Technician, SunComfort Systems)",
+  scenario: "Sophie books Jake back to Dr White's to fit a part and sends the confirmation as she books, then finds Dr White's spring service was booked without one and sends it from the appointment.",
+  objectives: [
+    "Send a customer a job confirmation while booking a visit, and from the appointment after it is booked.",
+    "Check on an appointment whether a confirmation has gone, and when."
+  ],
+  productionSetup: [
+    "Logged-in user: Sophie Bennett, Scheduler, Office staff, for the booking and appointment sections. Logan Chance, Operations Manager, Owner/Manager, or SarahM, for the settings section.",
+    "Customer record: Dr Kate White, account no 1141. For the takes only, her email address is set to Sara's, so the confirmations land somewhere real; customer emails on 20257 are fake. Put it back afterwards.",
+    "Existing data: SunComfort's wording saved in Customer job confirmation template for Email, SMS and Letter, as specified on the Learning dashboard under Customer Job Confirmation Template, recorded as a raw setup take. Job 1024, Heat Pump Service, with its Saturday visit already on Jake (booked in the shift patterns take, 2026-10-27); the return visit is booked on film. A second job for Dr White, Heat Pump Service, booked on Jake for a weekday in spring 2027 with Notify customer about visit unticked, so its appointment reads Not sent.",
+    "Assets required: The raw setup take of the confirmation wording."
+  ],
+  buildBySection: [
+    {section:"Introduction", media:"Written text", note:"Opens the Walkthrough block. Checklist as written."},
+    {section:"Where the wording lives", media:"Screen recording", note:"Cut from the raw setup take of the wording: the Email, SMS and Letter tabs, then Use tagging. Narrate the Settings path over it. Captured as one Clueso video with the three sections that follow."},
+    {section:"Sending it as you book", media:"Screen recording", note:"As Sophie, on the new job view: job 1024's booking view, Thursday 09:00-10:00 in Jake's column, Copy from job description, Advanced options, Notifications, tick Notify customer about visit, recipient Dr White, method Email, Save. Same Clueso video."},
+    {section:"What Dr White receives", media:"Screen recording", note:"Same take: the job's Appointments, View on the new visit, hold on Email sent, then the timeline entry. Same Clueso video."},
+    {section:"Sending it afterwards", media:"Screen recording", note:"Same take: the spring service job's appointment, Not sent, Send, Email, recipient, hold on the pre-filled subject and message, Send email, Email sent. Same Clueso video."},
+    {section:"Sending from your own address", media:"Callout - written text", note:"Grey callout."},
+    {section:"Practise this", media:"Written text", note:"Yellow callout."},
+    {section:"Check what you know", media:"Expanding section", note:"Two questions, green callout."},
+    {section:"Summary", media:"Written text", note:"Grey Key takeaways callout, then the criterion."}
+  ],
+  scenes: [
+    {type:"section", heading:"Introduction", body:"A job confirmation tells your customer their visit is booked: the job, the address, the date and time, and who is coming. When your office books the visit, it does not go out by itself. Someone sends it, either while booking or from the appointment afterwards. Only bookings customers make through a booking portal send one automatically.\n\n📋 Before you start, you need: your confirmation wording set up in Settings, and an email address or mobile number on the customer. If you have been booking for a while, this is also how to check whether your customers have been getting one.\n\nBy the end you will be able to send a confirmation as you book a visit or afterwards, and check whether one has gone."},
+    {type:"section", heading:"Where the wording lives", body:"Logan Chance has already written SunComfort's wording. It is in Settings, under Schedule and dispatch, in Customer job confirmation template. There is one for each way of sending it: Email, SMS and Letter. Use tagging adds the details that change with every visit, such as the date and the technician's name. An SMS over 160 characters uses extra credits, so Logan keeps that one short.\n\nThis is the customer's version. When someone else lets the technician in, a tenant for instance, the work address job confirmation template is the one that reaches them."},
+    {type:"section", heading:"Sending it as you book", body:"On Saturday, Jake Harris found a worn part on Dr White's heat pump, and Sophie Bennett is booking him back to fit it. She selects nine until ten on Thursday in Jake's column, and the booking panel opens with Dr White's job. She copies the job description into the event and moves through to the last step, Notifications.\n\nNotify customer about visit is unticked. Sophie ticks it, chooses Dr White as the recipient and Email as the method, and saves. The visit is booked, and the confirmation goes as it saves."},
+    {type:"section", heading:"What Dr White receives", body:"Sophie opens the new visit from the job's appointments. Under Confirmations and reminders, Customer Confirmation reads Email sent, with the date and time it went and a Resend button. The email is on the job's timeline too, with the tags filled in: Thursday's date, the time, the address, and Jake's name."},
+    {type:"section", heading:"Sending it afterwards", body:"Dr White's spring service was booked over the phone, and nobody ticked the box. Sophie opens that visit, and Customer Confirmation reads Not sent.\n\nShe clicks Send, picks Email and Dr White as the recipient. The subject and message are filled in from the wording, and she can change them for this one customer before it goes. She clicks Send email, and the appointment now reads Email sent."},
+    {type:"section", heading:"Sending from your own address", body:"Confirmations come from Commusoft's no-reply address unless your business has connected its own email. Customers can't reply to that address directly, so their replies go to the Reply-to address set in Connect emails. To send from your own address instead, an Owner/Manager connects it in Settings, under Communication, in Connect emails."},
+    {type:"section", heading:"Practise this", body:"Open the appointment for the next visit your office has booked, and look at Customer Confirmation under Confirmations and reminders. Not sent means that customer has had nothing from you yet. If it shows sent, the date and time tell you when it went."},
+    {type:"reflection", label:"Knowledge check", question:"Dr White rings to say she has heard nothing about her spring service. Where does Sophie look, and what does she do?", options:[], correct:"", feedback:"She opens the visit and looks at Customer Confirmation under Confirmations and reminders. If it reads Not sent, nobody ticked Notify customer about visit when it was booked, because booking alone never sends it, so she clicks Send and sends it from there. If it reads Email sent, it did go: she checks the email address on Dr White's record and uses Resend. Booking the visit again to trigger a confirmation would not help, since a new booking does not send one either unless the box is ticked."},
+    {type:"reflection", label:"Knowledge check", question:"Logan's SMS wording comes to 190 characters. What happens when Sophie sends it?", options:[], correct:"", feedback:"It still sends, but going over 160 characters uses extra SMS credits, on every confirmation sent by SMS. Logan shortens the SMS version's wording. Tags fill in when the message is sent, so a long address or name can push a message over the limit even when the wording looks short. Cutting the date or time tag to save space would be the wrong trim, because those are what the customer needs."},
+    {type:"section", heading:"Summary", body:"Sophie ticked **Notify customer about visit** while booking Jake's return visit, and used **Send** on the appointment for the spring service that had been booked without it.\n\n💡 Key takeaways\n\n- **Never automatic from the office:** a visit your office books sends nothing until someone sends it. - **Two routes:** tick the box at Notifications while booking, or Send on the appointment afterwards. - **The appointment tells you:** Not sent, or the date and time it went.\n\nYou'll know it's right when the appointment for your next booking reads sent, with the date and time it went."}
+  ],
+  openItems: "- Placement proposed 2026-11-12: the foot of HC 217108 *Customer job confirmation template*, under the Walkthrough heading, per the three-tier plan. Series: Schedule and dispatch settings, 3 of 4, before route optimisation. Not tagged Collicutt. Confirm before publishing.\n- Proposed 2026-11-12: this replaces the old *Send a job confirmation* walkthrough, which says the confirmation \"triggers immediately\". Its two other points are carried here as one line each: the 160-character SMS limit and the work address template.\n- Resolved 2026-11-10 on 19213 (customer 1136, job 246): booking with the box unticked leaves Customer Confirmation at Not sent with nothing on the timeline; ticking it sends on save (Email sent, logged on the timeline); Send on the appointment sends a pre-filled, editable message. Only booking-portal bookings send automatically (COM-27042; open bug COM-27976).\n- Resolved 2026-11-12 on 20257, read only: Sophie's account opens jobs on the new job view, and the appointment there carries Confirmations and reminders with Customer Confirmation Send, so the video answers the new job view question. The Send form offers Email, SMS and Letter (19213 offered Email and Letter only).\n- Before the take: the Customer job confirmation settings page on 20257 loaded its Email, SMS and Letter tabs but not the message boxes in a headless read as Logan on 2026-11-12. Check it in a browser when recording the wording.\n- Spec correction on the Learning dashboard: the Customer Job Confirmation Template description says it is \"sent by hand from the appointment\" only. Add the Notify customer about visit box at the booking panel's Notifications step.\n- Resolved 2026-11-12 from HC 217267: replies to the no-reply address go to the Reply-to address set in Connect emails; connecting your own email needs Owner/Manager.\n- Not confirmed, so the script does not claim it: whether moving a visit changes its confirmation status.\n- Flint passed 2026-11-12 after three fixes: an unsourced \"email has no limit\" claim removed from Q2 (the tags line is from HC 217108); the callout given the Owner/Manager role and Reply-to from HC 217267; Practise this tightened."
 };
 function esc(str) {
   return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
@@ -34138,6 +34184,158 @@ You'll know it's right when you move the Schedule to next year's first bank holi
 
 - **217123 — Setting up public holiday templates.** Step 1 says to click **Add public holiday template**. The button reads **Add public holiday name**, the page is headed *Set up public holiday groups*, and the user profile field is *Public holiday groups*. The settings list calls it Public holiday templates. A reader looking for the button named in the article will not find it.
 - **217123 — Common questions.** Says the event appears with the name "Holidays:" and the template name. On screen it reads "Holiday:", singular.
+`;
+INBOX_FILES["sd-job-confirmation"] = `# How to send a job confirmation
+
+**Series:** Schedule and dispatch settings | **Walkthrough:** 3 of 4 | **Duration:** 3 min | **Audience:** Office teams
+
+**Voice:** Archer (Clueso AI voiceover)
+
+---
+
+**Learning objectives**
+
+1. Send a customer a job confirmation while booking a visit, and from the appointment after it is booked.
+2. Check on an appointment whether a confirmation has gone, and when.
+
+---
+
+**Target audience:** Office staff at field service businesses who book visits and field the calls from customers who have heard nothing. SunComfort Systems is the vehicle, not the audience.
+
+**Assumed starting point:** The customer job confirmation wording is set up in Settings, and the customer has an email address or a mobile number. The learner can already book a visit on the Schedule.
+
+**Main objective beyond the learning objectives:** Every customer whose visit the office books hears about it in writing, and nobody in the office assumes it went out by itself.
+
+---
+
+**Characters:** Logan Chance (Operations Manager, SunComfort Systems) | Sophie Bennett (Scheduler, SunComfort Systems) | Jake Harris (Senior Heat Pump Technician, SunComfort Systems)
+
+**Scenario:** Sophie books Jake back to Dr White's to fit a part and sends the confirmation as she books, then finds Dr White's spring service was booked without one and sends it from the appointment.
+
+---
+
+## Production Setup
+
+1. **Logged-in user:** Sophie Bennett, Scheduler, Office staff, for the booking and appointment sections. Logan Chance, Operations Manager, Owner/Manager, or SarahM, for the settings section.
+2. **Customer record:** Dr Kate White, account no 1141. For the takes only, her email address is set to Sara's, so the confirmations land somewhere real; customer emails on 20257 are fake. Put it back afterwards.
+3. **Existing data:** SunComfort's wording saved in Customer job confirmation template for Email, SMS and Letter, as specified on the Learning dashboard under Customer Job Confirmation Template, recorded as a raw setup take. Job 1024, Heat Pump Service, with its Saturday visit already on Jake (booked in the shift patterns take, 2026-10-27); the return visit is booked on film. A second job for Dr White, Heat Pump Service, booked on Jake for a weekday in spring 2027 with Notify customer about visit unticked, so its appointment reads Not sent.
+4. **Assets required:** The raw setup take of the confirmation wording.
+
+---
+
+## Introduction
+
+A job confirmation tells your customer their visit is booked: the job, the address, the date and time, and who is coming. When your office books the visit, it does not go out by itself. Someone sends it, either while booking or from the appointment afterwards. Only bookings customers make through a booking portal send one automatically.
+
+📋 Before you start, you need: your confirmation wording set up in Settings, and an email address or mobile number on the customer. If you have been booking for a while, this is also how to check whether your customers have been getting one.
+
+By the end you will be able to send a confirmation as you book a visit or afterwards, and check whether one has gone.
+
+---
+
+## Where the wording lives
+
+Logan Chance has already written SunComfort's wording. It is in Settings, under Schedule and dispatch, in Customer job confirmation template. There is one for each way of sending it: Email, SMS and Letter. Use tagging adds the details that change with every visit, such as the date and the technician's name. An SMS over 160 characters uses extra credits, so Logan keeps that one short.
+
+This is the customer's version. When someone else lets the technician in, a tenant for instance, the work address job confirmation template is the one that reaches them.
+
+---
+
+## Sending it as you book
+
+On Saturday, Jake Harris found a worn part on Dr White's heat pump, and Sophie Bennett is booking him back to fit it. She selects nine until ten on Thursday in Jake's column, and the booking panel opens with Dr White's job. She copies the job description into the event and moves through to the last step, Notifications.
+
+Notify customer about visit is unticked. Sophie ticks it, chooses Dr White as the recipient and Email as the method, and saves. The visit is booked, and the confirmation goes as it saves.
+
+---
+
+## What Dr White receives
+
+Sophie opens the new visit from the job's appointments. Under Confirmations and reminders, Customer Confirmation reads Email sent, with the date and time it went and a Resend button. The email is on the job's timeline too, with the tags filled in: Thursday's date, the time, the address, and Jake's name.
+
+---
+
+## Sending it afterwards
+
+Dr White's spring service was booked over the phone, and nobody ticked the box. Sophie opens that visit, and Customer Confirmation reads Not sent.
+
+She clicks Send, picks Email and Dr White as the recipient. The subject and message are filled in from the wording, and she can change them for this one customer before it goes. She clicks Send email, and the appointment now reads Email sent.
+
+---
+
+## Sending from your own address
+
+Confirmations come from Commusoft's no-reply address unless your business has connected its own email. Customers can't reply to that address directly, so their replies go to the Reply-to address set in Connect emails. To send from your own address instead, an Owner/Manager connects it in Settings, under Communication, in Connect emails.
+
+---
+
+## Practise this
+
+Open the appointment for the next visit your office has booked, and look at Customer Confirmation under Confirmations and reminders. Not sent means that customer has had nothing from you yet. If it shows sent, the date and time tell you when it went.
+
+---
+
+**Check what you know**
+
+**Q1.** Dr White rings to say she has heard nothing about her spring service. Where does Sophie look, and what does she do?
+
+**A.** She opens the visit and looks at Customer Confirmation under Confirmations and reminders. If it reads Not sent, nobody ticked Notify customer about visit when it was booked, because booking alone never sends it, so she clicks Send and sends it from there. If it reads Email sent, it did go: she checks the email address on Dr White's record and uses Resend. Booking the visit again to trigger a confirmation would not help, since a new booking does not send one either unless the box is ticked.
+
+**Q2.** Logan's SMS wording comes to 190 characters. What happens when Sophie sends it?
+
+**A.** It still sends, but going over 160 characters uses extra SMS credits, on every confirmation sent by SMS. Logan shortens the SMS version's wording. Tags fill in when the message is sent, so a long address or name can push a message over the limit even when the wording looks short. Cutting the date or time tag to save space would be the wrong trim, because those are what the customer needs.
+
+---
+
+## Summary
+
+Sophie ticked **Notify customer about visit** while booking Jake's return visit, and used **Send** on the appointment for the spring service that had been booked without it.
+
+💡 Key takeaways
+
+- **Never automatic from the office:** a visit your office books sends nothing until someone sends it.
+- **Two routes:** tick the box at Notifications while booking, or Send on the appointment afterwards.
+- **The appointment tells you:** Not sent, or the date and time it went.
+
+You'll know it's right when the appointment for your next booking reads sent, with the date and time it went.
+
+---
+
+## Build by section
+
+| Section | Media | Note |
+|---|---|---|
+| Introduction | Written text | Opens the Walkthrough block. Checklist as written. |
+| Where the wording lives | Screen recording | Cut from the raw setup take of the wording: the Email, SMS and Letter tabs, then Use tagging. Narrate the Settings path over it. Captured as one Clueso video with the three sections that follow. |
+| Sending it as you book | Screen recording | As Sophie, on the new job view: job 1024's booking view, Thursday 09:00-10:00 in Jake's column, Copy from job description, Advanced options, Notifications, tick Notify customer about visit, recipient Dr White, method Email, Save. Same Clueso video. |
+| What Dr White receives | Screen recording | Same take: the job's Appointments, View on the new visit, hold on Email sent, then the timeline entry. Same Clueso video. |
+| Sending it afterwards | Screen recording | Same take: the spring service job's appointment, Not sent, Send, Email, recipient, hold on the pre-filled subject and message, Send email, Email sent. Same Clueso video. |
+| Sending from your own address | Callout - written text | Grey callout. |
+| Practise this | Written text | Yellow callout. |
+| Check what you know | Expanding section | Two questions, green callout. |
+| Summary | Written text | Grey Key takeaways callout, then the criterion. |
+
+---
+
+**Open items**
+
+- Placement proposed 2026-11-12: the foot of HC 217108 *Customer job confirmation template*, under the Walkthrough heading, per the three-tier plan. Series: Schedule and dispatch settings, 3 of 4, before route optimisation. Not tagged Collicutt. Confirm before publishing.
+- Proposed 2026-11-12: this replaces the old *Send a job confirmation* walkthrough, which says the confirmation "triggers immediately". Its two other points are carried here as one line each: the 160-character SMS limit and the work address template.
+- Resolved 2026-11-10 on 19213 (customer 1136, job 246): booking with the box unticked leaves Customer Confirmation at Not sent with nothing on the timeline; ticking it sends on save (Email sent, logged on the timeline); Send on the appointment sends a pre-filled, editable message. Only booking-portal bookings send automatically (COM-27042; open bug COM-27976).
+- Resolved 2026-11-12 on 20257, read only: Sophie's account opens jobs on the new job view, and the appointment there carries Confirmations and reminders with Customer Confirmation Send, so the video answers the new job view question. The Send form offers Email, SMS and Letter (19213 offered Email and Letter only).
+- Before the take: the Customer job confirmation settings page on 20257 loaded its Email, SMS and Letter tabs but not the message boxes in a headless read as Logan on 2026-11-12. Check it in a browser when recording the wording.
+- Spec correction on the Learning dashboard: the Customer Job Confirmation Template description says it is "sent by hand from the appointment" only. Add the Notify customer about visit box at the booking panel's Notifications step.
+- Resolved 2026-11-12 from HC 217267: replies to the no-reply address go to the Reply-to address set in Connect emails; connecting your own email needs Owner/Manager.
+- Not confirmed, so the script does not claim it: whether moving a visit changes its confirmation status.
+- Flint passed 2026-11-12 after three fixes: an unsourced "email has no limit" claim removed from Q2 (the tags line is from HC 217108); the callout given the Owner/Manager role and Reply-to from HC 217267; Practise this tightened.
+
+---
+
+**Help Centre issues found**
+
+- **217108 — Customer job confirmation template.** Opens with "The Customer Job Confirmation Messages setting enables automatic notifications to let customers know when their jobs are scheduled." From the office nothing is automatic: tested on 19213, 2026-11-10, the confirmation goes only when Notify customer about visit is ticked while booking or Send is used on the appointment. A reader expects customers are being told and they are not. AI:den has repeated it to clients (Intercom 215560867064429, 215560998709085).
+- **217108 — Customer job confirmation template.** Also describes the customer template as notifying "a work address", which is the separate work address template (217110).
+- **217108 and 267464 disagree.** 267464 describes the manual send from the appointment and matches the app; neither mentions the Notify customer about visit box in the booking panel.
 `;
 
 // ===== Dashboard Notes (Google Sheet backend) =====
